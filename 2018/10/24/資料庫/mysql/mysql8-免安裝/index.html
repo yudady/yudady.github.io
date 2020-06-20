@@ -1,0 +1,641 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>mysql8-免安裝 | Tommy-好記性不如爛筆頭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Tommy lin">
+    
+
+    
+    <meta name="description" content="簡介mysql-8.0.13-winx64，免安裝，使用bat啟動">
+<meta name="keywords" content="database,mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql8-免安裝">
+<meta property="og:url" content="https://yudady.github.io/2018/10/24/資料庫/mysql/mysql8-免安裝/index.html">
+<meta property="og:site_name" content="Tommy-好記性不如爛筆頭">
+<meta property="og:description" content="簡介mysql-8.0.13-winx64，免安裝，使用bat啟動">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-10-24T09:56:10.855Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mysql8-免安裝">
+<meta name="twitter:description" content="簡介mysql-8.0.13-winx64，免安裝，使用bat啟動">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Tommy-好記性不如爛筆頭" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="../../../../../../css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Tommy-好記性不如爛筆頭" title="Tommy-好記性不如爛筆頭"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Tommy-好記性不如爛筆頭">Tommy-好記性不如爛筆頭</a></h1>
+				<h2 class="blog-motto">紙上得來終覺淺，絕知此事要躬行</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首頁</a></li>
+					
+						<li><a href="/archives">檔案</a></li>
+					
+						<li><a href="/favorite">網站資源</a></li>
+					
+						<li><a href="/projects">紀錄我的資源</a></li>
+					
+						<li><a href="/about">關於我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yudady.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/24/資料庫/mysql/mysql8-免安裝/" title="mysql8-免安裝" itemprop="url">mysql8-免安裝</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-24T09:38:06.000Z" itemprop="datePublished"> Published 2018-10-24</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#無服務狀態"><span class="toc-number">2.1.</span> <span class="toc-text">無服務狀態</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#my-ini"><span class="toc-number">2.2.</span> <span class="toc-text">my.ini</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#run-bat"><span class="toc-number">2.3.</span> <span class="toc-text">run.bat</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">3.</span> <span class="toc-text">參考資料</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><p>mysql-8.0.13-winx64，免安裝，使用bat啟動</p>
+<a id="more"></a>
+<h1 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h1><h2 id="無服務狀態"><a href="#無服務狀態" class="headerlink" title="無服務狀態"></a>無服務狀態</h2><ul>
+<li><a href="https://downloads.mysql.com/archives/community/" target="_blank" rel="noopener">Windows (x86, 64-bit), ZIP Archive</a></li>
+<li>添加<code>my.ini</code></li>
+<li>添加<code>run.bat</code></li>
+<li>進入bin目錄下面</li>
+<li>執行初始化DB <code>mysqld --defaults-file=d:/my.ini --initialize-insecure --console</code></li>
+<li>使用cmd進入mysql <code>mysql -uroot -p</code>，密碼是空白</li>
+<li>執行命令 <code>use mysql;</code></li>
+<li>執行命令 <code>SELECT User, Host FROM mysql.user;</code></li>
+<li>執行命令 <code>update mysql.user set host=&#39;%&#39; where User=&#39;root&#39; and Host=&#39;localhost&#39;;</code></li>
+<li>執行命令 <code>FLUSH PRIVILEGES;</code></li>
+<li>執行命令 <code>ALTER USER &#39;root&#39;@&#39;%&#39; IDENTIFIED WITH mysql_native_password BY &#39;root&#39;;</code></li>
+<li>重起mysql</li>
+</ul>
+<h2 id="my-ini"><a href="#my-ini" class="headerlink" title="my.ini"></a>my.ini</h2><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[client]</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"> </span><br><span class="line"><span class="section">[mysql]</span></span><br><span class="line"> </span><br><span class="line"><span class="section">[mysqld]</span></span><br><span class="line"><span class="attr">port</span>=<span class="number">3306</span></span><br><span class="line"><span class="comment">#默认密码插件，8.0默认使用caching_sha2_password,为兼容老版本，改用mysql_native_password</span></span><br><span class="line"><span class="attr">default_authentication_plugin</span>=mysql_native_password</span><br><span class="line"><span class="attr">basedir</span>=D:\JavaTool\database\mysql-<span class="number">8.0</span>.<span class="number">13</span>-winx64</span><br><span class="line"><span class="attr">datadir</span>=D:\JavaTool\database\mysql-<span class="number">8.0</span>.<span class="number">13</span>-winx64\db</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"><span class="attr">general-log</span>=<span class="number">0</span></span><br><span class="line"><span class="attr">general_log_file</span>=D:/JavaTool/database/mysql-<span class="number">8.0</span>.<span class="number">13</span>-winx64/mysql-general.log</span><br><span class="line"><span class="attr">slow-query-log</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">slow_query_log_file</span>=D:/JavaTool/database/mysql-<span class="number">8.0</span>.<span class="number">13</span>-winx64/mysql-slow.log</span><br><span class="line"><span class="attr">log-error</span>=D:/JavaTool/database/mysql-<span class="number">8.0</span>.<span class="number">13</span>-winx64/mysql-error.log</span><br><span class="line"> </span><br><span class="line"><span class="attr">server-id</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">max_connections</span>=<span class="number">151</span></span><br><span class="line"><span class="attr">table_open_cache</span>=<span class="number">2000</span></span><br><span class="line"><span class="attr">tmp_table_size</span>=<span class="number">16</span>M</span><br><span class="line"><span class="attr">thread_cache_size</span>=<span class="number">10</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># *** INNODB Specific options ***</span></span><br><span class="line"><span class="comment"># 事务日志刷新（fsync）到磁盘的行为，1每次提交都写到磁盘，0约每秒写一次，2每次都写，但速度约每秒一次</span></span><br><span class="line"><span class="attr">innodb_flush_log_at_trx_commit</span>=<span class="number">1</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 日志数据缓冲，大了没有意义</span></span><br><span class="line"><span class="attr">innodb_log_buffer_size</span>=<span class="number">1</span>M</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用缓冲池来缓存索引和行数据</span></span><br><span class="line"><span class="attr">innodb_buffer_pool_size</span>=<span class="number">64</span>M</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 日志组中每个日志文件的大小。应该将日志文件的大小设置为 innodb_buffer_pool_size 的25％-100％，以避免日志文件覆盖时出现不必要的缓冲池刷新活动。</span></span><br><span class="line"><span class="attr">innodb_log_file_size</span>=<span class="number">48</span>M</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 内核允许的线程数, cpu核数*2+1</span></span><br><span class="line"><span class="attr">innodb_thread_concurrency</span>=<span class="number">9</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 系统表空间文件变满时自动扩展的大小(in MB) </span></span><br><span class="line"><span class="attr">innodb_autoextend_increment</span>=<span class="number">32</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 缓冲池划分的区域数量。 对于缓冲池在数GB范围内的系统，通过在不同线程读取和写入缓存页面时减少争用，将缓冲池划分为不同的实例可以提高并发性。</span></span><br><span class="line"><span class="attr">innodb_buffer_pool_instances</span>=<span class="number">8</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 每个线程获得执行后的最大计数次数</span></span><br><span class="line"><span class="attr">innodb_concurrency_tickets</span>=<span class="number">5000</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 指定插入到旧子列表中的块在移动到新子列表之前必须在其第一次访问后保留多长时间（以毫秒为单位）。</span></span><br><span class="line"><span class="attr">innodb_old_blocks_time</span>=<span class="number">1000</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 一次可以保持打开的.ibd文件的最大数量，最小为10</span></span><br><span class="line"><span class="attr">innodb_open_files</span>=<span class="number">300</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 启用时，InnoDB会在元数据语句中更新统计信息</span></span><br><span class="line"><span class="attr">innodb_stats_on_metadata</span>=<span class="number">0</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 当启用时，InnoDB将每个新创建的表的数据和索引存储在单独的.ibd文件中，而不是存储在系统表空间中。</span></span><br><span class="line"><span class="attr">innodb_file_per_table</span>=<span class="number">1</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 校验和算法，0表示crc32，1表示strict_crc32，1表示innodb，3表示strict_innodb，4表示无，5表示strict_none。</span></span><br><span class="line"><span class="attr">innodb_checksum_algorithm</span>=<span class="number">0</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment"># 表示在MySQL短暂停止回答新请求之前的这段短时间内可以堆叠多少个请求。</span></span><br><span class="line"><span class="attr">back_log</span>=<span class="number">80</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 如果将其设置为非零值，则每flush_time关闭所有表以释放资源并将未刷新的数据同步到磁盘。</span></span><br><span class="line"><span class="attr">flush_time</span>=<span class="number">0</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 用于普通索引扫描，范围索引扫描和不使用索引并因此执行全表扫描的连接的最小缓冲区大小。</span></span><br><span class="line"><span class="attr">join_buffer_size</span>=<span class="number">512</span>K</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 一个数据包或任何生成或中间字符串的最大大小</span></span><br><span class="line"><span class="attr">max_allowed_packet</span>=<span class="number">4</span>M</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 如果超过这个数量，来自主机的多个连续连接请求在没有成功连接的情况下被中断，则服务器阻止该主机执行进一步的连接。</span></span><br><span class="line"><span class="attr">max_connect_errors</span>=<span class="number">100</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开文件数量，如遇到 "Too many open files" 错误，增大此值。</span></span><br><span class="line"><span class="attr">open_files_limit</span>=<span class="number">4161</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 如果在SHOW GLOBAL STATUS输出中每秒看到多个sort_merge_passes，则可以考虑增加此值以加快ORDER BY或GROUP BY操作的速度，这些操作无法通过查询优化或索引编制得到改进。</span></span><br><span class="line"><span class="attr">sort_buffer_size</span>=<span class="number">512</span>K</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 可以存储在定义缓存中的表定义数（from .frm files）。与普通表缓存不同，表定义缓存占用更少的空间并且不使用文件描述符。 最小值和默认值都是400</span></span><br><span class="line"><span class="attr">table_definition_cache</span>=<span class="number">1400</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 指定基于行的二进制日志事件的最大大小（以字节为单位）。 如果可能的话，行被分成小于这个尺寸的事件。 该值应该是256的倍数。</span></span><br><span class="line"><span class="attr">binlog_row_event_max_size</span>=<span class="number">8</span>K</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 如值大于0，将 master.info 文件同步到磁盘（在每个sync_master_info事件之后使用 fdatasync（））</span></span><br><span class="line"><span class="attr">sync_master_info</span>=<span class="number">10000</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 如值大于0，将其中继日志同步到磁盘（在每个sync_relay_log写入中继日志后使用 fdatasync（））</span></span><br><span class="line"><span class="attr">sync_relay_log</span>=<span class="number">10000</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 如值大于0，将 relay-log.info 文件同步到磁盘（在每个sync_relay_log_info事务之后使用 fdatasync（））</span></span><br><span class="line"><span class="attr">sync_relay_log_info</span>=<span class="number">10000</span></span><br><span class="line"> </span><br><span class="line"><span class="section">[mysqld-8.0]</span></span><br><span class="line"><span class="attr">sql_mode</span>=TRADITIONAL</span><br></pre></td></tr></table></figure>
+<h2 id="run-bat"><a href="#run-bat" class="headerlink" title="run.bat"></a>run.bat</h2><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off </span><br><span class="line"><span class="built_in">cd</span> "<span class="variable">%cd%</span>"</span><br><span class="line">%~dp0bin/mysqld --defaults-file=%~dp0my.ini --console </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">rem %~dp0bin/mysqld --defaults-file=%~dp0my.ini --initialize-insecure --console </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">rem mysqld.exe -u root --skip-grant-tables</span></span><br><span class="line"><span class="comment">rem use mysql;</span></span><br><span class="line"><span class="comment">rem SELECT User, Host FROM mysql.user;</span></span><br><span class="line"><span class="comment">rem update mysql.user set host='%' where User='root' and Host='localhost';</span></span><br><span class="line"><span class="comment">rem FLUSH PRIVILEGES;</span></span><br><span class="line"><span class="comment">rem ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'root';</span></span><br></pre></td></tr></table></figure>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../../../../../categories/database/">database</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/database/">database</a><a href="/tags/mysql/">mysql</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://yudady.github.io/2018/10/24/資料庫/mysql/mysql8-免安裝/" data-title="mysql8-免安裝 | Tommy-好記性不如爛筆頭" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2018/10/28/AI/tensorflow-01/" title="tensorflow-01">
+  <strong>上一篇：</strong><br/>
+  <span>
+  tensorflow-01</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2018/10/24/java/java-io/bio-nio-aio/"  title="bio-nio-aio">
+ <strong>下一篇：</strong><br/> 
+ <span>bio-nio-aio
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#無服務狀態"><span class="toc-number">2.1.</span> <span class="toc-text">無服務狀態</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#my-ini"><span class="toc-number">2.2.</span> <span class="toc-text">my.ini</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#run-bat"><span class="toc-number">2.3.</span> <span class="toc-text">run.bat</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">3.</span> <span class="toc-text">參考資料</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/TODO/" title="TODO">TODO<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/business/" title="business">business<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/database/" title="database">database<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/docker/" title="docker">docker<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/front-end/" title="front-end">front-end<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/home/" title="home">home<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/java/" title="java">java<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/linux/" title="linux">linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/spring/" title="spring">spring<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/tools/" title="tools">tools<sup>29</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理/" title="原理">原理<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/大數據/" title="大數據">大數據<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/深度學習/" title="深度學習">深度學習<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/測試/" title="測試">測試<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/聚合支付系统/" title="聚合支付系统">聚合支付系统<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/netty/" title="netty">netty<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/database/" title="database">database<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/intellij/" title="intellij">intellij<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java8/" title="java8">java8<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/weblogic/" title="weblogic">weblogic<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原理/" title="原理">原理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-3-party/" title="java-3-party">java-3-party<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/blog/" title="blog">blog<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/oracle/" title="oracle">oracle<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-base/" title="java-base">java-base<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/TODO/" title="TODO">TODO<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-io/" title="java-io">java-io<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coldofpig.github.io/" target="_blank" title="joe blog">joe blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://justinyang1221.github.io/" target="_blank" title="賈思 blog">賈思 blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Tommy. <br/>
+			This is my blog, 筆記！！！</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/https://github.com/yudady" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:yu_dady@yahoo.com.tw" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="/about" target="_blank" title="Tommy lin">Tommy lin</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'ca-pub-1366278449398453', 'https://yudady.github.io/');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

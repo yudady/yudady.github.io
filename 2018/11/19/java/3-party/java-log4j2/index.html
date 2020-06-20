@@ -1,0 +1,632 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>java-log4j2 | Tommy-好記性不如爛筆頭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Tommy lin">
+    
+
+    
+    <meta name="description" content="簡介 log4j2">
+<meta name="keywords" content="java-3-party">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java-log4j2">
+<meta property="og:url" content="https://yudady.github.io/2018/11/19/java/3-party/java-log4j2/index.html">
+<meta property="og:site_name" content="Tommy-好記性不如爛筆頭">
+<meta property="og:description" content="簡介 log4j2">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-11-19T15:41:34.066Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java-log4j2">
+<meta name="twitter:description" content="簡介 log4j2">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Tommy-好記性不如爛筆頭" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="../../../../../../css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Tommy-好記性不如爛筆頭" title="Tommy-好記性不如爛筆頭"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Tommy-好記性不如爛筆頭">Tommy-好記性不如爛筆頭</a></h1>
+				<h2 class="blog-motto">紙上得來終覺淺，絕知此事要躬行</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首頁</a></li>
+					
+						<li><a href="/archives">檔案</a></li>
+					
+						<li><a href="/favorite">網站資源</a></li>
+					
+						<li><a href="/projects">紀錄我的資源</a></li>
+					
+						<li><a href="/about">關於我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yudady.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/11/19/java/3-party/java-log4j2/" title="java-log4j2" itemprop="url">java-log4j2</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-11-19T15:35:58.000Z" itemprop="datePublished"> Published 2018-11-19</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Log4j2-Multiple-appenders-example"><span class="toc-number">2.1.</span> <span class="toc-text">Log4j2 Multiple appenders example</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#xml設定"><span class="toc-number">2.2.</span> <span class="toc-text">xml設定</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">3.</span> <span class="toc-text">參考資料</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><blockquote>
+<p>log4j2</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h1><h2 id="Log4j2-Multiple-appenders-example"><a href="#Log4j2-Multiple-appenders-example" class="headerlink" title="Log4j2 Multiple appenders example"></a>Log4j2 Multiple appenders example</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LogUtils</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger main = LoggerFactory.getLogger(<span class="string">"main"</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger bolt = LoggerFactory.getLogger(<span class="string">"bolt"</span>);</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger spout = LoggerFactory.getLogger(<span class="string">"spout"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="xml設定"><a href="#xml設定" class="headerlink" title="xml設定"></a>xml設定</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">monitorInterval</span>=<span class="string">"60"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">Properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Property</span> <span class="attr">name</span>=<span class="string">"LOG_PATTERN"</span>&gt;</span>[%-5level] %d&#123;yyyy-MM-dd HH:mm:ss.SSS&#125; [%t] %c&#123;1&#125; - %msg%n<span class="tag">&lt;/<span class="name">Property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">Appenders</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Console</span> <span class="attr">name</span>=<span class="string">"Console"</span> <span class="attr">target</span>=<span class="string">"SYSTEM_OUT"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">PatternLayout</span> <span class="attr">pattern</span>=<span class="string">"$&#123;LOG_PATTERN&#125;"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Console</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">RollingFile</span> <span class="attr">name</span>=<span class="string">"main"</span> <span class="attr">fileName</span>=<span class="string">"C:/logs/main.log"</span></span></span><br><span class="line"><span class="tag">                     <span class="attr">filePattern</span>=<span class="string">"C:/logs/main-%d&#123;yyyy-MM-dd&#125;-%i.log"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">PatternLayout</span> <span class="attr">pattern</span>=<span class="string">"$&#123;LOG_PATTERN&#125;"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Policies</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">SizeBasedTriggeringPolicy</span> <span class="attr">size</span>=<span class="string">"19500KB"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">Policies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">DefaultRolloverStrategy</span> <span class="attr">max</span>=<span class="string">"10"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">RollingFile</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">RollingFile</span> <span class="attr">name</span>=<span class="string">"bolt"</span> <span class="attr">fileName</span>=<span class="string">"C:/logs/bolt.log"</span></span></span><br><span class="line"><span class="tag">                     <span class="attr">filePattern</span>=<span class="string">"C:/logs/bolt-%d&#123;yyyy-MM-dd&#125;-%i.log"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">PatternLayout</span> <span class="attr">pattern</span>=<span class="string">"$&#123;LOG_PATTERN&#125;"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Policies</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">SizeBasedTriggeringPolicy</span> <span class="attr">size</span>=<span class="string">"19500KB"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">Policies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">DefaultRolloverStrategy</span> <span class="attr">max</span>=<span class="string">"10"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">RollingFile</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">RollingFile</span> <span class="attr">name</span>=<span class="string">"spout"</span> <span class="attr">fileName</span>=<span class="string">"C:/logs/spout.log"</span></span></span><br><span class="line"><span class="tag">                     <span class="attr">filePattern</span>=<span class="string">"C:/logs/spout-%d&#123;yyyy-MM-dd&#125;-%i.log"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">PatternLayout</span> <span class="attr">pattern</span>=<span class="string">"$&#123;LOG_PATTERN&#125;"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Policies</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">SizeBasedTriggeringPolicy</span> <span class="attr">size</span>=<span class="string">"19500KB"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">Policies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">DefaultRolloverStrategy</span> <span class="attr">max</span>=<span class="string">"10"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">RollingFile</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Appenders</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">Loggers</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Logger</span> <span class="attr">name</span>=<span class="string">"main"</span> <span class="attr">additivity</span>=<span class="string">"false"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">AppenderRef</span> <span class="attr">ref</span>=<span class="string">"main"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Logger</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Logger</span> <span class="attr">name</span>=<span class="string">"bolt"</span> <span class="attr">additivity</span>=<span class="string">"false"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">AppenderRef</span> <span class="attr">ref</span>=<span class="string">"bolt"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Logger</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Logger</span> <span class="attr">name</span>=<span class="string">"spout"</span> <span class="attr">additivity</span>=<span class="string">"false"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">AppenderRef</span> <span class="attr">ref</span>=<span class="string">"spout"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Logger</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">Root</span> <span class="attr">level</span>=<span class="string">"all"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">AppenderRef</span> <span class="attr">ref</span>=<span class="string">"Console"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Root</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Loggers</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><ul>
+<li><a href="https://howtodoinjava.com/log4j2/" target="_blank" rel="noopener">HowToDoInJava</a></li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../../../../../categories/java/">java</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/java-3-party/">java-3-party</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://yudady.github.io/2018/11/19/java/3-party/java-log4j2/" data-title="java-log4j2 | Tommy-好記性不如爛筆頭" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2018/11/20/大數據/大數據/" title="大數據">
+  <strong>上一篇：</strong><br/>
+  <span>
+  大數據</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2018/11/19/工具/windows-netcat/"  title="windows-netcat">
+ <strong>下一篇：</strong><br/> 
+ <span>windows-netcat
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Log4j2-Multiple-appenders-example"><span class="toc-number">2.1.</span> <span class="toc-text">Log4j2 Multiple appenders example</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#xml設定"><span class="toc-number">2.2.</span> <span class="toc-text">xml設定</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">3.</span> <span class="toc-text">參考資料</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/TODO/" title="TODO">TODO<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/business/" title="business">business<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/database/" title="database">database<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/docker/" title="docker">docker<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/front-end/" title="front-end">front-end<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/home/" title="home">home<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/java/" title="java">java<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/linux/" title="linux">linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/spring/" title="spring">spring<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/tools/" title="tools">tools<sup>29</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理/" title="原理">原理<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/大數據/" title="大數據">大數據<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/深度學習/" title="深度學習">深度學習<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/測試/" title="測試">測試<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/聚合支付系统/" title="聚合支付系统">聚合支付系统<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/netty/" title="netty">netty<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/database/" title="database">database<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/intellij/" title="intellij">intellij<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java8/" title="java8">java8<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/weblogic/" title="weblogic">weblogic<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原理/" title="原理">原理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-3-party/" title="java-3-party">java-3-party<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/blog/" title="blog">blog<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/oracle/" title="oracle">oracle<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-base/" title="java-base">java-base<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/TODO/" title="TODO">TODO<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-io/" title="java-io">java-io<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coldofpig.github.io/" target="_blank" title="joe blog">joe blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://justinyang1221.github.io/" target="_blank" title="賈思 blog">賈思 blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Tommy. <br/>
+			This is my blog, 筆記！！！</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/https://github.com/yudady" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:yu_dady@yahoo.com.tw" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="/about" target="_blank" title="Tommy lin">Tommy lin</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'ca-pub-1366278449398453', 'https://yudady.github.io/');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

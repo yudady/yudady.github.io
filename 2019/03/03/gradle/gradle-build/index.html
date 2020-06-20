@@ -1,0 +1,776 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>gradle-build | Tommy-好記性不如爛筆頭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Tommy lin">
+    
+
+    
+    <meta name="description" content="簡介Gradle api">
+<meta name="keywords" content="gradle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gradle-build">
+<meta property="og:url" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/index.html">
+<meta property="og:site_name" content="Tommy-好記性不如爛筆頭">
+<meta property="og:description" content="簡介Gradle api">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190302094135.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190302094120.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190302150546.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190302150741.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190302150844.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190302151030.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190302151304.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190302151613.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190302152040.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190302181100.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190302181339.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190302183109.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303012058.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303013009.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303015550.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303123943.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303124730.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303124918.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303125248.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303125511.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303125925.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303130011.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303130449.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303140238.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303141657.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303142359.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303145138.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303151600.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303155517.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303170146.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303170146.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303181200.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303181459.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303181607.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303181748.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303184655.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303190135.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303192258.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303191053.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303191252.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303191430.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303195313.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303195611.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303200216.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303200433.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303202404.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303220346.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303220418.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303220433.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303220614.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303220700.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303222748.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303223214.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303223511.png">
+<meta property="og:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190303223808.png">
+<meta property="og:updated_time" content="2019-03-03T14:38:18.435Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="gradle-build">
+<meta name="twitter:description" content="簡介Gradle api">
+<meta name="twitter:image" content="https://yudady.github.io/2019/03/03/gradle/gradle-build/20190302094135.png">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Tommy-好記性不如爛筆頭" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="../../../../../css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Tommy-好記性不如爛筆頭" title="Tommy-好記性不如爛筆頭"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Tommy-好記性不如爛筆頭">Tommy-好記性不如爛筆頭</a></h1>
+				<h2 class="blog-motto">紙上得來終覺淺，絕知此事要躬行</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首頁</a></li>
+					
+						<li><a href="/archives">檔案</a></li>
+					
+						<li><a href="/favorite">網站資源</a></li>
+					
+						<li><a href="/projects">紀錄我的資源</a></li>
+					
+						<li><a href="/about">關於我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yudady.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2019/03/03/gradle/gradle-build/" title="gradle-build" itemprop="url">gradle-build</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2019-03-03T04:07:20.000Z" itemprop="datePublished"> Published 2019-03-03</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#gradle"><span class="toc-number">2.1.</span> <span class="toc-text">gradle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#missing-method"><span class="toc-number">2.2.</span> <span class="toc-text">missing method</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#metaClass-動態增加第3方已有的功能"><span class="toc-number">2.3.</span> <span class="toc-text">metaClass 動態增加第3方已有的功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gradle-是瞎米，能做瞎米-（編成框架）"><span class="toc-number">2.4.</span> <span class="toc-text">gradle 是瞎米，能做瞎米 （編成框架）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gradle-優勢"><span class="toc-number">2.5.</span> <span class="toc-text">gradle 優勢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生命週期"><span class="toc-number">2.6.</span> <span class="toc-text">生命週期</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Project"><span class="toc-number">3.</span> <span class="toc-text">Project</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#project-file-api"><span class="toc-number">3.1.</span> <span class="toc-text">project file api</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件定位"><span class="toc-number">3.2.</span> <span class="toc-text">文件定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件複製"><span class="toc-number">3.3.</span> <span class="toc-text">文件複製</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#loop-檔案夾-FileTreeElement"><span class="toc-number">3.4.</span> <span class="toc-text">loop 檔案夾 (FileTreeElement)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#buildscript"><span class="toc-number">3.5.</span> <span class="toc-text">buildscript {}</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Project-dependencies"><span class="toc-number">3.6.</span> <span class="toc-text">Project dependencies</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用外部命令"><span class="toc-number">3.7.</span> <span class="toc-text">使用外部命令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Task-創建"><span class="toc-number">4.</span> <span class="toc-text">Task 創建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-創建1"><span class="toc-number">4.1.</span> <span class="toc-text">Task 創建1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-創建2"><span class="toc-number">4.2.</span> <span class="toc-text">Task 創建2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-執行時間計算"><span class="toc-number">4.3.</span> <span class="toc-text">Task 執行時間計算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-doFirst"><span class="toc-number">4.4.</span> <span class="toc-text">Task doFirst</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-doLast"><span class="toc-number">4.5.</span> <span class="toc-text">Task doLast</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-執行順序-依賴"><span class="toc-number">4.6.</span> <span class="toc-text">Task 執行順序(依賴)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-輸入輸出"><span class="toc-number">4.7.</span> <span class="toc-text">Task 輸入輸出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指定運行於某個Task之後"><span class="toc-number">4.8.</span> <span class="toc-text">指定運行於某個Task之後</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用gradle腳本"><span class="toc-number">4.9.</span> <span class="toc-text">引用gradle腳本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定義插件"><span class="toc-number">4.10.</span> <span class="toc-text">自定義插件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jenkins"><span class="toc-number">5.</span> <span class="toc-text">jenkins</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#總結"><span class="toc-number">6.</span> <span class="toc-text">總結</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#root-project"><span class="toc-number">6.1.</span> <span class="toc-text">root project</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用外部檔案"><span class="toc-number">6.2.</span> <span class="toc-text">引用外部檔案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#手動匯入一個子模塊"><span class="toc-number">6.3.</span> <span class="toc-text">手動匯入一個子模塊</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gradle-properties"><span class="toc-number">6.4.</span> <span class="toc-text">gradle.properties</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">7.</span> <span class="toc-text">參考資料</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><p><a href="https://docs.gradle.org/current/dsl/index.html" target="_blank" rel="noopener">Gradle api</a></p>
+<a id="more"></a>
+<h1 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h1><h2 id="gradle"><a href="#gradle" class="headerlink" title="gradle"></a>gradle</h2><p><img src="/2019/03/03/gradle/gradle-build/20190302094135.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190302094120.png" alt="gradle"></p>
+<h2 id="missing-method"><a href="#missing-method" class="headerlink" title="missing method"></a>missing method</h2><p><img src="/2019/03/03/gradle/gradle-build/20190302150546.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190302150741.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190302150844.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190302151030.png" alt="gradle"></p>
+<h2 id="metaClass-動態增加第3方已有的功能"><a href="#metaClass-動態增加第3方已有的功能" class="headerlink" title="metaClass 動態增加第3方已有的功能"></a>metaClass 動態增加第3方已有的功能</h2><p><img src="/2019/03/03/gradle/gradle-build/20190302151304.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190302151613.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190302152040.png" alt="gradle"></p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<p><img src="/2019/03/03/gradle/gradle-build/20190302181100.png" alt="gradle"></p>
+<h2 id="gradle-是瞎米，能做瞎米-（編成框架）"><a href="#gradle-是瞎米，能做瞎米-（編成框架）" class="headerlink" title="gradle 是瞎米，能做瞎米 （編成框架）"></a>gradle 是瞎米，能做瞎米 （編成框架）</h2><p><img src="/2019/03/03/gradle/gradle-build/20190302181339.png" alt="gradle"></p>
+<h2 id="gradle-優勢"><a href="#gradle-優勢" class="headerlink" title="gradle 優勢"></a>gradle 優勢</h2><ul>
+<li>靈活度</li>
+<li>細粒度</li>
+<li>擴展性</li>
+<li>兼容性</li>
+</ul>
+<h2 id="生命週期"><a href="#生命週期" class="headerlink" title="生命週期"></a>生命週期</h2><p><img src="/2019/03/03/gradle/gradle-build/20190302183109.png" alt="gradle"></p>
+<hr>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303012058.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303013009.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303015550.png" alt="gradle"></p>
+<h1 id="Project"><a href="#Project" class="headerlink" title="Project"></a>Project</h1><blockquote>
+<p>org.gradle.api.Project</p>
+</blockquote>
+<h2 id="project-file-api"><a href="#project-file-api" class="headerlink" title="project file api"></a>project file api</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303123943.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303124730.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303124918.png" alt="gradle"></p>
+<h2 id="文件定位"><a href="#文件定位" class="headerlink" title="文件定位"></a>文件定位</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303125248.png" alt="gradle"></p>
+<blockquote>
+<p>相對於當前工程</p>
+</blockquote>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303125511.png" alt="gradle"></p>
+<h2 id="文件複製"><a href="#文件複製" class="headerlink" title="文件複製"></a>文件複製</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303125925.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303130011.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303130449.png" alt="gradle"></p>
+<blockquote>
+<p>org.gradle.api.file.CopySpec</p>
+</blockquote>
+<h2 id="loop-檔案夾-FileTreeElement"><a href="#loop-檔案夾-FileTreeElement" class="headerlink" title="loop 檔案夾 (FileTreeElement)"></a>loop 檔案夾 (FileTreeElement)</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303140238.png" alt="gradle"></p>
+<h2 id="buildscript"><a href="#buildscript" class="headerlink" title="buildscript {}"></a>buildscript {}</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303141657.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303142359.png" alt="gradle"></p>
+<h2 id="Project-dependencies"><a href="#Project-dependencies" class="headerlink" title="Project dependencies"></a>Project dependencies</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303145138.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303151600.png" alt="gradle"></p>
+<h2 id="使用外部命令"><a href="#使用外部命令" class="headerlink" title="使用外部命令"></a>使用外部命令</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303155517.png" alt="gradle"></p>
+<h1 id="Task-創建"><a href="#Task-創建" class="headerlink" title="Task 創建"></a>Task 創建</h1><h2 id="Task-創建1"><a href="#Task-創建1" class="headerlink" title="Task 創建1"></a>Task 創建1</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303170146.png" alt="gradle"></p>
+<h2 id="Task-創建2"><a href="#Task-創建2" class="headerlink" title="Task 創建2"></a>Task 創建2</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303170146.png" alt="gradle"></p>
+<h2 id="Task-執行時間計算"><a href="#Task-執行時間計算" class="headerlink" title="Task 執行時間計算"></a>Task 執行時間計算</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303181200.png" alt="gradle"></p>
+<h2 id="Task-doFirst"><a href="#Task-doFirst" class="headerlink" title="Task doFirst"></a>Task doFirst</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303181459.png" alt="gradle"></p>
+<h2 id="Task-doLast"><a href="#Task-doLast" class="headerlink" title="Task doLast"></a>Task doLast</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303181607.png" alt="gradle"></p>
+<blockquote>
+<p>只有寫在doFirst，doLast才能在<code>執行階段</code>被調用</p>
+</blockquote>
+<h2 id="Task-執行順序-依賴"><a href="#Task-執行順序-依賴" class="headerlink" title="Task 執行順序(依賴)"></a>Task 執行順序(依賴)</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303181748.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303184655.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303190135.png" alt="gradle"></p>
+<h2 id="Task-輸入輸出"><a href="#Task-輸入輸出" class="headerlink" title="Task 輸入輸出"></a>Task 輸入輸出</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303192258.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303191053.png" alt="gradle"></p>
+<blockquote>
+<p>TaskInputs TaskOutputs</p>
+</blockquote>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303191252.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303191430.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303195313.png" alt="gradle"></p>
+<h2 id="指定運行於某個Task之後"><a href="#指定運行於某個Task之後" class="headerlink" title="指定運行於某個Task之後"></a>指定運行於某個Task之後</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303195611.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303200216.png" alt="gradle"></p>
+<h2 id="引用gradle腳本"><a href="#引用gradle腳本" class="headerlink" title="引用gradle腳本"></a>引用gradle腳本</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303200433.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303202404.png" alt="gradle"></p>
+<h2 id="自定義插件"><a href="#自定義插件" class="headerlink" title="自定義插件"></a>自定義插件</h2><p><img src="/2019/03/03/gradle/gradle-build/20190303220346.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303220418.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303220433.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303220614.png" alt="gradle"></p>
+<blockquote>
+<p>使用</p>
+</blockquote>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303220700.png" alt="gradle"></p>
+<h1 id="jenkins"><a href="#jenkins" class="headerlink" title="jenkins"></a>jenkins</h1><p><img src="/2019/03/03/gradle/gradle-build/20190303222748.png" alt="gradle"></p>
+<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><p><img src="/2019/03/03/gradle/gradle-build/20190303223214.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303223511.png" alt="gradle"></p>
+<p><img src="/2019/03/03/gradle/gradle-build/20190303223808.png" alt="gradle"></p>
+<h2 id="root-project"><a href="#root-project" class="headerlink" title="root project"></a>root project</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">buildscript &#123;&#125;</span><br><span class="line">allprojects(subprojects) &#123;&#125;</span><br><span class="line">subprojects &#123;&#125;</span><br><span class="line">ext &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="引用外部檔案"><a href="#引用外部檔案" class="headerlink" title="引用外部檔案"></a>引用外部檔案</h2><blockquote>
+<p>apply from: file(“project.gradle”)</p>
+</blockquote>
+<h2 id="手動匯入一個子模塊"><a href="#手動匯入一個子模塊" class="headerlink" title="手動匯入一個子模塊"></a>手動匯入一個子模塊</h2><blockquote>
+<p>project(‘:common’) {}</p>
+</blockquote>
+<h2 id="gradle-properties"><a href="#gradle-properties" class="headerlink" title="gradle.properties"></a>gradle.properties</h2><blockquote>
+<p>k v 鍵值對</p>
+</blockquote>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../../../../categories/tools/">tools</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/gradle/">gradle</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://yudady.github.io/2019/03/03/gradle/gradle-build/" data-title="gradle-build | Tommy-好記性不如爛筆頭" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2019/03/06/資料庫/oracle/oracle-record/" title="oracle-record">
+  <strong>上一篇：</strong><br/>
+  <span>
+  oracle-record</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2019/02/28/資料庫/oracle/oracle-plsql/"  title="oracle-plsql">
+ <strong>下一篇：</strong><br/> 
+ <span>oracle-plsql
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#gradle"><span class="toc-number">2.1.</span> <span class="toc-text">gradle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#missing-method"><span class="toc-number">2.2.</span> <span class="toc-text">missing method</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#metaClass-動態增加第3方已有的功能"><span class="toc-number">2.3.</span> <span class="toc-text">metaClass 動態增加第3方已有的功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gradle-是瞎米，能做瞎米-（編成框架）"><span class="toc-number">2.4.</span> <span class="toc-text">gradle 是瞎米，能做瞎米 （編成框架）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gradle-優勢"><span class="toc-number">2.5.</span> <span class="toc-text">gradle 優勢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生命週期"><span class="toc-number">2.6.</span> <span class="toc-text">生命週期</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Project"><span class="toc-number">3.</span> <span class="toc-text">Project</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#project-file-api"><span class="toc-number">3.1.</span> <span class="toc-text">project file api</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件定位"><span class="toc-number">3.2.</span> <span class="toc-text">文件定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件複製"><span class="toc-number">3.3.</span> <span class="toc-text">文件複製</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#loop-檔案夾-FileTreeElement"><span class="toc-number">3.4.</span> <span class="toc-text">loop 檔案夾 (FileTreeElement)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#buildscript"><span class="toc-number">3.5.</span> <span class="toc-text">buildscript {}</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Project-dependencies"><span class="toc-number">3.6.</span> <span class="toc-text">Project dependencies</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用外部命令"><span class="toc-number">3.7.</span> <span class="toc-text">使用外部命令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Task-創建"><span class="toc-number">4.</span> <span class="toc-text">Task 創建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-創建1"><span class="toc-number">4.1.</span> <span class="toc-text">Task 創建1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-創建2"><span class="toc-number">4.2.</span> <span class="toc-text">Task 創建2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-執行時間計算"><span class="toc-number">4.3.</span> <span class="toc-text">Task 執行時間計算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-doFirst"><span class="toc-number">4.4.</span> <span class="toc-text">Task doFirst</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-doLast"><span class="toc-number">4.5.</span> <span class="toc-text">Task doLast</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-執行順序-依賴"><span class="toc-number">4.6.</span> <span class="toc-text">Task 執行順序(依賴)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-輸入輸出"><span class="toc-number">4.7.</span> <span class="toc-text">Task 輸入輸出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指定運行於某個Task之後"><span class="toc-number">4.8.</span> <span class="toc-text">指定運行於某個Task之後</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用gradle腳本"><span class="toc-number">4.9.</span> <span class="toc-text">引用gradle腳本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定義插件"><span class="toc-number">4.10.</span> <span class="toc-text">自定義插件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jenkins"><span class="toc-number">5.</span> <span class="toc-text">jenkins</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#總結"><span class="toc-number">6.</span> <span class="toc-text">總結</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#root-project"><span class="toc-number">6.1.</span> <span class="toc-text">root project</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用外部檔案"><span class="toc-number">6.2.</span> <span class="toc-text">引用外部檔案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#手動匯入一個子模塊"><span class="toc-number">6.3.</span> <span class="toc-text">手動匯入一個子模塊</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gradle-properties"><span class="toc-number">6.4.</span> <span class="toc-text">gradle.properties</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">7.</span> <span class="toc-text">參考資料</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/TODO/" title="TODO">TODO<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/business/" title="business">business<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/database/" title="database">database<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/docker/" title="docker">docker<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/front-end/" title="front-end">front-end<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/home/" title="home">home<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/java/" title="java">java<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/linux/" title="linux">linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/spring/" title="spring">spring<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/tools/" title="tools">tools<sup>29</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理/" title="原理">原理<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/大數據/" title="大數據">大數據<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/深度學習/" title="深度學習">深度學習<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/測試/" title="測試">測試<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/聚合支付系统/" title="聚合支付系统">聚合支付系统<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/netty/" title="netty">netty<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/database/" title="database">database<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/intellij/" title="intellij">intellij<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java8/" title="java8">java8<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/weblogic/" title="weblogic">weblogic<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原理/" title="原理">原理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-3-party/" title="java-3-party">java-3-party<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/blog/" title="blog">blog<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/oracle/" title="oracle">oracle<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-base/" title="java-base">java-base<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/TODO/" title="TODO">TODO<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-io/" title="java-io">java-io<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coldofpig.github.io/" target="_blank" title="joe blog">joe blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://justinyang1221.github.io/" target="_blank" title="賈思 blog">賈思 blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Tommy. <br/>
+			This is my blog, 筆記！！！</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/https://github.com/yudady" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:yu_dady@yahoo.com.tw" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="/about" target="_blank" title="Tommy lin">Tommy lin</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'ca-pub-1366278449398453', 'https://yudady.github.io/');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

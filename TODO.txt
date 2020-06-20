@@ -1,0 +1,44 @@
+# TODO
+
+
+履歷先看有無作品集，沒作品集就看工作經歷，沒工作經歷看自傳
+
+blade https://lets-blade.com/docs/create-application.html
+
+
+[SpringBoot整合Mybatis-Plus](https://juejin.im/post/5b517d24e51d451907696dec)
+[SpringBoot使用Mybatis-PageHelper](https://juejin.im/post/5b2cb161f265da59b7137666)
+[SpringBoot整合Redis](https://juejin.im/post/5ad6acb4f265da239e4e9906)
+[SpringBoot整合elasticsearch](https://juejin.im/post/5aec0b386fb9a07abb23784d)
+[]()
+大數據
+
+
+
+
+
+
+java8 
+設計模式 vs function interface
+spring 源碼
+sprng mvc 源碼
+spring security 源碼
+
+--------------------------------------
+https://github.com/GeekaholicLin/hexo-theme-ylion
+hexo-theme-ylion
+😊 说不定是一个让你感到惊喜的hexo主题 🍻 🍬
+
+-------------------------------------
+<script src="https://unpkg.com/marked@0.3.6"></script>
+<script src="https://unpkg.com/lodash@4.16.0"></script>
+
+headless-chrome
+- [使用 Headless Chrome 擷圖、轉存PDF、爬資料](https://blog.darkthread.net/blog/headless-chrome/)
+- [Chrome 开发工具指南](http://wiki.jikexueyuan.com/project/chrome-devtools/)
+- [Remote Debug for Chrome](http://acai-hsieh.blogspot.com/2012/10/remote-debug-for-chrome.html)
+- [Chrome 开发者工具](http://www.css88.com/doc/chrome-devtools/)
+- [揭秘浏览器远程调试技术](http://taobaofed.org/blog/2016/10/19/chrome-remote-debugging-technics/)
+- [Chrome DevTools Protocol ](https://chromedevtools.github.io/devtools-protocol/)
+
+

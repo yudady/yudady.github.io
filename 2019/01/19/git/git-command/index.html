@@ -1,0 +1,735 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>git-command | Tommy-好記性不如爛筆頭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Tommy lin">
+    
+
+    
+    <meta name="description" content="簡介git命令 只拉取了dev git clone –single-branch git@github.com:yudady/concurrency.git –branch dev develop  1234567Cloning into &apos;develop&apos;...remote: Enumerating objects: 242, done.remote: Counting objects: 100">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git-command">
+<meta property="og:url" content="https://yudady.github.io/2019/01/19/git/git-command/index.html">
+<meta property="og:site_name" content="Tommy-好記性不如爛筆頭">
+<meta property="og:description" content="簡介git命令 只拉取了dev git clone –single-branch git@github.com:yudady/concurrency.git –branch dev develop  1234567Cloning into &apos;develop&apos;...remote: Enumerating objects: 242, done.remote: Counting objects: 100">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2019-03-10T03:34:05.055Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git-command">
+<meta name="twitter:description" content="簡介git命令 只拉取了dev git clone –single-branch git@github.com:yudady/concurrency.git –branch dev develop  1234567Cloning into &apos;develop&apos;...remote: Enumerating objects: 242, done.remote: Counting objects: 100">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Tommy-好記性不如爛筆頭" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="../../../../../css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Tommy-好記性不如爛筆頭" title="Tommy-好記性不如爛筆頭"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Tommy-好記性不如爛筆頭">Tommy-好記性不如爛筆頭</a></h1>
+				<h2 class="blog-motto">紙上得來終覺淺，絕知此事要躬行</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首頁</a></li>
+					
+						<li><a href="/archives">檔案</a></li>
+					
+						<li><a href="/favorite">網站資源</a></li>
+					
+						<li><a href="/projects">紀錄我的資源</a></li>
+					
+						<li><a href="/about">關於我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yudady.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2019/01/19/git/git-command/" title="git-command" itemprop="url">git-command</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2019-01-18T20:08:30.000Z" itemprop="datePublished"> Published 2019-01-19</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#只拉取了dev"><span class="toc-number">1.1.</span> <span class="toc-text">只拉取了dev</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移除未加入版控的檔案-f-amp-目錄-d"><span class="toc-number">1.2.</span> <span class="toc-text">移除未加入版控的檔案(-f) &amp; 目錄(-d)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地undo-退版-reset"><span class="toc-number">1.3.</span> <span class="toc-text">本地undo:退版(reset)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#以遠端為主-重拉pull"><span class="toc-number">1.4.</span> <span class="toc-text">以遠端為主:重拉pull　</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#以本地為主-強迫push"><span class="toc-number">1.5.</span> <span class="toc-text">以本地為主:強迫push</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#合併未push的commit-壓縮commit-衍合操作"><span class="toc-number">1.6.</span> <span class="toc-text">合併未push的commit(壓縮commit)(衍合操作)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#設定-git-config"><span class="toc-number">2.1.</span> <span class="toc-text">設定 git config</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命令"><span class="toc-number">2.2.</span> <span class="toc-text">命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#取消分支追蹤"><span class="toc-number">2.2.1.</span> <span class="toc-text">取消分支追蹤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#刪除遠程跟蹤分支："><span class="toc-number">2.2.2.</span> <span class="toc-text">刪除遠程跟蹤分支：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#加入遠端的-repository"><span class="toc-number">2.2.3.</span> <span class="toc-text">加入遠端的 repository</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#開始追蹤master"><span class="toc-number">2.2.4.</span> <span class="toc-text">開始追蹤master</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回退到某個版本"><span class="toc-number">2.2.5.</span> <span class="toc-text">回退到某個版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#強制更新遠端分支-很可能會不小心把別人上傳的-code-整個覆蓋掉"><span class="toc-number">2.2.6.</span> <span class="toc-text">強制更新遠端分支(很可能會不小心把別人上傳的 code 整個覆蓋掉)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#假設你回覆之前的版本後，又想回復到最新提交的版本，就可以用"><span class="toc-number">2.2.7.</span> <span class="toc-text">假設你回覆之前的版本後，又想回復到最新提交的版本，就可以用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-push-origin-master-cat"><span class="toc-number">2.2.8.</span> <span class="toc-text">git push origin master:cat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-pull-origin-master-cat"><span class="toc-number">2.2.9.</span> <span class="toc-text">git pull origin master:cat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何修改-取消上一次的-commit"><span class="toc-number">2.2.10.</span> <span class="toc-text">如何修改/取消上一次的 commit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分支基本操作-branch"><span class="toc-number">2.2.11.</span> <span class="toc-text">分支基本操作(branch)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#遠端操作-remote"><span class="toc-number">2.2.12.</span> <span class="toc-text">遠端操作(remote)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#暫存操作-stash"><span class="toc-number">2.2.13.</span> <span class="toc-text">暫存操作(stash)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常見問題："><span class="toc-number">2.2.14.</span> <span class="toc-text">常見問題：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">3.</span> <span class="toc-text">參考資料</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><p>git命令</p>
+<h2 id="只拉取了dev"><a href="#只拉取了dev" class="headerlink" title="只拉取了dev"></a>只拉取了dev</h2><blockquote>
+<p>git clone –single-branch <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:yudady/concurrency.git –branch dev develop</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Cloning into 'develop'...</span><br><span class="line">remote: Enumerating objects: 242, done.</span><br><span class="line">remote: Counting objects: 100% (242/242), done.</span><br><span class="line">remote: Compressing objects: 100% (101/101), done.</span><br><span class="line">Receiving objectsremote: Total 242 (delta 124), reused 239 (delta 124), pack-reused 0</span><br><span class="line">Receiving objects: 100% (242/242), 46.11 KiB | 214.00 KiB/s, done.</span><br><span class="line">Resolving deltas: 100% (124/124), done.</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>git branch –set-upstream branch-name origin/branch-name</p>
+</blockquote>
+<h2 id="移除未加入版控的檔案-f-amp-目錄-d"><a href="#移除未加入版控的檔案-f-amp-目錄-d" class="headerlink" title="移除未加入版控的檔案(-f) &amp; 目錄(-d)"></a>移除未加入版控的檔案(-f) &amp; 目錄(-d)</h2><blockquote>
+<p>git clean -f -d   </p>
+</blockquote>
+<h2 id="本地undo-退版-reset"><a href="#本地undo-退版-reset" class="headerlink" title="本地undo:退版(reset)"></a>本地undo:退版(reset)</h2><blockquote>
+<p>git reset –hard 09d528c7f608c1a5485cbde431fe5d0705bde8e7</p>
+</blockquote>
+<h2 id="以遠端為主-重拉pull"><a href="#以遠端為主-重拉pull" class="headerlink" title="以遠端為主:重拉pull　"></a>以遠端為主:重拉pull　</h2><blockquote>
+<p>git reset –hard origin/master</p>
+</blockquote>
+<h2 id="以本地為主-強迫push"><a href="#以本地為主-強迫push" class="headerlink" title="以本地為主:強迫push"></a>以本地為主:強迫push</h2><blockquote>
+<p>git push –force　</p>
+</blockquote>
+<h2 id="合併未push的commit-壓縮commit-衍合操作"><a href="#合併未push的commit-壓縮commit-衍合操作" class="headerlink" title="合併未push的commit(壓縮commit)(衍合操作)"></a>合併未push的commit(壓縮commit)(衍合操作)</h2><blockquote>
+<p>git rebase -i 1c76461a21a8</p>
+<ul>
+<li>第一條pick其他全部改为squash</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<h1 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h1><h2 id="設定-git-config"><a href="#設定-git-config" class="headerlink" title="設定 git config"></a>設定 git config</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yudady&quot;</span><br><span class="line">git config --global user.email &quot;tommy@gmail.com&quot;</span><br><span class="line"></span><br><span class="line">git config --local user.name &quot;tommy&quot;</span><br><span class="line">git config --local user.email &quot;tommy@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h3 id="取消分支追蹤"><a href="#取消分支追蹤" class="headerlink" title="取消分支追蹤"></a>取消分支追蹤</h3><blockquote>
+<p>git branch –unset-upstream [分支名]</p>
+</blockquote>
+<h3 id="刪除遠程跟蹤分支："><a href="#刪除遠程跟蹤分支：" class="headerlink" title="刪除遠程跟蹤分支："></a>刪除遠程跟蹤分支：</h3><blockquote>
+<p>git branch -d -r origin/master</p>
+</blockquote>
+<h3 id="加入遠端的-repository"><a href="#加入遠端的-repository" class="headerlink" title="加入遠端的 repository"></a>加入遠端的 repository</h3><blockquote>
+<p>git remote add upstream <a href="https://github.com/otheruser/repo.git" target="_blank" rel="noopener">https://github.com/otheruser/repo.git</a></p>
+</blockquote>
+<h3 id="開始追蹤master"><a href="#開始追蹤master" class="headerlink" title="開始追蹤master"></a>開始追蹤master</h3><blockquote>
+<p>git branch –set-upstream-to=origin/master master</p>
+</blockquote>
+<h3 id="回退到某個版本"><a href="#回退到某個版本" class="headerlink" title="回退到某個版本"></a>回退到某個版本</h3><blockquote>
+<p>git reset 09d528c7f608c1a5485cbde431fe5d0705bde8e7</p>
+</blockquote>
+<h3 id="強制更新遠端分支-很可能會不小心把別人上傳的-code-整個覆蓋掉"><a href="#強制更新遠端分支-很可能會不小心把別人上傳的-code-整個覆蓋掉" class="headerlink" title="強制更新遠端分支(很可能會不小心把別人上傳的 code 整個覆蓋掉)"></a>強制更新遠端分支(很可能會不小心把別人上傳的 code 整個覆蓋掉)</h3><blockquote>
+<p>git push -f</p>
+</blockquote>
+<h3 id="假設你回覆之前的版本後，又想回復到最新提交的版本，就可以用"><a href="#假設你回覆之前的版本後，又想回復到最新提交的版本，就可以用" class="headerlink" title="假設你回覆之前的版本後，又想回復到最新提交的版本，就可以用"></a>假設你回覆之前的版本後，又想回復到最新提交的版本，就可以用</h3><blockquote>
+<p>git reset –hard commit_id</p>
+</blockquote>
+<h3 id="git-push-origin-master-cat"><a href="#git-push-origin-master-cat" class="headerlink" title="git push origin master:cat"></a>git push origin master:cat</h3><blockquote>
+<p>把本地的 master 分支的內容，推一份到 origin 上，並且在 origin 上建立一個 cat 分支</p>
+</blockquote>
+<h3 id="git-pull-origin-master-cat"><a href="#git-pull-origin-master-cat" class="headerlink" title="git pull origin master:cat"></a>git pull origin master:cat</h3><blockquote>
+<p>把遠程的master拉下來到本地的cat分支<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git pull origin master:cat</span></span><br><span class="line">From github.com:yudady/concurrency</span><br><span class="line"> * [new branch]      master     -&gt; cat</span><br><span class="line">Already up to date.</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<h3 id="如何修改-取消上一次的-commit"><a href="#如何修改-取消上一次的-commit" class="headerlink" title="如何修改/取消上一次的 commit"></a>如何修改/取消上一次的 commit</h3><ol>
+<li>git commit –amend 修改上一次的 commit 訊息。</li>
+<li>git commit –amend 檔案1 檔案2… 將檔案1、檔案2加入上一次的 commit。</li>
+<li>git reset HEAD^ –soft 取消剛剛的 commit，但保留修改過的檔案。</li>
+<li>git reset HEAD^ –hard 取消剛剛的 commit，回到再上一次 commit的 乾淨狀態。</li>
+</ol>
+<h3 id="分支基本操作-branch"><a href="#分支基本操作-branch" class="headerlink" title="分支基本操作(branch)"></a>分支基本操作(branch)</h3><ul>
+<li>git branch 列出所有本地端的 branch。</li>
+<li>git branch -r 列出所有遠端的 branch。</li>
+<li>git branch -a 列出所有本地及遠端的 branch。</li>
+<li>git branch “branch名稱” 建立一個新的 branch。</li>
+<li>git checkout -b “branch名稱” 建立一個新的 branch 並切換到該 branch。</li>
+<li>git branch branch名稱 起始點 以起始點作為基準建立一個新的 branch，起始點可以是一個 tag，branch 或是 commit。</li>
+<li>git branch –track branch名稱 遠端branch 建立一個 tracking 遠端 branch 的 branch，這樣以後 push/pull都會直接對應到該遠端的branch。</li>
+<li>git branch –set-upstream branch 遠端branch 將一個已存在的 branch 設定成 tracking 遠端的branch。</li>
+<li>git branch -d “branch 名稱” 刪除 branch。</li>
+<li>git -r -d 遠端branch 刪除一個 tracking 的遠端 branch，例如git branch -r -d wycats/master</li>
+<li>git push repository名稱 :遠端branch 刪除一個 repository 的 branch，通常用在刪除遠端的 branch，例如git push origin :old_branch_to_be_deleted。</li>
+<li>git checkout branch名稱 切換到另一個 branch(所有修改過程會被保留)。</li>
+</ul>
+<h3 id="遠端操作-remote"><a href="#遠端操作-remote" class="headerlink" title="遠端操作(remote)"></a>遠端操作(remote)</h3><ul>
+<li>git remote add remote名稱 remote網址 加入一個 remote repository，例如 git remote add github git://github.com/gogojimmy/test.git</li>
+<li>git push remote名稱 :branch名稱 刪除遠端 branch，例如 git push origin :somebranch。</li>
+<li>git pull remote名稱 branch名稱 下載一個遠端的 branch 並合併(注意是下載遠端的 branch 合併到目前本地端所在的 branch)。</li>
+<li>git push 類似於 pull 操作，將本地端的 branch 上傳到遠端。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">預設應該只會有 origin 這個 remote：</span><br><span class="line">origin https://github.com/user/repo.git (fetch)</span><br><span class="line">origin https://github.com/user/repo.git (push)</span><br><span class="line"></span><br><span class="line">我們用下面這個命令來加入遠端的 repository，在這邊的情境也就是比較新的、上游的 repository</span><br><span class="line">upstream 是 remote name、可以自己取名，不要重複就好，但後面我都用會 upstream 做示範</span><br><span class="line">而後面那串網址是 repository 位置：</span><br><span class="line">$ git remote add upstream https://github.com/otheruser/repo.git</span><br><span class="line"></span><br><span class="line">如果再看一次現有的remote端應該會發現多了兩組 upstream (fetch &amp; push)：</span><br><span class="line">$ git remote -v</span><br><span class="line">origin https://github.com/user/repo.git (fetch)</span><br><span class="line">origin https://github.com/user/repo.git (push)</span><br><span class="line">upstream https://github.com/otheruser/repo.git (fetch)</span><br><span class="line">upstream https://github.com/otheruser/repo.git (push)</span><br></pre></td></tr></table></figure>
+<h3 id="暫存操作-stash"><a href="#暫存操作-stash" class="headerlink" title="暫存操作(stash)"></a>暫存操作(stash)</h3><ul>
+<li>git stash 將目前所做的修改都暫存起來。</li>
+<li>git stash apply 取出最新一次的暫存。</li>
+<li>git stash pop 取出最新一次的暫存並將他從暫存清單中移除。</li>
+<li>git stash list 顯示出所有的暫存清單。</li>
+<li>git stash clear 清除所有暫存。</li>
+</ul>
+<h3 id="常見問題："><a href="#常見問題：" class="headerlink" title="常見問題："></a>常見問題：</h3><ul>
+<li>我的 code 改爛了我想全部重來，我要如何快速回到乾淨的目錄?<ul>
+<li>git reset –hard 這指令會清除所有與最近一次 commit 不同的修改。</li>
+</ul>
+</li>
+<li>merge 過程中發生 confict 我想放棄 merge，要如何取消 merge？<ul>
+<li>一樣使用 git reset –hard 可以取消這次的 merge。</li>
+</ul>
+</li>
+<li>如何取消這次的 merge 回到 merge 前的狀態?<ul>
+<li>git reset –hard ORIG_HEAD 這指令會取消最近一次成功的 merge 以及所有你在這次 merge 後所做的修改。</li>
+</ul>
+</li>
+<li>如何回復單獨檔案到原本 commit 的狀態?<ul>
+<li>git checkout 檔案名稱 這指令會將已經被修改過的檔案回復到最近一次 commit 的樣子。</li>
+</ul>
+</li>
+</ul>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><ul>
+<li><a href="https://blog.csdn.net/itfootball/article/details/44154121" target="_blank" rel="noopener">git中利用rebase来压缩多次提交</a></li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../../../../categories/tools/">tools</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/git/">git</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://yudady.github.io/2019/01/19/git/git-command/" data-title="git-command | Tommy-好記性不如爛筆頭" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2019/02/01/業務邏輯/秒殺/" title="秒殺">
+  <strong>上一篇：</strong><br/>
+  <span>
+  秒殺</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2019/01/15/java/java-base/泛型方法/"  title="泛型方法">
+ <strong>下一篇：</strong><br/> 
+ <span>泛型方法
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#只拉取了dev"><span class="toc-number">1.1.</span> <span class="toc-text">只拉取了dev</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移除未加入版控的檔案-f-amp-目錄-d"><span class="toc-number">1.2.</span> <span class="toc-text">移除未加入版控的檔案(-f) &amp; 目錄(-d)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地undo-退版-reset"><span class="toc-number">1.3.</span> <span class="toc-text">本地undo:退版(reset)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#以遠端為主-重拉pull"><span class="toc-number">1.4.</span> <span class="toc-text">以遠端為主:重拉pull　</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#以本地為主-強迫push"><span class="toc-number">1.5.</span> <span class="toc-text">以本地為主:強迫push</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#合併未push的commit-壓縮commit-衍合操作"><span class="toc-number">1.6.</span> <span class="toc-text">合併未push的commit(壓縮commit)(衍合操作)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#設定-git-config"><span class="toc-number">2.1.</span> <span class="toc-text">設定 git config</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命令"><span class="toc-number">2.2.</span> <span class="toc-text">命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#取消分支追蹤"><span class="toc-number">2.2.1.</span> <span class="toc-text">取消分支追蹤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#刪除遠程跟蹤分支："><span class="toc-number">2.2.2.</span> <span class="toc-text">刪除遠程跟蹤分支：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#加入遠端的-repository"><span class="toc-number">2.2.3.</span> <span class="toc-text">加入遠端的 repository</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#開始追蹤master"><span class="toc-number">2.2.4.</span> <span class="toc-text">開始追蹤master</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回退到某個版本"><span class="toc-number">2.2.5.</span> <span class="toc-text">回退到某個版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#強制更新遠端分支-很可能會不小心把別人上傳的-code-整個覆蓋掉"><span class="toc-number">2.2.6.</span> <span class="toc-text">強制更新遠端分支(很可能會不小心把別人上傳的 code 整個覆蓋掉)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#假設你回覆之前的版本後，又想回復到最新提交的版本，就可以用"><span class="toc-number">2.2.7.</span> <span class="toc-text">假設你回覆之前的版本後，又想回復到最新提交的版本，就可以用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-push-origin-master-cat"><span class="toc-number">2.2.8.</span> <span class="toc-text">git push origin master:cat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-pull-origin-master-cat"><span class="toc-number">2.2.9.</span> <span class="toc-text">git pull origin master:cat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何修改-取消上一次的-commit"><span class="toc-number">2.2.10.</span> <span class="toc-text">如何修改/取消上一次的 commit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分支基本操作-branch"><span class="toc-number">2.2.11.</span> <span class="toc-text">分支基本操作(branch)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#遠端操作-remote"><span class="toc-number">2.2.12.</span> <span class="toc-text">遠端操作(remote)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#暫存操作-stash"><span class="toc-number">2.2.13.</span> <span class="toc-text">暫存操作(stash)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常見問題："><span class="toc-number">2.2.14.</span> <span class="toc-text">常見問題：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">3.</span> <span class="toc-text">參考資料</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/TODO/" title="TODO">TODO<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/business/" title="business">business<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/database/" title="database">database<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/docker/" title="docker">docker<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/front-end/" title="front-end">front-end<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/home/" title="home">home<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/java/" title="java">java<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/linux/" title="linux">linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/spring/" title="spring">spring<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/tools/" title="tools">tools<sup>29</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理/" title="原理">原理<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/大數據/" title="大數據">大數據<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/深度學習/" title="深度學習">深度學習<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/測試/" title="測試">測試<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/聚合支付系统/" title="聚合支付系统">聚合支付系统<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/netty/" title="netty">netty<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/database/" title="database">database<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/intellij/" title="intellij">intellij<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java8/" title="java8">java8<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/weblogic/" title="weblogic">weblogic<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原理/" title="原理">原理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-3-party/" title="java-3-party">java-3-party<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/blog/" title="blog">blog<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/oracle/" title="oracle">oracle<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-base/" title="java-base">java-base<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/TODO/" title="TODO">TODO<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-io/" title="java-io">java-io<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coldofpig.github.io/" target="_blank" title="joe blog">joe blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://justinyang1221.github.io/" target="_blank" title="賈思 blog">賈思 blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Tommy. <br/>
+			This is my blog, 筆記！！！</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/https://github.com/yudady" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:yu_dady@yahoo.com.tw" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="/about" target="_blank" title="Tommy lin">Tommy lin</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'ca-pub-1366278449398453', 'https://yudady.github.io/');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

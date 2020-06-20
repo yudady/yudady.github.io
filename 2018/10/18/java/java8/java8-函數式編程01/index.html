@@ -1,0 +1,630 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>java8-函數式編程01 | Tommy-好記性不如爛筆頭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Tommy lin">
+    
+
+    
+    <meta name="description" content="簡介 使用函數式邊程，抽取模版 類名-靜態方法名">
+<meta name="keywords" content="java8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java8-函數式編程01">
+<meta property="og:url" content="https://yudady.github.io/2018/10/18/java/java8/java8-函數式編程01/index.html">
+<meta property="og:site_name" content="Tommy-好記性不如爛筆頭">
+<meta property="og:description" content="簡介 使用函數式邊程，抽取模版 類名-靜態方法名">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-11-10T03:34:20.554Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java8-函數式編程01">
+<meta name="twitter:description" content="簡介 使用函數式邊程，抽取模版 類名-靜態方法名">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Tommy-好記性不如爛筆頭" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="../../../../../../css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Tommy-好記性不如爛筆頭" title="Tommy-好記性不如爛筆頭"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Tommy-好記性不如爛筆頭">Tommy-好記性不如爛筆頭</a></h1>
+				<h2 class="blog-motto">紙上得來終覺淺，絕知此事要躬行</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首頁</a></li>
+					
+						<li><a href="/archives">檔案</a></li>
+					
+						<li><a href="/favorite">網站資源</a></li>
+					
+						<li><a href="/projects">紀錄我的資源</a></li>
+					
+						<li><a href="/about">關於我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yudady.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/18/java/java8/java8-函數式編程01/" title="java8-函數式編程01" itemprop="url">java8-函數式編程01</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-18T02:01:38.000Z" itemprop="datePublished"> Published 2018-10-18</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原始程式"><span class="toc-number">2.1.</span> <span class="toc-text">原始程式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改後"><span class="toc-number">2.2.</span> <span class="toc-text">修改後</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">3.</span> <span class="toc-text">參考資料</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><ul>
+<li>使用函數式邊程，抽取模版</li>
+<li>類名-靜態方法名</li>
+</ul>
+<a id="more"></a>
+<h1 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h1><h2 id="原始程式"><a href="#原始程式" class="headerlink" title="原始程式"></a>原始程式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// DAO </span></span><br><span class="line"><span class="comment">// FunctionalInterface 格式 接收兩個參數，返回一個值</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OhActivityDAO</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;OhActivity&gt; <span class="title">findAll</span><span class="params">(Connection conn,Map&lt;String,Object&gt; map)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">		String sql = <span class="string">"SELECT * FROM  OH_ACTIVITY where 1=1 "</span>;</span><br><span class="line">		<span class="keyword">return</span> DBQueryRunner.getBeanList(conn, OhActivity.class, sql);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Service</span></span><br><span class="line"><span class="comment">// 抽取模版</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ActivityBO</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;OhActivity&gt; <span class="title">findAll</span><span class="params">()</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			conn = DBPool.getInstance().getReadConnection();</span><br><span class="line">			<span class="keyword">return</span> OhActivityDAO.findAll(conn,<span class="keyword">new</span> HashMap());</span><br><span class="line">		&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">			DbUtils.close(conn);</span><br><span class="line">		&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="修改後"><a href="#修改後" class="headerlink" title="修改後"></a>修改後</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函數式接口</span></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">BiFunctionUnchecked</span>&lt;<span class="title">K</span>, <span class="title">T</span>, <span class="title">V</span>&gt; </span>&#123;</span><br><span class="line">	<span class="function">V <span class="title">applyDao</span><span class="params">(K k, T t)</span> <span class="keyword">throws</span> SQLException</span>; <span class="comment">// 因為Dao會丟出SQLException</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 模版</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DefaultBO</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> &lt;R&gt; <span class="function">Optional&lt;R&gt; <span class="title">readOptional</span><span class="params">(Map map, BiFunctionUnchecked&lt;Connection, Map, R&gt; function)</span></span></span><br><span class="line"><span class="function">		<span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			conn = DBPool.getInstance().getReadConnection();</span><br><span class="line">			R r = function.applyDao(conn, map); <span class="comment">// 傳入2個參數，返回一個值</span></span><br><span class="line">			<span class="keyword">return</span> Optional.ofNullable(r);</span><br><span class="line">		&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">			DbUtils.close(conn);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> &lt;R&gt; <span class="function">Optional&lt;R&gt; <span class="title">writeOptional</span><span class="params">(Map map, BiFunctionUnchecked&lt;Connection, Map, R&gt; function)</span></span></span><br><span class="line"><span class="function">		<span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			conn = DBPool.getInstance().getWriteConnection();</span><br><span class="line">			conn.setAutoCommit(<span class="keyword">false</span>);</span><br><span class="line">			R r = function.applyDao(conn, map);</span><br><span class="line">			conn.commit();</span><br><span class="line">			<span class="keyword">return</span> Optional.ofNullable(r);</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			conn.rollback();</span><br><span class="line">			<span class="keyword">throw</span> e;</span><br><span class="line">		&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">			DbUtils.close(conn);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> &lt;R&gt; <span class="function">R <span class="title">read</span><span class="params">(Map map, BiFunctionUnchecked&lt;Connection, Map, R&gt; function)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			conn = DBPool.getInstance().getReadConnection();</span><br><span class="line">			R r = function.applyDao(conn, map);</span><br><span class="line">			<span class="keyword">return</span> r;</span><br><span class="line">		&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">			DbUtils.close(conn);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> &lt;R&gt; <span class="function">R <span class="title">write</span><span class="params">(Map map, BiFunctionUnchecked&lt;Connection, Map, R&gt; function)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		Connection conn = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			conn = DBPool.getInstance().getWriteConnection();</span><br><span class="line">			conn.setAutoCommit(<span class="keyword">false</span>);</span><br><span class="line">			R r = function.applyDao(conn, map);</span><br><span class="line">			conn.commit();</span><br><span class="line">			<span class="keyword">return</span> r;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			conn.rollback();</span><br><span class="line">			<span class="keyword">throw</span> e;</span><br><span class="line">		&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">			DbUtils.close(conn);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// DAO</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BeanDao</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;OhSystemConfig&gt; <span class="title">currentSql</span><span class="params">(Connection conn, Map&lt;String, Object&gt; map)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">		String sql = <span class="string">"select * from  OH_SYSTEM_CONFIG where TYPE = ? ORDER BY DESCR ASC "</span>;</span><br><span class="line">		<span class="keyword">return</span> DBQueryRunner.getBeanList(conn, OhSystemConfig.class, sql, map.get(<span class="string">"type"</span>));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;OhSystemConfig&gt; <span class="title">errorSql</span><span class="params">(Connection conn, Map&lt;String, Object&gt; map)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">		String sql = <span class="string">"select *!!!!!!!!!!! from  OH_SYSTEM_CONFIG where TYPE = ? ORDER BY DESCR ASC "</span>;</span><br><span class="line">		<span class="keyword">return</span> DBQueryRunner.getBeanList(conn, OhSystemConfig.class, sql, map.get(<span class="string">"type"</span>));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 測試</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestBo</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testSimpleBoMethod</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">		Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">		String type = <span class="string">"ACTIVITY_FIELD_LIST"</span>;</span><br><span class="line">		map.put(<span class="string">"type"</span>, type);</span><br><span class="line">    List&lt;OhSystemConfig&gt; ohSystemConfigs = TestBo.simpleBoMethod(map); <span class="comment">//</span></span><br><span class="line">		ohSystemConfigs.stream().map(ToStringBuilder::reflectionToString).forEach(System.out::println);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> List&lt;OhSystemConfig&gt; <span class="title">simpleBoMethod</span><span class="params">(Map&lt;String, Object&gt; map)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> DefaultBO.read(map, BeanDao::currentSql); <span class="comment">// 類名-靜態方法名</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../../../../../categories/java/">java</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/java8/">java8</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://yudady.github.io/2018/10/18/java/java8/java8-函數式編程01/" data-title="java8-函數式編程01 | Tommy-好記性不如爛筆頭" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2018/10/18/java/3-party/java-maven01/" title="java-maven01">
+  <strong>上一篇：</strong><br/>
+  <span>
+  java-maven01</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2018/10/16/開發工具集/intellij/intellij-key/"  title="intellij-Key">
+ <strong>下一篇：</strong><br/> 
+ <span>intellij-Key
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#原始程式"><span class="toc-number">2.1.</span> <span class="toc-text">原始程式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改後"><span class="toc-number">2.2.</span> <span class="toc-text">修改後</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">3.</span> <span class="toc-text">參考資料</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/TODO/" title="TODO">TODO<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/business/" title="business">business<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/database/" title="database">database<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/docker/" title="docker">docker<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/front-end/" title="front-end">front-end<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/home/" title="home">home<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/java/" title="java">java<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/linux/" title="linux">linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/spring/" title="spring">spring<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/tools/" title="tools">tools<sup>29</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理/" title="原理">原理<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/大數據/" title="大數據">大數據<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/深度學習/" title="深度學習">深度學習<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/測試/" title="測試">測試<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/聚合支付系统/" title="聚合支付系统">聚合支付系统<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/netty/" title="netty">netty<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/database/" title="database">database<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/intellij/" title="intellij">intellij<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java8/" title="java8">java8<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/weblogic/" title="weblogic">weblogic<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原理/" title="原理">原理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-3-party/" title="java-3-party">java-3-party<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/blog/" title="blog">blog<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/oracle/" title="oracle">oracle<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-base/" title="java-base">java-base<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/TODO/" title="TODO">TODO<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-io/" title="java-io">java-io<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coldofpig.github.io/" target="_blank" title="joe blog">joe blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://justinyang1221.github.io/" target="_blank" title="賈思 blog">賈思 blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Tommy. <br/>
+			This is my blog, 筆記！！！</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/https://github.com/yudady" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:yu_dady@yahoo.com.tw" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="/about" target="_blank" title="Tommy lin">Tommy lin</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'ca-pub-1366278449398453', 'https://yudady.github.io/');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

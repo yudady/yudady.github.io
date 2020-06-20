@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tommy-好記性不如爛筆頭</title>
+  
+  <subtitle>紙上得來終覺淺，絕知此事要躬行</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://yudady.github.io/"/>
+  <updated>2020-05-23T04:05:35.866Z</updated>
+  <id>https://yudady.github.io/</id>
+  
+  <author>
+    <name>Tommy lin</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>intellij-plugin-develope</title>
+    <link href="https://yudady.github.io/2020/05/23/%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7%E9%9B%86/intellij/intellij-plugin-develope/"/>
+    <id>https://yudady.github.io/2020/05/23/開發工具集/intellij/intellij-plugin-develope/</id>
+    <published>2020-05-23T04:02:34.000Z</published>
+    <updated>2020-05-23T04:05:35.866Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="https://yudady.github.io/categories/tools/"/>
+    
+    
+      <category term="intellij" scheme="https://yudady.github.io/tags/intellij/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git-upstream</title>
+    <link href="https://yudady.github.io/2020/05/07/git/git-upstream/"/>
+    <id>https://yudady.github.io/2020/05/07/git/git-upstream/</id>
+    <published>2020-05-07T14:08:15.000Z</published>
+    <updated>2020-05-07T14:18:23.795Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;p&gt;更新從 GitHub 上 fork 出來的 repository&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;figcaption&gt;&lt;span&gt;script&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git remote add upstream https://github.com/yudady/intellij-sdk-docs.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git remote -v&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git pull upstream&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="https://yudady.github.io/categories/tools/"/>
+    
+    
+      <category term="git" scheme="https://yudady.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>weblogic-12c-install</title>
+    <link href="https://yudady.github.io/2020/01/28/java/application-server/weblogic/weblogic-12c-install/"/>
+    <id>https://yudady.github.io/2020/01/28/java/application-server/weblogic/weblogic-12c-install/</id>
+    <published>2020-01-28T13:12:07.000Z</published>
+    <updated>2020-01-28T13:24:47.056Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;p&gt;install&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.oracle.com/en/middleware/fusion-middleware/weblogic-server/12.2.1.4/tutorial-install-weblogic-server-create-basic-domain/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;download doc&lt;/a&gt;&lt;blockquote&gt;
+&lt;p&gt;fmw_12.2.1.4.0_wls.jar&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="https://yudady.github.io/categories/java/"/>
+    
+    
+      <category term="weblogic" scheme="https://yudady.github.io/tags/weblogic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>spring-data-jpa</title>
+    <link href="https://yudady.github.io/2020/01/22/java/spring/springboot/spring-data-jpa/"/>
+    <id>https://yudady.github.io/2020/01/22/java/spring/springboot/spring-data-jpa/</id>
+    <published>2020-01-22T10:21:08.000Z</published>
+    <updated>2020-01-22T10:30:30.151Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="springboot" scheme="https://yudady.github.io/categories/springboot/"/>
+    
+    
+      <category term="springboot" scheme="https://yudady.github.io/tags/springboot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker-windows</title>
+    <link href="https://yudady.github.io/2019/11/04/docker/docker-windows/"/>
+    <id>https://yudady.github.io/2019/11/04/docker/docker-windows/</id>
+    <published>2019-11-04T14:48:37.000Z</published>
+    <updated>2019-11-10T04:27:58.692Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;vmware與docker-windows無法共存(hyper-v)&lt;/li&gt;
+&lt;li&gt;docker-windows某些版本無法用(BUG)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;docker images windows 預設目錄 C:\ProgramData\DockerDesktop\vm-data&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="docker" scheme="https://yudady.github.io/categories/docker/"/>
+    
+    
+      <category term="docker" scheme="https://yudady.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>restful-rule</title>
+    <link href="https://yudady.github.io/2019/09/15/%E5%8E%9F%E7%90%86/restful-rule/"/>
+    <id>https://yudady.github.io/2019/09/15/原理/restful-rule/</id>
+    <published>2019-09-15T14:22:59.000Z</published>
+    <updated>2019-09-16T03:28:45.896Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;在RESTful架构中，每个网址代表一种资源（resource），所以网址中不能有动词，只能有名词，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的”集合”（collection），所以API中的名词也应该使用复数。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;每一个URI代表一种资源；&lt;/li&gt;
+&lt;li&gt;客户端和服务器之间，传递这种资源的某种表现层；&lt;/li&gt;
+&lt;li&gt;客户端通过四个HTTP动词，对服务器端资源进行操作，实现”表现层状态转化”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;GET /zoos：列出所有动物园&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;POST /zoos：新建一个动物园&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;GET /zoos/ID：获取某个指定动物园的信息&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;PUT /zoos/ID：更新某个指定动物园的信息（提供该动物园的全部信息）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;PATCH /zoos/ID：更新某个指定动物园的信息（提供该动物园的部分信息）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;DELETE /zoos/ID：删除某个动物园&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;GET /zoos/ID/animals：列出某个指定动物园的所有动物&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="原理" scheme="https://yudady.github.io/categories/%E5%8E%9F%E7%90%86/"/>
+    
+    
+      <category term="原理" scheme="https://yudady.github.io/tags/%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>intellij-save-action</title>
+    <link href="https://yudady.github.io/2019/08/10/%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7%E9%9B%86/intellij/intellij-save-action/"/>
+    <id>https://yudady.github.io/2019/08/10/開發工具集/intellij/intellij-save-action/</id>
+    <published>2019-08-10T07:49:18.000Z</published>
+    <updated>2019-08-10T07:54:19.644Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;p&gt;修改intellij保存&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="https://yudady.github.io/categories/tools/"/>
+    
+    
+      <category term="intellij" scheme="https://yudady.github.io/tags/intellij/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>intellij-注釋-格式化</title>
+    <link href="https://yudady.github.io/2019/06/01/%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7%E9%9B%86/intellij/intellij-%E6%B3%A8%E9%87%8B-%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
+    <id>https://yudady.github.io/2019/06/01/開發工具集/intellij/intellij-注釋-格式化/</id>
+    <published>2019-06-01T02:12:57.000Z</published>
+    <updated>2019-06-01T02:22:00.112Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;p&gt;intellij idea 注釋自動格式化&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="https://yudady.github.io/categories/tools/"/>
+    
+    
+      <category term="intellij" scheme="https://yudady.github.io/tags/intellij/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>weblogic-spring-jpa</title>
+    <link href="https://yudady.github.io/2019/05/25/java/application-server/weblogic/weblogic-spring-jpa/"/>
+    <id>https://yudady.github.io/2019/05/25/java/application-server/weblogic/weblogic-spring-jpa/</id>
+    <published>2019-05-25T03:59:43.000Z</published>
+    <updated>2019-05-25T04:05:23.275Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;p&gt;spring jpa&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="https://yudady.github.io/categories/java/"/>
+    
+    
+      <category term="weblogic" scheme="https://yudady.github.io/tags/weblogic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>weblogic-ejb</title>
+    <link href="https://yudady.github.io/2019/05/25/java/application-server/weblogic/weblogic-ejb/"/>
+    <id>https://yudady.github.io/2019/05/25/java/application-server/weblogic/weblogic-ejb/</id>
+    <published>2019-05-25T03:53:30.000Z</published>
+    <updated>2019-05-25T03:55:14.408Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;p&gt;weblogic 測試ejb&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="https://yudady.github.io/categories/java/"/>
+    
+    
+      <category term="weblogic" scheme="https://yudady.github.io/tags/weblogic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RestClient-Postman</title>
+    <link href="https://yudady.github.io/2019/05/25/%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7%E9%9B%86/vscode/RestClient-Postman/"/>
+    <id>https://yudady.github.io/2019/05/25/開發工具集/vscode/RestClient-Postman/</id>
+    <published>2019-05-25T03:26:07.000Z</published>
+    <updated>2019-05-25T03:45:38.235Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;p&gt;rest api 工具&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;vscode rest client&lt;/li&gt;
+&lt;li&gt;postman&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="https://yudady.github.io/categories/tools/"/>
+    
+    
+      <category term="vscode" scheme="https://yudady.github.io/tags/vscode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vscode-滑鼠滾輪變更字體大小</title>
+    <link href="https://yudady.github.io/2019/05/04/%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7%E9%9B%86/vscode/vscode-%E6%BB%91%E9%BC%A0%E6%BB%BE%E8%BC%AA%E8%AE%8A%E6%9B%B4%E5%AD%97%E9%AB%94%E5%A4%A7%E5%B0%8F/"/>
+    <id>https://yudady.github.io/2019/05/04/開發工具集/vscode/vscode-滑鼠滾輪變更字體大小/</id>
+    <published>2019-05-04T06:19:57.000Z</published>
+    <updated>2019-05-04T06:27:39.105Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;ctrl + 滑鼠滾輪&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/05/04/開發工具集/vscode/vscode-滑鼠滾輪變更字體大小/20190504142553.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="https://yudady.github.io/categories/tools/"/>
+    
+    
+      <category term="vscode" scheme="https://yudady.github.io/tags/vscode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>intellij-滑鼠滾輪變更字體大小</title>
+    <link href="https://yudady.github.io/2019/05/04/%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7%E9%9B%86/intellij/intellij-%E6%BB%91%E9%BC%A0%E6%BB%BE%E8%BC%AA%E8%AE%8A%E6%9B%B4%E5%AD%97%E9%AB%94%E5%A4%A7%E5%B0%8F/"/>
+    <id>https://yudady.github.io/2019/05/04/開發工具集/intellij/intellij-滑鼠滾輪變更字體大小/</id>
+    <published>2019-05-04T05:37:34.000Z</published>
+    <updated>2019-05-04T05:44:25.742Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;ctrl + 滑鼠滾輪&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/05/04/開發工具集/intellij/intellij-滑鼠滾輪變更字體大小/20190504133534.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="https://yudady.github.io/categories/tools/"/>
+    
+    
+      <category term="intellij" scheme="https://yudady.github.io/tags/intellij/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>weblogic-jdbc</title>
+    <link href="https://yudady.github.io/2019/04/20/java/application-server/weblogic/weblogic-jdbc/"/>
+    <id>https://yudady.github.io/2019/04/20/java/application-server/weblogic/weblogic-jdbc/</id>
+    <published>2019-04-20T06:39:24.000Z</published>
+    <updated>2019-05-04T06:30:31.468Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;p&gt;創建weblogic.datasource&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JDBC 資料來源是一項與 JNDI 樹狀結構相連結的物件，JNDI 樹狀結構透過 JDBC 連線的集區提供資料庫連線能力。應用程式可以在 JNDI 樹狀結構中尋找資料來源，然後借用資料來源的資料庫連線。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="https://yudady.github.io/categories/java/"/>
+    
+    
+      <category term="weblogic" scheme="https://yudady.github.io/tags/weblogic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端工具-glup-livereload</title>
+    <link href="https://yudady.github.io/2019/03/17/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7-glup-livereload/"/>
+    <id>https://yudady.github.io/2019/03/17/前端/前端工具/前端工具-glup-livereload/</id>
+    <published>2019-03-17T05:25:25.000Z</published>
+    <updated>2019-03-17T05:36:48.304Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;p&gt;livereload&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="front-end" scheme="https://yudady.github.io/categories/front-end/"/>
+    
+    
+      <category term="前端工具" scheme="https://yudady.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>angular-02</title>
+    <link href="https://yudady.github.io/2019/03/10/%E5%89%8D%E7%AB%AF/angular/angular-02/"/>
+    <id>https://yudady.github.io/2019/03/10/前端/angular/angular-02/</id>
+    <published>2019-03-10T09:00:13.000Z</published>
+    <updated>2019-03-16T13:47:58.539Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;angular與javascript不互通&lt;ul&gt;
+&lt;li&gt;函數、變量、事件都不互通，需要經過controller處理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;angular的開發模式：&lt;code&gt;數據&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/2019/03/10/前端/angular/angular-02/20190310181722.png&quot; alt=&quot;debug&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&quot;/2019/03/10/前端/angular/angular-02/20190310181834.png&quot; alt=&quot;debug&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="front-end" scheme="https://yudady.github.io/categories/front-end/"/>
+    
+    
+      <category term="angular" scheme="https://yudady.github.io/tags/angular/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git-patch-cherry-pick</title>
+    <link href="https://yudady.github.io/2019/03/10/git/git-patch-cherry-pick/"/>
+    <id>https://yudady.github.io/2019/03/10/git/git-patch-cherry-pick/</id>
+    <published>2019-03-10T03:32:25.000Z</published>
+    <updated>2019-03-10T04:11:30.496Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;打補丁&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;後悔藥（git reset HEAD^ –hard）&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="TODO" scheme="https://yudady.github.io/categories/TODO/"/>
+    
+    
+      <category term="TODO" scheme="https://yudady.github.io/tags/TODO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nginx-notepad-彩色</title>
+    <link href="https://yudady.github.io/2019/03/09/%E5%B7%A5%E5%85%B7/nginx-notepad-%E5%BD%A9%E8%89%B2/"/>
+    <id>https://yudady.github.io/2019/03/09/工具/nginx-notepad-彩色/</id>
+    <published>2019-03-09T12:31:02.000Z</published>
+    <updated>2019-03-09T12:35:52.054Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="https://yudady.github.io/categories/tools/"/>
+    
+    
+      <category term="tools" scheme="https://yudady.github.io/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>angular-01</title>
+    <link href="https://yudady.github.io/2019/03/09/%E5%89%8D%E7%AB%AF/angular/angular-01/"/>
+    <id>https://yudady.github.io/2019/03/09/前端/angular/angular-01/</id>
+    <published>2019-03-09T04:33:43.000Z</published>
+    <updated>2019-03-10T08:57:54.945Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;p&gt;angular 1.3&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="front-end" scheme="https://yudady.github.io/categories/front-end/"/>
+    
+    
+      <category term="angular" scheme="https://yudady.github.io/tags/angular/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>oracle-record</title>
+    <link href="https://yudady.github.io/2019/03/06/%E8%B3%87%E6%96%99%E5%BA%AB/oracle/oracle-record/"/>
+    <id>https://yudady.github.io/2019/03/06/資料庫/oracle/oracle-record/</id>
+    <published>2019-03-06T13:23:55.000Z</published>
+    <updated>2019-03-07T15:15:27.883Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;簡介&quot;&gt;&lt;a href=&quot;#簡介&quot; class=&quot;headerlink&quot; title=&quot;簡介&quot;&gt;&lt;/a&gt;簡介&lt;/h1&gt;&lt;p&gt;筆記&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="database" scheme="https://yudady.github.io/categories/database/"/>
+    
+    
+      <category term="database" scheme="https://yudady.github.io/tags/database/"/>
+    
+      <category term="oracle" scheme="https://yudady.github.io/tags/oracle/"/>
+    
+  </entry>
+  
+</feed>

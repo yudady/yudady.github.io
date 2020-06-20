@@ -1,0 +1,1106 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Tommy-好記性不如爛筆頭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Tommy lin">
+    
+
+    
+    <meta name="description" content="手札">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tommy-好記性不如爛筆頭">
+<meta property="og:url" content="https://yudady.github.io/page/10/index.html">
+<meta property="og:site_name" content="Tommy-好記性不如爛筆頭">
+<meta property="og:description" content="手札">
+<meta property="og:locale" content="zh-tw">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tommy-好記性不如爛筆頭">
+<meta name="twitter:description" content="手札">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Tommy-好記性不如爛筆頭" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Tommy-好記性不如爛筆頭" title="Tommy-好記性不如爛筆頭"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Tommy-好記性不如爛筆頭">Tommy-好記性不如爛筆頭</a></h1>
+				<h2 class="blog-motto">紙上得來終覺淺，絕知此事要躬行</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首頁</a></li>
+					
+						<li><a href="/archives">檔案</a></li>
+					
+						<li><a href="/favorite">網站資源</a></li>
+					
+						<li><a href="/projects">紀錄我的資源</a></li>
+					
+						<li><a href="/about">關於我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yudady.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main">
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/20/資料庫/sql-like-index/" title="sql-like-index" itemprop="url">sql-like-index</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-20T03:39:10.000Z" itemprop="datePublished"> Published 2018-10-20</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><blockquote>
+<p>sql where 條件有like，需要走索引</p>
+</blockquote>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="../../2018/10/20/資料庫/sql-like-index/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../categories/database/">database</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/database/">database</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/19/java/java8/java8-collect/" title="java8-collect" itemprop="url">java8-collect</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-19T00:52:18.000Z" itemprop="datePublished"> Published 2018-10-19</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><ul>
+<li>stream().collect()</li>
+<li>public final class java.util.stream.<code>Collectors</code></li>
+<li>public interface java.util.stream.<code>Collector</code>&lt;T, A, R&gt;<ul>
+<li>static class <code>CollectorImpl</code>&lt;T, A, R&gt; implements Collector&lt;T, A, R&gt;</li>
+<li>收集器(A)，可變<ul>
+<li>creation of a new result container ({@link #<code>supplier</code>()})。提供container</li>
+<li>incorporating a new data element into a result container ({@link #<code>accumulator</code>()})。container對下一個element的操作</li>
+<li>combining two result containers into one ({@link #<code>combiner</code>()})。container合併</li>
+<li>performing an optional final transform on the container ({@link #<code>finisher</code>()})。container轉換型態</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>reduce，不可變</li>
+</ul>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="../../2018/10/19/java/java8/java8-collect/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../categories/java/">java</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/java8/">java8</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/18/java/3-party/java-maven01/" title="java-maven01" itemprop="url">java-maven01</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-18T04:46:49.000Z" itemprop="datePublished"> Published 2018-10-18</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><blockquote>
+<p>紀錄maven特殊地方</p>
+</blockquote>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="../../2018/10/18/java/3-party/java-maven01/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../categories/java/">java</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/java-3-party/">java-3-party</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/18/java/java8/java8-函數式編程01/" title="java8-函數式編程01" itemprop="url">java8-函數式編程01</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-18T02:01:38.000Z" itemprop="datePublished"> Published 2018-10-18</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><ul>
+<li>使用函數式邊程，抽取模版</li>
+<li>類名-靜態方法名</li>
+</ul>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="../../2018/10/18/java/java8/java8-函數式編程01/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../categories/java/">java</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/java8/">java8</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/16/開發工具集/intellij/intellij-key/" title="intellij-Key" itemprop="url">intellij-Key</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-16T00:27:17.000Z" itemprop="datePublished"> Published 2018-10-16</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><p>紀錄熱鍵</p>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="../../2018/10/16/開發工具集/intellij/intellij-key/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../categories/tools/">tools</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/intellij/">intellij</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/16/java/java8/java8-lambda/" title="java8-FunctionalInterface（Lambda）" itemprop="url">java8-FunctionalInterface（Lambda）</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-16T00:21:30.000Z" itemprop="datePublished"> Published 2018-10-16</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><ul>
+<li>js callback function &lt;=&gt; lambda(FunctionalInterface)</li>
+<li>回調函數</li>
+<li>傳動作、傳方法</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">javascriptCallback</span> (<span class="params">a , callback</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(callback)&#123;</span><br><span class="line">		callback();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Interface Function&lt;T   ,R   &gt;</span></span><br><span class="line"><span class="comment">// Interface Function&lt;參數,返回值&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Integer <span class="title">javaLamdba</span><span class="params">(Integer a ,java.util.Function&lt;Integer,Integer&gt; fun)</span> </span>&#123;</span><br><span class="line">	fun.apply(a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Integer intReturnValue = javaLamdba(<span class="number">2</span> , param -&gt; param * param );</span><br><span class="line">Integer intReturnValue = javaLamdba(<span class="number">2</span> , param -&gt; param + param );</span><br><span class="line">Integer intReturnValue = javaLamdba(<span class="number">2</span> , param -&gt; param / param );</span><br></pre></td></tr></table></figure>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="../../2018/10/16/java/java8/java8-lambda/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../categories/java/">java</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/java8/">java8</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/13/java/spring/multipleApplicationContext/" title="multipleApplicationContext" itemprop="url">multipleApplicationContext</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-13T02:38:40.000Z" itemprop="datePublished"> Published 2018-10-13</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><blockquote>
+<p>使用多個spring-AnnotationConfigApplicationContext</p>
+</blockquote>
+<p><a href="https://github.com/yudady/applicationContextTest" target="_blank" rel="noopener">源碼</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">AnnotationConfigApplicationContext ctx01 = <span class="keyword">new</span> AnnotationConfigApplicationContext();</span><br><span class="line">AnnotationConfigApplicationContext ctx02 = <span class="keyword">new</span> AnnotationConfigApplicationContext();</span><br><span class="line">AnnotationConfigApplicationContext ctx03 = <span class="keyword">new</span> AnnotationConfigApplicationContext();</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Set the parent of this application context.</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;The parent &#123;<span class="doctag">@linkplain</span> ApplicationContext#getEnvironment() environment&#125; is</span></span><br><span class="line"><span class="comment">	 * &#123;<span class="doctag">@linkplain</span> ConfigurableEnvironment#merge(ConfigurableEnvironment) merged&#125; with</span></span><br><span class="line"><span class="comment">	 * this (child) application context environment if the parent is non-&#123;<span class="doctag">@code</span> null&#125; and</span></span><br><span class="line"><span class="comment">	 * its environment is an instance of &#123;<span class="doctag">@link</span> ConfigurableEnvironment&#125;.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> ConfigurableEnvironment#merge(ConfigurableEnvironment)</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setParent</span><span class="params">(@Nullable ApplicationContext parent)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.parent = parent;</span><br><span class="line">		<span class="keyword">if</span> (parent != <span class="keyword">null</span>) &#123;</span><br><span class="line">			Environment parentEnvironment = parent.getEnvironment();</span><br><span class="line">			<span class="keyword">if</span> (parentEnvironment <span class="keyword">instanceof</span> ConfigurableEnvironment) &#123;</span><br><span class="line">				getEnvironment().merge((ConfigurableEnvironment) parentEnvironment);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="../../2018/10/13/java/spring/multipleApplicationContext/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../categories/spring/">spring</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/spring/">spring</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/11/工具/learn-powershell01/" title="learn-powershell01" itemprop="url">learn-powershell01</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-11T02:13:36.000Z" itemprop="datePublished"> Published 2018-10-11</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="../../2018/10/11/工具/learn-powershell01/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../categories/tools/">tools</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/powershell/">powershell</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/09/測試/zabbix/zabbix自訂key使用powershell/" title="zabbix自訂key使用powershell" itemprop="url">zabbix自訂key使用powershell</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-09T07:01:26.000Z" itemprop="datePublished"> Published 2018-10-09</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><h2 id="需求windows環境要偵測多個jvm的main方法，檢查是否啟動"><a href="#需求windows環境要偵測多個jvm的main方法，檢查是否啟動" class="headerlink" title="需求windows環境要偵測多個jvm的main方法，檢查是否啟動"></a>需求windows環境要偵測多個jvm的main方法，檢查是否啟動</h2><blockquote>
+<p>windows Zabbix UserParameter</p>
+</blockquote>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="../../2018/10/09/測試/zabbix/zabbix自訂key使用powershell/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../categories/zabbix/">zabbix</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/zabbix/">zabbix</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/09/java/spring/DispatcherServlet/" title="DispatcherServlet" itemprop="url">DispatcherServlet</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-09T02:21:52.000Z" itemprop="datePublished"> Published 2018-10-09</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><blockquote>
+<p>Spring MVC</p>
+</blockquote>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="../../2018/10/09/java/spring/DispatcherServlet/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../categories/spring/">spring</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/spring/">spring</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+
+  <nav id="page-nav" class="clearfix">
+    <a class="extend prev" rel="prev" href="../9/"><span></span>Prev</a><a class="page-number" href="../../">1</a><span class="space">&hellip;</span><a class="page-number" href="../8/">8</a><a class="page-number" href="../9/">9</a><span class="page-number current">10</span><a class="page-number" href="../11/">11</a><a class="page-number" href="../12/">12</a><a class="page-number" href="../13/">13</a><a class="extend next" rel="next" href="../11/">Next<span></span></a>
+  </nav>
+
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/TODO/" title="TODO">TODO<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/business/" title="business">business<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/database/" title="database">database<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/docker/" title="docker">docker<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/front-end/" title="front-end">front-end<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/home/" title="home">home<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/java/" title="java">java<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/linux/" title="linux">linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/spring/" title="spring">spring<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/tools/" title="tools">tools<sup>29</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理/" title="原理">原理<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/大數據/" title="大數據">大數據<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/深度學習/" title="深度學習">深度學習<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/測試/" title="測試">測試<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/聚合支付系统/" title="聚合支付系统">聚合支付系统<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/netty/" title="netty">netty<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/database/" title="database">database<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/intellij/" title="intellij">intellij<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java8/" title="java8">java8<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/weblogic/" title="weblogic">weblogic<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原理/" title="原理">原理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-3-party/" title="java-3-party">java-3-party<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/blog/" title="blog">blog<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/oracle/" title="oracle">oracle<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-base/" title="java-base">java-base<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/TODO/" title="TODO">TODO<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-io/" title="java-io">java-io<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coldofpig.github.io/" target="_blank" title="joe blog">joe blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://justinyang1221.github.io/" target="_blank" title="賈思 blog">賈思 blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Tommy. <br/>
+			This is my blog, 筆記！！！</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/https://github.com/yudady" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:yu_dady@yahoo.com.tw" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="/about" target="_blank" title="Tommy lin">Tommy lin</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'ca-pub-1366278449398453', 'https://yudady.github.io/');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+ </html>

@@ -1,0 +1,685 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>storm-01 | Tommy-好記性不如爛筆頭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Tommy lin">
+    
+
+    
+    <meta name="description" content="Flume获取数据。 Kafka临时保存数据。 Strom计算数据。 Redis是个内存数据库，用来保存数据。  簡介 apache-storm-1.1.3   Tuple : Tuple is the main data structure in Storm Stream : Stream is an unordered sequence of tuples Spouts : Source">
+<meta name="keywords" content="storm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="storm-01">
+<meta property="og:url" content="https://yudady.github.io/2018/11/18/大數據/Storm/storm-01/index.html">
+<meta property="og:site_name" content="Tommy-好記性不如爛筆頭">
+<meta property="og:description" content="Flume获取数据。 Kafka临时保存数据。 Strom计算数据。 Redis是个内存数据库，用来保存数据。  簡介 apache-storm-1.1.3   Tuple : Tuple is the main data structure in Storm Stream : Stream is an unordered sequence of tuples Spouts : Source">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://yudady.github.io/2018/11/18/大數據/Storm/storm-01/20181118192201.png">
+<meta property="og:image" content="https://yudady.github.io/2018/11/18/大數據/Storm/storm-01/20181119022410.png">
+<meta property="og:image" content="https://yudady.github.io/2018/11/18/大數據/Storm/storm-01/20181119022017.png">
+<meta property="og:image" content="https://yudady.github.io/2018/11/18/大數據/Storm/storm-01/20181119030002.png">
+<meta property="og:image" content="https://yudady.github.io/2018/11/18/大數據/Storm/storm-01/20181119030128.png">
+<meta property="og:image" content="https://yudady.github.io/2018/11/18/大數據/Storm/storm-01/20181118191551.png">
+<meta property="og:image" content="https://yudady.github.io/2018/11/18/大數據/Storm/storm-01/20181118191610.png">
+<meta property="og:image" content="https://yudady.github.io/2018/11/18/大數據/Storm/storm-01/20181118191925.png">
+<meta property="og:image" content="http://20181120124711.png">
+<meta property="og:updated_time" content="2018-11-20T04:50:38.886Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="storm-01">
+<meta name="twitter:description" content="Flume获取数据。 Kafka临时保存数据。 Strom计算数据。 Redis是个内存数据库，用来保存数据。  簡介 apache-storm-1.1.3   Tuple : Tuple is the main data structure in Storm Stream : Stream is an unordered sequence of tuples Spouts : Source">
+<meta name="twitter:image" content="https://yudady.github.io/2018/11/18/大數據/Storm/storm-01/20181118192201.png">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Tommy-好記性不如爛筆頭" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="../../../../../../css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Tommy-好記性不如爛筆頭" title="Tommy-好記性不如爛筆頭"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Tommy-好記性不如爛筆頭">Tommy-好記性不如爛筆頭</a></h1>
+				<h2 class="blog-motto">紙上得來終覺淺，絕知此事要躬行</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首頁</a></li>
+					
+						<li><a href="/archives">檔案</a></li>
+					
+						<li><a href="/favorite">網站資源</a></li>
+					
+						<li><a href="/projects">紀錄我的資源</a></li>
+					
+						<li><a href="/about">關於我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yudady.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/11/18/大數據/Storm/storm-01/" title="storm-01" itemprop="url">storm-01</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-11-18T11:05:24.000Z" itemprop="datePublished"> Published 2018-11-18</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#diagram-depicts-the-core-concept-of-Apache-Storm"><span class="toc-number">2.1.</span> <span class="toc-text">diagram depicts the core concept of Apache Storm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Apache-Storm-cluster-is-designed-and-its-internal-architecture"><span class="toc-number">2.2.</span> <span class="toc-text">Apache Storm cluster is designed and its internal architecture</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Storm编程模型"><span class="toc-number">2.3.</span> <span class="toc-text">Storm编程模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Storm核心组件"><span class="toc-number">2.4.</span> <span class="toc-text">Storm核心组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Storm并发度案例"><span class="toc-number">2.5.</span> <span class="toc-text">Storm并发度案例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#storm-yaml"><span class="toc-number">2.6.</span> <span class="toc-text">storm.yaml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#啟動"><span class="toc-number">2.7.</span> <span class="toc-text">啟動</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IRichSpout"><span class="toc-number">2.8.</span> <span class="toc-text">IRichSpout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IRichBolt"><span class="toc-number">2.9.</span> <span class="toc-text">IRichBolt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#depoly"><span class="toc-number">2.10.</span> <span class="toc-text">depoly</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Example-1-Run-the-ExclamationTopology-in-local-mode-LocalCluster"><span class="toc-number">2.10.1.</span> <span class="toc-text">Example 1: Run the ExclamationTopology in local mode (LocalCluster)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Example-2-Run-the-RollingTopWords-in-remote-cluster-mode-under-the-name-“production-topology”"><span class="toc-number">2.10.2.</span> <span class="toc-text">Example 2: Run the RollingTopWords in remote/cluster mode,under the name “production-topology”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#parallelism並行度"><span class="toc-number">2.11.</span> <span class="toc-text">parallelism並行度</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">3.</span> <span class="toc-text">參考資料</span></a></li></ol>
+		
+		</div>
+		
+		<p><img src="/2018/11/18/大數據/Storm/storm-01/20181118192201.png" alt="storm"></p>
+<ul>
+<li>Flume获取数据。</li>
+<li>Kafka临时保存数据。</li>
+<li>Strom计算数据。</li>
+<li>Redis是个内存数据库，用来保存数据。</li>
+</ul>
+<h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><blockquote>
+<p>apache-storm-1.1.3</p>
+</blockquote>
+<ul>
+<li>Tuple : Tuple is the main data structure in Storm</li>
+<li>Stream : Stream is an unordered sequence of tuples</li>
+<li>Spouts : Source of stream</li>
+<li>Bolts : Bolts are logical processing units. </li>
+<li>Topology : Spouts and bolts are connected together and they form a topology</li>
+<li>Tasks : a basic idea on spouts and bolts. </li>
+<li>Workers : A topology runs in a distributed manner, on multiple worker nodes.</li>
+<li>Stream Grouping : Stream of data flows from spouts to bolts or from one bolt to another bolt. </li>
+<li>Nimbus : Nimbus is a master node of Storm cluster</li>
+<li>Supervisor : The nodes that follow instructions given by the nimbus are called as Supervisors</li>
+<li>Worker process(JVMs) : A worker process will execute tasks related to a specific topology</li>
+<li>Executor : An executor is nothing but a single thread spawn by a worker process. </li>
+<li>Task : A task performs actual data processing.</li>
+</ul>
+<a id="more"></a>
+<h1 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h1><h2 id="diagram-depicts-the-core-concept-of-Apache-Storm"><a href="#diagram-depicts-the-core-concept-of-Apache-Storm" class="headerlink" title="diagram depicts the core concept of Apache Storm"></a>diagram depicts the core concept of Apache Storm</h2><p><img src="/2018/11/18/大數據/Storm/storm-01/20181119022410.png" alt="storm"></p>
+<h2 id="Apache-Storm-cluster-is-designed-and-its-internal-architecture"><a href="#Apache-Storm-cluster-is-designed-and-its-internal-architecture" class="headerlink" title="Apache Storm cluster is designed and its internal architecture"></a>Apache Storm cluster is designed and its internal architecture</h2><p><img src="/2018/11/18/大數據/Storm/storm-01/20181119022017.png" alt="storm"></p>
+<p><img src="/2018/11/18/大數據/Storm/storm-01/20181119030002.png" alt="storm"><br><img src="/2018/11/18/大數據/Storm/storm-01/20181119030128.png" alt="storm"></p>
+<h2 id="Storm编程模型"><a href="#Storm编程模型" class="headerlink" title="Storm编程模型"></a>Storm编程模型</h2><p><img src="/2018/11/18/大數據/Storm/storm-01/20181118191551.png" alt="storm"></p>
+<h2 id="Storm核心组件"><a href="#Storm核心组件" class="headerlink" title="Storm核心组件"></a>Storm核心组件</h2><p><img src="/2018/11/18/大數據/Storm/storm-01/20181118191610.png" alt="storm"></p>
+<h2 id="Storm并发度案例"><a href="#Storm并发度案例" class="headerlink" title="Storm并发度案例"></a>Storm并发度案例</h2><p><img src="/2018/11/18/大數據/Storm/storm-01/20181118191925.png" alt="storm"></p>
+<h2 id="storm-yaml"><a href="#storm-yaml" class="headerlink" title="storm.yaml"></a>storm.yaml</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">########### These MUST be filled in for a storm configuration</span><br><span class="line">storm.zookeeper.servers:</span><br><span class="line">    - &quot;hadoop101&quot;</span><br><span class="line">    - &quot;hadoop102&quot;</span><br><span class="line">    - &quot;hadoop103&quot;</span><br><span class="line"># </span><br><span class="line">nimbus.seeds: [&quot;hadoop101&quot;, &quot;hadoop102&quot;, &quot;hadoop103&quot;]</span><br><span class="line"></span><br><span class="line"># storm.local.dir</span><br><span class="line">storm.local.dir: &quot;/opt/storm/date&quot; 27  28 </span><br><span class="line"># supervisor.slots.ports</span><br><span class="line">supervisor.slots.ports:</span><br><span class="line">    - 6700</span><br><span class="line">    - 6701</span><br><span class="line">    - 6702</span><br><span class="line">    - 6703</span><br></pre></td></tr></table></figure>
+<h2 id="啟動"><a href="#啟動" class="headerlink" title="啟動"></a>啟動</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bin/storm nimbus &amp;</span><br><span class="line">bin/storm supervisor &amp;</span><br><span class="line">bin/storm ui &amp;      (只需要啟動一台，http://hadoop101:8080/index.html  )</span><br><span class="line">bin/storm logviewer &amp;     (如果要在UI上面看到log，則需要起動)</span><br></pre></td></tr></table></figure>
+<h2 id="IRichSpout"><a href="#IRichSpout" class="headerlink" title="IRichSpout"></a>IRichSpout</h2><blockquote>
+<p>讀取數據<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MySpout</span> <span class="keyword">implements</span> <span class="title">IRichSpout</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> SpoutOutputCollector collector;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">open</span><span class="params">(Map conf, TopologyContext context, SpoutOutputCollector collector)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.collector = collector;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">nextTuple</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        collector.emit(<span class="keyword">new</span> Values(str));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="IRichBolt"><a href="#IRichBolt" class="headerlink" title="IRichBolt"></a>IRichBolt</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebLogBolt</span> <span class="keyword">implements</span> <span class="title">IRichBolt</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> OutputCollector collector;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">prepare</span><span class="params">(Map conf, TopologyContext context, OutputCollector collector)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.collector = collector;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">(Tuple input)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// running</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">declareOutputFields</span><span class="params">(OutputFieldsDeclarer declarer)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// next</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="depoly"><a href="#depoly" class="headerlink" title="depoly"></a>depoly</h2><h3 id="Example-1-Run-the-ExclamationTopology-in-local-mode-LocalCluster"><a href="#Example-1-Run-the-ExclamationTopology-in-local-mode-LocalCluster" class="headerlink" title="Example 1: Run the ExclamationTopology in local mode (LocalCluster)"></a>Example 1: Run the ExclamationTopology in local mode (LocalCluster)</h3><blockquote>
+<p>$ storm jar target/storm-starter-*.jar org.apache.storm.starter.ExclamationTopology -local</p>
+</blockquote>
+<h3 id="Example-2-Run-the-RollingTopWords-in-remote-cluster-mode-under-the-name-“production-topology”"><a href="#Example-2-Run-the-RollingTopWords-in-remote-cluster-mode-under-the-name-“production-topology”" class="headerlink" title="Example 2: Run the RollingTopWords in remote/cluster mode,under the name “production-topology”"></a>Example 2: Run the RollingTopWords in remote/cluster mode,under the name “production-topology”</h3><blockquote>
+<p>$ storm jar target/storm-starter-*.jar org.apache.storm.starter.RollingTopWords production-topology</p>
+</blockquote>
+<h2 id="parallelism並行度"><a href="#parallelism並行度" class="headerlink" title="parallelism並行度"></a>parallelism並行度</h2><blockquote>
+<p>config 可以配置work process<br><img src="http://20181120124711.png" alt="並行度"></p>
+</blockquote>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><ul>
+<li><a href="http://storm.apache.org/" target="_blank" rel="noopener">storm</a></li>
+<li><a href="http://storm.apache.org/releases/1.2.2/storm-kafka-client.html" target="_blank" rel="noopener">Storm Kafka Integration</a></li>
+<li><a href="https://github.com/apache/storm" target="_blank" rel="noopener">Storm example</a></li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../../../../../categories/大數據/">大數據</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/storm/">storm</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://yudady.github.io/2018/11/18/大數據/Storm/storm-01/" data-title="storm-01 | Tommy-好記性不如爛筆頭" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2018/11/19/工具/windows-netcat/" title="windows-netcat">
+  <strong>上一篇：</strong><br/>
+  <span>
+  windows-netcat</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2018/11/18/大數據/Kafka/kafka-01/"  title="kafka-01">
+ <strong>下一篇：</strong><br/> 
+ <span>kafka-01
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#diagram-depicts-the-core-concept-of-Apache-Storm"><span class="toc-number">2.1.</span> <span class="toc-text">diagram depicts the core concept of Apache Storm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Apache-Storm-cluster-is-designed-and-its-internal-architecture"><span class="toc-number">2.2.</span> <span class="toc-text">Apache Storm cluster is designed and its internal architecture</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Storm编程模型"><span class="toc-number">2.3.</span> <span class="toc-text">Storm编程模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Storm核心组件"><span class="toc-number">2.4.</span> <span class="toc-text">Storm核心组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Storm并发度案例"><span class="toc-number">2.5.</span> <span class="toc-text">Storm并发度案例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#storm-yaml"><span class="toc-number">2.6.</span> <span class="toc-text">storm.yaml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#啟動"><span class="toc-number">2.7.</span> <span class="toc-text">啟動</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IRichSpout"><span class="toc-number">2.8.</span> <span class="toc-text">IRichSpout</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IRichBolt"><span class="toc-number">2.9.</span> <span class="toc-text">IRichBolt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#depoly"><span class="toc-number">2.10.</span> <span class="toc-text">depoly</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Example-1-Run-the-ExclamationTopology-in-local-mode-LocalCluster"><span class="toc-number">2.10.1.</span> <span class="toc-text">Example 1: Run the ExclamationTopology in local mode (LocalCluster)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Example-2-Run-the-RollingTopWords-in-remote-cluster-mode-under-the-name-“production-topology”"><span class="toc-number">2.10.2.</span> <span class="toc-text">Example 2: Run the RollingTopWords in remote/cluster mode,under the name “production-topology”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#parallelism並行度"><span class="toc-number">2.11.</span> <span class="toc-text">parallelism並行度</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">3.</span> <span class="toc-text">參考資料</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/TODO/" title="TODO">TODO<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/business/" title="business">business<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/database/" title="database">database<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/docker/" title="docker">docker<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/front-end/" title="front-end">front-end<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/home/" title="home">home<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/java/" title="java">java<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/linux/" title="linux">linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/spring/" title="spring">spring<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/tools/" title="tools">tools<sup>29</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理/" title="原理">原理<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/大數據/" title="大數據">大數據<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/深度學習/" title="深度學習">深度學習<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/測試/" title="測試">測試<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/聚合支付系统/" title="聚合支付系统">聚合支付系统<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/netty/" title="netty">netty<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/database/" title="database">database<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/intellij/" title="intellij">intellij<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java8/" title="java8">java8<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/weblogic/" title="weblogic">weblogic<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原理/" title="原理">原理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-3-party/" title="java-3-party">java-3-party<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/blog/" title="blog">blog<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/oracle/" title="oracle">oracle<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-base/" title="java-base">java-base<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/TODO/" title="TODO">TODO<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-io/" title="java-io">java-io<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coldofpig.github.io/" target="_blank" title="joe blog">joe blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://justinyang1221.github.io/" target="_blank" title="賈思 blog">賈思 blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Tommy. <br/>
+			This is my blog, 筆記！！！</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/https://github.com/yudady" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:yu_dady@yahoo.com.tw" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="/about" target="_blank" title="Tommy lin">Tommy lin</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'ca-pub-1366278449398453', 'https://yudady.github.io/');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

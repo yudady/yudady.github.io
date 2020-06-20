@@ -1,0 +1,634 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>java8 | Tommy-好記性不如爛筆頭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Tommy lin">
+    
+
+    
+    <meta name="description" content="簡介 Stream Collectors">
+<meta name="keywords" content="java8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java8">
+<meta property="og:url" content="https://yudady.github.io/2018/10/03/java/java8/java8/index.html">
+<meta property="og:site_name" content="Tommy-好記性不如爛筆頭">
+<meta property="og:description" content="簡介 Stream Collectors">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-11-10T03:34:15.839Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java8">
+<meta name="twitter:description" content="簡介 Stream Collectors">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Tommy-好記性不如爛筆頭" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="../../../../../../css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Tommy-好記性不如爛筆頭" title="Tommy-好記性不如爛筆頭"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Tommy-好記性不如爛筆頭">Tommy-好記性不如爛筆頭</a></h1>
+				<h2 class="blog-motto">紙上得來終覺淺，絕知此事要躬行</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首頁</a></li>
+					
+						<li><a href="/archives">檔案</a></li>
+					
+						<li><a href="/favorite">網站資源</a></li>
+					
+						<li><a href="/projects">紀錄我的資源</a></li>
+					
+						<li><a href="/about">關於我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yudady.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/03/java/java8/java8/" title="java8" itemprop="url">java8</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-03T07:11:30.000Z" itemprop="datePublished"> Published 2018-10-03</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#从数组创建-Arrays-stream"><span class="toc-number">2.1.</span> <span class="toc-text">从数组创建, Arrays.stream</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从容器创建-Collection-stream"><span class="toc-number">2.2.</span> <span class="toc-text">从容器创建, Collection.stream</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stream上的静态方法"><span class="toc-number">2.3.</span> <span class="toc-text">Stream上的静态方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stream"><span class="toc-number">2.4.</span> <span class="toc-text">Stream</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类名-静态方法名"><span class="toc-number">2.5.</span> <span class="toc-text">类名::静态方法名</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">3.</span> <span class="toc-text">參考資料</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><ul>
+<li>Stream</li>
+<li>Collectors</li>
+</ul>
+<a id="more"></a>
+<h1 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h1><h2 id="从数组创建-Arrays-stream"><a href="#从数组创建-Arrays-stream" class="headerlink" title="从数组创建, Arrays.stream"></a>从数组创建, Arrays.stream</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Arrays.stream(<span class="keyword">new</span> <span class="keyword">int</span>[] &#123;<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>&#125;);</span><br><span class="line">Arrays.stream(<span class="keyword">new</span> <span class="keyword">long</span>[] &#123;<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>&#125;);</span><br><span class="line">Arrays.stream(<span class="keyword">new</span> <span class="keyword">double</span>[] &#123;<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>&#125;);</span><br><span class="line">Arrays.stream(<span class="keyword">new</span> String[] &#123;<span class="string">"foo"</span>, <span class="string">"bar"</span>&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="从容器创建-Collection-stream"><a href="#从容器创建-Collection-stream" class="headerlink" title="从容器创建, Collection.stream"></a>从容器创建, Collection.stream</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Arrays.asList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>).stream();</span><br></pre></td></tr></table></figure>
+<h2 id="Stream上的静态方法"><a href="#Stream上的静态方法" class="headerlink" title="Stream上的静态方法"></a>Stream上的静态方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Stream.of(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">Stream.of(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> s1 = Stream.of(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line"><span class="keyword">var</span> s2 = Stream.of(<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>);</span><br><span class="line">Stream.concat(s1 , s2);</span><br></pre></td></tr></table></figure>
+<h2 id="Stream"><a href="#Stream" class="headerlink" title="Stream"></a>Stream</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StreamApi</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Sample</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">int</span> score;</span><br><span class="line">		<span class="keyword">public</span> <span class="keyword">int</span> type;</span><br><span class="line"></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="title">Sample</span><span class="params">(<span class="keyword">int</span> score, <span class="keyword">int</span> type)</span> </span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.type = type;</span><br><span class="line">			<span class="keyword">this</span>.score = score;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="meta">@Override</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="string">"Sample&#123;"</span> + <span class="string">"score="</span> + score + <span class="string">", type="</span> + type + <span class="string">'&#125;'</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test01</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// groupingBy，对Stream中元素进行分组</span></span><br><span class="line"></span><br><span class="line">		List&lt;Sample&gt; samples = Arrays.asList(<span class="comment">//</span></span><br><span class="line">			<span class="keyword">new</span> Sample(<span class="number">90</span>, <span class="number">1</span>), <span class="comment">//</span></span><br><span class="line">			<span class="keyword">new</span> Sample(<span class="number">80</span>, <span class="number">1</span>), <span class="comment">//</span></span><br><span class="line">			<span class="keyword">new</span> Sample(<span class="number">80</span>, <span class="number">1</span>), <span class="comment">//</span></span><br><span class="line">			<span class="keyword">new</span> Sample(<span class="number">70</span>, <span class="number">2</span>), <span class="comment">//</span></span><br><span class="line">			<span class="keyword">new</span> Sample(<span class="number">60</span>, <span class="number">2</span>), <span class="comment">//</span></span><br><span class="line">			<span class="keyword">new</span> Sample(<span class="number">50</span>, <span class="number">3</span>)<span class="comment">//</span></span><br><span class="line">		);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 简单分组</span></span><br><span class="line">		<span class="comment">// &#123;1=[Sample&#123;score=90, type=1&#125;, Sample&#123;score=80, type=1&#125;, Sample&#123;score=80,</span></span><br><span class="line">		<span class="comment">// type=1&#125;], 2=[Sample&#123;score=70, type=2&#125;, Sample&#123;score=60, type=2&#125;],</span></span><br><span class="line">		<span class="comment">// 3=[Sample&#123;score=50, type=3&#125;]&#125;</span></span><br><span class="line">		Map&lt;Integer, List&lt;Sample&gt;&gt; one = samples.stream().collect(Collectors.groupingBy(x -&gt; x.type));</span><br><span class="line">		System.out.println(one);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 二级分组，先按类别分组，再按分数分组</span></span><br><span class="line">		<span class="comment">// &#123;1=&#123;80=[Sample&#123;score=80, type=1&#125;, Sample&#123;score=80, type=1&#125;],</span></span><br><span class="line">		<span class="comment">// 90=[Sample&#123;score=90, type=1&#125;]&#125;, 2=&#123;70=[Sample&#123;score=70, type=2&#125;],</span></span><br><span class="line">		<span class="comment">// 60=[Sample&#123;score=60, type=2&#125;]&#125;, 3=&#123;50=[Sample&#123;score=50, type=3&#125;]&#125;&#125;</span></span><br><span class="line">		Map&lt;Integer, Map&lt;Integer, List&lt;Sample&gt;&gt;&gt; second = samples.stream()</span><br><span class="line">			.collect(Collectors.groupingBy(x -&gt; x.type, Collectors.groupingBy(x -&gt; x.score)));</span><br><span class="line">		System.out.println(second);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 配合其余Collectors里的接口使用</span></span><br><span class="line">		<span class="comment">// 分组后求和</span></span><br><span class="line">		<span class="comment">// &#123;1=250, 2=130, 3=50&#125;</span></span><br><span class="line">		Map&lt;Integer, Integer&gt; third = samples.stream()</span><br><span class="line">			.collect(Collectors.groupingBy(x -&gt; x.type, Collectors.summingInt(x -&gt; x.score)));</span><br><span class="line">		System.out.println(third);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 分组后获取最大值</span></span><br><span class="line">		<span class="comment">// &#123;1=Optional[Sample&#123;score=90, type=1&#125;], 2=Optional[Sample&#123;score=70, type=2&#125;],</span></span><br><span class="line">		<span class="comment">// 3=Optional[Sample&#123;score=50, type=3&#125;]&#125;</span></span><br><span class="line">		Map&lt;Integer, Optional&lt;Sample&gt;&gt; forth = samples.stream()</span><br><span class="line">			.collect(Collectors.groupingBy(x -&gt; x.type, Collectors.maxBy((x, y) -&gt; x.score - y.score)));</span><br><span class="line">		System.out.println(forth);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 分组后reduce</span></span><br><span class="line">		<span class="comment">// &#123;1=Optional[250], 2=Optional[130], 3=Optional[50]&#125;</span></span><br><span class="line">		Map&lt;Integer, Optional&lt;Integer&gt;&gt; fifth = samples.stream().collect(Collectors.groupingBy(x -&gt; x.type,</span><br><span class="line">			Collectors.mapping(x -&gt; x.score, Collectors.reducing((x, y) -&gt; x + y))));</span><br><span class="line">		System.out.println(fifth);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// ----------------------------------</span></span><br><span class="line">		<span class="comment">// ----------------------------------</span></span><br><span class="line">		<span class="comment">// ----------------------------------</span></span><br><span class="line"></span><br><span class="line">		List&lt;Integer&gt; nums = Arrays.asList(<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line">		List&lt;String&gt; words = Arrays.asList(<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"aaa"</span>, <span class="string">"BBB"</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// collect，进行collect操作，构建结果</span></span><br><span class="line">		nums.stream().collect(Collectors.toList());</span><br><span class="line">		nums.stream().collect(ArrayList::<span class="keyword">new</span>, ArrayList::add, ArrayList::addAll);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// averagingInt/averagingLong/averagingDouble，计算平均值</span></span><br><span class="line">		nums.stream().collect(Collectors.averagingInt(x -&gt; x));</span><br><span class="line"></span><br><span class="line">		<span class="comment">// counting，统计数目</span></span><br><span class="line">		nums.stream().collect(Collectors.counting());</span><br><span class="line"></span><br><span class="line">		<span class="comment">// maxBy，获取最大元素</span></span><br><span class="line">		nums.stream().collect(Collectors.maxBy((x, y) -&gt; x - y)).ifPresent(System.out::println);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// minBy，获取最小元素</span></span><br><span class="line">		nums.stream().collect(Collectors.minBy((x, y) -&gt; x - y)).ifPresent(System.out::println);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// summingInt/summingLong/summingDouble</span></span><br><span class="line">		nums.stream().collect(Collectors.summingInt(x -&gt; x));</span><br><span class="line">		nums.stream().collect(Collectors.summingLong(x -&gt; x));</span><br><span class="line">		nums.stream().collect(Collectors.summingDouble(x -&gt; x));</span><br><span class="line"></span><br><span class="line">		<span class="comment">// joining，拼接Stream中元素</span></span><br><span class="line">		words.stream().collect(Collectors.joining());</span><br><span class="line">		words.stream().collect(Collectors.joining(<span class="string">", "</span>));</span><br><span class="line">		words.stream().collect(Collectors.joining(<span class="string">", "</span>, <span class="string">"prefix, "</span>, <span class="string">", suffix"</span>));</span><br><span class="line"></span><br><span class="line">		<span class="comment">// toList，将Stream转化成List，实际类型是ArrayList</span></span><br><span class="line">		List&lt;Integer&gt; collectList = nums.stream().collect(Collectors.toList());</span><br><span class="line"></span><br><span class="line">		<span class="comment">// toSet，将Stream转化成Set，实际类型是HashSet</span></span><br><span class="line">		Set&lt;Integer&gt; collectSet = nums.stream().collect(Collectors.toSet());</span><br><span class="line"></span><br><span class="line">		<span class="comment">// toMap，将Stream转化成Map，实际类型是HashMap</span></span><br><span class="line">		Map&lt;Integer, Integer&gt; collectMap = nums.stream().collect(Collectors.toMap(x -&gt; x, x -&gt; x * x));</span><br><span class="line"></span><br><span class="line">		<span class="comment">// toConcurrentMap，将Stream转化为ConcurrentHashMap</span></span><br><span class="line">		ConcurrentMap&lt;Integer, Integer&gt; collectConcurrentMap = nums.stream()</span><br><span class="line">			.collect(Collectors.toConcurrentMap(x -&gt; x, x -&gt; x * x));</span><br><span class="line"></span><br><span class="line">		<span class="comment">// toCollection，将Stream转化为指定类型的容器，通过提供supplier来实现</span></span><br><span class="line">		TreeSet&lt;Integer&gt; collectTreeSet = nums.stream().collect(Collectors.toCollection(TreeSet::<span class="keyword">new</span>));</span><br><span class="line"></span><br><span class="line">		<span class="comment">// collectingAndThen，在传入的Collector基础之上再执行一个finisher操作</span></span><br><span class="line">		String collectCollectingAndThen = nums.stream()</span><br><span class="line">			.collect(Collectors.collectingAndThen(Collectors.averagingInt(x -&gt; x), x -&gt; <span class="string">""</span> + (x * x)));</span><br><span class="line"></span><br><span class="line">		<span class="comment">// mapping, 适配一个已有的Collector，对Stream中元素执行mapper操作后再进行处理</span></span><br><span class="line">		List&lt;Integer&gt; collectCollectorsMapping = words.stream()</span><br><span class="line">			.collect(Collectors.mapping(x -&gt; x.length(), Collectors.toList()));</span><br><span class="line">		<span class="comment">// --------------</span></span><br><span class="line">		<span class="comment">// --------------</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// forEach, 遍历并进行操作</span></span><br><span class="line">		nums.stream().forEach(System.out::print);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// forEachOrdered, 有序遍历进行操作</span></span><br><span class="line">		nums.stream().forEachOrdered(System.out::print);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// allMatch，判断是否每一个元素都满足条件</span></span><br><span class="line">		nums.stream().allMatch(x -&gt; x &gt; <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// anyMatch，判断是否有一个元素满足条件</span></span><br><span class="line">		nums.stream().anyMatch(x -&gt; x &gt; <span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// noneMatch，判断是否没有元素满足条件</span></span><br><span class="line">		nums.stream().noneMatch(x -&gt; x &gt; <span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// limit，保留指定个数元素</span></span><br><span class="line">		nums.stream().limit(<span class="number">4</span>).forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// findFirst，返回首个元素</span></span><br><span class="line">		nums.stream().findFirst().ifPresent(System.out::println);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// findAny，返回任意一个元素</span></span><br><span class="line">		nums.stream().findAny().ifPresent(System.out::println);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// distinct，返回不包含重复元素的Stream</span></span><br><span class="line">		nums.stream().distinct().forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// count，统计Stream中元素个数</span></span><br><span class="line">		nums.stream().count();</span><br><span class="line"></span><br><span class="line">		<span class="comment">// max，获取最大元素</span></span><br><span class="line">		nums.stream().max((x, y) -&gt; x - y).ifPresent(System.out::println);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// min，获取最小元素</span></span><br><span class="line">		nums.stream().min((x, y) -&gt; x - y).ifPresent(System.out::println);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 自然排序</span></span><br><span class="line">		nums.stream().sorted().forEach(System.out::println);</span><br><span class="line">		<span class="comment">// 通过comparator指定排序规则</span></span><br><span class="line">		nums.stream().sorted((x, y) -&gt; y - x).forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// map，对每一个元素进行转换，生成新的Stream</span></span><br><span class="line"></span><br><span class="line">		words.stream().map(String::toUpperCase).forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// flatMap，对每一个元素进行转换，将其变成一个Stream类型数据</span></span><br><span class="line">		words.stream().flatMap(x -&gt; Arrays.asList(x, x).stream()).forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// filter，过滤Stream上操作</span></span><br><span class="line">		nums.stream().filter(x -&gt; x &gt; <span class="number">2</span>).forEach(System.out::println);</span><br><span class="line"></span><br><span class="line">		<span class="comment">// reduce，对Stream进行reduce操作，获得计算结果</span></span><br><span class="line">		nums.stream().reduce((x, y) -&gt; x + y).ifPresent(System.out::println);</span><br><span class="line">		<span class="comment">// 传入初始参数，参数类型与Stream中需要一致</span></span><br><span class="line">		nums.stream().reduce(<span class="number">100</span>, (x, y) -&gt; x + y);</span><br><span class="line">		words.stream().reduce(<span class="string">""</span>, (x, y) -&gt; x + y);</span><br><span class="line">		<span class="comment">// 传入出事参数，参数类型可以不一致需要满足，combiner.apply(u, accumulator.apply(identity, t)) ==</span></span><br><span class="line">		<span class="comment">// accumulator.apply(u, t)</span></span><br><span class="line">		nums.stream().reduce(<span class="string">"Foo"</span>, (x, y) -&gt; x + y, (x, y) -&gt; x + y);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="类名-静态方法名"><a href="#类名-静态方法名" class="headerlink" title="类名::静态方法名"></a>类名::静态方法名</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//　List 有一個方法　=&gt; default void sort(Comparator&lt;? super E&gt; c)</span></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparator</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(T o1, T o2)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">List&lt;Student&gt; students =　...</span><br><span class="line"><span class="comment">// 比較成績</span></span><br><span class="line">students.sort((o1, o2) -&gt; o1.getScore() - o2.getScore());  </span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果Student有一個static方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">compareStudentByScore</span><span class="params">(Student o1,Student o2)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> o1.getScore() - o2.getScore();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 比較成績可以改寫</span></span><br><span class="line">students.sort(Student::compareStudentByScore);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果Student有一個方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareByScore</span><span class="params">(Student student)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.getScore() - student.getScore();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 比較成績可以改寫</span></span><br><span class="line">students.sort(Student::compareStudentByScore);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.function.BiFunction;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Function;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Supplier;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.Collectors;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> score;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.name = <span class="string">"default"</span>;</span><br><span class="line">		<span class="keyword">this</span>.score = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">		<span class="keyword">this</span>.score = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name, <span class="keyword">int</span> score)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">		<span class="keyword">this</span>.score = score;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getScore</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> score;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setScore</span><span class="params">(<span class="keyword">int</span> score)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.score = score;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"Student&#123;"</span> + <span class="string">"name='"</span> + name + <span class="string">'\''</span> + <span class="string">", score="</span> + score + <span class="string">'&#125;'</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Student <span class="title">create</span><span class="params">(<span class="keyword">final</span> Supplier&lt;Student&gt; supplier)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> supplier.get();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Student <span class="title">createStudent0</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		Supplier&lt;Student&gt; c1 = Student::<span class="keyword">new</span>;</span><br><span class="line">		Student c11 = c1.get();</span><br><span class="line">		<span class="comment">//等价于</span></span><br><span class="line">		Supplier&lt;Student&gt; c2 = () -&gt; <span class="keyword">new</span> Student();</span><br><span class="line">		Student c22 = c2.get();</span><br><span class="line">		<span class="keyword">return</span> c22;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Student <span class="title">createStudent1</span><span class="params">(String n)</span> </span>&#123;</span><br><span class="line">		Function&lt;String, Student&gt; c1 = Student::<span class="keyword">new</span>;</span><br><span class="line">		Student c11 = c1.apply(n);</span><br><span class="line">		<span class="comment">//等价于</span></span><br><span class="line">		Function&lt;String, Student&gt; c2 = (name) -&gt; <span class="keyword">new</span> Student(name);</span><br><span class="line">		Student c22 = c2.apply(n);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> c22;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Student <span class="title">createStudent2</span><span class="params">(String name, <span class="keyword">int</span> score)</span> </span>&#123;</span><br><span class="line">		BiFunction&lt;String, Integer, Student&gt; c11 = Student::<span class="keyword">new</span>;</span><br><span class="line">		Student c1 = c11.apply(name, score);</span><br><span class="line">		<span class="comment">//等价于</span></span><br><span class="line">		BiFunction&lt;String, Integer, Student&gt; c22 = (n, sc) -&gt; <span class="keyword">new</span> Student(n, sc);</span><br><span class="line">		Student c2 = c22.apply(name, score);</span><br><span class="line">		<span class="keyword">return</span> c2;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">collide</span><span class="params">(<span class="keyword">final</span> Student student)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Collided "</span> + student.toString());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">repair</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Repaired "</span> + <span class="keyword">this</span>.toString());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">follow</span><span class="params">(<span class="keyword">final</span> Student another)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Following the "</span> + another.toString());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">compareStudentByScore</span><span class="params">(Student o1, Student o2)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> o1.getScore() - o2.getScore();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareByScore</span><span class="params">(Student student)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.getScore() - student.getScore();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">coverStudentScore</span><span class="params">(List&lt;Student&gt; students, Function&lt;Student, Integer&gt; function)</span> </span>&#123;</span><br><span class="line">		List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">		<span class="keyword">for</span> (Student a : students) &#123;</span><br><span class="line">			<span class="comment">/**</span></span><br><span class="line"><span class="comment">			 * <span class="doctag">@FunctionalInterface</span></span></span><br><span class="line"><span class="comment">			 * public interface Function&lt;T, R&gt; &#123;</span></span><br><span class="line"><span class="comment">			 *    R apply (T t);</span></span><br><span class="line"><span class="comment">			 * &#125;</span></span><br><span class="line"><span class="comment">			 */</span></span><br><span class="line">			Integer apply = function.apply(a);<span class="comment">// Function&lt;Student, Integer&gt; =&gt; Integer-Function-Student</span></span><br><span class="line">			list.add(apply);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> list.stream().collect(Collectors.summingInt(Integer::intValue));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Student student1 = Student.createStudent2(<span class="string">"tommy"</span>, <span class="number">100</span>);</span><br><span class="line">		Student student2 = Student.create(Student::<span class="keyword">new</span>); <span class="comment">// 构造器引用</span></span><br><span class="line">		Student student4 = <span class="keyword">new</span> Student(<span class="string">"李四"</span>, <span class="number">70</span>);</span><br><span class="line">		Student student5 = <span class="keyword">new</span> Student(<span class="string">"王五"</span>, <span class="number">80</span>);</span><br><span class="line">		Student student6 = <span class="keyword">new</span> Student(<span class="string">"趙六"</span>, <span class="number">90</span>);</span><br><span class="line">		List&lt;Student&gt; students = Arrays.asList(student1, student2, student4, student5, student6);</span><br><span class="line">		students.forEach(Student::collide);<span class="comment">//Class::static_method</span></span><br><span class="line">		students.forEach(Student::repair);<span class="comment">//Class::method</span></span><br><span class="line">		students.forEach(Student::toString);<span class="comment">//Class::method</span></span><br><span class="line">		students.forEach(student1::follow);<span class="comment">//instance::method</span></span><br><span class="line"></span><br><span class="line">		students.sort((o1, o2) -&gt; o1.getScore() - o2.getScore());</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * (Student student) -&gt; student.getScore()</span></span><br><span class="line"><span class="comment">		 * 等价于</span></span><br><span class="line"><span class="comment">		 * Student::getScore</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		students.stream().map(student -&gt; student.getScore()).forEach(System.out::print);</span><br><span class="line">		students.stream().map(Student::getScore).forEach(System.out::print);</span><br><span class="line"></span><br><span class="line">		students.sort(Student::compareStudentByScore);<span class="comment">//Class::static_method</span></span><br><span class="line"></span><br><span class="line">		StudentComparator studentComparator = <span class="keyword">new</span> StudentComparator();</span><br><span class="line">		students.sort(studentComparator::compareStudentByScore);</span><br><span class="line"></span><br><span class="line">		students.sort(Student::compareByScore);</span><br><span class="line"></span><br><span class="line">		students.forEach(student -&gt; System.out.println(student.getScore()));</span><br><span class="line"></span><br><span class="line">		coverStudentScore(students, Student::getScore);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StudentComparator</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareStudentByScore</span><span class="params">(Student o1, Student o2)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> o1.getScore() - o2.getScore();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../../../../../categories/java/">java</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/java8/">java8</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://yudady.github.io/2018/10/03/java/java8/java8/" data-title="java8 | Tommy-好記性不如爛筆頭" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2018/10/03/java/spring/spring-note/" title="spring-note">
+  <strong>上一篇：</strong><br/>
+  <span>
+  spring-note</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2018/10/02/google/Google/"  title="Google-Analytics">
+ <strong>下一篇：</strong><br/> 
+ <span>Google-Analytics
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#从数组创建-Arrays-stream"><span class="toc-number">2.1.</span> <span class="toc-text">从数组创建, Arrays.stream</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从容器创建-Collection-stream"><span class="toc-number">2.2.</span> <span class="toc-text">从容器创建, Collection.stream</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stream上的静态方法"><span class="toc-number">2.3.</span> <span class="toc-text">Stream上的静态方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Stream"><span class="toc-number">2.4.</span> <span class="toc-text">Stream</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类名-静态方法名"><span class="toc-number">2.5.</span> <span class="toc-text">类名::静态方法名</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">3.</span> <span class="toc-text">參考資料</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/TODO/" title="TODO">TODO<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/business/" title="business">business<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/database/" title="database">database<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/docker/" title="docker">docker<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/front-end/" title="front-end">front-end<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/home/" title="home">home<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/java/" title="java">java<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/linux/" title="linux">linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/spring/" title="spring">spring<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/tools/" title="tools">tools<sup>29</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理/" title="原理">原理<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/大數據/" title="大數據">大數據<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/深度學習/" title="深度學習">深度學習<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/測試/" title="測試">測試<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/聚合支付系统/" title="聚合支付系统">聚合支付系统<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/netty/" title="netty">netty<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/database/" title="database">database<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/intellij/" title="intellij">intellij<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java8/" title="java8">java8<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/weblogic/" title="weblogic">weblogic<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原理/" title="原理">原理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-3-party/" title="java-3-party">java-3-party<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/blog/" title="blog">blog<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/oracle/" title="oracle">oracle<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-base/" title="java-base">java-base<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/TODO/" title="TODO">TODO<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-io/" title="java-io">java-io<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coldofpig.github.io/" target="_blank" title="joe blog">joe blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://justinyang1221.github.io/" target="_blank" title="賈思 blog">賈思 blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Tommy. <br/>
+			This is my blog, 筆記！！！</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/https://github.com/yudady" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:yu_dady@yahoo.com.tw" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="/about" target="_blank" title="Tommy lin">Tommy lin</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'ca-pub-1366278449398453', 'https://yudady.github.io/');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

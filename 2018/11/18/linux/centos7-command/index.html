@@ -1,0 +1,673 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>centos7-command | Tommy-好記性不如爛筆頭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Tommy lin">
+    
+
+    
+    <meta name="description" content="簡介紀錄命令">
+<meta name="keywords" content="centos7">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centos7-command">
+<meta property="og:url" content="https://yudady.github.io/2018/11/18/linux/centos7-command/index.html">
+<meta property="og:site_name" content="Tommy-好記性不如爛筆頭">
+<meta property="og:description" content="簡介紀錄命令">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-11-21T07:52:13.551Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="centos7-command">
+<meta name="twitter:description" content="簡介紀錄命令">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Tommy-好記性不如爛筆頭" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="../../../../../css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Tommy-好記性不如爛筆頭" title="Tommy-好記性不如爛筆頭"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Tommy-好記性不如爛筆頭">Tommy-好記性不如爛筆頭</a></h1>
+				<h2 class="blog-motto">紙上得來終覺淺，絕知此事要躬行</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首頁</a></li>
+					
+						<li><a href="/archives">檔案</a></li>
+					
+						<li><a href="/favorite">網站資源</a></li>
+					
+						<li><a href="/projects">紀錄我的資源</a></li>
+					
+						<li><a href="/about">關於我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yudady.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/11/18/linux/centos7-command/" title="centos7-command" itemprop="url">centos7-command</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-11-17T17:17:04.000Z" itemprop="datePublished"> Published 2018-11-18</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#先檢查目前的hostname"><span class="toc-number">2.1.</span> <span class="toc-text">先檢查目前的hostname</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改hostname"><span class="toc-number">2.2.</span> <span class="toc-text">修改hostname</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hosts"><span class="toc-number">2.3.</span> <span class="toc-text">hosts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tar-to-another-folder"><span class="toc-number">2.4.</span> <span class="toc-text">tar to another folder</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#scp"><span class="toc-number">2.5.</span> <span class="toc-text">scp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh免密碼"><span class="toc-number">2.6.</span> <span class="toc-text">ssh免密碼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rsync-內容相同不複製，內容不同才會替換-，只增加不會減少"><span class="toc-number">2.7.</span> <span class="toc-text">rsync(內容相同不複製，內容不同才會替換)，只增加不會減少</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jobs-bg-fg"><span class="toc-number">2.8.</span> <span class="toc-text">jobs bg fg</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#讓程式登出後可繼續執行，重新導向輸出"><span class="toc-number">2.9.</span> <span class="toc-text">讓程式登出後可繼續執行，重新導向輸出</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SHELL"><span class="toc-number">3.</span> <span class="toc-text">SHELL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#複製資料到其他主機-xsync-sh"><span class="toc-number">3.1.</span> <span class="toc-text">複製資料到其他主機(xsync.sh)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一起執行命令-xcall-sh"><span class="toc-number">3.2.</span> <span class="toc-text">一起執行命令(xcall.sh)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">4.</span> <span class="toc-text">參考資料</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><p>紀錄命令</p>
+<a id="more"></a>
+<h1 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h1><h2 id="先檢查目前的hostname"><a href="#先檢查目前的hostname" class="headerlink" title="先檢查目前的hostname"></a>先檢查目前的hostname</h2><blockquote>
+<p>hostnamectl</p>
+</blockquote>
+<h2 id="修改hostname"><a href="#修改hostname" class="headerlink" title="修改hostname"></a>修改hostname</h2><blockquote>
+<p>hostnamectl set-hostname tk.yudady.com</p>
+</blockquote>
+<h2 id="hosts"><a href="#hosts" class="headerlink" title="hosts"></a>hosts</h2><blockquote>
+<p>vim /etc/hosts</p>
+</blockquote>
+<h2 id="tar-to-another-folder"><a href="#tar-to-another-folder" class="headerlink" title="tar to another folder"></a>tar to another folder</h2><blockquote>
+<p>tar -zxvf source -C dest</p>
+</blockquote>
+<h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><p>來源 -&gt; 目的地</p>
+<blockquote>
+<p>scp -r username@ip:/opt/tomcat username2@ip2:/opt/tomcat</p>
+</blockquote>
+<h2 id="ssh免密碼"><a href="#ssh免密碼" class="headerlink" title="ssh免密碼"></a>ssh免密碼</h2><ul>
+<li>生成密鑰對，公鑰複製到目標主機的authorized_keys</li>
+<li>ssh-keygen -t rsa</li>
+<li>ssh-copy-id 目標主機</li>
+</ul>
+<h2 id="rsync-內容相同不複製，內容不同才會替換-，只增加不會減少"><a href="#rsync-內容相同不複製，內容不同才會替換-，只增加不會減少" class="headerlink" title="rsync(內容相同不複製，內容不同才會替換)，只增加不會減少"></a>rsync(內容相同不複製，內容不同才會替換)，只增加不會減少</h2><blockquote>
+<p>rsync -rvl $source $user@ip:$dest</p>
+</blockquote>
+<h2 id="jobs-bg-fg"><a href="#jobs-bg-fg" class="headerlink" title="jobs bg fg"></a>jobs bg fg</h2><ul>
+<li>&amp; 用在一個命令的最後，可以把這個命令轉換為後台運行的任務進程</li>
+<li>jobs 查看當前終端有多少在後台運行的進程。</li>
+<li>ctrl + z：可以將一個正在前台執行的任務放到後台運行，並且掛起</li>
+<li>bg %num 將選中的任務進程啟動運行</li>
+<li>fg %num 將選中的任務進程調至前台</li>
+<li>jobs </li>
+<li>jobs -l</li>
+</ul>
+<h2 id="讓程式登出後可繼續執行，重新導向輸出"><a href="#讓程式登出後可繼續執行，重新導向輸出" class="headerlink" title="讓程式登出後可繼續執行，重新導向輸出"></a>讓程式登出後可繼續執行，重新導向輸出</h2><blockquote>
+<p>nohup /path/my_program &gt; my.out 2&gt; my.err &amp;</p>
+</blockquote>
+<hr>
+<h1 id="SHELL"><a href="#SHELL" class="headerlink" title="SHELL"></a>SHELL</h1><h2 id="複製資料到其他主機-xsync-sh"><a href="#複製資料到其他主機-xsync-sh" class="headerlink" title="複製資料到其他主機(xsync.sh)"></a>複製資料到其他主機(xsync.sh)</h2><ul>
+<li>循環所有節點到相同目錄下，shell放在/usr/local/bin/xsync.sh</li>
+<li>xsync.sh and xcall.sh<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">#1 獲取輸入參數個數，如果沒有參數，直接退出</span><br><span class="line">pcount=$#</span><br><span class="line">if((pcount==0)); then</span><br><span class="line">  echo no args;</span><br><span class="line">  exit;</span><br><span class="line">fi</span><br><span class="line">#2 獲取文件名稱</span><br><span class="line">p1=$1</span><br><span class="line">fname=`basename $p1`</span><br><span class="line">echo fname=$fname</span><br><span class="line">#3 獲取上級目錄到絕對路徑</span><br><span class="line">pdir=`cd -P $(dirname $p1); pwd`</span><br><span class="line">echo pdir=$pdir</span><br><span class="line">#4 獲取當前用戶名稱</span><br><span class="line">user=`whoami`</span><br><span class="line">#5 循環主機名稱（hadoop101,hadoop102,hadoop103      hosts設定）</span><br><span class="line">for((host=101; host&lt;104; host++)); do</span><br><span class="line">  #echo $pdir/$fname $user@hadoop$host:$pdir</span><br><span class="line">  echo --------------- hadoop$host ----------------</span><br><span class="line">  rsync -rvl $pdir/$fname $user@hadoop$host:$pdir</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="一起執行命令-xcall-sh"><a href="#一起執行命令-xcall-sh" class="headerlink" title="一起執行命令(xcall.sh)"></a>一起執行命令(xcall.sh)</h2><ul>
+<li>添加環境變量到 ~/.bashrc(SSH免密碼需要用到)</li>
+<li>xcall.sh ls</li>
+<li>xcall.sh /opt/jdk1.8.0_181/bin/jps<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">pcount=$#</span><br><span class="line">if((pcount==0));then</span><br><span class="line">  echo no args;</span><br><span class="line">exit;</span><br><span class="line">fi</span><br><span class="line">echo -------------localhost----------</span><br><span class="line">$@</span><br><span class="line">for((host=101; host&lt;104; host++)); do</span><br><span class="line">  echo ----------hadoop$host---------</span><br><span class="line">  ssh hadoop$host $@</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../../../../categories/linux/">linux</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/centos7/">centos7</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://yudady.github.io/2018/11/18/linux/centos7-command/" data-title="centos7-command | Tommy-好記性不如爛筆頭" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2018/11/18/大數據/zookpeeper/zookpeeeper-01/" title="zookpeeeper-01">
+  <strong>上一篇：</strong><br/>
+  <span>
+  zookpeeeper-01</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2018/11/17/gradle/gradle/"  title="gradle">
+ <strong>下一篇：</strong><br/> 
+ <span>gradle
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#先檢查目前的hostname"><span class="toc-number">2.1.</span> <span class="toc-text">先檢查目前的hostname</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改hostname"><span class="toc-number">2.2.</span> <span class="toc-text">修改hostname</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hosts"><span class="toc-number">2.3.</span> <span class="toc-text">hosts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tar-to-another-folder"><span class="toc-number">2.4.</span> <span class="toc-text">tar to another folder</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#scp"><span class="toc-number">2.5.</span> <span class="toc-text">scp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh免密碼"><span class="toc-number">2.6.</span> <span class="toc-text">ssh免密碼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rsync-內容相同不複製，內容不同才會替換-，只增加不會減少"><span class="toc-number">2.7.</span> <span class="toc-text">rsync(內容相同不複製，內容不同才會替換)，只增加不會減少</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jobs-bg-fg"><span class="toc-number">2.8.</span> <span class="toc-text">jobs bg fg</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#讓程式登出後可繼續執行，重新導向輸出"><span class="toc-number">2.9.</span> <span class="toc-text">讓程式登出後可繼續執行，重新導向輸出</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SHELL"><span class="toc-number">3.</span> <span class="toc-text">SHELL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#複製資料到其他主機-xsync-sh"><span class="toc-number">3.1.</span> <span class="toc-text">複製資料到其他主機(xsync.sh)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一起執行命令-xcall-sh"><span class="toc-number">3.2.</span> <span class="toc-text">一起執行命令(xcall.sh)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">4.</span> <span class="toc-text">參考資料</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/TODO/" title="TODO">TODO<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/business/" title="business">business<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/database/" title="database">database<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/docker/" title="docker">docker<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/front-end/" title="front-end">front-end<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/home/" title="home">home<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/java/" title="java">java<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/linux/" title="linux">linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/spring/" title="spring">spring<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/tools/" title="tools">tools<sup>29</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理/" title="原理">原理<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/大數據/" title="大數據">大數據<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/深度學習/" title="深度學習">深度學習<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/測試/" title="測試">測試<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/聚合支付系统/" title="聚合支付系统">聚合支付系统<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/netty/" title="netty">netty<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/database/" title="database">database<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/intellij/" title="intellij">intellij<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java8/" title="java8">java8<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/weblogic/" title="weblogic">weblogic<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原理/" title="原理">原理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-3-party/" title="java-3-party">java-3-party<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/blog/" title="blog">blog<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/oracle/" title="oracle">oracle<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-base/" title="java-base">java-base<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/TODO/" title="TODO">TODO<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-io/" title="java-io">java-io<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coldofpig.github.io/" target="_blank" title="joe blog">joe blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://justinyang1221.github.io/" target="_blank" title="賈思 blog">賈思 blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Tommy. <br/>
+			This is my blog, 筆記！！！</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/https://github.com/yudady" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:yu_dady@yahoo.com.tw" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="/about" target="_blank" title="Tommy lin">Tommy lin</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'ca-pub-1366278449398453', 'https://yudady.github.io/');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

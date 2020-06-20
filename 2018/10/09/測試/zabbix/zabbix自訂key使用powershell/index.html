@@ -1,0 +1,686 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>zabbix自訂key使用powershell | Tommy-好記性不如爛筆頭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Tommy lin">
+    
+
+    
+    <meta name="description" content="簡介需求windows環境要偵測多個jvm的main方法，檢查是否啟動 windows Zabbix UserParameter">
+<meta name="keywords" content="zabbix">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zabbix自訂key使用powershell">
+<meta property="og:url" content="https://yudady.github.io/2018/10/09/測試/zabbix/zabbix自訂key使用powershell/index.html">
+<meta property="og:site_name" content="Tommy-好記性不如爛筆頭">
+<meta property="og:description" content="簡介需求windows環境要偵測多個jvm的main方法，檢查是否啟動 windows Zabbix UserParameter">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="https://yudady.github.io/2018/10/09/測試/zabbix/zabbix自訂key使用powershell/20181011141941.png">
+<meta property="og:image" content="https://yudady.github.io/2018/10/09/測試/zabbix/zabbix自訂key使用powershell/20181009150946.png">
+<meta property="og:image" content="https://yudady.github.io/2018/10/09/測試/zabbix/zabbix自訂key使用powershell/debug.gif">
+<meta property="og:image" content="https://yudady.github.io/2018/10/09/測試/zabbix/zabbix自訂key使用powershell/20181011141413.png">
+<meta property="og:updated_time" content="2018-10-18T02:34:33.551Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="zabbix自訂key使用powershell">
+<meta name="twitter:description" content="簡介需求windows環境要偵測多個jvm的main方法，檢查是否啟動 windows Zabbix UserParameter">
+<meta name="twitter:image" content="https://yudady.github.io/2018/10/09/測試/zabbix/zabbix自訂key使用powershell/20181011141941.png">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Tommy-好記性不如爛筆頭" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="../../../../../../css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Tommy-好記性不如爛筆頭" title="Tommy-好記性不如爛筆頭"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Tommy-好記性不如爛筆頭">Tommy-好記性不如爛筆頭</a></h1>
+				<h2 class="blog-motto">紙上得來終覺淺，絕知此事要躬行</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首頁</a></li>
+					
+						<li><a href="/archives">檔案</a></li>
+					
+						<li><a href="/favorite">網站資源</a></li>
+					
+						<li><a href="/projects">紀錄我的資源</a></li>
+					
+						<li><a href="/about">關於我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yudady.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/09/測試/zabbix/zabbix自訂key使用powershell/" title="zabbix自訂key使用powershell" itemprop="url">zabbix自訂key使用powershell</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-09T07:01:26.000Z" itemprop="datePublished"> Published 2018-10-09</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#需求windows環境要偵測多個jvm的main方法，檢查是否啟動"><span class="toc-number">1.1.</span> <span class="toc-text">需求windows環境要偵測多個jvm的main方法，檢查是否啟動</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-debug"><span class="toc-number">2.1.</span> <span class="toc-text">How to debug</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zabbix-get-run-shell-Timeout，需要在客戶端修改"><span class="toc-number">2.2.</span> <span class="toc-text">zabbix_get run shell Timeout，需要在客戶端修改</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安裝步驟"><span class="toc-number">3.</span> <span class="toc-text">安裝步驟</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改權限"><span class="toc-number">3.1.</span> <span class="toc-text">修改權限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加-自定義powershell"><span class="toc-number">3.2.</span> <span class="toc-text">添加-自定義powershell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改conf"><span class="toc-number">3.3.</span> <span class="toc-text">修改conf</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重起service"><span class="toc-number">3.4.</span> <span class="toc-text">重起service</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zabbix-get測試"><span class="toc-number">3.5.</span> <span class="toc-text">zabbix_get測試</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#138-ACH"><span class="toc-number">3.5.1.</span> <span class="toc-text">138-ACH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#172-AGB"><span class="toc-number">3.5.2.</span> <span class="toc-text">172-AGB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#175-AGE"><span class="toc-number">3.5.3.</span> <span class="toc-text">175-AGE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加template"><span class="toc-number">3.6.</span> <span class="toc-text">添加template</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zbx-export-templates-xml"><span class="toc-number">3.7.</span> <span class="toc-text">zbx_export_templates.xml</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jcmd"><span class="toc-number">4.</span> <span class="toc-text">jcmd</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jinfo"><span class="toc-number">5.</span> <span class="toc-text">jinfo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">6.</span> <span class="toc-text">參考資料</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><h2 id="需求windows環境要偵測多個jvm的main方法，檢查是否啟動"><a href="#需求windows環境要偵測多個jvm的main方法，檢查是否啟動" class="headerlink" title="需求windows環境要偵測多個jvm的main方法，檢查是否啟動"></a>需求windows環境要偵測多個jvm的main方法，檢查是否啟動</h2><blockquote>
+<p>windows Zabbix UserParameter</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h1><blockquote>
+<p>powershell 路徑 C:\Windows\System32\WindowsPowerShell\v1.0\</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># windows報錯，“檔案無法載入，因為這個系統已停用指令碼執行”</span></span><br><span class="line"><span class="comment"># 用管理員權限打開 PowerShell</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/10/09/測試/zabbix/zabbix自訂key使用powershell/20181011141941.png" alt=""></p>
+<blockquote>
+<p>.\cmd.ps1 org</p>
+</blockquote>
+<p><img src="/2018/10/09/測試/zabbix/zabbix自訂key使用powershell/20181009150946.png" alt="PowerShell"></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$isExist</span> = jps -lm  | <span class="built_in">Select-String</span> -Pattern <span class="variable">$args</span>[<span class="number">0</span>] -CaseSensitive </span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$isExist</span>.length <span class="nomarkup">-gt</span> <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="built_in">Write-Host</span> <span class="string">"1"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">Write-Host</span> <span class="string">"0"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$isExist</span> = jps -lm | <span class="built_in">Select-String</span> -include string <span class="string">"com.zonpay.robot.base.MyPayRobot"</span> -CaseSensitive </span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$isExist</span>.length <span class="nomarkup">-gt</span> <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="built_in">Write-Host</span> <span class="string">"1"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">Write-Host</span> <span class="string">"0"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$all</span> = <span class="built_in">Get-Process</span> -Name java | select -expand id</span><br><span class="line"><span class="variable">$mark</span> = <span class="number">0</span></span><br><span class="line"><span class="keyword">foreach</span> (<span class="variable">$i</span> <span class="keyword">in</span> <span class="variable">$all</span>) &#123;</span><br><span class="line">    <span class="variable">$queryCondition</span> = jinfo <span class="variable">$i</span></span><br><span class="line"></span><br><span class="line">    <span class="variable">$jinfoArr</span> = <span class="variable">$queryCondition</span>.split(<span class="string">' '</span>)</span><br><span class="line"></span><br><span class="line">    <span class="variable">$isExist</span> = <span class="variable">$jinfoArr</span> | <span class="built_in">Select-String</span> -include string <span class="string">"C:\\myPayRobot\\robot1134"</span> -CaseSensitive </span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$isExist</span>.length <span class="nomarkup">-gt</span> <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="variable">$mark</span> = <span class="string">"1"</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Write-Host</span> <span class="variable">$mark</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$mark</span> = <span class="number">0</span></span><br><span class="line"><span class="built_in">Get-Process</span> -Name java | select -expand id | <span class="keyword">ForEach</span> &#123;</span><br><span class="line">    <span class="variable">$queryCondition</span> = jinfo <span class="variable">$_</span></span><br><span class="line">    <span class="variable">$jinfoArr</span> = <span class="variable">$queryCondition</span>.split(<span class="string">' '</span>)</span><br><span class="line">    <span class="variable">$isExist</span> = <span class="variable">$jinfoArr</span> | <span class="built_in">Select-String</span> -include string <span class="string">"robot1047"</span> -CaseSensitive </span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$isExist</span>.length <span class="nomarkup">-gt</span> <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="variable">$mark</span> = <span class="string">"1"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Write-Host</span> <span class="variable">$mark</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$mark</span> = <span class="number">0</span></span><br><span class="line"><span class="built_in">Get-Process</span> -Name java | select -expand id | <span class="keyword">ForEach</span> &#123;</span><br><span class="line">    <span class="variable">$queryCondition</span> = jinfo <span class="variable">$_</span></span><br><span class="line">    <span class="variable">$jinfoArr</span> = <span class="variable">$queryCondition</span>.split(<span class="string">' '</span>)</span><br><span class="line">    <span class="variable">$isExist</span> = <span class="variable">$jinfoArr</span> | <span class="built_in">Select-String</span> -include string <span class="string">"C:\\myPayRobot\\robot1134"</span> -CaseSensitive </span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$isExist</span>.length <span class="nomarkup">-gt</span> <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="variable">$mark</span> = <span class="string">"1"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Write-Host</span> <span class="variable">$mark</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">### Option: EnableRemoteCommands</span><br><span class="line">#	Whether remote commands from Zabbix server are allowed.</span><br><span class="line">#	0 - not allowed</span><br><span class="line">#	1 - allowed</span><br><span class="line">#</span><br><span class="line"># Mandatory: no</span><br><span class="line"># Default:</span><br><span class="line"># EnableRemoteCommands=0</span><br><span class="line">EnableRemoteCommands=1</span><br><span class="line"></span><br><span class="line">####### USER-DEFINED MONITORED PARAMETERS #######</span><br><span class="line"></span><br><span class="line">### Option: UnsafeUserParameters</span><br><span class="line">#	Allow all characters to be passed in arguments to user-defined parameters.</span><br><span class="line">#	The following characters are not allowed:</span><br><span class="line">#	\ &apos; &quot; ` * ? [ ] &#123; &#125; ~ $ ! &amp; ; ( ) &lt; &gt; | # @</span><br><span class="line">#	Additionally, newline characters are not allowed.</span><br><span class="line">#	0 - do not allow</span><br><span class="line">#	1 - allow</span><br><span class="line">#</span><br><span class="line"># Mandatory: no</span><br><span class="line"># Range: 0-1</span><br><span class="line"># Default:</span><br><span class="line">UnsafeUserParameters=1</span><br><span class="line"></span><br><span class="line">### Option: UserParameter</span><br><span class="line">#	User-defined parameter to monitor. There can be several user-defined parameters.</span><br><span class="line">#	Format: UserParameter=&lt;key&gt;,&lt;shell command&gt;</span><br><span class="line">#</span><br><span class="line"># Mandatory: no</span><br><span class="line"># Default:</span><br><span class="line">UserParameter=mypay.robot[*],C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File C:\Zabbix\robot.ps1 $1 $2 $3 $4 $5 $6 $7 $8 $9</span><br></pre></td></tr></table></figure>
+<h2 id="How-to-debug"><a href="#How-to-debug" class="headerlink" title="How to debug"></a>How to debug</h2><p><img src="/2018/10/09/測試/zabbix/zabbix自訂key使用powershell/debug.gif" alt=""></p>
+<hr>
+<blockquote>
+<p>要找mark “robot1047”<br><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$arr</span> = <span class="variable">$args</span>[<span class="number">0</span>]</span><br><span class="line"><span class="variable">$mark</span> = <span class="number">0</span></span><br><span class="line"><span class="built_in">Get-Process</span> -Name java | select -expand id | <span class="keyword">ForEach</span> &#123;</span><br><span class="line">    <span class="variable">$queryCondition</span> = jinfo <span class="variable">$_</span></span><br><span class="line">    <span class="variable">$isExist</span> = <span class="variable">$queryCondition</span>.split(<span class="string">' '</span>) | <span class="built_in">Select-String</span> -include string <span class="variable">$arr</span> -CaseSensitive </span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$isExist</span>.length <span class="nomarkup">-gt</span> <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="variable">$mark</span> += <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">echo <span class="variable">$mark</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="zabbix-get-run-shell-Timeout，需要在客戶端修改"><a href="#zabbix-get-run-shell-Timeout，需要在客戶端修改" class="headerlink" title="zabbix_get run shell Timeout，需要在客戶端修改"></a>zabbix_get run shell Timeout，需要在客戶端修改</h2><p>[root@zabbix-v34-server zabbix]# /usr/bin/zabbix_get -s 10.140.0.156 -p 10050 -k “mypay.robot[robot1162]”<br>ZBX_NOTSUPPORTED: Timeout while executing a shell script.</p>
+<blockquote>
+<p>Timeout=30</p>
+</blockquote>
+<hr>
+<h1 id="安裝步驟"><a href="#安裝步驟" class="headerlink" title="安裝步驟"></a>安裝步驟</h1><h2 id="修改權限"><a href="#修改權限" class="headerlink" title="修改權限"></a>修改權限</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
+<h2 id="添加-自定義powershell"><a href="#添加-自定義powershell" class="headerlink" title="添加-自定義powershell"></a>添加-自定義powershell</h2><blockquote>
+<p>robot.ps1</p>
+</blockquote>
+<h2 id="修改conf"><a href="#修改conf" class="headerlink" title="修改conf"></a>修改conf</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Timeout=30</span><br><span class="line">StartAgents=50</span><br><span class="line">EnableRemoteCommands=1</span><br><span class="line">UnsafeUserParameters=1</span><br><span class="line">UserParameter=mypay.robot[*],C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File C:\Zabbix\robot.ps1 $1 $2 $3 $4 $5 $6 $7 $8 $9</span><br></pre></td></tr></table></figure>
+<h2 id="重起service"><a href="#重起service" class="headerlink" title="重起service"></a>重起service</h2><h2 id="zabbix-get測試"><a href="#zabbix-get測試" class="headerlink" title="zabbix_get測試"></a>zabbix_get測試</h2><h3 id="138-ACH"><a href="#138-ACH" class="headerlink" title="138-ACH"></a>138-ACH</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/zabbix_get -s 10.140.0.252 -p 10050 -k &quot;mypay.robot[robot902]&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="172-AGB"><a href="#172-AGB" class="headerlink" title="172-AGB"></a>172-AGB</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/zabbix_get -s 10.140.1.129 -p 10050 -k &quot;mypay.robot[robot1134]&quot;</span><br><span class="line">/usr/bin/zabbix_get -s 10.140.1.129 -p 10050 -k &quot;mypay.robot[robot726]&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="175-AGE"><a href="#175-AGE" class="headerlink" title="175-AGE"></a>175-AGE</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/zabbix_get -s 10.140.1.134 -p 10050 -k &quot;mypay.robot[robot1047]&quot;</span><br><span class="line">/usr/bin/zabbix_get -s 10.140.1.134 -p 10050 -k &quot;mypay.robot[robot1134]&quot;</span><br><span class="line">/usr/bin/zabbix_get -s 10.140.1.134 -p 10050 -k &quot;mypay.robot[robot726]&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="添加template"><a href="#添加template" class="headerlink" title="添加template"></a>添加template</h2><h2 id="zbx-export-templates-xml"><a href="#zbx-export-templates-xml" class="headerlink" title="zbx_export_templates.xml"></a>zbx_export_templates.xml</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">zabbix_export</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">date</span>&gt;</span>2018-10-15T03:08:30Z<span class="tag">&lt;/<span class="name">date</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groups</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">group</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>MYPAY-Windows<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">group</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">groups</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">templates</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">template</span>&gt;</span>mypay-robot<span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>MYPAY-ROBOT<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">description</span>&gt;</span>固碼機器人模版<span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groups</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">group</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">name</span>&gt;</span>MYPAY-Windows<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">group</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">groups</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">applications</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">application</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">name</span>&gt;</span>機器人<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">applications</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">items</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">item</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">name</span>&gt;</span>固碼機器人監控<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">type</span>&gt;</span>0<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">snmp_community</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">snmp_oid</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">key</span>&gt;</span>mypay.robot[robot1047]<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">delay</span>&gt;</span>30s<span class="tag">&lt;/<span class="name">delay</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">history</span>&gt;</span>90d<span class="tag">&lt;/<span class="name">history</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">trends</span>&gt;</span>365d<span class="tag">&lt;/<span class="name">trends</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">status</span>&gt;</span>0<span class="tag">&lt;/<span class="name">status</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">value_type</span>&gt;</span>3<span class="tag">&lt;/<span class="name">value_type</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">allowed_hosts</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">units</span>&gt;</span>個<span class="tag">&lt;/<span class="name">units</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">snmpv3_contextname</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">snmpv3_securityname</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">snmpv3_securitylevel</span>&gt;</span>0<span class="tag">&lt;/<span class="name">snmpv3_securitylevel</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">snmpv3_authprotocol</span>&gt;</span>0<span class="tag">&lt;/<span class="name">snmpv3_authprotocol</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">snmpv3_authpassphrase</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">snmpv3_privprotocol</span>&gt;</span>0<span class="tag">&lt;/<span class="name">snmpv3_privprotocol</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">snmpv3_privpassphrase</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">params</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">ipmi_sensor</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">authtype</span>&gt;</span>0<span class="tag">&lt;/<span class="name">authtype</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">username</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">password</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">publickey</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">privatekey</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">port</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">description</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">inventory_link</span>&gt;</span>0<span class="tag">&lt;/<span class="name">inventory_link</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">applications</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">application</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">name</span>&gt;</span>機器人<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">applications</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">valuemap</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">logtimefmt</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">preprocessing</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">jmx_endpoint</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">master_item</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">items</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">discovery_rules</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">httptests</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">macros</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">templates</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">screens</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">templates</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">graphs</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">graph</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>robot-1047<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">width</span>&gt;</span>900<span class="tag">&lt;/<span class="name">width</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">height</span>&gt;</span>200<span class="tag">&lt;/<span class="name">height</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">yaxismin</span>&gt;</span>0.0000<span class="tag">&lt;/<span class="name">yaxismin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">yaxismax</span>&gt;</span>100.0000<span class="tag">&lt;/<span class="name">yaxismax</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">show_work_period</span>&gt;</span>1<span class="tag">&lt;/<span class="name">show_work_period</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">show_triggers</span>&gt;</span>1<span class="tag">&lt;/<span class="name">show_triggers</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">type</span>&gt;</span>0<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">show_legend</span>&gt;</span>1<span class="tag">&lt;/<span class="name">show_legend</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">show_3d</span>&gt;</span>0<span class="tag">&lt;/<span class="name">show_3d</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">percent_left</span>&gt;</span>0.0000<span class="tag">&lt;/<span class="name">percent_left</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">percent_right</span>&gt;</span>0.0000<span class="tag">&lt;/<span class="name">percent_right</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ymin_type_1</span>&gt;</span>0<span class="tag">&lt;/<span class="name">ymin_type_1</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ymax_type_1</span>&gt;</span>0<span class="tag">&lt;/<span class="name">ymax_type_1</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ymin_item_1</span>&gt;</span>0<span class="tag">&lt;/<span class="name">ymin_item_1</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ymax_item_1</span>&gt;</span>0<span class="tag">&lt;/<span class="name">ymax_item_1</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">graph_items</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">graph_item</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">sortorder</span>&gt;</span>0<span class="tag">&lt;/<span class="name">sortorder</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">drawtype</span>&gt;</span>0<span class="tag">&lt;/<span class="name">drawtype</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">color</span>&gt;</span>1A7C11<span class="tag">&lt;/<span class="name">color</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">yaxisside</span>&gt;</span>0<span class="tag">&lt;/<span class="name">yaxisside</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">calc_fnc</span>&gt;</span>7<span class="tag">&lt;/<span class="name">calc_fnc</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">type</span>&gt;</span>0<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">item</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">host</span>&gt;</span>mypay-robot<span class="tag">&lt;/<span class="name">host</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">key</span>&gt;</span>mypay.robot[robot1047]<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">graph_item</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">graph_items</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">graph</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">graphs</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">zabbix_export</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="jcmd"><a href="#jcmd" class="headerlink" title="jcmd"></a>jcmd</h1><blockquote>
+<p>help</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\yu_da&gt;jcmd -h</span><br><span class="line">Usage: jcmd &lt;pid | main class&gt; &lt;command ...|PerfCounter.print|-f file&gt;</span><br><span class="line">   or: jcmd -l</span><br><span class="line">   or: jcmd -h</span><br><span class="line"></span><br><span class="line">  command must be a valid jcmd command for the selected jvm.</span><br><span class="line">  Use the command &quot;help&quot; to see which commands are available.</span><br><span class="line">  If the pid is 0, commands will be sent to all Java processes.</span><br><span class="line">  The main class argument will be used to match (either partially</span><br><span class="line">  or fully) the class used to start Java.</span><br><span class="line">  If no options are given, lists Java processes (same as -p).</span><br><span class="line"></span><br><span class="line">  PerfCounter.print display the counters exposed by this process</span><br><span class="line">  -f  read and execute commands from the file</span><br><span class="line">  -l  list JVM processes on the local machine</span><br><span class="line">  -h  this help</span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>使用pid加上help</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\yu_da&gt;jcmd 16428 help</span><br><span class="line">16428:</span><br><span class="line">The following commands are available:</span><br><span class="line">JFR.stop</span><br><span class="line">JFR.start</span><br><span class="line">JFR.dump</span><br><span class="line">JFR.check</span><br><span class="line">VM.native_memory</span><br><span class="line">VM.check_commercial_features</span><br><span class="line">VM.unlock_commercial_features</span><br><span class="line">ManagementAgent.stop</span><br><span class="line">ManagementAgent.start_local</span><br><span class="line">ManagementAgent.start</span><br><span class="line">GC.rotate_log</span><br><span class="line">Thread.print</span><br><span class="line">GC.class_stats</span><br><span class="line">GC.class_histogram</span><br><span class="line">GC.heap_dump</span><br><span class="line">GC.run_finalization</span><br><span class="line">GC.run</span><br><span class="line">VM.uptime</span><br><span class="line">VM.flags </span><br><span class="line">VM.system_properties</span><br><span class="line">VM.command_line</span><br><span class="line">VM.version</span><br><span class="line">help</span><br><span class="line"></span><br><span class="line">For more information about a specific command use &apos;help &lt;command&gt;&apos;.</span><br><span class="line"></span><br><span class="line">C:\Users\yu_da&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>查詢JVM參數</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\yu_da&gt;jcmd 16428 VM.command_line</span><br><span class="line">16428:</span><br><span class="line">VM Arguments:</span><br><span class="line">jvm_args: -Xmx700m -Djava.awt.headless=true -Djava.endorsed.dirs=&quot;&quot; -Djdt.compiler.useSingleThread=true -Dpreload.project.path=D:/zonvan/coding/myPayRobot </span><br><span class="line">...</span><br><span class="line">java_class_path (initial): D:/install/JetBrains/ideaIU-2017.2.7/lib/jps-launcher.jar;C:/Program Files/Java/jdk1.8.0_161/lib/tools.jar;D:/install/JetBrains/ideaIU-2017.2.7/lib/optimizedFileManager.jar</span><br><span class="line">Launcher Type: SUN_STANDARD</span><br><span class="line"></span><br><span class="line">C:\Users\yu_da&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="jinfo"><a href="#jinfo" class="headerlink" title="jinfo"></a>jinfo</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\yu_da&gt;</span><br><span class="line">C:\Users\yu_da&gt;jinfo 16428</span><br><span class="line">Attaching to process ID 16428, please wait...</span><br><span class="line">Debugger attached successfully.</span><br><span class="line">Server compiler detected.</span><br><span class="line">JVM version is 25.161-b12</span><br><span class="line">Java System Properties:</span><br><span class="line"></span><br><span class="line">java.vendor = Oracle Corporation</span><br><span class="line">preload.project.path = D:/zonvan/coding/myPayRobot</span><br><span class="line">sun.java.launcher = SUN_STANDARD</span><br><span class="line">idea.config.path = D:/install/JetBrains/ideaIU-2017.2.7/.IntelliJIdea2017.2/config</span><br><span class="line">sun.management.compiler = HotSpot 64-Bit Tiered Compilers</span><br><span class="line">sun.nio.ch.bugLevel =</span><br><span class="line">idea.paths.selector = IntelliJIdea2017.2</span><br><span class="line">jps.file.types.component.name = FileTypeManager</span><br><span class="line">kotlin.daemon.client.alive.path = &quot;C:\Users\yu_da\AppData\Local\Temp\kotlin-idea-9068951628187305651-is-running&quot;</span><br><span class="line">os.name = Windows 10</span><br><span class="line">sun.boot.class.path = C:\Program Files\Java\jdk1.8.0_161\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_161\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_161\jre\classes</span><br><span class="line">sun.desktop = windows</span><br><span class="line">idea.plugins.path = D:/install/JetBrains/ideaIU-2017.2.7/.IntelliJIdea2017.2/config\plugins</span><br><span class="line">java.vm.specification.vendor = Oracle Corporation</span><br><span class="line">java.runtime.version = 1.8.0_161-b12</span><br><span class="line">io.netty.serviceThreadPrefix = Netty</span><br><span class="line">user.name = tommy</span><br><span class="line">idea.home.path = D:\install\JetBrains\ideaIU-2017.2.7</span><br><span class="line">user.language = en</span><br><span class="line">jdt.compiler.useSingleThread = true</span><br><span class="line">sun.boot.library.path = C:\Program Files\Java\jdk1.8.0_161\jre\bin</span><br><span class="line">java.version = 1.8.0_161</span><br><span class="line">user.timezone = Asia/Taipei</span><br><span class="line">java.net.preferIPv4Stack = true</span><br><span class="line">kotlin.daemon.enabled =</span><br><span class="line">sun.arch.data.model = 64</span><br><span class="line">io.netty.initialSeedUniquifier = -413575156224806991</span><br><span class="line">java.endorsed.dirs = &quot;&quot;</span><br><span class="line">sun.cpu.isalist = amd64</span><br><span class="line">sun.jnu.encoding = MS950</span><br><span class="line">file.encoding.pkg = sun.io</span><br><span class="line">file.separator = \</span><br><span class="line">java.specification.name = Java Platform API Specification</span><br><span class="line">java.class.version = 52.0</span><br><span class="line">user.country = TW</span><br><span class="line">java.home = C:\Program Files\Java\jdk1.8.0_161\jre</span><br><span class="line">kotlin.incremental.compilation.experimental = true</span><br><span class="line">java.vm.info = mixed mode</span><br><span class="line">os.version = 10.0</span><br><span class="line">path.separator = ;</span><br><span class="line">java.vm.version = 25.161-b12</span><br><span class="line">user.variant =</span><br><span class="line">jps.fallback.jdk.version = 1.8.0_152-release</span><br><span class="line">java.awt.printerjob = sun.awt.windows.WPrinterJob</span><br><span class="line">sun.io.unicode.encoding = UnicodeLittle</span><br><span class="line">awt.toolkit = sun.awt.windows.WToolkit</span><br><span class="line">jps.log.dir = D:/install/JetBrains/ideaIU-2017.2.7/.IntelliJIdea2017.2/system/log/build-log</span><br><span class="line">io.netty.processId = 27257</span><br><span class="line">user.script =</span><br><span class="line">user.home = C:\Users\yu_da</span><br><span class="line">java.specification.vendor = Oracle Corporation</span><br><span class="line">java.library.path = C:\Program Files\Java\jdk1.8.0_161\bin; C:\Users\yu_da\AppData\Roaming\npm;.</span><br><span class="line">java.vendor.url = http://java.oracle.com/</span><br><span class="line">jps.fallback.jdk.home = D:/install/JetBrains/ideaIU-2017.2.7/jre64</span><br><span class="line">java.vm.vendor = Oracle Corporation</span><br><span class="line">java.runtime.name = Java(TM) SE Runtime Environment</span><br><span class="line">sun.java.command = org.jetbrains.jps.cmdline.Launcher D:/install/JetBrains/ideaIU-2017.2.7/lib/jna-platform.jar;D:/install/JetBrains/ideaIU-2017.2.7/lib/jps-builders.jar;...D:/install/JetBrains/ideaIU-2017.2.7/.IntelliJIdea2017.2/system/compile-server</span><br><span class="line">java.class.path = D:/install/JetBrains/ideaIU-2017.2.7/lib/jps-launcher.jar;C:/Program Files/Java/jdk1.8.0_161/lib/tools.jar;D:/install/JetBrains/ideaIU-2017.2.7/lib/optimizedFileManager.jar</span><br><span class="line">io.netty.machineId = 28:f0:76:ff:fe:16:65:0e</span><br><span class="line">java.vm.specification.name = Java Virtual Machine Specification</span><br><span class="line">jps.backward.ref.index.builder = true</span><br><span class="line">java.vm.specification.version = 1.8</span><br><span class="line">preload.config.path = D:/install/JetBrains/ideaIU-2017.2.7/.IntelliJIdea2017.2/config/options</span><br><span class="line">sun.cpu.endian = little</span><br><span class="line">sun.os.patch.level =</span><br><span class="line">java.awt.headless = true</span><br><span class="line">java.io.tmpdir = D:/install/JetBrains/ideaIU-2017.2.7/.IntelliJIdea2017.2/system/compile-server/mypayrobot_809d945d/_temp_</span><br><span class="line">java.vendor.url.bug = http://bugreport.sun.com/bugreport/</span><br><span class="line">os.arch = amd64</span><br><span class="line">java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment</span><br><span class="line">java.ext.dirs = C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext</span><br><span class="line">rebuild.on.dependency.change = true</span><br><span class="line">user.dir = D:\install\JetBrains\ideaIU-2017.2.7\.IntelliJIdea2017.2\system\compile-server</span><br><span class="line">line.separator =</span><br><span class="line"></span><br><span class="line">java.vm.name = Java HotSpot(TM) 64-Bit Server VM</span><br><span class="line">file.encoding = UTF-8</span><br><span class="line">java.specification.version = 1.8</span><br><span class="line">compile.parallel = false</span><br><span class="line">io.netty.noUnsafe = true</span><br><span class="line"></span><br><span class="line">VM Flags:</span><br><span class="line">Non-default VM flags: -XX:CICompilerCount=4 -XX:InitialHeapSize=536870912 -XX:MaxHeapSize=734003200 -XX:MaxNewSize=244318208 -XX:MinHeapDeltaBytes=524288 -XX:NewSize=178782208 -XX:OldSize=358088704 -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseFastUnorderedTimeStamps -XX:-UseLargePagesIndividualAllocation -XX:+UseParallelGC</span><br><span class="line">Command line:  -Xmx700m -Djava.awt.headless=true -Djava.endorsed.dirs=&quot;&quot; -Djdt.compiler.useSingleThread=true -Dpreload.project.path=D:/zonvan/coding/myPayRobot -Dpreload.config.path=D:/install/JetBrains/ideaIU-2017.2.7/.IntelliJIdea2017.2/config/options -Dcompile.parallel=false -Drebuild.on.dependency.change=true -Djava.net.preferIPv4Stack=true -Dio.netty.initialSeedUniquifier=-413575156224806991 -Dfile.encoding=UTF-8 -Djps.file.types.component.name=FileTypeManager -Duser.language=en -Duser.country=TW -Didea.paths.selector=IntelliJIdea2017.2 -Didea.home.path=D:\install\JetBrains\ideaIU-2017.2.7 -Didea.config.path=D:/install/JetBrains/ideaIU-2017.2.7/.IntelliJIdea2017.2/config -Didea.plugins.path=D:/install/JetBrains/ideaIU-2017.2.7/.IntelliJIdea2017.2/config\plugins -Djps.log.dir=D:/install/JetBrains/ideaIU-2017.2.7/.IntelliJIdea2017.2/system/log/build-log -Djps.fallback.jdk.home=D:/install/JetBrains/ideaIU-2017.2.7/jre64 -Djps.fallback.jdk.version=1.8.0_152-release -Dio.netty.noUnsafe=true -Djava.io.tmpdir=D:/install/JetBrains/ideaIU-2017.2.7/.IntelliJIdea2017.2/system/compile-server/mypayrobot_809d945d/_temp_ -Djps.backward.ref.index.builder=true -Dkotlin.incremental.compilation.experimental=true -Dkotlin.daemon.enabled -Dkotlin.daemon.client.alive.path=&quot;C:\Users\yu_da\AppData\Local\Temp\kotlin-idea-9068951628187305651-is-running&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">C:\Users\yu_da&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/10/09/測試/zabbix/zabbix自訂key使用powershell/20181011141413.png" alt=""></p>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><ul>
+<li><a href="http://my-fish-it.blogspot.com/2017/03/ss-zabbix-32-userparameter-windows.html" target="_blank" rel="noopener">S小魚仔S Zabbix 3.2 善用 UserParameter 回傳 Windows PowerShell 值</a></li>
+<li><a href="https://github.com/sm4sh1k/zabbix-scripts" target="_blank" rel="noopener">zabbix-scripts</a></li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../../../../../categories/zabbix/">zabbix</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/zabbix/">zabbix</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://yudady.github.io/2018/10/09/測試/zabbix/zabbix自訂key使用powershell/" data-title="zabbix自訂key使用powershell | Tommy-好記性不如爛筆頭" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2018/10/11/工具/learn-powershell01/" title="learn-powershell01">
+  <strong>上一篇：</strong><br/>
+  <span>
+  learn-powershell01</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2018/10/09/java/spring/DispatcherServlet/"  title="DispatcherServlet">
+ <strong>下一篇：</strong><br/> 
+ <span>DispatcherServlet
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#需求windows環境要偵測多個jvm的main方法，檢查是否啟動"><span class="toc-number">1.1.</span> <span class="toc-text">需求windows環境要偵測多個jvm的main方法，檢查是否啟動</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-debug"><span class="toc-number">2.1.</span> <span class="toc-text">How to debug</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zabbix-get-run-shell-Timeout，需要在客戶端修改"><span class="toc-number">2.2.</span> <span class="toc-text">zabbix_get run shell Timeout，需要在客戶端修改</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安裝步驟"><span class="toc-number">3.</span> <span class="toc-text">安裝步驟</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改權限"><span class="toc-number">3.1.</span> <span class="toc-text">修改權限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加-自定義powershell"><span class="toc-number">3.2.</span> <span class="toc-text">添加-自定義powershell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改conf"><span class="toc-number">3.3.</span> <span class="toc-text">修改conf</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重起service"><span class="toc-number">3.4.</span> <span class="toc-text">重起service</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zabbix-get測試"><span class="toc-number">3.5.</span> <span class="toc-text">zabbix_get測試</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#138-ACH"><span class="toc-number">3.5.1.</span> <span class="toc-text">138-ACH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#172-AGB"><span class="toc-number">3.5.2.</span> <span class="toc-text">172-AGB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#175-AGE"><span class="toc-number">3.5.3.</span> <span class="toc-text">175-AGE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加template"><span class="toc-number">3.6.</span> <span class="toc-text">添加template</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#zbx-export-templates-xml"><span class="toc-number">3.7.</span> <span class="toc-text">zbx_export_templates.xml</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jcmd"><span class="toc-number">4.</span> <span class="toc-text">jcmd</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jinfo"><span class="toc-number">5.</span> <span class="toc-text">jinfo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">6.</span> <span class="toc-text">參考資料</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/TODO/" title="TODO">TODO<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/business/" title="business">business<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/database/" title="database">database<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/docker/" title="docker">docker<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/front-end/" title="front-end">front-end<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/home/" title="home">home<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/java/" title="java">java<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/linux/" title="linux">linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/spring/" title="spring">spring<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/tools/" title="tools">tools<sup>29</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理/" title="原理">原理<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/大數據/" title="大數據">大數據<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/深度學習/" title="深度學習">深度學習<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/測試/" title="測試">測試<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/聚合支付系统/" title="聚合支付系统">聚合支付系统<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/netty/" title="netty">netty<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/database/" title="database">database<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/intellij/" title="intellij">intellij<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java8/" title="java8">java8<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/weblogic/" title="weblogic">weblogic<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原理/" title="原理">原理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-3-party/" title="java-3-party">java-3-party<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/blog/" title="blog">blog<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/oracle/" title="oracle">oracle<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-base/" title="java-base">java-base<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/TODO/" title="TODO">TODO<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-io/" title="java-io">java-io<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coldofpig.github.io/" target="_blank" title="joe blog">joe blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://justinyang1221.github.io/" target="_blank" title="賈思 blog">賈思 blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Tommy. <br/>
+			This is my blog, 筆記！！！</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/https://github.com/yudady" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:yu_dady@yahoo.com.tw" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="/about" target="_blank" title="Tommy lin">Tommy lin</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'ca-pub-1366278449398453', 'https://yudady.github.io/');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

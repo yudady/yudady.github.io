@@ -1,0 +1,682 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>restful-rule | Tommy-好記性不如爛筆頭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Tommy lin">
+    
+
+    
+    <meta name="description" content="簡介 在RESTful架构中，每个网址代表一种资源（resource），所以网址中不能有动词，只能有名词，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的”集合”（collection），所以API中的名词也应该使用复数。   每一个URI代表一种资源； 客户端和服务器之间，传递这种资源的某种表现层； 客户端通过四个HTTP动词，对服务器端资源进行操作，实现”表现层状态">
+<meta name="keywords" content="原理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="restful-rule">
+<meta property="og:url" content="https://yudady.github.io/2019/09/15/原理/restful-rule/index.html">
+<meta property="og:site_name" content="Tommy-好記性不如爛筆頭">
+<meta property="og:description" content="簡介 在RESTful架构中，每个网址代表一种资源（resource），所以网址中不能有动词，只能有名词，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的”集合”（collection），所以API中的名词也应该使用复数。   每一个URI代表一种资源； 客户端和服务器之间，传递这种资源的某种表现层； 客户端通过四个HTTP动词，对服务器端资源进行操作，实现”表现层状态">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2019-09-16T03:28:45.896Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="restful-rule">
+<meta name="twitter:description" content="簡介 在RESTful架构中，每个网址代表一种资源（resource），所以网址中不能有动词，只能有名词，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的”集合”（collection），所以API中的名词也应该使用复数。   每一个URI代表一种资源； 客户端和服务器之间，传递这种资源的某种表现层； 客户端通过四个HTTP动词，对服务器端资源进行操作，实现”表现层状态">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Tommy-好記性不如爛筆頭" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="../../../../../css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Tommy-好記性不如爛筆頭" title="Tommy-好記性不如爛筆頭"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Tommy-好記性不如爛筆頭">Tommy-好記性不如爛筆頭</a></h1>
+				<h2 class="blog-motto">紙上得來終覺淺，絕知此事要躬行</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首頁</a></li>
+					
+						<li><a href="/archives">檔案</a></li>
+					
+						<li><a href="/favorite">網站資源</a></li>
+					
+						<li><a href="/projects">紀錄我的資源</a></li>
+					
+						<li><a href="/about">關於我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yudady.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2019/09/15/原理/restful-rule/" title="restful-rule" itemprop="url">restful-rule</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2019-09-15T14:22:59.000Z" itemprop="datePublished"> Published 2019-09-15</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#常用的HTTP动词有下面五个（括号里是对应的SQL命令）"><span class="toc-number">2.1.</span> <span class="toc-text">常用的HTTP动词有下面五个（括号里是对应的SQL命令）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#返回结果"><span class="toc-number">2.2.</span> <span class="toc-text">返回结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GET"><span class="toc-number">2.3.</span> <span class="toc-text">GET</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#POST"><span class="toc-number">2.4.</span> <span class="toc-text">POST</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PUT"><span class="toc-number">2.5.</span> <span class="toc-text">PUT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DELETE"><span class="toc-number">2.6.</span> <span class="toc-text">DELETE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEAD"><span class="toc-number">2.7.</span> <span class="toc-text">HEAD</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#状态码（Status-Codes）"><span class="toc-number">3.</span> <span class="toc-text">状态码（Status Codes）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">4.</span> <span class="toc-text">參考資料</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><blockquote>
+<p>在RESTful架构中，每个网址代表一种资源（resource），所以网址中不能有动词，只能有名词，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的”集合”（collection），所以API中的名词也应该使用复数。</p>
+</blockquote>
+<ul>
+<li>每一个URI代表一种资源；</li>
+<li>客户端和服务器之间，传递这种资源的某种表现层；</li>
+<li>客户端通过四个HTTP动词，对服务器端资源进行操作，实现”表现层状态转化”。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">GET /zoos：列出所有动物园</span><br><span class="line">POST /zoos：新建一个动物园</span><br><span class="line">GET /zoos/ID：获取某个指定动物园的信息</span><br><span class="line">PUT /zoos/ID：更新某个指定动物园的信息（提供该动物园的全部信息）</span><br><span class="line">PATCH /zoos/ID：更新某个指定动物园的信息（提供该动物园的部分信息）</span><br><span class="line">DELETE /zoos/ID：删除某个动物园</span><br><span class="line">GET /zoos/ID/animals：列出某个指定动物园的所有动物</span><br><span class="line">DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h1><blockquote>
+<p>在一个RESTful系统里，客户端向服务端发起索取资源的操作只能通过HTTP协议语义来进行交互。最常用的HTTP协议语义有以下5个：</p>
+</blockquote>
+<h2 id="常用的HTTP动词有下面五个（括号里是对应的SQL命令）"><a href="#常用的HTTP动词有下面五个（括号里是对应的SQL命令）" class="headerlink" title="常用的HTTP动词有下面五个（括号里是对应的SQL命令）"></a>常用的HTTP动词有下面五个（括号里是对应的SQL命令）</h2><ul>
+<li>GET（SELECT）：从服务器取出资源（一项或多项）。</li>
+<li>POST（CREATE）：在服务器新建一个资源。</li>
+<li>PUT（UPDATE）：在服务器更新资源（客户端提供改变后的完整资源）。</li>
+<li>PATCH（UPDATE）：在服务器更新资源（客户端提供改变的属性）。</li>
+<li>DELETE（DELETE）：从服务器删除资源。</li>
+</ul>
+<h2 id="返回结果"><a href="#返回结果" class="headerlink" title="返回结果"></a>返回结果</h2><ul>
+<li>GET /collection：返回资源对象的列表（数组）</li>
+<li>GET /collection/resource：返回单个资源对象</li>
+<li>POST /collection：返回新生成的资源对象</li>
+<li>PUT /collection/resource：返回完整的资源对象</li>
+<li>PATCH /collection/resource：返回完整的资源对象</li>
+<li>DELETE /collection/resource：返回一个空文档</li>
+</ul>
+<h2 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h2><p>GET:发送一条或者多条GET请求都不会改变服务器里面的资源，同一个request发一遍和发两遍都将获得相同结果。这个交互行为是幂等的。<br>GET:从服务器取出资源（一项或多项）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiOperation</span>(value=<span class="string">"获取用户列表"</span>, notes=<span class="string">""</span>)</span><br><span class="line"><span class="meta">@RequestMapping</span>(value=&#123;<span class="string">""</span>&#125;, method=RequestMethod.GET)</span><br><span class="line"><span class="function"><span class="keyword">public</span> List&lt;User&gt; <span class="title">getUserList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    List&lt;User&gt; r = <span class="keyword">new</span> ArrayList&lt;User&gt;(users.values());</span><br><span class="line">    <span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="meta">@ApiOperation</span>(value=<span class="string">"获取用户详细信息"</span>, notes=<span class="string">"根据url的id来获取用户详细信息"</span>)</span><br><span class="line"><span class="meta">@ApiImplicitParam</span>(name = <span class="string">"id"</span>, value = <span class="string">"用户ID"</span>, required = <span class="keyword">true</span>, dataType = <span class="string">"Long"</span>)</span><br><span class="line"><span class="meta">@RequestMapping</span>(value=<span class="string">"/&#123;id&#125;"</span>, method=RequestMethod.GET)</span><br><span class="line"><span class="function"><span class="keyword">public</span> User <span class="title">getUser</span><span class="params">(@PathVariable Long id)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> users.get(id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h2><p>POST:发送的POST请求中会包含希望创建的新资源。收到POST请求后，服务器会新增资源。这个交互行为是非幂等的。<br>POST：在服务器新建一个资源</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiOperation</span>(value=<span class="string">"创建用户"</span>, notes=<span class="string">"根据User对象创建用户"</span>)</span><br><span class="line"><span class="meta">@ApiImplicitParam</span>(name = <span class="string">"user"</span>, value = <span class="string">"用户详细实体user"</span>, required = <span class="keyword">true</span>, dataType = <span class="string">"User"</span>)</span><br><span class="line"><span class="meta">@RequestMapping</span>(value=<span class="string">""</span>, method=RequestMethod.POST)</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">postUser</span><span class="params">(@RequestBody User user)</span> </span>&#123;</span><br><span class="line">    users.put(user.getId(), user);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"success"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="PUT"><a href="#PUT" class="headerlink" title="PUT"></a>PUT</h2><p>PUT:客户端发送PUT请求对资源进行修改 (更新），此时服务端的资源发生变化，这种请求是幂等的。<br>PUT:在服务器更新资源（客户端提供完整资源数据）。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiOperation</span>(value=<span class="string">"更新用户详细信息"</span>, notes=<span class="string">"根据url的id来指定更新对象，并根据传过来的user信息来更新用户详细信息"</span>)</span><br><span class="line"><span class="meta">@ApiImplicitParams</span>(&#123;</span><br><span class="line">        <span class="meta">@ApiImplicitParam</span>(name = <span class="string">"id"</span>, value = <span class="string">"用户ID"</span>, required = <span class="keyword">true</span>, dataType = <span class="string">"Long"</span>),</span><br><span class="line">        <span class="meta">@ApiImplicitParam</span>(name = <span class="string">"user"</span>, value = <span class="string">"用户详细实体user"</span>, required = <span class="keyword">true</span>, dataType = <span class="string">"User"</span>)</span><br><span class="line">&#125;)</span><br><span class="line"> </span><br><span class="line"><span class="meta">@RequestMapping</span>(value=<span class="string">"/&#123;id&#125;"</span>, method=RequestMethod.PUT)</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">putUser</span><span class="params">(@PathVariable Long id, @RequestBody User user)</span> </span>&#123;</span><br><span class="line">    User u = users.get(id);</span><br><span class="line">    u.setName(user.getName());</span><br><span class="line">    u.setAge(user.getAge());</span><br><span class="line">    users.put(id, u);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"success"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="DELETE"><a href="#DELETE" class="headerlink" title="DELETE"></a>DELETE</h2><p>DELETE:发送Delete请求之后，服务端资源将消失。当再次发送一条Delete请求，客户端获得的资源状态和第一次发送Delete请求后的状态是一致的。这个请求是幂等的。<br>DELETE:从服务器删除资源</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ApiOperation</span>(value=<span class="string">"删除用户"</span>, notes=<span class="string">"根据url的id来指定删除对象"</span>)</span><br><span class="line"><span class="meta">@ApiImplicitParam</span>(name = <span class="string">"id"</span>, value = <span class="string">"用户ID"</span>, required = <span class="keyword">true</span>, dataType = <span class="string">"Long"</span>)</span><br><span class="line"><span class="meta">@RequestMapping</span>(value=<span class="string">"/&#123;id&#125;"</span>, method=RequestMethod.DELETE)</span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">deleteUser</span><span class="params">(@PathVariable Long id)</span> </span>&#123;</span><br><span class="line">    users.remove(id);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"success"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="HEAD"><a href="#HEAD" class="headerlink" title="HEAD"></a>HEAD</h2><p>HEAD:当不知道使用何种请求方式获取客户 端资源时，可以使用HEAD方式，此时客户端返回的不是具体的资源信息，只是HTTP状态码和报头。此方式是幂等的.<br>HEAD:从服务器获取报头信息（不是资源）。</p>
+<p>#　最常见的一种设计错误，就是URI包含<code>动词</code></p>
+<blockquote>
+<p>POST /accounts/1/transfer/500/to/2    ❌<br>POST /accounts/1/transaction/500/to/2 ⭕</p>
+</blockquote>
+<h1 id="状态码（Status-Codes）"><a href="#状态码（Status-Codes）" class="headerlink" title="状态码（Status Codes）"></a>状态码（Status Codes）</h1><ul>
+<li>200 OK - [GET]：服务器成功返回用户请求的数据，该操作是幂等的（Idempotent）。</li>
+<li>201 CREATED - [POST/PUT/PATCH]：用户新建或修改数据成功。</li>
+<li>202 Accepted - [*]：表示一个请求已经进入后台排队（异步任务）</li>
+<li>204 NO CONTENT - [DELETE]：用户删除数据成功。</li>
+<li>400 INVALID REQUEST - [POST/PUT/PATCH]：用户发出的请求有错误，服务器没有进行新建或修改数据的操作，该操作是幂等的。</li>
+<li>401 Unauthorized - [*]：表示用户没有权限（令牌、用户名、密码错误）。</li>
+<li>403 Forbidden - [*] 表示用户得到授权（与401错误相对），但是访问是被禁止的。</li>
+<li>404 NOT FOUND - [*]：用户发出的请求针对的是不存在的记录，服务器没有进行操作，该操作是幂等的。</li>
+<li>406 Not Acceptable - [GET]：用户请求的格式不可得（比如用户请求JSON格式，但是只有XML格式）。</li>
+<li>410 Gone -[GET]：用户请求的资源被永久删除，且不会再得到的。</li>
+<li>422 Unprocesable entity - [POST/PUT/PATCH] 当创建一个对象时，发生一个验证错误。</li>
+<li>429 Too Many Requests – 因為負載限制，拒絕request時。</li>
+<li>500 INTERNAL SERVER ERROR - [*]：服务器发生错误，用户将无法判断发出的请求是否成功。</li>
+</ul>
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><ul>
+<li><a href="https://www.jqhtml.com/down/7604.html" target="_blank" rel="noopener">RESTful API 编写规范</a></li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../../../../categories/原理/">原理</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/原理/">原理</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://yudady.github.io/2019/09/15/原理/restful-rule/" data-title="restful-rule | Tommy-好記性不如爛筆頭" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2019/11/04/docker/docker-windows/" title="docker-windows">
+  <strong>上一篇：</strong><br/>
+  <span>
+  docker-windows</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2019/08/10/開發工具集/intellij/intellij-save-action/"  title="intellij-save-action">
+ <strong>下一篇：</strong><br/> 
+ <span>intellij-save-action
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#常用的HTTP动词有下面五个（括号里是对应的SQL命令）"><span class="toc-number">2.1.</span> <span class="toc-text">常用的HTTP动词有下面五个（括号里是对应的SQL命令）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#返回结果"><span class="toc-number">2.2.</span> <span class="toc-text">返回结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GET"><span class="toc-number">2.3.</span> <span class="toc-text">GET</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#POST"><span class="toc-number">2.4.</span> <span class="toc-text">POST</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PUT"><span class="toc-number">2.5.</span> <span class="toc-text">PUT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DELETE"><span class="toc-number">2.6.</span> <span class="toc-text">DELETE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEAD"><span class="toc-number">2.7.</span> <span class="toc-text">HEAD</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#状态码（Status-Codes）"><span class="toc-number">3.</span> <span class="toc-text">状态码（Status Codes）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">4.</span> <span class="toc-text">參考資料</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/TODO/" title="TODO">TODO<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/business/" title="business">business<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/database/" title="database">database<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/docker/" title="docker">docker<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/front-end/" title="front-end">front-end<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/home/" title="home">home<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/java/" title="java">java<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/linux/" title="linux">linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/spring/" title="spring">spring<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/tools/" title="tools">tools<sup>29</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理/" title="原理">原理<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/大數據/" title="大數據">大數據<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/深度學習/" title="深度學習">深度學習<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/測試/" title="測試">測試<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/聚合支付系统/" title="聚合支付系统">聚合支付系统<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/netty/" title="netty">netty<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/database/" title="database">database<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/intellij/" title="intellij">intellij<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java8/" title="java8">java8<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/weblogic/" title="weblogic">weblogic<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原理/" title="原理">原理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-3-party/" title="java-3-party">java-3-party<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/blog/" title="blog">blog<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/oracle/" title="oracle">oracle<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-base/" title="java-base">java-base<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/TODO/" title="TODO">TODO<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-io/" title="java-io">java-io<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coldofpig.github.io/" target="_blank" title="joe blog">joe blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://justinyang1221.github.io/" target="_blank" title="賈思 blog">賈思 blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Tommy. <br/>
+			This is my blog, 筆記！！！</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/https://github.com/yudady" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:yu_dady@yahoo.com.tw" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="/about" target="_blank" title="Tommy lin">Tommy lin</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'ca-pub-1366278449398453', 'https://yudady.github.io/');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

@@ -1,0 +1,695 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>spring-note | Tommy-好記性不如爛筆頭</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Tommy lin">
+    
+
+    
+    <meta name="description" content="簡介 記錄下spring系列的注意和擴展點">
+<meta name="keywords" content="spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="spring-note">
+<meta property="og:url" content="https://yudady.github.io/2018/10/03/java/spring/spring-note/index.html">
+<meta property="og:site_name" content="Tommy-好記性不如爛筆頭">
+<meta property="og:description" content="簡介 記錄下spring系列的注意和擴展點">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-10-13T16:53:03.236Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="spring-note">
+<meta name="twitter:description" content="簡介 記錄下spring系列的注意和擴展點">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Tommy-好記性不如爛筆頭" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="../../../../../../css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Tommy-好記性不如爛筆頭" title="Tommy-好記性不如爛筆頭"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Tommy-好記性不如爛筆頭">Tommy-好記性不如爛筆頭</a></h1>
+				<h2 class="blog-motto">紙上得來終覺淺，絕知此事要躬行</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首頁</a></li>
+					
+						<li><a href="/archives">檔案</a></li>
+					
+						<li><a href="/favorite">網站資源</a></li>
+					
+						<li><a href="/projects">紀錄我的資源</a></li>
+					
+						<li><a href="/about">關於我</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yudady.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/03/java/spring/spring-note/" title="spring-note" itemprop="url">spring-note</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Tommy lin" target="_blank" itemprop="author">Tommy lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-10-03T14:26:05.000Z" itemprop="datePublished"> Published 2018-10-03</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring"><span class="toc-number">3.</span> <span class="toc-text">Spring</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#動態注入一個bean到spring容器"><span class="toc-number">3.1.</span> <span class="toc-text">動態注入一個bean到spring容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BeanDefinitionRegistryPostProcessor"><span class="toc-number">3.2.</span> <span class="toc-text">BeanDefinitionRegistryPostProcessor</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ApplicationEventPublisher-ApplicationListener"><span class="toc-number">3.3.</span> <span class="toc-text">ApplicationEventPublisher ApplicationListener</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件注册"><span class="toc-number">4.</span> <span class="toc-text">组件注册</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#annotion"><span class="toc-number">4.1.</span> <span class="toc-text">annotion</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#XXXAware-vs-XXXProcessor"><span class="toc-number">5.</span> <span class="toc-text">XXXAware vs XXXProcessor</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Aware"><span class="toc-number">6.</span> <span class="toc-text">Aware</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#spring-mvc"><span class="toc-number">7.</span> <span class="toc-text">spring mvc</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DispatcherServlet"><span class="toc-number">7.1.</span> <span class="toc-text">DispatcherServlet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MockMvc"><span class="toc-number">7.2.</span> <span class="toc-text">MockMvc</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#spring-security"><span class="toc-number">8.</span> <span class="toc-text">spring security</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#認證"><span class="toc-number">8.1.</span> <span class="toc-text">認證</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#授權"><span class="toc-number">8.2.</span> <span class="toc-text">授權</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SpringBoot"><span class="toc-number">9.</span> <span class="toc-text">SpringBoot</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SpringCloud"><span class="toc-number">10.</span> <span class="toc-text">SpringCloud</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#EnvironmentPostProcessor（META-INF-spring-factories）"><span class="toc-number">10.1.</span> <span class="toc-text">EnvironmentPostProcessor（META-INF/spring.factories）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">11.</span> <span class="toc-text">參考資料</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><blockquote>
+<p>記錄下spring系列的注意和擴展點</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="內容"><a href="#內容" class="headerlink" title="內容"></a>內容</h1><h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="動態注入一個bean到spring容器"><a href="#動態注入一個bean到spring容器" class="headerlink" title="動態注入一個bean到spring容器"></a>動態注入一個bean到spring容器</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DynamicRegisterBean2SpringContainer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> Logger logger = LoggerFactory.getLogger(<span class="keyword">this</span>.getClass());</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	ApplicationContext applicationContext;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getCamelCase</span><span class="params">(Class clazz, String refer)</span> </span>&#123;</span><br><span class="line">		String re = clazz.getSimpleName().substring(<span class="number">0</span>, <span class="number">1</span>).toLowerCase() + clazz.getSimpleName().substring(<span class="number">1</span>)</span><br><span class="line">			+ refer;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// System.out.println(re);</span></span><br><span class="line">		<span class="keyword">return</span> re;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dynamicCreateBean</span><span class="params">(Class clazz, String refer)</span> </span>&#123;</span><br><span class="line">		dynamicCreateBean(clazz, <span class="keyword">null</span>, <span class="keyword">null</span>, refer);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dynamicCreateBeanByValue</span><span class="params">(Class clazz, Map&lt;String, Object&gt; propertyValue, String refer)</span> </span>&#123;</span><br><span class="line">		dynamicCreateBean(clazz, propertyValue, <span class="keyword">null</span>, refer);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dynamicCreateBeanByReference</span><span class="params">(Class clazz, Map&lt;String, String&gt; propertyReference,</span></span></span><br><span class="line"><span class="function"><span class="params">		String refer)</span> </span>&#123;</span><br><span class="line">		dynamicCreateBean(clazz, <span class="keyword">null</span>, propertyReference, refer);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dynamicCreateBean</span><span class="params">(Class clazz, Map&lt;String, Object&gt; propertyValue,</span></span></span><br><span class="line"><span class="function"><span class="params">		Map&lt;String, String&gt; propertyReference, String refer)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 获取BeanFactory</span></span><br><span class="line">		DefaultListableBeanFactory defaultListableBeanFactory = (DefaultListableBeanFactory) applicationContext</span><br><span class="line">			.getAutowireCapableBeanFactory();</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 创建bean信息.</span></span><br><span class="line">		BeanDefinitionBuilder beanDefinitionBuilder = BeanDefinitionBuilder.genericBeanDefinition(clazz);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (Objects.nonNull(propertyValue)) &#123;</span><br><span class="line">			Iterator&lt;Map.Entry&lt;String, Object&gt;&gt; iterator = propertyValue.entrySet().iterator();</span><br><span class="line">			<span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">				Map.Entry&lt;String, Object&gt; pair = iterator.next();</span><br><span class="line">				String key = pair.getKey();</span><br><span class="line">				Object value = pair.getValue();</span><br><span class="line"></span><br><span class="line">				<span class="comment">// addPropertyValue</span></span><br><span class="line">				beanDefinitionBuilder.addPropertyValue(key, value);</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (Objects.nonNull(propertyReference)) &#123;</span><br><span class="line">			Iterator&lt;Map.Entry&lt;String, String&gt;&gt; iterator = propertyReference.entrySet().iterator();</span><br><span class="line">			<span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">				Map.Entry&lt;String, String&gt; pair = iterator.next();</span><br><span class="line">				String key = pair.getKey();</span><br><span class="line">				String value = pair.getValue();</span><br><span class="line"></span><br><span class="line">				<span class="comment">// addPropertyReference</span></span><br><span class="line">				beanDefinitionBuilder.addPropertyReference(key, value);</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 动态注册bean.</span></span><br><span class="line">		defaultListableBeanFactory.registerBeanDefinition(getCamelCase(clazz, refer),</span><br><span class="line">			beanDefinitionBuilder.getBeanDefinition());</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dynamicDeleteBean</span><span class="params">(Class clazz, String refer)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 获取BeanFactory</span></span><br><span class="line">		DefaultListableBeanFactory defaultListableBeanFactory = (DefaultListableBeanFactory) applicationContext</span><br><span class="line">			.getAutowireCapableBeanFactory();</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 删除bean.</span></span><br><span class="line">		defaultListableBeanFactory.removeBeanDefinition(getCamelCase(clazz, refer));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="BeanDefinitionRegistryPostProcessor"><a href="#BeanDefinitionRegistryPostProcessor" class="headerlink" title="BeanDefinitionRegistryPostProcessor"></a>BeanDefinitionRegistryPostProcessor</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyBeanDefinitionRegistryPostProcessor</span> <span class="keyword">implements</span> <span class="title">BeanDefinitionRegistryPostProcessor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 功能：注册bean到spring容器</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> registry</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@throws</span> BeansException</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postProcessBeanDefinitionRegistry</span><span class="params">(BeanDefinitionRegistry registry)</span> <span class="keyword">throws</span> BeansException </span>&#123;</span><br><span class="line">		System.out.println(</span><br><span class="line">			<span class="string">"动态注册 listener ， spring 容器初始化完后 postProcessBeanDefinitionRegistry.postProcessBeanDefinitionRegistry : "</span></span><br><span class="line">				+ registry);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line"></span><br><span class="line">			BeanDefinitionBuilder bdf = BeanDefinitionBuilder.rootBeanDefinition(RegistryBean.class);</span><br><span class="line">			bdf.addPropertyValue(<span class="string">"name"</span>, <span class="string">"name-tommy"</span> + i);</span><br><span class="line"></span><br><span class="line">			registry.registerBeanDefinition(<span class="string">"registryBean"</span> + i, bdf.getBeanDefinition());</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postProcessBeanFactory</span><span class="params">(ConfigurableListableBeanFactory beanFactory)</span> <span class="keyword">throws</span> BeansException </span>&#123;</span><br><span class="line">		System.out.println(</span><br><span class="line">			<span class="string">"spring 容器初始化完后 postProcessBeanDefinitionRegistry.postProcessBeanFactory : "</span> + beanFactory);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="ApplicationEventPublisher-ApplicationListener"><a href="#ApplicationEventPublisher-ApplicationListener" class="headerlink" title="ApplicationEventPublisher ApplicationListener"></a>ApplicationEventPublisher ApplicationListener</h2><ul>
+<li>事件發佈，事件監聽<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ApplicationEventPublisher</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Notify all &lt;strong&gt;matching&lt;/strong&gt; listeners registered with this</span></span><br><span class="line"><span class="comment">	 * application of an event.</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;If the specified &#123;<span class="doctag">@code</span> event&#125; is not an &#123;<span class="doctag">@link</span> ApplicationEvent&#125;,</span></span><br><span class="line"><span class="comment">	 * it is wrapped in a &#123;<span class="doctag">@link</span> PayloadApplicationEvent&#125;.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> event the event to publish</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@since</span> 4.2</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> PayloadApplicationEvent</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">publishEvent</span><span class="params">(Object event)</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ApplicationListener</span>&lt;<span class="title">E</span> <span class="keyword">extends</span> <span class="title">ApplicationEvent</span>&gt; <span class="keyword">extends</span> <span class="title">EventListener</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Handle an application event.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> event the event to respond to</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">onApplicationEvent</span><span class="params">(E event)</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="组件注册"><a href="#组件注册" class="headerlink" title="组件注册"></a>组件注册</h1><ul>
+<li>packagescan</li>
+<li>@Bean</li>
+<li>@Import<ul>
+<li>ImportSelector</li>
+<li>ImportBeanDefinitionRegistrar</li>
+</ul>
+</li>
+<li>public interface FactoryBean<ul>
+<li>id前面加上&amp;，可以拿到工廠bean</li>
+</ul>
+</li>
+</ul>
+<h2 id="annotion"><a href="#annotion" class="headerlink" title="annotion"></a>annotion</h2><ul>
+<li>@Import</li>
+<li>@Conditional</li>
+<li>@Primary</li>
+<li>@Profile</li>
+<li>@TransactionalEventListener</li>
+<li>@EventListener</li>
+<li>@Async</li>
+<li>@Order(42)</li>
+</ul>
+<h1 id="XXXAware-vs-XXXProcessor"><a href="#XXXAware-vs-XXXProcessor" class="headerlink" title="XXXAware vs XXXProcessor"></a>XXXAware vs XXXProcessor</h1><ul>
+<li>ApplicationContextAware</li>
+<li>ApplicationContextAwareProcessor </li>
+<li>ServletContextAware </li>
+<li>ServletContextAwareProcessor</li>
+<li>WebApplicationContextServletContextAware</li>
+<li>WebApplicationContextServletContextAwareProcessor<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">postProcessBeforeInitialization</span><br><span class="line">invokeAwareInterfaces</span><br><span class="line">postProcessAfterInitialization</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="Aware"><a href="#Aware" class="headerlink" title="Aware"></a>Aware</h1><ul>
+<li>ApplicationEventPublisherAware </li>
+<li>MessageSourceAware </li>
+<li>ResourceLoaderAware </li>
+<li>NotificationPublisherAware</li>
+<li>EnvironmentAware </li>
+<li>BeanFactoryAware </li>
+<li>EmbeddedValueResolverAware </li>
+<li>ServletConfigAware </li>
+<li>BootstrapContextAware</li>
+<li>LoadTimeWeaverAware</li>
+<li>BeanNameAware </li>
+<li>BeanClassLoaderAware </li>
+</ul>
+<h1 id="spring-mvc"><a href="#spring-mvc" class="headerlink" title="spring mvc"></a>spring mvc</h1><ul>
+<li>org.springframework.web.servlet.FlashMapManager</li>
+<li>org.springframework.data.domain.Pageable</li>
+<li>org.springframework.web.context.support.WebApplicationContextUtils</li>
+<li>@GetMapping(“/“)</li>
+<li>@PostMapping(“/regist”)</li>
+<li>@PutMapping(“/{id:\d+}”)</li>
+<li>@RequestBody</li>
+</ul>
+<h2 id="DispatcherServlet"><a href="#DispatcherServlet" class="headerlink" title="DispatcherServlet"></a>DispatcherServlet</h2><ul>
+<li>doService</li>
+<li>doDispatch<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Process the actual dispatching to the handler.</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;The handler will be obtained by applying the servlet's HandlerMappings in order.</span></span><br><span class="line"><span class="comment">	 * The HandlerAdapter will be obtained by querying the servlet's installed HandlerAdapters</span></span><br><span class="line"><span class="comment">	 * to find the first that supports the handler class.</span></span><br><span class="line"><span class="comment">	 * &lt;p&gt;All HTTP methods are handled by this method. It's up to HandlerAdapters or handlers</span></span><br><span class="line"><span class="comment">	 * themselves to decide which methods are acceptable.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> request current HTTP request</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> response current HTTP response</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@throws</span> Exception in case of any kind of processing failure</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doDispatch</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		HttpServletRequest processedRequest = request;</span><br><span class="line">		HandlerExecutionChain mappedHandler = <span class="keyword">null</span>;</span><br><span class="line">		<span class="keyword">boolean</span> multipartRequestParsed = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">		WebAsyncManager asyncManager = WebAsyncUtils.getAsyncManager(request);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			ModelAndView mv = <span class="keyword">null</span>;</span><br><span class="line">			Exception dispatchException = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				processedRequest = checkMultipart(request);</span><br><span class="line">				multipartRequestParsed = (processedRequest != request);</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Determine handler for the current request.</span></span><br><span class="line">				mappedHandler = getHandler(processedRequest);</span><br><span class="line">				<span class="keyword">if</span> (mappedHandler == <span class="keyword">null</span>) &#123;</span><br><span class="line">					noHandlerFound(processedRequest, response);</span><br><span class="line">					<span class="keyword">return</span>;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Determine handler adapter for the current request.</span></span><br><span class="line">				HandlerAdapter ha = getHandlerAdapter(mappedHandler.getHandler());</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Process last-modified header, if supported by the handler.</span></span><br><span class="line">				String method = request.getMethod();</span><br><span class="line">				<span class="keyword">boolean</span> isGet = <span class="string">"GET"</span>.equals(method);</span><br><span class="line">				<span class="keyword">if</span> (isGet || <span class="string">"HEAD"</span>.equals(method)) &#123;</span><br><span class="line">					<span class="keyword">long</span> lastModified = ha.getLastModified(request, mappedHandler.getHandler());</span><br><span class="line">					<span class="keyword">if</span> (logger.isDebugEnabled()) &#123;</span><br><span class="line">						logger.debug(<span class="string">"Last-Modified value for ["</span> + getRequestUri(request) + <span class="string">"] is: "</span> + lastModified);</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">if</span> (<span class="keyword">new</span> ServletWebRequest(request, response).checkNotModified(lastModified) &amp;&amp; isGet) &#123;</span><br><span class="line">						<span class="keyword">return</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span> (!mappedHandler.applyPreHandle(processedRequest, response)) &#123;</span><br><span class="line">					<span class="keyword">return</span>;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="comment">// Actually invoke the handler.</span></span><br><span class="line">				mv = ha.handle(processedRequest, response, mappedHandler.getHandler());</span><br><span class="line"></span><br><span class="line">				<span class="keyword">if</span> (asyncManager.isConcurrentHandlingStarted()) &#123;</span><br><span class="line">					<span class="keyword">return</span>;</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				applyDefaultViewName(processedRequest, mv);</span><br><span class="line">				mappedHandler.applyPostHandle(processedRequest, response, mv);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">catch</span> (Exception ex) &#123;</span><br><span class="line">				dispatchException = ex;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">catch</span> (Throwable err) &#123;</span><br><span class="line">				<span class="comment">// As of 4.3, we're processing Errors thrown from handler methods as well,</span></span><br><span class="line">				<span class="comment">// making them available for @ExceptionHandler methods and other scenarios.</span></span><br><span class="line">				dispatchException = <span class="keyword">new</span> NestedServletException(<span class="string">"Handler dispatch failed"</span>, err);</span><br><span class="line">			&#125;</span><br><span class="line">			processDispatchResult(processedRequest, response, mappedHandler, mv, dispatchException);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (Exception ex) &#123;</span><br><span class="line">			triggerAfterCompletion(processedRequest, response, mappedHandler, ex);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">catch</span> (Throwable err) &#123;</span><br><span class="line">			triggerAfterCompletion(processedRequest, response, mappedHandler,</span><br><span class="line">					<span class="keyword">new</span> NestedServletException(<span class="string">"Handler processing failed"</span>, err));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">finally</span> &#123;</span><br><span class="line">			<span class="keyword">if</span> (asyncManager.isConcurrentHandlingStarted()) &#123;</span><br><span class="line">				<span class="comment">// Instead of postHandle and afterCompletion</span></span><br><span class="line">				<span class="keyword">if</span> (mappedHandler != <span class="keyword">null</span>) &#123;</span><br><span class="line">					mappedHandler.applyAfterConcurrentHandlingStarted(processedRequest, response);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="comment">// Clean up any resources used by a multipart request.</span></span><br><span class="line">				<span class="keyword">if</span> (multipartRequestParsed) &#123;</span><br><span class="line">					cleanupMultipart(processedRequest);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">	* Initialize the strategy objects that this servlet uses.</span></span><br><span class="line"><span class="comment">	* &lt;p&gt;May be overridden in subclasses in order to initialize further strategy objects.</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">initStrategies</span><span class="params">(ApplicationContext context)</span> </span>&#123;</span><br><span class="line">	initMultipartResolver(context);</span><br><span class="line">	initLocaleResolver(context);</span><br><span class="line">	initThemeResolver(context);</span><br><span class="line">	initHandlerMappings(context);</span><br><span class="line">	initHandlerAdapters(context);</span><br><span class="line">	initHandlerExceptionResolvers(context);</span><br><span class="line">	initRequestToViewNameTranslator(context);</span><br><span class="line">	initViewResolvers(context);</span><br><span class="line">	initFlashMapManager(context);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="MockMvc"><a href="#MockMvc" class="headerlink" title="MockMvc"></a>MockMvc</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringRunner.class)</span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserControllerTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="keyword">private</span> WebApplicationContext wac;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> MockMvc mockMvc;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Before</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">whenDeleteSuccess</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		mockMvc.perform(delete(<span class="string">"/user/1"</span>)</span><br><span class="line">				.contentType(MediaType.APPLICATION_JSON_UTF8))</span><br><span class="line">				.andExpect(status().isOk());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="spring-security"><a href="#spring-security" class="headerlink" title="spring security"></a>spring security</h1><h2 id="認證"><a href="#認證" class="headerlink" title="認證"></a>認證</h2><h2 id="授權"><a href="#授權" class="headerlink" title="授權"></a>授權</h2><h1 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h1><h1 id="SpringCloud"><a href="#SpringCloud" class="headerlink" title="SpringCloud"></a>SpringCloud</h1><h2 id="EnvironmentPostProcessor（META-INF-spring-factories）"><a href="#EnvironmentPostProcessor（META-INF-spring-factories）" class="headerlink" title="EnvironmentPostProcessor（META-INF/spring.factories）"></a>EnvironmentPostProcessor（META-INF/spring.factories）</h2><h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../../../../../categories/spring/">spring</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/spring/">spring</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="https://yudady.github.io/2018/10/03/java/spring/spring-note/" data-title="spring-note | Tommy-好記性不如爛筆頭" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2018/10/04/開發工具集/intellij/intellijSettings/" title="intellijSettings">
+  <strong>上一篇：</strong><br/>
+  <span>
+  intellijSettings</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2018/10/03/java/java8/java8/"  title="java8">
+ <strong>下一篇：</strong><br/> 
+ <span>java8
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#內容"><span class="toc-number">2.</span> <span class="toc-text">內容</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring"><span class="toc-number">3.</span> <span class="toc-text">Spring</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#動態注入一個bean到spring容器"><span class="toc-number">3.1.</span> <span class="toc-text">動態注入一個bean到spring容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BeanDefinitionRegistryPostProcessor"><span class="toc-number">3.2.</span> <span class="toc-text">BeanDefinitionRegistryPostProcessor</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ApplicationEventPublisher-ApplicationListener"><span class="toc-number">3.3.</span> <span class="toc-text">ApplicationEventPublisher ApplicationListener</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#组件注册"><span class="toc-number">4.</span> <span class="toc-text">组件注册</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#annotion"><span class="toc-number">4.1.</span> <span class="toc-text">annotion</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#XXXAware-vs-XXXProcessor"><span class="toc-number">5.</span> <span class="toc-text">XXXAware vs XXXProcessor</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Aware"><span class="toc-number">6.</span> <span class="toc-text">Aware</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#spring-mvc"><span class="toc-number">7.</span> <span class="toc-text">spring mvc</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DispatcherServlet"><span class="toc-number">7.1.</span> <span class="toc-text">DispatcherServlet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MockMvc"><span class="toc-number">7.2.</span> <span class="toc-text">MockMvc</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#spring-security"><span class="toc-number">8.</span> <span class="toc-text">spring security</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#認證"><span class="toc-number">8.1.</span> <span class="toc-text">認證</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#授權"><span class="toc-number">8.2.</span> <span class="toc-text">授權</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SpringBoot"><span class="toc-number">9.</span> <span class="toc-text">SpringBoot</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SpringCloud"><span class="toc-number">10.</span> <span class="toc-text">SpringCloud</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#EnvironmentPostProcessor（META-INF-spring-factories）"><span class="toc-number">10.1.</span> <span class="toc-text">EnvironmentPostProcessor（META-INF/spring.factories）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#參考資料"><span class="toc-number">11.</span> <span class="toc-text">參考資料</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Hexo/" title="Hexo">Hexo<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/TODO/" title="TODO">TODO<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/business/" title="business">business<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/database/" title="database">database<sup>7</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/docker/" title="docker">docker<sup>8</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/front-end/" title="front-end">front-end<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/home/" title="home">home<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/java/" title="java">java<sup>23</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/linux/" title="linux">linux<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/spring/" title="spring">spring<sup>6</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/tools/" title="tools">tools<sup>29</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/原理/" title="原理">原理<sup>5</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/大數據/" title="大數據">大數據<sup>21</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/深度學習/" title="深度學習">深度學習<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/測試/" title="測試">測試<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/聚合支付系统/" title="聚合支付系统">聚合支付系统<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/netty/" title="netty">netty<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/database/" title="database">database<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/intellij/" title="intellij">intellij<sup>7</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java8/" title="java8">java8<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/spring/" title="spring">spring<sup>6</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/weblogic/" title="weblogic">weblogic<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/原理/" title="原理">原理<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/chrome/" title="chrome">chrome<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-3-party/" title="java-3-party">java-3-party<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/zabbix/" title="zabbix">zabbix<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/blog/" title="blog">blog<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/oracle/" title="oracle">oracle<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-base/" title="java-base">java-base<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/TODO/" title="TODO">TODO<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/springboot/" title="springboot">springboot<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java-io/" title="java-io">java-io<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coldofpig.github.io/" target="_blank" title="joe blog">joe blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://justinyang1221.github.io/" target="_blank" title="賈思 blog">賈思 blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Tommy. <br/>
+			This is my blog, 筆記！！！</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/https://github.com/yudady" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:yu_dady@yahoo.com.tw" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
+		
+		<a href="/about" target="_blank" title="Tommy lin">Tommy lin</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'ca-pub-1366278449398453', 'https://yudady.github.io/');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

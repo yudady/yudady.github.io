@@ -9,4 +9,5 @@
  */
 
 rootProject.name = 'practise-workspace'
-include('app', 'list', 'utilities')
+//include('app', 'list', 'utilities')
+include('app')

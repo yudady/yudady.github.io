@@ -1,0 +1,45 @@
+version: "3.9"
+services:
+  user-service:
+    build: ../../../build/backend/user-service/docker
+    ports:
+      - "8080:8080"
+  mysql_8:
+    container_name: mysql_8_0_25
+    image: mysql:8.0.25
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      TZ: "Asia/Shanghai"
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: ubpay
+    volumes:
+      - ./data:/var/lib/mysql
+    security_opt:
+      - seccomp:unconfined
+  redis_6_2_2:
+    container_name: redis_6_2_2
+    image: redis:6.2.2
+    privileged: true  # 启动特权模式
+    sysctls:
+      net.core.somaxconn: 10240
+      net.ipv4.tcp_syncookies: 0
+    ports:
+      - 6379:6379
+    restart: always
+    volumes:
+      - ./conf/redis.conf:/etc/redis.conf
+      - ./data:/data
+    command: # 多个命令同时执行
+      - /bin/bash
+      - -c
+      - |
+        echo 551 > /proc/sys/net/core/somaxconn
+        sysctl vm.overcommit_memory=1
+        redis-server /etc/redis.conf --appendonly yes
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 8gb

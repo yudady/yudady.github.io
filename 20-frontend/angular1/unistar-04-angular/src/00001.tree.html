@@ -1,0 +1,84 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+    <script src="http://cdn.bootcss.com/angular.js/1.3.8/angular.min.js"></script>
+    <style>
+        ul {
+            list-style: circle;
+        }
+
+        li {
+            margin-left: 20px;
+        }
+    </style>
+
+
+    <script>
+        var m1 = angular.module("myApp", []);
+        m1.controller('TreeController', ['$scope', function ($scope) {
+            $scope.delete = function (data) {
+                data.nodes = [];
+            };
+            $scope.add = function (data) {
+                var post = data.nodes.length + 1;
+                var newName = data.name + '-' + post;
+                data.nodes.push({name: newName, nodes: []});
+            };
+            $scope.tree = [
+                {
+                    name: "Node",
+                    nodes: [
+                        {
+                            name: "Node", nodes: [
+                                {name: "Node", nodes: []},
+                                {name: "Node", nodes: []},
+                                {name: "Node", nodes: []},
+                                {name: "Node", nodes: []},
+                                {name: "Node", nodes: []},
+                                {name: "Node", nodes: []}
+                            ]
+                        },
+                        {name: "Node", nodes: []},
+                        {name: "Node", nodes: []}
+                    ]
+                },
+                {name: "Node", nodes: []},
+                {name: "Node", nodes: []},
+                {name: "Node", nodes: []},
+                {name: "Node", nodes: []},
+                {name: "Node", nodes: []},
+                {name: "Node", nodes: []}
+
+            ];
+        }]);
+
+    </script>
+
+    <script type="text/ng-template" id="tree_item_renderer.html">
+        {{data.name}}
+        <button ng-click="add(data)">Add node</button>
+        <button ng-click="delete(data)" ng-show="data.nodes.length > 0">Delete nodes</button>
+        <ul>
+            <li ng-repeat="data in data.nodes" ng-include="'tree_item_renderer.html'"></li>
+        </ul>
+    </script>
+</head>
+<body>
+
+<ul ng-controller="TreeController">
+    <li ng-repeat="data in tree">
+        {{data.name}}
+        <button ng-click="add(data)">Add node</button>
+        <button ng-click="delete(data)" ng-show="data.nodes.length > 0">Delete nodes</button>
+        <ul>
+            <li ng-repeat="data in data.nodes" ng-include="'tree_item_renderer.html'"></li>
+        </ul>
+
+    </li>
+</ul>
+
+
+</body>
+</html>

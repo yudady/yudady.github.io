@@ -1,0 +1,27 @@
+spring:
+  application:
+    admin:
+      enabled: false
+  datasource:
+    continue-on-error: true
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+      poolName: HikariPool
+    initialization-mode: always
+    password: CORE
+    platform: oracle
+    url: jdbc:oracle:thin:@127.0.0.1:1521:xe
+    username: CORE
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+
+
+logging:
+  level:
+    root: debug
+    org:
+      springframework:
+        boot: debug

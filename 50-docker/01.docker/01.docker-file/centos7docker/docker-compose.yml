@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  yudady-centos-7:
+    image: yudady/centos-8-docker
+
+    # 因為沒有前台命令，所以啟動後會直接關閉
+    command: ["while true ; do echo tommy!!!!; sleep 1 ; done" ]
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+# docker compose up

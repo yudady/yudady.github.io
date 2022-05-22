@@ -1,0 +1,6 @@
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.2.4.RELEASE'
+    implementation 'org.springframework.kafka:spring-kafka:2.3.5.RELEASE'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.2.4.RELEASE'
+    testImplementation 'org.springframework.kafka:spring-kafka-test:2.3.5.RELEASE'
+}

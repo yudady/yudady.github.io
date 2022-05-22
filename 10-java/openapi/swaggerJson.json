@@ -1,0 +1,165 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "API title 文檔",
+    "description": "描述文檔",
+    "version": "0.0.1-版本"
+  },
+  "servers": [
+    {
+      "url": "http://{host}:{port}",
+      "description": "API server",
+      "variables": {
+        "host": {
+          "enum": [
+            "admin-site1.pf2dev1-oob.com",
+            "admin-site1.pf2sit1-oob.com"
+          ],
+          "default": "admin-site1.pf2dev1-oob.com",
+          "description": "dev"
+        },
+        "port": {
+          "enum": [
+            "8080",
+            "8443"
+          ],
+          "default": "8080"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/session": {
+      "post": {
+        "tags": [
+          "login"
+        ],
+        "summary": "session summary",
+        "description": "session description",
+        "security": [
+          {
+            "ApiKeyAuth": [
+              "write"
+            ]
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "example": {
+                  "customerName": "tommyy",
+                  "password": "1qaz2wsx",
+                  "clientUuid": "473eaf6ebd4f52f2f2df78bca2bc9438",
+                  "clientUserAgent": "Web"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "responses",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/operator-response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "responses",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/operator-response"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "operator-request": {
+        "properties": {
+          "customerName": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "clientUuid": {
+            "type": "string"
+          },
+          "clientUserAgent": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "customerName": "tommyy",
+          "password": "1qaz2wsx",
+          "clientUuid": "473eaf6ebd4f52f2f2df78bca2bc9438",
+          "clientUserAgent": "Web"
+        }
+      },
+      "operator-response": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "xml": {
+          "name": "Tag"
+        }
+      },
+      "Order": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "petId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "shipDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "description": "Order Status",
+            "enum": [
+              "placed",
+              "approved",
+              "delivered"
+            ]
+          },
+          "complete": {
+            "type": "boolean"
+          }
+        },
+        "xml": {
+          "name": "Order"
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiKeyAuth": []
+    }
+  ]
+}

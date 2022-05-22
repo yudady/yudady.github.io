@@ -1,0 +1,11 @@
+org.springframework.context.ApplicationListener=\
+  com.tommy.listener.scope.Listener01_ApplicationStartingEvent ,\
+  com.tommy.listener.scope.Listener02_ApplicationEnvironmentPreparedEvent ,\
+  com.tommy.listener.scope.Listener03_ApplicationContextInitializedEvent ,\
+  com.tommy.listener.scope.Listener04_ApplicationStartedEvent ,\
+  com.tommy.listener.scope.Listener05_ApplicationPreparedEvent ,\
+  com.tommy.listener.scope.Listener06_ContextRefreshedEvent ,\
+  com.tommy.listener.scope.Listener07_ServletWebServerInitializedEvent ,\
+  com.tommy.listener.scope.Listener08_WebServerInitializedEvent ,\
+  com.tommy.listener.scope.Listener09_ApplicationReadyEvent
+#com.tommy.listener.scope.Listener_ApplicationEvent ,\

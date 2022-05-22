@@ -1,0 +1,48 @@
+-------------------Docker安装----------------------
+安装docker
+yum -y install docker
+
+启动docker
+systemctl start docker
+
+查看docker服务状态
+systemctl status docker
+
+设置docker开机自启
+systemctl enable docker
+-------------------portainer安装----------------------
+拉取映像
+docker pull portainer/portainer
+
+创建并运行docker
+docker run -d -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /root/portainer:/data portainer/portainer
+-------------------防火墙相关-------------------------
+启动防火墙
+systemctl start firewalld
+关闭防火墙 
+systemctl stop firewalld
+开机防火墙不启动
+systemctl disable firewalld
+查看防火墙状态
+systemctl status firewalld
+-------------------transmission----------------------
+docker create \
+  --name=transmission \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Europe/London \
+  -e TRANSMISSION_WEB_HOME=/combustion-release/ `#optional` \
+  -e USER=username `#optional` \
+  -e PASS=password `#optional` \
+  -p 9091:9091 \
+  -p 51413:51413 \
+  -p 51413:51413/udp \
+  -v path to data:/config \
+  -v path to downloads:/downloads \
+  -v path to watch folder:/watch \
+  --restart unless-stopped \
+  linuxserver/transmission
+-------------------Transmission_UI----------------------
+			   /combustion-release/
+-e TRANSMISSION_WEB_HOME=/transmission-web-control/
+			  /kettu/

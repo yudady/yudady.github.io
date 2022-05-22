@@ -1,0 +1,5 @@
+dependencies {
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.8.0'
+    compile group: 'junit', name: 'junit', version: '4.13'
+
+}

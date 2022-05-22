@@ -1,0 +1,5 @@
+dependencies {
+    compile "commons-codec:commons-codec:1.11"
+    compile "commons-io:commons-io:2.5"
+    compile "org.bouncycastle:bcprov-jdk15on:1.60"
+}

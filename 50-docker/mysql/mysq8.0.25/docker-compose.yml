@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  mysql_8:
+    container_name: mysql_8_0_25
+    build: .
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sandbox
+      MYSQL_USER: tommy
+      MYSQL_PASSWORD: tommy
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/sql:/docker-entrypoint-initdb.d
+      - ./mysql/log:/var/log/mysql
+    command: mysqld --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    security_opt:
+      - seccomp:unconfined
+
+

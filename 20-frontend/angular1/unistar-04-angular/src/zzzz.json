@@ -1,0 +1,127 @@
+{
+  "success": true,
+  "errorCode": null,
+  "message": null,
+  "value": [
+    {
+      "customerId": 92284,
+      "gameGroup": "SSC",
+      "defaultSeries": false,
+      "seriesName": "1700",
+      "levelReturnValue": 0.11,
+      "sorting": 1
+    },
+    {
+      "customerId": 92284,
+      "gameGroup": "SSC",
+      "defaultSeries": true,
+      "seriesName": "1800",
+      "levelReturnValue": 0.06,
+      "sorting": 1
+    },
+    {
+      "customerId": 92284,
+      "gameGroup": "11X5",
+      "defaultSeries": false,
+      "seriesName": "1600",
+      "levelReturnValue": 0.152,
+      "sorting": 2
+    },
+    {
+      "customerId": 92284,
+      "gameGroup": "11X5",
+      "defaultSeries": true,
+      "seriesName": "1822",
+      "levelReturnValue": 0.04,
+      "sorting": 2
+    },
+    {
+      "customerId": 92284,
+      "gameGroup": "SB",
+      "defaultSeries": true,
+      "seriesName": "2000",
+      "levelReturnValue": 0.008,
+      "sorting": 3
+    },
+    {
+      "customerId": 92284,
+      "gameGroup": "K3",
+      "defaultSeries": true,
+      "seriesName": "1800",
+      "levelReturnValue": 0.06,
+      "sorting": 4
+    },
+    {
+      "customerId": 92284,
+      "gameGroup": "PK",
+      "defaultSeries": false,
+      "seriesName": "1700",
+      "levelReturnValue": 0.11,
+      "sorting": 5
+    },
+    {
+      "customerId": 92284,
+      "gameGroup": "PK",
+      "defaultSeries": true,
+      "seriesName": "1800",
+      "levelReturnValue": 0.06,
+      "sorting": 5
+    },
+    {
+      "customerId": 92284,
+      "gameGroup": "KENO",
+      "defaultSeries": true,
+      "seriesName": "1800",
+      "levelReturnValue": 0.06,
+      "sorting": 6
+    },
+    {
+      "customerId": 92284,
+      "gameGroup": "LF",
+      "defaultSeries": false,
+      "seriesName": "1500",
+      "levelReturnValue": 0.21,
+      "sorting": 7
+    },
+    {
+      "customerId": 92284,
+      "gameGroup": "LF",
+      "defaultSeries": false,
+      "seriesName": "1600",
+      "levelReturnValue": 0.16,
+      "sorting": 7
+    },
+    {
+      "customerId": 92284,
+      "gameGroup": "LF",
+      "defaultSeries": false,
+      "seriesName": "1700",
+      "levelReturnValue": 0.11,
+      "sorting": 7
+    },
+    {
+      "customerId": 92284,
+      "gameGroup": "LF",
+      "defaultSeries": true,
+      "seriesName": "1800",
+      "levelReturnValue": 0.06,
+      "sorting": 7
+    },
+    {
+      "customerId": 92284,
+      "gameGroup": "CASUAL",
+      "defaultSeries": true,
+      "seriesName": null,
+      "levelReturnValue": 0.017,
+      "sorting": 999
+    },
+    {
+      "customerId": 92284,
+      "gameGroup": "CardGame",
+      "defaultSeries": true,
+      "seriesName": null,
+      "levelReturnValue": 0.019,
+      "sorting": 999
+    }
+  ]
+}

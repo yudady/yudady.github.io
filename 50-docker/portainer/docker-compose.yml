@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  portainer:
+    container_name: portainer01
+    image: portainer/portainer-ce:2.11.1
+#    image: portainer/portainer-ce:2.9.3
+    network_mode: host
+#    privileged: true
+#    user: root
+#    ports:
+#      - "8080:8000"
+#      - "9443:9443"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - ./data:/data
+
+# docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v  -v
+# docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.9.3
+# 失敗 無法執行

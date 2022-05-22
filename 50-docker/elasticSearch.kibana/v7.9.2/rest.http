@@ -1,0 +1,112 @@
+### https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-docker.html
+### elasticSearch
+# curl http://127.0.0.1:9200
+GET http://127.0.0.1:9200
+
+###
+# curl -X GET "localhost:9200/_cat/nodes?v&pretty"
+GET localhost:9200/_cat/nodes?v&pretty
+
+###
+# curl -X GET "localhost:9200/_cat/health?v&pretty"
+GET localhost:9200/_cat/health?v&pretty
+
+###
+# curl -X GET "localhost:9200/_cat/nodes?h=ip,port,heapPercent,name&pretty"
+GET localhost:9200/_cat/nodes?pretty
+
+###
+# curl -X GET "localhost:9200/_cat/indices?bytes=b&s=store.size:desc&v&pretty"
+GET localhost:9200/_cat/indices
+
+###
+#
+GET localhost:9200/kibana_sample_data_flights/_search
+Content-Type: application/json
+
+###
+GET localhost:9200/kibana_sample_data_logs/_mapping
+
+###
+###
+#
+GET localhost:9200/kibana_sample_data_logs/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "match": {
+      "ip": "233.78.21.130"
+    }
+  }
+}
+###
+### who to query
+GET localhost:9200/kibana_sample_data_logs/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "range": {
+      "timestamp": {
+        "time_zone": "+08:00",
+        "gte": "2020-10-08T00:00:00",
+        "lte": "now"
+      }
+    }
+  }
+}
+
+###
+### who to query
+GET localhost:9200/kibana_sample_data_logs/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "range": {
+      "timestamp": {
+        "gte": "now-1d/d",
+        "lt": "now/d"
+      }
+    }
+  }
+}
+
+###
+GET localhost: 9200/kibana_sample_data_logs/_search
+
+###
+GET localhost:9200/kibana_sample_data_logs/_mapping
+
+###
+GET action-*/_mapping
+Content-Type: application/json
+
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+###
+GET action-*/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "match_all": {}
+  }
+}
+###
+GET action-*/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "multi_match": {
+      "query": "750B8AA910873EE778B9",
+      "fields": ["_id","ref_id","correlation_id"]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular</title>
+    <style>
+        div {
+            font-size: 24px;
+            width: 300px;
+            height: 50px;
+            border: 5px solid #cccccc;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body ng-controller="MainCtrl as mainctrl">
+
+<div>
+    <span>{{ mainctrl.cur1 }}</span>
+    <select ng-model="mainctrl.cur1" ng-options="item for item in mainctrl.arr1"></select>
+</div>
+<div>
+    <span>{{ mainctrl.cur2 }}</span>
+    <select ng-model="mainctrl.cur2" ng-options="item.id as item.name for item in mainctrl.arr2"></select>
+</div>
+<div>
+    <span>{{ mainctrl.cur3 }}</span>
+    <select ng-model="mainctrl.cur3" ng-options="key as value  for (key,value) in mainctrl.arr3"></select>
+</div>
+<script src="../lib/angular.min.js"></script>
+<script>
+    var myapp = angular.module("myapp", []);
+    myapp.controller("MainCtrl", [function () {
+        this.cur1 = "a";
+        this.arr1 = ["a", "b", "c"];
+        //
+        this.cur2 = 1;
+        this.arr2 = [
+            {id: 1, name: 'Help Desk'},
+            {id: 2, name: 'HR'},
+            {id: 3, name: 'IT'},
+            {id: 4, name: 'Payroll'}
+        ];
+        //
+        this.cur3 = "1";
+        this.arr3 = {
+            "1": "Help Desk",
+            "2": "HR",
+            "3": "IT",
+            "4": "Payroll"
+        }
+    }]);
+</script>
+</body>
+</html>

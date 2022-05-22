@@ -1,0 +1,35 @@
+### https://dennis-xlc.gitbooks.io/restful-java-with-jax-rs-2-0-2rd-edition/en/part1/chapter5/the_basics.html
+###
+###
+###
+###
+### FormParam
+POST http://localhost:8080/web/resource/login/form-param
+Content-Type: application/x-www-form-urlencoded
+
+email=yudady&password=123456
+
+### BeanParam
+POST http://localhost:8080/web/resource/login/bean-param
+Content-Type: application/x-www-form-urlencoded
+
+email=yudady&password=123456
+
+### PathParam
+GET http://localhost:8080/web/resource/login/path-param/zip
+
+### QueryParam
+GET http://localhost:8080/web/resource/login/query-param?zip=zip
+
+
+### MatrixParam
+GET http://localhost:8080/web/resource/login/matrix-param;email=yudady;password=123456
+
+
+### BeanParam
+GET http://localhost:8080/web/resource/login/bean-param?email=yudady&password=123456
+
+###
+
+
+

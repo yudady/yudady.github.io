@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  oracle11g:
+    container_name: oracle11g
+    image: wnameless/oracle-xe-11g-r2
+    ports:
+      - 1521:1521
+      - 8765:8080
+    environment:
+      - ORACLE_PWD=oracle
+    volumes:
+      - /data:/u01/app/oracle/product/11.2.0/xe/oradata
+
+# hostname: localhost
+# port: 1521
+# sid: xe
+# username: SYS & SYSTEM
+# password: oracle

@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  oracle12c:
+    image: store/oracle/database-enterprise:12.2.0.1-slim
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    volumes:
+      - ./data:/ORCL
+    container_name: oracle12c
+
+###   使用者名稱：sys
+###   密碼：Oradoc_db1
+###   角色：SYSDBA
+###   SID：ORCLCDB
+
+################################################
+################################################
+################################################
+################################################
+# ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
+# CREATE USER tommy IDENTIFIED BY tommy;
+# GRANT CONNECT, RESOURCE, DBA TO tommy;
+# ALTER SESSION SET "_ORACLE_SCRIPT"=FALSE;

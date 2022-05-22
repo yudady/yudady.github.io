@@ -1,0 +1,8 @@
+logging:
+  level:
+    org:
+      apache:
+        http: DEBUG
+    root: INFO
+server:
+  port: 18080

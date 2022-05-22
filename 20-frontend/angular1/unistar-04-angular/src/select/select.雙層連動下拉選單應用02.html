@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>linked dropdowns</title>
+    <style>
+        body {
+            font-size: 9pt;
+        }
+
+        div {
+            padding: 6px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script>
+        var m1 = angular.module('app', []);
+        m1.controller('zip', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
+            $scope.Citys = //model 內容
+                [
+                    {
+                        name: "台北市",
+                        areas: ["中正區100", "大同區103", "中山區104", "松山區105", "大安區106", "萬華區108", "信義區110", "士林區111", "北投區112", "內湖區114", "南港區115", "文山區116"]
+                    },
+
+                    {
+                        name: "新北市",
+                        areas: ["萬里鄉207", "金山鄉208", "板橋市220", "汐止市221", "深坑鄉222", "石碇鄉223", "瑞芳鎮224", "平溪鄉226", "雙溪鄉227", "貢寮鄉228", "新店市231", "坪林鄉232", "烏來鄉233", "永和市234", "中和市235", "土城市236", "三峽鎮237", "樹林市238", "鶯歌鎮239", "三重市241", "新莊市242", "泰山鄉243", "林口鄉244", "蘆洲市247", "五股鄉248", "八里鄉249", "淡水鎮251", "三芝鄉252", "石門鄉253"]
+                    },
+                    {
+                        name: "基隆市",
+                        areas: ["仁愛區200", "信義區201", "中正區202", "中山區203", "安樂區204", "暖暖區205", "七堵區206"]
+                    }
+                ];
+
+            $scope.update = function (selectedValue) {
+                $scope.level2 = selectedValue.areas;
+            };
+
+            // end
+        }]);
+
+    </script>
+</head>
+<body>
+<div ng-controller="zip">
+    <select ng-model="SelCity" ng-options="City.name for City in Citys" ng-change="update(SelCity)">
+        <option value="">--請選擇--</option>
+    </select>
+
+    <select ng-model="SelArea" ng-options="SelCity for  SelCity in level2">
+        <option value="">--請選擇--</option>
+    </select>
+</div>
+</body>
+</html>

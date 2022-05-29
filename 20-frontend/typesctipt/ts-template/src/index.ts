@@ -19,3 +19,4 @@ let fn = (a: number, b: number) => a + b;
 
 fn(123 , 456);
 fn(77, 22);
+console.log(Promise); // core-js 會處理

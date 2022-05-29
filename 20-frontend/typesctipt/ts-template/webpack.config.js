@@ -1,12 +1,8 @@
-// 引入一个包
-const path = require('path');
-// 引入html插件
-const HTMLWebpackPlugin = require('html-webpack-plugin');
-// 引入clean插件
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const path = require('path'); // 引入一个包
+const HTMLWebpackPlugin = require('html-webpack-plugin'); // 引入html插件
+const {CleanWebpackPlugin} = require('clean-webpack-plugin'); // 引入clean插件
 
-// webpack中的所有的配置信息都应该写在module.exports中
-module.exports = {
+module.exports = { // webpack中的所有的配置信息都应该写在module.exports中
     entry: "./src/index.ts", // 指定入口文件
     output: { // 指定打包文件所在目录
         path: path.resolve(__dirname, 'dist'), // 指定打包文件的目录
@@ -35,7 +31,7 @@ module.exports = {
                             ]
                         }
                     },
-                    'ts-loader'
+                    'ts-loader' // 編譯TS
                 ],
                 exclude: /node-modules/ // 要排除的文件
             }
@@ -49,5 +45,6 @@ module.exports = {
     ],
     resolve: { // 用来设置引用模块
         extensions: ['.ts', '.js']
-    }
+    },
+    mode: "development"
 };

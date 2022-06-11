@@ -12,6 +12,7 @@ rootProject.name = 'practise-workspace'
 //include('app', 'list', 'utilities')
 include('app')
 include '10-java:unistar-16-undertow'
+include '15-springboot:k8s'
 include '15-springboot:testcontainers:postgres'
 include '15-springboot:springboot-kafka'
 

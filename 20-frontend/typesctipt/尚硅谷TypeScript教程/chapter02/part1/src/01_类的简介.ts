@@ -4,7 +4,7 @@
 *       属性
 *       方法
 * */
-class Person{
+class Person {
 
     /*
     *   直接定义的属性是实例属性，需要通过对象的实例去访问：
@@ -18,19 +18,20 @@ class Person{
     * */
 
     // 定义实例属性
-    // readonly name: string = '孙悟空';
-    name = '孙悟空';
+    readonly name: string = '孙悟空';
+    // name: string = '孙悟空';
 
     // 在属性前使用static关键字可以定义类属性（静态属性）
     // static readonly age: number = 18;
-    age = 18;
+    age: number = 18;
 
 
+    static sex: boolean = false;
     // 定义方法
     /*
     * 如果方法以static开头则方法就是类方法，可以直接通过类去调用
     * */
-    sayHello(){
+    sayHello() {
         console.log('Hello 大家好！');
     }
 
@@ -43,7 +44,7 @@ const per = new Person();
 
 // console.log(Person.age);
 
-// console.log(per.name);
+console.log(per.name);
 // per.name = 'tom';
 // console.log(per.name);
 

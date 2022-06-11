@@ -12,4 +12,5 @@ rootProject.name = 'practise-workspace'
 //include('app', 'list', 'utilities')
 include('app')
 include '15-springboot:testcontainers:postgres'
+include '15-springboot:springboot-kafka'
 

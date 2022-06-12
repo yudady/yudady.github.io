@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-deployment
-          image: yudady/myapp:v1
+          image: yudady/k8s:0.0.1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080

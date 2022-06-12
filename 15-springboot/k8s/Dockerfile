@@ -8,5 +8,5 @@ COPY ./build/libs/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
 
 
-# build docker => docker build -t yudady/spring-boot:v1 .
+# build docker => docker build -t yudady/k8s:v1 .
 

@@ -8,5 +8,9 @@
 [intellij-k8s-plugin](https://www.youtube.com/watch?v=CryOrxL0JA8&t=736s)
 
 
+### build docker
+```shell
+docker build -t yudady/k8s:v1 .
+```
 
 

@@ -1,19 +1,22 @@
 plugins {
-//    id 'org.springframework.boot' version '3.0.0'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
-    id 'maven-publish'
+    id 'org.springframework.boot' version '2.7.0'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
-sourceCompatibility = '17'
+
+version("0.0.1")
 
 repositories {
     mavenLocal()
     mavenCentral()
-    maven {
-        url = uri('https://repo.maven.apache.org/maven2/')
-    }
     maven { url 'https://repo.spring.io/milestone' }
     maven { url 'https://repo.spring.io/snapshot' }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+    }
 }
 
 dependencies {
@@ -21,6 +24,37 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.0'
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_17 // new
+    targetCompatibility = JavaVersion.VERSION_17 // new
+}
+
+tasks.named("bootJar") {
+    mainClass = 'tk.tommy.spring01.k8s.App'
+}
+
+tasks.named("bootBuildImage") {
+    buildCache {
+        volume {
+            name = "cache-${rootProject.name}.build"
+        }
+    }
+    launchCache {
+        volume {
+            name = "cache-${rootProject.name}.launch"
+        }
+    }
+    imageName = "yudady/${project.name}:${project.version}"
+    publish = false
+    docker {
+        publishRegistry {
+            username = "username"
+            password = "password"
+            url = "https://hub.docker.com"
+            email = "yu_dady@yahoo.com.tw"
+        }
+    }
+}
 
 tasks.named('test') {
     useJUnitPlatform()

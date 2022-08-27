@@ -13,7 +13,7 @@ the latest versions of the packages.  You can then run `helm search repo
 
 To install the <chart-name> chart:
 
-    helm install my-<chart-name> <alias>/<chart-name>
+    helm install ub8-win-project ./ub8-win-project
 
 To uninstall the chart:
 

@@ -1,11 +1,3 @@
-# [k8s中引入外部服务 ](https://www.cnblogs.com/lvzhenjiang/p/14445315.html)
-
-
-
-## 通过无头服务实现
-
-### mysql_svc.yml
-```yaml 
 apiVersion: v1
 kind: Service
 metadata:
@@ -33,6 +25,3 @@ subsets:
       - name: mysql
         port: 3306
         protocol: TCP
-
-```
-

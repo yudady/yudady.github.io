@@ -1,10 +1,13 @@
 package com.techgeeknext.controller;
 
+import com.google.gson.Gson;
 import com.techgeeknext.entity.Menu;
 import com.techgeeknext.repository.MenuRepo;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,15 +15,18 @@ import java.util.List;
 @RestController
 @RequestMapping("/menu")
 public class MenuController {
-	
+
     @Autowired
     private MenuRepo menuRepo;
+
 
     @PostMapping
     public Menu save(@RequestBody Menu menuDetails) {
 
-        String log = ToStringBuilder.reflectionToString(menuDetails, ToStringStyle.JSON_STYLE);
-        System.out.println("log = " + log);
+        String value = new Gson().toJson(menuDetails);
+        System.out.println("value = " + value);
+        menuRepo.store("" + menuDetails.getId(), value);
+
         return menuRepo.save(menuDetails);
     }
 

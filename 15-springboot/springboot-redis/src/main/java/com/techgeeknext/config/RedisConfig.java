@@ -21,11 +21,13 @@ public class RedisConfig {
     private Integer redisPort;
 
     @Bean
+    public RedisStandaloneConfiguration redisStandaloneConfiguration() {
+        return new RedisStandaloneConfiguration(redisHostName, redisPort);
+    }
+
+    @Bean
     public JedisConnectionFactory jedisConnectionFactory() {
-        RedisStandaloneConfiguration redisConfig = new RedisStandaloneConfiguration();
-        redisConfig.setHostName(redisHostName);
-        redisConfig.setPort(redisPort);
-        return new JedisConnectionFactory(redisConfig);
+        return new JedisConnectionFactory(redisStandaloneConfiguration());
     }
 
     @Bean

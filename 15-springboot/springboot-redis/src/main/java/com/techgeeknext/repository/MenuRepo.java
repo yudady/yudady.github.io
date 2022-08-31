@@ -1,5 +1,6 @@
 package com.techgeeknext.repository;
 
+import java.time.Duration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -15,6 +16,7 @@ import java.util.List;
 public class MenuRepo {
 
     public static final String HASH_KEY_NAME = "MENU-ITEM";
+    public static final String STRING_KEY_NAME = "REDIS-FOLDER-KEY";
     @Autowired
     private RedisTemplate redisTemplate;
     @Autowired
@@ -22,12 +24,14 @@ public class MenuRepo {
 
     public void store(String key, String value) {
         ValueOperations<String, String> op = stringRedisTemplate.opsForValue();
-        op.set("menu-" + key, value);
+        op.set(STRING_KEY_NAME + ":" + key, value, Duration.ofSeconds(30));
+
     }
 
     public Menu save(Menu menu) {
         // SETS menu object in MENU-ITEM hashmap at menuId key
         redisTemplate.opsForHash().put(HASH_KEY_NAME, menu.getId(), menu);
+        redisTemplate.expire(HASH_KEY_NAME, Duration.ofSeconds(30));
         return menu;
     }
 

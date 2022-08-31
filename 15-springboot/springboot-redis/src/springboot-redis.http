@@ -5,7 +5,27 @@ Content-Type: application/json
 {
   "id": 1,
   "item": "item",
-  "price": 999
+  "price": 111
+}
+
+### create
+POST http://localhost:8080/menu
+Content-Type: application/json
+
+{
+  "id": 2,
+  "item": "item",
+  "price": 222
+}
+
+### create
+POST http://localhost:8080/menu
+Content-Type: application/json
+
+{
+  "id": 3,
+  "item": "item",
+  "price": 333
 }
 
 ###

@@ -1,0 +1,31 @@
+### create
+POST http://localhost:8080/menu
+Content-Type: application/json
+
+{
+  "id": 1,
+  "item": "item"
+  "price": 999
+}
+
+###
+### get all
+GET http://localhost:8080/menu
+Content-Type: application/json
+
+
+### get by id
+GET http://localhost:8080/menu/1
+Content-Type: application/json
+
+
+
+
+
+
+
+
+
+
+
+###

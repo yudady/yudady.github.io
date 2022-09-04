@@ -22,6 +22,9 @@ dependencies {
 
 	implementation 'io.lettuce:lettuce-core:6.2.0.RELEASE'
 
+	implementation 'org.zeroturnaround:gradle-jrebel-plugin:1.1.11'
+
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

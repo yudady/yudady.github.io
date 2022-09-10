@@ -16,4 +16,5 @@ include '15-springboot:k8s'
 include '15-springboot:testcontainers:postgres'
 include '15-springboot:springboot-kafka'
 include '15-springboot:springboot-redis'
+include '40-video:bilibiliVideo'
 

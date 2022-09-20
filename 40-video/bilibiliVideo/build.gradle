@@ -1,5 +1,5 @@
 plugins {
-	id 'java'
+	id 'java-library'
 	id 'maven-publish'
 }
 
@@ -11,16 +11,46 @@ repositories {
 }
 
 dependencies {
-    testImplementation group: 'junit', name: 'junit', version: '4.13'
+	testImplementation group: 'junit', name: 'junit', version: '4.13'
 
-    implementation group: 'com.intellij', name: 'javac2', version: '7.0.3'
-    implementation group: 'com.intellij', name: 'forms_rt', version: '7.0.3'
+	implementation group: 'com.intellij', name: 'javac2', version: '7.0.3'
+	implementation group: 'com.intellij', name: 'forms_rt', version: '7.0.3'
 
-    implementation group: 'asm', name: 'asm-all', version: '3.3.1'
-    implementation group: 'org.json', name: 'json', version: '20180813'
+	implementation group: 'asm', name: 'asm-all', version: '3.3.1'
+	implementation group: 'org.json', name: 'json', version: '20180813'
 
-    compileOnly 'org.projectlombok:lombok:1.18.4'
-    implementation 'com.alibaba:fastjson:1.2.55'
+	compileOnly 'org.projectlombok:lombok:1.18.4'
+	implementation 'com.alibaba:fastjson:1.2.55'
 
-    implementation group: 'net.bramp.ffmpeg', name: 'ffmpeg', version: '0.6.2'
+	implementation group: 'net.bramp.ffmpeg', name: 'ffmpeg', version: '0.6.2'
+}
+
+
+
+// ============================
+javadoc.options.encoding("utf-8")
+java {
+	withJavadocJar()
+	withSourcesJar()
+}
+
+publishing {
+	publications {
+		maven2LocalRepo(MavenPublication) {
+			groupId = 'io.github.yudady'
+			artifactId = 'bilibili-video'
+			version = '0.0.1-SNAPSHOT'
+
+			from components.java
+		}
+	}
+
+	repositories {
+		maven {
+			// change to point to your repo, e.g. http://my.org/repo
+//			url = layout.buildDirectory.dir('maven_repo')
+//			url = "${projectDir}/maven_repo"
+			url = "file:///d:/tommy/github-repo/yudady/maven_repo"
+		}
+	}
 }

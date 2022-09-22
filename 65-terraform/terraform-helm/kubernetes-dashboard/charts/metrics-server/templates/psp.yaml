@@ -2,12 +2,10 @@
 apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
-  name: {{ printf "privileged-%s" (include "metrics-server.fullname" .) }}
-  labels:
-    {{- include "metrics-server.labels" . | nindent 4 }}
+  name: privileged-{{ template "metrics-server.fullname" . }}
 spec:
   allowedCapabilities:
-    - '*'
+  - '*'
   fsGroup:
     rule: RunAsAny
   privileged: true
@@ -18,11 +16,11 @@ spec:
   supplementalGroups:
     rule: RunAsAny
   volumes:
-    - '*'
+  - '*'
   hostPID: true
   hostIPC: true
   hostNetwork: true
   hostPorts:
-    - min: 1
-      max: 65536
+  - min: 1
+    max: 65536
 {{- end }}

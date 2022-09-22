@@ -1,2 +1,5 @@
-args:
-  - --kubelet-insecure-tls
+# CI is running on GKE, which already ships metrics-server. This cause
+# conflicts on the apiService resource.
+
+apiService:
+  create: false

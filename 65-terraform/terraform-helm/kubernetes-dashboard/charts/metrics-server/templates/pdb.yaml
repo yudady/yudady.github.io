@@ -1,10 +1,15 @@
 {{- if .Values.podDisruptionBudget.enabled -}}
-apiVersion: {{ include "metrics-server.pdb.apiVersion" . }}
+apiVersion: policy/v1beta1
 kind: PodDisruptionBudget
 metadata:
-  name: {{ include "metrics-server.fullname" . }}
   labels:
-    {{- include "metrics-server.labels" . | nindent 4 }}
+    app: {{ template "metrics-server.name" . }}
+    chart: {{ template "metrics-server.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+  name: {{ template "metrics-server.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+
 spec:
   {{- if .Values.podDisruptionBudget.minAvailable }}
   minAvailable: {{ .Values.podDisruptionBudget.minAvailable }}
@@ -14,5 +19,5 @@ spec:
   {{- end  }}
   selector:
     matchLabels:
-      {{- include "metrics-server.selectorLabels" . | nindent 6 }}
+      app: {{ template "metrics-server.name" . }}
 {{- end -}}

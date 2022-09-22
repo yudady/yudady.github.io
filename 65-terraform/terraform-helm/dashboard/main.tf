@@ -7,7 +7,12 @@ provider "helm" {
 resource "helm_release" "my-kubernetes-dashboard" {
 
   name  = "my-kubernetes-dashboard"
+
+  # local
   chart = "../kubernetes-dashboard"
+
+  # github
+  #chart = "https://yudady.github.io/helm-chart-repository/kubernetes-dashboard-2.0.1.tgz"
 
 
   #  repository = "https://kubernetes.github.io/dashboard/"
@@ -31,7 +36,7 @@ resource "helm_release" "my-kubernetes-dashboard" {
 
   set {
     name  = "replicaCount"
-    value = 2
+    value = 1
   }
 
   set {

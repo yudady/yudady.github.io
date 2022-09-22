@@ -2,9 +2,12 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: {{ printf "system:%s" (include "metrics-server.fullname" .) }}
+  name: system:{{ template "metrics-server.fullname" . }}
   labels:
-    {{- include "metrics-server.labels" . | nindent 4 }}
+    app: {{ template "metrics-server.name" . }}
+    chart: {{ template "metrics-server.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
 rules:
   - apiGroups:
     - ""
@@ -13,20 +16,19 @@ rules:
       - nodes
       - nodes/stats
       - namespaces
-      - configmaps
     verbs:
       - get
       - list
       - watch
   {{- if .Values.rbac.pspEnabled }}
   - apiGroups:
-      - extensions
-      - policy
+    - extensions
+    - policy
     resources:
-      - podsecuritypolicies
+    - podsecuritypolicies
     resourceNames:
-      - {{ printf "privileged-%s" (include "metrics-server.fullname" .) }}
+    - privileged-{{ template "metrics-server.fullname" . }}
     verbs:
-      - use
+    - use
   {{- end -}}
 {{- end -}}

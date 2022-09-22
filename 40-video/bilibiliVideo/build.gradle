@@ -26,7 +26,6 @@ dependencies {
 }
 
 
-
 // ============================
 javadoc.options.encoding("utf-8")
 java {
@@ -47,10 +46,7 @@ publishing {
 
 	repositories {
 		maven {
-			// change to point to your repo, e.g. http://my.org/repo
-//			url = layout.buildDirectory.dir('maven_repo')
-//			url = "${projectDir}/maven_repo"
-			url = "file:///d:/tommy/github-repo/yudady/maven_repo"
+			url = "file:///d:/tommy/github-repo/yudady/maven2"
 		}
 	}
 }

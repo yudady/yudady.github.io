@@ -13,3 +13,4 @@ resource "helm_release" "jenkins" {
   namespace  = "default"
 
 }
+

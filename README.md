@@ -4,5 +4,5 @@
 
 * yudady.ml
 * yudady.cf
-* yudady.ga
 * yudady.gq
+* yudady.ga (died)

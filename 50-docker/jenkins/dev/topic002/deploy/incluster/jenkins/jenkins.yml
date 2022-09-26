@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+      containers:
+        - name: jenkins
+          image: jenkins/jenkins:lts-alpine
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: JAVA_OPTS
+              value: '-Xms256m -Xmx4096m -Duser.timezone=Asia/Shanghai'
+            - name: TRY_UPGRADE_IF_NO_MARKER
+              value: 'true'
+          ports:
+            - name: http
+              containerPort: 8080
+            - name: agent
+              containerPort: 50000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: jenkins-svc
+  name: jenkins-svc
+spec:
+  selector:
+    app: jenkins
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+    - port: 50000
+      targetPort: 50000
+      name: agent
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jenkins-ing
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: "yudady.gq"
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: jenkins-svc
+                port:
+                  number: 8080
+

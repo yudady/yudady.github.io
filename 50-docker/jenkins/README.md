@@ -26,6 +26,7 @@
 ![](.README_images/a52725fb.png)
 
 
+[Fix for Jenkins Docker Error: Invalid agent type docker specified. Must be one of [any, label, none]](https://www.youtube.com/watch?v=m5IFbG07V-c)
 
 
-
+https://www.youtube.com/watch?v=axsX5KdS_HM&list=PL_RrEj88onS8hEcx02tEBIJydd96OOzjh

@@ -1,5 +1,11 @@
 # jenkins
 
+## install plugin
+* docker 
+* docker-pip 
+* blue-ocean 
+* k8s
+
 
 ```yaml
 apiVersion: apps/v1

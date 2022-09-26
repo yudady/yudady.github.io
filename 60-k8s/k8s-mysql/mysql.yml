@@ -56,7 +56,7 @@ spec:
       http:
         paths:
           - pathType: Prefix
-            path: "/mysql"
+            path: "/"
             backend:
               service:
                 name: mysql-svc
@@ -70,12 +70,12 @@ metadata:
 spec:
   storageClassName: stardard
   capacity:
-    storage: 100Gi
+    storage: 10Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/mmt/d/k8s-pv"
+    path: "/mmt/d/k8s-pv/mysql"
     type: "DirectoryOrCreate"
 ---
 kind: PersistentVolumeClaim
@@ -88,5 +88,5 @@ spec:
   volumeMode: Filesystem
   resources:
     requests:
-      storage: 250Mi
+      storage: 10Gi
   storageClassName: stardard

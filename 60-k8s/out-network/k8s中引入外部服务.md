@@ -36,3 +36,11 @@ subsets:
         
 ```
 
+$ kubectl run pod — rm -i — tty — image ubuntu — bash
+root@pod:/# apt update && apt -y install curl
+
+root@pod:/# curl -Ls external-svc | grep \<title\>
+<title>RTFM: Linux, DevOps, and system administration</title>
+
+root@pod:/# curl -Ls external-svc.default.svc.cluster.local | grep \<title\>
+<title>RTFM: Linux, DevOps, and system administration</title>

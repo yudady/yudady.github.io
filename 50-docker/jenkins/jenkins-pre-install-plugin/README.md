@@ -29,6 +29,15 @@ JENKINS_HOST=admin:admin@localhost:51100
 curl -sSL "http://$JENKINS_HOST/pluginManager/api/xml?depth=1&xpath=/*/*/shortName|/*/*/version&wrapper=plugins" | perl -pe 's/.*?<shortName>([\w-]+).*?<version>([^<]+)()(<\/\w+>)+/\1 \2\n/g'|sed 's/ /:/'
 
 
+###
+###
+###
+
+
+curl 'localhost:51100/jnlpJars/jenkins-cli.jar' > jenkins-cli.jar
+
+JENKINS_SERVER=http://$JENKINS_HOST
+java -jar jenkins-cli.jar -s $JENKINS_SERVER help
 
 
 ````

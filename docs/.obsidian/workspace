@@ -4,11 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "627ba5b56218a28a",
+        "id": "b79330008a4e1fea",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "index.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
         }
       }
     ],
@@ -88,7 +93,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "index.md"
+              }
             }
           },
           {
@@ -130,6 +137,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "index.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -164,6 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "index.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -175,6 +184,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,17 +202,17 @@
     "direction": "horizontal",
     "width": 267.5
   },
-  "active": "b1ae197fff4bfdd1",
+  "active": "b79330008a4e1fea",
   "lastOpenFiles": [
+    "001-TODO/java-Jigsaw.md",
+    "index.md",
     "ffffffffffffffffff.md",
     "templates/20-hours-templater.md",
     "templates/HQA-templater.md",
     "300-閱讀筆記/The-First-20-Hours.md",
-    "index.md",
     "400-devops/000-MOC-devops.md",
     "400-devops/vscode-devcontainer.md",
     "windows/000-MOC-tools.md",
-    "400-devops/free-domain.md",
-    "400-devops/github-action.md"
+    "400-devops/free-domain.md"
   ]
 }

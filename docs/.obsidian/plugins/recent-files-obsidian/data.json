@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
+      "basename": "java-Jigsaw",
+      "path": "001-TODO/java-Jigsaw.md"
+    },
+    {
       "basename": "HQA-templater",
       "path": "templates/HQA-templater.md"
     },
     {
       "basename": "The-First-20-Hours",
       "path": "300-閱讀筆記/The-First-20-Hours.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "000-MOC-devops",
@@ -31,10 +35,6 @@
     {
       "basename": "github-action",
       "path": "400-devops/github-action.md"
-    },
-    {
-      "basename": "java-Jigsaw",
-      "path": "001-TODO/java-Jigsaw.md"
     },
     {
       "basename": "tools-templater",

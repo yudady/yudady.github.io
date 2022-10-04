@@ -30,7 +30,7 @@
     },
     {
       "id": "4d0e3268-52ec-4436-9b59-15ac9f85084c",
-      "name": "0-🧠靈感-todo-list",
+      "name": "0-🧠capture-ideas-todo-list",
       "type": "Capture",
       "command": false,
       "appendLink": false,
@@ -47,7 +47,7 @@
       },
       "insertAfter": {
         "enabled": true,
-        "after": "## ideas",
+        "after": "## capture ideas",
         "insertAtEnd": false,
         "createIfNotFound": false,
         "createIfNotFoundLocation": "top"

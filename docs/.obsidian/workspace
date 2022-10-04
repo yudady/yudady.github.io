@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "b1e04d144527c510",
+        "id": "d5d5778838e3579c",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -203,17 +203,17 @@
     "width": 154.5,
     "collapsed": true
   },
-  "active": "b1e04d144527c510",
+  "active": "d5d5778838e3579c",
   "lastOpenFiles": [
-    "002-Capture/靈感.md",
+    "templates/templater-of-insert/split-lines.md",
     "index.md",
+    "002-Capture/靈感.md",
     "001-TODO/vscode-devcontainer.md",
     "001-TODO/github-action.md",
     "001-TODO/CI CD.md",
     "templates/ignore-templates/Create Anki card.md",
     "200-學習OB/plugin/TabCopy.md",
     "300-閱讀筆記/筆記法.md",
-    "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md",
-    "300-閱讀筆記/README-templates-folder.md"
+    "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md"
   ]
 }

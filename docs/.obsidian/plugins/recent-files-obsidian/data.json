@@ -5,6 +5,14 @@
       "path": "index.md"
     },
     {
+      "basename": "split-lines",
+      "path": "templates/templater-of-insert/split-lines.md"
+    },
+    {
+      "basename": "靈感",
+      "path": "002-Capture/靈感.md"
+    },
+    {
       "basename": "vscode-devcontainer",
       "path": "001-TODO/vscode-devcontainer.md"
     },

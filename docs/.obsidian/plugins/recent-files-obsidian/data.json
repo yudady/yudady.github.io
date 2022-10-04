@@ -1,24 +1,108 @@
 {
   "recentFiles": [
     {
+      "basename": "tools-templater",
+      "path": "templates/quick-add/tools-templater.md"
+    },
+    {
       "basename": "index",
       "path": "index.md"
+    },
+    {
+      "basename": "ngrok",
+      "path": "windows/ngrok.md"
+    },
+    {
+      "basename": "Post",
+      "path": "templates/ignore-templates/Post.md"
+    },
+    {
+      "basename": "People",
+      "path": "templates/ignore-templates/People.md"
+    },
+    {
+      "basename": "Paper",
+      "path": "templates/ignore-templates/Paper.md"
+    },
+    {
+      "basename": "Note extraction",
+      "path": "templates/ignore-templates/Note extraction.md"
+    },
+    {
+      "basename": "Month Tag",
+      "path": "templates/ignore-templates/Month Tag.md"
+    },
+    {
+      "basename": "Note",
+      "path": "templates/ignore-templates/Note.md"
+    },
+    {
+      "basename": "Library",
+      "path": "templates/ignore-templates/Library.md"
+    },
+    {
+      "basename": "Lecture",
+      "path": "templates/ignore-templates/Lecture.md"
+    },
+    {
+      "basename": "Course",
+      "path": "templates/ignore-templates/Course.md"
+    },
+    {
+      "basename": "Company",
+      "path": "templates/ignore-templates/Company.md"
+    },
+    {
+      "basename": "bug-issue-tracking-templater",
+      "path": "templates/ignore-templates/bug-issue-tracking-templater.md"
+    },
+    {
+      "basename": "Book",
+      "path": "templates/ignore-templates/Book.md"
+    },
+    {
+      "basename": "Blog Note",
+      "path": "templates/ignore-templates/Blog Note.md"
+    },
+    {
+      "basename": "HQA-templater",
+      "path": "templates/HQA-templater.md"
+    },
+    {
+      "basename": "關鍵20小時-templater",
+      "path": "templates/關鍵20小時-templater.md"
+    },
+    {
+      "basename": "github-action",
+      "path": "001-TODO/github-action.md"
+    },
+    {
+      "basename": "000-MOC-tools",
+      "path": "windows/000-MOC-tools.md"
+    },
+    {
+      "basename": "install-multiple-Ubuntu-WSL2",
+      "path": "windows/install-multiple-Ubuntu-WSL2.md"
+    },
+    {
+      "basename": "wsl-command",
+      "path": "windows/wsl-command.md"
+    },
+    {
+      "basename": "now",
+      "path": "templates/templater-of-insert/now.md"
+    },
+    {
+      "basename": "docker-desktop-k8s-startup-fail",
+      "path": "100-InBox/docker-desktop-k8s-startup-fail.md"
     },
     {
       "basename": "split-lines",
       "path": "templates/templater-of-insert/split-lines.md"
     },
     {
-      "basename": "靈感",
-      "path": "002-Capture/靈感.md"
-    },
-    {
       "basename": "vscode-devcontainer",
       "path": "001-TODO/vscode-devcontainer.md"
-    },
-    {
-      "basename": "github-action",
-      "path": "001-TODO/github-action.md"
     },
     {
       "basename": "TabCopy",
@@ -49,32 +133,12 @@
       "path": "hidden-folder/Excalidraw/Drawing-20221003-105440.excalidraw.md"
     },
     {
-      "basename": "關鍵20小時-templater",
-      "path": "templates/關鍵20小時-templater.md"
-    },
-    {
       "basename": "admonition",
       "path": "200-學習OB/plugin/admonition.md"
     },
     {
       "basename": "todo",
       "path": "templates/todo.md"
-    },
-    {
-      "basename": "Book",
-      "path": "templates/ignore-templates/Book.md"
-    },
-    {
-      "basename": "Blog Note",
-      "path": "templates/ignore-templates/Blog Note.md"
-    },
-    {
-      "basename": "bug-issue-tracking-templater",
-      "path": "templates/ignore-templates/bug-issue-tracking-templater.md"
-    },
-    {
-      "basename": "wsl-command",
-      "path": "windows/wsl-command.md"
     },
     {
       "basename": "000-obsidian",
@@ -101,10 +165,6 @@
       "path": "200-學習OB/plugin/Roam-Highlighter.md"
     },
     {
-      "basename": "HQA-templater",
-      "path": "templates/HQA-templater.md"
-    },
-    {
       "basename": "templater",
       "path": "200-學習OB/plugin/templater.md"
     },
@@ -121,10 +181,6 @@
       "path": "obsidian/020-筆記/Home.md"
     },
     {
-      "basename": "docker-desktop-k8s-startup-fail",
-      "path": "100-InBox/docker-desktop-k8s-startup-fail.md"
-    },
-    {
       "basename": "VMware-Workstation-Pro-REST-API  Tommy-好記性不如爛筆頭",
       "path": "hidden-folder/hypothes/VMware-Workstation-Pro-REST-API  Tommy-好記性不如爛筆頭.md"
     },
@@ -133,56 +189,12 @@
       "path": "windows/install-wslg.md"
     },
     {
-      "basename": "install-multiple-Ubuntu-WSL2",
-      "path": "windows/install-multiple-Ubuntu-WSL2.md"
-    },
-    {
       "basename": "github",
       "path": "tools/github.md"
     },
     {
       "basename": "free-resource",
       "path": "tools/free-resource/free-resource.md"
-    },
-    {
-      "basename": "000-MOC-security",
-      "path": "tools/security/000-MOC-security.md"
-    },
-    {
-      "basename": "java-security-JCA-JCE",
-      "path": "tools/security/java-security-JCA-JCE.md"
-    },
-    {
-      "basename": "000-MOC-windows",
-      "path": "tools/windows/000-MOC-windows.md"
-    },
-    {
-      "basename": "000-MOC-tools",
-      "path": "tools/000-MOC-tools.md"
-    },
-    {
-      "basename": "Fiddler-Classic",
-      "path": "tools/mobile/Fiddler-Classic.md"
-    },
-    {
-      "basename": "Genymotion",
-      "path": "tools/mobile/Genymotion.md"
-    },
-    {
-      "basename": "browerHotReload",
-      "path": "tools/browerHotReload.md"
-    },
-    {
-      "basename": "openssl",
-      "path": "tools/security/openssl.md"
-    },
-    {
-      "basename": "CA",
-      "path": "tools/security/CA.md"
-    },
-    {
-      "basename": "security-file-extension-name",
-      "path": "tools/security/security-file-extension-name.md"
     }
   ],
   "omittedPaths": [

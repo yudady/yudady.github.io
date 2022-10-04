@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "d5d5778838e3579c",
+        "id": "244372a7ac2d660d",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "index.md",
+            "file": "templates/quick-add/tools-templater.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -26,7 +26,7 @@
       {
         "id": "4dcc60248d2e3363",
         "type": "tabs",
-        "dimension": 77.92494481236203,
+        "dimension": 66.50898770104068,
         "children": [
           {
             "id": "b1ae197fff4bfdd1",
@@ -42,7 +42,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:obsidian",
+                "query": "windows",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -64,7 +64,7 @@
       {
         "id": "248f440010aa062a",
         "type": "tabs",
-        "dimension": 22.075055187637968,
+        "dimension": 33.49101229895932,
         "children": [
           {
             "id": "b81cc67b87695036",
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 230.5
+    "width": 321.5
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -89,31 +89,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9b79938fe658765c",
+            "id": "6537a3e867a6ff55",
             "type": "leaf",
             "state": {
-              "type": "backlink",
+              "type": "outline",
               "state": {
-                "file": "index.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
-              }
-            }
-          },
-          {
-            "id": "4ff6fa7e97ba7269",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "index.md",
-                "linksCollapsed": true,
-                "unlinkedCollapsed": false
+                "file": "templates/quick-add/tools-templater.md"
               }
             }
           },
@@ -125,16 +106,6 @@
               "state": {
                 "sortOrder": "alphabetical",
                 "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "6537a3e867a6ff55",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "index.md"
               }
             }
           },
@@ -154,8 +125,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "78e3fecbef45c937",
@@ -167,7 +137,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "index.md",
+                "file": "templates/quick-add/tools-templater.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -195,25 +165,54 @@
                 }
               }
             }
+          },
+          {
+            "id": "4ff6fa7e97ba7269",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "templates/quick-add/tools-templater.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "9b79938fe658765c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "templates/quick-add/tools-templater.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 154.5,
-    "collapsed": true
+    "width": 267.5
   },
-  "active": "d5d5778838e3579c",
+  "active": "244372a7ac2d660d",
   "lastOpenFiles": [
-    "templates/templater-of-insert/split-lines.md",
     "index.md",
-    "002-Capture/靈感.md",
-    "001-TODO/vscode-devcontainer.md",
-    "001-TODO/github-action.md",
-    "001-TODO/CI CD.md",
-    "templates/ignore-templates/Create Anki card.md",
-    "200-學習OB/plugin/TabCopy.md",
-    "300-閱讀筆記/筆記法.md",
-    "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md"
+    "001-TODO/tttttttttttttt.md",
+    "templates/quick-add/tools-templater.md",
+    "windows/ngrok.md",
+    "templates/ignore-templates/Post.md",
+    "templates/ignore-templates/People.md",
+    "templates/ignore-templates/Paper.md",
+    "templates/ignore-templates/Note extraction.md",
+    "templates/ignore-templates/Month Tag.md",
+    "templates/ignore-templates/Note.md"
   ]
 }

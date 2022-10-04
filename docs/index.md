@@ -1,13 +1,13 @@
 ---
-title: 靈感筆記
+title: Personal Knowledge Manage
 tags: []
 date: 2022-10-04 13:43
-modified: 2022-10-04 14:01
-aliases: [靈感筆記]
-linter-yaml-title-alias: 靈感筆記
+modified: 2022-10-04 15:26
+aliases: [Personal Knowledge Manage, "靈感筆記"]
+linter-yaml-title-alias: Personal Knowledge Manage
 ---
 
-# 靈感筆記
+# Personal Knowledge Manage
 
 ## 處理中
 
@@ -18,14 +18,10 @@ linter-yaml-title-alias: 靈感筆記
 ## capture ideas
 
 - github webhook https://docs.github.com/en/developers/webhooks-and-events/webhooks/creating-webhooks @2022-10-04T12:03:17
-- ngrok @2022-10-04T11:50:25
-- https://b0444135.medium.com/ @2022-10-03T16:59:02
-- github action Medium Post @2022-10-03T16:57:03
+- k8s : https://b0444135.medium.com/ @2022-10-03T16:59:02
 - Springboot 整合 Zipkin+kafka+ELK,实现链路追踪和日志收集 @2022-10-03T16:43:39
 - 整理 chrome 書籤 @2022-10-02T18:20:97
 - what is templates and templater @2022-10-02T18:20:97
-- source-url :: [【ngrok 教學】 webhook 直接在本地端測起來，Debug沒煩惱！ - 測試先生](https://learn.markteaching.com/ngrok-webhook/#ngrok%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F)
-
 
 ---
 

@@ -117,6 +117,34 @@
       },
       "openFile": true,
       "openFileInMode": "default"
+    },
+    {
+      "id": "7165d0c5-3dfe-4465-b843-4722f96a9072",
+      "name": "create-tools",
+      "type": "Template",
+      "command": false,
+      "templatePath": "templates/quick-add/tools-templater.md",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "001-TODO"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false
+      },
+      "appendLink": false,
+      "incrementFileName": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
     }
   ],
   "macros": [

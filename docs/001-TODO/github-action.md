@@ -2,7 +2,7 @@
 title: Github-Action
 tags: [github, github-action , workflow]
 date: 2022-09-29 12:03
-modified: 2022-10-04 10:43
+modified: 2022-10-04 15:55
 aliases: [Github-Action]
 linter-yaml-title-alias: Github-Action
 ---
@@ -15,22 +15,3 @@ source-url :: [Workflow syntax](https://docs.github.com/en/actions/using-workf
 
 - automatic
 - CI/CD
-
-
-
-
----
-
-## Summary
-
-xxxx
-
----
-
-## Note
-
-xxxx
-
-## Reference
-
-- xxxx

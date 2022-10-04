@@ -1,0 +1,223 @@
+{
+  "work": {
+    "main": {
+      "id": "0fa9ae663bd13929",
+      "type": "split",
+      "children": [
+        {
+          "id": "545cfd725a18c275",
+          "type": "leaf",
+          "dimension": 62.81481481481481,
+          "state": {
+            "type": "markdown",
+            "state": {
+              "file": "500-learning-obsidian/000-MOC-create.md",
+              "mode": "source",
+              "backlinks": true,
+              "source": true
+            }
+          },
+          "group": "38aca3e8233bb73d"
+        },
+        {
+          "id": "a7da27b813855c89",
+          "type": "split",
+          "dimension": 37.18518518518519,
+          "children": [
+            {
+              "id": "722ac61ad2461656",
+              "type": "leaf",
+              "state": {
+                "type": "outline",
+                "state": {
+                  "file": "500-learning-obsidian/000-MOC-create.md"
+                }
+              },
+              "group": "38aca3e8233bb73d"
+            },
+            {
+              "id": "91b3678e71ee2f83",
+              "type": "leaf",
+              "state": {
+                "type": "localgraph",
+                "state": {
+                  "file": "500-learning-obsidian/000-MOC-create.md",
+                  "options": {
+                    "collapse-filter": false,
+                    "search": "",
+                    "localJumps": 3,
+                    "localBacklinks": true,
+                    "localForelinks": true,
+                    "localInterlinks": false,
+                    "showTags": false,
+                    "showAttachments": false,
+                    "hideUnresolved": false,
+                    "collapse-color-groups": true,
+                    "colorGroups": [],
+                    "collapse-display": true,
+                    "showArrow": false,
+                    "textFadeMultiplier": 0,
+                    "nodeSizeMultiplier": 1,
+                    "lineSizeMultiplier": 1,
+                    "collapse-forces": false,
+                    "centerStrength": 0.49711681547619,
+                    "repelStrength": 11.7280505952381,
+                    "linkStrength": 1,
+                    "linkDistance": 82,
+                    "scale": 0.6372987299011714,
+                    "close": true
+                  }
+                }
+              },
+              "group": "38aca3e8233bb73d"
+            }
+          ],
+          "direction": "horizontal"
+        }
+      ],
+      "direction": "vertical"
+    },
+    "left": {
+      "id": "c0919f4f8da95291",
+      "type": "split",
+      "children": [
+        {
+          "id": "4dcc60248d2e3363",
+          "type": "tabs",
+          "children": [
+            {
+              "id": "b1ae197fff4bfdd1",
+              "type": "leaf",
+              "state": {
+                "type": "file-explorer",
+                "state": {}
+              }
+            },
+            {
+              "id": "81ab66aee8069bec",
+              "type": "leaf",
+              "state": {
+                "type": "search",
+                "state": {
+                  "query": "tag:#obsidian",
+                  "matchingCase": false,
+                  "explainSearch": false,
+                  "collapseAll": true,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical"
+                }
+              }
+            },
+            {
+              "id": "b81cc67b87695036",
+              "type": "leaf",
+              "state": {
+                "type": "recent-files",
+                "state": {}
+              }
+            },
+            {
+              "id": "4135627663aa9c73",
+              "type": "leaf",
+              "state": {
+                "type": "starred",
+                "state": {}
+              }
+            },
+            {
+              "id": "619f3397a3d59268",
+              "type": "leaf",
+              "state": {
+                "type": "markdown",
+                "state": {
+                  "file": "500-learning-obsidian/000-MOC-create.md",
+                  "mode": "source",
+                  "backlinks": true,
+                  "source": true
+                }
+              }
+            }
+          ],
+          "currentTab": 4
+        }
+      ],
+      "direction": "horizontal",
+      "width": 510
+    },
+    "right": {
+      "id": "17640f5fc7202c27",
+      "type": "split",
+      "children": [
+        {
+          "id": "3fecf2d96e0dab36",
+          "type": "tabs",
+          "children": [
+            {
+              "id": "9b79938fe658765c",
+              "type": "leaf",
+              "state": {
+                "type": "backlink",
+                "state": {
+                  "file": "500-learning-obsidian/000-MOC-create.md",
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": false
+                }
+              }
+            },
+            {
+              "id": "4ff6fa7e97ba7269",
+              "type": "leaf",
+              "state": {
+                "type": "outgoing-link",
+                "state": {
+                  "file": "500-learning-obsidian/000-MOC-create.md",
+                  "linksCollapsed": false,
+                  "unlinkedCollapsed": false
+                }
+              }
+            },
+            {
+              "id": "a23e15e9bd038082",
+              "type": "leaf",
+              "state": {
+                "type": "tag",
+                "state": {
+                  "sortOrder": "alphabetical",
+                  "useHierarchy": true
+                }
+              }
+            },
+            {
+              "id": "6537a3e867a6ff55",
+              "type": "leaf",
+              "state": {
+                "type": "outline",
+                "state": {
+                  "file": "500-learning-obsidian/000-MOC-create.md"
+                }
+              }
+            },
+            {
+              "id": "bed7c2c835bc9736",
+              "type": "leaf",
+              "state": {
+                "type": "advanced-tables-toolbar",
+                "state": {}
+              }
+            }
+          ],
+          "currentTab": 3
+        }
+      ],
+      "direction": "horizontal",
+      "width": 277,
+      "collapsed": true
+    },
+    "active": "91b3678e71ee2f83"
+  }
+}

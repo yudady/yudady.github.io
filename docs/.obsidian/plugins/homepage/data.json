@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "defaultNote": "002-Capture/靈感",
+  "useMoment": false,
+  "momentFormat": "YYYY-MM-DD",
+  "workspace": "Home",
+  "workspaceEnabled": true,
+  "hasRibbonIcon": true,
+  "openMode": "Replace all open notes",
+  "view": "Default view",
+  "refreshDataview": false
+}

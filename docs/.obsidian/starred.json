@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "title": "dashboard",
+      "path": "obsidian/dashboard.md"
+    },
+    {
+      "type": "file",
+      "title": "001-obsidian",
+      "path": "obsidian/020-筆記/OB/001-obsidian.md"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "choices": [
+    {
+      "id": "2de7409f-dac6-447c-a834-0d5ca68b1a15",
+      "name": "0-👍todo-create-file",
+      "type": "Template",
+      "command": false,
+      "templatePath": "templates/todo.md",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "001-TODO"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false
+      },
+      "appendLink": false,
+      "incrementFileName": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default"
+    },
+    {
+      "id": "4d0e3268-52ec-4436-9b59-15ac9f85084c",
+      "name": "0-🧠靈感-todo-list",
+      "type": "Capture",
+      "command": false,
+      "appendLink": false,
+      "captureTo": "002-Capture/靈感.md",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": false,
+        "createWithTemplate": false,
+        "template": ""
+      },
+      "format": {
+        "enabled": true,
+        "format": "- {{VALUE}} @{{DATE:YYYY-MM-DDTHH:mm:ss}}\n"
+      },
+      "insertAfter": {
+        "enabled": true,
+        "after": "## ideas",
+        "insertAtEnd": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": false,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
+    },
+    {
+      "id": "26a8a2e6-b5dd-46dd-9c08-66deb5a6b977",
+      "name": "1-😍關鍵20小時",
+      "type": "Template",
+      "command": false,
+      "templatePath": "templates/關鍵20小時-templater.md",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "300-閱讀筆記"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false
+      },
+      "appendLink": false,
+      "incrementFileName": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default"
+    },
+    {
+      "id": "618ae9ed-5df7-47c8-a754-2e04d8e54587",
+      "name": "🆘create-HQA-page",
+      "type": "Template",
+      "command": false,
+      "templatePath": "templates/HQA-templater.md",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "001-TODO"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false
+      },
+      "appendLink": false,
+      "incrementFileName": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default"
+    }
+  ],
+  "macros": [
+    {
+      "name": "👍create-note",
+      "id": "fec0a57f-62fa-482b-9ec5-b20764596996",
+      "commands": [],
+      "runOnStartup": false
+    }
+  ],
+  "inputPrompt": "single-line"
+}

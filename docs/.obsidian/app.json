@@ -1,0 +1,22 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "strictLineBreaks": true,
+  "foldHeading": true,
+  "showFrontmatter": true,
+  "foldIndent": true,
+  "showLineNumber": true,
+  "promptDelete": false,
+  "newFileLocation": "current",
+  "newFileFolderPath": "000-inbox",
+  "attachmentFolderPath": "./",
+  "showUnsupportedFiles": true,
+  "alwaysUpdateLinks": true,
+  "tabSize": 2,
+  "spellcheck": true,
+  "readableLineLength": false,
+  "spellcheckLanguages": null,
+  "useMarkdownLinks": false,
+  "newLinkFormat": "relative",
+  "defaultViewMode": "source"
+}

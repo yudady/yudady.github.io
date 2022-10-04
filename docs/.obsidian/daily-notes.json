@@ -1,0 +1,6 @@
+{
+  "template": "800-template/每日筆記模版/templater-daily",
+  "folder": "010-日報",
+  "autorun": false,
+  "format": "日報-YYYY-MM-DD-dddd"
+}

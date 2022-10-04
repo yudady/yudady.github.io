@@ -10,4 +10,3 @@
 * yudady.ml
 * yudady.cf
 * yudady.gq
-* yudady.ga (died)

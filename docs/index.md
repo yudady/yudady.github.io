@@ -1,4 +1,25 @@
-# Obsidian Notes
+---
+title: 靈感筆記
+tags: []
+date: 2022-10-04 13:43
+modified: 2022-10-04 13:55
+aliases: [靈感筆記]
+linter-yaml-title-alias: 靈感筆記
+---
+
+# 靈感筆記
+
+[[../300-閱讀筆記/尚矽谷-SpringBoot2核心技術 |SpringBoot2 核心技術與響應式編程]]
+
+## ideas
+
+- github webhook https://docs.github.com/en/developers/webhooks-and-events/webhooks/creating-webhooks @2022-10-04T12:03:17
+- ngrok @2022-10-04T11:50:25
+- https://b0444135.medium.com/ @2022-10-03T16:59:02
+- github action Medium Post @2022-10-03T16:57:03
+- Springboot 整合 Zipkin+kafka+ELK,实现链路追踪和日志收集 @2022-10-03T16:43:39
+- 整理 chrome 書籤 @2022-10-02T18:20:97
+- what is templates and templater @2022-10-02T18:20:97
 
 ## 「Zettelkasten 卡片盒筆記法」的原則
 
@@ -13,13 +34,12 @@
 * 自我想法：在卡片中加入自己的想法。
 * 別擔心結構化問題：卡片盒筆記法的宗旨就是打破制式結構。
 * 加入連結頁：讓相連的筆記可以透過自己的思路串接成一篇短文。
-* 加入總目錄頁：讓相連的筆記有Epic（總目錄）的位置可以參考。
+* 加入總目錄頁：讓相連的筆記有 Epic（總目錄）的位置可以參考。
 * 不要刪除舊筆記：相反地，用連結筆記將舊筆記連結到新筆記，並且說明什麼舊筆記不好。
 * 盡情地加入筆記。  
 
-
-
 ## 筆記
+
 * Fleeting note (靈感筆記)
 * Permanent note (永久筆記)
 * Literature note (讀書筆記) <-

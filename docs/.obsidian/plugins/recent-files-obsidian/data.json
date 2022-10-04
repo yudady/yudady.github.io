@@ -1,8 +1,8 @@
 {
   "recentFiles": [
     {
-      "basename": "靈感",
-      "path": "002-Capture/靈感.md"
+      "basename": "index",
+      "path": "index.md"
     },
     {
       "basename": "vscode-devcontainer",
@@ -47,10 +47,6 @@
     {
       "basename": "admonition",
       "path": "200-學習OB/plugin/admonition.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "todo",

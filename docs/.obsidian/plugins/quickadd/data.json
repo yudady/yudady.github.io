@@ -34,7 +34,7 @@
       "type": "Capture",
       "command": false,
       "appendLink": false,
-      "captureTo": "002-Capture/靈感.md",
+      "captureTo": "index.md",
       "captureToActiveFile": false,
       "createFileIfItDoesntExist": {
         "enabled": false,

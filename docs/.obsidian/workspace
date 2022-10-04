@@ -7,8 +7,13 @@
         "id": "b1e04d144527c510",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "index.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
         }
       }
     ],
@@ -73,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 330.5
+    "width": 230.5
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -89,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "index.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -126,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "index.md"
+              }
             }
           },
           {
@@ -158,6 +167,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "index.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -196,6 +206,7 @@
   "active": "b1e04d144527c510",
   "lastOpenFiles": [
     "002-Capture/靈感.md",
+    "index.md",
     "001-TODO/vscode-devcontainer.md",
     "001-TODO/github-action.md",
     "001-TODO/CI CD.md",
@@ -203,7 +214,6 @@
     "200-學習OB/plugin/TabCopy.md",
     "300-閱讀筆記/筆記法.md",
     "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md",
-    "300-閱讀筆記/README-templates-folder.md",
-    "300-閱讀筆記/黃金 20 小時學習法.md"
+    "300-閱讀筆記/README-templates-folder.md"
   ]
 }

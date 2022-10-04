@@ -2,7 +2,7 @@
 title: Personal Knowledge Manage
 tags: []
 date: 2022-10-04 13:43
-modified: 2022-10-04 15:26
+modified: 2022-10-04 17:05
 aliases: [Personal Knowledge Manage, "靈感筆記"]
 linter-yaml-title-alias: Personal Knowledge Manage
 ---
@@ -11,7 +11,8 @@ linter-yaml-title-alias: Personal Knowledge Manage
 
 ## 處理中
 
-[[../300-閱讀筆記/尚矽谷-SpringBoot2核心技術 |SpringBoot2 核心技術與響應式編程]]
+- [SpringBoot2 核心技術與響應式編程](300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md)
+- [001-TODO/java-Jigsaw](001-TODO/java-Jigsaw.md)
 
 ---
 

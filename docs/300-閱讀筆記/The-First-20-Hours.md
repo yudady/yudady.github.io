@@ -1,13 +1,15 @@
 ---
-title: 黃金 20 小時學習法
+title: The-First-20-Hours
 tags: []
 date: 2022-09-30 16:04
-modified: 2022-10-02 23:14
-aliases: [黃金 20 小時學習法]
-linter-yaml-title-alias: 黃金 20 小時學習法
+modified: 2022-10-04 17:10
+aliases: [The-First-20-Hours]
+linter-yaml-title-alias: The-First-20-Hours
 ---
 
-# 黃金 20 小時學習法
+# The-First-20-Hours
+
+**黃金 20 小時學習法**
 
 ## 4 原則
 

@@ -1,16 +1,48 @@
 {
   "recentFiles": [
     {
-      "basename": "tools-templater",
-      "path": "templates/quick-add/tools-templater.md"
+      "basename": "HQA-templater",
+      "path": "templates/HQA-templater.md"
+    },
+    {
+      "basename": "The-First-20-Hours",
+      "path": "300-閱讀筆記/The-First-20-Hours.md"
     },
     {
       "basename": "index",
       "path": "index.md"
     },
     {
+      "basename": "000-MOC-devops",
+      "path": "400-devops/000-MOC-devops.md"
+    },
+    {
+      "basename": "vscode-devcontainer",
+      "path": "400-devops/vscode-devcontainer.md"
+    },
+    {
+      "basename": "000-MOC-tools",
+      "path": "windows/000-MOC-tools.md"
+    },
+    {
+      "basename": "free-domain",
+      "path": "400-devops/free-domain.md"
+    },
+    {
+      "basename": "github-action",
+      "path": "400-devops/github-action.md"
+    },
+    {
+      "basename": "java-Jigsaw",
+      "path": "001-TODO/java-Jigsaw.md"
+    },
+    {
+      "basename": "tools-templater",
+      "path": "templates/quick-add/tools-templater.md"
+    },
+    {
       "basename": "ngrok",
-      "path": "windows/ngrok.md"
+      "path": "400-devops/ngrok.md"
     },
     {
       "basename": "Post",
@@ -65,22 +97,6 @@
       "path": "templates/ignore-templates/Blog Note.md"
     },
     {
-      "basename": "HQA-templater",
-      "path": "templates/HQA-templater.md"
-    },
-    {
-      "basename": "關鍵20小時-templater",
-      "path": "templates/關鍵20小時-templater.md"
-    },
-    {
-      "basename": "github-action",
-      "path": "001-TODO/github-action.md"
-    },
-    {
-      "basename": "000-MOC-tools",
-      "path": "windows/000-MOC-tools.md"
-    },
-    {
       "basename": "install-multiple-Ubuntu-WSL2",
       "path": "windows/install-multiple-Ubuntu-WSL2.md"
     },
@@ -101,10 +117,6 @@
       "path": "templates/templater-of-insert/split-lines.md"
     },
     {
-      "basename": "vscode-devcontainer",
-      "path": "001-TODO/vscode-devcontainer.md"
-    },
-    {
       "basename": "TabCopy",
       "path": "200-學習OB/plugin/TabCopy.md"
     },
@@ -119,14 +131,6 @@
     {
       "basename": "README-templates-folder",
       "path": "300-閱讀筆記/README-templates-folder.md"
-    },
-    {
-      "basename": "黃金 20 小時學習法",
-      "path": "300-閱讀筆記/黃金 20 小時學習法.md"
-    },
-    {
-      "basename": "java-Jigsaw",
-      "path": "001-TODO/java-Jigsaw.md"
     },
     {
       "basename": "Drawing-20221003-105440.excalidraw",
@@ -155,10 +159,6 @@
     {
       "basename": "test-templater",
       "path": "001-TODO/test-templater.md"
-    },
-    {
-      "basename": "免费域名",
-      "path": "001-TODO/免费域名.md"
     },
     {
       "basename": "Roam-Highlighter",

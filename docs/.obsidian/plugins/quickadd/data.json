@@ -67,35 +67,7 @@
       "name": "1-😍關鍵20小時",
       "type": "Template",
       "command": false,
-      "templatePath": "templates/關鍵20小時-templater.md",
-      "fileNameFormat": {
-        "enabled": false,
-        "format": ""
-      },
-      "folder": {
-        "enabled": true,
-        "folders": [
-          "300-閱讀筆記"
-        ],
-        "chooseWhenCreatingNote": false,
-        "createInSameFolderAsActiveFile": false
-      },
-      "appendLink": false,
-      "incrementFileName": false,
-      "openFileInNewTab": {
-        "enabled": false,
-        "direction": "vertical",
-        "focus": true
-      },
-      "openFile": true,
-      "openFileInMode": "default"
-    },
-    {
-      "id": "618ae9ed-5df7-47c8-a754-2e04d8e54587",
-      "name": "🆘create-HQA-page",
-      "type": "Template",
-      "command": false,
-      "templatePath": "templates/HQA-templater.md",
+      "templatePath": "templates/quick-add/20-hours-templater.md",
       "fileNameFormat": {
         "enabled": false,
         "format": ""
@@ -113,7 +85,7 @@
       "openFileInNewTab": {
         "enabled": false,
         "direction": "vertical",
-        "focus": true
+        "focus": false
       },
       "openFile": true,
       "openFileInMode": "default"
@@ -144,6 +116,34 @@
         "focus": true
       },
       "openFile": false,
+      "openFileInMode": "default"
+    },
+    {
+      "id": "618ae9ed-5df7-47c8-a754-2e04d8e54587",
+      "name": "🆘create-HQA-page",
+      "type": "Template",
+      "command": false,
+      "templatePath": "templates/HQA-templater.md",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "001-TODO"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false
+      },
+      "appendLink": false,
+      "incrementFileName": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
       "openFileInMode": "default"
     }
   ],

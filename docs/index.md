@@ -2,7 +2,7 @@
 title: Personal Knowledge Manage
 tags: []
 date: 2022-10-04 13:43
-modified: 2022-10-05 09:27
+modified: 2022-10-05 09:41
 aliases: [Personal Knowledge Manage, "靈感筆記"]
 linter-yaml-title-alias: Personal Knowledge Manage
 ---
@@ -28,6 +28,7 @@ linter-yaml-title-alias: Personal Knowledge Manage
 
 ## 「Zettelkasten 卡片盒筆記法」的原則
 
+> [!note]
 > 國外研究「卡片盒筆記法」的專家與粉絲，給予新手 12 個使用原則：
 
 * 原子化：一則記事只記錄一件事情

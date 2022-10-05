@@ -4,11 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ffaf6dff3148ad2c",
+        "id": "75cf64cd0116d538",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "index.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
         }
       }
     ],
@@ -64,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "index.md"
+              }
             }
           },
           {
@@ -106,6 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "index.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -140,6 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "index.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -151,6 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -162,23 +172,23 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
     "width": 267.5
   },
-  "active": "ffaf6dff3148ad2c",
+  "active": "75cf64cd0116d538",
   "lastOpenFiles": [
+    "templates/quick-add/TODO.md",
+    "templates/quick-add/HQA-templater.md",
+    "index.md",
     "windows/wsl-command.md",
     "400-devops/ngrok.md",
     "001-TODO/test-templater.md",
     "001-TODO/java-Jigsaw.md",
-    "index.md",
     "ffffffffffffffffff.md",
     "templates/20-hours-templater.md",
-    "templates/HQA-templater.md",
-    "300-閱讀筆記/The-First-20-Hours.md",
-    "400-devops/000-MOC-devops.md"
+    "300-閱讀筆記/The-First-20-Hours.md"
   ]
 }

@@ -31,7 +31,6 @@ plugins:
   - mermaid2
   - exclude:
       glob:
-        - template/*
         - hidden-folder/*
         - "*.tmp"
         - "*.pdf"

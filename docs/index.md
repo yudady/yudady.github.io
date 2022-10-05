@@ -2,7 +2,7 @@
 title: Personal Knowledge Manage
 tags: []
 date: 2022-10-04 13:43
-modified: 2022-10-05 09:41
+modified: 2022-10-05 10:39
 aliases: [Personal Knowledge Manage, "靈感筆記"]
 linter-yaml-title-alias: Personal Knowledge Manage
 ---

@@ -35,11 +35,39 @@
       "openFileInMode": "default"
     },
     {
-      "id": "2de7409f-dac6-447c-a834-0d5ca68b1a15",
-      "name": "0-👍todo-create-file",
+      "id": "7165d0c5-3dfe-4465-b843-4722f96a9072",
+      "name": "0-devops-templater",
       "type": "Template",
       "command": false,
-      "templatePath": "templates/quick-add/todo.md",
+      "templatePath": "templates/quick-add/devops-templater",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "001-TODO"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false
+      },
+      "appendLink": false,
+      "incrementFileName": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default"
+    },
+    {
+      "id": "2de7409f-dac6-447c-a834-0d5ca68b1a15",
+      "name": "0-👍todo-templater",
+      "type": "Template",
+      "command": false,
+      "templatePath": "templates/quick-add/todo-templater",
       "fileNameFormat": {
         "enabled": false,
         "format": ""
@@ -91,36 +119,8 @@
       "openFileInMode": "default"
     },
     {
-      "id": "7165d0c5-3dfe-4465-b843-4722f96a9072",
-      "name": "create-softwave-tools",
-      "type": "Template",
-      "command": false,
-      "templatePath": "templates/quick-add/tools-templater.md",
-      "fileNameFormat": {
-        "enabled": false,
-        "format": ""
-      },
-      "folder": {
-        "enabled": true,
-        "folders": [
-          "001-TODO"
-        ],
-        "chooseWhenCreatingNote": false,
-        "createInSameFolderAsActiveFile": false
-      },
-      "appendLink": false,
-      "incrementFileName": false,
-      "openFileInNewTab": {
-        "enabled": false,
-        "direction": "vertical",
-        "focus": true
-      },
-      "openFile": false,
-      "openFileInMode": "default"
-    },
-    {
       "id": "618ae9ed-5df7-47c8-a754-2e04d8e54587",
-      "name": "🆘create-HQA-page",
+      "name": "🆘HQA-templater",
       "type": "Template",
       "command": false,
       "templatePath": "templates/quick-add/HQA-templater.md",

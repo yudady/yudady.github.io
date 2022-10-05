@@ -1,12 +1,15 @@
 ---
 title: {{NAME}}
 tags: []
-date: {{DATE:YYYY-MM-DD HH:mm:ss}}
-modified: {{DATE:YYYY-MM-DD HH:mm:ss}}
+aliases: []
+created_date: {{DATE:YYYY-MM-DD HH:mm:ss}}
+updated_date: {{DATE:YYYY-MM-DD HH:mm:ss}}
 ---
 
 
-# {{NAME}}
+# 📚{{NAME}}
+- **🏷️Tags** :   #<% tp.file.creation_date('YYYY-MM') %> #devops 
+- Link: 
 
 ## 分解步驟:把技能做最大程度的細分，分成若干小步驟
 ---

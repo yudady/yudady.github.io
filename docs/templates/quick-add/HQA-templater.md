@@ -1,15 +1,14 @@
 ---
 title: {{NAME}}
 tags: []
-date: {{DATE:YYYY-MM-DD HH:mm:ss}}
-modified: {{DATE:YYYY-MM-DD HH:mm:ss}}
+aliases: []
+created_date: {{DATE:YYYY-MM-DD HH:mm:ss}}
+updated_date: {{DATE:YYYY-MM-DD HH:mm:ss}}
 ---
 
-# {{NAME}}
-
-source-url :: "https://xxxxxx"
-
-topic :: ["xxx"]
+# 📚{{NAME}}
+- **🏷️Tags** :   #<% tp.file.creation_date('YYYY-MM') %> #HQA
+- Link: 
 
 ---
 

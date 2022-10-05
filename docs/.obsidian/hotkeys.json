@@ -19,7 +19,6 @@
   ],
   "file-explorer:new-file-in-new-pane": [],
   "editor:open-search-replace": [],
-  "switcher:open": [],
   "editor:insert-link": [],
   "app:open-settings": [],
   "file-explorer:new-file": [],
@@ -29,8 +28,6 @@
   "note-refactor-obsidian:app:extract-selection-first-line": [],
   "templater-obsidian:jump-to-next-cursor-location": [],
   "templater-obsidian:replace-in-file-templater": [],
-  "obsidian-icons-plugin:open-icons-plugin-modal": [],
-  "editor:toggle-italics": [],
   "editor:open-link-in-new-leaf": [],
   "quickadd:runQuickAdd": [
     {

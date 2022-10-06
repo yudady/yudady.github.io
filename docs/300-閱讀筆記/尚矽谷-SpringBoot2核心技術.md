@@ -46,7 +46,7 @@ source-url :: [SpringBoot2核心技術與響應式編程· 語雀](https://www
 	- source-url :: [getting-started.first-application.executable-jar](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.first-application.executable-jar)
 - [x] 06、基础入门 SpringBoot 依赖管理特性.mp4
 - [x] 07、基础入门 SpringBoot 自动配置特性.mp4
-- [ ] 08、底层注解 @Configuration 详解.mp4
+- [x] 08、底层注解 @Configuration 详解.mp4
 - [ ] 09、底层注解 @Import 导入组件.mp4
 - [ ] 10、底层注解 @Conditional 条件装配.mp4
 - [ ] 11、底层注解 @ImportResource 导入 Spring 配置文件.mp4

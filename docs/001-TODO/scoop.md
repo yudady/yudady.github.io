@@ -3,7 +3,7 @@ title: 📚scoop
 tags: [2022-10, devops]
 aliases: [📚scoop]
 created_date: 2022-10-06 00:43
-updated_date: 2022-10-06 00:53
+updated_date: 2022-10-06 10:59
 ---
 
 # 📚scoop
@@ -29,30 +29,18 @@ choco install powershell-core
 choco install pwsh
 ```
 
-```powershell 7
+> [!info] use powershell 7 run
+> Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+> 
+
+```pwsh
 PowerShell 7.2.6
 Copyright (c) Microsoft Corporation.
 
 https://aka.ms/powershell
 Type 'help' to get help.
 
-PS C:\Users\yu_da> Set-ExecutionPolicy RemoteSigned -scope CurrentUser
-PS C:\Users\yu_da> Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-Initializing...
-Running the installer as administrator is disabled by default, see https://github.com/ScoopInstaller/Install#for-admin for details.
-Abort.
-PS C:\Users\yu_da> irm get.scoop.sh -outfile 'install.ps1'
-PS C:\Users\yu_da> .\install.ps1 -RunAsAdmin [-OtherParameters ...]
-Initializing...
-Downloading...
-Test-Path: C:\Users\yu_da\install.ps1:494
-Line |
- 494 |      if (!(Test-Path $SCOOP_APP_DIR)) {
-     |            ~~~~~~~~~~~~~~~~~~~~~~~~
-     | Cannot retrieve the dynamic parameters for the cmdlet. The specified wildcard character pattern is not
-     | valid: [-OtherParameters
-
-PS C:\Users\yu_da> iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+PS C:\Users\tommy.lin> Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 Initializing...
 Downloading...
 Extracting...
@@ -63,6 +51,10 @@ Scoop was installed successfully!
 
 ## 📝 怎麼玩
 
-- TODO
-- [Quick Start | Scoop](https://scoop-docs.vercel.app/docs/getting-started/Quick-Start.html#using-scoop)
-- TODO
+- [Scoop](https://scoop.sh/) : A command-line installer for Windows
+	- 安裝程式不會加入 path 路徑
+	- Scoop 默認將程序安裝到您的主目錄。因此，您不需要管理員權限即可安裝程序，並且每次需要添加或刪除程序時，您都不會看到 UAC 彈出窗口。
+	- buckets
+- [Quick Start | Scoop](https://scoop-docs.vercel.app/docs/getting-started/Quick-Start.html#using-scoop) : 如何開始
+- [ScoopInstaller/Extras: 📦 The Extras bucket for Scoop.](https://github.com/ScoopInstaller/Extras) : github
+- [Scoop doc](https://scoop-docs.vercel.app/) : 文檔

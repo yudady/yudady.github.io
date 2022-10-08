@@ -4,16 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3d00405707158a4e",
+        "id": "183ccb492dacfed1",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md",
-            "mode": "source",
-            "backlinks": true,
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -54,8 +49,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 321.5,
-    "collapsed": true
+    "width": 321.5
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -70,9 +64,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md"
-              }
+              "state": {}
             }
           },
           {
@@ -114,7 +106,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -149,7 +140,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -161,7 +151,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -180,8 +169,9 @@
     "width": 247.5,
     "collapsed": true
   },
-  "active": "3d00405707158a4e",
+  "active": "183ccb492dacfed1",
   "lastOpenFiles": [
+    "pom.md",
     "index.md",
     "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md",
     "001-TODO/scoop.md",
@@ -190,7 +180,6 @@
     "001-TODO/444444444444444444.md",
     "001-TODO/3333333333333.md",
     "001-TODO/1111111111111.md",
-    "001-TODO/vvvvvvvvvvvvvvvvv.md",
-    "templates/quick-add/todo-templater.md"
+    "001-TODO/vvvvvvvvvvvvvvvvv.md"
   ]
 }

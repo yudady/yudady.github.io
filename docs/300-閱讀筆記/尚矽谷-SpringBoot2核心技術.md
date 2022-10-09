@@ -1,10 +1,11 @@
 ---
+created_date: 2022-10-04 21:15
+updated_date: 2022-10-09 11:29
 title: 尚矽谷 -SpringBoot2 核心技術
 tags: ["spring", "sptingboot", "atguigu"]
 date: 2022-10-03 09:59
 modified: 2022-10-03 13:00
 aliases: [尚矽谷 -SpringBoot2 核心技術]
-linter-yaml-title-alias: 尚矽谷 -SpringBoot2 核心技術
 ---
 
 ---
@@ -36,11 +37,10 @@ source-url :: [SpringBoot2核心技術與響應式編程· 語雀](https://www
 ---
 
 - [x] 01、基础入门 SpringBoot2 课程介绍.mp4
-		- [ ] @
 - [x] 02、基础入门 Spring 生态圈.mp4
 - [x] 03、基础入门 SpringBoot 的大时代背景.mp4
 - [x] 04、基础入门 SpringBoot 官方文档架构.mp4
-	-  source-url :: [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/)
+	- source-url :: [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/)
 - [x] 05、基础入门 SpringBoot HelloWorld.mp4
 	- source-url :: [Getting Started](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.first-application.run)
 	- source-url :: [Common Application Properties](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#appendix.application-properties.server)
@@ -48,10 +48,23 @@ source-url :: [SpringBoot2核心技術與響應式編程· 語雀](https://www
 - [x] 06、基础入门 SpringBoot 依赖管理特性.mp4
 - [x] 07、基础入门 SpringBoot 自动配置特性.mp4
 - [x] 08、底层注解 @Configuration 详解.mp4
+	- 1、配置类里面使用@Bean 标注在方法上给容器注册组件，默认也是单实例的  
+	- 2、配置类本身也是组件  
+	- 3、proxyBeanMethods：代理 bean 的方法  
+		- Full(proxyBeanMethods = true)、【保证每个@Bean 方法被调用多少次返回的组件都是单实例的】  
+		- Lite(proxyBeanMethods = false)【每个@Bean 方法被调用多少次返回的组件都是新创建的】  
+		- 组件依赖必须使用 Full 模式默认。其他默认是否 Lite 模式  
+	- 4、@Import({User.class, DBHelper.class}) 给容器中自动创建出这两个类型的组件、默认组件的名字就是全类名  
+	- 5、@ImportResource("classpath:beans.xml") 导入 Spring 的配置文件，
+	- @Configuration, 會被直接掃描到，缺@Configuration 可以用下列註解導入 bean
+		- Import : 裡面可以放入 impl => ImportSelector or ImportBeanDefinitionRegistrar
+		- ImportResource : 可以被 BeanDefinitionReader 讀取 , 老專案可以這樣用 : ==@ImportResource({ "classpath:beans.xml" })==
 - [ ] 09、底层注解 @Import 导入组件.mp4
 - [ ] 10、底层注解 @Conditional 条件装配.mp4
 - [ ] 11、底层注解 @ImportResource 导入 Spring 配置文件.mp4
 - [ ] 12、底层注解 @ConfigurationProperties 配置绑定.mp4
+	- @Component + @ConfigurationProperties
+	- @EnableConfigurationProperties + @ConfigurationProperties
 - [ ] 13、自动配置【源码分析】 自动包规则原理.mp4
 - [ ] 14、自动配置【源码分析】 初始加载自动配置类.mp4
 - [ ] 15、自动配置【源码分析】 自动配置流程.mp4

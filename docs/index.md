@@ -13,7 +13,7 @@ linter-yaml-title-alias: Personal Knowledge Manage
 
 - [SpringBoot2 核心技術與響應式編程](300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md)
 - [001-TODO/java-Jigsaw](001-TODO/java-Jigsaw.md)
-- [[001-TODO/scoop]]
+- [[windows/scoop]]
 
 ---
 

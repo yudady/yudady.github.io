@@ -36,6 +36,7 @@ source-url :: [SpringBoot2核心技術與響應式編程· 語雀](https://www
 ---
 
 - [x] 01、基础入门 SpringBoot2 课程介绍.mp4
+		- [ ] @
 - [x] 02、基础入门 Spring 生态圈.mp4
 - [x] 03、基础入门 SpringBoot 的大时代背景.mp4
 - [x] 04、基础入门 SpringBoot 官方文档架构.mp4

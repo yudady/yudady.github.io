@@ -7,8 +7,13 @@
         "id": "183ccb492dacfed1",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
         }
       }
     ],
@@ -64,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md"
+              }
             }
           },
           {
@@ -106,6 +113,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -140,6 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -151,6 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,8 +181,8 @@
   },
   "active": "183ccb492dacfed1",
   "lastOpenFiles": [
-    "pom.md",
     "index.md",
+    "pom.md",
     "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md",
     "001-TODO/scoop.md",
     "001-TODO/2222222222222222.md",

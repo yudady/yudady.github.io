@@ -16,6 +16,12 @@ import java.util.stream.Collectors;
 
 import tk.tommy.v3.FFmpegMediaUtil;
 
+
+/**
+ * $ for f in *.mp4; do echo "file '$f'" >> videos.txt; done
+ *
+ * $ ffmpeg -f concat -i videos.txt -c copy output9.mp4
+ */
 public class ConcatenateMp4 {
 	static Path path = Paths.get("D:\\Downloads\\1\\1\\");
 

@@ -2,6 +2,7 @@ package tk.tommy.concatmp4;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -16,7 +17,7 @@ import java.util.stream.Collectors;
 import tk.tommy.v3.FFmpegMediaUtil;
 
 public class ConcatenateMp4 {
-	static Path path = Paths.get("D:\\Downloads\\01 (2)\\视频\\");
+	static Path path = Paths.get("D:\\Downloads\\1\\1\\");
 
 	private static final String FFMPEG_PATH = FFmpegMediaUtil.class.getResource("/ffmpeg.exe").getFile();
 
@@ -25,8 +26,9 @@ public class ConcatenateMp4 {
 		File[] files = path.toFile().listFiles();
 		String targetFileName = "merge-" + files[0].getName();
 		String names = Arrays.stream(files)
-				.filter(f -> f.getName().contains("mp4"))
+				.filter(f -> f.getName().contains(".mp4"))
 				.map(File::getAbsolutePath)
+				.sorted()
 				.collect(Collectors.joining("|"));
 
 

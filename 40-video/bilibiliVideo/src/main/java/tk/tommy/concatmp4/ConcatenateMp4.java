@@ -27,6 +27,8 @@ import tk.tommy.v3.FFmpegMediaUtil;
  * $ for f in *.mp4; do echo "file '$f'" >> videos.txt; done
  *
  * $ ffmpeg -f concat -i videos.txt -c copy output9.mp4
+ *
+ *
  */
 public class ConcatenateMp4 {
 	static Path path = Paths.get("D:\\Downloads\\1\\1\\");
@@ -35,23 +37,32 @@ public class ConcatenateMp4 {
 
 	public static void main(String[] args) throws IOException {
 
-		File[] files = path.toFile().listFiles();
-		String targetFileName = "merge-" + files[0].getName();
-		String names = Arrays.stream(files)
-				.filter(f -> f.getName().contains(".mp4"))
-				.map(File::getAbsolutePath)
-				.sorted()
-				.collect(Collectors.joining("|"));
+//		File[] files = path.toFile().listFiles();
+//		String targetFileName = "merge-" + files[0].getName();
+//		String names = Arrays.stream(files)
+//				.filter(f -> f.getName().contains(".mp4"))
+//				.map(File::getAbsolutePath)
+//				.sorted()
+//				.collect(Collectors.joining("|"));
 
 
 		// 构建命令
+		// ffmpeg -f concat -safe 0 -i
+		// D:/tommy/github-repo/yudady/practise-workspace/40-video/bilibiliVideo/src/main/java/tk/tommy/concatmp4/videos.txt
+		// -c
+		// copy
+		// C:/Users/yu_da/Desktop/workoutput.mp4
 		List<String> command = new ArrayList<>();
+		command.add("-f");
 		command.add(FFMPEG_PATH);
+		command.add("-f");
+		command.add("concat");
+		command.add("-safe");
+		command.add("0");
 		command.add("-i");
-		command.add("concat:" + names);
-		command.add("-c");
+		command.add("/d//tommy/github-repo/yudady/practise-workspace/40-video/bilibiliVideo/src/main/java/tk/tommy/concatmp4/videos.txt");
 		command.add("copy");
-		command.add(Path.of(path.toString(), targetFileName).toString());
+		command.add("/c/Users/yu_da/Desktop/output.mp4");
 		// 执行操作
 		ProcessBuilder builder = new ProcessBuilder(command);
 		try {

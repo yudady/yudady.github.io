@@ -14,6 +14,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.google.common.base.Joiner;
+import net.bramp.ffmpeg.FFmpeg;
+import net.bramp.ffmpeg.FFmpegExecutor;
+import net.bramp.ffmpeg.FFprobe;
+import net.bramp.ffmpeg.ProcessFunction;
+import net.bramp.ffmpeg.builder.FFmpegBuilder;
 import tk.tommy.v3.FFmpegMediaUtil;
 
 
@@ -69,5 +75,27 @@ public class ConcatenateMp4 {
 		catch (IOException e) {
 			throw new UncheckedIOException(e);
 		}
+	}
+
+
+	public void testExample6() throws IOException {
+		FFmpeg ffmpeg = new FFmpeg(this.getClass().getClassLoader().getResource("/ffmpeg.exe").toString());
+		FFprobe ffprobe = new FFprobe("/usr/local/Cellar/ffmpeg/4.1/bin/ffprobe");
+
+		FFmpegBuilder builder =
+				new FFmpegBuilder()
+						.addInput("image%03d.png")
+						.addOutput("output.mp4")
+						.setVideoFrameRate(FFmpeg.FPS_24)
+						.done();
+
+		String expected = "ffmpeg -y -v error -i image%03d.png -r 24/1 output.mp4";
+		String actual = Joiner.on(" ").join(ffmpeg.path(builder.build()));
+
+		System.out.println(expected.equals(actual));
+
+		FFmpegExecutor executor = new FFmpegExecutor(ffmpeg, ffprobe);
+		executor.createJob(builder).run();
+
 	}
 }

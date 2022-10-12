@@ -1,7 +1,7 @@
 # concat mp4
 ## 1
 ```shell
-for f in *.mp4; do echo "file '$PWD/$f'"; done > videos.txt
+for f in *.mp4; do echo "file '$f'"; done > videos.txt
 ```
 
 

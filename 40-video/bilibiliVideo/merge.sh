@@ -1,9 +1,5 @@
 #!/bin/bash
 
-[ -e list.txt ] && rm list.txt
-for f in *.mp4
-do
-   echo "file $f" >> list.txt
-done
+for f in *.mp4; do echo "file '$f'"; done > videos.txt
 
-ffmpeg.exe -f concat -i list.txt -c copy joined-out.mp4 && rm list.txt
+/d/tommy/github-repo/yudady/practise-workspace/40-video/bilibiliVideo/src/main/resources/ffmpeg.exe -f concat -safe 0 -i videos.txt -c copy output.mp4

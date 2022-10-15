@@ -1,0 +1,208 @@
+{
+  "main": {
+    "id": "0fa9ae663bd13929",
+    "type": "split",
+    "children": [
+      {
+        "id": "c1e48e66afa88081",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9fa435a1e6173891",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "300-閱讀筆記/README-templates-folder.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c0919f4f8da95291",
+    "type": "split",
+    "children": [
+      {
+        "id": "4dcc60248d2e3363",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b1ae197fff4bfdd1",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "81ab66aee8069bec",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#todo",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 321.5
+  },
+  "right": {
+    "id": "17640f5fc7202c27",
+    "type": "split",
+    "children": [
+      {
+        "id": "3fecf2d96e0dab36",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6537a3e867a6ff55",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "300-閱讀筆記/README-templates-folder.md"
+              }
+            }
+          },
+          {
+            "id": "a23e15e9bd038082",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "alphabetical",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "bed7c2c835bc9736",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "e4217513315cfc38",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "78e3fecbef45c937",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "91b3678e71ee2f83",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "300-閱讀筆記/README-templates-folder.md",
+                "options": {
+                  "collapse-filter": false,
+                  "search": "",
+                  "localJumps": 5,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": false,
+                  "centerStrength": 0.49711681547619,
+                  "repelStrength": 11.7280505952381,
+                  "linkStrength": 1,
+                  "linkDistance": 237,
+                  "scale": 0.6372987299011715,
+                  "close": true
+                }
+              }
+            }
+          },
+          {
+            "id": "4ff6fa7e97ba7269",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "300-閱讀筆記/README-templates-folder.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "9b79938fe658765c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "300-閱讀筆記/README-templates-folder.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 247.5,
+    "collapsed": true
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "9fa435a1e6173891",
+  "lastOpenFiles": [
+    "400-devops/000-MOC-devops.md",
+    "400-devops/DevOps_Roadmap_by_TWN.01.pdf",
+    "400-devops/images/DevOps_Roadmap_by_TWN.01.pdf",
+    "index.md",
+    "windows/000-MOC-tools.md",
+    "windows/scoop.md",
+    "pom.md",
+    "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md",
+    "001-TODO/2222222222222222.md",
+    "001-TODO/333333333.md"
+  ]
+}

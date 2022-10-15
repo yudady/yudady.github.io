@@ -14,4 +14,4 @@ aliases: [000-MOC-tools]
 - [install-multiple-Ubuntu-WSL2](install-multiple-Ubuntu-WSL2.md) : 手動安裝 windows sub-system
 - [install-wslg](install-wslg.md) : 安裝 wslg 命令
 - [wsl-command](wsl-command.md) : 安裝 wsl 命令
-- [[scoop|📚scoop]] : windows 安裝 command line 軟體
+- [📚scoop](scoop.md) : windows 安裝 command line 軟體

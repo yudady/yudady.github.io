@@ -105,13 +105,13 @@
       "Removes consecutive list markers. Useful when copy-pasting list items.": false
     },
     "Remove Empty List Markers": {
-      "Removes empty list markers, i.e. list items without content.": true
+      "Removes empty list markers, i.e. list items without content.": false
     },
     "Remove Hyphenated Line Breaks": {
       "Removes hyphenated line breaks. Useful when pasting text from textbooks.": false
     },
     "Remove Multiple Spaces": {
-      "Removes two or more consecutive spaces. Ignores spaces at the beginning and ending of the line. ": true
+      "Removes two or more consecutive spaces. Ignores spaces at the beginning and ending of the line. ": false
     },
     "Strong Style": {
       "Makes sure the strong style is consistent.": false,
@@ -156,10 +156,10 @@
       "All paragraphs should have exactly one blank line both before and after.": true
     },
     "Remove Empty Lines Between List Markers and Checklists": {
-      "There should not be any empty lines between list markers and checklists.": true
+      "There should not be any empty lines between list markers and checklists.": false
     },
     "Remove link spacing": {
-      "Removes spacing around link text.": true
+      "Removes spacing around link text.": false
     },
     "Remove Space around Fullwidth Characters": {
       "Ensures that fullwidth characters are not followed by whitespace (either single spaces or a tab). Note that this may causes issues with markdown format in some cases.": false

@@ -1,6 +1,6 @@
 ---
 created_date: 2022-10-04 19:55
-updated_date: 2022-10-15 17:47
+updated_date: 2022-10-18 12:21
 title: 000-MOC-devops
 tags: ["devops"]
 date: 2022-04-09 19:44
@@ -17,6 +17,7 @@ aliases: [000-MOC-devops]
 - [free-domain](free-domain.md) : 免費域名 + DNS
 - [ngrok](ngrok.md) : proxy server
 - [vscode-devcontainer](vscode-devcontainer.md) : 快速安裝開發環境
+- [[podman|podman]] :  docker container 替代品
 
 
 ---

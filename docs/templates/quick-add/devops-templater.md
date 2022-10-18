@@ -6,7 +6,7 @@ created_date: {{DATE:YYYY-MM-DD HH:mm:ss}}
 updated_date: {{DATE:YYYY-MM-DD HH:mm:ss}}
 ---
 
-# 📚{{NAME}}
+# {{NAME}}
 - **🏷️Tags** :   #<% tp.file.creation_date('YYYY-MM') %> #devops 
 - Link: 
 

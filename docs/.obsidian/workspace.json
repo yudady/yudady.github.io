@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "fafb0dacd4c89843",
+        "id": "56b8d3ce5b86daf0",
         "type": "tabs",
         "children": [
           {
-            "id": "f69703f9453820f9",
+            "id": "ef66817d85746da1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -31,13 +36,11 @@
           {
             "id": "b1ae197fff4bfdd1",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              },
-              "pinned": true
+              }
             }
           },
           {
@@ -59,7 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 321.5
+    "width": 250.5
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -75,7 +78,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "300-閱讀筆記/README-templates-folder.md"
+                "file": "index.md"
               }
             }
           },
@@ -118,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "300-閱讀筆記/README-templates-folder.md",
+                "file": "index.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -153,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "300-閱讀筆記/README-templates-folder.md",
+                "file": "index.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -165,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "300-閱讀筆記/README-templates-folder.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,17 +190,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "f69703f9453820f9",
+  "active": "ef66817d85746da1",
   "lastOpenFiles": [
-    "400-devops/000-MOC-devops.md",
-    "400-devops/DevOps_Roadmap_by_TWN.01.pdf",
-    "400-devops/images/DevOps_Roadmap_by_TWN.01.pdf",
-    "index.md",
     "windows/000-MOC-tools.md",
-    "windows/scoop.md",
-    "pom.md",
-    "300-閱讀筆記/尚矽谷-SpringBoot2核心技術.md",
-    "001-TODO/2222222222222222.md",
-    "001-TODO/333333333.md"
+    "index.md",
+    "400-devops/000-MOC-devops.md",
+    "001-TODO/prometheus.md",
+    "100-InBox/java-Jigsaw.md",
+    "400-devops/podman.md",
+    "templates/quick-add/devops-templater.md",
+    "templates/quick-add/todo-templater.md",
+    "001-TODO/test-templater.md",
+    "400-devops/DevOps_Roadmap_by_TWN.01.pdf"
   ]
 }

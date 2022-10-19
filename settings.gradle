@@ -1,6 +1,8 @@
-rootProject.name = 'practise-workspace'
-//include('app', 'list', 'utilities')
-include('app')
+rootProject.name = 'yudady.github.io'
+
+
+
+include('utils')
 //include '10-java:unistar-16-undertow'
 //include '15-springboot:k8s'
 //include '15-springboot:testcontainers:postgres'

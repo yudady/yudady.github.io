@@ -11,8 +11,13 @@
             "id": "d288651d1c60f7f3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -73,7 +78,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/gitpod.md"
+                "file": "index.md"
               }
             }
           },
@@ -116,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/gitpod.md",
+                "file": "index.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -151,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/gitpod.md",
+                "file": "index.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -163,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/gitpod.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",

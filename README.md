@@ -5,6 +5,16 @@
 
 ![devops](./images/DevOps-Life-Cycle.svg)
 
+## A standard DevOps Lifecycle consists of 7 phases. Here are they
+- Continuous Development
+- Continuous Integration
+- Continuous Testing
+- Continuous Monitoring
+- Continuous Feedback
+- Continuous Deployment
+- Continuous Operations
+
+
 [筆記](https://yudady.github.io/)
 
 ## 起動 mkdocs-live-reload

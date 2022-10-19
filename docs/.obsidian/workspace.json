@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "c667b81c4fb25e2c",
+        "id": "1909957aa755a5f3",
         "type": "tabs",
         "children": [
           {
-            "id": "b8609bddf9757864",
+            "id": "d288651d1c60f7f3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "001-TODO/gitpod.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -78,7 +73,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/gitpod.md"
+                "file": "400-devops/gitpod.md"
               }
             }
           },
@@ -121,7 +116,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "001-TODO/gitpod.md",
+                "file": "400-devops/gitpod.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -156,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "001-TODO/gitpod.md",
+                "file": "400-devops/gitpod.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -168,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "001-TODO/gitpod.md",
+                "file": "400-devops/gitpod.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,23 +179,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 247.5,
-    "collapsed": true
+    "width": 262.5
   },
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "b8609bddf9757864",
+  "active": "d288651d1c60f7f3",
   "lastOpenFiles": [
+    "400-devops/000-MOC-devops.md",
+    "400-devops/gitpod.md",
     "index.md",
     "windows/000-MOC-tools.md",
-    "400-devops/000-MOC-devops.md",
     "001-TODO/prometheus.md",
     "100-InBox/java-Jigsaw.md",
     "400-devops/podman.md",
     "templates/quick-add/devops-templater.md",
     "templates/quick-add/todo-templater.md",
-    "001-TODO/test-templater.md",
-    "400-devops/DevOps_Roadmap_by_TWN.01.pdf"
+    "001-TODO/test-templater.md"
   ]
 }

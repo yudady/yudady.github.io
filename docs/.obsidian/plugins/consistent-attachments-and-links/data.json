@@ -14,7 +14,8 @@
     "Excalidraw/"
   ],
   "ignoreFiles": [
-    "consistant-report.md"
+    "consistant-report.md",
+    "*.pdf"
   ],
   "attachmentsSubfolder": "images",
   "consistentReportFile": "consistant-report.md",

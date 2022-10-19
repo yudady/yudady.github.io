@@ -1,6 +1,6 @@
 ---
 created_date: 2022-10-04 19:55
-updated_date: 2022-10-18 12:21
+updated_date: 2022-10-19 11:39
 title: 000-MOC-devops
 tags: ["devops"]
 date: 2022-04-09 19:44
@@ -12,12 +12,13 @@ aliases: [000-MOC-devops]
 
 ![](images/000-MOC-devops-202210151622.png)
 
-- [[DevOps_Roadmap_by_TWN.01.pdf]] : DevOps Engineer 
+- [DevOps_Roadmap_by_TWN.01.pdf](images/DevOps_Roadmap_by_TWN.01.pdf) : DevOps Engineer 
 - [github-action](github-action.md) : CI/CD
 - [free-domain](free-domain.md) : 免費域名 + DNS
 - [ngrok](ngrok.md) : proxy server
 - [vscode-devcontainer](vscode-devcontainer.md) : 快速安裝開發環境
-- [[podman|podman]] :  docker container 替代品
+- [podman](podman.md) :  docker container 替代品
+- [gitpod](gitpod.md) : 瀏覽器 ide 開發工具，快速執行 github 程式，不用 clone 到本地
 
 
 ---

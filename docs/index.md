@@ -17,9 +17,9 @@ aliases: [Personal Knowledge Manage, "靈感筆記"]
 - [windows/scoop](windows/scoop.md)
 
 ---
-- [[400-devops/000-MOC-devops|devops學習地圖]] ： devops 地圖
-- [[200-學習OB/000-obsidian|obsidian 學習]] : obsidian 學習地圖
-- [[windows/000-MOC-tools|windows-工具]] : tools 地圖
+- [devops學習地圖](400-devops/000-MOC-devops.md) ： devops 地圖
+- [obsidian 學習](200-學習OB/000-obsidian.md) : obsidian 學習地圖
+- [windows-工具](windows/000-MOC-tools.md) : tools 地圖
 - [反查Git-連猴子都能懂的Git入門指南](https://backlog.com/git-tutorial/tw/reference/) : git tutorial
 - [Petri Kainulainen](https://www.petrikainulainen.net/) : test tutorial
 - [2022最新版！【失業補助】申請總整理](https://pro.104.com.tw/vip/preLogin/recruiterForum/post/59099#001)

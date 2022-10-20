@@ -3,7 +3,7 @@ title: 📚sagan
 tags: [2022-10, devops]
 aliases: [📚sagan]
 created_date: 2022-10-06 10:05
-updated_date: 2022-10-06 10:07
+updated_date: 2022-10-20 15:21
 ---
 
 # 📚sagan

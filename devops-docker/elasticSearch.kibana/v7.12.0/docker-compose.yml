@@ -1,0 +1,34 @@
+version: '2.2'
+services:
+  es01:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.0
+    container_name: es01
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - ./data/es01:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+    networks:
+      - elk
+
+  kib01:
+    image: docker.elastic.co/kibana/kibana:7.12.0
+    container_name: kib01
+    ports:
+      - 5601:5601
+    environment:
+      ELASTICSEARCH_URL: http://es01:9200
+      ELASTICSEARCH_HOSTS: http://es01:9200
+    networks:
+      - elk
+
+networks:
+  elk:
+    driver: bridge
+
+
+###
+### curl -X GET "localhost:9200/_cat/nodes?v&pretty"
+### kibana  http://localhost:5601/app/home#/

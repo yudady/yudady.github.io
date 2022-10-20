@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  mysql_5:
+    container_name: mysql5
+    build:
+      context: ./mysql5
+      dockerfile: Dockerfile
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: l1jtw
+      MYSQL_USER: tommy
+      MYSQL_PASSWORD: tommy
+    volumes:
+      - ./mysql5/data/data:/var/lib/mysql
+      - ./mysql5/data/sql:/docker-entrypoint-initdb.d
+      - ./mysql5/data/log:/var/log/mysql
+    command: mysqld --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    security_opt:
+      - seccomp:unconfined
+
+

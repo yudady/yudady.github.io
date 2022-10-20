@@ -1,4 +1,4 @@
-name: devops-02-gradle
+name: utils
 on:
   push:
     branches:
@@ -9,7 +9,7 @@ on:
 
 jobs:
 
-  devops-02-gradle:
+  utils:
 
     runs-on: ubuntu-latest
 

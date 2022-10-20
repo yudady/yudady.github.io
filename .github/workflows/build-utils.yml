@@ -32,7 +32,7 @@ jobs:
       #########################
 
       - name: change gradlew Permission
-        run: chmod +x ./springboot-devops/devops-02-gradle/gradlew
+        run: chmod +x ./utils/gradlew
 
       - name: build gradle jar
         uses: gradle/gradle-build-action@v2

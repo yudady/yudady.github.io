@@ -13,7 +13,7 @@ updated_date: 2022-10-05 11:27
 
 ## spting projects
 
-- [ ] [Spring Boot](https://spring.io/projects/spring-boot) : [[springboot]]
+- [ ] [Spring Boot](https://spring.io/projects/spring-boot) : [springboot](springboot.md)
 - [ ] [Spring Framework](https://spring.io/projects/spring-framework)
 - [ ] [Spring Data](https://spring.io/projects/spring-data)
 - [ ] [Spring Cloud](https://spring.io/projects/spring-cloud)

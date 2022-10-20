@@ -28,9 +28,9 @@ aliases: [Personal Knowledge Manage, "靈感筆記"]
 
 
 
-- [ ] [[001-TODO/spring]]
-- [ ] [[001-TODO/springboot]] : 進行中
-- [ ] [[001-TODO/sagan]] : a springboot demo 
+- [ ] [001-TODO/spring](001-TODO/spring.md)
+- [ ] [001-TODO/springboot](001-TODO/springboot.md) : 進行中
+- [ ] [001-TODO/sagan](001-TODO/sagan.md) : a springboot demo 
 
 ---
 

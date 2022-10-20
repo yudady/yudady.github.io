@@ -15,7 +15,7 @@ updated_date: 2022-10-06 17:47
 - [x] [Documentation Overview](https://docs.spring.io/spring-boot/docs/current/reference/html/documentation.html#documentation) : 總覽
 	- spring-cli 可以直接 run groovy
 - [x] [Getting Started](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started) : Introducing Spring Boot, System Requirements, Servlet Containers, Installing Spring Boot, and Developing Your First Spring Boot Application
-- [x] [Using Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using) : Build Systems, Structuring Your Code, Configuration, Spring Beans and Dependency Injection, DevTools, and more. : [[開發一個springboot流程]]
+- [x] [Using Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/using.html#using) : Build Systems, Structuring Your Code, Configuration, Spring Beans and Dependency Injection, DevTools, and more. : [開發一個springboot流程](開發一個springboot流程.md)
 - [x] [Core Features](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features) :Profiles, Logging, Security, Caching, Spring Integration, Testing, and more.
 	- ApplicationContextEvent 不能用 `@Bean` 創建
 	- META-INF/spring.factories : **org.springframework.context.ApplicationListener**=com.example.project.MyListener

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: myapp
+    nane: myapp
+  namespace: default
+  name: myapp
+
+spec:
+  containers:
+    - image: nginx
+      name: nginx
+    - image: tomcat:8.5.68-jdk8
+      name: tomcat

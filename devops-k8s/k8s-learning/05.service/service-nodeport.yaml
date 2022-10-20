@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: service-nodeport
+  name: service-nodeport
+spec:
+  selector:
+    app: my-nginx
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 80
+  type: NodePort
+
+# kubectl get service
+# my-service   ClusterIP   10.103.116.92   <none>        80/TCP    23s
+# curl 10.103.116.92

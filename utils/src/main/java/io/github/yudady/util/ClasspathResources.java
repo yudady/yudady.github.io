@@ -1,4 +1,4 @@
-package practise.workspace.app;
+package io.github.yudady.util;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,6 +9,9 @@ import java.util.Iterator;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
+/**
+ * @author neo
+ */
 public final class ClasspathResources {
     public static String text(String path) {
         return new String(bytes(path), UTF_8);
@@ -42,3 +45,4 @@ public final class ClasspathResources {
         throw new Error("can not load resource, path=" + path);
     }
 }
+

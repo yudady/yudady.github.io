@@ -1,8 +1,8 @@
 ---
 created_date: 2022-10-04 13:43
-updated_date: 2022-10-20 15:48
+updated_date: 2022-10-20 22:55
 title: Github-Action
-tags: [github, github-action , workflow]
+tags: [github, github-action , workflow, 2022-10]
 date: 2022-09-29 12:03
 modified: 2022-10-04 16:45
 aliases: [Github-Action]
@@ -10,6 +10,8 @@ aliases: [Github-Action]
 
 # Github-Action
 
+- **🏷️Tags** :   #2022-10 #github
+- Link: 
 簡介範例 :: [Guides for GitHub Actions - GitHub Docs](https://docs.github.com/en/actions/guides)
 
 source-url :: [GitHub Actions Documentation - GitHub Docs](https://docs.github.com/en/actions)
@@ -30,8 +32,8 @@ source-url :: [Workflow syntax](https://docs.github.com/en/actions/using-workf
 
 event -> workflows -> jobs
 
-## 自動構建部署到倉庫
+## 自動構建部署到倉庫 ([[github-packages]])
 
 - build maven : [[maven#repository]]
 - build gradle : [[gradle#repository]]
-- build docker : [[docker#repository]]
+- build docker : [[../container/docker#repository]]

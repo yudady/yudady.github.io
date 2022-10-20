@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "45290d94dd231751",
+        "id": "21b55aed0fbf775d",
         "type": "tabs",
         "children": [
           {
-            "id": "482b410481f70713",
+            "id": "aa45da15238d6de3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "001-TODO/建立 private 的 Docker Registry.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -73,7 +78,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "001-TODO/建立 private 的 Docker Registry.md"
               }
             }
           },
@@ -116,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "index.md",
+                "file": "001-TODO/建立 private 的 Docker Registry.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -151,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "001-TODO/建立 private 的 Docker Registry.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -163,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "001-TODO/建立 private 的 Docker Registry.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,17 +189,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "482b410481f70713",
+  "active": "aa45da15238d6de3",
   "lastOpenFiles": [
+    "001-TODO/本地開發 Kubernetes 應用程式流程.md",
+    "index.md",
     "400-devops/000-MOC-devops.md",
     "400-devops/gitpod.md",
-    "index.md",
     "windows/000-MOC-tools.md",
     "001-TODO/prometheus.md",
     "100-InBox/java-Jigsaw.md",
     "400-devops/podman.md",
     "templates/quick-add/devops-templater.md",
-    "templates/quick-add/todo-templater.md",
-    "001-TODO/test-templater.md"
+    "templates/quick-add/todo-templater.md"
   ]
 }

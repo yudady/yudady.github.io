@@ -10,6 +10,8 @@ repositories {
 	}
 }
 
+sourceCompatibility = '17'
+
 dependencies {
 	testImplementation group: 'junit', name: 'junit', version: '4.13'
 
@@ -46,8 +48,8 @@ publishing {
 
 	repositories {
 		maven {
-			url = "file:///d:/tommy/github-repo/yudady/maven2"
-//				url = "file:///d:/tommy/github-repo/yudady-source/repo/maven2"
+//			url = "file:///d:/tommy/github-repo/yudady/maven2"
+			url = "file:///d:/tommy/github-repo/yudady-source/repo/maven2"
 		}
 	}
 }

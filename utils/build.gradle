@@ -42,7 +42,7 @@ test {
 
 publishing {
 	publications {
-		maven2LocalRepo(org.gradle.api.publish.maven.MavenPublication) {
+		maven2LocalRepo(MavenPublication) {
 			groupId = 'io.github.yudady'
 			version = '0.0.1-SNAPSHOT'
 

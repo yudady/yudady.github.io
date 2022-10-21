@@ -3,7 +3,7 @@ title: GitHub-packages
 tags: [2022-10, todo, github]
 aliases: [GitHub-packages, github-packages]
 created_date: 2022-10-20 22:14
-updated_date: 2022-10-20 22:54
+updated_date: 2022-10-21 10:12
 ---
 
 # GitHub-packages
@@ -14,3 +14,7 @@ updated_date: 2022-10-20 22:54
 ## GitHub Packages 僅支持使用個人訪問令牌（經典）進行身份驗證。
 
 - GitHub Packages only supports authentication using a **personal access token** (classic).  *read:packages*
+- token commit 到會被自動移除，不好用，因為下在需要 token
+- 目前已知私有 repository of [[../maven|maven]] 處理方式 : [[../maven#private maven repository|公開的私有倉庫]]
+
+---

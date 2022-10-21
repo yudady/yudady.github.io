@@ -41,23 +41,52 @@ test {
 
 
 publishing {
-    repositories {
-        maven {
-            name = "github"
-            url = uri("https://maven.pkg.github.com/yudady/yudady.github.io")
-            credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
-            }
-        }
-    }
-    publications {
-        mavenJava(MavenPublication) {
-            group 'io.github.yudady'
-            artifactId = project.name
-            version '0.0.1-SNAPSHOT'
-            // bootJar is the default build task configured by Spring Boot
-            artifact bootJar
-        }
-    }
+	publications {
+		maven2LocalRepo(org.gradle.api.publish.maven.MavenPublication) {
+			groupId = 'io.github.yudady'
+			version = '0.0.1-SNAPSHOT'
+
+			from components.java
+		}
+	}
+
+	repositories {
+		maven {
+//			url = "file:///d:/tommy/github-repo/yudady/maven2"
+			url = "file:///d:/tommy/github-repo/yudady-source/repo/maven2"
+		}
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+//
+//publishing {
+//    repositories {
+//        maven {
+//            name = "github"
+//            url = uri("https://maven.pkg.github.com/yudady/yudady.github.io")
+//            credentials {
+//                username = System.getenv("GITHUB_ACTOR")
+//                password = System.getenv("GITHUB_TOKEN")
+//            }
+//        }
+//    }
+//    publications {
+//        mavenJava(MavenPublication) {
+//            group 'io.github.yudady'
+//            artifactId = project.name
+//            version '0.0.1-SNAPSHOT'
+//            // bootJar is the default build task configured by Spring Boot
+//            artifact bootJar
+//        }
+//    }
+//}

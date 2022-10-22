@@ -27,8 +27,8 @@ repositories {
 }
 
 dependencies {
-
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
 
 

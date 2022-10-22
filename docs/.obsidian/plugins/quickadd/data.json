@@ -35,6 +35,34 @@
       "openFileInMode": "default"
     },
     {
+      "id": "ae27c661-af0b-4d7e-ae21-d518f37dbcd0",
+      "name": "0-spring-templter",
+      "type": "Template",
+      "command": false,
+      "templatePath": "templates/quick-add/spring-templater",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "001-TODO"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false
+      },
+      "appendLink": false,
+      "incrementFileName": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": false
+      },
+      "openFile": true,
+      "openFileInMode": "default"
+    },
+    {
       "id": "7165d0c5-3dfe-4465-b843-4722f96a9072",
       "name": "0-devops-templater",
       "type": "Template",
@@ -57,7 +85,7 @@
       "openFileInNewTab": {
         "enabled": false,
         "direction": "vertical",
-        "focus": true
+        "focus": false
       },
       "openFile": true,
       "openFileInMode": "default"

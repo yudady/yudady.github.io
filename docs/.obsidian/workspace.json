@@ -11,11 +11,30 @@
             "id": "e0567898a700aa8f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "66794f1873fde9b1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "001-TODO/springboot-data-redis.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -53,12 +72,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 211.5
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -73,7 +91,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "001-TODO/springboot-data-redis.md"
+              }
             }
           },
           {
@@ -115,6 +135,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "001-TODO/springboot-data-redis.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -149,6 +170,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "001-TODO/springboot-data-redis.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -160,6 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "001-TODO/springboot-data-redis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -180,17 +203,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "e0567898a700aa8f",
+  "active": "66794f1873fde9b1",
   "lastOpenFiles": [
+    "001-TODO/ss.md",
+    "templates/quick-add/spring-templater.md",
+    "index.md",
     "400-devops/github/github-packages.md",
     "400-devops/maven.md",
     "400-devops/github/000-MOC-GitHub.md",
-    "index.md",
     "400-devops/github/github-action.md",
     "400-devops/000-MOC-devops.md",
     "400-devops/container/建立 private 的 Docker Registry.md",
-    "400-devops/container/docker.md",
-    "400-devops/container/podman.md",
-    "400-devops/gradle.md"
+    "400-devops/container/docker.md"
   ]
 }

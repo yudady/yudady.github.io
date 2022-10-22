@@ -3,7 +3,7 @@ title: springboot-data-redis
 tags: [2022-10, spring]
 aliases: [springboot-data-redis]
 created_date: 2022-10-22 07:31
-updated_date: 2022-10-22 09:19
+updated_date: 2022-10-22 09:38
 ---
 
 # springboot-data-redis
@@ -27,7 +27,6 @@ updated_date: 2022-10-22 09:19
 - _Key Type Operations_
 - _Key Bound Operations_
 
-
-
+![[springboot-data-redis-202210220938.png]]
 
 ---

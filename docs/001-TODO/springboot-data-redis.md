@@ -3,31 +3,31 @@ title: springboot-data-redis
 tags: [2022-10, spring]
 aliases: [springboot-data-redis]
 created_date: 2022-10-22 07:31
-updated_date: 2022-10-22 08:16
+updated_date: 2022-10-22 09:19
 ---
 
 # springboot-data-redis
 
 - **🏷️Tags** :   #2022-10 #spring 
-- Link: 
+- Link: [Spring Data Redis](https://docs.spring.io/spring-data/data-redis/docs/current/reference/html/#why-spring-redis)
 
-## 緣起
+## 📝 怎麼玩
 
-###  Redis 的活動連接
+##  Redis 的活動連接
 
 - RedisConnection
 - RedisConnectionFactory
 
+---
+
 ![[springboot-data-redis-202210220816.png]]
 
-## 是什麼
+## RedisTemplate 操作類型
 
-- 
+- _Key Type Operations_
+- _Key Bound Operations_
 
-## 去哪下載
 
-- 
 
-## 📝 怎麼玩
 
-- 
+---

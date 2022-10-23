@@ -18,7 +18,7 @@ apply plugin: 'io.spring.dependency-management'
 
 
 group = 'io.github.yudady'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.2-SNAPSHOT'
 sourceCompatibility = '17'
 
 repositories {
@@ -44,7 +44,7 @@ publishing {
 	publications {
 		maven2LocalRepo(MavenPublication) {
 			groupId = 'io.github.yudady'
-			version = '0.0.1-SNAPSHOT'
+			version = '0.0.2-SNAPSHOT'
 
 			from components.java
 		}
@@ -52,8 +52,7 @@ publishing {
 
 	repositories {
 		maven {
-//			url = "file:///d:/tommy/github-repo/yudady/maven2"
-			url = "file:///d:/tommy/github-repo/yudady-source/repo/maven2"
+            url = "file:///d:/tommy/github-repo/yudady-source/repo/maven2"
 		}
 	}
 }

@@ -1,4 +1,0 @@
-GET http://localhost:9000/kafka/publish?message=123
-Accept: application/json
-
-###

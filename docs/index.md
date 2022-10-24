@@ -1,6 +1,6 @@
 ---
 created_date: 2022-10-04 13:43
-updated_date: 2022-10-20 15:32
+updated_date: 2022-10-24 15:52
 title: Personal Knowledge Manage
 tags: []
 date: 2022-10-04 13:43
@@ -31,7 +31,7 @@ aliases: [Personal Knowledge Manage, "靈感筆記"]
 - [devops學習地圖](400-devops/000-MOC-devops.md) ： devops 地圖
 - [obsidian 學習](200-學習OB/000-obsidian.md) : obsidian 學習地圖
 - [windows-工具](windows/000-MOC-tools.md) : tools 地圖
-- [[500-spring/000-MOC-spring|spring]] : 500-spring
+- [[500-spring/000-MOC-spring|spring]] : spring 學習地圖
 
 
 ---

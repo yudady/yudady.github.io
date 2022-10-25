@@ -1,5 +1,9 @@
 # devops : 練習筆記項目
 
+![練習筆記項目 workflow](https://github.com/github/docs/actions/workflows/mkdocs-gh-deploy.yml/badge.svg)
+
+
+
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/yudady/yudady.github.io)
 
 

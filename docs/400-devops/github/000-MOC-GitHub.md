@@ -10,5 +10,5 @@ updated_date: 2022-10-20 23:01
 
 # github
 
-- [github-action](github/github-action.md) : CI/CD
-- [[github-packages]] : 倉庫
+- [github-action](github-action.md) : CI/CD
+- [github-packages](github-packages.md) : 倉庫

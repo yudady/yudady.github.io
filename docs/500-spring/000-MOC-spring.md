@@ -10,8 +10,8 @@ aliases: [000-MOC-spring]
 
 # 000-MOC-spring
 
-- [[尚矽谷-SpringBoot2核心技術]]
-- [[開發一個springboot流程]]
-- [[spring]]
-- [[springboot]]
-- [[spring-sagan]]
+- [尚矽谷-SpringBoot2核心技術](尚矽谷-SpringBoot2核心技術.md)
+- [開發一個springboot流程](開發一個springboot流程.md)
+- [spring](spring.md)
+- [springboot](springboot.md)
+- [spring-sagan](spring-sagan.md)

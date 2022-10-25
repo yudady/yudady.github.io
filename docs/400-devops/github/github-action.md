@@ -32,8 +32,8 @@ source-url :: [Workflow syntax](https://docs.github.com/en/actions/using-workf
 
 event -> workflows -> jobs
 
-## 自動構建部署到倉庫 ([[github-packages]])
+## 自動構建部署到倉庫 ([github-packages](github-packages.md))
 
-- build maven : [[maven#repository]]
-- build gradle : [[gradle#repository]]
-- build docker : [[../container/docker#repository]]
+- build maven : [maven > repository](maven#repository)
+- build gradle : [gradle > repository](gradle#repository)
+- build docker : [../container/docker > repository](../container/docker#repository)

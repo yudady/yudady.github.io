@@ -20,13 +20,13 @@ updated_date: 2022-10-22 09:38
 
 ---
 
-![[springboot-data-redis-202210220816.png]]
+![](images/springboot-data-redis-202210220816.png)
 
 ## RedisTemplate 操作類型
 
 - _Key Type Operations_
 - _Key Bound Operations_
 
-![[springboot-data-redis-202210220938.png]]
+![](images/springboot-data-redis-202210220938.png)
 
 ---

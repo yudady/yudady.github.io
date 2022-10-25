@@ -10,4 +10,4 @@ updated_date: 2022-10-20 15:43
 
 ## ## repository
 
-[[github/github-packages]]  -  
+[github/github-packages](../github/github-packages.md)  -  

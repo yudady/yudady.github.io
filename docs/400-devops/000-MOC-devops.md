@@ -12,7 +12,7 @@ aliases: [000-MOC-devops]
 
 ![](images/000-MOC-devops-202210151622.png)
 
-- [[github/000-MOC-GitHub|000-MOC-GitHub]]
+- [000-MOC-GitHub](github/000-MOC-GitHub.md)
 - [DevOps_Roadmap_by_TWN.01.pdf](images/DevOps_Roadmap_by_TWN.01.pdf) : DevOps Engineer 
 - [free-domain](free-domain.md) : 免費域名 + DNS
 - [ngrok](ngrok.md) : proxy server

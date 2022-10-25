@@ -4,37 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "5dc8744b7f5fa5cc",
+        "id": "3dc18202a871de37",
         "type": "tabs",
         "children": [
           {
-            "id": "e44988e707909ffc",
+            "id": "b74e5c1cf7920868",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6912077f54bf9078",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "500-spring/尚矽谷-SpringBoot2核心技術.md",
+                "file": "400-devops/free-domain.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,7 +78,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "500-spring/尚矽谷-SpringBoot2核心技術.md"
+                "file": "400-devops/free-domain.md"
               }
             }
           },
@@ -135,7 +121,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "500-spring/尚矽谷-SpringBoot2核心技術.md",
+                "file": "400-devops/free-domain.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -170,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "500-spring/尚矽谷-SpringBoot2核心技術.md",
+                "file": "400-devops/free-domain.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -182,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "500-spring/尚矽谷-SpringBoot2核心技術.md",
+                "file": "400-devops/free-domain.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +189,7 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "6912077f54bf9078",
+  "active": "b74e5c1cf7920868",
   "lastOpenFiles": [
     "index.md",
     "500-spring/springboot.md",

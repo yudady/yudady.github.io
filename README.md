@@ -1,6 +1,6 @@
 # devops : 練習筆記項目
 
-![練習筆記項目 workflow](https://github.com/github/docs/actions/workflows/mkdocs-gh-deploy.yml/badge.svg)
+![練習筆記項目 workflow](https://github.com/yudady/yudady.github.io/actions/workflows/mkdocs-gh-deploy.yml/badge.svg)
 
 
 

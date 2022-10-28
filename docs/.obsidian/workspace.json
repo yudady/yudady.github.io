@@ -4,23 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3dc18202a871de37",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "b74e5c1cf7920868",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "400-devops/free-domain.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
+        "id": "38ac7cf3ecf00cf2",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "001-TODO/helm.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
           }
-        ]
+        }
       }
     ],
     "direction": "vertical"
@@ -49,7 +43,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "github",
+                "query": "tag:#todo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -78,7 +72,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/free-domain.md"
+                "file": "001-TODO/helm.md"
               }
             }
           },
@@ -121,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/free-domain.md",
+                "file": "001-TODO/helm.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -156,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/free-domain.md",
+                "file": "001-TODO/helm.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -168,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/free-domain.md",
+                "file": "001-TODO/helm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,22 +178,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 375.5
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "b74e5c1cf7920868",
+  "active": "38ac7cf3ecf00cf2",
   "lastOpenFiles": [
+    "001-TODO/minikube.md",
+    "001-TODO/helm.md",
     "index.md",
-    "500-spring/springboot.md",
-    "500-spring/spring.md",
-    "001-TODO/ss.md",
-    "templates/quick-add/spring-templater.md",
-    "400-devops/github/github-packages.md",
-    "400-devops/maven.md",
-    "400-devops/github/000-MOC-GitHub.md",
-    "400-devops/github/github-action.md",
-    "400-devops/000-MOC-devops.md"
+    "templates/templater-of-insert/ob-callouts.md",
+    "200-學習OB/000-obsidian.md",
+    "windows/wsl.md",
+    "templates/templater-of-insert/link.md",
+    "windows/scoop.md",
+    "windows/000-MOC-windows工具清單.md",
+    "windows/install-wslg.md"
   ]
 }

@@ -3,7 +3,7 @@ title: 🔧scoop
 tags: [2022-10, devops]
 aliases: [🔧scoop]
 created_date: 2022-10-06 00:43
-updated_date: 2022-10-09 13:20
+updated_date: 2022-10-27 12:20
 ---
 
 # 🔧scoop
@@ -15,7 +15,7 @@ updated_date: 2022-10-09 13:20
 
 sdk install jdk fail , git bash permission denied
 
-## 是什麼
+## 簡介
 
 > [!info] Windows 安裝 Scoop 來進行包管理
 > Scoop 可以簡單理解為一個在 Windows 中可以使用的包管理工具，這個包管理工具需要在 PowerShell 中執行。

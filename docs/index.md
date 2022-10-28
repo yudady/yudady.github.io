@@ -30,7 +30,7 @@ aliases: [Personal Knowledge Manage, "靈感筆記"]
 
 - [devops學習地圖](400-devops/000-MOC-devops.md) ： devops 地圖
 - [obsidian 學習](200-學習OB/000-obsidian.md) : obsidian 學習地圖
-- [windows-工具](windows/000-MOC-tools.md) : tools 地圖
+- [windows-工具](windows/000-MOC-windows工具清單.md) : tools 地圖
 - [spring](500-spring/000-MOC-spring.md) : spring 學習地圖
 
 

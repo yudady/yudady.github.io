@@ -1,17 +1,59 @@
 ---
+created_date: 2022-10-27 10:39
+updated_date: 2022-10-28 10:39
 title: obsidian
 tags: [obsidian]
 date: 2022-09-28 20:30
 modified: 2022-10-02 14:48
 aliases: [obsidian]
-linter-yaml-title-alias: obsidian
 ---
 
 # obsidian
 
 - getting start with obsidian :: [由此开始 - Obsidian 中文帮助 - Obsidian Publish](https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B)
 
+---
 
+## obsidian-callouts (admonition)
+
+- note
+- abstract, summary, tldr
+- info, todo
+- tip, hint, important
+- success, check, done
+- question, help, faq
+- warning, caution, attention
+- failure, fail, missing
+- danger, error
+- bug
+- example
+- quote, cite
+
+```code
+
+> [!INFO] > Here's a callout block. 
+> > It supports **markdown**, [wikilinks](Internal%20link), and [embeds](Embed%20files)! 
+> ![](images/og-image.png)
+
+```
+
+> [!tldr] > Here's a callout block. 
+> > It supports **markdown**, [[Internal link|wikilinks]], and [[Embed files|embeds]]! 
+> ![[og-image.png]]
+
+---
+
+```ad-<type> # Admonition type. See below for a list of available types.
+title:                  # Admonition title.
+collapse:               # Create a collapsible admonition.
+icon:                   # Override the icon.
+color:                  # Override the color.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
+
+```
+
+---
 
 ## plugin
 

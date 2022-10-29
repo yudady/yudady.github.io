@@ -25,13 +25,9 @@ spec:
               value: kevin
             - name: MYSQL_PASSWORD
               value: kevin
-
-
           volumeMounts:
             - name: mysql-persistent-volume #要與volumes 裡面name一樣
               mountPath: /var/lib/mysql
-            - name: mysql-initdb
-              mountPath: /docker-entrypoint-initdb.d
       volumes:
         - name: mysql-persistent-volume
           persistentVolumeClaim:

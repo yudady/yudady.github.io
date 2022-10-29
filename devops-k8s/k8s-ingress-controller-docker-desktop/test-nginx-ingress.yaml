@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-dp
+  name: myapp-v1-dp
 spec:
   replicas: 1
   selector:
@@ -22,8 +22,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: myapp-svc
-  name: myapp-svc
+    app: myapp-v1-svc
+  name: myapp-v1-svc
 spec:
   selector:
     app: myapp-v1
@@ -37,8 +37,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   labels:
-    app: myapp-ing
-  name: myapp-ing
+    app: myapp-v1-ing
+  name: myapp-v1-ing
 spec:
   ingressClassName: nginx
   rules:
@@ -49,6 +49,6 @@ spec:
             path: "/"
             backend:
               service:
-                name: myapp-svc
+                name: myapp-v1-svc
                 port:
                   number: 80

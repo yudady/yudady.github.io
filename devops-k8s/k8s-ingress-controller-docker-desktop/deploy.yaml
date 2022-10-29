@@ -366,11 +366,11 @@ spec:
     targetPort: https
 
 
-
-  - name: proxied-tcp-3306
+  - appProtocol: tcp
+    name: proxied-tcp-3306
     port: 3306
-    targetPort: 3306
     protocol: TCP
+    targetPort: 3306
 
 
   selector:
@@ -440,8 +440,8 @@ spec:
         - --validating-webhook-certificate=/usr/local/certificates/cert
         - --validating-webhook-key=/usr/local/certificates/key
 
-        - --tcp-services-configmap=default/tcp-services
-        - --udp-services-configmap=default/udp-services
+        - --tcp-services-configmap=nginx-ingress/tcp-services
+        - --udp-services-configmap=nginx-ingress/udp-services
 
         env:
         - name: POD_NAME

@@ -424,6 +424,8 @@ spec:
         - --validating-webhook=:8443
         - --validating-webhook-certificate=/usr/local/certificates/cert
         - --validating-webhook-key=/usr/local/certificates/key
+        - --tcp-services-configmap=default/tcp-services
+        - --udp-services-configmap=default/udp-services
         env:
         - name: POD_NAME
           valueFrom:

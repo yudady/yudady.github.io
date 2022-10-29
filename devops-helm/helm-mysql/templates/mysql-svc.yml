@@ -4,9 +4,10 @@ metadata:
   name: mysql-svc
 spec:
   ports:
-    - protocol: TCP
+    - name: tcp-services-3306
+      protocol: TCP
       port: 3306
       targetPort: 3306
   selector:
     app: mysql-dp
-  type: ClusterIP
+  type: NodePort

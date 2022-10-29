@@ -17,4 +17,6 @@ CREATE TABLE IF NOT EXISTS tasks
     created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE = INNODB;
 
-DESCRIBE tasks;
+SHOW tables;
+SHOW databases;
+

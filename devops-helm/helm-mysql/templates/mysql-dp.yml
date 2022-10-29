@@ -15,16 +15,16 @@ spec:
     spec:
       containers:
         - name: mysql-dp
-          image: mysql:5.7
+          image: yudady/mysql5:v1
           env:
             - name: MYSQL_ROOT_PASSWORD
-              value: root
+              value: newrootpassword
             - name: MYSQL_DATABASE
-              value: k8sDb
+              value: k8s
             - name: MYSQL_USER
-              value: tommy
+              value: kevin
             - name: MYSQL_PASSWORD
-              value: tommy
+              value: kevin
 
 
           volumeMounts:
@@ -36,16 +36,3 @@ spec:
         - name: mysql-persistent-volume
           persistentVolumeClaim:
             claimName: mysql-pvc
-        - name: mysql-initdb
-          configMap:
-            name: mysql-initdb-config
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: mysql-initdb-config
-data:
-  initdb.sql: |
-    GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' identified by 'root' with grant option;;
-    GRANT ALL PRIVILEGES ON *.* TO 'tommy'@'%' identified by 'tommy' with grant option;;
-    FLUSH PRIVILEGES;

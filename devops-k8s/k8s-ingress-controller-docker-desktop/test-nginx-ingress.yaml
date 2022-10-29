@@ -52,3 +52,65 @@ spec:
                 name: myapp-v1-svc
                 port:
                   number: 80
+
+
+
+###############################
+###############################
+###############################
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-v2-dp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp-v2
+  template:
+    metadata:
+      labels:
+        app: myapp-v2
+    spec:
+      containers:
+        - name: myapp-v2
+          image: yudady/myapp:v2
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: myapp-v2-svc
+  name: myapp-v2-svc
+spec:
+  selector:
+    app: myapp-v2
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    app: myapp-v2-ing
+  name: myapp-v2-ing
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: "yudady.cf"
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: myapp-v2-svc
+                port:
+                  number: 80

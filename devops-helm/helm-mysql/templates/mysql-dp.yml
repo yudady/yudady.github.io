@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysql
+  name: mysql-dp
 spec:
   replicas: 1
   minReadySeconds: 10 #表示Port起來要等10秒 有延遲方便查看效果
   selector:
     matchLabels:
-      app: mysql #標籤要和template label裡面一樣
+      app: mysql-dp #標籤要和template label裡面一樣
   template:
     metadata:
       labels:
-        app: mysql
+        app: mysql-dp
     spec:
       containers:
-        - name: mysql
+        - name: mysql-dp
           image: mysql:5.7
           env:
             - name: MYSQL_ROOT_PASSWORD

@@ -7,23 +7,11 @@ https://medium.com/k8s%E7%AD%86%E8%A8%98/kubernetes-k8s-pv-pvc-%E5%84%B2%E5%AD%9
 
 
 
-grant all privileges on *.* to bill@localhost identified by 'pass' with grant option;
-
 ```shell
-# create
-kubectl apply -f ./templates/
-```
-
-```shell
-kubectl port-forward mysql-dp-8dfb795cf-t5xcg 3306:3306 --address 0.0.0.0
+kubectl port-forward mysql-dp-8dfb795cf-2hkgm 3306:3306 --address 0.0.0.0
 ```
 
 
-
-```shell
-# delete
-kubectl delete -f ./templates/
-```
 
 ```shell
 kubectl get pods -A

@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-depl
+  name: myapp-dp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myapp
+      app: myapp-v1
   template:
     metadata:
       labels:
-        app: myapp
+        app: myapp-v1
     spec:
       containers:
-        - name: myapp
+        - name: myapp-v1
           image: yudady/myapp:v1
           ports:
             - containerPort: 80
@@ -26,7 +26,7 @@ metadata:
   name: myapp-svc
 spec:
   selector:
-    app: myapp
+    app: myapp-v1
   ports:
     - port: 80
       protocol: TCP
@@ -36,6 +36,8 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  labels:
+    app: myapp-ing
   name: myapp-ing
 spec:
   ingressClassName: nginx

@@ -15,7 +15,7 @@ kubectl apply -f ./templates/
 ```
 
 ```shell
-kubectl port-forward mysql-dp-86849c5bd-vcgxp 3306:3306
+kubectl port-forward mysql-dp-8dfb795cf-k5knz 3306:3306
 ```
 
 

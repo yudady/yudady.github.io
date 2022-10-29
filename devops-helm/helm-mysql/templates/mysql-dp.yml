@@ -18,9 +18,9 @@ spec:
           image: mysql:5.7
           env:
             - name: MYSQL_ROOT_PASSWORD
-              value: petclinic
+              value: root
             - name: MYSQL_DATABASE
-              value: petclinic
+              value: root
           volumeMounts:
             - name: mysql-persistent-volume #要與volumes 裡面name一樣
               mountPath: /var/lib/mysql

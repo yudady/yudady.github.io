@@ -3,7 +3,7 @@ title: helm first
 tags: [2022-10, todo, helm]
 aliases: [helm first]
 created_date: 2022-10-28 13:44
-updated_date: 2022-10-28 14:42
+updated_date: 2022-10-29 13:12
 ---
 
 # helm first
@@ -18,9 +18,11 @@ updated_date: 2022-10-28 14:42
 ---
 
 helm pull xxxxxx/mysql 
+
 overwrite value
 
 ---
+
 ## 參考
 
 [How to Use Helm to deploy Helm Charts in Kubernetes: Practical Tutorial - YouTube](https://www.youtube.com/watch?v=gg-GuHs8Nsk)

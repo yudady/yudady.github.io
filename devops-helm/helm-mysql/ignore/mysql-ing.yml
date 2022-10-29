@@ -22,5 +22,8 @@ metadata:
   name: tcp-services
   namespace: ingress-nginx
 data:
-  "3306": default/mysql-service:3306
+  "3306": default/mysql-svc:3306
+
+
+
 

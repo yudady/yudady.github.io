@@ -20,11 +20,32 @@ spec:
             - name: MYSQL_ROOT_PASSWORD
               value: root
             - name: MYSQL_DATABASE
-              value: root
+              value: k8sDb
+            - name: MYSQL_USER
+              value: tommy
+            - name: MYSQL_PASSWORD
+              value: tommy
+
+
           volumeMounts:
             - name: mysql-persistent-volume #要與volumes 裡面name一樣
               mountPath: /var/lib/mysql
+            - name: mysql-initdb
+              mountPath: /docker-entrypoint-initdb.d
       volumes:
         - name: mysql-persistent-volume
           persistentVolumeClaim:
             claimName: mysql-pvc
+        - name: mysql-initdb
+          configMap:
+            name: mysql-initdb-config
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-initdb-config
+data:
+  initdb.sql: |
+    GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' identified by 'root' with grant option;;
+    GRANT ALL PRIVILEGES ON *.* TO 'tommy'@'%' identified by 'tommy' with grant option;;
+    FLUSH PRIVILEGES;

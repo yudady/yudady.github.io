@@ -320,6 +320,12 @@ subjects:
 apiVersion: v1
 data:
   allow-snippet-annotations: "true"
+
+
+  3306: "default/mysql-svc:3306"
+
+
+
 kind: ConfigMap
 metadata:
   labels:
@@ -358,6 +364,15 @@ spec:
     port: 443
     protocol: TCP
     targetPort: https
+
+
+
+  - name: proxied-tcp-3306
+    port: 3306
+    targetPort: 3306
+    protocol: TCP
+
+
   selector:
     app.kubernetes.io/component: controller
     app.kubernetes.io/instance: ingress-nginx
@@ -424,8 +439,10 @@ spec:
         - --validating-webhook=:8443
         - --validating-webhook-certificate=/usr/local/certificates/cert
         - --validating-webhook-key=/usr/local/certificates/key
+
         - --tcp-services-configmap=default/tcp-services
         - --udp-services-configmap=default/udp-services
+
         env:
         - name: POD_NAME
           valueFrom:

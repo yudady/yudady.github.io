@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+spec:
+  replicas: 1
+  minReadySeconds: 10 #表示Port起來要等10秒 有延遲方便查看效果
+  selector:
+    matchLabels:
+      app: mysql #標籤要和template label裡面一樣
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:5.7
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: petclinic
+            - name: MYSQL_DATABASE
+              value: petclinic
+          volumeMounts:
+            - name: mysql-persistent-volume #要與volumes 裡面name一樣
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: mysql-persistent-volume
+          persistentVolumeClaim:
+            claimName: mysql-pvc

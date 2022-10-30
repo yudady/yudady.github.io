@@ -15,5 +15,6 @@
   "calendar",
   "templater-obsidian",
   "obsidian-show-file-path",
-  "recent-files-obsidian"
+  "recent-files-obsidian",
+  "convert-url-to-iframe"
 ]

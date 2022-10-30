@@ -64,17 +64,11 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ing-myapp
+  name: my-ingress
 spec:
   ingressClassName: nginx
-  rules:
-    - host: "yudady.ml"
-      http:
-        paths:
-          - pathType: Prefix
-            path: "/"
-            backend:
-              service:
-                name: svc-myapp
-                port:
-                  number: 80
+  defaultBackend:
+    service:
+      name: svc-myapp
+      port:
+        number: 80

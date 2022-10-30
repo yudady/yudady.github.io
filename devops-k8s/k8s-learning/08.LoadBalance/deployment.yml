@@ -17,7 +17,7 @@ spec:
         podApp: myapp
     spec:
       containers:
-        - name: foo
+        - name: myapp-v1
           image: yudady/myapp:v1
           ports:
             - containerPort: 80
@@ -41,7 +41,7 @@ spec:
         podApp: myapp
     spec:
       containers:
-        - name: bar
+        - name: myapp-v2
           image: yudady/myapp:v2
           ports:
             - containerPort: 80

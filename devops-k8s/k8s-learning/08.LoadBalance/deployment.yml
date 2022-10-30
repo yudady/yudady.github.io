@@ -1,18 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: foo-deployment
+  name:  dp-myapp-v1
   labels:
-    type: demo
+    type: dp-myapp-v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      type: demo
+      type: myapp-v1
+      podApp: myapp
   template:
     metadata:
       labels:
-        type: demo
+        type: myapp-v1
+        podApp: myapp
     spec:
       containers:
         - name: foo
@@ -23,18 +25,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bar-deployment
+  name:  dp-myapp-v2
   labels:
-    type: demo
+    type: dp-myapp-v2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      type: demo
+      type: myapp-v2
+      podApp: myapp
   template:
     metadata:
       labels:
-        type: demo
+        type: myapp-v2
+        podApp: myapp
     spec:
       containers:
         - name: bar
@@ -45,10 +49,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service
+  name: svc-myapp
 spec:
   selector:
-    type: demo
+    podApp: myapp
   type: LoadBalancer
   ports:
     - protocol: TCP

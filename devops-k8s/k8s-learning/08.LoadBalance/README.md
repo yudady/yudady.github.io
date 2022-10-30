@@ -6,7 +6,11 @@ kubectl get pods
 
 
 ```shell
-kubectl get all
+kubectl get all -owide
+```
+
+```shell 
+kubectl port-forward service/svc-myapp 8080:80 --address 0.0.0.0
 ```
 
 

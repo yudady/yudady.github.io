@@ -29,17 +29,20 @@ spec:
           mountPath: /usr/share/nginx/html
   volumes:
     - name: volume-pv   #<=== 宣告一個名為 volume-pv 的 Volume 物件
-      persistentVolumeClaim: #<=== 綁定名為 pv-claim 的 PVC 物件
-        claimName: pv-claim
+      persistentVolumeClaim: #<=== 綁定名為 pv-claim2 的 PVC 物件
+        claimName: pv-claim2
 
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: pv-claim
+  name: pv-claim2
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi   #<=== 要求 1G 容量
+
+
+# \\wsl.localhost\docker-desktop-data\data\k8s-pvs\pv-claim2

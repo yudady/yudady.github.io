@@ -11,7 +11,8 @@ updated_date: 2022-10-30 14:30
 - **🏷️Tags** :   #2022-10 #devops  #k8s 
 - Link: [1-pvc-demo.yml](https://raw.githubusercontent.com/yudady/yudady.github.io/main/devops-k8s/k8s-learning/07.pv-pvc/1-pvc-demo.yml)
 
-<iframe src="https://raw.githubusercontent.com/yudady/yudady.github.io/main/devops-k8s/k8s-learning/07.pv-pvc/1-pvc-demo.yml" allow="fullscreen" allowfullscreen="" style="height: 100%; width: 100%;"></iframe>
+[pvc-demo](https://raw.githubusercontent.com/yudady/yudady.github.io/main/devops-k8s/k8s-learning/07.pv-pvc/1-pvc-demo.yml)
+
 
 ## 緣起
 

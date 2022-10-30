@@ -3,7 +3,7 @@ title: k8s
 tags: [2022-10, devops, k8s]
 aliases: [k8s]
 created_date: 2022-10-30 14:03
-updated_date: 2022-10-30 19:50
+updated_date: 2022-10-30 20:44
 ---
 
 # k8s
@@ -17,6 +17,12 @@ updated_date: 2022-10-30 19:50
 
 > [!INFO] ### port-forward 
 > kubectl port-forward mysql-dp-8dfb795cf-2hkgm 3306:3306 --address 0.0.0.0
+
+## service
+
+- type: LoadBalancer  
+- type: ClusterIP  
+- type: NodePort
 
 ## ingress
 

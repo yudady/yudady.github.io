@@ -14,5 +14,6 @@
   "dataview",
   "calendar",
   "templater-obsidian",
-  "obsidian-show-file-path"
+  "obsidian-show-file-path",
+  "recent-files-obsidian"
 ]

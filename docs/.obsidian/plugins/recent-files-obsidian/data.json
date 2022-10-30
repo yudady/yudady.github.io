@@ -1,0 +1,34 @@
+{
+  "recentFiles": [
+    {
+      "basename": "pv-pvc",
+      "path": "001-TODO/pv-pvc.md"
+    },
+    {
+      "basename": "helm",
+      "path": "400-devops/k8s/helm.md"
+    },
+    {
+      "basename": "minikube",
+      "path": "400-devops/k8s/minikube.md"
+    },
+    {
+      "basename": "整理書籤",
+      "path": "001-TODO/整理書籤.md"
+    },
+    {
+      "basename": "ngrok",
+      "path": "400-devops/network/ngrok.md"
+    },
+    {
+      "basename": "本地開發 Kubernetes 應用程式流程",
+      "path": "400-devops/k8s/本地開發 Kubernetes 應用程式流程.md"
+    },
+    {
+      "basename": "docker-desktop-k8s-startup-fail",
+      "path": "400-devops/container/docker-desktop-k8s-startup-fail.md"
+    }
+  ],
+  "omittedPaths": [],
+  "maxLength": null
+}

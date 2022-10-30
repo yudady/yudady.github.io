@@ -17,7 +17,7 @@ aliases: [Personal Knowledge Manage, "靈感筆記"]
 - [ ] [500-spring/spring-sagan](500-spring/spring-sagan.md) : a springboot demo 
 - [ ] [SpringBoot2 核心技術與響應式編程](500-spring/尚矽谷-SpringBoot2核心技術.md)
 - [ ] [100-InBox/java-Jigsaw](100-InBox/java-Jigsaw.md)
-- [ ] [windows/scoop](windows/scoop.md)
+- [ ] [400-devops/windows/scoop](400-devops/windows/scoop.md)
 - [ ] [反查Git-連猴子都能懂的Git入門指南](https://backlog.com/git-tutorial/tw/reference/) : git tutorial
 - [ ] [Petri Kainulainen](https://www.petrikainulainen.net/) : test tutorial
 - [ ] [2022最新版！【失業補助】申請總整理](https://pro.104.com.tw/vip/preLogin/recruiterForum/post/59099#001)
@@ -30,7 +30,7 @@ aliases: [Personal Knowledge Manage, "靈感筆記"]
 
 - [devops學習地圖](400-devops/000-MOC-devops.md) ： devops 地圖
 - [obsidian 學習](200-學習OB/000-obsidian.md) : obsidian 學習地圖
-- [windows-工具](windows/000-MOC-windows工具清單.md) : tools 地圖
+- [windows-工具](400-devops/windows/000-MOC-windows工具清單.md) : tools 地圖
 - [spring](500-spring/000-MOC-spring.md) : spring 學習地圖
 
 

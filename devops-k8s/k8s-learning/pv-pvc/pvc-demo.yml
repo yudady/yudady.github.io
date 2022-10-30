@@ -1,0 +1,15 @@
+# pvc.yaml
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-demo
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: hostpath
+  resources:
+    requests:
+      storage: 1Gi
+
+
+# \\wsl.localhost\docker-desktop-data\data\k8s-pvs\pvc-demo

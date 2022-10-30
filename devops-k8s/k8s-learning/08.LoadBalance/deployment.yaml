@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: foo-deployment
+  labels:
+    type: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      type: demo
+  template:
+    metadata:
+      labels:
+        type: demo
+    spec:
+      containers:
+        - name: foo
+          image: yudady/myapp:v1
+          ports:
+            - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bar-deployment
+  labels:
+    type: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      type: demo
+  template:
+    metadata:
+      labels:
+        type: demo
+    spec:
+      containers:
+        - name: bar
+          image: yudady/myapp:v2
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  selector:
+    type: demo
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 80

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "258a057d4fd4d91f",
+        "id": "424791b1d439dd55",
         "type": "tabs",
         "children": [
           {
-            "id": "60196c23ca46d666",
+            "id": "92fc3edfc9ed3cd1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/pv-pvc.md",
+                "file": "001-TODO/k8s.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/pv-pvc.md"
+                "file": "001-TODO/k8s.md"
               }
             }
           },
@@ -137,7 +137,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "001-TODO/pv-pvc.md",
+                "file": "001-TODO/k8s.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -172,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "001-TODO/pv-pvc.md",
+                "file": "001-TODO/k8s.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -184,7 +184,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "001-TODO/pv-pvc.md",
+                "file": "001-TODO/k8s.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,7 +205,7 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "60196c23ca46d666",
+  "active": "92fc3edfc9ed3cd1",
   "lastOpenFiles": [
     "400-devops/k8s/helm.md",
     "400-devops/k8s/minikube.md",

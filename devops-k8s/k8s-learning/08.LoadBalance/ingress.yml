@@ -53,7 +53,8 @@ metadata:
 spec:
   selector:
     podApp: myapp
-  type: LoadBalancer
+#  type: LoadBalancer
+  type: ClusterIP
   ports:
     - protocol: TCP
       port: 8000

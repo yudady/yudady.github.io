@@ -1,8 +1,60 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "hidden-folder/k8s-ithelp/Day4/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "hidden-folder/k8s-ithelp/Day3/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "hidden-folder/k8s-ithelp/Day2/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "hidden-folder/k8s-ithelp/Day1/README.md"
+    },
+    {
       "basename": "k8s",
-      "path": "001-TODO/k8s.md"
+      "path": "400-devops/k8s/k8s.md"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
+      "basename": "尚矽谷-SpringBoot2核心技術",
+      "path": "500-spring/尚矽谷-SpringBoot2核心技術.md"
+    },
+    {
+      "basename": "learning-20-hr-check-list",
+      "path": "templates/templater-of-insert/learning-20-hr-check-list.md"
+    },
+    {
+      "basename": "ob-callouts",
+      "path": "templates/templater-of-insert/ob-callouts.md"
+    },
+    {
+      "basename": "springboot",
+      "path": "500-spring/springboot.md"
+    },
+    {
+      "basename": "spring",
+      "path": "500-spring/spring.md"
+    },
+    {
+      "basename": "整理書籤",
+      "path": "001-TODO/整理書籤.md"
+    },
+    {
+      "basename": "spring-sagan",
+      "path": "500-spring/spring-sagan.md"
+    },
+    {
+      "basename": "scoop",
+      "path": "400-devops/windows/scoop.md"
     },
     {
       "basename": "helm",
@@ -11,10 +63,6 @@
     {
       "basename": "minikube",
       "path": "400-devops/k8s/minikube.md"
-    },
-    {
-      "basename": "整理書籤",
-      "path": "001-TODO/整理書籤.md"
     },
     {
       "basename": "ngrok",

@@ -3,7 +3,7 @@ title: k8s
 tags: [2022-10, devops, k8s]
 aliases: [k8s]
 created_date: 2022-10-30 14:03
-updated_date: 2022-10-30 20:44
+updated_date: 2022-10-31 14:03
 ---
 
 # k8s

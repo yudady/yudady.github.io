@@ -1,6 +1,6 @@
 ---
 created_date: 2022-10-04 13:43
-updated_date: 2022-10-24 15:52
+updated_date: 2022-10-31 13:45
 title: Personal Knowledge Manage
 tags: []
 date: 2022-10-04 13:43
@@ -12,17 +12,13 @@ aliases: [Personal Knowledge Manage, "靈感筆記"]
 
 ## 處理中
 
+[github project - TODO](https://github.com/orgs/yudady/projects/4/views/1)
+
 - [ ] [500-spring/spring](500-spring/spring.md)
 - [ ] [500-spring/springboot](500-spring/springboot.md) : 進行中
-- [ ] [500-spring/spring-sagan](500-spring/spring-sagan.md) : a springboot demo 
 - [ ] [SpringBoot2 核心技術與響應式編程](500-spring/尚矽谷-SpringBoot2核心技術.md)
-- [ ] [100-InBox/java-Jigsaw](100-InBox/java-Jigsaw.md)
-- [ ] [400-devops/windows/scoop](400-devops/windows/scoop.md)
-- [ ] [反查Git-連猴子都能懂的Git入門指南](https://backlog.com/git-tutorial/tw/reference/) : git tutorial
-- [ ] [Petri Kainulainen](https://www.petrikainulainen.net/) : test tutorial
 - [ ] [2022最新版！【失業補助】申請總整理](https://pro.104.com.tw/vip/preLogin/recruiterForum/post/59099#001)
-- [ ] [Knowledge Factory](https://www.knowledgefactory.net/) : spring tutorial
-- [ ] [Kubernetes 30天學習筆記 :: 2018 iT 邦幫忙鐵人賽](https://ithelp.ithome.com.tw/users/20103753/ironman/1590) : k8s tutorial
+
 
 ---
 

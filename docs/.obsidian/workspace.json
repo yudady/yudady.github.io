@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "424791b1d439dd55",
+        "id": "0d3f298b33eacef4",
         "type": "tabs",
         "children": [
           {
-            "id": "92fc3edfc9ed3cd1",
+            "id": "a73ddd8dcd7473a0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "001-TODO/k8s.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -93,9 +88,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "001-TODO/k8s.md"
-              }
+              "state": {}
             }
           },
           {
@@ -137,7 +130,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "001-TODO/k8s.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -172,7 +164,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "001-TODO/k8s.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -184,7 +175,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "001-TODO/k8s.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,17 +195,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "92fc3edfc9ed3cd1",
+  "active": "a73ddd8dcd7473a0",
   "lastOpenFiles": [
-    "400-devops/k8s/helm.md",
-    "400-devops/k8s/minikube.md",
-    "001-TODO/整理書籤.md",
-    "400-devops/network/ngrok.md",
-    "400-devops/k8s/本地開發 Kubernetes 應用程式流程.md",
-    "400-devops/container/docker-desktop-k8s-startup-fail.md",
+    "hidden-folder/k8s-ithelp/Day4/README.md",
+    "hidden-folder/k8s-ithelp/Day3/README.md",
+    "hidden-folder/k8s-ithelp/Day2/README.md",
+    "hidden-folder/k8s-ithelp/Day1/README.md",
+    "400-devops/k8s/k8s.md",
+    "400-devops/k8s/masterNode.png",
     "index.md",
-    "templates/templater-of-insert/ob-callouts.md",
-    "200-學習OB/000-obsidian.md",
-    "400-devops/windows/wsl.md"
+    "500-spring/尚矽谷-SpringBoot2核心技術.md",
+    "templates/templater-of-insert/learning-20-hr-check-list.md",
+    "templates/templater-of-insert/ob-callouts.md"
   ]
 }

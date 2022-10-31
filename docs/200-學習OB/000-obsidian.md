@@ -38,8 +38,8 @@ aliases: [obsidian]
 ```
 
 > [!tldr] > Here's a callout block. 
-> > It supports **markdown**, [[Internal link|wikilinks]], and [[Embed files|embeds]]! 
-> ![[og-image.png]]
+> > It supports **markdown**, [wikilinks](Internal%20link), and [embeds](Embed%20files)! 
+> ![](images/og-image.png)
 
 ---
 

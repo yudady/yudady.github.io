@@ -1,6 +1,6 @@
 ---
 created_date: 2022-10-04 13:43
-updated_date: 2022-10-31 13:45
+updated_date: 2022-10-31 18:10
 title: Personal Knowledge Manage
 tags: []
 date: 2022-10-04 13:43
@@ -10,9 +10,13 @@ aliases: [Personal Knowledge Manage, "靈感筆記"]
 
 # Personal Knowledge Manage
 
-## 處理中
+## [GITHUB PROJECTS - 看板](https://github.com/orgs/yudady/projects/4/views/1)
 
-[github project - TODO](https://github.com/orgs/yudady/projects/4/views/1)
+[GitHub - Tommy](https://github.com/yudady)
+
+---
+
+## 處理中
 
 - [ ] [500-spring/spring](500-spring/spring.md)
 - [ ] [500-spring/springboot](500-spring/springboot.md) : 進行中
@@ -28,16 +32,3 @@ aliases: [Personal Knowledge Manage, "靈感筆記"]
 - [obsidian 學習](200-學習OB/000-obsidian.md) : obsidian 學習地圖
 - [windows-工具](400-devops/windows/000-MOC-windows工具清單.md) : tools 地圖
 - [spring](500-spring/000-MOC-spring.md) : spring 學習地圖
-
-
----
-
-## capture ideas
-
-- github webhook https://docs.github.com/en/developers/webhooks-and-events/webhooks/creating-webhooks @2022-10-04T12:03:17
-- k8s : https://b0444135.medium.com/ @2022-10-03T16:59:02
-- Springboot 整合 Zipkin+kafka+ELK,实现链路追踪和日志收集 @2022-10-03T16:43:39
-- 整理 chrome 書籤 @2022-10-02T18:20:97
-- what is templates and templater @2022-10-02T18:20:97
-
----

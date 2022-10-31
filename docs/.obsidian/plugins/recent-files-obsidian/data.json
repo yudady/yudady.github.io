@@ -1,28 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "README",
-      "path": "hidden-folder/k8s-ithelp/Day4/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "hidden-folder/k8s-ithelp/Day3/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "hidden-folder/k8s-ithelp/Day2/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "hidden-folder/k8s-ithelp/Day1/README.md"
+      "basename": "index",
+      "path": "index.md"
     },
     {
       "basename": "k8s",
       "path": "400-devops/k8s/k8s.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "尚矽谷-SpringBoot2核心技術",

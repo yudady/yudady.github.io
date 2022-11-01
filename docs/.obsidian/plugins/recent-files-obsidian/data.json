@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "index",
-      "path": "index.md"
+      "basename": "prometheus",
+      "path": "400-devops/container/prometheus.md"
+    },
+    {
+      "basename": "minikube",
+      "path": "400-devops/k8s/minikube.md"
+    },
+    {
+      "basename": "docker",
+      "path": "400-devops/container/docker.md"
+    },
+    {
+      "basename": "監控",
+      "path": "001-TODO/監控.md"
     },
     {
       "basename": "k8s",
@@ -11,6 +23,10 @@
     {
       "basename": "尚矽谷-SpringBoot2核心技術",
       "path": "500-spring/尚矽谷-SpringBoot2核心技術.md"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
     },
     {
       "basename": "learning-20-hr-check-list",
@@ -43,10 +59,6 @@
     {
       "basename": "helm",
       "path": "400-devops/k8s/helm.md"
-    },
-    {
-      "basename": "minikube",
-      "path": "400-devops/k8s/minikube.md"
     },
     {
       "basename": "ngrok",

@@ -1,14 +1,14 @@
 ---
 title: minikube
-tags: [2022-10, devops]
+tags: [2022-10, devops, docker]
 aliases: [minikube]
 created_date: 2022-10-28 12:08
-updated_date: 2022-10-28 15:51
+updated_date: 2022-11-01 14:11
 ---
 
 # minikube
 
-- **🏷️Tags** :   #2022-10 #devops 
+- **🏷️Tags** :   #2022-10 #devops  #docker
 - Link: [minikube start | minikube](https://minikube.sigs.k8s.io/docs/start/)
 
 ## install
@@ -137,3 +137,7 @@ Delete all of the minikube clusters:
 ```shell
 minikube delete --all
 ```
+
+## reference
+
+- [minikube](https://www.bilibili.com/video/BV1Tg411P7EB?p=1&vd_source=6bd04a20c72eb5cca642210346af7081)

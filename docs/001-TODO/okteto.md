@@ -29,6 +29,8 @@ updated_date: 2022-11-03 17:19
 [Install and Configure | Okteto Documentation](https://www.okteto.com/docs/getting-started/)
 
 ```shell
+okteto kubeconfig
+
 okteto context use https://cloud.okteto.com
 
 okteto context list
@@ -36,6 +38,7 @@ okteto context list
 ```
 
 ---
+## command
 
 ```shell
 
@@ -67,6 +70,10 @@ Available Commands:
   up              Launch your development environment
   update          Update Okteto CLI version
   version         View the version of the okteto binary
+
+
+
+okteto context use https://cloud.okteto.com --token $YOUR_TOKEN
 
 ```
 

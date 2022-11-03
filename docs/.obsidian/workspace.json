@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f9c1d90e2e7c17fc",
+        "id": "adaf57abf08f6964",
         "type": "tabs",
         "children": [
           {
-            "id": "406a7e462bdbff89",
+            "id": "c156e64adcf85956",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -203,7 +203,10 @@
     "direction": "horizontal",
     "width": 250.5
   },
-  "active": "406a7e462bdbff89",
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "c156e64adcf85956",
   "lastOpenFiles": [
     "400-devops/k8s/k8s.md",
     "001-TODO/okteto.md",

@@ -35,6 +35,7 @@
 
 
 
+
 #### port-forwardings
 ###### Prometheus-UI
     kubectl port-forward service/prometheus-kube-prometheus-prometheus 9090
@@ -70,6 +71,14 @@ kubectl get prometheuses.monitoring.coreos.com -o yaml
 
 helm show values prometheus-community/prometheus-mongodb-exporter
 
+
+helm pull prometheus-community/prometheus-mongodb-exporter --untar
+
+helm install mongodb-exporter ./prometheus-mongodb-exporter -f ./values.yaml
+
+helm upgrade mongodb-exporter ./prometheus-mongodb-exporter -f ./values.yaml
+
+kubectl get servicemonitor
 
 
 ---

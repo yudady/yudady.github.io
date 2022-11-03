@@ -1,0 +1,31 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  annotations:
+    meta.helm.sh/release-name: mongodb-exporter
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2022-11-03T02:00:27Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: mongodb-exporter
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: prometheus-mongodb-exporter
+    app.kubernetes.io/version: 0.31.0
+    helm.sh/chart: prometheus-mongodb-exporter-3.1.2
+    release: prometheus
+  name: mongodb-exporter-prometheus-mongodb-exporter
+  namespace: default
+  resourceVersion: "50465"
+  uid: d65f4af4-12b8-4814-bb3b-67d1090067f9
+spec:
+  endpoints:
+  - interval: 30s
+    port: metrics
+    scrapeTimeout: 10s
+  namespaceSelector:
+    matchNames:
+    - default
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: mongodb-exporter
+      app.kubernetes.io/name: prometheus-mongodb-exporter

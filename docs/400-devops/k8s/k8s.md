@@ -3,7 +3,7 @@ title: k8s
 tags: [2022-10, devops, k8s]
 aliases: [k8s]
 created_date: 2022-10-30 14:03
-updated_date: 2022-10-31 14:03
+updated_date: 2022-11-03 16:33
 ---
 
 # k8s
@@ -12,6 +12,17 @@ updated_date: 2022-10-31 14:03
 - Link: [1-pvc-demo.yml](https://raw.githubusercontent.com/yudady/yudady.github.io/main/devops-k8s/k8s-learning/07.pv-pvc/1-pvc-demo.yml)
 
 ## command
+
+### contexts-command
+
+```shell
+# 查詢 contexts
+kubectl config get-contexts
+
+# 切換 contexts
+kubectl config use-context xxxxxxxxxxx
+
+```
 
 ### port-forward
 

@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "okteto",
+      "path": "001-TODO/okteto.md"
+    },
+    {
+      "basename": "k8s",
+      "path": "400-devops/k8s/k8s.md"
+    },
+    {
+      "basename": "k8s",
+      "path": "[../400-devops/k8s/k8s.md"
+    },
+    {
+      "basename": "scoop",
+      "path": "400-devops/windows/scoop.md"
+    },
+    {
+      "basename": "skaffold",
+      "path": "001-TODO/skaffold.md"
+    },
+    {
       "basename": "prometheus",
       "path": "400-devops/container/prometheus.md"
     },
@@ -15,10 +35,6 @@
     {
       "basename": "監控",
       "path": "001-TODO/監控.md"
-    },
-    {
-      "basename": "k8s",
-      "path": "400-devops/k8s/k8s.md"
     },
     {
       "basename": "尚矽谷-SpringBoot2核心技術",
@@ -51,10 +67,6 @@
     {
       "basename": "spring-sagan",
       "path": "500-spring/spring-sagan.md"
-    },
-    {
-      "basename": "scoop",
-      "path": "400-devops/windows/scoop.md"
     },
     {
       "basename": "helm",

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "017aadbee1d35251",
+        "id": "f9c1d90e2e7c17fc",
         "type": "tabs",
         "children": [
           {
-            "id": "342bcef85efd0a5a",
+            "id": "406a7e462bdbff89",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "400-devops/container/prometheus.md",
+                "file": "001-TODO/okteto.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "promet",
+                "query": "tag:#contexts-command",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -95,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/container/prometheus.md"
+                "file": "001-TODO/okteto.md"
               }
             }
           },
@@ -138,7 +138,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/container/prometheus.md",
+                "file": "001-TODO/okteto.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -173,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/container/prometheus.md",
+                "file": "001-TODO/okteto.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -185,7 +185,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/container/prometheus.md",
+                "file": "001-TODO/okteto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,17 +203,17 @@
     "direction": "horizontal",
     "width": 250.5
   },
-  "active": "342bcef85efd0a5a",
+  "active": "406a7e462bdbff89",
   "lastOpenFiles": [
+    "400-devops/k8s/k8s.md",
+    "001-TODO/okteto.md",
+    "[../400-devops/k8s/k8s.md",
+    "400-devops/windows/scoop.md",
+    "001-TODO/skaffold.md",
     "400-devops/k8s/minikube.md",
     "400-devops/container/docker.md",
     "001-TODO/監控.md",
-    "400-devops/k8s/k8s.md",
     "500-spring/尚矽谷-SpringBoot2核心技術.md",
-    "index.md",
-    "hidden-folder/k8s-ithelp/Day4/README.md",
-    "hidden-folder/k8s-ithelp/Day3/README.md",
-    "hidden-folder/k8s-ithelp/Day2/README.md",
-    "hidden-folder/k8s-ithelp/Day1/README.md"
+    "index.md"
   ]
 }

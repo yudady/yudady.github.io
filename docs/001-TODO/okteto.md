@@ -3,7 +3,7 @@ title: okteto
 tags: [2022-11, devops]
 aliases: [okteto]
 created_date: 2022-11-03 14:20
-updated_date: 2022-11-03 17:16
+updated_date: 2022-11-03 17:19
 ---
 
 # okteto
@@ -99,6 +99,11 @@ okteto up
 ![](okteto-202211031658.png)
 ---
 
-## https://cloud.okteto.com
+使用 Okteto 設置開發環境涉及兩個主要步驟：
+
+1.  部署您的應用程序代碼
+2.  用於 `okteto up` 啟動您的開發容器
+
+https://cloud.okteto.com
 
 > open cloud console

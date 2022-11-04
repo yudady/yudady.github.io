@@ -1,44 +1,76 @@
 {
   "recentFiles": [
     {
-      "basename": "skaffold",
-      "path": "001-TODO/skaffold.md"
+      "basename": "000-obsidian",
+      "path": "200-學習OB/000-obsidian.md"
     },
     {
-      "basename": "kpack",
-      "path": "001-TODO/kpack.md"
+      "basename": "index",
+      "path": "index.md"
     },
     {
-      "basename": "buildpacks",
-      "path": "001-TODO/buildpacks.md"
+      "basename": "TabCopy",
+      "path": "200-學習OB/plugin/TabCopy.md"
     },
     {
-      "basename": "docker",
-      "path": "400-devops/container/docker.md"
+      "basename": "Roam-Highlighter",
+      "path": "200-學習OB/plugin/Roam-Highlighter.md"
     },
     {
       "basename": "okteto",
-      "path": "001-TODO/okteto.md"
-    },
-    {
-      "basename": "minikube",
-      "path": "400-devops/k8s/minikube.md"
-    },
-    {
-      "basename": "draft",
-      "path": "001-TODO/draft.md"
-    },
-    {
-      "basename": "query-io",
-      "path": "001-TODO/query-io.md"
+      "path": "400-devops/okteto.md"
     },
     {
       "basename": "k8s",
       "path": "400-devops/k8s/k8s.md"
     },
     {
-      "basename": "k8s",
-      "path": "[../400-devops/k8s/k8s.md"
+      "basename": "github-action",
+      "path": "400-devops/github/github-action.md"
+    },
+    {
+      "basename": "draft",
+      "path": "400-devops/draft.md"
+    },
+    {
+      "basename": "draft-202211041008",
+      "path": "400-devops/draft-202211041008.png"
+    },
+    {
+      "basename": "skaffold",
+      "path": "400-devops/skaffold.md"
+    },
+    {
+      "basename": "監控",
+      "path": "400-devops/監控.md"
+    },
+    {
+      "basename": "Kustomize",
+      "path": "400-devops/Kustomize.md"
+    },
+    {
+      "basename": "GraalVM",
+      "path": "400-devops/GraalVM.md"
+    },
+    {
+      "basename": "minikube",
+      "path": "400-devops/k8s/minikube.md"
+    },
+    {
+      "basename": "kpack",
+      "path": "400-devops/kpack.md"
+    },
+    {
+      "basename": "pack",
+      "path": "400-devops/pack.md"
+    },
+    {
+      "basename": "docker",
+      "path": "400-devops/container/docker.md"
+    },
+    {
+      "basename": "query-io",
+      "path": "400-devops/query-io.md"
     },
     {
       "basename": "scoop",
@@ -49,16 +81,8 @@
       "path": "400-devops/container/prometheus.md"
     },
     {
-      "basename": "監控",
-      "path": "001-TODO/監控.md"
-    },
-    {
       "basename": "尚矽谷-SpringBoot2核心技術",
       "path": "500-spring/尚矽谷-SpringBoot2核心技術.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "learning-20-hr-check-list",

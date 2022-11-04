@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5e1ae815b9d86dbc",
+        "id": "c62b9260f5950459",
         "type": "tabs",
         "children": [
           {
-            "id": "bc8c2075109e2e15",
+            "id": "af46c48f16e93ea9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/skaffold.md",
+                "file": "200-學習OB/000-obsidian.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -32,7 +32,7 @@
       {
         "id": "4dcc60248d2e3363",
         "type": "tabs",
-        "dimension": 74.6124031007752,
+        "dimension": 62.51287332646756,
         "children": [
           {
             "id": "b1ae197fff4bfdd1",
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "choco",
+                "query": "movedAttachments",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -59,13 +59,12 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "b8387f0689c4d62d",
         "type": "tabs",
-        "dimension": 25.38759689922481,
+        "dimension": 37.487126673532444,
         "children": [
           {
             "id": "12ac5dc4eb5f8d4d",
@@ -79,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 295.5
+    "width": 301.5
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -88,6 +87,7 @@
       {
         "id": "3fecf2d96e0dab36",
         "type": "tabs",
+        "dimension": 30.072090628218334,
         "children": [
           {
             "id": "6537a3e867a6ff55",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/skaffold.md"
+                "file": "200-學習OB/000-obsidian.md"
               }
             }
           },
@@ -131,6 +131,7 @@
       {
         "id": "78e3fecbef45c937",
         "type": "tabs",
+        "dimension": 69.92790937178167,
         "children": [
           {
             "id": "91b3678e71ee2f83",
@@ -138,7 +139,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "001-TODO/skaffold.md",
+                "file": "200-學習OB/000-obsidian.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -168,24 +169,12 @@
             }
           },
           {
-            "id": "4ff6fa7e97ba7269",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "001-TODO/skaffold.md",
-                "linksCollapsed": true,
-                "unlinkedCollapsed": false
-              }
-            }
-          },
-          {
             "id": "9b79938fe658765c",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "001-TODO/skaffold.md",
+                "file": "200-學習OB/000-obsidian.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -195,25 +184,40 @@
                 "unlinkedCollapsed": false
               }
             }
+          },
+          {
+            "id": "4ff6fa7e97ba7269",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "200-學習OB/000-obsidian.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": false
+              }
+            }
           }
         ],
         "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 250.5
+    "width": 636.5
   },
-  "active": "81ab66aee8069bec",
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "af46c48f16e93ea9",
   "lastOpenFiles": [
-    "001-TODO/kpack.md",
-    "001-TODO/buildpacks.md",
-    "001-TODO/skaffold.md",
-    "400-devops/container/docker.md",
-    "001-TODO/okteto.md",
-    "400-devops/k8s/minikube.md",
-    "001-TODO/draft.md",
-    "001-TODO/query-io.md",
+    "index.md",
+    "200-學習OB/000-obsidian.md",
+    "200-學習OB/plugin/TabCopy.md",
+    "200-學習OB/plugin/Roam-Highlighter.md",
+    "400-devops/okteto.md",
     "400-devops/k8s/k8s.md",
-    "[../400-devops/k8s/k8s.md"
+    "consistant-report.md",
+    "400-devops/github/github-action.md",
+    "400-devops/draft.md",
+    "400-devops/draft-202211041008.png"
   ]
 }

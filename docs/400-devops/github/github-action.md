@@ -1,6 +1,6 @@
 ---
 created_date: 2022-10-04 13:43
-updated_date: 2022-10-20 22:55
+updated_date: 2022-11-04 23:36
 title: Github-Action
 tags: [github, github-action , workflow, 2022-10]
 date: 2022-09-29 12:03
@@ -34,6 +34,6 @@ event -> workflows -> jobs
 
 ## 自動構建部署到倉庫 ([github-packages](github-packages.md))
 
-- build maven : [maven > repository](../java/maven.md#repository)
-- build gradle : [gradle > repository](../java/gradle.md#repository)
-- build docker : [../container/docker > repository](../container/docker#repository)
+- build [maven](../java/maven.md)
+- build [gradle](../java/gradle.md) 
+- build [docker](../container/docker.md)

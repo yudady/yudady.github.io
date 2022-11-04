@@ -3,7 +3,7 @@ title: k8s
 tags: [2022-10, devops, k8s]
 aliases: [k8s]
 created_date: 2022-10-30 14:03
-updated_date: 2022-11-03 16:33
+updated_date: 2022-11-04 21:49
 ---
 
 # k8s
@@ -37,12 +37,18 @@ kubectl config use-context xxxxxxxxxxx
 
 ## ingress
 
-[kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx) : from github
+[kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx) : from [github](../github/000-MOC-GitHub.md)
 
-[Helm NGINX Ingress](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-helm/) : from helm
+[Helm NGINX Ingress](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-helm/) : from [helm](helm.md)
 
 ## dashboard
 
-[kubernetes/dashboard](https://github.com/kubernetes/dashboard) : from github
+[kubernetes/dashboard](https://github.com/kubernetes/dashboard) : from [github](../github/000-MOC-GitHub.md)
 
-[kubernetes-dashboard](https://artifacthub.io/packages/helm/k8s-dashboard/kubernetes-dashboard) : from helm
+[kubernetes-dashboard](https://artifacthub.io/packages/helm/k8s-dashboard/kubernetes-dashboard) : from [helm](helm.md)
+
+## tools
+
+- [draft](../draft.md) : xxx
+- [minikube](minikube.md) : k8s
+- [skaffold](../skaffold.md) : k8s 開發工具

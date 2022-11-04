@@ -1,14 +1,14 @@
 ---
 title: minikube
-tags: [2022-10, devops, docker]
+tags: [2022-10, devops, docker, choco, k8s]
 aliases: [minikube]
 created_date: 2022-10-28 12:08
-updated_date: 2022-11-04 10:14
+updated_date: 2022-11-04 23:11
 ---
 
 # minikube
 
-- **🏷️Tags** :   #2022-10 #devops  #docker
+- **🏷️Tags** :   #2022-10 #devops  #docker  #k8s
 - Link: [minikube start | minikube](https://minikube.sigs.k8s.io/docs/start/)
 
 ## install
@@ -146,4 +146,4 @@ minikube delete --all
 
 ## reference
 
-- [minikube](https://www.bilibili.com/video/BV1Tg411P7EB?p=1&vd_source=6bd04a20c72eb5cca642210346af7081)
+- [1.Kubernetes 简介_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Tg411P7EB/?p=1&vd_source=6bd04a20c72eb5cca642210346af7081)

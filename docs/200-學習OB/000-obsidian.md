@@ -1,6 +1,6 @@
 ---
 created_date: 2022-10-27 10:39
-updated_date: 2022-10-28 10:39
+updated_date: 2022-11-05 00:03
 title: obsidian
 tags: [obsidian]
 date: 2022-09-28 20:30
@@ -36,10 +36,6 @@ aliases: [obsidian]
 > ![](images/og-image.png)
 
 ```
-
-> [!tldr] > Here's a callout block. 
-> > It supports **markdown**, [wikilinks](Internal%20link), and [embeds](Embed%20files)! 
-> ![](images/og-image.png)
 
 ---
 

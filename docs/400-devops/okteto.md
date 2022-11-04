@@ -3,7 +3,7 @@ title: okteto
 tags: [2022-11, devops]
 aliases: [okteto]
 created_date: 2022-11-03 14:20
-updated_date: 2022-11-03 17:19
+updated_date: 2022-11-04 23:42
 ---
 
 # okteto
@@ -38,6 +38,7 @@ okteto context list
 ```
 
 ---
+
 ## command
 
 ```shell
@@ -79,7 +80,7 @@ okteto context use https://cloud.okteto.com --token $YOUR_TOKEN
 
 ### k8s context switch
 
-![](../400-devops/k8s/k8s#contexts-command)
+k8s#contexts-command
 
 ### test pod
 
@@ -89,7 +90,7 @@ deployment.apps/mongodb-deployment created
 service/mongodb-service created
 ```
 
-![](okteto-202211031628.png)
+![](images/okteto-202211031628.png)
 
 ### helm
 
@@ -103,7 +104,7 @@ okteto up
 
 ```
 
-![](okteto-202211031658.png)
+![](images/okteto-202211031658.png)
 ---
 
 使用 Okteto 設置開發環境涉及兩個主要步驟：

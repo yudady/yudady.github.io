@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "docker",
+                "query": "choco",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -203,7 +203,7 @@
     "direction": "horizontal",
     "width": 250.5
   },
-  "active": "bc8c2075109e2e15",
+  "active": "81ab66aee8069bec",
   "lastOpenFiles": [
     "001-TODO/kpack.md",
     "001-TODO/buildpacks.md",

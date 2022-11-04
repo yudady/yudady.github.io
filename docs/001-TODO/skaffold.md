@@ -3,7 +3,7 @@ title: skaffold
 tags: [2022-11, devops, k8s, docker]
 aliases: [skaffold]
 created_date: 2022-11-03 13:57
-updated_date: 2022-11-03 14:05
+updated_date: 2022-11-04 11:54
 ---
 
 # skaffold
@@ -29,4 +29,25 @@ updated_date: 2022-11-03 14:05
 ## 📝 怎麼玩
 
 - skdffold dev
-- 
+- [[buildpacks|buildpacks]] enable building a container image from source code without the need for a Dockerfile.
+
+[skaffold/examples at main · GoogleContainerTools/skaffold](https://github.com/GoogleContainerTools/skaffold/tree/main/examples)
+
+## [Cloud Code for IntelliJ](https://cloud.google.com/code/docs/intellij/quickstart-k8s)
+
+use [[../400-devops/k8s/minikube|minikube]] 本地開發
+
+![[intellij-quickstart-runthrough.gif]]
+
+
+
+
+
+
+
+
+
+
+
+
+

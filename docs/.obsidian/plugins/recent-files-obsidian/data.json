@@ -1,8 +1,36 @@
 {
   "recentFiles": [
     {
+      "basename": "skaffold",
+      "path": "001-TODO/skaffold.md"
+    },
+    {
+      "basename": "kpack",
+      "path": "001-TODO/kpack.md"
+    },
+    {
+      "basename": "buildpacks",
+      "path": "001-TODO/buildpacks.md"
+    },
+    {
+      "basename": "docker",
+      "path": "400-devops/container/docker.md"
+    },
+    {
       "basename": "okteto",
       "path": "001-TODO/okteto.md"
+    },
+    {
+      "basename": "minikube",
+      "path": "400-devops/k8s/minikube.md"
+    },
+    {
+      "basename": "draft",
+      "path": "001-TODO/draft.md"
+    },
+    {
+      "basename": "query-io",
+      "path": "001-TODO/query-io.md"
     },
     {
       "basename": "k8s",
@@ -17,20 +45,8 @@
       "path": "400-devops/windows/scoop.md"
     },
     {
-      "basename": "skaffold",
-      "path": "001-TODO/skaffold.md"
-    },
-    {
       "basename": "prometheus",
       "path": "400-devops/container/prometheus.md"
-    },
-    {
-      "basename": "minikube",
-      "path": "400-devops/k8s/minikube.md"
-    },
-    {
-      "basename": "docker",
-      "path": "400-devops/container/docker.md"
     },
     {
       "basename": "監控",

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "adaf57abf08f6964",
+        "id": "5e1ae815b9d86dbc",
         "type": "tabs",
         "children": [
           {
-            "id": "c156e64adcf85956",
+            "id": "bc8c2075109e2e15",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/okteto.md",
+                "file": "001-TODO/skaffold.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#contexts-command",
+                "query": "docker",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -95,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/okteto.md"
+                "file": "001-TODO/skaffold.md"
               }
             }
           },
@@ -138,7 +138,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "001-TODO/okteto.md",
+                "file": "001-TODO/skaffold.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -173,7 +173,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "001-TODO/okteto.md",
+                "file": "001-TODO/skaffold.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -185,7 +185,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "001-TODO/okteto.md",
+                "file": "001-TODO/skaffold.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,20 +203,17 @@
     "direction": "horizontal",
     "width": 250.5
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "c156e64adcf85956",
+  "active": "bc8c2075109e2e15",
   "lastOpenFiles": [
-    "400-devops/k8s/k8s.md",
-    "001-TODO/okteto.md",
-    "[../400-devops/k8s/k8s.md",
-    "400-devops/windows/scoop.md",
+    "001-TODO/kpack.md",
+    "001-TODO/buildpacks.md",
     "001-TODO/skaffold.md",
-    "400-devops/k8s/minikube.md",
     "400-devops/container/docker.md",
-    "001-TODO/監控.md",
-    "500-spring/尚矽谷-SpringBoot2核心技術.md",
-    "index.md"
+    "001-TODO/okteto.md",
+    "400-devops/k8s/minikube.md",
+    "001-TODO/draft.md",
+    "001-TODO/query-io.md",
+    "400-devops/k8s/k8s.md",
+    "[../400-devops/k8s/k8s.md"
   ]
 }

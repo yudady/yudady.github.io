@@ -41,3 +41,13 @@ latest: digest: sha256:9eeca44ba2d410e54fccc54cbe9c021802aa8b9836a0bcf3d3229354e
 
 
 ```
+
+
+## registry-1.docker.io login
+
+```shell
+$ docker login registry-1.docker.io
+Username: yudady
+Password:
+Login Succeeded
+```

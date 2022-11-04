@@ -3,7 +3,7 @@ title: minikube
 tags: [2022-10, devops, docker]
 aliases: [minikube]
 created_date: 2022-10-28 12:08
-updated_date: 2022-11-01 14:11
+updated_date: 2022-11-04 10:14
 ---
 
 # minikube
@@ -137,6 +137,12 @@ Delete all of the minikube clusters:
 ```shell
 minikube delete --all
 ```
+
+## tools
+
+-   [Draft](https://draft.sh/)
+-   [Okteto](https://github.com/okteto/okteto)
+-   [Skaffold](https://github.com/GoogleContainerTools/skaffold)
 
 ## reference
 

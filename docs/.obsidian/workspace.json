@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "387841ffc94eb550",
+        "id": "6190fb78da509b3a",
         "type": "tabs",
         "children": [
           {
-            "id": "f6bc1f3bfbf62564",
+            "id": "e7b0cdaedbd95448",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -207,7 +207,7 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "f6bc1f3bfbf62564",
+  "active": "e7b0cdaedbd95448",
   "lastOpenFiles": [
     "400-devops/k8s/minikube.md",
     "index.md",

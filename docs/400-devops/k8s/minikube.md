@@ -54,7 +54,16 @@ $ minikube config set driver docker
 $ minikube stop
 $ minikube config set memory 8192
 $ minikube config set cpus 4
+
+$ minikube config view
+- memory: 8192
+- cpus: 4
+- driver: docker
+
 $ minikube start
+
+$ minikube start --nodes 2 -p multinode-demo
+
 ```
 
 #### 3. To make delete
@@ -70,26 +79,26 @@ $ minikube delete
 Create a sample deployment and expose it on port 80:
 
 ```shell
-kubectl create deployment hello-minikube --image=docker.io/nginx:1.23
-kubectl expose deployment hello-minikube --type=NodePort --port=80
+kubectl create deployment k8s02-minikube --image=docker.io/nginx:1.23
+kubectl expose deployment k8s02-minikube --type=NodePort --port=80
 ```
 
 It may take a moment, but your deployment will soon show up when you run:
 
 ```shell
-kubectl get services hello-minikube
+kubectl get services k8s02-minikube
 ```
 
 The easiest way to access this service is to let minikube launch a web browser for you:
 
 ```shell
-minikube service hello-minikube
+minikube service k8s02-minikube
 ```
 
 Alternatively, use kubectl to forward the port:
 
 ```shell
-kubectl port-forward service/hello-minikube 7080:80
+kubectl port-forward service/k8s02-minikube 7080:80
 ```
 
 Tada! Your application is now available at [http://localhost:7080/](http://localhost:7080/).

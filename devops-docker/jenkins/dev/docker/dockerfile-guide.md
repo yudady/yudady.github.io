@@ -232,7 +232,7 @@ ADD [--chown=<user>:<group>] ["<src>",... "<dest>"]
 
 * 如果 `<src>` 是一个本地的`tar`包(identity, gzip, bzip2 or xz), 它会被解压为一个目录. When a directory is copied or unpacked, it has the same behavior as `tar -x`. 
   * `[Note]` Resources from remote URLs are not decompressed.
-  * 将一个`<src>`是否判断为压缩包是依赖文件的内容，而不是文件的名称，比如你直接`ADD hello.tar.gz  /`, 只是会将这个文件拷贝进去，并不会解压也不会报错。
+  * 将一个`<src>`是否判断为压缩包是依赖文件的内容，而不是文件的名称，比如你直接`ADD k8s02.tar.gz  /`, 只是会将这个文件拷贝进去，并不会解压也不会报错。
 
 ### EXPOSE / CMD / ENTRYPOINT
 #### 1.EXPOSE

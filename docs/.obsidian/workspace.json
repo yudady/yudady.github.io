@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c62b9260f5950459",
+        "id": "387841ffc94eb550",
         "type": "tabs",
         "children": [
           {
-            "id": "af46c48f16e93ea9",
+            "id": "f6bc1f3bfbf62564",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "200-學習OB/000-obsidian.md",
+                "file": "400-devops/k8s/minikube.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -95,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "200-學習OB/000-obsidian.md"
+                "file": "400-devops/k8s/minikube.md"
               }
             }
           },
@@ -139,7 +139,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "200-學習OB/000-obsidian.md",
+                "file": "400-devops/k8s/minikube.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -174,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "200-學習OB/000-obsidian.md",
+                "file": "400-devops/k8s/minikube.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "200-學習OB/000-obsidian.md",
+                "file": "400-devops/k8s/minikube.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -207,7 +207,7 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "af46c48f16e93ea9",
+  "active": "4ff6fa7e97ba7269",
   "lastOpenFiles": [
     "index.md",
     "200-學習OB/000-obsidian.md",

@@ -66,7 +66,7 @@ spec:
 - **`spec.type` :** 可以指定 Service 的型別，可以是`NodePort`或是`LoadBalancer`
 - **`spec.ports.port` :** 可以指定，創建的 Service 的 Cluster IP，是哪個 port number 去對應到`targetPort` 。
 - **`spec.ports.nodePort` :** 可以指定`Node物件`是哪一個 port number，去對應到`targetPort`，若是在 Service 的設定檔中沒有指定的話，Kubernetes 會隨機幫我們選一個 port number。
-- **`spec.ports.targetPort` :** targetPort 是我們指定的 Pod 的 port number，由於我們會在Pod中運行一個port number 8080 的 container (foo & bar)，所以我們指定`hello-service`的特定port number 都可以導到該 container。
+- **`spec.ports.targetPort` :** targetPort 是我們指定的 Pod 的 port number，由於我們會在Pod中運行一個port number 8080 的 container (foo & bar)，所以我們指定`k8s02-service`的特定port number 都可以導到該 container。
 - **`spec.ports.protocol` :** 目前 Service 支援`TCP` 、 `SCTP` 與`UDP` 三種 protocol，預設為`TCP` 。
 - **`spec.selector` :** selector 則會幫我們過濾，在範例中，我們創建的 Service 會將特定的 port number 收到的流量導向 `Lable 為 type=demo` 的 Pods。
 

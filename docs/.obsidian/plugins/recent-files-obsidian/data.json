@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "000-obsidian",
-      "path": "200-學習OB/000-obsidian.md"
+      "basename": "minikube",
+      "path": "400-devops/k8s/minikube.md"
     },
     {
       "basename": "index",
       "path": "index.md"
+    },
+    {
+      "basename": "000-obsidian",
+      "path": "200-學習OB/000-obsidian.md"
     },
     {
       "basename": "TabCopy",
@@ -51,10 +55,6 @@
     {
       "basename": "GraalVM",
       "path": "400-devops/GraalVM.md"
-    },
-    {
-      "basename": "minikube",
-      "path": "400-devops/k8s/minikube.md"
     },
     {
       "basename": "kpack",

@@ -1,0 +1,20 @@
+apiVersion: skaffold/v3
+kind: Config
+build:
+  artifacts:
+  - image: skaffold-example
+    context: .
+    docker:
+      dockerfile: Dockerfile
+      noCache: true
+  tagPolicy:
+    gitCommit: {}
+  local:
+    concurrency: 1
+manifests:
+  rawYaml:
+  - k8s-*
+profiles:
+  - name: cloudbuild
+    build:
+      googleCloudBuild: {}

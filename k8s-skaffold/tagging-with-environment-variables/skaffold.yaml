@@ -1,0 +1,11 @@
+apiVersion: skaffold/v3
+kind: Config
+build:
+  artifacts:
+  - image: skaffold-example
+  tagPolicy:
+    envTemplate:
+      template: "{{.FOO}}"
+manifests:
+  rawYaml:
+    - k8s-*

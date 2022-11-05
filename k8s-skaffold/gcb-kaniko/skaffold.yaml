@@ -1,0 +1,12 @@
+apiVersion: skaffold/v3
+kind: Config
+build:
+  googleCloudBuild:
+    projectId: k8s-skaffold
+  artifacts:
+  - image: skaffold-example
+    kaniko:
+      cache: {}
+manifests:
+  rawYaml:
+  - k8s-*

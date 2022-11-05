@@ -66,6 +66,11 @@ $ minikube start --nodes 2 -p multinode-demo
 
 ```
 
+```powershell
+minikube docker-env
+```
+
+
 #### 3. To make delete
 
 ```shell

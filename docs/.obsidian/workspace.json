@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "400-devops/k8s/minikube.md",
+                "file": "400-devops/okteto.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -95,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/k8s/minikube.md"
+                "file": "400-devops/okteto.md"
               }
             }
           },
@@ -139,7 +139,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/k8s/minikube.md",
+                "file": "400-devops/okteto.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -174,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/k8s/minikube.md",
+                "file": "400-devops/okteto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/k8s/minikube.md",
+                "file": "400-devops/okteto.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -207,8 +207,9 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "4ff6fa7e97ba7269",
+  "active": "f6bc1f3bfbf62564",
   "lastOpenFiles": [
+    "400-devops/k8s/minikube.md",
     "index.md",
     "200-學習OB/000-obsidian.md",
     "200-學習OB/plugin/TabCopy.md",
@@ -217,7 +218,6 @@
     "400-devops/k8s/k8s.md",
     "consistant-report.md",
     "400-devops/github/github-action.md",
-    "400-devops/draft.md",
-    "400-devops/draft-202211041008.png"
+    "400-devops/draft.md"
   ]
 }

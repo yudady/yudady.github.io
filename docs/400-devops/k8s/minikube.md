@@ -3,7 +3,7 @@ title: minikube
 tags: [2022-10, devops, docker, choco, k8s]
 aliases: [minikube]
 created_date: 2022-10-28 12:08
-updated_date: 2022-11-04 23:11
+updated_date: 2022-11-05 11:09
 ---
 
 # minikube
@@ -66,10 +66,11 @@ $ minikube start --nodes 2 -p multinode-demo
 
 ```
 
+##### powershell
+
 ```powershell
 minikube docker-env
 ```
-
 
 #### 3. To make delete
 

@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "okteto",
+      "path": "400-devops/okteto.md"
+    },
+    {
       "basename": "minikube",
       "path": "400-devops/k8s/minikube.md"
     },
@@ -19,10 +23,6 @@
     {
       "basename": "Roam-Highlighter",
       "path": "200-學習OB/plugin/Roam-Highlighter.md"
-    },
-    {
-      "basename": "okteto",
-      "path": "400-devops/okteto.md"
     },
     {
       "basename": "k8s",

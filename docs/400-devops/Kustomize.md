@@ -3,7 +3,7 @@ title: Kustomize
 tags: [2022-11, devops]
 aliases: [Kustomize]
 created_date: 2022-11-04 23:19
-updated_date: 2022-11-04 23:19
+updated_date: 2022-11-06 10:04
 ---
 
 # Kustomize
@@ -19,7 +19,8 @@ updated_date: 2022-11-04 23:19
 
 ## 是什麼
 
-- 
+- yml 疊加
+![](images/Kustomize-202211061004.png)
 
 ## 去哪下載
 

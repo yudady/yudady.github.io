@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6190fb78da509b3a",
+        "id": "e72a2cb4768af9ec",
         "type": "tabs",
         "children": [
           {
-            "id": "e7b0cdaedbd95448",
+            "id": "366a4ad0c804b7fe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "400-devops/okteto.md",
+                "file": "001-TODO/ArgoCD.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.5
+    "width": 224.5
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/okteto.md"
+                "file": "001-TODO/ArgoCD.md"
               }
             }
           },
@@ -139,7 +139,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/okteto.md",
+                "file": "001-TODO/ArgoCD.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -174,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/okteto.md",
+                "file": "001-TODO/ArgoCD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/okteto.md",
+                "file": "001-TODO/ArgoCD.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -202,22 +202,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 636.5
+    "width": 305.5
   },
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "e7b0cdaedbd95448",
+  "active": "366a4ad0c804b7fe",
   "lastOpenFiles": [
-    "400-devops/k8s/minikube.md",
-    "index.md",
-    "200-學習OB/000-obsidian.md",
-    "200-學習OB/plugin/TabCopy.md",
-    "200-學習OB/plugin/Roam-Highlighter.md",
-    "400-devops/okteto.md",
     "400-devops/k8s/k8s.md",
-    "consistant-report.md",
-    "400-devops/github/github-action.md",
-    "400-devops/draft.md"
+    "400-devops/k8s/k8s-drawing.md",
+    "400-devops/skaffold.md",
+    "400-devops/images/skaffold-202211061001.png",
+    "400-devops/draft-202211041008.png",
+    "400-devops/draft.md",
+    "400-devops/Kustomize.md",
+    "400-devops/images/Kustomize-202211061004.png",
+    "index.md",
+    "400-devops/k8s/minikube.md"
   ]
 }

@@ -23,6 +23,8 @@ updated_date: 2022-11-04 23:27
 - [k8s](k8s/k8s.md) local auto deploy
 - Skaffold- 简化本地开发 kubernetes 应用的神器
 
+![](images/skaffold-202211061001.png)
+
 ## 去哪下載
 
 - choco install skaffold

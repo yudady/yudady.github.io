@@ -3,7 +3,7 @@ title: k8s
 tags: [2022-10, devops, k8s]
 aliases: [k8s]
 created_date: 2022-10-30 14:03
-updated_date: 2022-11-04 21:49
+updated_date: 2022-11-06 10:10
 ---
 
 # k8s
@@ -52,3 +52,5 @@ kubectl config use-context xxxxxxxxxxx
 - [draft](../draft.md) : xxx
 - [minikube](minikube.md) : k8s
 - [skaffold](../skaffold.md) : k8s 開發工具
+
+![](images/k8s-202211061009.png)

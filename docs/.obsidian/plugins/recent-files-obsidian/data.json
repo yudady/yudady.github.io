@@ -1,16 +1,52 @@
 {
   "recentFiles": [
     {
+      "basename": "ArgoCD",
+      "path": "001-TODO/ArgoCD.md"
+    },
+    {
+      "basename": "k8s",
+      "path": "400-devops/k8s/k8s.md"
+    },
+    {
+      "basename": "k8s-drawing",
+      "path": "400-devops/k8s/k8s-drawing.md"
+    },
+    {
+      "basename": "skaffold",
+      "path": "400-devops/skaffold.md"
+    },
+    {
+      "basename": "skaffold-202211061001",
+      "path": "400-devops/images/skaffold-202211061001.png"
+    },
+    {
+      "basename": "draft-202211041008",
+      "path": "400-devops/draft-202211041008.png"
+    },
+    {
+      "basename": "draft",
+      "path": "400-devops/draft.md"
+    },
+    {
+      "basename": "Kustomize",
+      "path": "400-devops/Kustomize.md"
+    },
+    {
+      "basename": "Kustomize-202211061004",
+      "path": "400-devops/images/Kustomize-202211061004.png"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
       "basename": "okteto",
       "path": "400-devops/okteto.md"
     },
     {
       "basename": "minikube",
       "path": "400-devops/k8s/minikube.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "000-obsidian",
@@ -25,32 +61,12 @@
       "path": "200-學習OB/plugin/Roam-Highlighter.md"
     },
     {
-      "basename": "k8s",
-      "path": "400-devops/k8s/k8s.md"
-    },
-    {
       "basename": "github-action",
       "path": "400-devops/github/github-action.md"
     },
     {
-      "basename": "draft",
-      "path": "400-devops/draft.md"
-    },
-    {
-      "basename": "draft-202211041008",
-      "path": "400-devops/draft-202211041008.png"
-    },
-    {
-      "basename": "skaffold",
-      "path": "400-devops/skaffold.md"
-    },
-    {
       "basename": "監控",
       "path": "400-devops/監控.md"
-    },
-    {
-      "basename": "Kustomize",
-      "path": "400-devops/Kustomize.md"
     },
     {
       "basename": "GraalVM",

@@ -43,3 +43,4 @@ https://www.bilibili.com/video/BV17F411h7Zh/?p=1&amp;spm_id_from=pageDriver&amp;
 - kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 
 
+

@@ -9,7 +9,8 @@ updated_date: 2022-11-06 10:04
 # Kustomize
 
 - **🏷️Tags** :   #2022-11 #devops 
-- Link: 
+- Link: [kubernetes-sigs/kustomize: Customization of kubernetes YAML configurations](https://github.com/kubernetes-sigs/kustomize)
+- [Kustomize | SIG CLI](https://kubectl.docs.kubernetes.io/installation/kustomize/)
 
 <iframe title="Kustomize: The Best Way to Manage Your Kubernetes Configs" src="https://www.youtube.com/embed/spCdNeNCuFU?feature=oembed" height="113" width="200" allowfullscreen="" allow="fullscreen" style="aspect-ratio: 1.76991 / 1; width: 100%; height: 100%;"></iframe>
 

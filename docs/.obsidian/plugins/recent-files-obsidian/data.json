@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Kustomize",
+      "path": "400-devops/Kustomize.md"
+    },
+    {
       "basename": "ArgoCD",
       "path": "001-TODO/ArgoCD.md"
     },
@@ -31,10 +35,6 @@
     {
       "basename": "draft",
       "path": "400-devops/draft.md"
-    },
-    {
-      "basename": "Kustomize",
-      "path": "400-devops/Kustomize.md"
     },
     {
       "basename": "Kustomize-202211061004",

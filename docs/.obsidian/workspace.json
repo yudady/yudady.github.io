@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/ArgoCD.md",
+                "file": "400-devops/Kustomize.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -96,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/ArgoCD.md"
+                "file": "400-devops/Kustomize.md"
               }
             }
           },
@@ -140,7 +139,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "001-TODO/ArgoCD.md",
+                "file": "400-devops/Kustomize.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -175,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "001-TODO/ArgoCD.md",
+                "file": "400-devops/Kustomize.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "001-TODO/ArgoCD.md",
+                "file": "400-devops/Kustomize.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -211,6 +210,7 @@
   },
   "active": "99995ee04c598201",
   "lastOpenFiles": [
+    "001-TODO/ArgoCD.md",
     "index.md",
     "400-devops/k8s/k8s.md",
     "400-devops/k8s/k8s-drawing.md",
@@ -219,7 +219,6 @@
     "400-devops/draft-202211041008.png",
     "400-devops/draft.md",
     "400-devops/Kustomize.md",
-    "400-devops/images/Kustomize-202211061004.png",
-    "400-devops/k8s/minikube.md"
+    "400-devops/images/Kustomize-202211061004.png"
   ]
 }

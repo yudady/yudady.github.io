@@ -21,3 +21,12 @@ jobs:
       - run: pip install mkdocs-mermaid2-plugin
       - run: pip3 install mkdocs-exclude
       - run: mkdocs gh-deploy --force
+
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: yudady/spring-getting-started-guides
+          event-type: my-event
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+

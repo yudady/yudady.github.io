@@ -22,11 +22,11 @@ jobs:
       - run: pip3 install mkdocs-exclude
       - run: mkdocs gh-deploy --force
 
-      - run: |
-          curl \
-          -X POST \
-          -H "Accept: application/vnd.github+json" \
-          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-          https://api.github.com/repos/yudady/spring-getting-started-guides/dispatches \
-          -d '{"event_type":"on-demand-test","client_payload":{"unit":false,"integration":true}}'
+#      - run: |
+#          curl \
+#          -X POST \
+#          -H "Accept: application/vnd.github+json" \
+#          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+#          https://api.github.com/repos/yudady/spring-getting-started-guides/dispatches \
+#          -d '{"event_type":"on-demand-test","client_payload":{"unit":false,"integration":true}}'
 

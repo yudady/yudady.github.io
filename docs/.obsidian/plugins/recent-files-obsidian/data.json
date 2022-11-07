@@ -5,6 +5,10 @@
       "path": "001-TODO/ArgoCD.md"
     },
     {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
       "basename": "k8s",
       "path": "400-devops/k8s/k8s.md"
     },
@@ -35,10 +39,6 @@
     {
       "basename": "Kustomize-202211061004",
       "path": "400-devops/images/Kustomize-202211061004.png"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "okteto",

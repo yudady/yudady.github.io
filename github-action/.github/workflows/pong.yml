@@ -1,0 +1,17 @@
+name: Pong
+env:
+  REPO_OWNER: yudady
+  REPO_NAME: example-event-dispatcher-workflows
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+on:
+  repository_dispatch:
+    types: [run-pong]
+jobs:
+  pong:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install packages
+        run: npm ci
+      - name: Run Pong
+        run: npm run pong

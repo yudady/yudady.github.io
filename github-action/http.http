@@ -1,0 +1,43 @@
+###
+POST https://api.github.com/repos/yudady/example-event-dispatcher-workflows/dispatches
+Accept: application/vnd.github+json
+Authorization: Bearer xxxxxxxxxxxxxxxx
+Content-Type: application/x-www-form-urlencoded
+
+{
+  "event_type": "run-ping-allinone",
+  "client_payload": {
+    "command": "ping",
+    "workflowType": "allinone"
+  }
+}
+
+###
+POST https://api.github.com/repos/yudady/example-event-dispatcher-workflows/dispatches
+Accept: application/vnd.github+json
+Authorization: Bearer xxxxxxxxxxxxxxxx
+Content-Type: application/x-www-form-urlencoded
+
+{
+  "event_type": "run-ping",
+  "client_payload": {
+    "command": "ping"
+  }
+}
+
+###
+POST https://api.github.com/repos/yudady/example-event-dispatcher-workflows/dispatches
+Accept: application/vnd.github+json
+Authorization: Bearer xxxxxxxxxxxxxxxx
+Content-Type: application/x-www-form-urlencoded
+
+{
+  "event_type": "kustomization-tag",
+  "client_payload": {
+    "image": "364950776/flask-demo",
+    "sha-tag": "v1"
+  }
+}
+
+###
+###

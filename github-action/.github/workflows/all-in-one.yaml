@@ -1,0 +1,17 @@
+name: All-In-One
+env:
+  REPO_OWNER: yudady
+  REPO_NAME: example-event-dispatcher-workflows
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+on:
+  repository_dispatch:
+    types: [run-ping-allinone, run-pong-allinone, run-done-allinone]
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install packages
+        run: npm ci
+      - name: Run ${{ github.event.client_payload.command }}
+        run: npm run ${{ github.event.client_payload.command }} allinone

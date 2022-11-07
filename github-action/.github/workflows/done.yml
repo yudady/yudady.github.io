@@ -1,0 +1,17 @@
+name: Done
+env:
+  REPO_OWNER: yudady
+  REPO_NAME: example-event-dispatcher-workflows
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+on:
+  repository_dispatch:
+    types: [run-done]
+jobs:
+  done:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install packages
+        run: npm ci
+      - name: Run Done
+        run: npm run done

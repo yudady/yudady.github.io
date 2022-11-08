@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "20b8c55419e67d28",
+        "id": "6f6578d989073601",
         "type": "tabs",
         "children": [
           {
-            "id": "99995ee04c598201",
+            "id": "d0165a2207551b07",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "400-devops/Kustomize.md",
+                "file": "400-devops/k8s/k8s.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "movedAttachments",
+                "query": "Fluentd",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 326.5
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/Kustomize.md"
+                "file": "400-devops/k8s/k8s.md"
               }
             }
           },
@@ -139,7 +139,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/Kustomize.md",
+                "file": "400-devops/k8s/k8s.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -174,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/Kustomize.md",
+                "file": "400-devops/k8s/k8s.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/Kustomize.md",
+                "file": "400-devops/k8s/k8s.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -205,20 +205,17 @@
     "width": 200,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "99995ee04c598201",
+  "active": "d0165a2207551b07",
   "lastOpenFiles": [
-    "001-TODO/ArgoCD.md",
-    "index.md",
+    "001-TODO/pulumi.md",
+    "001-TODO/Fluent-Bit.md",
     "400-devops/k8s/k8s.md",
-    "400-devops/k8s/k8s-drawing.md",
-    "400-devops/skaffold.md",
-    "400-devops/images/skaffold-202211061001.png",
-    "400-devops/draft-202211041008.png",
-    "400-devops/draft.md",
-    "400-devops/Kustomize.md",
-    "400-devops/images/Kustomize-202211061004.png"
+    "index.md",
+    "400-devops/DevOps_Roadmap_by_TWN.01.pdf",
+    "001-TODO/istio.md",
+    "001-TODO/kiaki.md",
+    "[../400-devops/k8s/k8s.md",
+    "001-TODO/kaniko.md",
+    "001-TODO/ArgoCD.md"
   ]
 }

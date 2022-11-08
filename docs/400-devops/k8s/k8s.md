@@ -3,7 +3,7 @@ title: k8s
 tags: [2022-10, devops, k8s]
 aliases: [k8s]
 created_date: 2022-10-30 14:03
-updated_date: 2022-11-06 10:10
+updated_date: 2022-11-08 15:08
 ---
 
 # k8s
@@ -49,8 +49,28 @@ kubectl config use-context xxxxxxxxxxx
 
 ## tools
 
-- [draft](../draft.md) : xxx
 - [minikube](minikube.md) : k8s
 - [skaffold](../skaffold.md) : k8s 開發工具
+- service mesh & **istio** : sidecar , 保護 k8s
+- kiali :  k8s 視圖整合 , labels:  **app**: xxxxx
+- argocd :  cd , auto pull k8s yaml file from github 
+- prometheus : cd 監控  =>  labels:  **release: prometheus**
+- EFK(**Fluent-Bit**) : log
+- kustmize : yaml file 合併
+- okteto : online k8s , 部屬 pod
+- buildah :  OCI image builder : like docker build
+- kaniko : k8s 中構建 image 工具
+- skopeo :  OCI 鏡像命令 :  skopeo copy -dest-tls-verifymfalse docker-daemon:au.icr.io/rhay/helloworld:ve.1 oci:helloworld_oci
+- dive : 命令用來查看 image 狀況
+- pulumi : IaC
+- [draft](../draft.md) : xxx
+
+---
 
 ![](images/k8s-202211061009.png)
+
+## ref
+
+- [Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours] - YouTube](https://www.youtube.com/watch?v=X48VuDVv0do)
+- [devops tools](https://www.youtube.com/watch?v=1id6ERvfozo&list=PLy7NrYWoggjxKDRWLqkd4Kbt84XEerHhB)
+- [Just me and Opensource - YouTube](https://www.youtube.com/c/wenkatn-justmeandopensource/playlists)

@@ -60,7 +60,7 @@ $ minikube config view
 - cpus: 4
 - driver: docker
 
-$ minikube start
+$ minikube start - cpus 6 - memory 12288
 
 $ minikube start --nodes 2 -p multinode-demo
 

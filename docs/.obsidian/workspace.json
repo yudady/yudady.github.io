@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6f6578d989073601",
+        "id": "0240f05b8a1cac9b",
         "type": "tabs",
         "children": [
           {
-            "id": "d0165a2207551b07",
+            "id": "cb1413adb8a2e412",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "400-devops/k8s/k8s.md",
+                "file": "001-TODO/istio.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -95,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/k8s/k8s.md"
+                "file": "001-TODO/istio.md"
               }
             }
           },
@@ -139,7 +139,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/k8s/k8s.md",
+                "file": "001-TODO/istio.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -174,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/k8s/k8s.md",
+                "file": "001-TODO/istio.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/k8s/k8s.md",
+                "file": "001-TODO/istio.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -205,17 +205,20 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "d0165a2207551b07",
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "cb1413adb8a2e412",
   "lastOpenFiles": [
+    "400-devops/k8s/minikube.md",
+    "400-devops/k8s/k8s.md",
+    "001-TODO/istio.md",
+    "index.md",
     "001-TODO/pulumi.md",
     "001-TODO/Fluent-Bit.md",
-    "400-devops/k8s/k8s.md",
-    "index.md",
     "400-devops/DevOps_Roadmap_by_TWN.01.pdf",
-    "001-TODO/istio.md",
     "001-TODO/kiaki.md",
     "[../400-devops/k8s/k8s.md",
-    "001-TODO/kaniko.md",
-    "001-TODO/ArgoCD.md"
+    "001-TODO/kaniko.md"
   ]
 }

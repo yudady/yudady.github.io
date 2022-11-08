@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "istio",
+      "path": "001-TODO/istio.md"
+    },
+    {
+      "basename": "minikube",
+      "path": "400-devops/k8s/minikube.md"
+    },
+    {
       "basename": "k8s",
       "path": "400-devops/k8s/k8s.md"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
     },
     {
       "basename": "pulumi",
@@ -13,24 +25,12 @@
       "path": "001-TODO/Fluent-Bit.md"
     },
     {
-      "basename": "index",
-      "path": "index.md"
-    },
-    {
       "basename": "DevOps_Roadmap_by_TWN.01",
       "path": "400-devops/DevOps_Roadmap_by_TWN.01.pdf"
     },
     {
-      "basename": "istio",
-      "path": "001-TODO/istio.md"
-    },
-    {
       "basename": "kiaki",
       "path": "001-TODO/kiaki.md"
-    },
-    {
-      "basename": "k8s",
-      "path": "[../400-devops/k8s/k8s.md"
     },
     {
       "basename": "kaniko",
@@ -71,10 +71,6 @@
     {
       "basename": "okteto",
       "path": "400-devops/okteto.md"
-    },
-    {
-      "basename": "minikube",
-      "path": "400-devops/k8s/minikube.md"
     },
     {
       "basename": "000-obsidian",

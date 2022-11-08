@@ -9,7 +9,8 @@ updated_date: 2022-11-08 14:26
 # istio
 
 - **🏷️Tags** :   #2022-11 #devops 
-- Link: [istio/istio: Connect, secure, control, and observe services.](https://github.com/istio/istio)
+- Link: [Istio / Getting Started](https://istio.io/latest/docs/setup/getting-started/)
+- [istio/istio: Connect, secure, control, and observe services.](https://github.com/istio/istio)
 
 test istio code : [microservices-demo/istio-manifests.yaml at main · GoogleCloudPlatform/microservices-demo](https://github.com/GoogleCloudPlatform/microservices-demo/blob/main/release/istio-manifests.yaml)
 
@@ -25,7 +26,7 @@ test istio code : [microservices-demo/istio-manifests.yaml at main · GoogleClou
 
 ## 去哪下載
 
-- 
+- choco install istioctl
 
 ## 📝 怎麼玩
 

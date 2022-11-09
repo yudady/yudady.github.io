@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+
+
+  fluentd:
+    container_name: file-fluent-bit-server
+    user: root
+    image: cr.fluentbit.io/fluent/fluent-bit
+    volumes:
+#      - /var/lib/docker/containers:/fluentd/log/containers # Example: Reading docker logs
+      - ./conf:/fluent-bit/etc/fluent-bit.conf
+#      - ./input:/fluent-bit/log/files/ #Example: Reading logs from a file
+#      - ./output:/output/ # Example: Fluentd will collect logs and store it here for demo
+#    logging:
+#      driver: "fluentd"
+#
+#
+#  # This app writes logs to a local file
+#  file-myapp:
+#    container_name: file-fluent-bit-input
+#    image: alpine:3.16.2
+#    volumes:
+#      - ./input:/app
+#    command: [ /bin/sh , -c , "chmod +x /app/app.sh && ./app/app.sh" ]

@@ -14,7 +14,7 @@ services:
       driver: "local"
 
 
-  # This app writes logs to a local file
+  # This app writes logs http
   http-myapp:
     container_name: http-fluentd-app
     image: alpine

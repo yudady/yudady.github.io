@@ -1,5 +1,6 @@
 version: '3'
 services:
+
   fluentd:
     image: fluent/fluent-bit
     volumes:
@@ -13,27 +14,27 @@ services:
       options:
         max-size: 100m
         max-file: "5"
-  nginx:
-    logging:
-      driver: fluentd
-      options:
-        fluentd-address: localhost:24224
-        tag: nginx
-    image: nginx
-    ports:
-      - "8080:80"
-    depends_on:
-      - fluentd
-    hostname: nginx
-  nginx2:
-    logging:
-      driver: fluentd
-      options:
-        fluentd-address: localhost:24224
-        tag: nginx
-    image: nginx
-    ports:
-      - "8081:80"
-    depends_on:
-      - fluentd
-    hostname: nginx2
+#  nginx:
+#    logging:
+#      driver: fluentd
+#      options:
+#        fluentd-address: localhost:24224
+#        tag: nginx
+#    image: nginx
+#    ports:
+#      - "8080:80"
+#    depends_on:
+#      - fluentd
+#    hostname: nginx
+#  nginx2:
+#    logging:
+#      driver: fluentd
+#      options:
+#        fluentd-address: localhost:24224
+#        tag: nginx
+#    image: nginx
+#    ports:
+#      - "8081:80"
+#    depends_on:
+#      - fluentd
+#    hostname: nginx2

@@ -2,6 +2,7 @@ version: '3'
 services:
 
   fluentd:
+    container_name: http-fluent-bit-server
     image: fluent/fluent-bit
     volumes:
       - ./conf:/fluent-bit/etc
@@ -16,7 +17,7 @@ services:
 
   # This app writes logs to http
   http-myapp:
-    container_name: http-fluentd-app
+    container_name: http-fluent-bit-app
     image: alpine
     volumes:
       - ./input:/app

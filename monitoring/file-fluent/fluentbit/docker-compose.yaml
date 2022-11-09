@@ -2,12 +2,13 @@ version: '3'
 services:
 
   fluentd:
+    container_name: file-fluent-bit-server
     image: fluent/fluent-bit
     volumes:
+      - /var/lib/docker/containers:/fluentd/log/containers # Example: Reading docker logs
       - ./conf:/fluent-bit/etc
-    ports:
-      - "9880:9880"
-    hostname: fluentd
+      - ./input:/fluentd/log/files/ #Example: Reading logs from a file
+      - ./output:/output/ # Example: Fluentd will collect logs and store it here for demo
     logging:
       driver: "json-file"
       options:
@@ -16,7 +17,7 @@ services:
 
   # This app writes logs to a local file
   file-myapp:
-    container_name: file-fluentd-input
+    container_name: file-fluent-bit-input
     image: alpine:3.16.2
     volumes:
       - ./input:/app

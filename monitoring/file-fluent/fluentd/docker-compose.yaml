@@ -1,0 +1,23 @@
+version: "3"
+services:
+
+
+  fluentd:
+    container_name: file-fluentd-server
+    image: fluentd:v1.14-1
+    volumes:
+      - /var/lib/docker/containers:/fluentd/log/containers # Example: Reading docker logs
+      - ./conf:/fluentd/etc/
+      - ./input:/fluentd/log/files/ #Example: Reading logs from a file
+      - ./output:/output/ # Example: Fluentd will collect logs and store it here for demo
+    logging:
+      driver: "local"
+
+
+  # This app writes logs to a local file
+  file-myapp:
+    container_name: file-fluentd-input
+    image: alpine:3.16.2
+    volumes:
+      - ./input:/app
+    command: [ /bin/sh , -c , "chmod +x /app/app.sh && ./app/app.sh" ]

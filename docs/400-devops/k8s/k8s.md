@@ -3,7 +3,7 @@ title: k8s
 tags: [2022-10, devops, k8s]
 aliases: [k8s]
 created_date: 2022-10-30 14:03
-updated_date: 2022-11-08 15:08
+updated_date: 2022-11-09 14:28
 ---
 
 # k8s
@@ -13,21 +13,59 @@ updated_date: 2022-11-08 15:08
 
 ## command
 
-### contexts-command
-
-```shell
-# 查詢 contexts
-kubectl config get-contexts
-
-# 切換 contexts
-kubectl config use-context xxxxxxxxxxx
+### Config
 
 ```
+# help
+kubectl config 
 
-### port-forward
+#${HOME}/.kube/config
+#kubectl config --kubeconfig="C:\someotherfolder\config"
+#$KUBECONFIG
+```
 
-> [!INFO] ### port-forward 
-> kubectl port-forward mysql-dp-8dfb795cf-2hkgm 3306:3306 --address 0.0.0.0
+### contexts
+
+```shell
+#get the current context
+kubectl config current-context
+
+#get and set contexts
+kubectl config get-contexts
+kubectl config use-context minikube
+```
+
+### get command
+
+```
+kubectl get <resource>
+
+#examples
+kubectl get pods
+kubectl get deployments
+kubectl get services
+kubectl get configmaps
+kubectl get secrets
+kubectl get ingress
+```
+
+### other
+
+```
+## port-forward
+kubectl port-forward mysql-dp-8dfb795cf-2hkgm 3306:3306 --address 0.0.0.0
+
+## Namespaces
+kubectl get namespaces
+kubectl create namespace test
+kubectl get pods -n test
+
+## Describe command
+kubectl describe <resource> <name>
+
+## Version
+kubectl version
+```
 
 ## service
 
@@ -74,3 +112,4 @@ kubectl config use-context xxxxxxxxxxx
 - [Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours] - YouTube](https://www.youtube.com/watch?v=X48VuDVv0do)
 - [devops tools](https://www.youtube.com/watch?v=1id6ERvfozo&list=PLy7NrYWoggjxKDRWLqkd4Kbt84XEerHhB)
 - [Just me and Opensource - YouTube](https://www.youtube.com/c/wenkatn-justmeandopensource/playlists)
+- [Visual Studio Code and Kubernetes plugin for beginners - YouTube](https://www.youtube.com/watch?v=Si6og3Wa2Hg&t=59s)

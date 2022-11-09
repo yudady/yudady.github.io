@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0240f05b8a1cac9b",
+        "id": "274c1ec0c61a1b8e",
         "type": "tabs",
         "children": [
           {
-            "id": "cb1413adb8a2e412",
+            "id": "e62156dec16e6ba1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/istio.md",
+                "file": "400-devops/k8s/k8s.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -95,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/istio.md"
+                "file": "400-devops/k8s/k8s.md"
               }
             }
           },
@@ -139,7 +139,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "001-TODO/istio.md",
+                "file": "400-devops/k8s/k8s.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -174,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "001-TODO/istio.md",
+                "file": "400-devops/k8s/k8s.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "001-TODO/istio.md",
+                "file": "400-devops/k8s/k8s.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -205,15 +205,12 @@
     "width": 200,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "cb1413adb8a2e412",
+  "active": "e62156dec16e6ba1",
   "lastOpenFiles": [
+    "index.md",
     "400-devops/k8s/minikube.md",
     "400-devops/k8s/k8s.md",
     "001-TODO/istio.md",
-    "index.md",
     "001-TODO/pulumi.md",
     "001-TODO/Fluent-Bit.md",
     "400-devops/DevOps_Roadmap_by_TWN.01.pdf",

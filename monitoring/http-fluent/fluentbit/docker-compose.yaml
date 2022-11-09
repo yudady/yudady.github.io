@@ -1,0 +1,23 @@
+version: '3'
+services:
+
+  fluentd:
+    image: fluent/fluent-bit
+    volumes:
+      - ./conf:/fluent-bit/etc
+    ports:
+      - "9880:9880"
+    hostname: fluentd
+    logging:
+      driver: "json-file"
+      options:
+        max-size: 100m
+        max-file: "5"
+
+  # This app writes logs to a local file
+  http-myapp:
+    container_name: http-fluentd-app
+    image: alpine
+    volumes:
+      - ./input:/app
+    command: [ /bin/sh , -c , "apk add --no-cache curl && chmod +x /app/app.sh && /app/app.sh" ]

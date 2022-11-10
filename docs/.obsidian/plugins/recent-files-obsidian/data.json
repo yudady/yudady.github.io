@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "vscode-devcontainer",
+      "path": "400-devops/container/vscode-devcontainer.md"
+    },
+    {
       "basename": "index",
       "path": "index.md"
+    },
+    {
+      "basename": "drone",
+      "path": "001-TODO/drone.md"
     },
     {
       "basename": "k8s",

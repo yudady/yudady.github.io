@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "go",
+      "path": "001-TODO/go.md"
+    },
+    {
       "basename": "vscode-devcontainer",
       "path": "400-devops/container/vscode-devcontainer.md"
     },

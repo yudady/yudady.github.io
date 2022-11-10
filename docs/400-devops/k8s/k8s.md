@@ -101,7 +101,6 @@ kubectl version
 - skopeo :  OCI 鏡像命令 :  skopeo copy -dest-tls-verifymfalse docker-daemon:au.icr.io/rhay/helloworld:ve.1 oci:helloworld_oci
 - dive : 命令用來查看 image 狀況
 - pulumi : IaC
-- [draft](../draft.md) : xxx
 
 ---
 

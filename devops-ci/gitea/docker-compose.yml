@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+
+  gitea:
+    container_name: gitea
+    image: gitea/gitea:1.13.1
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+      - SSH_PORT=2000
+      - DISABLE_SSH=true
+      - DB_TYPE=mysql
+      - DB_HOST=db:3306
+      - DB_NAME=gitea
+      - DB_USER=gitea
+      - DB_PASSWD=gitea
+    restart: always
+    networks:
+      - gitea-local
+    volumes:
+      - ./data/gitea:/data
+#      - /etc/timezone:/etc/timezone:ro
+#      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "8080:3000"
+      - "2222:22"
+
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=gitea
+      - MYSQL_USER=gitea
+      - MYSQL_PASSWORD=gitea
+      - MYSQL_DATABASE=gitea
+    networks:
+      - gitea-local
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+
+networks:
+  gitea-local:
+    external: false

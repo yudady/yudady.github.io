@@ -14,6 +14,8 @@ aliases: [Personal Knowledge Manage, "靈感筆記"]
 
 [GitHub - Tommy](https://github.com/yudady)
 
+
+
 ---
 
 ## 處理中
@@ -32,3 +34,7 @@ aliases: [Personal Knowledge Manage, "靈感筆記"]
 - [obsidian 學習](200-學習OB/000-obsidian.md) : obsidian 學習地圖
 - [windows-工具](400-devops/windows/000-MOC-windows工具清單.md) : tools 地圖
 - [spring](500-spring/000-MOC-spring.md) : spring 學習地圖
+
+
+## youtuber
+- https://www.youtube.com/c/appleboy48

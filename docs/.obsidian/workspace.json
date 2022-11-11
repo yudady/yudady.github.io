@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "64164497fda73021",
+        "id": "0455b2f68138082c",
         "type": "tabs",
         "children": [
           {
-            "id": "dfc0d25b58c53028",
+            "id": "1aad71b8873e1a6e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/go.md",
+                "file": "001-TODO/Traefik.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -32,7 +32,7 @@
       {
         "id": "4dcc60248d2e3363",
         "type": "tabs",
-        "dimension": 62.51287332646756,
+        "dimension": 77.47747747747748,
         "children": [
           {
             "id": "b1ae197fff4bfdd1",
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "devc",
+                "query": "domain",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -59,13 +59,12 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "b8387f0689c4d62d",
         "type": "tabs",
-        "dimension": 37.487126673532444,
+        "dimension": 22.52252252252252,
         "children": [
           {
             "id": "12ac5dc4eb5f8d4d",
@@ -96,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/go.md"
+                "file": "001-TODO/Traefik.md"
               }
             }
           },
@@ -140,7 +139,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "001-TODO/go.md",
+                "file": "001-TODO/Traefik.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -175,7 +174,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "001-TODO/go.md",
+                "file": "001-TODO/Traefik.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +191,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "001-TODO/go.md",
+                "file": "001-TODO/Traefik.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -206,17 +205,17 @@
     "width": 200,
     "collapsed": true
   },
-  "active": "dfc0d25b58c53028",
+  "active": "1aad71b8873e1a6e",
   "lastOpenFiles": [
-    "400-devops/container/vscode-devcontainer.md",
-    "index.md",
+    "400-devops/network/free-domain.md",
+    "001-TODO/yudady.gq.md",
+    "[../400-devops/k8s/k8s.md",
+    "001-TODO/free-cloud-storage.md",
+    "001-TODO/Traefik.md",
     "001-TODO/drone.md",
+    "001-TODO/gitea.md",
     "400-devops/k8s/k8s.md",
-    "400-devops/draft.md",
-    "400-devops/k8s/minikube.md",
-    "001-TODO/istio.md",
-    "001-TODO/pulumi.md",
-    "001-TODO/Fluent-Bit.md",
-    "400-devops/DevOps_Roadmap_by_TWN.01.pdf"
+    "400-devops/container/vscode-devcontainer.md",
+    "index.md"
   ]
 }

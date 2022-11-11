@@ -112,3 +112,4 @@ kubectl version
 - [devops tools](https://www.youtube.com/watch?v=1id6ERvfozo&list=PLy7NrYWoggjxKDRWLqkd4Kbt84XEerHhB)
 - [Just me and Opensource - YouTube](https://www.youtube.com/c/wenkatn-justmeandopensource/playlists)
 - [Visual Studio Code and Kubernetes plugin for beginners - YouTube](https://www.youtube.com/watch?v=Si6og3Wa2Hg&t=59s)
+- [用 GitHub Actions, Drone CI 或 GitLab CI 部署 AWS Lambda - 小惡魔 - AppleBOY](https://blog.wu-boy.com/2020/10/deploy-lambda-github-actions-drone-ci-gitlab-ci/)

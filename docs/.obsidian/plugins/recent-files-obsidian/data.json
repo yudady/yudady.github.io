@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "update-hexo",
+      "path": "vue-blog/blogs/blog/hexo-blog/update-hexo.md"
+    },
+    {
+      "basename": "Hexo-command",
+      "path": "vue-blog/blogs/blog/hexo-blog/Hexo-command.md"
+    },
+    {
+      "basename": "create-blog-Hexo",
+      "path": "vue-blog/blogs/blog/hexo-blog/create-blog-Hexo.md"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
       "basename": "free-domain",
       "path": "400-devops/network/free-domain.md"
     },
@@ -11,10 +27,6 @@
     {
       "basename": "windows",
       "path": "001-TODO/windows.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "drone",
@@ -187,10 +199,6 @@
     {
       "basename": "本地開發 Kubernetes 應用程式流程",
       "path": "400-devops/k8s/本地開發 Kubernetes 應用程式流程.md"
-    },
-    {
-      "basename": "docker-desktop-k8s-startup-fail",
-      "path": "400-devops/container/docker-desktop-k8s-startup-fail.md"
     }
   ],
   "omittedPaths": [],

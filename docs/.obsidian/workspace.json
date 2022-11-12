@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b20e5e3c878f726c",
+        "id": "861c4ce41c1aa592",
         "type": "tabs",
         "children": [
           {
-            "id": "eba36c4507163baf",
+            "id": "c5c7d1597371c5f4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "400-devops/network/free-domain.md",
+                "file": "vue-blog/blogs/blog/hexo-blog/update-hexo.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -66,8 +66,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -88,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/network/free-domain.md"
+                "file": "vue-blog/blogs/blog/hexo-blog/update-hexo.md"
               }
             }
           },
@@ -132,7 +131,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/network/free-domain.md",
+                "file": "vue-blog/blogs/blog/hexo-blog/update-hexo.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -167,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/network/free-domain.md",
+                "file": "vue-blog/blogs/blog/hexo-blog/update-hexo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/network/free-domain.md",
+                "file": "vue-blog/blogs/blog/hexo-blog/update-hexo.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -201,17 +200,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "eba36c4507163baf",
+  "active": "c5c7d1597371c5f4",
   "lastOpenFiles": [
+    "vue-blog/blogs/blog/hexo-blog/Hexo-command.md",
+    "vue-blog/blogs/blog/hexo-blog/create-blog-Hexo.md",
+    "index.md",
     "001-TODO/Traefik.md",
     "400-devops/network/free-domain.md",
     "001-TODO/windows.md",
-    "index.md",
     "001-TODO/drone.md",
     "001-TODO/free-cloud-storage.md",
     "001-TODO/yudady.gq.md",
-    "[../400-devops/k8s/k8s.md",
-    "001-TODO/gitea.md",
-    "400-devops/k8s/k8s.md"
+    "[../400-devops/k8s/k8s.md"
   ]
 }

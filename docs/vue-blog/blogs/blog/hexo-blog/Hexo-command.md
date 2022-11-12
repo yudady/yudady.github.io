@@ -1,10 +1,11 @@
 ---
-title: Hexo command
+aliases: [命令]
+created_date: 2022-11-12 08:43
+updated_date: 2022-11-12 09:47
+title: 命令
 author: tommy
-categories:
-  - blog
-tags: 
-  - hexo
+categories: [blog]
+tags: [hexo]
 toc: true
 date: 2018-09-28 12:32:13
 ---
@@ -12,6 +13,7 @@ date: 2018-09-28 12:32:13
 # 命令
 
 ## 建立一篇新文章
+
 ```
 hexo new post "文章名称"
 
@@ -19,11 +21,13 @@ hexo new post "文章名称"
 
 ex :  hexo new post "Hexo command"
 ```
-> 使用scaffolds里面的模板来建立页面
+
+> 使用 scaffolds 里面的模板来建立页面
 
 <!--more-->
 
 ## drafts 命令
+
 ```
 
 hexo new drafts "文章名称"   // 还未完成的工作可以用drafts
@@ -35,7 +39,6 @@ hexo server --drafts
 
 ```
 
-
 ## new page 命令
 
 ```
@@ -45,8 +48,8 @@ url  => http://localhost:4000/"文章名称"/index.html
 
 ```
 
-
 ## 布局
+
 ```
 themes/landscape/
   _config.yml 
@@ -57,16 +60,13 @@ themes/landscape/
   scripts
   source
 ```
+
 # 参考资料
 
 [youtube 教学 Hexo](https://www.youtube.com/watch?v=Kt7u5kr_P5o&list=PLLAZ4kZ9dFpOMJR6D25ishrSedvsguVSm)
 
-
-
 ```
 {% youtube UNTk5XkXKdQ %}
 ```
 
 {% youtube UNTk5XkXKdQ %}
-
-

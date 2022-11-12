@@ -1,27 +1,32 @@
 ---
-title: 部落格建立 by Hexo
-categories:
-  - blog
-tags: 
-  - hexo
+aliases: [使用github建立Blog]
+created_date: 2022-11-12 08:43
+updated_date: 2022-11-12 09:47
+title: 使用github建立Blog
+categories: [blog]
+tags: [hexo]
 toc: true
 date: 2018-09-27 22:20:30
 ---
 
-# 使用github建立Blog
+# 使用 github 建立 Blog
+
 [源码](https://github.com/yudady/yudadyBlog)
+
 <!--more-->
 
 ## github
 
-> 我的github賬號 yudady
+> 我的 github 賬號 yudady
 
 ![](../images/20180927095109.png)
+
 > 創建一個 yudady.github.io
 ![](../images/20180927095446.png)
 ![](../images/20180927095543.png)
 
 ## Hexo
+
 > mkdir yudadyBlog
 > cd yudadyBlog
 > npm install -g hexo
@@ -33,36 +38,41 @@ date: 2018-09-27 22:20:30
 > hexo generate
 ![](../images/20180927100800.png)
 
-## 修改要部署到github的URL（_config.yml）
+## 修改要部署到 github 的 URL（_config.yml）
+
 ![](../images/20180927100939.png)
+
 ![](../images/20180927101239.png)
 
-
 ## [hexo-tag-cloud](https://github.com/MikeCoder/hexo-tag-cloud/blob/master/README.ZH.md)
+
 > npm install hexo-tag-cloud@^2.0.* --save 
 
 ## Hexo 图片相对路径
+
 > npm install hexo-asset-image --save
 
 ## Hexo 页面自动刷新与移动端调试
+
 > npm install -g browser-sync
 > npm install hexo-browsersync --save
 
 ## RSS
+
 > npm install hexo-migrator-rss --save
 
 ## sitemap
+
 > npm install hexo-generator-sitemap --save
 
-
 npm install hexo-generator-search --save
+
 npm install hexo-generator-searchdb --save
 
 npm install hexo-generator-feed --save
 
+## 準備 depoly 
 
-
-## 準備depoly 
 > [Hexo depoly doc](https://hexo.io/zh-tw/docs/deployment.html)
 > npm install hexo-deployer-git --save
 ![](../images/20180927102449.png)
@@ -72,19 +82,20 @@ npm install hexo-generator-feed --save
 > hexo deploy
 ![](../images/20180927102652.png)
 
+## 我的網址 https://yudady.github.io/
 
-
-## 我的網址  https://yudady.github.io/
 ![Blog](../images/20180927102749.png)
 
-
-
 # 設定
+
 > https://yogapan.github.io/2017/08/11/%E7%94%A8Hexo-Github-Pages%E6%90%AD%E5%BB%BA%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC/
-## 启动server
+
+## 启动 server
+
 > hexo generate
 > hexo server
 > hexo deploy
+
 ## 目錄結構
 
 ```
@@ -99,17 +110,19 @@ blog/
       _config.yml        -> 主題設定檔
 ```
 
-
 ## 更換主題
 
   - https://github.com/iissnan/hexo-theme-next/blob/master/README.cn.md
  
 
 ## 語言設定
-在_config.yml中找到language欄位，設定為zh-tw
+
+在 _config.yml 中找到 language 欄位，設定為 zh-tw
+
 language: zh-tw
 
 ## 頭像
+
 ```
 blog/
     theme/next/_config.yml
@@ -123,8 +136,8 @@ blog/
                     avatar.jpg
 ```                    
 
-
 ## npm command (package.json)
+
 ```
 {
   "name": "hexo-site",
@@ -169,5 +182,3 @@ blog/
 skip_render: 
   - google03a39b0d7e6dc409.html
 ```
-
-

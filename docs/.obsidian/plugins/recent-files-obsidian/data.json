@@ -1,20 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "Traefik",
-      "path": "001-TODO/Traefik.md"
-    },
-    {
       "basename": "free-domain",
       "path": "400-devops/network/free-domain.md"
     },
     {
-      "basename": "free-cloud-storage",
-      "path": "001-TODO/free-cloud-storage.md"
+      "basename": "Traefik",
+      "path": "001-TODO/Traefik.md"
+    },
+    {
+      "basename": "windows",
+      "path": "001-TODO/windows.md"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
     },
     {
       "basename": "drone",
       "path": "001-TODO/drone.md"
+    },
+    {
+      "basename": "free-cloud-storage",
+      "path": "001-TODO/free-cloud-storage.md"
     },
     {
       "basename": "gitea",
@@ -27,10 +35,6 @@
     {
       "basename": "vscode-devcontainer",
       "path": "400-devops/container/vscode-devcontainer.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "go",

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "7f68d1cc6f7ac739",
+        "id": "45f851286b898cca",
         "type": "tabs",
         "children": [
           {
-            "id": "aed0e6075eae17f6",
+            "id": "d1d003c808a0289f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vue-blog/README.md",
+                "file": "vue-blog/我的專長.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -79,7 +79,7 @@
       {
         "id": "3fecf2d96e0dab36",
         "type": "tabs",
-        "dimension": 30.072090628218334,
+        "dimension": 71.12403100775194,
         "children": [
           {
             "id": "6537a3e867a6ff55",
@@ -87,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "vue-blog/README.md"
+                "file": "vue-blog/我的專長.md"
               }
             }
           },
@@ -123,7 +123,7 @@
       {
         "id": "78e3fecbef45c937",
         "type": "tabs",
-        "dimension": 69.92790937178167,
+        "dimension": 28.875968992248062,
         "children": [
           {
             "id": "91b3678e71ee2f83",
@@ -131,7 +131,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "vue-blog/README.md",
+                "file": "vue-blog/我的專長.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -166,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vue-blog/README.md",
+                "file": "vue-blog/我的專長.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "vue-blog/README.md",
+                "file": "vue-blog/我的專長.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -194,14 +194,15 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 518.5
   },
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "b1ae197fff4bfdd1",
+  "active": "d1d003c808a0289f",
   "lastOpenFiles": [
+    "001-TODO/ArgoCD.md",
+    "vue-blog/我的專長.md",
     "index.md",
     "vue-blog/blogs/blog/hexo-blog/Hexo-command.md",
     "vue-blog/blogs/blog/hexo-blog/create-blog-Hexo.md",
@@ -209,8 +210,6 @@
     "400-devops/network/free-domain.md",
     "001-TODO/windows.md",
     "001-TODO/drone.md",
-    "001-TODO/free-cloud-storage.md",
-    "001-TODO/yudady.gq.md",
-    "[../400-devops/k8s/k8s.md"
+    "001-TODO/free-cloud-storage.md"
   ]
 }

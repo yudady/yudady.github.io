@@ -1,8 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "README",
-      "path": "vue-blog/README.md"
+      "basename": "我的專長",
+      "path": "vue-blog/我的專長.md"
+    },
+    {
+      "basename": "ArgoCD",
+      "path": "001-TODO/ArgoCD.md"
     },
     {
       "basename": "index",
@@ -87,10 +91,6 @@
     {
       "basename": "Kustomize",
       "path": "400-devops/Kustomize.md"
-    },
-    {
-      "basename": "ArgoCD",
-      "path": "001-TODO/ArgoCD.md"
     },
     {
       "basename": "k8s-drawing",

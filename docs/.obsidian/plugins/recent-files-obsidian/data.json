@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "drone",
+      "path": "400-devops/04-CI-CD-Pipelines/drone.md"
+    },
+    {
       "basename": "free-domain",
       "path": "400-devops/02-OS-and-Linux-Basics/network/free-domain.md"
     },
@@ -83,10 +87,6 @@
     {
       "basename": "Traefik",
       "path": "400-devops/03-Containerization/Traefik.md"
-    },
-    {
-      "basename": "drone",
-      "path": "400-devops/04-CI-CD-Pipelines/drone.md"
     },
     {
       "basename": "vscode-devcontainer",

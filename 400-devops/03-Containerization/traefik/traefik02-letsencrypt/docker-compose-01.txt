@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  traefik:
+    image: traefik:latest
+    container_name: traefik
+    ports:
+      - 80:80
+      - 443:443
+    command:
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --certificatesresolvers.letsencrypt.acme.email=yudadyl@email.com  # replace with your email
+      - --certificatesresolvers.letsencrypt.acme.storage=acme/acme.json
+      - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
+      - --entryPoints.web.http.redirections.entryPoint.to=websecure
+      - --entryPoints.web.http.redirections.entryPoint.scheme=https
+      - --entryPoints.web.http.redirections.entrypoint.permanent=true
+# 把開 表示開啟 測試 letsencrypt
+#      - --certificatesresolvers.letsencrypt.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./data/traefik/acme:/acme
+      - ./data/traefik/logs:/logs
+
+  whoami:
+    image: "traefik/whoami"
+    container_name: "simple-service"
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.whoami.rule=Host(`tommy.yudady.tk`)  # replace gf.cloudwatch.net with you domain name, leave /gf unchanged for now
+      - traefik.http.routers.whoami.entrypoints=websecure
+      - traefik.http.routers.whoami.tls.certresolver=letsencrypt

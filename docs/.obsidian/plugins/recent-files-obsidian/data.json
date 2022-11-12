@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "free-domain",
+      "path": "400-devops/02-OS-and-Linux-Basics/network/free-domain.md"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
       "basename": "kaniko",
       "path": "400-devops/03-Containerization/kaniko.md"
     },
     {
       "basename": "pulumi",
       "path": "400-devops/08-Infrastructure-as-Code/pulumi.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "監控",
@@ -75,10 +79,6 @@
     {
       "basename": "create-blog-Hexo",
       "path": "vue-blog/blogs/blog/hexo-blog/create-blog-Hexo.md"
-    },
-    {
-      "basename": "free-domain",
-      "path": "400-devops/02-OS-and-Linux-Basics/network/free-domain.md"
     },
     {
       "basename": "Traefik",

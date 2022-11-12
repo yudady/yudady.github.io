@@ -1,7 +1,7 @@
 {
   "baseFontSize": 19,
   "theme": "moonstone",
-  "cssTheme": "Primary",
+  "cssTheme": "",
   "translucency": false,
   "enabledCssSnippets": [
     "t"

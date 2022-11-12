@@ -28,7 +28,7 @@ source-url :: [freenom 免費域名 + DNS](https://www.freenom.com/zu/index.ht
 1. yudady.ml  
 2. yudady.cf  
 3. yudady.gq
-4. yudady.tk  , TOMMY TRAEFIK WEB NGINX NGINX
+4. yudady.tk  , TOMMY TRAEFIK WEB WWW NGINX
 5. yudady.ga  ,  web.yudady.ga ,  admin.yudady.ga 
 
 ## SSL

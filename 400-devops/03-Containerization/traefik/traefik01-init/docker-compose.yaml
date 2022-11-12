@@ -1,0 +1,51 @@
+version: '3.9'
+
+services:
+  traefik:
+    container_name: traefik
+    image: traefik:v2.9
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik.yaml:/etc/traefik/traefik.yaml
+
+
+
+
+  whoami:
+    # A container that exposes an API to show its IP address
+    image: traefik/whoami
+    deploy:
+      replicas: 3
+    networks:
+      - web
+    labels:
+      - "traefik.http.routers.whoami.rule=Host(`whoami.docker.localhost`)"
+
+
+  app_1:
+    # A container that exposes an API to show its IP address
+    image: traefik/whoami
+    deploy:
+      replicas: 3
+    networks:
+      - web
+    labels:
+      - "traefik.http.routers.app_1.rule=Host(`app_1.docker.localhost`)"
+
+
+
+
+networks:
+  web:
+    external: true
+
+# 需要修有 web network
+# $ docker network create web
+# curl -H Host:whoami.docker.localhost http://127.0.0.1
+# curl -H Host:app_1.docker.localhost http://127.0.0.1

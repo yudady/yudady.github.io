@@ -51,16 +51,17 @@ services:
       - web
     volumes:
       - ./data/gitea-server/data:/data  # /home/data可以替换成你想要的挂载目录
-      - ./app.ini:/etc/gitea/conf/app.ini
+#      - ./app.ini:/etc/gitea/conf/app.ini
 #      - /etc/timezone:/etc/timezone:ro
 #      - /etc/localtime:/etc/localtime:ro
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.gitea-server.rule=Host(`web.yudady.tk`) || Path(`/web`) # replace sr.cloudwatch.net with your domain name, leave /sonarr unchanged for now
-      - traefik.http.routers.gitea-server.entrypoints=websecure
-      - traefik.http.routers.gitea-server.tls.certresolver=letsencrypt
-      - "traefik.http.services.gitea-web-svc.loadbalancer.server.port=3000"
-
+    ports:
+      - 3000:3000
+#    labels:
+#      - traefik.enable=true
+#      - traefik.http.routers.gitea-server.rule=Host(`web.yudady.tk`) || Path(`/web`) # replace sr.cloudwatch.net with your domain name, leave /sonarr unchanged for now
+#      - traefik.http.routers.gitea-server.entrypoints=websecure
+#      - traefik.http.routers.gitea-server.tls.certresolver=letsencrypt
+#      - "traefik.http.services.gitea-web-svc.loadbalancer.server.port=3000"
 
 networks:
   web:

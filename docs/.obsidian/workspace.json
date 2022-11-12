@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "861c4ce41c1aa592",
+        "id": "7f68d1cc6f7ac739",
         "type": "tabs",
         "children": [
           {
-            "id": "c5c7d1597371c5f4",
+            "id": "aed0e6075eae17f6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vue-blog/blogs/blog/hexo-blog/update-hexo.md",
+                "file": "vue-blog/README.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -87,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "vue-blog/blogs/blog/hexo-blog/update-hexo.md"
+                "file": "vue-blog/README.md"
               }
             }
           },
@@ -131,7 +131,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "vue-blog/blogs/blog/hexo-blog/update-hexo.md",
+                "file": "vue-blog/README.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -166,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vue-blog/blogs/blog/hexo-blog/update-hexo.md",
+                "file": "vue-blog/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "vue-blog/blogs/blog/hexo-blog/update-hexo.md",
+                "file": "vue-blog/README.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -200,11 +200,11 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "c5c7d1597371c5f4",
+  "active": "b1ae197fff4bfdd1",
   "lastOpenFiles": [
+    "index.md",
     "vue-blog/blogs/blog/hexo-blog/Hexo-command.md",
     "vue-blog/blogs/blog/hexo-blog/create-blog-Hexo.md",
-    "index.md",
     "001-TODO/Traefik.md",
     "400-devops/network/free-domain.md",
     "001-TODO/windows.md",

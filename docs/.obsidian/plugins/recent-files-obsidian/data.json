@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "vue-blog/README.md"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
       "basename": "update-hexo",
       "path": "vue-blog/blogs/blog/hexo-blog/update-hexo.md"
     },
@@ -11,10 +19,6 @@
     {
       "basename": "create-blog-Hexo",
       "path": "vue-blog/blogs/blog/hexo-blog/create-blog-Hexo.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "free-domain",
@@ -195,10 +199,6 @@
     {
       "basename": "ngrok",
       "path": "400-devops/network/ngrok.md"
-    },
-    {
-      "basename": "本地開發 Kubernetes 應用程式流程",
-      "path": "400-devops/k8s/本地開發 Kubernetes 應用程式流程.md"
     }
   ],
   "omittedPaths": [],

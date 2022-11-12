@@ -1,9 +1,14 @@
 ---
-title: 關於我
+tags: []
+aliases: [我的專長（JAVA）/ 全棧工程師 / Devops(自己開發自己維運)]
+created_date: 2022-11-12 08:43
+updated_date: 2022-11-12 09:58
+title: 我的專長（JAVA）/ 全棧工程師 / Devops(自己開發自己維運)
 date: 2019-01-20 21:26:34
 ---
 
 # 我的專長（JAVA）/ 全棧工程師 / Devops(自己開發自己維運)
+
 - java web 開發
 - 多執行序開發
 - 測試維運可兼任
@@ -21,85 +26,95 @@ date: 2019-01-20 21:26:34
 <!--more-->
 
 # 我的經歷
-- 聚力國際咨詢有限公司(2018.12-2019.01)體育數據清洗系統
-- 縱網數碼科技有限公司(2016.11-2018.11)聚合支付系統
-- 豐揚科技(2013.4-2016.11)電信業系統
-- 億力(2011.6-2013.4)財稅系統、台灣大哥大維修物料系統
-- 緯創(2009.5-2011.6)航運物料系統
-- 創世紀(2005.3-2009.3)企業形象網站
+
+- 聚力國際咨詢有限公司 (2018.12-2019.01) 體育數據清洗系統
+- 縱網數碼科技有限公司 (2016.11-2018.11) 聚合支付系統
+- 豐揚科技 (2013.4-2016.11) 電信業系統
+- 億力 (2011.6-2013.4) 財稅系統、台灣大哥大維修物料系統
+- 緯創 (2009.5-2011.6) 航運物料系統
+- 創世紀 (2005.3-2009.3) 企業形象網站
 
 ## 工作內容 
+
 聚力國際咨詢有限公司
+
 ![聚力國際咨詢有限公司](index/20190120211408.png) 
+
 體育系統:
-  - 前台使用vue+php，後台使用springcloud搭建
+
+  - 前台使用 vue+php，後台使用 springcloud 搭建
 
 數據清洗系統:
-- Web:基礎架構使用AdminLTE搭建
-- Web使用:thymeleaf、springboot、mybatis、mysql
-- ElasticSearch:歷史資料備份
-- Stome:拉取redis資料寫到mysql
+
+- Web: 基礎架構使用 AdminLTE 搭建
+- Web 使用:thymeleaf、springboot、mybatis、mysql
+- ElasticSearch: 歷史資料備份
+- Stome: 拉取 redis 資料寫到 mysql
 - git、maven、docker(開發環境) 
 
-
-
 縱網數碼科技有限公司
+
 ![縱網數碼科技有限公司](index/20190120211546.png) 
 
-提供通用聚合支付平台、串接第4方支付（微信、支付寶、QQ、京東）
+提供通用聚合支付平台、串接第 4 方支付（微信、支付寶、QQ、京東）
+
 redis oracle mysql elasticsearch kibana logstash filebean maven gradle svn centos zabbix jenkins tesseract(OCR) jsoup html5 vue jquery css bootstrap websocket jmeter selenium 爬虫拉取第四方資料 
-
-
 
 # 我的特殊經驗
 
 ## 大數據
+
   - storm
 
 ## 獨立設計開發機器人
+
   - 解決重複上分問題（不用再賠錢給客戶）
   - 設計，開發獨立完成
   - 多執行緒
-  - OCR處理驗證碼
+  - OCR 處理驗證碼
   - 擴展性好
   - 開發簡單
 
 ### 機器人架構
+
 ![](index/structor.bmp)
+
 ### 機器人開發簡單
+
 ![](index/easy.bmp)
 
+## 獨立設計開發 notifyCenter
 
-## 獨立設計開發notifyCenter
   - 回調通知系統
-  - 支援upay回調
-  - 支援mycenter回調
+  - 支援 upay 回調
+  - 支援 mycenter 回調
 
 ![](index/20181007200548.png)
 
-## 獨立設計開發在windows利用gradle，發粄到linux系統
+## 獨立設計開發在 windows 利用 gradle，發粄到 linux 系統
 
 ## oracle
-  - 獨立安裝於Centos,windows2008
-  - 無法啟動，spfile，pfile消失
-  - 處理disk IO太大
+
+  - 獨立安裝於 Centos,windows2008
+  - 無法啟動，spfile，pfile 消失
+  - 處理 disk IO 太大
   - 資料備份，回滾，誤刪
 
-## 獨立安裝處理ELK
-  - 收集LOG
-  - 維運，統一LOG查詢
+## 獨立安裝處理 ELK
 
-## 獨立安裝處理zabbx
+  - 收集 LOG
+  - 維運，統一 LOG 查詢
+
+## 獨立安裝處理 zabbx
+
   - 即時回報問題主機，資料庫
-  - 即時line告警
+  - 即時 line 告警
 
-## 獨立安裝處理jenkins
-  - ant佈版
-  - linux shell佈版
-  - mail告警
+## 獨立安裝處理 jenkins
 
-
-
+  - ant 佈版
+  - linux shell 佈版
+  - mail 告警
 
 # 我的技能
 
@@ -121,8 +136,8 @@ redis oracle mysql elasticsearch kibana logstash filebean maven gradle svn cento
     - [kibana](https://github.com/yudady/skills/tree/master/doc/kibana.docx)
     - [Network File System](https://github.com/yudady/skills/tree/master/doc/NetworkFileSystem.docx)
     - [filebeat](https://github.com/yudady/note-book/blob/master/%E7%B6%AD%E9%81%8B/ELK/filebeat.md)
-  - [GoAccess](https://github.com/yudady/skills/tree/master/doc/GoAccess.docx)，access log圖形化
-  - [ssl](https://github.com/yudady/skills/tree/master/doc/tomcat.8.5.ssl.docx)，tomcat ssl配置
+  - [GoAccess](https://github.com/yudady/skills/tree/master/doc/GoAccess.docx)，access log 圖形化
+  - [ssl](https://github.com/yudady/skills/tree/master/doc/tomcat.8.5.ssl.docx)，tomcat ssl 配置
   - [GoDaddy憑證產生方法](https://github.com/yudady/skills/tree/master/doc/GoDaddy憑證產生方法.docx)
   - [zabbix](https://github.com/yudady/skills/tree/master/doc/gcp.安装.zabbix版本3.4.pdf)
     - [doc](https://github.com/yudady/note-book/tree/master/%E7%B6%AD%E9%81%8B/zabbix)
@@ -163,7 +178,7 @@ redis oracle mysql elasticsearch kibana logstash filebean maven gradle svn cento
     - [小程序](https://github.com/yudady/note-book/tree/master/%E5%BE%AE%E4%BF%A1/%E5%B0%8F%E7%A8%8B%E5%BA%8F)
   - [文件pgp加密](https://github.com/yudady/gpg)
   - [表達示引擎](https://github.com/yudady/expression_energy)
-  - google驗證碼
+  - google 驗證碼
 - 測試
   - jmeter
     - [测试GCP连线能力](https://github.com/yudady/skills/tree/master/doc/测试GCP连线能力.jmx)

@@ -1,0 +1,27 @@
+---
+title: install-wslg
+tags: ["windows", "wsl"]
+aliases: ["wsl2"]
+date: 2022-01-14 23:17
+Source URL: "https://iter01.com/610179.html"
+---
+
+###### 1. 資料來源
+ ```button  
+name wslg
+type link  
+action https://iter01.com/610179.html
+templater true  
+color blue
+```
+---
+
+
+## install 圖形程式
+```shell
+sudo apt update
+sudo apt upgrade
+sudo apt install gedit // gnome桌面下的編輯器
+```
+
+

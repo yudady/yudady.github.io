@@ -11,7 +11,7 @@ date: 2018-11-13 15:11:58
 
 # 簡介
 
-![google](../images/devtools-panels.png)
+![google](images/devtools-panels.png)
 
 
 <!--more-->

@@ -38,7 +38,7 @@ protected AbstractChannel(Channel parent) {
 }
 ```
 
-![NioServerSocketChannel](../images/20181112110944.png)
+![NioServerSocketChannel](images/20181112110944.png)
 
 # 參考資料
 

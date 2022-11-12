@@ -19,7 +19,7 @@ date: 2018-10-29 17:14:59
 <!--more-->
 # 內容
 
-![Number](../images/20181029172909.png)
+![Number](images/20181029172909.png)
 
 
 ## Striped64(lock-free and Still Remain thread-safe.)

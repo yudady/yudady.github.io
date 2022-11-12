@@ -16,8 +16,8 @@ aliases: [000-MOC-devops]
 - [DevOps_Roadmap_by_TWN.01.pdf](images/DevOps_Roadmap_by_TWN.01.pdf) : DevOps Engineer 
 - [free-domain](network/free-domain.md) : 免費域名 + DNS
 - [ngrok](network/ngrok.md) : proxy server
-- [vscode-devcontainer](container/vscode-devcontainer.md) : 快速安裝開發環境
-- [podman](container/podman.md) :  docker container 替代品
+- [vscode-devcontainer](Containerization/vscode-devcontainer.md) : 快速安裝開發環境
+- [podman](Containerization/podman.md) :  docker container 替代品
 - [gitpod](github/gitpod.md) : 瀏覽器 ide 開發工具，快速執行 github 程式，不用 clone 到本地
 
 

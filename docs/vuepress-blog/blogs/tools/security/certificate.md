@@ -8,7 +8,7 @@ modified: 2022-05-07 13:05
 
 # 證書（Certificate）
 
-![](../images/certificate-202205151522.png)
+![](images/certificate-202205151522.png)
 
 證書（Certificate） = c （public key） +元數據(指紋指紋/簽章CA /序列號/證書有效日期/登錄用戶等）
 

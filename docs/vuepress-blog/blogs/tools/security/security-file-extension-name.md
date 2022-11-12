@@ -86,9 +86,9 @@ openssl ca -in tempreq.pem -out server_crt.pem
 > `.pem`,`.cer`並且`.der`都是可能包含 X.509 v3 證書的文件的文件擴展名。
 
 
-![](../images/security-file-extension-name-202205071524.png)
+![](images/security-file-extension-name-202205071524.png)
 
-![](../images/security-file-extension-name-202205071525.png)
+![](images/security-file-extension-name-202205071525.png)
 
 
 
@@ -130,9 +130,9 @@ curl https://localhost:5001/ --cacert localhost.crt
 > **根授權憑證** (Root CA) 的 **公開金鑰** (Public Key) 檔案，這些證書是內置在windows系統中(信認的基礎)
 
 >  命令：打開windows 證書視窗:  CERTMGR.msc
-![](../images/security-file-extension-name-202205151708.png)
+![](images/security-file-extension-name-202205151708.png)
 
-![CA](../images/security-file-extension-name-202205071424.png)
+![CA](images/security-file-extension-name-202205071424.png)
 
 
 ### 將網站憑證儲存到檔案中
@@ -157,7 +157,7 @@ curl https://localhost:5001/ --cacert localhost.crt
 
 
 ### 打開windows憑證管理系統（certmgr）
-![certmgr](../images/security-file-extension-name-202205071406.png)
+![certmgr](images/security-file-extension-name-202205071406.png)
 
 
 

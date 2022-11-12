@@ -11,6 +11,18 @@ updated_date: 2022-11-09 14:28
 - **🏷️Tags** :   #2022-10 #devops  #k8s 
 - Link: [1-pvc-demo.yml](https://raw.githubusercontent.com/yudady/yudady.github.io/main/devops-k8s/k8s-learning/07.pv-pvc/1-pvc-demo.yml)
 
+01 - Concepts of Software Development
+02 - OS and Linux Basics
+03 - Containerization - Docker
+04 - CI/CD Pipelines
+05 - Learn 1 Cloud Provider
+06 - Container Orchestration - Kubernetes
+07 - Monitoring and Observability
+08 - Infrastructure as Code
+09 - Scripting Language
+10 - Version Control - Git
+
+
 ## command
 
 ### Config

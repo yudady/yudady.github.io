@@ -17,10 +17,10 @@ date: 2018-10-02 19:21:09
 # 內容
 
 
-![註冊](../images/20181002192312.png)
-![註冊](../images/20181002192726.png)
-![註冊](../images/20181002192814.png)
-![註冊](../images/20181002193005.png)
+![註冊](images/20181002192312.png)
+![註冊](images/20181002192726.png)
+![註冊](images/20181002192814.png)
+![註冊](images/20181002193005.png)
 
 
 
@@ -41,7 +41,7 @@ UA-126790141-1
 ```
 # 添加js在footer
 
-![註冊](../images/20181002193245.png)
+![註冊](images/20181002193245.png)
 
 ```
 themes/landscape/layout/_partial/
@@ -55,7 +55,7 @@ themes/landscape/layout/_partial/
 
 
 # Google與AdSense
-![GoogleAdSense](../images/20181002232113.png)
+![GoogleAdSense](images/20181002232113.png)
 
 ```
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

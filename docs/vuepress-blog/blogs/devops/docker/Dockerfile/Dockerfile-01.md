@@ -13,7 +13,7 @@ date: 2018-12-02 09:19:00
 
 > 編寫dockerfile推送倉庫
 
-![dockerfile](../images/20181202221149.png)
+![dockerfile](images/20181202221149.png)
 
 <!--more-->
 # 內容
@@ -75,7 +75,7 @@ centos              7                   75835a67d134        7 weeks ago         
 1. 開啟SERVER
 > docker run -d -p 5000:5000 -v C:/docker.resistry:/var/lib/registry --name registry registry:2
 
-![server路徑](../images/20181202141433.png)
+![server路徑](images/20181202141433.png)
 
 
 ```s

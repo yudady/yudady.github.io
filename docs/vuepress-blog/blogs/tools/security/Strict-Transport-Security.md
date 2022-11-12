@@ -8,7 +8,7 @@ modified: 2022-05-08 16:40
 
 # HTTP強制安全傳輸技術(Strict-Transport-Security)
 
-![](../images/Strict-Transport-Security-202205081640.png)
+![](images/Strict-Transport-Security-202205081640.png)
 
 [HTTP強制安全傳輸技術 - 維基百科，自由的百科全書](https://zh.wikipedia.org/wiki/HTTP%E4%B8%A5%E6%A0%BC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8)
 
@@ -17,7 +17,7 @@ modified: 2022-05-08 16:40
 chrome://net-internals/#hsts
 ```
 
-![](../images/Strict-Transport-Security-202205081621.png)
+![](images/Strict-Transport-Security-202205081621.png)
 
 
 

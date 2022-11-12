@@ -18,7 +18,7 @@ install
 # 內容
 ## 啟動安裝
 > java -jar fmw_12.2.1.4.0_wls_generic.jar
-![weblogic-12c-install](../images/weblogic.install.gif)
+![weblogic-12c-install](images/weblogic.install.gif)
 
 
 

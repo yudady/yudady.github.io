@@ -20,16 +20,16 @@ modified: 2022-05-22 17:49
 
 > bind 114.32.146.154
 
-![](../images/free-resource-202205221326.png)
-![](../images/free-resource-202205221327.png)
-![](../images/free-resource-202205221327-1.png)
-![](../images/free-resource-202205221328.png)
-![](../images/free-resource-202205221329.png)
-![](../images/free-resource-202205221330.png)
-![](../images/free-resource-202205221331.png)
+![](images/free-resource-202205221326.png)
+![](images/free-resource-202205221327.png)
+![](images/free-resource-202205221327-1.png)
+![](images/free-resource-202205221328.png)
+![](images/free-resource-202205221329.png)
+![](images/free-resource-202205221330.png)
+![](images/free-resource-202205221331.png)
 > **Your Order Number is: 9181208151**
-![](../images/free-resource-202205221331-1.png)
-![](../images/free-resource-202205221335.png)
+![](images/free-resource-202205221331-1.png)
+![](images/free-resource-202205221335.png)
 
 ## DNS解析
 [DNS解析-cloudflare](https://dash.cloudflare.com/)  

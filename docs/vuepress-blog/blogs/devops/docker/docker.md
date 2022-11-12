@@ -37,9 +37,9 @@ date: 2018-11-28 21:38:34
 
 
 ## windows(Hyper-V)
-![Hyper-V](../images/20181201220755.png)
-![Hyper-V](../images/20181202093523.png)
-![Hyper-V](../images/20181202093407.png)
+![Hyper-V](images/20181201220755.png)
+![Hyper-V](images/20181202093523.png)
+![Hyper-V](images/20181202093407.png)
 
 
 
@@ -128,11 +128,11 @@ Server:
 [root@cn50 docker]# 
 
 ```
-![一张图总结Docker的命令](../images/20181129103828.png)
+![一张图总结Docker的命令](images/20181129103828.png)
 
 
 ## docker login
-![docker login](../images/20181201210353.png)
+![docker login](images/20181201210353.png)
 
 ### 練習
 
@@ -306,21 +306,21 @@ docker exec -t 容器ID   /bin/bash
 
 
 
-![arch](../images/20181202215654.png)
+![arch](images/20181202215654.png)
 
-![docker compouse](../images/20181202215934.png)
+![docker compouse](images/20181202215934.png)
 
-![deamon](../images/20181202220334.png)
+![deamon](images/20181202220334.png)
 
-![docker command](../images/20181202220558.png)
+![docker command](images/20181202220558.png)
 
-![docker command](../images/20181128215950.png)
+![docker command](images/20181128215950.png)
 
-![Docker 的架构](../images/20181129095132.png)
+![Docker 的架构](images/20181129095132.png)
 
-![Docker host client](../images/20181129095302.png)
+![Docker host client](images/20181129095302.png)
 
-![Docker host client](../images/20181202221414.png)
+![Docker host client](images/20181202221414.png)
 
 
 

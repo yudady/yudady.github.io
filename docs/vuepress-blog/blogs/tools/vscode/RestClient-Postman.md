@@ -64,7 +64,7 @@ Content-Type : {{ContentType}}
 
 ```
 
-![](../images/20190525113041.gif)
+![](images/20190525113041.gif)
 
 
 
@@ -100,7 +100,7 @@ pm.environment.set("customerId",customerId);
 ```
 
 
-![](../images/20190525113857.gif)
+![](images/20190525113857.gif)
 
 
 # 參考資料

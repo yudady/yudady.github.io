@@ -22,7 +22,7 @@ date: 2022-04-06 21:12:01
 
 picture =
 
-![](../images/338c9de7.png)
+![](images/338c9de7.png)
 
 picture =
 

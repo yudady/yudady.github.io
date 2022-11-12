@@ -14,7 +14,7 @@ modified: 2022-05-15 15:56
 
 > 方法：使用 `public key` 驗證 `input msg`
 
-![](../images/openssl-202205151528.png)
+![](images/openssl-202205151528.png)
 
 
 ### 公鑰分發問題

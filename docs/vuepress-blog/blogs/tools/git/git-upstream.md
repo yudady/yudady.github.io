@@ -24,7 +24,7 @@ git pull upstream
 
 <!--more-->
 # 內容
-![](../images/20200507221244.png)
+![](images/20200507221244.png)
 
 # 參考資料
 

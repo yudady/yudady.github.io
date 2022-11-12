@@ -25,11 +25,11 @@ date: 2018-10-09 15:01:26
 
 Set-ExecutionPolicy RemoteSigned
 ```
-![](../images/20181011141941.png)
+![](images/20181011141941.png)
 
 > .\cmd.ps1 org
 
-![PowerShell](../images/20181009150946.png)
+![PowerShell](images/20181009150946.png)
 
 ```PowerShell
 $isExist = jps -lm  | Select-String -Pattern $args[0] -CaseSensitive 
@@ -138,7 +138,7 @@ UserParameter=mypay.robot[*],C:\Windows\System32\WindowsPowerShell\v1.0\powershe
 ```
 
 ## How to debug
-![](../images/debug.gif)
+![](images/debug.gif)
 
 
 
@@ -518,7 +518,7 @@ C:\Users\yu_da>
 
 
 
-![](../images/20181011141413.png)
+![](images/20181011141413.png)
 
 
 

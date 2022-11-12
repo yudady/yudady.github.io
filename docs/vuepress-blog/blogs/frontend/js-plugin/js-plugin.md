@@ -18,7 +18,7 @@ date: 2018-10-02 16:36:14
 
 ## [toastr](https://github.com/CodeSeven/toastr)
 
-![toastr](../images/toastr.gif)
+![toastr](images/toastr.gif)
 
 ```
 <script>

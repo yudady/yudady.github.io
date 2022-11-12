@@ -13,27 +13,27 @@ modified: 2022-05-22 01:41
 
 
 ### Fiddler設定
-![](../images/Fiddler-Classic-202205220101.png)
+![](images/Fiddler-Classic-202205220101.png)
 
 ### 代理設定
-![](../images/Fiddler-Classic-202205220102.png)
+![](images/Fiddler-Classic-202205220102.png)
 
-![](../images/Fiddler-Classic-202205220124.png)
+![](images/Fiddler-Classic-202205220124.png)
 
 > 手機網路設定
-![](../images/Fiddler-Classic-202205220140.png)
+![](images/Fiddler-Classic-202205220140.png)
 
 > 安裝CA-ROOT憑證 [CA憑證](../security/CA.md)
-![](../images/Fiddler-Classic-202205220123.png)
+![](images/Fiddler-Classic-202205220123.png)
 
 > 安裝憑證
-![](../images/Fiddler-Classic-202205220143.png)
+![](images/Fiddler-Classic-202205220143.png)
 
 
 ### Https 設定
-![](../images/Fiddler-Classic-202205220112.png)
+![](images/Fiddler-Classic-202205220112.png)
 
-![](../images/Fiddler-Classic-202205220135.png)
+![](images/Fiddler-Classic-202205220135.png)
 
 
 ### 參考資料

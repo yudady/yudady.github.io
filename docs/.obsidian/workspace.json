@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "45f851286b898cca",
+        "id": "b9773b90f213ffe3",
         "type": "tabs",
         "children": [
           {
-            "id": "d1d003c808a0289f",
+            "id": "8c49eeb51c936dc8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vue-blog/我的專長.md",
+                "file": "400-devops/k8s/k8s.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -87,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "vue-blog/我的專長.md"
+                "file": "400-devops/k8s/k8s.md"
               }
             }
           },
@@ -131,7 +131,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "vue-blog/我的專長.md",
+                "file": "400-devops/k8s/k8s.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -166,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vue-blog/我的專長.md",
+                "file": "400-devops/k8s/k8s.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "vue-blog/我的專長.md",
+                "file": "400-devops/k8s/k8s.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -194,22 +194,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 518.5
+    "width": 354.5,
+    "collapsed": true
   },
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "d1d003c808a0289f",
+  "active": "8c49eeb51c936dc8",
   "lastOpenFiles": [
-    "001-TODO/ArgoCD.md",
-    "vue-blog/我的專長.md",
-    "index.md",
-    "vue-blog/blogs/blog/hexo-blog/Hexo-command.md",
-    "vue-blog/blogs/blog/hexo-blog/create-blog-Hexo.md",
-    "001-TODO/Traefik.md",
-    "400-devops/network/free-domain.md",
-    "001-TODO/windows.md",
-    "001-TODO/drone.md",
-    "001-TODO/free-cloud-storage.md"
+    "400-devops/ArgoCD.md",
+    "400-devops/free-cloud-storage.md",
+    "400-devops/gitea.md",
+    "400-devops/go.md",
+    "400-devops/istio.md",
+    "400-devops/kaniko.md",
+    "400-devops/windows.md",
+    "400-devops/kiaki.md",
+    "001-TODO/Drawing-20221112-154123.excalidraw.md",
+    "400-devops/k8s/k8s.md"
   ]
 }

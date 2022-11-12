@@ -18,9 +18,9 @@ VMware
 
 ## vmware 網路NET模式
 ### windows配置靜態IP地址
-![網路NET模式](../images/20181122101914.png)
-![網路NET模式](../images/20181122102418.png)
-![網路NET模式](../images/20181122103304.png)
+![網路NET模式](images/20181122101914.png)
+![網路NET模式](images/20181122102418.png)
+![網路NET模式](images/20181122103304.png)
 
 ### static IP
 ```s
@@ -47,7 +47,7 @@ NETMASK=255.255.255.0
 DNS1=192.168.79.1
 ```
 
-![網路NET模式](../images/20181122104350.png)
+![網路NET模式](images/20181122104350.png)
 
 
 

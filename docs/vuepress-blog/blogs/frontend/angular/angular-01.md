@@ -18,17 +18,17 @@ angular 1.3
 
 ## value constant factory service
 
-![常量](../images/20190309131716.png)
-![常量](../images/20190309131833.png)
+![常量](images/20190309131716.png)
+![常量](images/20190309131833.png)
 
 ## controller共享數據
 
 
-![controller共享數據](../images/20190309132548.png)
+![controller共享數據](images/20190309132548.png)
 
-![controller共享數據](../images/20190309133036.png)
+![controller共享數據](images/20190309133036.png)
 
-![controller共享數據](../images/20190309133122.png)
+![controller共享數據](images/20190309133122.png)
 
 > 數據來源相同
 
@@ -45,18 +45,18 @@ angular 1.3
 ## ng-repeat
 > $index $first $last
 
-![ng-repeat](../images/20190309152711.png)
+![ng-repeat](images/20190309152711.png)
 
 ## $http
 
-![$http](../images/20190309160242.png)
+![$http](images/20190309160242.png)
 
 
 ## Directive
 
-![Directive](../images/20190310001040.png)
+![Directive](images/20190310001040.png)
 
-![Directive](../images/20190310001720.png)
+![Directive](images/20190310001720.png)
 
 
 

@@ -40,7 +40,7 @@ jps
 bin/zkServer.sh status
 bin/zkServer.sh stop
 ```
-![zookpeeeper](../images/20181118124326.png)
+![zookpeeeper](images/20181118124326.png)
 
 # Clustered (Multi-Server) Setup
 

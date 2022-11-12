@@ -12,7 +12,7 @@ date: 2018-11-07 12:16:42
 # 簡介
 netty 最基本程序
 
-![netty](../images/20181112212529.png)
+![netty](images/20181112212529.png)
 
 - 在Netty中，Channel的實現一定是線程安全
 - 我們可以存放Channel引用，並且在需要得時候像遠程發送數據，不會出現多線程問題
@@ -24,26 +24,26 @@ netty 最基本程序
 # 內容
 
 
-![netty](../images/20181112234814.png)
+![netty](images/20181112234814.png)
 
-![netty](../images/20181112223708.png)
+![netty](images/20181112223708.png)
 
-![netty](../images/20181113013759.png)
-![netty](../images/20181113015149.png)
+![netty](images/20181113013759.png)
+![netty](images/20181113015149.png)
 
 
-![netty](../images/20181113192729.png)
-![netty](../images/20181113192921.png)
-![netty](../images/20181113193655.png)
-![netty](../images/20181113193846.png)
-![netty](../images/20181113220719.png)
-![netty](../images/20181114104756.png)
+![netty](images/20181113192729.png)
+![netty](images/20181113192921.png)
+![netty](images/20181113193655.png)
+![netty](images/20181113193846.png)
+![netty](images/20181113220719.png)
+![netty](images/20181114104756.png)
 
 
 ## 繼承圖
-![netty](../images/20181115111409.png)
-![netty](../images/20181115111124.png)
-![netty](../images/20181115152032.png)
+![netty](images/20181115111409.png)
+![netty](images/20181115111124.png)
+![netty](images/20181115152032.png)
 
 ## server
 ```java
@@ -191,7 +191,7 @@ readyOps() & OP_ACCEPT) != 0 :false
 
 ```
 
-![netty](../images/Channel.png)
+![netty](images/Channel.png)
 
 
 

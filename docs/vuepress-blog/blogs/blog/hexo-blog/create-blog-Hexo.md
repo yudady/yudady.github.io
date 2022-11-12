@@ -19,30 +19,30 @@ date: 2018-09-27 22:20:30
 
 > 我的 github 賬號 yudady
 
-![](../images/20180927095109.png)
+![](images/20180927095109.png)
 
 > 創建一個 yudady.github.io
-![](../images/20180927095446.png)
-![](../images/20180927095543.png)
+![](images/20180927095446.png)
+![](images/20180927095543.png)
 
 ## Hexo
 
 > mkdir yudadyBlog
 > cd yudadyBlog
 > npm install -g hexo
-![](../images/20180927100217.png)
+![](images/20180927100217.png)
 > hexo init
-![](../images/20180927100513.png)
+![](images/20180927100513.png)
 > npm install
-![](../images/20180927100658.png)
+![](images/20180927100658.png)
 > hexo generate
-![](../images/20180927100800.png)
+![](images/20180927100800.png)
 
 ## 修改要部署到 github 的 URL（_config.yml）
 
-![](../images/20180927100939.png)
+![](images/20180927100939.png)
 
-![](../images/20180927101239.png)
+![](images/20180927101239.png)
 
 ## [hexo-tag-cloud](https://github.com/MikeCoder/hexo-tag-cloud/blob/master/README.ZH.md)
 
@@ -75,16 +75,16 @@ npm install hexo-generator-feed --save
 
 > [Hexo depoly doc](https://hexo.io/zh-tw/docs/deployment.html)
 > npm install hexo-deployer-git --save
-![](../images/20180927102449.png)
-![](../images/20180927102354.png)
+![](images/20180927102449.png)
+![](images/20180927102354.png)
 > hexo generate
-![](../images/20180927101730.png)
+![](images/20180927101730.png)
 > hexo deploy
-![](../images/20180927102652.png)
+![](images/20180927102652.png)
 
 ## 我的網址 https://yudady.github.io/
 
-![Blog](../images/20180927102749.png)
+![Blog](images/20180927102749.png)
 
 # 設定
 
@@ -128,7 +128,7 @@ blog/
     theme/next/_config.yml
 ```
 
-![](../images/20180927120434.png)
+![](images/20180927120434.png)
 
 ```
 blog/

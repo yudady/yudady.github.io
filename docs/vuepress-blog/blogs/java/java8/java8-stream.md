@@ -48,11 +48,11 @@ try (Stream<String> stream = list.stream()) {
 
 ## AbstractPipeline
 > Abstract base class for "pipeline" classes, which are the core implementations of the Stream interface and its primitive specializations. Manages construction and evaluation of stream pipelines.
-![AbstractPipeline](../images/20181028201410.png)
+![AbstractPipeline](images/20181028201410.png)
 
 
 ## TerminalOp
-![TerminalOp](../images/20181028200806.png)
+![TerminalOp](images/20181028200806.png)
 
 # 參考資料
 

@@ -13,7 +13,7 @@ date: 2019-02-23 21:13:40
 
 rebase發生錯誤，需要復原`git reset ORIG_HEAD --hard`
 > 發生錯誤原因，在master分支上面使用`git rebase dev`（錯誤的操作）
-![路徑](../images/20190223212033.gif)
+![路徑](images/20190223212033.gif)
 [演示錯誤](https://www.youtube.com/watch?v=fLvr4BRoJ8I)
 
 <!--more-->
@@ -76,7 +76,7 @@ git config --global --unset branch.autoSetupRebase
 ```
 
 `.git/config`
-![git-rebase](../images/20190223222300.png)
+![git-rebase](images/20190223222300.png)
 
 如果你觉得所有的分支都应该用rebase，那就设置：
 > git config --global branch.autosetuprebase always

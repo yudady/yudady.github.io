@@ -59,7 +59,7 @@ public abstract class AbstractReferenceCountedByteBuf extends AbstractByteBuf {
     }
 ```
 
-![netty](../images/20181114005948.png)
+![netty](images/20181114005948.png)
 
 
 # 參考資料

@@ -119,7 +119,7 @@ jobs:
 
 ## 結構
 
-![vuepress-blog](../images/9e34d0c6.png)
+![vuepress-blog](images/9e34d0c6.png)
 
 
 ## 路徑圖片
@@ -128,9 +128,9 @@ jobs:
 
 注意：需要關閉一些obsidian基本設定
 
-![](../images/20220423135118.png)
+![](images/20220423135118.png)
 
 
-![](../images/20220423135000.png)
+![](images/20220423135000.png)
 
 

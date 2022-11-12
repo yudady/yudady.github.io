@@ -24,12 +24,12 @@ npm install gulp-livereload --save-dev
 
 > 啟動 `npm run dev`
 
-![npm run dev](../images/20190317133142.png)
+![npm run dev](images/20190317133142.png)
 
 [go](http://localhost:3000/1ng.html)
 
 
-![demo](../images/20190317133143.gif)
+![demo](images/20190317133143.gif)
 
 
 ## gulpfile.js

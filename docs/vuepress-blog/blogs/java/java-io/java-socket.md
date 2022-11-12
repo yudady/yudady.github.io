@@ -18,9 +18,9 @@ Socket Library是BSD UNIX的一個API (Application Programming Interface)。
 <!--more-->
 # 內容
 
-![架構圖](../images/socket.jpg)
+![架構圖](images/socket.jpg)
 
-![OSI 七层模型](../images/8935434-28e242f84b975031.gif)
+![OSI 七层模型](images/8935434-28e242f84b975031.gif)
 
 
 ## 应用程序协议中消息的成帧与解析
@@ -31,17 +31,17 @@ Socket Library是BSD UNIX的一個API (Application Programming Interface)。
 
 ## select模型
 [select](https://www.cnblogs.com/apprentice89/archive/2013/05/09/3069561.html)
-![select](../images/20181120092315.png)
+![select](images/20181120092315.png)
 ## epoll模型
 [epoll](https://www.cnblogs.com/apprentice89/archive/2013/05/06/3063039.html)
 
 
 
 ## 零拷貝（read file than send to network）
-![BIO](../images/20181111004927.png)
-![NIO](../images/20181111004909.png)
-![NIO](../images/20181111010003.png)
-![NIO](../images/20181111015324.png)
+![BIO](images/20181111004927.png)
+![NIO](images/20181111004909.png)
+![NIO](images/20181111010003.png)
+![NIO](images/20181111015324.png)
 
 
 

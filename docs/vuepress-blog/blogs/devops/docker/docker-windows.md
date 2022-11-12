@@ -21,9 +21,9 @@ docker images windows 預設目錄 C:\ProgramData\DockerDesktop\vm-data
 # 內容
 
 
-![version](../images/20191104230528.png)
+![version](images/20191104230528.png)
 
-![變更目錄](../images/20191104225518.png)
+![變更目錄](images/20191104225518.png)
 
 
 

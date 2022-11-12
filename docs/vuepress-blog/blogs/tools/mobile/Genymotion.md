@@ -15,7 +15,7 @@ modified: 2022-05-21 15:09
 
 
 [Downloads Archive - Genymotion – Android Emulator for app testing](https://www.genymotion.com/download/)
-![](../images/Genymotion-202205211504.png)
+![](images/Genymotion-202205211504.png)
 
 
 

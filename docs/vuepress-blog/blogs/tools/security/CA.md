@@ -164,7 +164,7 @@ tommy@tommy-msi:/mnt/c/Users/yu_da/Desktop/openssl/ca$
 ```
 
 
-![](../images/CA-202205151806.png)
+![](images/CA-202205151806.png)
 
 ### **修改域名**
 將 /etc 目錄下的 hosts 檔案里加入一行 ip 到域名的對映

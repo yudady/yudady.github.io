@@ -16,9 +16,9 @@ date: 2018-11-17 18:00:42
 <!--more-->
 # 內容
 
-![gradle](../images/20181117180553.png)
-![gradle](../images/20181117180934.png)
-![gradle](../images/20181117181145.png)
+![gradle](images/20181117180553.png)
+![gradle](images/20181117180934.png)
+![gradle](images/20181117181145.png)
 
 
 

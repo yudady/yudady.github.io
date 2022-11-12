@@ -75,7 +75,7 @@
       "folder": {
         "enabled": true,
         "folders": [
-          "001-TODO"
+          "400-devops"
         ],
         "chooseWhenCreatingNote": false,
         "createInSameFolderAsActiveFile": false

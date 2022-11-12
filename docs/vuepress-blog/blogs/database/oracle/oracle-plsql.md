@@ -17,12 +17,12 @@ plsql
 # 內容
 
 ## 登入
-![登入](../images/20190228202601.png)
+![登入](images/20190228202601.png)
 
 > 192.168.79.100:1521/xe
 
 ## tnsnames.ora
-![登入](../images/20190228203336.png)
+![登入](images/20190228203336.png)
 
 > D:\JavaTool\database\PLSQL Developer\PLSQL Developer 9.0.0.1601\oracle_instantclient_12.1.0.2.0_32
 
@@ -57,11 +57,11 @@ DB2 =
 
 
 
-![登入](../images/20190307084726.png)
+![登入](images/20190307084726.png)
 
-![登入](../images/20190307084429.png)
+![登入](images/20190307084429.png)
 
-![登入](../images/20190307082316.png)
+![登入](images/20190307082316.png)
 
 ## docker oracle
 

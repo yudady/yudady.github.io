@@ -9,7 +9,7 @@ toc: true
 date: 2018-11-18 19:05:24
 ---
 
-![storm](../images/20181118192201.png)
+![storm](images/20181118192201.png)
 - Flume获取数据。
 - Kafka临时保存数据。
 - Strom计算数据。
@@ -42,22 +42,22 @@ date: 2018-11-18 19:05:24
 # 內容
 
 ## diagram depicts the core concept of Apache Storm
-![storm](../images/20181119022410.png)
+![storm](images/20181119022410.png)
 
 ## Apache Storm cluster is designed and its internal architecture
-![storm](../images/20181119022017.png)
+![storm](images/20181119022017.png)
 
 
-![storm](../images/20181119030002.png)
-![storm](../images/20181119030128.png)
+![storm](images/20181119030002.png)
+![storm](images/20181119030128.png)
 
 
 ## Storm编程模型
-![storm](../images/20181118191551.png)
+![storm](images/20181118191551.png)
 ## Storm核心组件
-![storm](../images/20181118191610.png)
+![storm](images/20181118191610.png)
 ## Storm并发度案例
-![storm](../images/20181118191925.png)
+![storm](images/20181118191925.png)
 
 
 

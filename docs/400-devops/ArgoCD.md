@@ -12,7 +12,7 @@ updated_date: 2022-11-07 10:05
 - Link: [argo-cd/README.md at master · argoproj/argo-cd](https://github.com/argoproj/argo-cd/blob/master/README.md)
 - [argoproj/argocd-example-apps: Example Apps to Demonstrate Argo CD](https://github.com/argoproj/argocd-example-apps)
 
-![[ArgoCD-202211061445.png]]
+![](ArgoCD-202211061445.png)
 
 ##### ArgoCD
 

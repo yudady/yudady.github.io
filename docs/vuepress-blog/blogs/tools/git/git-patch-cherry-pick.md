@@ -22,7 +22,7 @@ date: 2019-03-10 11:32:25
 
 ## git patch
 
-![](../images/20190310113100.png)
+![](images/20190310113100.png)
 
 ### 两个commit间的修改（包含两个commit）
 > git format-patch d77aaac74845435744c49ae65511d9e1be79ed5c...046ee8f8423302f5070ca81b4e246516e919cd7a -o patch
@@ -40,7 +40,7 @@ date: 2019-03-10 11:32:25
 
 ## 把生成的patch文件拷贝到目标git目录下
 
-![](../images/20190310114916.png)
+![](images/20190310114916.png)
 
 ### 检查patch文件
 > git apply --stat 0001-minor-fix.patch
@@ -54,13 +54,13 @@ date: 2019-03-10 11:32:25
 
 
 ## 衝突
-![](../images/20190310115843.png)
+![](images/20190310115843.png)
 
 
 
 
 # cherry-pick
-![](../images/20190310121118.png)
+![](images/20190310121118.png)
 
 
 

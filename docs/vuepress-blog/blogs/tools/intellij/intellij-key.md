@@ -54,8 +54,8 @@ date: 2018-10-16 08:27:17
 
 
 ## intellij code setting
-![](../images/20190131141859.png)
-![](../images/codeAlign.gif)
+![](images/20190131141859.png)
+![](images/codeAlign.gif)
 
 # 參考資料
 - [IntelliJ IDEA 2017 快捷键大全](https://www.jianshu.com/p/74b12008a726)

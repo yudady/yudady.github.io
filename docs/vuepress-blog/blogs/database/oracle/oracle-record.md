@@ -33,18 +33,18 @@ mvn install:install-file
 
 ## plsql autoComplate
 自動補全
-![autoComplate](../images/20190306213738.png)
+![autoComplate](images/20190306213738.png)
 
 
 ## plsql亂碼
 
 > select * from v$nls_parameters;
-![autoComplate](../images/20190306215039.png)
+![autoComplate](images/20190306215039.png)
 
 > select userenv('language') from dual;
-![autoComplate](../images/20190306214845.png)
+![autoComplate](images/20190306214845.png)
 
-![autoComplate](../images/20190306215148.png)
+![autoComplate](images/20190306215148.png)
 
 
 

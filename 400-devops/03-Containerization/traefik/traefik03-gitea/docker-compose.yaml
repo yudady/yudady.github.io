@@ -34,33 +34,35 @@ services:
       - traefik.http.routers.thisproxylocal.rule=Host(`192.168.100.120`) # Change 192.168.100.120 to your Docker server IP.
       - traefik.http.routers.thisproxylocal.entryPoints=console,websecure
       - traefik.http.routers.thisproxylocal.service=api@internal
+    networks:
+      - web
     restart: unless-stopped
 
-  sonarr:
-    image: linuxserver/sonarr
-    container_name: sonarr
+######################################################################
+
+  gitea-server:
+    container_name: gitea
+    image: gitea/gitea:latest # 直接装最新版就好了，没啥好选的，随意
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=UTC
-      - UMASK_SET=022 #optional
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    networks:
+      - web
     volumes:
-      - ./data/sonarr/data:/config
-      - ./media/tvshows:/tv
-      - ./downloads:/downloads
+      - ./data/gitea-server/data:/data  # /home/data可以替换成你想要的挂载目录
+      - ./app.ini:/etc/gitea/conf/app.ini
+#      - /etc/timezone:/etc/timezone:ro
+#      - /etc/localtime:/etc/localtime:ro
     labels:
       - traefik.enable=true
-      - traefik.http.routers.sonarr.rule=Host(`web.yudady.tk`) || Path(`/web`) # replace sr.cloudwatch.net with your domain name, leave /sonarr unchanged for now
-      - traefik.http.routers.sonarr.entrypoints=websecure
-      - traefik.http.routers.sonarr.tls.certresolver=letsencrypt
-    restart: unless-stopped
+      - traefik.http.routers.gitea-server.rule=Host(`web.yudady.tk`) || Path(`/web`) # replace sr.cloudwatch.net with your domain name, leave /sonarr unchanged for now
+      - traefik.http.routers.gitea-server.entrypoints=websecure
+      - traefik.http.routers.gitea-server.tls.certresolver=letsencrypt
+      - "traefik.http.services.gitea-web-svc.loadbalancer.server.port=3000"
 
-  whoami:
-    image: "traefik/whoami"
-    container_name: "simple-service"
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.whoami.rule=Host(`tommy.yudady.tk`) || Path(`/tommy`)  # replace gf.cloudwatch.net with your domain name, leave /gf unchanged for now
-      - traefik.http.routers.whoami.entrypoints=websecure
-      - traefik.http.routers.whoami.tls.certresolver=letsencrypt
-    restart: unless-stopped
+
+networks:
+  web:
+    external: true
+

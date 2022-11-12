@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "gitea",
+      "path": "400-devops/10-Version-Control/gitea.md"
+    },
+    {
       "basename": "drone",
       "path": "400-devops/04-CI-CD-Pipelines/drone.md"
     },
@@ -43,10 +47,6 @@
     {
       "basename": "free-cloud-storage",
       "path": "400-devops/01-Concepts-of-Software-Development/free-cloud-storage.md"
-    },
-    {
-      "basename": "gitea",
-      "path": "400-devops/10-Version-Control/gitea.md"
     },
     {
       "basename": "go",

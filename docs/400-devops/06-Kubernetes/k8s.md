@@ -75,20 +75,20 @@ kubectl version
 
 ## ingress
 
-[kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx) : from [github](../github/000-MOC-GitHub.md)
+[kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx) : from [github](../04-CI-CD-Pipelines/github/000-MOC-GitHub.md)
 
 [Helm NGINX Ingress](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-helm/) : from [helm](../04-CI-CD-Pipelines/helm.md)
 
 ## dashboard
 
-[kubernetes/dashboard](https://github.com/kubernetes/dashboard) : from [github](../github/000-MOC-GitHub.md)
+[kubernetes/dashboard](https://github.com/kubernetes/dashboard) : from [github](../04-CI-CD-Pipelines/github/000-MOC-GitHub.md)
 
 [kubernetes-dashboard](https://artifacthub.io/packages/helm/k8s-dashboard/kubernetes-dashboard) : from [helm](../04-CI-CD-Pipelines/helm.md)
 
 ## tools
 
 - [minikube](minikube.md) : k8s
-- [skaffold](../skaffold.md) : k8s 開發工具
+- [skaffold](../01-Concepts-of-Software-Development/skaffold.md) : k8s 開發工具
 - service mesh & **istio** : sidecar , 保護 k8s
 - kiali :  k8s 視圖整合 , labels:  **app**: xxxxx
 - argocd :  cd , auto pull k8s yaml file from github 

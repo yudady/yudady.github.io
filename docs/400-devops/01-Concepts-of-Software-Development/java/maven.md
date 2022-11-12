@@ -10,7 +10,7 @@ updated_date: 2022-10-21 10:11
 
 ## repository
 
-[Github-Action](../github/github-action.md) 自動發佈 jar 包 ，使用 [github-packages](../github/github-packages.md)  ->   [build-devops01-maven-project.yml](https://raw.githubusercontent.com/yudady/spring-getting-started-guides/main/.github/workflows/build-devops01-maven-project.yml)  
+[Github-Action](../../04-CI-CD-Pipelines/github/github-action.md) 自動發佈 jar 包 ，使用 [github-packages](../../04-CI-CD-Pipelines/github/github-packages.md)  ->   [build-devops01-maven-project.yml](https://raw.githubusercontent.com/yudady/spring-getting-started-guides/main/.github/workflows/build-devops01-maven-project.yml)  
 
 
 ## private maven repository

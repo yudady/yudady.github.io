@@ -34,6 +34,6 @@ event -> workflows -> jobs
 
 ## 自動構建部署到倉庫 ([github-packages](github-packages.md))
 
-- build [maven](../java/maven.md)
-- build [gradle](../java/gradle.md) 
-- build [docker](../03-Containerization/docker.md)
+- build [maven](../../01-Concepts-of-Software-Development/java/maven.md)
+- build [gradle](../../01-Concepts-of-Software-Development/java/gradle.md) 
+- build [docker](../../03-Containerization/docker.md)

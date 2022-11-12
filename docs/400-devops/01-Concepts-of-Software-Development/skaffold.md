@@ -19,8 +19,8 @@ updated_date: 2022-11-04 23:27
 
 ## 是什麼
 
-- [docker](03-Containerization/docker.md) image auto build tools 
-- [k8s](06-Kubernetes/k8s.md) local auto deploy
+- [docker](../03-Containerization/docker.md) image auto build tools 
+- [k8s](../06-Kubernetes/k8s.md) local auto deploy
 - Skaffold- 简化本地开发 kubernetes 应用的神器
 
 ![](images/skaffold-202211061001.png)
@@ -33,7 +33,7 @@ updated_date: 2022-11-04 23:27
 ## 📝 怎麼玩
 
 - skdffold dev
-- [pack](pack.md) enable building a container image from source code without the need for a Dockerfile.
+- [pack](../03-Containerization/pack.md) enable building a container image from source code without the need for a Dockerfile.
 
 [skaffold/examples at main · GoogleContainerTools/skaffold](https://github.com/GoogleContainerTools/skaffold/tree/main/examples)
 
@@ -47,6 +47,6 @@ updated_date: 2022-11-04 23:27
 
 ![](images/skaffold-202211041733.png)
 
-use [minikube](06-Kubernetes/minikube.md) 本地開發
+use [minikube](../06-Kubernetes/minikube.md) 本地開發
 
 ![](images/intellij-quickstart-runthrough.gif)

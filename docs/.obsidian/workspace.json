@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "index.md",
+            "file": "400-devops/03-Containerization/kaniko.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -81,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "400-devops/03-Containerization/kaniko.md"
               }
             }
           },
@@ -125,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "index.md",
+                "file": "400-devops/03-Containerization/kaniko.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "400-devops/03-Containerization/kaniko.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -177,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "400-devops/03-Containerization/kaniko.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -196,15 +196,15 @@
   },
   "active": "b1ae197fff4bfdd1",
   "lastOpenFiles": [
+    "400-devops/08-Infrastructure-as-Code/pulumi.md",
+    "index.md",
     "400-devops/04-CI-CD-Pipelines/helm.md",
     "400-devops/06-Kubernetes/k8s.md",
     "400-devops/06-Kubernetes/minikube.md",
     "400-devops/k8s/k8s-drawing.md",
-    "index.md",
     "400-devops/04-CI-CD-Pipelines/ArgoCD.md",
-    "400-devops/free-cloud-storage.md",
+    "400-devops/01-Concepts-of-Software-Development/free-cloud-storage.md",
     "400-devops/10-Version-Control/gitea.md",
-    "400-devops/go.md",
-    "400-devops/istio.md"
+    "400-devops/09-Scripting-Language/go.md"
   ]
 }

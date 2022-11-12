@@ -10,7 +10,7 @@ updated_date: 2022-11-01 11:03
 
 ## ## repository
 
-[github/github-packages](../github/github-packages.md)  -  
+[github/github-packages](../04-CI-CD-Pipelines/github/github-packages.md)  -  
 
 [cloud.canister.io](https://cloud.canister.io/n/yudady) : free docker registor : login by yahoo email
 

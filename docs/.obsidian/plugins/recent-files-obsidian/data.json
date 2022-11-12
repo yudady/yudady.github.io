@@ -1,12 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
+      "basename": "監控",
+      "path": "400-devops/07-Monitoring-and-Observability/監控.md"
+    },
+    {
+      "basename": "helm",
+      "path": "400-devops/04-CI-CD-Pipelines/helm.md"
+    },
+    {
       "basename": "k8s",
-      "path": "400-devops/k8s/k8s.md"
+      "path": "400-devops/06-Kubernetes/k8s.md"
+    },
+    {
+      "basename": "minikube",
+      "path": "400-devops/06-Kubernetes/minikube.md"
     },
     {
       "basename": "ArgoCD",
-      "path": "400-devops/ArgoCD.md"
+      "path": "400-devops/04-CI-CD-Pipelines/ArgoCD.md"
     },
     {
       "basename": "free-cloud-storage",
@@ -14,7 +30,7 @@
     },
     {
       "basename": "gitea",
-      "path": "400-devops/gitea.md"
+      "path": "400-devops/10-Version-Control/gitea.md"
     },
     {
       "basename": "go",
@@ -30,7 +46,7 @@
     },
     {
       "basename": "windows",
-      "path": "400-devops/windows.md"
+      "path": "400-devops/02-OS-and-Linux-Basics/windows.md"
     },
     {
       "basename": "kiaki",
@@ -39,10 +55,6 @@
     {
       "basename": "DevOps_Roadmap_by_TWN.01",
       "path": "400-devops/DevOps_Roadmap_by_TWN.01.pdf"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "我的專長",
@@ -70,15 +82,11 @@
     },
     {
       "basename": "drone",
-      "path": "400-devops/drone.md"
+      "path": "400-devops/04-CI-CD-Pipelines/drone.md"
     },
     {
       "basename": "vscode-devcontainer",
-      "path": "400-devops/Containerization/vscode-devcontainer.md"
-    },
-    {
-      "basename": "minikube",
-      "path": "400-devops/k8s/minikube.md"
+      "path": "400-devops/03-Containerization/vscode-devcontainer.md"
     },
     {
       "basename": "pulumi",
@@ -91,10 +99,6 @@
     {
       "basename": "Kustomize",
       "path": "400-devops/Kustomize.md"
-    },
-    {
-      "basename": "k8s-drawing",
-      "path": "400-devops/k8s/k8s-drawing.md"
     },
     {
       "basename": "skaffold",
@@ -114,7 +118,7 @@
     },
     {
       "basename": "okteto",
-      "path": "400-devops/okteto.md"
+      "path": "400-devops/01-Concepts-of-Software-Development/okteto.md"
     },
     {
       "basename": "000-obsidian",
@@ -133,10 +137,6 @@
       "path": "400-devops/github/github-action.md"
     },
     {
-      "basename": "監控",
-      "path": "400-devops/監控.md"
-    },
-    {
       "basename": "GraalVM",
       "path": "400-devops/GraalVM.md"
     },
@@ -150,7 +150,7 @@
     },
     {
       "basename": "docker",
-      "path": "400-devops/Containerization/docker.md"
+      "path": "400-devops/03-Containerization/docker.md"
     },
     {
       "basename": "query-io",
@@ -162,7 +162,7 @@
     },
     {
       "basename": "prometheus",
-      "path": "400-devops/Containerization/prometheus.md"
+      "path": "400-devops/03-Containerization/prometheus.md"
     },
     {
       "basename": "尚矽谷-SpringBoot2核心技術",
@@ -191,10 +191,6 @@
     {
       "basename": "spring-sagan",
       "path": "500-spring/spring-sagan.md"
-    },
-    {
-      "basename": "helm",
-      "path": "400-devops/k8s/helm.md"
     }
   ],
   "omittedPaths": [],

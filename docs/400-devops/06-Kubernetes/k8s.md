@@ -3,25 +3,13 @@ title: k8s
 tags: [2022-10, devops, k8s]
 aliases: [k8s]
 created_date: 2022-10-30 14:03
-updated_date: 2022-11-09 14:28
+updated_date: 2022-11-12 16:01
 ---
 
 # k8s
 
 - **🏷️Tags** :   #2022-10 #devops  #k8s 
 - Link: [1-pvc-demo.yml](https://raw.githubusercontent.com/yudady/yudady.github.io/main/devops-k8s/k8s-learning/07.pv-pvc/1-pvc-demo.yml)
-
-01 - Concepts of Software Development
-02 - OS and Linux Basics
-03 - Containerization - Docker
-04 - CI/CD Pipelines
-05 - Learn 1 Cloud Provider
-06 - Container Orchestration - Kubernetes
-07 - Monitoring and Observability
-08 - Infrastructure as Code
-09 - Scripting Language
-10 - Version Control - Git
-
 
 ## command
 
@@ -89,13 +77,13 @@ kubectl version
 
 [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx) : from [github](../github/000-MOC-GitHub.md)
 
-[Helm NGINX Ingress](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-helm/) : from [helm](helm.md)
+[Helm NGINX Ingress](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-helm/) : from [helm](../04-CI-CD-Pipelines/helm.md)
 
 ## dashboard
 
 [kubernetes/dashboard](https://github.com/kubernetes/dashboard) : from [github](../github/000-MOC-GitHub.md)
 
-[kubernetes-dashboard](https://artifacthub.io/packages/helm/k8s-dashboard/kubernetes-dashboard) : from [helm](helm.md)
+[kubernetes-dashboard](https://artifacthub.io/packages/helm/k8s-dashboard/kubernetes-dashboard) : from [helm](../04-CI-CD-Pipelines/helm.md)
 
 ## tools
 

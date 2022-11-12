@@ -93,4 +93,4 @@ ENTRYPOINT ["/bin/drone-server"]
 ```
 
 > docker build -t yudady/drone:2.15.0 .
-[../400-devops/gitea](../400-devops/gitea.md) + drone
+[../10-Version-Control/gitea](../10-Version-Control/gitea.md) + drone

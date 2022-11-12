@@ -4,23 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b9773b90f213ffe3",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "8c49eeb51c936dc8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "400-devops/k8s/k8s.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
+        "id": "be48748c166fdb6c",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "index.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
           }
-        ]
+        }
       }
     ],
     "direction": "vertical"
@@ -49,7 +43,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "terminal",
+                "query": "terraf",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -87,7 +81,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/k8s/k8s.md"
+                "file": "index.md"
               }
             }
           },
@@ -131,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/k8s/k8s.md",
+                "file": "index.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -166,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/k8s/k8s.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/k8s/k8s.md",
+                "file": "index.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -200,17 +194,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "8c49eeb51c936dc8",
+  "active": "b1ae197fff4bfdd1",
   "lastOpenFiles": [
-    "400-devops/ArgoCD.md",
+    "400-devops/04-CI-CD-Pipelines/helm.md",
+    "400-devops/06-Kubernetes/k8s.md",
+    "400-devops/06-Kubernetes/minikube.md",
+    "400-devops/k8s/k8s-drawing.md",
+    "index.md",
+    "400-devops/04-CI-CD-Pipelines/ArgoCD.md",
     "400-devops/free-cloud-storage.md",
-    "400-devops/gitea.md",
+    "400-devops/10-Version-Control/gitea.md",
     "400-devops/go.md",
-    "400-devops/istio.md",
-    "400-devops/kaniko.md",
-    "400-devops/windows.md",
-    "400-devops/kiaki.md",
-    "001-TODO/Drawing-20221112-154123.excalidraw.md",
-    "400-devops/k8s/k8s.md"
+    "400-devops/istio.md"
   ]
 }

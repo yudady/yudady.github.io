@@ -17,7 +17,7 @@ updated_date: 2022-11-04 15:20
 
 ## 是什麼
 
-- [k8s](k8s/k8s.md) build OCI image
+- [k8s](06-Kubernetes/k8s.md) build OCI image
 
 ## 去哪下載
 

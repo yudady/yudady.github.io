@@ -54,8 +54,8 @@ services:
       - traefik.http.routers.drone-server.entrypoints=websecure
       - traefik.http.routers.drone-server.tls.certresolver=letsencrypt
     environment:
-      - DRONE_GITHUB_CLIENT_ID=3557686312e359f0eb69
-      - DRONE_GITHUB_CLIENT_SECRET=a9eeab214f742fec13e721376e153496f8a25503
+      - DRONE_GITHUB_CLIENT_ID=xxxxxxxxxxxxxxxxxxxxxx
+      - DRONE_GITHUB_CLIENT_SECRET=xxxxxxxxxxxxxxxxxxxxxxxx
       - DRONE_RPC_SECRET=74cdedb4e85d3d6458b9624bbeca1c6d
       - DRONE_SERVER_HOST=web.yudady.tk
       - DRONE_SERVER_PROTO=https

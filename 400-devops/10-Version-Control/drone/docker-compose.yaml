@@ -4,25 +4,62 @@ services:
 
   drone-server:
     container_name: drone
-    image: 'yudady/drone:2.15.0'
-    ports:
-      - '8080:80'
-      - '8443:443'
+    image: 'drone/drone:2.15.0'
     restart: always
+    ports:
+      - 80:80
+      - 443:443
     networks:
       - web
     volumes:
       - ./data/drone-server/data:/data'
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - DRONE_GITEA_CLIENT_ID=38c38b5e-29a3-477b-97ae-86c5459f291b
-      - DRONE_GITEA_CLIENT_SECRET=gto_xi7grptbacrlxogyi7pa7joox5sut7pbt7le37hk5p4wzdj4zbtq
-      - 'DRONE_GITEA_SERVER=http://localhost:3000'
+      - DRONE_GITEA_CLIENT_ID=8239eae3-99ab-41ee-ab69-b2015e3e959a
+      - DRONE_GITEA_CLIENT_SECRET=gto_gsmlegih7c7aiu654dva5vmmw34ghmptlfnbcckjduqlxvgpgmda
+      - 'DRONE_GITEA_SERVER=http://gitea-server:3000'
       - DRONE_GIT_ALWAYS_AUTH=false
       - DRONE_GITEA_SKIP_VERIFY=true
       - DRONE_RPC_SECRET=74cdedb4e85d3d6458b9624bbeca1c6d
-      - 'DRONE_SERVER_HOST=localhost:8080'
+      - 'DRONE_SERVER_HOST=drone-server'
       - DRONE_SERVER_PROTO=http
+
+
+  drone-runner:
+    container_name: drone-runner-docker
+    image: drone/drone-runner-docker:1.8.2
+    restart: always
+#    ports:
+#      - 3000:3000
+    networks:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data/drone-runner/drone/src:/drone/src'
+    environment:
+      - DRONE_RPC_PROTO=http
+      - DRONE_RPC_HOST=drone-server
+      - DRONE_RPC_SECRET=74cdedb4e85d3d6458b9624bbeca1c6d
+      - DRONE_RUNNER_CAPACITY=1
+      - DRONE_RUNNER_NAME=my-first-runner
+      - DRONE_WEBHOOK_SKIP_VERIFY=false
+
+
+
+  gitea-server:
+    container_name: gitea
+    image: gitea/gitea:latest # 直接装最新版就好了，没啥好选的，随意
+    ports:
+      - 3000:3000
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    networks:
+      - web
+    volumes:
+      - ./data/gitea-server/data:/data  # /home/data可以替换成你想要的挂载目录
+      #      - ./app.ini:/etc/gitea/conf/app.ini
 
 
 networks:

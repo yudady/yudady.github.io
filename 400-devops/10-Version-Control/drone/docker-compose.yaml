@@ -4,7 +4,7 @@ services:
 
   drone-server:
     container_name: drone
-    image: 'drone/drone:2.15.0'
+    image: yudady/drone:2.15.0
     restart: always
     ports:
       - 80:80
@@ -27,7 +27,7 @@ services:
 
   drone-runner:
     container_name: drone-runner-docker
-    image: drone/drone-runner-docker:1.8.2
+    image: yudady/drone-runner-docker:1.8.2
     restart: always
 #    ports:
 #      - 3000:3000

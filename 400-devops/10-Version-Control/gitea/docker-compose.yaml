@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+
+  gitea-server:
+    container_name: gitea
+    image: gitea/gitea:latest # 直接装最新版就好了，没啥好选的，随意
+    ports:
+      - 3000:3000
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    networks:
+      - web
+    volumes:
+      - ./data/gitea-server/data:/data  # /home/data可以替换成你想要的挂载目录
+      - ./app.ini:/etc/gitea/conf/app.ini
+      - \\wsl.localhost\Ubuntu-20.04\etc\timezone:/etc/timezone:ro
+      - \\wsl.localhost\Ubuntu-20.04\etc\timezone:/etc/localtime:ro
+
+
+networks:
+  web:
+    external: true
+

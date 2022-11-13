@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "400-devops/10-Version-Control/gitea.md",
+                "file": "400-devops/02-OS-and-Linux-Basics/windows.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "gitea",
+                "query": "windows",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -67,7 +67,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -88,7 +88,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/10-Version-Control/gitea.md"
+                "file": "400-devops/02-OS-and-Linux-Basics/windows.md"
               }
             }
           },
@@ -132,7 +132,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/10-Version-Control/gitea.md",
+                "file": "400-devops/02-OS-and-Linux-Basics/windows.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -167,7 +167,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/10-Version-Control/gitea.md",
+                "file": "400-devops/02-OS-and-Linux-Basics/windows.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,7 +184,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/10-Version-Control/gitea.md",
+                "file": "400-devops/02-OS-and-Linux-Basics/windows.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -201,8 +201,9 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "d9dd91b20ef737fb",
+  "active": "12ac5dc4eb5f8d4d",
   "lastOpenFiles": [
+    "400-devops/10-Version-Control/gitea.md",
     "400-devops/04-CI-CD-Pipelines/drone.md",
     "400-devops/02-OS-and-Linux-Basics/network/free-domain.md",
     "index.md",
@@ -211,7 +212,6 @@
     "400-devops/08-Infrastructure-as-Code/pulumi.md",
     "400-devops/04-CI-CD-Pipelines/helm.md",
     "400-devops/06-Kubernetes/k8s.md",
-    "400-devops/06-Kubernetes/minikube.md",
-    "400-devops/k8s/k8s-drawing.md"
+    "400-devops/06-Kubernetes/minikube.md"
   ]
 }

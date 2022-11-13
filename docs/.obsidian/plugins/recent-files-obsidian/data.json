@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "windows",
+      "path": "400-devops/02-OS-and-Linux-Basics/windows.md"
+    },
+    {
       "basename": "gitea",
       "path": "400-devops/10-Version-Control/gitea.md"
     },
@@ -55,10 +59,6 @@
     {
       "basename": "istio",
       "path": "400-devops/07-Monitoring-and-Observability/istio.md"
-    },
-    {
-      "basename": "windows",
-      "path": "400-devops/02-OS-and-Linux-Basics/windows.md"
     },
     {
       "basename": "kiaki",

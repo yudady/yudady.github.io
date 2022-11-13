@@ -4,7 +4,7 @@ services:
 
   drone-server:
     container_name: drone
-    image: 'drone/drone'
+    image: 'yudady/drone:2.15.0'
     ports:
       - '8080:80'
       - '8443:443'
@@ -15,11 +15,13 @@ services:
       - ./data/drone-server/data:/data'
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - 'DRONE_GITEA_SERVER=http://localhost:3000'
       - DRONE_GITEA_CLIENT_ID=38c38b5e-29a3-477b-97ae-86c5459f291b
-      - DRONE_GITEA_CLIENT_SECRET=gto_bges6m2u7pp7ms43wfh6xzu6uz5e2gazfbmxgkbtzr7o7i3vi3ma
+      - DRONE_GITEA_CLIENT_SECRET=gto_xi7grptbacrlxogyi7pa7joox5sut7pbt7le37hk5p4wzdj4zbtq
+      - 'DRONE_GITEA_SERVER=http://localhost:3000'
+      - DRONE_GIT_ALWAYS_AUTH=false
+      - DRONE_GITEA_SKIP_VERIFY=true
       - DRONE_RPC_SECRET=74cdedb4e85d3d6458b9624bbeca1c6d
-      - DRONE_SERVER_HOST=localhost:8080
+      - 'DRONE_SERVER_HOST=localhost:8080'
       - DRONE_SERVER_PROTO=http
 
 

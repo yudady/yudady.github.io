@@ -10,9 +10,6 @@ aliases: [test-templater]
 
 # test-templater
 
-[tgrosinger/advanced-tables-obsidian: Improved table navigation, formatting, and manipulation in Obsidian.md](https://github.com/tgrosinger/advanced-tables-obsidian)
-
-[Spring REST Docs](https://spring.io/projects/spring-restdocs#samples)
 
 ---
 ---

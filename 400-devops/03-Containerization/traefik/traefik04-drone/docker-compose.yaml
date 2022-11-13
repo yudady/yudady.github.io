@@ -1,0 +1,66 @@
+version: '3.9'
+
+services:
+  traefik:
+    image: traefik:latest
+    container_name: traefik
+    ports:
+      - 80:80
+      - 443:443
+      - 8080:8080
+    command:
+      - --api=true
+      - --providers.docker.endpoint=unix:///var/run/docker.sock
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --entrypoints.console.address=:8080
+      - --certificatesresolvers.letsencrypt.acme.email=yudady@email.com  # replace with your email
+      - --certificatesresolvers.letsencrypt.acme.storage=acme/acme.json
+      - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
+      - --entryPoints.web.http.redirections.entryPoint.to=websecure
+      - --entryPoints.web.http.redirections.entryPoint.scheme=https
+      - --entryPoints.web.http.redirections.entrypoint.permanent=true
+      - --certificatesresolvers.letsencrypt.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory # IMPORTANT Please delate current Let's Encrypt certificates so new ones can be obtained from production server
+      - --log.level=DEBUG
+      - --log.filePath=/logs/traefik.log
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./data/traefik/acme:/acme
+      - ./data/traefik/logs:/logs
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.thisproxylocal.rule=Host(`192.168.100.120`) # Change 192.168.100.120 to your Docker server IP.
+      - traefik.http.routers.thisproxylocal.entryPoints=console,websecure
+      - traefik.http.routers.thisproxylocal.service=api@internal
+    restart: unless-stopped
+
+
+
+  drone-server:
+    container_name: drone
+    image: 'yudady/drone:2.15.0'
+    restart: always
+    networks:
+      - web
+    volumes:
+      - ./data/drone-server/data:/data'
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.drone-server.rule=Host(`web.yudady.tk`) || Path(`/web`)  # replace gf.cloudwatch.net with your domain name, leave /gf unchanged for now
+      - traefik.http.routers.drone-server.entrypoints=websecure
+      - traefik.http.routers.drone-server.tls.certresolver=letsencrypt
+    environment:
+      - DRONE_GITHUB_CLIENT_ID=3557686312e359f0eb69
+      - DRONE_GITHUB_CLIENT_SECRET=a9eeab214f742fec13e721376e153496f8a25503
+      - DRONE_RPC_SECRET=74cdedb4e85d3d6458b9624bbeca1c6d
+      - DRONE_SERVER_HOST=tommy.yudady.tk
+      - DRONE_SERVER_PROTO=https
+
+
+networks:
+  web:
+    external: true
+

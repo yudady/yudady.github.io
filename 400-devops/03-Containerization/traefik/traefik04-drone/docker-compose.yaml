@@ -22,7 +22,7 @@ services:
       - --entryPoints.web.http.redirections.entryPoint.to=websecure
       - --entryPoints.web.http.redirections.entryPoint.scheme=https
       - --entryPoints.web.http.redirections.entrypoint.permanent=true
-      - --certificatesresolvers.letsencrypt.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory # IMPORTANT Please delate current Let's Encrypt certificates so new ones can be obtained from production server
+#      - --certificatesresolvers.letsencrypt.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory # IMPORTANT Please delate current Let's Encrypt certificates so new ones can be obtained from production server
       - --log.level=DEBUG
       - --log.filePath=/logs/traefik.log
     volumes:
@@ -35,7 +35,8 @@ services:
       - traefik.http.routers.thisproxylocal.entryPoints=console,websecure
       - traefik.http.routers.thisproxylocal.service=api@internal
     restart: unless-stopped
-
+    networks:
+      - web
 
 
   drone-server:

@@ -91,6 +91,34 @@
       "openFileInMode": "default"
     },
     {
+      "id": "f3d1a443-cdc9-47fc-b299-b3e8a9a6b43d",
+      "name": "k8s-templater",
+      "type": "Template",
+      "command": false,
+      "templatePath": "templates/quick-add/k8s-templater",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "400-devops"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false
+      },
+      "appendLink": false,
+      "incrementFileName": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default"
+    },
+    {
       "id": "2de7409f-dac6-447c-a834-0d5ca68b1a15",
       "name": "0-👍todo-templater",
       "type": "Template",

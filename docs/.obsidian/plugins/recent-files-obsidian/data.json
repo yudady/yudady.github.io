@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "test-templater",
-      "path": "001-TODO/test-templater.md"
+      "basename": "k8s-templater",
+      "path": "templates/quick-add/k8s-templater.md"
     },
     {
       "basename": "index",
       "path": "index.md"
+    },
+    {
+      "basename": "test-templater",
+      "path": "001-TODO/test-templater.md"
     },
     {
       "basename": "windows",
@@ -191,10 +195,6 @@
     {
       "basename": "整理書籤",
       "path": "100-InBox/整理書籤.md"
-    },
-    {
-      "basename": "spring-sagan",
-      "path": "500-spring/spring-sagan.md"
     }
   ],
   "omittedPaths": [],

@@ -4,17 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "768cfbd28d8a7dde",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "001-TODO/test-templater.md",
-            "mode": "source",
-            "backlinks": true,
-            "source": false
+        "id": "b574f6711e909b96",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f29bace622e28525",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
-        }
+        ]
       }
     ],
     "direction": "vertical"
@@ -80,9 +81,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "001-TODO/test-templater.md"
-              }
+              "state": {}
             }
           },
           {
@@ -125,7 +124,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "001-TODO/test-templater.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -160,7 +158,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "001-TODO/test-templater.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -177,7 +174,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "001-TODO/test-templater.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -194,8 +190,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "768cfbd28d8a7dde",
+  "active": "f29bace622e28525",
   "lastOpenFiles": [
+    "templates/quick-add/k8s-templater.md",
+    "400-devops/redis.md",
     "index.md",
     "400-devops/10-Version-Control/gitea.md",
     "400-devops/04-CI-CD-Pipelines/drone.md",
@@ -203,8 +201,6 @@
     "400-devops/03-Containerization/kaniko.md",
     "001-TODO/Drawing-20221112-163318.excalidraw.md",
     "400-devops/08-Infrastructure-as-Code/pulumi.md",
-    "400-devops/04-CI-CD-Pipelines/helm.md",
-    "400-devops/06-Kubernetes/k8s.md",
-    "400-devops/06-Kubernetes/minikube.md"
+    "400-devops/04-CI-CD-Pipelines/helm.md"
   ]
 }

@@ -11,8 +11,13 @@
             "id": "f29bace622e28525",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "400-devops/03-Containerization/docker.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -52,7 +57,14 @@
                 "sortOrder": "alphabetical"
               }
             }
-          },
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "cec773d3c6690924",
+        "type": "tabs",
+        "children": [
           {
             "id": "12ac5dc4eb5f8d4d",
             "type": "leaf",
@@ -74,14 +86,16 @@
       {
         "id": "3fecf2d96e0dab36",
         "type": "tabs",
-        "dimension": 71.12403100775194,
+        "dimension": 32.67326732673268,
         "children": [
           {
             "id": "6537a3e867a6ff55",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "400-devops/03-Containerization/docker.md"
+              }
             }
           },
           {
@@ -116,7 +130,7 @@
       {
         "id": "78e3fecbef45c937",
         "type": "tabs",
-        "dimension": 28.875968992248062,
+        "dimension": 67.32673267326733,
         "children": [
           {
             "id": "91b3678e71ee2f83",
@@ -124,6 +138,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "400-devops/03-Containerization/docker.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -146,7 +161,7 @@
                   "repelStrength": 11.7280505952381,
                   "linkStrength": 1,
                   "linkDistance": 237,
-                  "scale": 0.6372987299011715,
+                  "scale": 0.4061496711336465,
                   "close": true
                 }
               }
@@ -158,6 +173,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "400-devops/03-Containerization/docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -174,33 +190,33 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "400-devops/03-Containerization/docker.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 354.5,
-    "collapsed": true
+    "width": 354.5
   },
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "f29bace622e28525",
+  "active": "9b79938fe658765c",
   "lastOpenFiles": [
+    "400-devops/02-OS-and-Linux-Basics/windows.md",
+    "index.md",
     "templates/quick-add/k8s-templater.md",
     "400-devops/redis.md",
-    "index.md",
     "400-devops/10-Version-Control/gitea.md",
     "400-devops/04-CI-CD-Pipelines/drone.md",
     "400-devops/02-OS-and-Linux-Basics/network/free-domain.md",
     "400-devops/03-Containerization/kaniko.md",
     "001-TODO/Drawing-20221112-163318.excalidraw.md",
-    "400-devops/08-Infrastructure-as-Code/pulumi.md",
-    "400-devops/04-CI-CD-Pipelines/helm.md"
+    "400-devops/08-Infrastructure-as-Code/pulumi.md"
   ]
 }

@@ -3,7 +3,7 @@ title: docker
 tags: []
 aliases: [docker]
 created_date: 2022-10-20 15:42
-updated_date: 2022-11-01 11:03
+updated_date: 2022-11-14 15:28
 ---
 
 # docker
@@ -13,6 +13,35 @@ updated_date: 2022-11-01 11:03
 [github/github-packages](../04-CI-CD-Pipelines/github/github-packages.md)  -  
 
 [cloud.canister.io](https://cloud.canister.io/n/yudady) : free docker registor : login by yahoo email
+
+## develope in docker container
+
+### 1. build image
+
+```Dockerflle
+FROM golang:1.18-alpine as dev  
+  
+WORKDIR /work  
+  
+FROM golang:1.18--alpine as build  
+  
+WORKDIR /app  
+COPY ./app/* /app/  
+RUN go build -o app  
+  
+FROM alpine as runtime COPY --from=build /app/app /  
+CMD ./app
+```
+
+###  2. develope in container : mount current folder into 
+
+```shell
+docker build --target dev . -t yudady/golang:1.18  
+
+docker run -it -v ${PWD}:/work yudady/golang:1.18 sh  
+
+go version
+```
 
 ## canister : Free 20 Private docker Repos
 
@@ -41,7 +70,6 @@ latest: digest: sha256:9eeca44ba2d410e54fccc54cbe9c021802aa8b9836a0bcf3d3229354e
 
 
 ```
-
 
 ## registry-1.docker.io login
 

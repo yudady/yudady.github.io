@@ -1,20 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "k8s-templater",
-      "path": "templates/quick-add/k8s-templater.md"
+      "basename": "docker",
+      "path": "400-devops/03-Containerization/docker.md"
+    },
+    {
+      "basename": "windows",
+      "path": "400-devops/02-OS-and-Linux-Basics/windows.md"
     },
     {
       "basename": "index",
       "path": "index.md"
     },
     {
-      "basename": "test-templater",
-      "path": "001-TODO/test-templater.md"
+      "basename": "k8s-templater",
+      "path": "templates/quick-add/k8s-templater.md"
     },
     {
-      "basename": "windows",
-      "path": "400-devops/02-OS-and-Linux-Basics/windows.md"
+      "basename": "test-templater",
+      "path": "001-TODO/test-templater.md"
     },
     {
       "basename": "gitea",
@@ -155,10 +159,6 @@
     {
       "basename": "pack",
       "path": "400-devops/03-Containerization/pack.md"
-    },
-    {
-      "basename": "docker",
-      "path": "400-devops/03-Containerization/docker.md"
     },
     {
       "basename": "query-io",

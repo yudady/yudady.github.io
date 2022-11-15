@@ -4,23 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b574f6711e909b96",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "f29bace622e28525",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "400-devops/03-Containerization/docker.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
+        "id": "64c9d1f9b2e08552",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "001-TODO/join-open-source-project.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
           }
-        ]
+        }
       }
     ],
     "direction": "vertical"
@@ -32,6 +26,7 @@
       {
         "id": "4dcc60248d2e3363",
         "type": "tabs",
+        "dimension": 71.73423423423422,
         "children": [
           {
             "id": "b1ae197fff4bfdd1",
@@ -58,12 +53,12 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "cec773d3c6690924",
         "type": "tabs",
+        "dimension": 28.265765765765767,
         "children": [
           {
             "id": "12ac5dc4eb5f8d4d",
@@ -94,7 +89,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/03-Containerization/docker.md"
+                "file": "001-TODO/join-open-source-project.md"
               }
             }
           },
@@ -138,7 +133,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/03-Containerization/docker.md",
+                "file": "001-TODO/join-open-source-project.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -173,7 +168,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/03-Containerization/docker.md",
+                "file": "001-TODO/join-open-source-project.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,7 +185,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/03-Containerization/docker.md",
+                "file": "001-TODO/join-open-source-project.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -203,20 +198,17 @@
     "direction": "horizontal",
     "width": 354.5
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "9b79938fe658765c",
+  "active": "64c9d1f9b2e08552",
   "lastOpenFiles": [
-    "400-devops/02-OS-and-Linux-Basics/windows.md",
+    "400-devops/travis-ci.md",
+    "001-TODO/join-open-source-project.md",
     "index.md",
+    "400-devops/02-OS-and-Linux-Basics/windows.md",
     "templates/quick-add/k8s-templater.md",
     "400-devops/redis.md",
     "400-devops/10-Version-Control/gitea.md",
     "400-devops/04-CI-CD-Pipelines/drone.md",
     "400-devops/02-OS-and-Linux-Basics/network/free-domain.md",
-    "400-devops/03-Containerization/kaniko.md",
-    "001-TODO/Drawing-20221112-163318.excalidraw.md",
-    "400-devops/08-Infrastructure-as-Code/pulumi.md"
+    "400-devops/03-Containerization/kaniko.md"
   ]
 }

@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "join-open-source-project",
+      "path": "001-TODO/join-open-source-project.md"
+    },
+    {
+      "basename": "travis-ci",
+      "path": "400-devops/travis-ci.md"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
       "basename": "docker",
       "path": "400-devops/03-Containerization/docker.md"
     },
     {
       "basename": "windows",
       "path": "400-devops/02-OS-and-Linux-Basics/windows.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "k8s-templater",
@@ -191,10 +199,6 @@
     {
       "basename": "spring",
       "path": "500-spring/spring.md"
-    },
-    {
-      "basename": "整理書籤",
-      "path": "100-InBox/整理書籤.md"
     }
   ],
   "omittedPaths": [],

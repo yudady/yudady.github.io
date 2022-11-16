@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "pulumi",
+      "path": "400-devops/08-Infrastructure-as-Code/pulumi.md"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
       "basename": "join-open-source-project",
       "path": "001-TODO/join-open-source-project.md"
     },
     {
       "basename": "travis-ci",
       "path": "400-devops/travis-ci.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "docker",
@@ -43,10 +47,6 @@
     {
       "basename": "kaniko",
       "path": "400-devops/03-Containerization/kaniko.md"
-    },
-    {
-      "basename": "pulumi",
-      "path": "400-devops/08-Infrastructure-as-Code/pulumi.md"
     },
     {
       "basename": "監控",

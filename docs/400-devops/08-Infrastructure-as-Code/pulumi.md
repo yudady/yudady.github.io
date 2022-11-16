@@ -3,7 +3,7 @@ title: pulumi
 tags: [2022-11, devops]
 aliases: [pulumi]
 created_date: 2022-11-08 16:52
-updated_date: 2022-11-08 16:53
+updated_date: 2022-11-16 12:24
 ---
 
 # pulumi
@@ -18,7 +18,7 @@ updated_date: 2022-11-08 16:53
 
 ## 是什麼
 
-- 
+- k8s yaml use java or js or ....
 
 ## 去哪下載
 

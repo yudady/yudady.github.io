@@ -1,16 +1,20 @@
 ---
+created_date: 2022-11-15 09:38
+updated_date: 2022-11-17 12:24
 title: vscode-devcontainer
 tags: [vscode , devcontainer]
 date: 2022-09-29 12:03
 modified: 2022-10-04 17:04
 aliases: [vscode-devcontainer]
-linter-yaml-title-alias: vscode-devcontainer
 ---
 
 # vscode-devcontainer
 
 source-url :: [Developing inside a Container using Visual Studio Code Remote Development](https://code.visualstudio.com/docs/remote/containers)
-[microsoft vscode-dev-containers](https://github.com/microsoft/vscode-dev-containers) : github
+
+[devcontainers/images](https://github.com/devcontainers/images) : github devcontainer image
+
+[base alpine image](https://github.com/devcontainers/images/blob/main/src/base-alpine/README.md)
 
 ## develope in docker container
 

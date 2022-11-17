@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "eae5cbe2a298571d",
+        "id": "cc7c5a0ecd291d96",
         "type": "tabs",
         "children": [
           {
-            "id": "081089a0cc856f1d",
+            "id": "a9de4fa396c88238",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "400-devops/08-Infrastructure-as-Code/pulumi.md",
+                "file": "400-devops/smtp.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "windows",
+                "query": "devcon",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -59,7 +59,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "cec773d3c6690924",
@@ -95,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/08-Infrastructure-as-Code/pulumi.md"
+                "file": "400-devops/smtp.md"
               }
             }
           },
@@ -139,7 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/08-Infrastructure-as-Code/pulumi.md",
+                "file": "400-devops/smtp.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -174,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/08-Infrastructure-as-Code/pulumi.md",
+                "file": "400-devops/smtp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -191,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/08-Infrastructure-as-Code/pulumi.md",
+                "file": "400-devops/smtp.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -204,7 +205,7 @@
     "direction": "horizontal",
     "width": 354.5
   },
-  "active": "081089a0cc856f1d",
+  "active": "a9de4fa396c88238",
   "lastOpenFiles": [
     "index.md",
     "400-devops/travis-ci.md",

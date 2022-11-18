@@ -12,6 +12,11 @@ updated_date: 2022-11-17 17:58
 - Link: [smtpmock package - github.com/mocktools/go-smtp-mock/v2 - Go Packages](https://pkg.go.dev/github.com/mocktools/go-smtp-mock/v2@v2.0.0#section-readme)
 [使用 telnet 檢查 SMTP 是否正常提供服務 - Yowko's Notes](https://blog.yowko.com/telnet-check-smtp/)
 [SMTP server/command/port](https://www.evo-mailserver.com.tw/smtp.php)
+[voodoodyne/subethasmtp: SubEtha SMTP is a Java library for receiving SMTP mail](https://github.com/voodoodyne/subethasmtp)
+
+---
+[HTTP](https://zh.m.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE "超文本傳輸協議")、[SMTP](https://zh.m.wikipedia.org/wiki/%E7%AE%80%E5%8D%95%E9%82%AE%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE "簡單郵件傳輸協議")、[SNMP](https://zh.m.wikipedia.org/wiki/%E7%AE%80%E5%8D%95%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%8D%8F%E8%AE%AE "簡單網絡管理協議")、[FTP](https://zh.m.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE "文件傳輸協議")、[Telnet](https://zh.m.wikipedia.org/wiki/Telnet "Telnet")、[SIP](https://zh.m.wikipedia.org/wiki/%E4%BC%9A%E8%AF%9D%E5%8F%91%E8%B5%B7%E5%8D%8F%E8%AE%AE "會話發起協議")、[SSH](https://zh.m.wikipedia.org/wiki/Secure_Shell "Secure Shell")、[NFS](https://zh.m.wikipedia.org/wiki/%E7%BD%91%E7%BB%9C%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F "網絡文件系統")、[RTSP](https://zh.m.wikipedia.org/wiki/RTSP "RTSP")、[XMPP](https://zh.m.wikipedia.org/wiki/XMPP "XMPP")、[Whois](https://zh.m.wikipedia.org/wiki/WHOIS "WHOIS")、[ENRP](https://zh.m.wikipedia.org/w/index.php?title=ENRP&action=edit&redlink=1 "ENRP（頁面不存在）")（英語：[Endpoint_Handlespace_Redundancy_Protocol](https://en.wikipedia.org/wiki/Endpoint_Handlespace_Redundancy_Protocol "en:Endpoint Handlespace Redundancy Protocol")）、[TLS](https://zh.m.wikipedia.org/wiki/%E5%82%B3%E8%BC%B8%E5%B1%A4%E5%AE%89%E5%85%A8%E6%80%A7%E5%8D%94%E5%AE%9A "傳輸層安全性協定")
+
 
 ## 緣起
 

@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "go-lang",
+      "path": "400-devops/go-lang.md"
+    },
+    {
       "basename": "smtp",
       "path": "400-devops/smtp.md"
+    },
+    {
+      "basename": "join-open-source-project",
+      "path": "001-TODO/join-open-source-project.md"
     },
     {
       "basename": "index",
@@ -15,10 +23,6 @@
     {
       "basename": "pulumi",
       "path": "400-devops/08-Infrastructure-as-Code/pulumi.md"
-    },
-    {
-      "basename": "join-open-source-project",
-      "path": "001-TODO/join-open-source-project.md"
     },
     {
       "basename": "travis-ci",
@@ -195,10 +199,6 @@
     {
       "basename": "ob-callouts",
       "path": "templates/templater-of-insert/ob-callouts.md"
-    },
-    {
-      "basename": "springboot",
-      "path": "500-spring/springboot.md"
     }
   ],
   "omittedPaths": [],

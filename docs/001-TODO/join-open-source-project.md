@@ -9,7 +9,7 @@ updated_date: 2022-11-15 15:12
 # join-open-source-project
 
 - **🏷️Tags** :   #2022-11 #devops 
-- Link: 
+- Link: [Open Source Friday | This Friday, invest a few hours contributing to the software you use and love.](https://opensourcefriday.com/zh/)
 
 ## PR
 

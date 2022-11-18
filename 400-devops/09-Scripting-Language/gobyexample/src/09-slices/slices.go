@@ -73,4 +73,6 @@ func main() {
 		}
 	}
 	fmt.Println("2d: ", twoD)
+	fmt.Println("2d len: ", len(twoD))
+	fmt.Println("2d: cap", cap(twoD))
 }

@@ -5,7 +5,10 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 
@@ -14,8 +17,19 @@ func main() {
 	// part of the array's type. By default an array is
 	// zero-valued, which for `int`s means `0`s.
 	var a [5]int
-	fmt.Println("emp:", a)
-
+	fmt.Println("emp:", a, a[0], a[1], a[2], a[3], a[4])
+	// emp: [0 0 0 0 0] 0 0 0 0 0
+	fmt.Println("&a:", &a, &a[0], &a[1], &a[2], &a[3], &a[4])
+	// &a: &[0 0 0 0 0]
+	// 0xc00000e360
+	// 0xc00000e368
+	// 0xc00000e370
+	// 0xc00000e378
+	// 0xc00000e380
+	fmt.Println(reflect.TypeOf(a))
+	as := a[3:]
+	fmt.Println(as, reflect.TypeOf(as))
+	fmt.Println("===============================")
 	// We can set a value at an index using the
 	// `array[index] = value` syntax, and get a value with
 	// `array[index]`.

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cc7c5a0ecd291d96",
+        "id": "40baded4c696ff5d",
         "type": "tabs",
         "children": [
           {
-            "id": "a9de4fa396c88238",
+            "id": "e97b0dd4219b9f2b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "400-devops/smtp.md",
+                "file": "400-devops/go-lang.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "devcon",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/smtp.md"
+                "file": "400-devops/go-lang.md"
               }
             }
           },
@@ -140,7 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/smtp.md",
+                "file": "400-devops/go-lang.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -175,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/smtp.md",
+                "file": "400-devops/go-lang.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/smtp.md",
+                "file": "400-devops/go-lang.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -205,17 +205,17 @@
     "direction": "horizontal",
     "width": 354.5
   },
-  "active": "a9de4fa396c88238",
+  "active": "e97b0dd4219b9f2b",
   "lastOpenFiles": [
+    "400-devops/smtp.md",
+    "001-TODO/join-open-source-project.md",
     "index.md",
     "400-devops/travis-ci.md",
-    "001-TODO/join-open-source-project.md",
     "400-devops/02-OS-and-Linux-Basics/windows.md",
     "templates/quick-add/k8s-templater.md",
     "400-devops/redis.md",
     "400-devops/10-Version-Control/gitea.md",
     "400-devops/04-CI-CD-Pipelines/drone.md",
-    "400-devops/02-OS-and-Linux-Basics/network/free-domain.md",
-    "400-devops/03-Containerization/kaniko.md"
+    "400-devops/02-OS-and-Linux-Basics/network/free-domain.md"
   ]
 }

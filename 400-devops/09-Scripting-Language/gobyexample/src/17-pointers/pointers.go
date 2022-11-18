@@ -28,7 +28,7 @@ func zeroptr(iptr *int) {
 func main() {
 	i := 1
 	fmt.Println("initial:", i)
-
+	fmt.Println("pointer:", &i)
 	zeroval(i)
 	fmt.Println("zeroval:", i)
 

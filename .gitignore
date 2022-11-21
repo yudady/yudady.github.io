@@ -37,7 +37,6 @@ hs_err_pid*
 **/dist
 **/bower_components
 **/out
-**/.vscode
 /.idea/
 **/build/
 **/bin/

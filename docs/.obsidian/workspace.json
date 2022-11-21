@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "40baded4c696ff5d",
+        "id": "8c6f7cf062c397fd",
         "type": "tabs",
         "children": [
           {
-            "id": "e97b0dd4219b9f2b",
+            "id": "328cc515500c32fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "devcon",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -79,7 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 326.5
+    "width": 286.5
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -205,17 +205,20 @@
     "direction": "horizontal",
     "width": 354.5
   },
-  "active": "e97b0dd4219b9f2b",
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "328cc515500c32fd",
   "lastOpenFiles": [
+    "400-devops/03-Containerization/vscode-devcontainer.md",
+    "400-devops/go-lang.md",
+    "index.md",
     "400-devops/smtp.md",
     "001-TODO/join-open-source-project.md",
-    "index.md",
     "400-devops/travis-ci.md",
     "400-devops/02-OS-and-Linux-Basics/windows.md",
     "templates/quick-add/k8s-templater.md",
     "400-devops/redis.md",
-    "400-devops/10-Version-Control/gitea.md",
-    "400-devops/04-CI-CD-Pipelines/drone.md",
-    "400-devops/02-OS-and-Linux-Basics/network/free-domain.md"
+    "400-devops/10-Version-Control/gitea.md"
   ]
 }

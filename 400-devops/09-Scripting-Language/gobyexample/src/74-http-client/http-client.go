@@ -5,8 +5,8 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
+	"io"
 	"net/http"
 )
 
@@ -27,12 +27,16 @@ func main() {
 	fmt.Println("Response status:", resp.Status)
 
 	// Print the first 5 lines of the response body.
-	scanner := bufio.NewScanner(resp.Body)
-	for i := 0; scanner.Scan() && i < 5; i++ {
-		fmt.Println(scanner.Text())
-	}
+	//scanner := bufio.NewScanner(resp.Body)
+	//for i := 0; scanner.Scan() && i < 5; i++ {
+	//	fmt.Println(scanner.Text())
+	//}
+	//
+	//if err := scanner.Err(); err != nil {
+	//	panic(err)
+	//}
 
-	if err := scanner.Err(); err != nil {
-		panic(err)
-	}
+	fmt.Println("=======================================")
+	body, _ := io.ReadAll(resp.Body)
+	fmt.Println(string(body)) // This logs uint8 and prints numbers
 }

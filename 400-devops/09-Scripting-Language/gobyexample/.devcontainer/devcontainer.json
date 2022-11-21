@@ -1,34 +1,28 @@
 {
-	"name": "go:1.19",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
-
+	"name": "Go Dev",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "go-dev",
+	// https://code.visualstudio.com/remote/advancedcontainers/change-default-source-mount
+	"workspaceMount": "source=${localWorkspaceFolder}/400-devops/09-Scripting-Language/gobyexample,target=/workspace,type=bind",
+	"workspaceFolder": "/workspace",
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
-			"settings": { 
-				// "terminal.integrated.defaultProfile.linux": "bash"
+			"settings": {
+				"go.toolsManagement.checkForUpdates": "local",
+				"go.useLanguageServer": true,
+				"go.gopath": "/go"
 			},
-			
 			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				"golang.go",
-				"formulahendry.code-runner"
-			]
+			"extensions": []
 		}
 	},
-	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [],
-	
+	// "forwardPorts": [5432],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
-	
-	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-	// "remoteUser": "vscode",
-	"features": {
-	}
+	"postCreateCommand": "go version",
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "root"
 }

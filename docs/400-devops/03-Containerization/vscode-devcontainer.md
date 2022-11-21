@@ -21,4 +21,7 @@ source-url :: [Developing inside a Container using Visual Studio Code Remote D
 - container 中開發環境
 - 利用 volumn 掛載程式碼
 
+## rebuild image
+Try using `F1` > `Remote-Containers: Rebuild and Reopen in Container` when you have the local folder open. If that doesn't work, try removing the call to `init.sh` (maybe that returns an error). And if that doesn't work please append the full log from a rebuild attempt (that includes the merged config).
+
 ---

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8c6f7cf062c397fd",
+        "id": "8a707395ea276aa8",
         "type": "tabs",
         "children": [
           {
-            "id": "328cc515500c32fd",
+            "id": "c1072b98c6522fd1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "400-devops/go-lang.md",
+                "file": "400-devops/03-Containerization/vscode-devcontainer.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/go-lang.md"
+                "file": "400-devops/03-Containerization/vscode-devcontainer.md"
               }
             }
           },
@@ -140,7 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/go-lang.md",
+                "file": "400-devops/03-Containerization/vscode-devcontainer.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -175,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/go-lang.md",
+                "file": "400-devops/03-Containerization/vscode-devcontainer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/go-lang.md",
+                "file": "400-devops/03-Containerization/vscode-devcontainer.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -208,11 +208,11 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "328cc515500c32fd",
+  "active": "c1072b98c6522fd1",
   "lastOpenFiles": [
+    "index.md",
     "400-devops/03-Containerization/vscode-devcontainer.md",
     "400-devops/go-lang.md",
-    "index.md",
     "400-devops/smtp.md",
     "001-TODO/join-open-source-project.md",
     "400-devops/travis-ci.md",

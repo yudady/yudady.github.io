@@ -3,7 +3,7 @@ title: docker-run-command
 tags: [2022-11, devops]
 aliases: [docker-run-command, ab]
 created_date: 2022-11-22 14:44
-updated_date: 2022-11-22 17:55
+updated_date: 2022-11-22 21:26
 ---
 
 # docker-run-command
@@ -16,6 +16,8 @@ updated_date: 2022-11-22 17:55
 [Ramblings from Jessie: Docker Containers on the Desktop](https://blog.jessfraz.com/post/docker-containers-on-the-desktop/)
 
 [marcel-dempers/my-desktop](https://github.com/marcel-dempers/my-desktop)
+
+TODO add repo , add TL;DR [5 Terminal Commands - YouTube](https://www.youtube.com/watch?v=HKB8RUWZIQA)
 
 ### create Dockerfile
 
@@ -89,6 +91,8 @@ user@M0201-014 MINGW64 ~
 vcxsrv-64.1.20.14.0.installer.exe
 ```
 
+[Download VcXsrv Windows X Server from SourceForge.net](https://sourceforge.net/projects/vcxsrv/files/latest/download)
+
 ![[install-wslg-202211221729.png]]
 
 ![[install-wslg-202211221730.png]]
@@ -99,8 +103,13 @@ vcxsrv-64.1.20.14.0.installer.exe
 root@M0201-014:~# cat .bash_login
 echo 'hello'
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
-root@M0201-014:~#
+
 ```
+
+#### reopen wsl
+
+- gedit
+- xeyex
 
 ### Tor Browser
 

@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "go-lang",
-      "path": "400-devops/go-lang.md"
+      "basename": "docker-run-command",
+      "path": "400-devops/docker-run-command.md"
+    },
+    {
+      "basename": "install-wslg",
+      "path": "vuepress-blog/blogs/tools/windows/install-wslg.md"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
     },
     {
       "basename": "smtp",
@@ -15,10 +23,6 @@
     {
       "basename": "join-open-source-project",
       "path": "001-TODO/join-open-source-project.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "vscode-devcontainer",
@@ -195,14 +199,6 @@
     {
       "basename": "尚矽谷-SpringBoot2核心技術",
       "path": "500-spring/尚矽谷-SpringBoot2核心技術.md"
-    },
-    {
-      "basename": "learning-20-hr-check-list",
-      "path": "templates/templater-of-insert/learning-20-hr-check-list.md"
-    },
-    {
-      "basename": "ob-callouts",
-      "path": "templates/templater-of-insert/ob-callouts.md"
     }
   ],
   "omittedPaths": [],

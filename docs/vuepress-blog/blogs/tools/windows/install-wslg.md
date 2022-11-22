@@ -1,6 +1,6 @@
 ---
 created_date: 2022-11-15 09:38
-updated_date: 2022-11-22 17:29
+updated_date: 2022-11-22 21:06
 title: install-wslg
 tags: ["windows", "wsl"]
 aliases: [install-wslg, "wsl2"]

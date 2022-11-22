@@ -1,14 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "vscode-devcontainer",
-      "path": "400-devops/03-Containerization/vscode-devcontainer.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
-    },
-    {
       "basename": "go-lang",
       "path": "400-devops/go-lang.md"
     },
@@ -17,8 +9,20 @@
       "path": "400-devops/smtp.md"
     },
     {
+      "basename": "go-lang",
+      "path": "400-devops/go-lang.md"
+    },
+    {
       "basename": "join-open-source-project",
       "path": "001-TODO/join-open-source-project.md"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
+      "basename": "vscode-devcontainer",
+      "path": "400-devops/03-Containerization/vscode-devcontainer.md"
     },
     {
       "basename": "pulumi",

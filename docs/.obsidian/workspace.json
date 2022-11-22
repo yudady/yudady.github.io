@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8a707395ea276aa8",
+        "id": "0609eb17964fcce1",
         "type": "tabs",
         "children": [
           {
-            "id": "c1072b98c6522fd1",
+            "id": "29c29a2bd8e086a1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "400-devops/03-Containerization/vscode-devcontainer.md",
+                "file": "400-devops/docker-run-command.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "devcon",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -79,7 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5
+    "width": 326.5
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/03-Containerization/vscode-devcontainer.md"
+                "file": "400-devops/go-lang.md"
               }
             }
           },
@@ -140,7 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/03-Containerization/vscode-devcontainer.md",
+                "file": "400-devops/go-lang.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -175,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/03-Containerization/vscode-devcontainer.md",
+                "file": "400-devops/go-lang.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/03-Containerization/vscode-devcontainer.md",
+                "file": "400-devops/go-lang.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -205,20 +205,17 @@
     "direction": "horizontal",
     "width": 354.5
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "c1072b98c6522fd1",
+  "active": "e97b0dd4219b9f2b",
   "lastOpenFiles": [
-    "index.md",
-    "400-devops/03-Containerization/vscode-devcontainer.md",
-    "400-devops/go-lang.md",
     "400-devops/smtp.md",
     "001-TODO/join-open-source-project.md",
+    "index.md",
     "400-devops/travis-ci.md",
     "400-devops/02-OS-and-Linux-Basics/windows.md",
     "templates/quick-add/k8s-templater.md",
     "400-devops/redis.md",
-    "400-devops/10-Version-Control/gitea.md"
+    "400-devops/10-Version-Control/gitea.md",
+    "400-devops/04-CI-CD-Pipelines/drone.md",
+    "400-devops/02-OS-and-Linux-Basics/network/free-domain.md"
   ]
 }

@@ -1,6 +1,6 @@
 ---
 created_date: 2022-10-04 13:43
-updated_date: 2022-11-22 11:51
+updated_date: 2022-11-23 14:18
 title: Personal Knowledge Manage
 tags: []
 date: 2022-10-04 13:43
@@ -17,7 +17,11 @@ aliases: [Personal Knowledge Manage, "靈感筆記"]
 - [That DevOps Guy - YouTube](https://www.youtube.com/c/MarcelDempers)  :  [marcel-dempers (Marcel Dempers)](https://github.com/marcel-dempers)  :  [Marcel Dempers](https://marceldempers.dev/toolbox)
 - [TechWorld with Nana - YouTube](https://www.youtube.com/c/techworld-with-nana)  :  [Nana Janashia / youtube-tutorial-series · GitLab](https://gitlab.com/nanuchi/youtube-tutorial-series)
 
+## PR
 
+https://github.com/tldr-pages/tldr/pull/9547
+
+see https://github.com/tldr-pages/tldr/pull/9269
 
 
 

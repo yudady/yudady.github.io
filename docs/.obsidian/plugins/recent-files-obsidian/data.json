@@ -5,12 +5,12 @@
       "path": "400-devops/docker-run-command.md"
     },
     {
-      "basename": "install-wslg",
-      "path": "vuepress-blog/blogs/tools/windows/install-wslg.md"
-    },
-    {
       "basename": "index",
       "path": "index.md"
+    },
+    {
+      "basename": "install-wslg",
+      "path": "vuepress-blog/blogs/tools/windows/install-wslg.md"
     },
     {
       "basename": "smtp",

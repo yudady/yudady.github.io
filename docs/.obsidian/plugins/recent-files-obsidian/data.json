@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "docker-run-command",
-      "path": "400-devops/docker-run-command.md"
+      "basename": "okteto",
+      "path": "400-devops/01-Concepts-of-Software-Development/okteto.md"
     },
     {
       "basename": "index",
       "path": "index.md"
+    },
+    {
+      "basename": "docker-run-command",
+      "path": "400-devops/docker-run-command.md"
     },
     {
       "basename": "install-wslg",
@@ -151,10 +155,6 @@
     {
       "basename": "Kustomize-202211061004",
       "path": "400-devops/06-Kubernetes/images/Kustomize-202211061004.png"
-    },
-    {
-      "basename": "okteto",
-      "path": "400-devops/01-Concepts-of-Software-Development/okteto.md"
     },
     {
       "basename": "000-obsidian",

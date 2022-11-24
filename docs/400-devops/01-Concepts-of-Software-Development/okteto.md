@@ -3,13 +3,15 @@ title: okteto
 tags: [2022-11, devops]
 aliases: [okteto]
 created_date: 2022-11-03 14:20
-updated_date: 2022-11-04 23:42
+updated_date: 2022-11-24 13:56
 ---
 
 # okteto
 
 - **🏷️Tags** :   #2022-11 #devops 
 - Link: [Okteto CLI | Okteto 文檔](https://www.okteto.com/docs/cloud/okteto-cli/)
+- Github: [okteto/okteto: Develop your applications directly in your Kubernetes Cluster](https://github.com/okteto/okteto)
+- okteto.yml doc : [Okteto Manifest | Okteto Documentation](https://www.okteto.com/docs/reference/manifest/#namespace-string-optional)
 
 ## 緣起
 
@@ -35,6 +37,9 @@ okteto context use https://cloud.okteto.com
 
 okteto context list
 
+okteto ns list
+
+okteto init
 ```
 
 ---
@@ -81,6 +86,18 @@ okteto context use https://cloud.okteto.com --token $YOUR_TOKEN
 ### k8s context switch
 
 k8s#contexts-command
+
+### okteto (like kubectl)
+
+```bash
+$ okteto ns list
+Namespace          Status
+prod-tommyunistar  Active
+tommyunistar *     Active
+
+$ okteto ns delete qa-tommyunistar
+ ✓  Namespace 'qa-tommyunistar' deleted
+```
 
 ### test pod
 

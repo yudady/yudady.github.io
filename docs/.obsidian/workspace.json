@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "50bd9c7dcbf1973d",
+        "id": "f71fef73f98480c0",
         "type": "tabs",
         "children": [
           {
-            "id": "0e6f470090bc3048",
+            "id": "ff134fa08c4a72fb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "400-devops/01-Concepts-of-Software-Development/okteto.md",
+                "file": "400-devops/03-Containerization/pack.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "okteto",
+                "query": "pack",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/01-Concepts-of-Software-Development/okteto.md"
+                "file": "400-devops/03-Containerization/pack.md"
               }
             }
           },
@@ -140,7 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/01-Concepts-of-Software-Development/okteto.md",
+                "file": "400-devops/03-Containerization/pack.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -175,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/01-Concepts-of-Software-Development/okteto.md",
+                "file": "400-devops/03-Containerization/pack.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/01-Concepts-of-Software-Development/okteto.md",
+                "file": "400-devops/03-Containerization/pack.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -205,7 +205,7 @@
     "direction": "horizontal",
     "width": 354.5
   },
-  "active": "0e6f470090bc3048",
+  "active": "ff134fa08c4a72fb",
   "lastOpenFiles": [
     "index.md",
     "400-devops/01-Concepts-of-Software-Development/okteto.md",

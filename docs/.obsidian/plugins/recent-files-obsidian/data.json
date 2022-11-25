@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "okteto",
-      "path": "400-devops/01-Concepts-of-Software-Development/okteto.md"
+      "basename": "pack",
+      "path": "400-devops/03-Containerization/pack.md"
     },
     {
       "basename": "index",
       "path": "index.md"
+    },
+    {
+      "basename": "okteto",
+      "path": "400-devops/01-Concepts-of-Software-Development/okteto.md"
     },
     {
       "basename": "docker-run-command",
@@ -179,10 +183,6 @@
     {
       "basename": "kpack",
       "path": "400-devops/03-Containerization/kpack.md"
-    },
-    {
-      "basename": "pack",
-      "path": "400-devops/03-Containerization/pack.md"
     },
     {
       "basename": "query-io",

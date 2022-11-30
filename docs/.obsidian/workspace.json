@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f71fef73f98480c0",
+        "id": "9a795d37814196ee",
         "type": "tabs",
         "children": [
           {
-            "id": "ff134fa08c4a72fb",
+            "id": "2defd8042a57f4f1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "400-devops/03-Containerization/pack.md",
+                "file": "001-TODO/Microservices with Node JS and React.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -50,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "pack",
+                "query": "skaff",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "400-devops/03-Containerization/pack.md"
+                "file": "001-TODO/Microservices with Node JS and React.md"
               }
             }
           },
@@ -140,7 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "400-devops/03-Containerization/pack.md",
+                "file": "001-TODO/Microservices with Node JS and React.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -175,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "400-devops/03-Containerization/pack.md",
+                "file": "001-TODO/Microservices with Node JS and React.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "400-devops/03-Containerization/pack.md",
+                "file": "001-TODO/Microservices with Node JS and React.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -205,8 +205,9 @@
     "direction": "horizontal",
     "width": 354.5
   },
-  "active": "ff134fa08c4a72fb",
+  "active": "2defd8042a57f4f1",
   "lastOpenFiles": [
+    "400-devops/01-Concepts-of-Software-Development/skaffold.md",
     "index.md",
     "400-devops/01-Concepts-of-Software-Development/okteto.md",
     "400-devops/docker-run-command.md",
@@ -215,7 +216,6 @@
     "400-devops/smtp.md",
     "001-TODO/join-open-source-project.md",
     "400-devops/travis-ci.md",
-    "400-devops/02-OS-and-Linux-Basics/windows.md",
-    "templates/quick-add/k8s-templater.md"
+    "400-devops/02-OS-and-Linux-Basics/windows.md"
   ]
 }

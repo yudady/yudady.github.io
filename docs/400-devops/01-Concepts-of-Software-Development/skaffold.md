@@ -15,7 +15,9 @@ updated_date: 2022-11-04 23:27
 
 ## 緣起
 
-- github 逛街看到的
+- github 逛街看到的 
+	- [skaffold/examples/microservices at main · GoogleContainerTools/skaffold](https://github.com/GoogleContainerTools/skaffold/tree/main/examples/microservices)
+	- [Setting up A Local Dev Environment using Docker , Kind, and Skaffold - YouTube](https://www.youtube.com/watch?v=2F1qlZZEMnE)
 
 ## 是什麼
 

@@ -9,12 +9,12 @@
       "path": "400-devops/01-Concepts-of-Software-Development/skaffold.md"
     },
     {
-      "basename": "index",
-      "path": "index.md"
-    },
-    {
       "basename": "pack",
       "path": "400-devops/03-Containerization/pack.md"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
     },
     {
       "basename": "okteto",

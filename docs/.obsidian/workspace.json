@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f5465e6e8db7dbed",
+        "id": "973ebd2af0304ea2",
         "type": "tabs",
         "children": [
           {
-            "id": "0ca49f721288c3c6",
+            "id": "9d28e24be4912b54",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/Microservices with Node JS and React.md",
+                "file": "400-devops/01-Concepts-of-Software-Development/skaffold.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/Microservices with Node JS and React.md"
+                "file": "400-devops/01-Concepts-of-Software-Development/skaffold.md"
               }
             }
           },
@@ -140,7 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "001-TODO/Microservices with Node JS and React.md",
+                "file": "400-devops/01-Concepts-of-Software-Development/skaffold.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -175,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "001-TODO/Microservices with Node JS and React.md",
+                "file": "400-devops/01-Concepts-of-Software-Development/skaffold.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "001-TODO/Microservices with Node JS and React.md",
+                "file": "400-devops/01-Concepts-of-Software-Development/skaffold.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -205,11 +205,11 @@
     "direction": "horizontal",
     "width": 354.5
   },
-  "active": "0ca49f721288c3c6",
+  "active": "9d28e24be4912b54",
   "lastOpenFiles": [
+    "index.md",
     "400-devops/01-Concepts-of-Software-Development/skaffold.md",
     "400-devops/03-Containerization/pack.md",
-    "index.md",
     "400-devops/01-Concepts-of-Software-Development/okteto.md",
     "400-devops/docker-run-command.md",
     "vuepress-blog/blogs/tools/windows/install-wslg.md",

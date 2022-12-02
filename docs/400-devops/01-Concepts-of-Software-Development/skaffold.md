@@ -3,7 +3,7 @@ title: skaffold
 tags: [2022-11, devops]
 aliases: [skaffold]
 created_date: 2022-11-03 13:57
-updated_date: 2022-11-04 23:27
+updated_date: 2022-12-02 14:12
 ---
 
 # skaffold
@@ -25,7 +25,9 @@ updated_date: 2022-11-04 23:27
 - [k8s](../06-Kubernetes/k8s.md) local auto deploy
 - Skaffold- 简化本地开发 kubernetes 应用的神器
 
-![](images/skaffold-202211061001.png)
+[Architecture and Design | Skaffold](https://skaffold-staging.web.app/docs/design/)
+
+![[skaffold-202212021411.png]]
 
 ## 去哪下載
 

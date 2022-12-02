@@ -1,6 +1,0 @@
-apiVersion: skaffold/v3
-kind: Config
-build:
-  artifacts:
-  - image: skaffold-buildpacks-node
-    buildpacks: {}

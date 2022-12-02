@@ -1,6 +1,0 @@
-apiVersion: skaffold/v3
-kind: Config
-manifests:
-  kustomize:
-    paths:
-      - .

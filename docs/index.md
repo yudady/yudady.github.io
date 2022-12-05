@@ -16,6 +16,7 @@ aliases: [Personal Knowledge Manage, "靈感筆記"]
 - [Bo-Yi Wu - YouTube](https://www.youtube.com/c/appleboy48)  :  [小惡魔 - AppleBOY - 小惡魔 - AppleBOY](https://blog.wu-boy.com/)
 - [That DevOps Guy - YouTube](https://www.youtube.com/c/MarcelDempers)  :  [marcel-dempers (Marcel Dempers)](https://github.com/marcel-dempers)  :  [Marcel Dempers](https://marceldempers.dev/toolbox)
 - [TechWorld with Nana - YouTube](https://www.youtube.com/c/techworld-with-nana)  :  [Nana Janashia / youtube-tutorial-series · GitLab](https://gitlab.com/nanuchi/youtube-tutorial-series)
+- [Amigoscode - YouTube](https://www.youtube.com/@amigoscode/featured)  :  [amigoscode github](https://github.com/amigoscode) 
 
 
 

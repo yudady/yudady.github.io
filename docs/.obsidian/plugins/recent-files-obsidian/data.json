@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "skaffold",
-      "path": "400-devops/01-Concepts-of-Software-Development/skaffold.md"
-    },
-    {
       "basename": "index",
       "path": "index.md"
+    },
+    {
+      "basename": "skaffold",
+      "path": "400-devops/01-Concepts-of-Software-Development/skaffold.md"
     },
     {
       "basename": "Microservices with Node JS and React",

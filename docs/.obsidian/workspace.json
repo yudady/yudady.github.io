@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d9b8ce9fff1122df",
+        "id": "b10d2f7064e82a00",
         "type": "tabs",
         "children": [
           {
-            "id": "7fe99c081d26c739",
+            "id": "3a37ba62edbd3be8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -208,7 +208,7 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "7fe99c081d26c739",
+  "active": "3a37ba62edbd3be8",
   "lastOpenFiles": [
     "index.md",
     "400-devops/01-Concepts-of-Software-Development/skaffold.md",

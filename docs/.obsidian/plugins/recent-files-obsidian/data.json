@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "spring",
+      "path": "500-spring/spring.md"
+    },
+    {
       "basename": "index",
       "path": "index.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "scoop",
       "path": "400-devops/02-OS-and-Linux-Basics/windows/scoop.md"
-    },
-    {
-      "basename": "prometheus",
-      "path": "400-devops/03-Containerization/prometheus.md"
     }
   ],
   "omittedPaths": [],

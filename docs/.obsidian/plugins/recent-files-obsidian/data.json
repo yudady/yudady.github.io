@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "spring",
-      "path": "500-spring/spring.md"
+      "basename": "01-todo",
+      "path": "001-TODO/01-todo.md"
     },
     {
       "basename": "index",
       "path": "index.md"
+    },
+    {
+      "basename": "join-open-source-project",
+      "path": "001-TODO/join-open-source-project.md"
+    },
+    {
+      "basename": "spring",
+      "path": "500-spring/spring.md"
     },
     {
       "basename": "skaffold",
@@ -39,10 +47,6 @@
     {
       "basename": "go-lang",
       "path": "400-devops/go-lang.md"
-    },
-    {
-      "basename": "join-open-source-project",
-      "path": "001-TODO/join-open-source-project.md"
     },
     {
       "basename": "vscode-devcontainer",
@@ -195,10 +199,6 @@
     {
       "basename": "query-io",
       "path": "400-devops/03-Containerization/query-io.md"
-    },
-    {
-      "basename": "scoop",
-      "path": "400-devops/02-OS-and-Linux-Basics/windows/scoop.md"
     }
   ],
   "omittedPaths": [],

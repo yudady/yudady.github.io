@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "36b33db84ac47901",
+        "id": "c86a30ee9c250503",
         "type": "tabs",
         "children": [
           {
-            "id": "bf6a40db23060817",
+            "id": "ba6750d1f87bdbfc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "500-spring/spring.md",
+                "file": "001-TODO/01-todo.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 326.5
+    "width": 260.5
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "500-spring/spring.md"
+                "file": "001-TODO/01-todo.md"
               }
             }
           },
@@ -127,7 +127,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       },
       {
         "id": "78e3fecbef45c937",
@@ -140,7 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "500-spring/spring.md",
+                "file": "001-TODO/01-todo.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -175,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "500-spring/spring.md",
+                "file": "001-TODO/01-todo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "500-spring/spring.md",
+                "file": "001-TODO/01-todo.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -208,17 +208,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "bf6a40db23060817",
+  "active": "e4217513315cfc38",
   "lastOpenFiles": [
     "index.md",
+    "001-TODO/01-todo.md",
+    "001-TODO/join-open-source-project.md",
     "400-devops/01-Concepts-of-Software-Development/skaffold.md",
     "400-devops/03-Containerization/pack.md",
     "400-devops/01-Concepts-of-Software-Development/okteto.md",
     "400-devops/docker-run-command.md",
     "vuepress-blog/blogs/tools/windows/install-wslg.md",
     "400-devops/go-lang.md",
-    "400-devops/smtp.md",
-    "001-TODO/join-open-source-project.md",
-    "400-devops/travis-ci.md"
+    "400-devops/smtp.md"
   ]
 }

@@ -1,12 +1,64 @@
 {
   "recentFiles": [
     {
-      "basename": "01-todo",
-      "path": "001-TODO/01-todo.md"
+      "basename": "rabbitmq",
+      "path": "600-面試/rabbitmq.md"
+    },
+    {
+      "basename": "redis",
+      "path": "600-面試/redis.md"
+    },
+    {
+      "basename": "kafka",
+      "path": "600-面試/kafka.md"
+    },
+    {
+      "basename": "springboot-data-redis",
+      "path": "500-spring/springboot-data-redis.md"
+    },
+    {
+      "basename": "SpringBoot-Actuator",
+      "path": "600-面試/SpringBoot-Actuator.md"
+    },
+    {
+      "basename": "k8s",
+      "path": "600-面試/k8s.md"
+    },
+    {
+      "basename": "kafka",
+      "path": "600-面試/kafka.drawio"
+    },
+    {
+      "basename": "Mysql",
+      "path": "600-面試/Mysql.md"
+    },
+    {
+      "basename": "JVM",
+      "path": "600-面試/JVM.md"
+    },
+    {
+      "basename": "JUC",
+      "path": "600-面試/JUC.md"
+    },
+    {
+      "basename": "JMM",
+      "path": "600-面試/JMM.md"
+    },
+    {
+      "basename": "Elasticsearch",
+      "path": "600-面試/Elasticsearch.md"
+    },
+    {
+      "basename": "23种设计模式",
+      "path": "600-面試/23种设计模式.md"
     },
     {
       "basename": "index",
       "path": "index.md"
+    },
+    {
+      "basename": "01-todo",
+      "path": "001-TODO/01-todo.md"
     },
     {
       "basename": "join-open-source-project",
@@ -147,60 +199,9 @@
     {
       "basename": "create-blog-Hexo",
       "path": "vue-blog/blogs/blog/hexo-blog/create-blog-Hexo.md"
-    },
-    {
-      "basename": "Traefik",
-      "path": "400-devops/03-Containerization/Traefik.md"
-    },
-    {
-      "basename": "Fluent-Bit",
-      "path": "400-devops/07-Monitoring-and-Observability/Fluent-Bit.md"
-    },
-    {
-      "basename": "Kustomize",
-      "path": "400-devops/06-Kubernetes/Kustomize.md"
-    },
-    {
-      "basename": "skaffold-202211061001",
-      "path": "400-devops/01-Concepts-of-Software-Development/images/skaffold-202211061001.png"
-    },
-    {
-      "basename": "draft-202211041008",
-      "path": "400-devops/03-Containerization/draft-202211041008.png"
-    },
-    {
-      "basename": "Kustomize-202211061004",
-      "path": "400-devops/06-Kubernetes/images/Kustomize-202211061004.png"
-    },
-    {
-      "basename": "000-obsidian",
-      "path": "200-學習OB/000-obsidian.md"
-    },
-    {
-      "basename": "TabCopy",
-      "path": "200-學習OB/plugin/TabCopy.md"
-    },
-    {
-      "basename": "Roam-Highlighter",
-      "path": "200-學習OB/plugin/Roam-Highlighter.md"
-    },
-    {
-      "basename": "github-action",
-      "path": "400-devops/04-CI-CD-Pipelines/github/github-action.md"
-    },
-    {
-      "basename": "GraalVM",
-      "path": "400-devops/01-Concepts-of-Software-Development/GraalVM.md"
-    },
-    {
-      "basename": "kpack",
-      "path": "400-devops/03-Containerization/kpack.md"
-    },
-    {
-      "basename": "query-io",
-      "path": "400-devops/03-Containerization/query-io.md"
     }
   ],
   "omittedPaths": [],
-  "maxLength": null
+  "maxLength": null,
+  "openType": "tab"
 }

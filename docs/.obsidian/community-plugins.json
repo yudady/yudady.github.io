@@ -16,5 +16,6 @@
   "templater-obsidian",
   "obsidian-show-file-path",
   "recent-files-obsidian",
-  "convert-url-to-iframe"
+  "convert-url-to-iframe",
+  "drawio-obsidian"
 ]

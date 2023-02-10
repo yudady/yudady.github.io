@@ -1,16 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "intellij-plugin",
+      "path": "vuepress-blog/blogs/tools/intellij/intellij-plugin.md"
+    },
+    {
       "basename": "rabbitmq",
       "path": "600-面試/rabbitmq.md"
     },
     {
       "basename": "index",
       "path": "index.md"
-    },
-    {
-      "basename": "intellij-plugin",
-      "path": "vuepress-blog/blogs/tools/intellij/intellij-plugin.md"
     },
     {
       "basename": "redis",

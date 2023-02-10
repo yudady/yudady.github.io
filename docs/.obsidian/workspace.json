@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "600-面試/rabbitmq.md",
+            "file": "vuepress-blog/blogs/tools/intellij/intellij-plugin.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -44,7 +44,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "600-面試/rabbitmq.md"
+                "file": "vuepress-blog/blogs/tools/intellij/intellij-plugin.md"
               }
             }
           },
@@ -63,7 +63,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "cec773d3c6690924",
@@ -134,7 +135,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "600-面試/rabbitmq.md",
+                "file": "vuepress-blog/blogs/tools/intellij/intellij-plugin.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -169,7 +170,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "600-面試/rabbitmq.md",
+                "file": "vuepress-blog/blogs/tools/intellij/intellij-plugin.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,7 +187,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "600-面試/rabbitmq.md",
+                "file": "vuepress-blog/blogs/tools/intellij/intellij-plugin.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -216,6 +217,7 @@
   },
   "active": "5ae1c6d0ecc42404",
   "lastOpenFiles": [
+    "600-面試/rabbitmq.md",
     "index.md",
     "600-面試/redis.md",
     "600-面試/kafka.md",
@@ -224,7 +226,6 @@
     "600-面試/k8s.md",
     "600-面試/kafka.drawio",
     "600-面試/Mysql.md",
-    "600-面試/JVM.md",
-    "600-面試/JUC.md"
+    "600-面試/JVM.md"
   ]
 }

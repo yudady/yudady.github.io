@@ -18,18 +18,26 @@ date: 2018-11-06 22:35:44
 
 ## intellij plugin
 - TranslationPlugin
-- Eclipse Code Formatter
 - Grep Console
-- Rainbow brackets
 - Lombok plugin
 - Maven Helper
 - Save Actions
 - VisualVM Launcher
 - String manipulation
 - key promoter X
-- google-java-format
 - Close Editor Tabs Left Right
 - Material Theme UI
+- .​env files support
+- Atom Material Icons
+- CheckStyle-IDEA
+- Cloud Code
+- Diagrams.​net Integration
+- GitToolBox
+- Indent Rainbow
+- Quokka
+- Return Highlighter
+- SequenceDiagram
+- IntelliJ Lombok plugin
 
 # 參考資料
 

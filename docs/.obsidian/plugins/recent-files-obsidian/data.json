@@ -5,6 +5,14 @@
       "path": "600-面試/rabbitmq.md"
     },
     {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
+      "basename": "intellij-plugin",
+      "path": "vuepress-blog/blogs/tools/intellij/intellij-plugin.md"
+    },
+    {
       "basename": "redis",
       "path": "600-面試/redis.md"
     },
@@ -51,10 +59,6 @@
     {
       "basename": "23种设计模式",
       "path": "600-面試/23种设计模式.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "01-todo",
@@ -195,10 +199,6 @@
     {
       "basename": "Hexo-command",
       "path": "vue-blog/blogs/blog/hexo-blog/Hexo-command.md"
-    },
-    {
-      "basename": "create-blog-Hexo",
-      "path": "vue-blog/blogs/blog/hexo-blog/create-blog-Hexo.md"
     }
   ],
   "omittedPaths": [],

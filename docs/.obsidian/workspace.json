@@ -4,17 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "5ae1c6d0ecc42404",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "vuepress-blog/blogs/tools/intellij/intellij-plugin.md",
-            "mode": "source",
-            "backlinks": true,
-            "source": false
+        "id": "13f6bcba98c588a8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4375790d5fd13633",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "vuepress-blog/blogs/database/mysql/mysql-index.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        }
+        ]
       }
     ],
     "direction": "vertical"
@@ -44,7 +50,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "vuepress-blog/blogs/tools/intellij/intellij-plugin.md"
+                "file": "vuepress-blog/blogs/database/mysql/mysql-index.md"
               }
             }
           },
@@ -63,8 +69,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "cec773d3c6690924",
@@ -135,7 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "vuepress-blog/blogs/tools/intellij/intellij-plugin.md",
+                "file": "vuepress-blog/blogs/database/mysql/mysql-index.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -170,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vuepress-blog/blogs/tools/intellij/intellij-plugin.md",
+                "file": "vuepress-blog/blogs/database/mysql/mysql-index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "vuepress-blog/blogs/tools/intellij/intellij-plugin.md",
+                "file": "vuepress-blog/blogs/database/mysql/mysql-index.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -215,17 +220,17 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "5ae1c6d0ecc42404",
+  "active": "4375790d5fd13633",
   "lastOpenFiles": [
-    "600-面試/rabbitmq.md",
-    "index.md",
-    "600-面試/redis.md",
+    "600-面試/Elasticsearch.md",
+    "600-面試/kafka.drawio",
     "600-面試/kafka.md",
+    "index.md",
+    "600-面試/rabbitmq.md",
+    "600-面試/redis.md",
     "500-spring/springboot-data-redis.md",
     "600-面試/SpringBoot-Actuator.md",
     "600-面試/k8s.md",
-    "600-面試/kafka.drawio",
-    "600-面試/Mysql.md",
-    "600-面試/JVM.md"
+    "600-面試/Mysql.md"
   ]
 }

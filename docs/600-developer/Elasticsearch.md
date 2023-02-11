@@ -1,12 +1,14 @@
 ---
-title: Elasticsearch(https://www.bilibili.com/video/BV1xY4y1B7rf/?spm_id_from=333.337.search-card.all.click&vd_source=6bd04a20c72eb5cca642210346af7081)
+title: Elasticsearch
 tags: []
-aliases: [Elasticsearch(https://www.bilibili.com/video/BV1xY4y1B7rf/?spm_id_from=333.337.search-card.all.click&vd_source=6bd04a20c72eb5cca642210346af7081)]
+aliases: [Elasticsearch]
 created_date: 2023-02-04 10:15
-updated_date: 2023-02-04 10:59
+updated_date: 2023-02-11 17:12
 ---
 
-# Elasticsearch(https://www.bilibili.com/video/BV1xY4y1B7rf/?spm_id_from=333.337.search-card.all.click&vd_source=6bd04a20c72eb5cca642210346af7081)
+# Elasticsearch
+
+[Java面试题：Elasticsearch专场（持续更新中......）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1xY4y1B7rf/?spm_id_from=333.337.search-card.all.click&vd_source=6bd04a20c72eb5cca642210346af7081)
 
 ## Elasticsearch 是什麼
 

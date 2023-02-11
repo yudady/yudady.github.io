@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "13f6bcba98c588a8",
+        "id": "1403a35524c29ef7",
         "type": "tabs",
         "children": [
           {
-            "id": "4375790d5fd13633",
+            "id": "b86718a01e48ccbc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "vuepress-blog/blogs/database/mysql/mysql-index.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -50,7 +45,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "vuepress-blog/blogs/database/mysql/mysql-index.md"
+                "file": "vuepress-blog/blogs/tools/windows/install-wslg.md"
               }
             }
           },
@@ -88,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236.5
+    "width": 364.5
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -140,7 +135,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "vuepress-blog/blogs/database/mysql/mysql-index.md",
+                "file": "vuepress-blog/blogs/tools/windows/install-wslg.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -175,7 +170,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vuepress-blog/blogs/database/mysql/mysql-index.md",
+                "file": "vuepress-blog/blogs/tools/windows/install-wslg.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,7 +187,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "vuepress-blog/blogs/database/mysql/mysql-index.md",
+                "file": "vuepress-blog/blogs/tools/windows/install-wslg.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -220,17 +215,17 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "4375790d5fd13633",
+  "active": "b1ae197fff4bfdd1",
   "lastOpenFiles": [
-    "600-面試/Elasticsearch.md",
-    "600-面試/kafka.drawio",
-    "600-面試/kafka.md",
-    "index.md",
-    "600-面試/rabbitmq.md",
-    "600-面試/redis.md",
-    "500-spring/springboot-data-redis.md",
-    "600-面試/SpringBoot-Actuator.md",
-    "600-面試/k8s.md",
-    "600-面試/Mysql.md"
+    "vuepress-blog/blogs/tools/windows/000-MOC-windows.md",
+    "vuepress-blog/blogs/tools/github.md",
+    "600-developer/intellij.md",
+    "600-developer/JMM.md",
+    "vuepress-blog/blogs/tools/intellij/intellij-settings.md",
+    "vuepress-blog/blogs/tools/intellij/intellij-save-action.md",
+    "vuepress-blog/blogs/tools/intellij/intellij-plugin-develope.md",
+    "vuepress-blog/blogs/tools/intellij/intellij-plugin.md",
+    "vuepress-blog/blogs/tools/intellij/intellij-note-formater.md",
+    "vuepress-blog/blogs/tools/intellij/intellij-mouse-font-size.md"
   ]
 }

@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "install-wslg",
+      "path": "vuepress-blog/blogs/tools/windows/install-wslg.md"
+    },
+    {
+      "basename": "000-MOC-windows",
+      "path": "vuepress-blog/blogs/tools/windows/000-MOC-windows.md"
+    },
+    {
+      "basename": "github",
+      "path": "vuepress-blog/blogs/tools/github.md"
+    },
+    {
+      "basename": "intellij",
+      "path": "600-developer/intellij.md"
+    },
+    {
+      "basename": "JMM",
+      "path": "600-developer/JMM.md"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
       "basename": "mysql-index",
       "path": "vuepress-blog/blogs/database/mysql/mysql-index.md"
     },
@@ -15,14 +39,6 @@
     {
       "basename": "kafka",
       "path": "600-面試/kafka.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
-    },
-    {
-      "basename": "intellij-plugin",
-      "path": "vuepress-blog/blogs/tools/intellij/intellij-plugin.md"
     },
     {
       "basename": "rabbitmq",
@@ -95,10 +111,6 @@
     {
       "basename": "docker-run-command",
       "path": "400-devops/docker-run-command.md"
-    },
-    {
-      "basename": "install-wslg",
-      "path": "vuepress-blog/blogs/tools/windows/install-wslg.md"
     },
     {
       "basename": "smtp",
@@ -187,18 +199,6 @@
     {
       "basename": "kiaki",
       "path": "400-devops/07-Monitoring-and-Observability/kiaki.md"
-    },
-    {
-      "basename": "DevOps_Roadmap_by_TWN.01",
-      "path": "400-devops/DevOps_Roadmap_by_TWN.01.pdf"
-    },
-    {
-      "basename": "我的專長",
-      "path": "vue-blog/我的專長.md"
-    },
-    {
-      "basename": "update-hexo",
-      "path": "vue-blog/blogs/blog/hexo-blog/update-hexo.md"
     }
   ],
   "omittedPaths": [],

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1403a35524c29ef7",
+        "id": "ad30d74e5d05758d",
         "type": "tabs",
         "children": [
           {
-            "id": "b86718a01e48ccbc",
+            "id": "557115e668036307",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -44,9 +44,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "vuepress-blog/blogs/tools/windows/install-wslg.md"
-              }
+              "state": {}
             }
           },
           {
@@ -135,7 +133,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "vuepress-blog/blogs/tools/windows/install-wslg.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -170,7 +167,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vuepress-blog/blogs/tools/windows/install-wslg.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,7 +183,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "vuepress-blog/blogs/tools/windows/install-wslg.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -215,8 +210,9 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "b1ae197fff4bfdd1",
+  "active": "557115e668036307",
   "lastOpenFiles": [
+    "index.md",
     "vuepress-blog/blogs/tools/windows/000-MOC-windows.md",
     "vuepress-blog/blogs/tools/github.md",
     "600-developer/intellij.md",
@@ -225,7 +221,6 @@
     "vuepress-blog/blogs/tools/intellij/intellij-save-action.md",
     "vuepress-blog/blogs/tools/intellij/intellij-plugin-develope.md",
     "vuepress-blog/blogs/tools/intellij/intellij-plugin.md",
-    "vuepress-blog/blogs/tools/intellij/intellij-note-formater.md",
-    "vuepress-blog/blogs/tools/intellij/intellij-mouse-font-size.md"
+    "vuepress-blog/blogs/tools/intellij/intellij-note-formater.md"
   ]
 }

@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
       "basename": "install-wslg",
       "path": "vuepress-blog/blogs/tools/windows/install-wslg.md"
     },
@@ -19,10 +23,6 @@
     {
       "basename": "JMM",
       "path": "600-developer/JMM.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "mysql-index",

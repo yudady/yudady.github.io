@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "mysql",
+      "path": "600-developer/mysql.md"
+    },
+    {
       "basename": "index",
       "path": "index.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "istio",
       "path": "400-devops/07-Monitoring-and-Observability/istio.md"
-    },
-    {
-      "basename": "kiaki",
-      "path": "400-devops/07-Monitoring-and-Observability/kiaki.md"
     }
   ],
   "omittedPaths": [],

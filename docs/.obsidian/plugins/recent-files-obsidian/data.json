@@ -1,12 +1,48 @@
 {
   "recentFiles": [
     {
-      "basename": "mysql",
-      "path": "600-developer/mysql.md"
-    },
-    {
       "basename": "index",
       "path": "index.md"
+    },
+    {
+      "basename": "spring-spel",
+      "path": "600-developer/spring/spring-spel.md"
+    },
+    {
+      "basename": "spring-sagan",
+      "path": "600-developer/spring/spring-sagan.md"
+    },
+    {
+      "basename": "01-todo",
+      "path": "001-TODO/01-todo.md"
+    },
+    {
+      "basename": "join-open-source-project",
+      "path": "100-InBox/join-open-source-project.md"
+    },
+    {
+      "basename": "test-templater",
+      "path": "100-InBox/test-templater.md"
+    },
+    {
+      "basename": "Microservices with Node JS and React",
+      "path": "100-InBox/Microservices with Node JS and React.md"
+    },
+    {
+      "basename": "docker-windows",
+      "path": "600-developer/docker/docker-windows.md"
+    },
+    {
+      "basename": "docker-run-command",
+      "path": "600-developer/docker-run-command.md"
+    },
+    {
+      "basename": "mongodb",
+      "path": "600-developer/mongodb.md"
+    },
+    {
+      "basename": "mysql",
+      "path": "600-developer/mysql.md"
     },
     {
       "basename": "install-wslg",
@@ -85,24 +121,12 @@
       "path": "600-面試/23种设计模式.md"
     },
     {
-      "basename": "01-todo",
-      "path": "001-TODO/01-todo.md"
-    },
-    {
-      "basename": "join-open-source-project",
-      "path": "001-TODO/join-open-source-project.md"
-    },
-    {
       "basename": "spring",
       "path": "500-spring/spring.md"
     },
     {
       "basename": "skaffold",
       "path": "400-devops/01-Concepts-of-Software-Development/skaffold.md"
-    },
-    {
-      "basename": "Microservices with Node JS and React",
-      "path": "001-TODO/Microservices with Node JS and React.md"
     },
     {
       "basename": "pack",
@@ -149,56 +173,12 @@
       "path": "templates/quick-add/k8s-templater.md"
     },
     {
-      "basename": "test-templater",
-      "path": "001-TODO/test-templater.md"
-    },
-    {
       "basename": "gitea",
       "path": "400-devops/10-Version-Control/gitea.md"
     },
     {
       "basename": "drone",
       "path": "400-devops/04-CI-CD-Pipelines/drone.md"
-    },
-    {
-      "basename": "free-domain",
-      "path": "400-devops/02-OS-and-Linux-Basics/network/free-domain.md"
-    },
-    {
-      "basename": "kaniko",
-      "path": "400-devops/03-Containerization/kaniko.md"
-    },
-    {
-      "basename": "監控",
-      "path": "400-devops/07-Monitoring-and-Observability/監控.md"
-    },
-    {
-      "basename": "helm",
-      "path": "400-devops/04-CI-CD-Pipelines/helm.md"
-    },
-    {
-      "basename": "k8s",
-      "path": "400-devops/06-Kubernetes/k8s.md"
-    },
-    {
-      "basename": "minikube",
-      "path": "400-devops/06-Kubernetes/minikube.md"
-    },
-    {
-      "basename": "ArgoCD",
-      "path": "400-devops/04-CI-CD-Pipelines/ArgoCD.md"
-    },
-    {
-      "basename": "free-cloud-storage",
-      "path": "400-devops/01-Concepts-of-Software-Development/free-cloud-storage.md"
-    },
-    {
-      "basename": "go",
-      "path": "400-devops/09-Scripting-Language/go.md"
-    },
-    {
-      "basename": "istio",
-      "path": "400-devops/07-Monitoring-and-Observability/istio.md"
     }
   ],
   "omittedPaths": [],

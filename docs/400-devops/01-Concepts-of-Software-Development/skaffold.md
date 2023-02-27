@@ -27,7 +27,7 @@ updated_date: 2022-12-02 14:12
 
 [Architecture and Design | Skaffold](https://skaffold-staging.web.app/docs/design/)
 
-![[skaffold-202212021411.png]]
+![](images/skaffold-202212021411.png)
 
 ## 去哪下載
 

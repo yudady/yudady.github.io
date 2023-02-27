@@ -95,9 +95,9 @@ vcxsrv-64.1.20.14.0.installer.exe
 
 [Download VcXsrv Windows X Server from SourceForge.net](https://sourceforge.net/projects/vcxsrv/files/latest/download)
 
-![[install-wslg-202211221729.png]]
+![](images/install-wslg-202211221729.png)
 
-![[install-wslg-202211221730.png]]
+![](images/install-wslg-202211221730.png)
 
 ### 登入 WSL 需要設定好 : DISPLAY
 

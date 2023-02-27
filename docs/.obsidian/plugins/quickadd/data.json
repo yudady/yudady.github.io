@@ -53,14 +53,15 @@
         "createInSameFolderAsActiveFile": false
       },
       "appendLink": false,
-      "incrementFileName": false,
       "openFileInNewTab": {
         "enabled": false,
         "direction": "vertical",
         "focus": false
       },
       "openFile": true,
-      "openFileInMode": "default"
+      "openFileInMode": "default",
+      "setFileExistsBehavior": true,
+      "fileExistsMode": "Increment the file name"
     },
     {
       "id": "7165d0c5-3dfe-4465-b843-4722f96a9072",
@@ -81,14 +82,15 @@
         "createInSameFolderAsActiveFile": false
       },
       "appendLink": false,
-      "incrementFileName": false,
       "openFileInNewTab": {
         "enabled": false,
         "direction": "vertical",
         "focus": false
       },
       "openFile": true,
-      "openFileInMode": "default"
+      "openFileInMode": "default",
+      "setFileExistsBehavior": true,
+      "fileExistsMode": "Increment the file name"
     },
     {
       "id": "f3d1a443-cdc9-47fc-b299-b3e8a9a6b43d",
@@ -109,14 +111,15 @@
         "createInSameFolderAsActiveFile": false
       },
       "appendLink": false,
-      "incrementFileName": false,
       "openFileInNewTab": {
         "enabled": false,
         "direction": "vertical",
         "focus": true
       },
       "openFile": true,
-      "openFileInMode": "default"
+      "openFileInMode": "default",
+      "setFileExistsBehavior": true,
+      "fileExistsMode": "Increment the file name"
     },
     {
       "id": "2de7409f-dac6-447c-a834-0d5ca68b1a15",
@@ -137,14 +140,15 @@
         "createInSameFolderAsActiveFile": false
       },
       "appendLink": false,
-      "incrementFileName": false,
       "openFileInNewTab": {
         "enabled": false,
         "direction": "vertical",
         "focus": true
       },
       "openFile": true,
-      "openFileInMode": "default"
+      "openFileInMode": "default",
+      "setFileExistsBehavior": true,
+      "fileExistsMode": "Increment the file name"
     },
     {
       "id": "26a8a2e6-b5dd-46dd-9c08-66deb5a6b977",
@@ -165,14 +169,15 @@
         "createInSameFolderAsActiveFile": false
       },
       "appendLink": false,
-      "incrementFileName": false,
       "openFileInNewTab": {
         "enabled": false,
         "direction": "vertical",
         "focus": false
       },
       "openFile": true,
-      "openFileInMode": "default"
+      "openFileInMode": "default",
+      "setFileExistsBehavior": true,
+      "fileExistsMode": "Increment the file name"
     },
     {
       "id": "618ae9ed-5df7-47c8-a754-2e04d8e54587",
@@ -193,14 +198,15 @@
         "createInSameFolderAsActiveFile": false
       },
       "appendLink": false,
-      "incrementFileName": false,
       "openFileInNewTab": {
         "enabled": false,
         "direction": "vertical",
         "focus": true
       },
       "openFile": true,
-      "openFileInMode": "default"
+      "openFileInMode": "default",
+      "setFileExistsBehavior": true,
+      "fileExistsMode": "Increment the file name"
     }
   ],
   "macros": [
@@ -212,5 +218,12 @@
     }
   ],
   "inputPrompt": "single-line",
-  "devMode": false
+  "devMode": false,
+  "templateFolderPath": "",
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true
+  }
 }

@@ -27,4 +27,4 @@ updated_date: 2022-11-08 14:25
 
 - 
 
-![](kiaki-202211081425.png)
+![](images/kiaki-202211081425.png)

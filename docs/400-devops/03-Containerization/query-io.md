@@ -40,4 +40,4 @@ The push refers to repository [quay.io/tommyunistar/yudady]
 latest: digest: sha256:a9cab2b897d041caa37df4a87e29eb5bf4745ad0b11e5ab59ab4aea1969a334c size: 527
 ```
 
-![](draft-202211041008.png)
+![](images/draft-202211041008.png)

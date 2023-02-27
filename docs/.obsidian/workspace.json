@@ -11,8 +11,13 @@
             "id": "5c7c5fb54910a11f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "001-TODO/28490作日誌寫入機制.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -59,7 +64,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "001-TODO/28490作日誌寫入機制.md"
+              }
             }
           }
         ]
@@ -133,6 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "001-TODO/28490作日誌寫入機制.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -167,6 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "001-TODO/28490作日誌寫入機制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,6 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "001-TODO/28490作日誌寫入機制.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -212,6 +222,10 @@
   },
   "active": "5c7c5fb54910a11f",
   "lastOpenFiles": [
+    "001-TODO/test.md",
+    "001-TODO/test-202302271955.png",
+    "001-TODO/01-todo.md",
+    "index.md",
     "001-TODO/1.md",
     "001-TODO/drawio/3.0拉注單流程.drawio",
     "001-TODO/drawio/index-202302271939.jpg",
@@ -226,9 +240,7 @@
     "001-TODO/報表下載.md",
     "001-TODO/28490作日誌寫入機制.md",
     "001-TODO/drawio/3.0服務整體架構.drawio",
-    "index.md",
     "001-TODO/test.sql",
-    "001-TODO/test.md",
     "001-TODO/drawio/plt.drawio",
     "001-TODO/drawio/index-202302271939.png",
     "600-developer/spring/spring-sagan.md",

@@ -1,6 +1,54 @@
 {
   "recentFiles": [
     {
+      "basename": "3.0拉注單流程",
+      "path": "001-TODO/drawio/3.0拉注單流程.drawio"
+    },
+    {
+      "basename": "index-202302271939",
+      "path": "001-TODO/drawio/index-202302271939.jpg"
+    },
+    {
+      "basename": "index-202302271939",
+      "path": "001-TODO/drawio/index-202302271939.drawio"
+    },
+    {
+      "basename": "devops",
+      "path": "001-TODO/devops.md"
+    },
+    {
+      "basename": "csv導出架構設計-basic",
+      "path": "001-TODO/drawio/csv導出架構設計-basic.drawio"
+    },
+    {
+      "basename": "csv導出架構設計",
+      "path": "001-TODO/drawio/csv導出架構設計.drawio"
+    },
+    {
+      "basename": "code-getway",
+      "path": "001-TODO/code-getway.md"
+    },
+    {
+      "basename": "code copy",
+      "path": "001-TODO/code copy.md"
+    },
+    {
+      "basename": "code",
+      "path": "001-TODO/code.md"
+    },
+    {
+      "basename": "報表下載",
+      "path": "001-TODO/報表下載.md"
+    },
+    {
+      "basename": "28490作日誌寫入機制",
+      "path": "001-TODO/28490作日誌寫入機制.md"
+    },
+    {
+      "basename": "3.0服務整體架構",
+      "path": "001-TODO/drawio/3.0服務整體架構.drawio"
+    },
+    {
       "basename": "index",
       "path": "index.md"
     },
@@ -147,38 +195,6 @@
     {
       "basename": "go-lang",
       "path": "400-devops/go-lang.md"
-    },
-    {
-      "basename": "vscode-devcontainer",
-      "path": "400-devops/03-Containerization/vscode-devcontainer.md"
-    },
-    {
-      "basename": "pulumi",
-      "path": "400-devops/08-Infrastructure-as-Code/pulumi.md"
-    },
-    {
-      "basename": "travis-ci",
-      "path": "400-devops/travis-ci.md"
-    },
-    {
-      "basename": "docker",
-      "path": "400-devops/03-Containerization/docker.md"
-    },
-    {
-      "basename": "windows",
-      "path": "400-devops/02-OS-and-Linux-Basics/windows.md"
-    },
-    {
-      "basename": "k8s-templater",
-      "path": "templates/quick-add/k8s-templater.md"
-    },
-    {
-      "basename": "gitea",
-      "path": "400-devops/10-Version-Control/gitea.md"
-    },
-    {
-      "basename": "drone",
-      "path": "400-devops/04-CI-CD-Pipelines/drone.md"
     }
   ],
   "omittedPaths": [],

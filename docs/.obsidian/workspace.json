@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "3c05a0799600e857",
+        "id": "d34b19b290002fe3",
         "type": "tabs",
         "children": [
           {
-            "id": "1023a6ca017bc410",
+            "id": "731a45764b0dc596",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -59,7 +64,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "index.md"
+              }
             }
           }
         ]
@@ -133,6 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "index.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -167,6 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,6 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "index.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -199,19 +209,36 @@
   "left-ribbon": {
     "hiddenItems": {
       "canvas:建立新畫布": false,
-      "obsidian42-brat:BRAT": false,
-      "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
       "switcher:開啟快速切換": false,
       "graph:查看關聯圖": false,
       "command-palette:開啟命令面板": false,
       "markdown-importer:開啟 Markdown 格式轉換器": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian42-brat:BRAT": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
       "homepage:Open homepage": false
     }
   },
-  "active": "1023a6ca017bc410",
+  "active": "731a45764b0dc596",
   "lastOpenFiles": [
+    "001-TODO/報表下載.md",
+    "001-TODO/test.sql",
+    "001-TODO/test.md",
+    "001-TODO/plt.drawio",
+    "001-TODO/index-202302271939.jpg",
+    "001-TODO/index-202302271939.png",
+    "001-TODO/devops.md",
+    "001-TODO/csv導出架構設計-basic.drawio",
+    "001-TODO/csv導出架構設計.drawio",
+    "001-TODO/code-getway.md",
+    "001-TODO/code copy.md",
+    "001-TODO/code.md",
+    "001-TODO/28490作日誌寫入機制.md",
+    "001-TODO/3.0服務整體架構.drawio",
+    "001-TODO/3.0拉注單流程.drawio",
+    "001-TODO/index-202302271939.drawio",
+    "001-TODO/1.md",
     "index.md",
     "600-developer/spring/spring-sagan.md",
     "600-developer/spring/spring-spel.md",
@@ -221,7 +248,6 @@
     "001-TODO/spring-spel-202302271432.png",
     "001-TODO/spring-spel-202302271414.png",
     "001-TODO/spring-spel-202302271401.png",
-    "001-TODO/未命名.canvas",
-    "001-TODO/01-todo.md"
+    "001-TODO/未命名.canvas"
   ]
 }

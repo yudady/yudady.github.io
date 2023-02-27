@@ -15,3 +15,8 @@ message quene 消息對列
 - [26RabbitMQ之消息手动应答（消费者）_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1K44y177Eb?p=26&spm_id_from=pageDriver&vd_source=6bd04a20c72eb5cca642210346af7081)
 
 AMQP協議
+
+### [【AMQP协议简介](https://www.bilibili.com/video/BV1Pe411V77b/?spm_id_from=333.999.0.0&vd_source=6bd04a20c72eb5cca642210346af7081)
+
+
+

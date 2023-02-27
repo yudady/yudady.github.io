@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "rabbitmq",
+      "path": "600-developer/rabbitmq.md"
+    },
+    {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
       "basename": "28490作日誌寫入機制",
       "path": "001-TODO/28490作日誌寫入機制.md"
     },
@@ -11,10 +19,6 @@
     {
       "basename": "01-todo",
       "path": "001-TODO/01-todo.md"
-    },
-    {
-      "basename": "index",
-      "path": "index.md"
     },
     {
       "basename": "3.0拉注單流程",
@@ -195,10 +199,6 @@
     {
       "basename": "smtp",
       "path": "400-devops/smtp.md"
-    },
-    {
-      "basename": "go-lang",
-      "path": "400-devops/go-lang.md"
     }
   ],
   "omittedPaths": [],

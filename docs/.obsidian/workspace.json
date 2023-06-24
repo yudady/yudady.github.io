@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "55868392675b5504",
+        "id": "185aa77347a7bf26",
         "type": "tabs",
         "children": [
           {
-            "id": "101853dbe025f087",
+            "id": "d75ccded602d887f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "600-developer/rabbitmq.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -64,9 +59,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "600-developer/rabbitmq.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -142,7 +135,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "600-developer/rabbitmq.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -177,7 +169,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "600-developer/rabbitmq.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -194,7 +185,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "600-developer/rabbitmq.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -222,7 +212,7 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "101853dbe025f087",
+  "active": "d75ccded602d887f",
   "lastOpenFiles": [
     "index.md",
     "001-TODO/test.md",

@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "rabbitmq",
-      "path": "600-developer/rabbitmq.md"
-    },
-    {
       "basename": "index",
       "path": "index.md"
+    },
+    {
+      "basename": "rabbitmq",
+      "path": "600-developer/rabbitmq.md"
     },
     {
       "basename": "28490作日誌寫入機制",

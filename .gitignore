@@ -27,3 +27,10 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+**/.gradle/
+**/build/
+**/target/
+**/classes/
+**/data/
+**/.mvn/
+**/**.exe

@@ -1,0 +1,2701 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../000-MOC-devops/" rel="prev"/>
+<link href="../free-cloud-storage/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.3, mkdocs-material-9.1.17" name="generator"/>
+<title>GraalVM - 雜記</title>
+<link href="../../../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#graalvm">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="雜記" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="雜記">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            雜記
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              GraalVM
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="雜記" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="雜記">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    雜記
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Personal Knowledge Manage
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          001 TODO
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          001 TODO
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../001-TODO/01-todo/">
+        my-todo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../001-TODO/28490%E4%BD%9C%E6%97%A5%E8%AA%8C%E5%AF%AB%E5%85%A5%E6%A9%9F%E5%88%B6/">
+        28490作日誌寫入機制
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../001-TODO/code%20copy/">
+        Code copy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../001-TODO/code-getway/">
+        Code getway
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../001-TODO/code/">
+        Code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../001-TODO/devops/">
+        devops
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../001-TODO/test/">
+        Test
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../001-TODO/%E5%A0%B1%E8%A1%A8%E4%B8%8B%E8%BC%89/">
+        報表下載
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          100 InBox
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          100 InBox
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../100-InBox/Microservices%20with%20Node%20JS%20and%20React/">
+        📚Microservices with Node JS and React
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../100-InBox/java-Jigsaw/">
+        📚 java-Jigsaw
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../100-InBox/join-open-source-project/">
+        join-open-source-project
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../100-InBox/test-templater/">
+        test-templater
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../100-InBox/%E6%95%B4%E7%90%86%E6%9B%B8%E7%B1%A4/">
+        整理書籤
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          200 學習OB
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          200 學習OB
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../200-%E5%AD%B8%E7%BF%92OB/000-obsidian/">
+        obsidian
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Plugin
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+          Plugin
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../200-%E5%AD%B8%E7%BF%92OB/plugin/Homepage/">
+        Homepage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../200-%E5%AD%B8%E7%BF%92OB/plugin/Roam-Highlighter/">
+        Roam-Highlighter
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../200-%E5%AD%B8%E7%BF%92OB/plugin/TabCopy/">
+        TabCopy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../200-%E5%AD%B8%E7%BF%92OB/plugin/admonition/">
+        admonition
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../200-%E5%AD%B8%E7%BF%92OB/plugin/buttons/">
+        buttons
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../200-%E5%AD%B8%E7%BF%92OB/plugin/quick-add/">
+        QuickAdd
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../200-%E5%AD%B8%E7%BF%92OB/plugin/templater/">
+        templater
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          300 閱讀筆記
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          300 閱讀筆記
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../300-%E9%96%B1%E8%AE%80%E7%AD%86%E8%A8%98/README-templates-folder/">
+        README-templates-folder
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../300-%E9%96%B1%E8%AE%80%E7%AD%86%E8%A8%98/Zettelkasten/">
+        Zettelkasten
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../300-%E9%96%B1%E8%AE%80%E7%AD%86%E8%A8%98/%E7%AD%86%E8%A8%98%E6%B3%95/">
+        筆記法
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          400 devops
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          400 devops
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../000-MOC-devops/">
+        000-MOC-devops
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          01 Concepts of Software Development
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_6_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          01 Concepts of Software Development
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          GraalVM
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        GraalVM
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    緣起
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    是什麼
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    去哪下載
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    📝 怎麼玩
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../free-cloud-storage/">
+        free-cloud-storage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../okteto/">
+        okteto
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../skaffold/">
+        skaffold
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2_5" id="__nav_6_2_5_label" tabindex="0">
+          Java
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_2_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_2_5">
+<span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java/gradle/">
+        gradle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../java/maven/">
+        maven
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+          02 OS and Linux Basics
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+          02 OS and Linux Basics
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../02-OS-and-Linux-Basics/windows/">
+        windows
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_3_2" id="__nav_6_3_2_label" tabindex="0">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_3_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../02-OS-and-Linux-Basics/network/free-domain/">
+        free-domain
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../02-OS-and-Linux-Basics/network/ngrok/">
+        ngrok
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_3_3" id="__nav_6_3_3_label" tabindex="0">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_3_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_3_3">
+<span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../02-OS-and-Linux-Basics/windows/000-MOC-windows%E5%B7%A5%E5%85%B7%E6%B8%85%E5%96%AE/">
+        ➰windows 工具清單
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../02-OS-and-Linux-Basics/windows/scoop/">
+        🔧scoop
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../02-OS-and-Linux-Basics/windows/wsl/">
+        wsl
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+          03 Containerization
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_4">
+<span class="md-nav__icon md-icon"></span>
+          03 Containerization
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../03-Containerization/Traefik/">
+        Traefik
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../03-Containerization/docker-desktop-k8s-startup-fail/">
+        docker-desktop-k8s-startup-fail
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../03-Containerization/docker/">
+        docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../03-Containerization/kaniko/">
+        kaniko
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../03-Containerization/kpack/">
+        kpack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../03-Containerization/pack/">
+        pack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../03-Containerization/podman/">
+        podman
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../03-Containerization/prometheus/">
+        prometheus
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../03-Containerization/query-io/">
+        query-io
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../03-Containerization/vscode-devcontainer/">
+        vscode-devcontainer
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../03-Containerization/%E5%BB%BA%E7%AB%8B%20private%20%E7%9A%84%20Docker%20Registry/">
+        建立 private 的 Docker Registry
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+          04 CI CD Pipelines
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+          04 CI CD Pipelines
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../04-CI-CD-Pipelines/ArgoCD/">
+        ArgoCD
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../04-CI-CD-Pipelines/drone/">
+        drone
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../04-CI-CD-Pipelines/helm/">
+        helm first
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_5_4" id="__nav_6_5_4_label" tabindex="0">
+          Github
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_5_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_5_4">
+<span class="md-nav__icon md-icon"></span>
+          Github
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../04-CI-CD-Pipelines/github/000-MOC-GitHub/">
+        github
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../04-CI-CD-Pipelines/github/github-action/">
+        Github-Action
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../04-CI-CD-Pipelines/github/github-packages/">
+        GitHub-packages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../04-CI-CD-Pipelines/github/gitpod/">
+        gitpod
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+          05 Cloud Provider
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_6">
+<span class="md-nav__icon md-icon"></span>
+          05 Cloud Provider
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../05-Cloud-Provider/GCP/">
+        GCP
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../05-Cloud-Provider/GCP%E5%8D%87%E7%BA%A7/">
+        GKE 升級
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+          06 Kubernetes
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_7_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_7">
+<span class="md-nav__icon md-icon"></span>
+          06 Kubernetes
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../06-Kubernetes/Kustomize/">
+        Kustomize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../06-Kubernetes/k8s/">
+        k8s
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../06-Kubernetes/minikube/">
+        minikube
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../06-Kubernetes/%E6%9C%AC%E5%9C%B0%E9%96%8B%E7%99%BC%20Kubernetes%20%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F%E6%B5%81%E7%A8%8B/">
+        本地開發 Kubernetes 應用程式流程
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+          07 Monitoring and Observability
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_8">
+<span class="md-nav__icon md-icon"></span>
+          07 Monitoring and Observability
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../07-Monitoring-and-Observability/Fluent-Bit/">
+        Fluent-Bit
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../07-Monitoring-and-Observability/istio/">
+        istio
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../07-Monitoring-and-Observability/kiaki/">
+        kiaki
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../07-Monitoring-and-Observability/%E7%9B%A3%E6%8E%A7/">
+        監控
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          08 Infrastructure as Code
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_9_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_9">
+<span class="md-nav__icon md-icon"></span>
+          08 Infrastructure as Code
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../08-Infrastructure-as-Code/pulumi/">
+        pulumi
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../08-Infrastructure-as-Code/%E5%9F%BA%E7%A4%8E%E6%9E%B6%E6%A7%8B%E8%87%AA%E5%8B%95%E5%8C%96%E7%B7%A8%E6%8E%92%E5%B7%A5%E5%85%B7-terraform/">
+        [terraform](https://www.terraform.io/)
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
+          09 Scripting Language
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_10_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_10">
+<span class="md-nav__icon md-icon"></span>
+          09 Scripting Language
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../09-Scripting-Language/go/">
+        go
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+          10 Version Control
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_11_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_11">
+<span class="md-nav__icon md-icon"></span>
+          10 Version Control
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../10-Version-Control/gitea/">
+        gitea
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          600 developer
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          600 developer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/">
+        DEVPOS-導航地圖
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+        23种设计模式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/Elasticsearch/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/JMM/">
+        JMM
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/JUC/">
+        JUC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/JVM/">
+        JVM
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/docker-run-command/">
+        docker-run-command
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/go-lang/">
+        go-lang
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/intellij/">
+        intellij
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/k8s/">
+        k8s
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/learn-powershell01/">
+        learn-powershell01
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/mongodb/">
+        mongodb
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/mysql/">
+        mysql
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/rabbitmq/">
+        rabbitmq
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/redis/">
+        redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/smtp/">
+        smtp
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/travis-ci/">
+        travis-ci
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_18" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_18" id="__nav_7_18_label" tabindex="0">
+          Automatic
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_18_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_18">
+<span class="md-nav__icon md-icon"></span>
+          Automatic
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/automatic/">
+        automatic-導航地圖
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/automatic/chromeDriver/">
+        chromeDrive
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19" id="__nav_7_19_label" tabindex="0">
+          Big data
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_19">
+<span class="md-nav__icon md-icon"></span>
+          Big data
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/big-data/">
+        大數據
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/java-serializable/">
+        數據傳輸序列化
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_3" id="__nav_7_19_3_label" tabindex="0">
+          Kafka
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_3">
+<span class="md-nav__icon md-icon"></span>
+          Kafka
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/Kafka/kafka-01/">
+        kafka-01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_4" id="__nav_7_19_4_label" tabindex="0">
+          Storm
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_4">
+<span class="md-nav__icon md-icon"></span>
+          Storm
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/Storm/storm-01/">
+        storm-01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_5" id="__nav_7_19_5_label" tabindex="0">
+          Ai
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_5">
+<span class="md-nav__icon md-icon"></span>
+          Ai
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/ai/tensorflow-01/">
+        tensorflow-01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_6" id="__nav_7_19_6_label" tabindex="0">
+          Hadoop
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_6">
+<span class="md-nav__icon md-icon"></span>
+          Hadoop
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/hadoop/hadoop-01/">
+        hadoop-01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_7" id="__nav_7_19_7_label" tabindex="0">
+          Netty
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_7">
+<span class="md-nav__icon md-icon"></span>
+          Netty
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/netty/netty-01/">
+        netty-01
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/netty/netty-02/">
+        netty-02
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/netty/netty-ByteBuf/">
+        netty-ByteBuf
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/netty/netty-Channel/">
+        netty-Channel
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/netty/netty-ChannelPipeline/">
+        netty-ChannelPipeline
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/netty/netty-EventLoopGroup/">
+        netty-EventLoopGroup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/netty/netty-Future/">
+        netty-Future
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/netty/netty-Reactor/">
+        netty-Reactor
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/netty/netty-http-downloader/">
+        netty-http下載器
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/netty/netty-rotate/">
+        netty-自旋鎖
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_8" id="__nav_7_19_8_label" tabindex="0">
+          Redis
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_8">
+<span class="md-nav__icon md-icon"></span>
+          Redis
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/redis/redis-01-install/">
+        redis-01-install
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_9" id="__nav_7_19_9_label" tabindex="0">
+          Scala
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_9_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_9">
+<span class="md-nav__icon md-icon"></span>
+          Scala
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/scala/scala-01/">
+        scala-01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_10" id="__nav_7_19_10_label" tabindex="0">
+          Zookpeeper
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_10_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_10">
+<span class="md-nav__icon md-icon"></span>
+          Zookpeeper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/big-data/zookpeeper/zookpeeeper-01/">
+        zookpeeeper-01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_20" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_20" id="__nav_7_20_label" tabindex="0">
+          Blog
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_20_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_20">
+<span class="md-nav__icon md-icon"></span>
+          Blog
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_20_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_20_1" id="__nav_7_20_1_label" tabindex="0">
+          Hexo blog
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_20_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_20_1">
+<span class="md-nav__icon md-icon"></span>
+          Hexo blog
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/blog/hexo-blog/Hexo-command/">
+        命令
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/blog/hexo-blog/create-blog-Hexo/">
+        使用github建立Blog
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/blog/hexo-blog/update-hexo/">
+        簡介
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_20_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_20_2" id="__nav_7_20_2_label" tabindex="0">
+          Vuepress blog
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_20_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_20_2">
+<span class="md-nav__icon md-icon"></span>
+          Vuepress blog
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/blog/vuepress-blog/vuepress-init/">
+        安裝vuepress-blog
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_21" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_21" id="__nav_7_21_label" tabindex="0">
+          Database
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_21_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_21">
+<span class="md-nav__icon md-icon"></span>
+          Database
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/database/sql-like-index/">
+        sql-like-index
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_21_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_21_2" id="__nav_7_21_2_label" tabindex="0">
+          Database.tools
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_21_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_21_2">
+<span class="md-nav__icon md-icon"></span>
+          Database.tools
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/database/database.tools/ER-Studio/">
+        ER_Studio
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_21_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_21_3" id="__nav_7_21_3_label" tabindex="0">
+          Mysql
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_21_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_21_3">
+<span class="md-nav__icon md-icon"></span>
+          Mysql
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/database/mysql/mysql-index/">
+        mysql-index
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/database/mysql/mysql8-portable/">
+        mysql8-免安裝
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/database/mysql/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E9%A1%B5%E4%BC%98%E5%8C%96/">
+        大数据分页优化
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_21_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_21_3_4" id="__nav_7_21_3_4_label" tabindex="0">
+          尚硅谷
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_21_3_4_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_7_21_3_4">
+<span class="md-nav__icon md-icon"></span>
+          尚硅谷
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_21_3_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_21_3_4_1" id="__nav_7_21_3_4_1_label" tabindex="0">
+          尚硅谷MySQL入门到高级 宋红康版 0112170108
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_21_3_4_1_label" class="md-nav" data-md-level="5">
+<label class="md-nav__title" for="__nav_7_21_3_4_1">
+<span class="md-nav__icon md-icon"></span>
+          尚硅谷MySQL入门到高级 宋红康版 0112170108
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/database/mysql/%E5%B0%9A%E7%A1%85%E8%B0%B7/%E5%B0%9A%E7%A1%85%E8%B0%B7MySQL%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7-%E5%AE%8B%E7%BA%A2%E5%BA%B7%E7%89%88_0112170108/">
+        Index
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_21_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_21_4" id="__nav_7_21_4_label" tabindex="0">
+          Oracle
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_21_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_21_4">
+<span class="md-nav__icon md-icon"></span>
+          Oracle
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/database/oracle/oracle-db-link/">
+        oracle-db-link
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/database/oracle/oracle-plsql/">
+        oracle-plsql
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/database/oracle/oracle-record/">
+        oracle-record
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_22" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_22" id="__nav_7_22_label" tabindex="0">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_22_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_22">
+<span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/docker/">
+        docker-導航地圖
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/docker/docker-bridge/">
+        簡介
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/docker/docker-mysql/">
+        docker-mysql
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/docker/docker-tomcat/">
+        docker-tomcat
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/docker/docker-windows/">
+        docker-windows
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/docker/docker/">
+        docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/docker/yum-aliyun/">
+        yum-aliyun
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_22_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_22_8" id="__nav_7_22_8_label" tabindex="0">
+          Dockerfile
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_22_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_22_8">
+<span class="md-nav__icon md-icon"></span>
+          Dockerfile
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/docker/Dockerfile/Dockerfile-01/">
+        Dockerfile-01
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/docker/Dockerfile/docker-ssh/">
+        docker-ssh
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_22_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_22_9" id="__nav_7_22_9_label" tabindex="0">
+          Docker compose
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_22_9_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_22_9">
+<span class="md-nav__icon md-icon"></span>
+          Docker compose
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/docker/docker-compose/docker-compose-01/">
+        docker-compose-01
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/docker/docker-compose/docker-compouse-02/">
+        docker-compouse-02
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/docker/docker-compose/docker-redis/">
+        docker-redis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23" id="__nav_7_23_label" tabindex="0">
+          Frontend
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_23">
+<span class="md-nav__icon md-icon"></span>
+          Frontend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23_1" id="__nav_7_23_1_label" tabindex="0">
+          Angular
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_23_1">
+<span class="md-nav__icon md-icon"></span>
+          Angular
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/frontend/angular/angular-01/">
+        angular-01
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/frontend/angular/angular-02/">
+        angular-02
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23_2" id="__nav_7_23_2_label" tabindex="0">
+          Fe tools
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_23_2">
+<span class="md-nav__icon md-icon"></span>
+          Fe tools
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/frontend/fe-tools/glup-livereload/">
+        前端工具-glup-livereload
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23_3" id="__nav_7_23_3_label" tabindex="0">
+          Google
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_23_3">
+<span class="md-nav__icon md-icon"></span>
+          Google
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/frontend/google/Google/">
+        Google-Analytics
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/frontend/google/chrome-devtools-panels/">
+        chrome-devtools-panels
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/frontend/google/chrome-plugin-develop/">
+        chrome.plugin開發
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23_4" id="__nav_7_23_4_label" tabindex="0">
+          Jquery
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_23_4">
+<span class="md-nav__icon md-icon"></span>
+          Jquery
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/frontend/jquery/jquery-validation-file-upload/">
+        jquery驗證與檔案上傳
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23_5" id="__nav_7_23_5_label" tabindex="0">
+          Js plugin
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_23_5">
+<span class="md-nav__icon md-icon"></span>
+          Js plugin
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/frontend/js-plugin/js-plugin/">
+        好用的js插件
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23_6" id="__nav_7_23_6_label" tabindex="0">
+          Nodejs
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_23_6">
+<span class="md-nav__icon md-icon"></span>
+          Nodejs
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/frontend/nodejs/nodeApp/">
+        nodeApp
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23_7" id="__nav_7_23_7_label" tabindex="0">
+          Vue
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_23_7">
+<span class="md-nav__icon md-icon"></span>
+          Vue
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/frontend/vue/vue-module/">
+        開發Vue使用brower的module
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_24" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_24" id="__nav_7_24_label" tabindex="0">
+          Gradle
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_24_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_24">
+<span class="md-nav__icon md-icon"></span>
+          Gradle
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/gradle/gradle-build/">
+        gradle-build
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/gradle/gradle/">
+        gradle
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_25" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_25" id="__nav_7_25_label" tabindex="0">
+          Home data
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_25_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_25">
+<span class="md-nav__icon md-icon"></span>
+          Home data
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/home-data/tplink-C2100/">
+        tplink-C2100
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26" id="__nav_7_26_label" tabindex="0">
+          Java
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_26">
+<span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_1" id="__nav_7_26_1_label" tabindex="0">
+          3 party
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_1">
+<span class="md-nav__icon md-icon"></span>
+          3 party
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/3-party/easyExcel/">
+        easyExcel阿里
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/3-party/java-log4j2/">
+        java-log4j2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/3-party/java-maven01/">
+        java-maven01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_2" id="__nav_7_26_2_label" tabindex="0">
+          Application server
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_2">
+<span class="md-nav__icon md-icon"></span>
+          Application server
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_2_1" id="__nav_7_26_2_1_label" tabindex="0">
+          Weblogic
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_2_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_7_26_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Weblogic
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/application-server/weblogic/weblogic-12c-install/">
+        weblogic-12c-install
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/application-server/weblogic/weblogic-ejb/">
+        weblogic-ejb
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/application-server/weblogic/weblogic-intellij/">
+        weblogic.intellij
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/application-server/weblogic/weblogic-jdbc/">
+        weblogic-jdbc
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/application-server/weblogic/weblogic-spring-jpa/">
+        weblogic-spring-jpa
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_3" id="__nav_7_26_3_label" tabindex="0">
+          Black technology
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_3">
+<span class="md-nav__icon md-icon"></span>
+          Black technology
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/black-technology/AbstractProcessor/">
+        AbstractProcessor
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/black-technology/ServiceLoader/">
+        ServiceLoader
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/black-technology/javaagent/">
+        javaagent
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_4" id="__nav_7_26_4_label" tabindex="0">
+          Java base
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_4">
+<span class="md-nav__icon md-icon"></span>
+          Java base
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/java-base/Generics/">
+        泛型方法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/java-base/java-Runtime-Number/">
+        簡介
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/java-base/java-util/">
+        java-輔助類
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_5" id="__nav_7_26_5_label" tabindex="0">
+          Java io
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_5">
+<span class="md-nav__icon md-icon"></span>
+          Java io
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/java-io/bio-nio-aio/">
+        bio-nio-aio
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/java-io/java-socket/">
+        java-socket
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_6" id="__nav_7_26_6_label" tabindex="0">
+          Java security
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_6">
+<span class="md-nav__icon md-icon"></span>
+          Java security
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/java-security/java-security/">
+        java-security
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_7" id="__nav_7_26_7_label" tabindex="0">
+          Java8
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_7">
+<span class="md-nav__icon md-icon"></span>
+          Java8
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/java8/java8-Spliterator/">
+        java8-Spliterator
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/java8/java8-collect/">
+        java8-collect
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/java8/java8-lambda/">
+        java8-FunctionalInterface（Lambda）
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/java8/java8-lambda01/">
+        java8-函數式編程01
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/java8/java8-stream/">
+        java8-stream
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/java8/java8/">
+        java8
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_8" id="__nav_7_26_8_label" tabindex="0">
+          Spring
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_8">
+<span class="md-nav__icon md-icon"></span>
+          Spring
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/spring/DispatcherServlet/">
+        DispatcherServlet
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/spring/ServletContainerInitializer/">
+        ServletContainerInitializer
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/spring/multipleApplicationContext/">
+        multipleApplicationContext
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/spring/spring-note/">
+        spring-note
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/spring/springfox-swagger2/">
+        springfox.swagger2
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_8_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_8_6" id="__nav_7_26_8_6_label" tabindex="0">
+          Springboot
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_8_6_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_7_26_8_6">
+<span class="md-nav__icon md-icon"></span>
+          Springboot
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/spring/springboot/spring-data-jpa/">
+        spring-data-jpa
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/spring/springboot/springboot-elasticsearch/">
+        springboot-elasticsearch
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_8_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_8_7" id="__nav_7_26_8_7_label" tabindex="0">
+          Thymeleaf
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_8_7_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_7_26_8_7">
+<span class="md-nav__icon md-icon"></span>
+          Thymeleaf
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/java/spring/thymeleaf/spring-thymeleaf-01/">
+        spring-thymeleaf-01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_27" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_27" id="__nav_7_27_label" tabindex="0">
+          Kafka
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_27_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_27">
+<span class="md-nav__icon md-icon"></span>
+          Kafka
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/kafka/kafka/">
+        kafka
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_28" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_28" id="__nav_7_28_label" tabindex="0">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_28_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_28">
+<span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/linux/centos7-command/">
+        centos7-command
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_29" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_29" id="__nav_7_29_label" tabindex="0">
+          Operation maintenance
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_29_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_29">
+<span class="md-nav__icon md-icon"></span>
+          Operation maintenance
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_29_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_29_1" id="__nav_7_29_1_label" tabindex="0">
+          Zabbix
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_29_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_29_1">
+<span class="md-nav__icon md-icon"></span>
+          Zabbix
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/operation-maintenance/zabbix/zabbix-agentd/">
+        zabbix3.4 GCP
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/operation-maintenance/zabbix/zabbix-intro/">
+        zabbix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/operation-maintenance/zabbix/zabbix-key/">
+        zabbix自訂key使用powershell
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_30" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_30" id="__nav_7_30_label" tabindex="0">
+          Principle
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_30_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_30">
+<span class="md-nav__icon md-icon"></span>
+          Principle
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/principle/SOA-ESB-MicroService/">
+        SOA.ESB.MicroService
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/principle/aggregate-payment-system/">
+        聚合支付系统
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/principle/b2b-order/">
+        b2b-order
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/principle/bloomfilter/">
+        bloomfilter
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/principle/cache/">
+        cache
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/principle/restful-rule/">
+        restful-rule
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/principle/spike/">
+        秒殺
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/principle/transation/">
+        事務
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_31" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_31" id="__nav_7_31_label" tabindex="0">
+          Spring
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_31_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_31">
+<span class="md-nav__icon md-icon"></span>
+          Spring
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/spring/000-MOC-spring/">
+        000-MOC-spring
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/spring/SpringBoot-Actuator/">
+        SpringBoot-Actuator
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/spring/spring-sagan/">
+        📚sagan
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/spring/spring-spel/">
+        Spring-SpEL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/spring/spring/">
+        📚spring
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/spring/springboot-data-redis/">
+        springboot-data-redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/spring/springboot/">
+        Spring Boot Reference Documentation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/spring/%E5%B0%9A%E7%9F%BD%E8%B0%B7-SpringBoot2%E6%A0%B8%E5%BF%83%E6%8A%80%E8%A1%93/">
+        尚矽谷 -SpringBoot2 核心技術
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/spring/%E9%96%8B%E7%99%BC%E4%B8%80%E5%80%8Bspringboot%E6%B5%81%E7%A8%8B/">
+        開發一個 springboot 流程 (Developing with Spring Boot)
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_31_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_31_10" id="__nav_7_31_10_label" tabindex="0">
+          Images
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_31_10_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_31_10">
+<span class="md-nav__icon md-icon"></span>
+          Images
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/spring/images/The-First-20-Hours/">
+        The-First-20-Hours
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32" id="__nav_7_32_label" tabindex="0">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_32">
+<span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/000-MOC-tools/">
+        000-MOC-tools
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/VMware-Workstation-Pro-REST-API-service/">
+        VMware-Workstation-Pro-REST-API
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/browerHotReload/">
+        browerHotReload
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/extract-the-eclipse-plugin/">
+        把eclipse的plugin抽取出來
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/front-end-performance-monitoring/">
+        前端性能监控
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/frontend-test-tools/">
+        簡介
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/github/">
+        github
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/quickly-learn-a-new-technology/">
+        快速學習一門新技術
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_9" id="__nav_7_32_9_label" tabindex="0">
+          Bilibili download
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_9_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_9">
+<span class="md-nav__icon md-icon"></span>
+          Bilibili download
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/bilibili-download/bilibili-download/">
+        bilibili-download
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_10" id="__nav_7_32_10_label" tabindex="0">
+          Chrome
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_10_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_10">
+<span class="md-nav__icon md-icon"></span>
+          Chrome
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/chrome/000-MOC-chrome/">
+        000-MOC-chrome-plugin
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/chrome/OhMyMock/">
+        OhMyMock
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/chrome/Roam-Highlighter/">
+        Roam-Highlighter
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/chrome/Tab-Copy/">
+        Chrome-擷取網頁標題
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_11" id="__nav_7_32_11_label" tabindex="0">
+          Free resource
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_11_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_11">
+<span class="md-nav__icon md-icon"></span>
+          Free resource
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/free-resource/free-resource/">
+        免費設定網站資源
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_12" id="__nav_7_32_12_label" tabindex="0">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_12_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_12">
+<span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/git/git-command/">
+        git-command
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/git/git-patch-cherry-pick/">
+        git-patch-cherry-pick
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/git/git-rebase/">
+        git-rebase
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/git/git-upstream/">
+        git-upstream
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/git/github-sshkey/">
+        github-sshkey
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_13" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_13" id="__nav_7_32_13_label" tabindex="0">
+          Mobile
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_13_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_13">
+<span class="md-nav__icon md-icon"></span>
+          Mobile
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/mobile/Fiddler-Classic/">
+        抓包工具（Fiddler Classic）
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/mobile/Genymotion/">
+        Genymotion(android模擬器)
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_14" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_14" id="__nav_7_32_14_label" tabindex="0">
+          Nginx notepad color
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_14_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_14">
+<span class="md-nav__icon md-icon"></span>
+          Nginx notepad color
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/nginx-notepad-color/nginx-notepad-color/">
+        nginx-notepad-彩色
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_15" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_15" id="__nav_7_32_15_label" tabindex="0">
+          Obsidian
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_15_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_15">
+<span class="md-nav__icon md-icon"></span>
+          Obsidian
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/obsidian/000-MOC-obsidian/">
+        obsidian-知識網地圖
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/obsidian/Johnny-OB-037/">
+        Johnny-OB-037
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/obsidian/Obsidian-admonition/">
+        obsidian-美化提示方塊
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/obsidian/obsidian-buttons-create/">
+        Obsidian 建立按鈕
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/obsidian/obsidian-data-classification/">
+        obsidian-data-classification
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/obsidian/obsidian-plugin/">
+        obsidian-外掛
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_16" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_16" id="__nav_7_32_16_label" tabindex="0">
+          Security
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_16_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_16">
+<span class="md-nav__icon md-icon"></span>
+          Security
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/security/000-MOC-security/">
+        密碼學-MOC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/security/CA/">
+        自建CA搭建HTTPS及域名配置
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/security/Strict-Transport-Security/">
+        HTTP強制安全傳輸技術(Strict-Transport-Security)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/security/certificate/">
+        證書（Certificate）
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/security/java-security-JCA-JCE/">
+        JCA-JCE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/security/openssl/">
+        Openssl 命令
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/security/security-file-extension-name/">
+        密碼學-檔案擴展名
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_17" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_17" id="__nav_7_32_17_label" tabindex="0">
+          Vscode
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_17_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_17">
+<span class="md-nav__icon md-icon"></span>
+          Vscode
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/vscode/RestClient-Postman/">
+        RestClient-Postman
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/vscode/vmware/">
+        vmware
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/vscode/vscode-mouse-font-size/">
+        vscode-滑鼠滾輪變更字體大小
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_18" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_18" id="__nav_7_32_18_label" tabindex="0">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_18_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_18">
+<span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/windows/000-MOC-windows/">
+        000-MOC-wondows
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/windows/THE-PACKAGE-MANAGER-FOR-WINDOWS/">
+        THE PACKAGE MANAGER FOR WINDOWS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/windows/install-multiple-Ubuntu-WSL2/">
+        install-multiple-Ubuntu-WSL2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/windows/install-wslg/">
+        install-wslg
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/windows/win-cmd/">
+        win-cmd
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/windows/windows-connand/">
+        windows-命令
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/windows/windows-netcat/">
+        windows-netcat
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../600-developer/tools/windows/wsl-command/">
+        wsl
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    緣起
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    是什麼
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    去哪下載
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    📝 怎麼玩
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="graalvm">GraalVM<a class="headerlink" href="#graalvm" title="Permanent link">¶</a></h1>
+<ul>
+<li><strong>🏷️Tags</strong> :   #2022-11 #devops </li>
+<li>Link: </li>
+</ul>
+<iframe allow="fullscreen" allowfullscreen="" height="113" src="https://www.youtube.com/embed/WKrR4PGTgoc?start=141&amp;feature=oembed" style="aspect-ratio: 1.76991 / 1; width: 100%; height: 100%;" title="GraalVM native images explained by Oleg Šelajev" width="200"></iframe>
+<h2 id="_1">緣起<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<ul>
+<li></li>
+</ul>
+<h2 id="_2">是什麼<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<ul>
+<li></li>
+</ul>
+<h2 id="_3">去哪下載<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<ul>
+<li></li>
+</ul>
+<h2 id="_4">📝 怎麼玩<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<ul>
+<li></li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
+<script src="../../../hidden-folder/mkdocs-javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>

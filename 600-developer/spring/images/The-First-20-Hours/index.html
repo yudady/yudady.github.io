@@ -1,0 +1,3073 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../%E9%96%8B%E7%99%BC%E4%B8%80%E5%80%8Bspringboot%E6%B5%81%E7%A8%8B/" rel="prev"/>
+<link href="../../../tools/000-MOC-tools/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.3, mkdocs-material-9.1.17" name="generator"/>
+<title>The-First-20-Hours - 雜記</title>
+<link href="../../../../assets/stylesheets/main.26e3688c.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#the-first-20-hours">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="雜記" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="雜記">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            雜記
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              The-First-20-Hours
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="雜記" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="雜記">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    雜記
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+        Personal Knowledge Manage
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          001 TODO
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          001 TODO
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../001-TODO/01-todo/">
+        my-todo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../001-TODO/28490%E4%BD%9C%E6%97%A5%E8%AA%8C%E5%AF%AB%E5%85%A5%E6%A9%9F%E5%88%B6/">
+        28490作日誌寫入機制
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../001-TODO/code%20copy/">
+        Code copy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../001-TODO/code-getway/">
+        Code getway
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../001-TODO/code/">
+        Code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../001-TODO/devops/">
+        devops
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../001-TODO/test/">
+        Test
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../001-TODO/%E5%A0%B1%E8%A1%A8%E4%B8%8B%E8%BC%89/">
+        報表下載
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          100 InBox
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          100 InBox
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../100-InBox/Microservices%20with%20Node%20JS%20and%20React/">
+        📚Microservices with Node JS and React
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../100-InBox/java-Jigsaw/">
+        📚 java-Jigsaw
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../100-InBox/join-open-source-project/">
+        join-open-source-project
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../100-InBox/test-templater/">
+        test-templater
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../100-InBox/%E6%95%B4%E7%90%86%E6%9B%B8%E7%B1%A4/">
+        整理書籤
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          200 學習OB
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          200 學習OB
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../200-%E5%AD%B8%E7%BF%92OB/000-obsidian/">
+        obsidian
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Plugin
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+          Plugin
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../200-%E5%AD%B8%E7%BF%92OB/plugin/Homepage/">
+        Homepage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../200-%E5%AD%B8%E7%BF%92OB/plugin/Roam-Highlighter/">
+        Roam-Highlighter
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../200-%E5%AD%B8%E7%BF%92OB/plugin/TabCopy/">
+        TabCopy
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../200-%E5%AD%B8%E7%BF%92OB/plugin/admonition/">
+        admonition
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../200-%E5%AD%B8%E7%BF%92OB/plugin/buttons/">
+        buttons
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../200-%E5%AD%B8%E7%BF%92OB/plugin/quick-add/">
+        QuickAdd
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../200-%E5%AD%B8%E7%BF%92OB/plugin/templater/">
+        templater
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          300 閱讀筆記
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          300 閱讀筆記
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../300-%E9%96%B1%E8%AE%80%E7%AD%86%E8%A8%98/README-templates-folder/">
+        README-templates-folder
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../300-%E9%96%B1%E8%AE%80%E7%AD%86%E8%A8%98/Zettelkasten/">
+        Zettelkasten
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../300-%E9%96%B1%E8%AE%80%E7%AD%86%E8%A8%98/%E7%AD%86%E8%A8%98%E6%B3%95/">
+        筆記法
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          400 devops
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          400 devops
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/000-MOC-devops/">
+        000-MOC-devops
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          01 Concepts of Software Development
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          01 Concepts of Software Development
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/01-Concepts-of-Software-Development/GraalVM/">
+        GraalVM
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/01-Concepts-of-Software-Development/free-cloud-storage/">
+        free-cloud-storage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/01-Concepts-of-Software-Development/okteto/">
+        okteto
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/01-Concepts-of-Software-Development/skaffold/">
+        skaffold
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_2_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2_5" id="__nav_6_2_5_label" tabindex="0">
+          Java
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_2_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_2_5">
+<span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/01-Concepts-of-Software-Development/java/gradle/">
+        gradle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/01-Concepts-of-Software-Development/java/maven/">
+        maven
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+          02 OS and Linux Basics
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+          02 OS and Linux Basics
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/02-OS-and-Linux-Basics/windows/">
+        windows
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_3_2" id="__nav_6_3_2_label" tabindex="0">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_3_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/02-OS-and-Linux-Basics/network/free-domain/">
+        free-domain
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/02-OS-and-Linux-Basics/network/ngrok/">
+        ngrok
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_3_3" id="__nav_6_3_3_label" tabindex="0">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_3_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_3_3">
+<span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/02-OS-and-Linux-Basics/windows/000-MOC-windows%E5%B7%A5%E5%85%B7%E6%B8%85%E5%96%AE/">
+        ➰windows 工具清單
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/02-OS-and-Linux-Basics/windows/scoop/">
+        🔧scoop
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/02-OS-and-Linux-Basics/windows/wsl/">
+        wsl
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+          03 Containerization
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_4">
+<span class="md-nav__icon md-icon"></span>
+          03 Containerization
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/03-Containerization/Traefik/">
+        Traefik
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/03-Containerization/docker-desktop-k8s-startup-fail/">
+        docker-desktop-k8s-startup-fail
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/03-Containerization/docker/">
+        docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/03-Containerization/kaniko/">
+        kaniko
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/03-Containerization/kpack/">
+        kpack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/03-Containerization/pack/">
+        pack
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/03-Containerization/podman/">
+        podman
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/03-Containerization/prometheus/">
+        prometheus
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/03-Containerization/query-io/">
+        query-io
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/03-Containerization/vscode-devcontainer/">
+        vscode-devcontainer
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/03-Containerization/%E5%BB%BA%E7%AB%8B%20private%20%E7%9A%84%20Docker%20Registry/">
+        建立 private 的 Docker Registry
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+          04 CI CD Pipelines
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+          04 CI CD Pipelines
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/04-CI-CD-Pipelines/ArgoCD/">
+        ArgoCD
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/04-CI-CD-Pipelines/drone/">
+        drone
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/04-CI-CD-Pipelines/helm/">
+        helm first
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_5_4" id="__nav_6_5_4_label" tabindex="0">
+          Github
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_5_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_5_4">
+<span class="md-nav__icon md-icon"></span>
+          Github
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/04-CI-CD-Pipelines/github/000-MOC-GitHub/">
+        github
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/04-CI-CD-Pipelines/github/github-action/">
+        Github-Action
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/04-CI-CD-Pipelines/github/github-packages/">
+        GitHub-packages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/04-CI-CD-Pipelines/github/gitpod/">
+        gitpod
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+          05 Cloud Provider
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_6">
+<span class="md-nav__icon md-icon"></span>
+          05 Cloud Provider
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/05-Cloud-Provider/GCP/">
+        GCP
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/05-Cloud-Provider/GCP%E5%8D%87%E7%BA%A7/">
+        GKE 升級
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+          06 Kubernetes
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_7_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_7">
+<span class="md-nav__icon md-icon"></span>
+          06 Kubernetes
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/06-Kubernetes/Kustomize/">
+        Kustomize
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/06-Kubernetes/k8s/">
+        k8s
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/06-Kubernetes/minikube/">
+        minikube
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/06-Kubernetes/%E6%9C%AC%E5%9C%B0%E9%96%8B%E7%99%BC%20Kubernetes%20%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F%E6%B5%81%E7%A8%8B/">
+        本地開發 Kubernetes 應用程式流程
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+          07 Monitoring and Observability
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_8">
+<span class="md-nav__icon md-icon"></span>
+          07 Monitoring and Observability
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/07-Monitoring-and-Observability/Fluent-Bit/">
+        Fluent-Bit
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/07-Monitoring-and-Observability/istio/">
+        istio
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/07-Monitoring-and-Observability/kiaki/">
+        kiaki
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/07-Monitoring-and-Observability/%E7%9B%A3%E6%8E%A7/">
+        監控
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+          08 Infrastructure as Code
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_9_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_9">
+<span class="md-nav__icon md-icon"></span>
+          08 Infrastructure as Code
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/08-Infrastructure-as-Code/pulumi/">
+        pulumi
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/08-Infrastructure-as-Code/%E5%9F%BA%E7%A4%8E%E6%9E%B6%E6%A7%8B%E8%87%AA%E5%8B%95%E5%8C%96%E7%B7%A8%E6%8E%92%E5%B7%A5%E5%85%B7-terraform/">
+        [terraform](https://www.terraform.io/)
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
+          09 Scripting Language
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_10_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_10">
+<span class="md-nav__icon md-icon"></span>
+          09 Scripting Language
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/09-Scripting-Language/go/">
+        go
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+          10 Version Control
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_11_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_11">
+<span class="md-nav__icon md-icon"></span>
+          10 Version Control
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../400-devops/10-Version-Control/gitea/">
+        gitea
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          600 developer
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          600 developer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../">
+        DEVPOS-導航地圖
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+        23种设计模式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Elasticsearch/">
+        Elasticsearch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../JMM/">
+        JMM
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../JUC/">
+        JUC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../JVM/">
+        JVM
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker-run-command/">
+        docker-run-command
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../go-lang/">
+        go-lang
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../intellij/">
+        intellij
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../k8s/">
+        k8s
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../learn-powershell01/">
+        learn-powershell01
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mongodb/">
+        mongodb
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mysql/">
+        mysql
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../rabbitmq/">
+        rabbitmq
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../redis/">
+        redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../smtp/">
+        smtp
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travis-ci/">
+        travis-ci
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_18" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_18" id="__nav_7_18_label" tabindex="0">
+          Automatic
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_18_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_18">
+<span class="md-nav__icon md-icon"></span>
+          Automatic
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../automatic/">
+        automatic-導航地圖
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../automatic/chromeDriver/">
+        chromeDrive
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19" id="__nav_7_19_label" tabindex="0">
+          Big data
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_19">
+<span class="md-nav__icon md-icon"></span>
+          Big data
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/big-data/">
+        大數據
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/java-serializable/">
+        數據傳輸序列化
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_3" id="__nav_7_19_3_label" tabindex="0">
+          Kafka
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_3">
+<span class="md-nav__icon md-icon"></span>
+          Kafka
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/Kafka/kafka-01/">
+        kafka-01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_4" id="__nav_7_19_4_label" tabindex="0">
+          Storm
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_4">
+<span class="md-nav__icon md-icon"></span>
+          Storm
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/Storm/storm-01/">
+        storm-01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_5" id="__nav_7_19_5_label" tabindex="0">
+          Ai
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_5">
+<span class="md-nav__icon md-icon"></span>
+          Ai
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/ai/tensorflow-01/">
+        tensorflow-01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_6" id="__nav_7_19_6_label" tabindex="0">
+          Hadoop
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_6">
+<span class="md-nav__icon md-icon"></span>
+          Hadoop
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/hadoop/hadoop-01/">
+        hadoop-01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_7" id="__nav_7_19_7_label" tabindex="0">
+          Netty
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_7">
+<span class="md-nav__icon md-icon"></span>
+          Netty
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/netty/netty-01/">
+        netty-01
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/netty/netty-02/">
+        netty-02
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/netty/netty-ByteBuf/">
+        netty-ByteBuf
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/netty/netty-Channel/">
+        netty-Channel
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/netty/netty-ChannelPipeline/">
+        netty-ChannelPipeline
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/netty/netty-EventLoopGroup/">
+        netty-EventLoopGroup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/netty/netty-Future/">
+        netty-Future
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/netty/netty-Reactor/">
+        netty-Reactor
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/netty/netty-http-downloader/">
+        netty-http下載器
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/netty/netty-rotate/">
+        netty-自旋鎖
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_8" id="__nav_7_19_8_label" tabindex="0">
+          Redis
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_8">
+<span class="md-nav__icon md-icon"></span>
+          Redis
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/redis/redis-01-install/">
+        redis-01-install
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_9" id="__nav_7_19_9_label" tabindex="0">
+          Scala
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_9_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_9">
+<span class="md-nav__icon md-icon"></span>
+          Scala
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/scala/scala-01/">
+        scala-01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_19_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_19_10" id="__nav_7_19_10_label" tabindex="0">
+          Zookpeeper
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_19_10_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_19_10">
+<span class="md-nav__icon md-icon"></span>
+          Zookpeeper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../big-data/zookpeeper/zookpeeeper-01/">
+        zookpeeeper-01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_20" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_20" id="__nav_7_20_label" tabindex="0">
+          Blog
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_20_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_20">
+<span class="md-nav__icon md-icon"></span>
+          Blog
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_20_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_20_1" id="__nav_7_20_1_label" tabindex="0">
+          Hexo blog
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_20_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_20_1">
+<span class="md-nav__icon md-icon"></span>
+          Hexo blog
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../blog/hexo-blog/Hexo-command/">
+        命令
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../blog/hexo-blog/create-blog-Hexo/">
+        使用github建立Blog
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../blog/hexo-blog/update-hexo/">
+        簡介
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_20_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_20_2" id="__nav_7_20_2_label" tabindex="0">
+          Vuepress blog
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_20_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_20_2">
+<span class="md-nav__icon md-icon"></span>
+          Vuepress blog
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../blog/vuepress-blog/vuepress-init/">
+        安裝vuepress-blog
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_21" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_21" id="__nav_7_21_label" tabindex="0">
+          Database
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_21_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_21">
+<span class="md-nav__icon md-icon"></span>
+          Database
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../database/sql-like-index/">
+        sql-like-index
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_21_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_21_2" id="__nav_7_21_2_label" tabindex="0">
+          Database.tools
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_21_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_21_2">
+<span class="md-nav__icon md-icon"></span>
+          Database.tools
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../database/database.tools/ER-Studio/">
+        ER_Studio
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_21_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_21_3" id="__nav_7_21_3_label" tabindex="0">
+          Mysql
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_21_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_21_3">
+<span class="md-nav__icon md-icon"></span>
+          Mysql
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../database/mysql/mysql-index/">
+        mysql-index
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../database/mysql/mysql8-portable/">
+        mysql8-免安裝
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../database/mysql/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E9%A1%B5%E4%BC%98%E5%8C%96/">
+        大数据分页优化
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_21_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_21_3_4" id="__nav_7_21_3_4_label" tabindex="0">
+          尚硅谷
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_21_3_4_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_7_21_3_4">
+<span class="md-nav__icon md-icon"></span>
+          尚硅谷
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_21_3_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_21_3_4_1" id="__nav_7_21_3_4_1_label" tabindex="0">
+          尚硅谷MySQL入门到高级 宋红康版 0112170108
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_21_3_4_1_label" class="md-nav" data-md-level="5">
+<label class="md-nav__title" for="__nav_7_21_3_4_1">
+<span class="md-nav__icon md-icon"></span>
+          尚硅谷MySQL入门到高级 宋红康版 0112170108
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../database/mysql/%E5%B0%9A%E7%A1%85%E8%B0%B7/%E5%B0%9A%E7%A1%85%E8%B0%B7MySQL%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7-%E5%AE%8B%E7%BA%A2%E5%BA%B7%E7%89%88_0112170108/">
+        Index
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_21_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_21_4" id="__nav_7_21_4_label" tabindex="0">
+          Oracle
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_21_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_21_4">
+<span class="md-nav__icon md-icon"></span>
+          Oracle
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../database/oracle/oracle-db-link/">
+        oracle-db-link
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../database/oracle/oracle-plsql/">
+        oracle-plsql
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../database/oracle/oracle-record/">
+        oracle-record
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_22" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_22" id="__nav_7_22_label" tabindex="0">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_22_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_22">
+<span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/">
+        docker-導航地圖
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/docker-bridge/">
+        簡介
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/docker-mysql/">
+        docker-mysql
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/docker-tomcat/">
+        docker-tomcat
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/docker-windows/">
+        docker-windows
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/docker/">
+        docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/yum-aliyun/">
+        yum-aliyun
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_22_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_22_8" id="__nav_7_22_8_label" tabindex="0">
+          Dockerfile
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_22_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_22_8">
+<span class="md-nav__icon md-icon"></span>
+          Dockerfile
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/Dockerfile/Dockerfile-01/">
+        Dockerfile-01
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/Dockerfile/docker-ssh/">
+        docker-ssh
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_22_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_22_9" id="__nav_7_22_9_label" tabindex="0">
+          Docker compose
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_22_9_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_22_9">
+<span class="md-nav__icon md-icon"></span>
+          Docker compose
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/docker-compose/docker-compose-01/">
+        docker-compose-01
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/docker-compose/docker-compouse-02/">
+        docker-compouse-02
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../docker/docker-compose/docker-redis/">
+        docker-redis
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23" id="__nav_7_23_label" tabindex="0">
+          Frontend
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_23">
+<span class="md-nav__icon md-icon"></span>
+          Frontend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23_1" id="__nav_7_23_1_label" tabindex="0">
+          Angular
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_23_1">
+<span class="md-nav__icon md-icon"></span>
+          Angular
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../frontend/angular/angular-01/">
+        angular-01
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../frontend/angular/angular-02/">
+        angular-02
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23_2" id="__nav_7_23_2_label" tabindex="0">
+          Fe tools
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_23_2">
+<span class="md-nav__icon md-icon"></span>
+          Fe tools
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../frontend/fe-tools/glup-livereload/">
+        前端工具-glup-livereload
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23_3" id="__nav_7_23_3_label" tabindex="0">
+          Google
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_23_3">
+<span class="md-nav__icon md-icon"></span>
+          Google
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../frontend/google/Google/">
+        Google-Analytics
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../frontend/google/chrome-devtools-panels/">
+        chrome-devtools-panels
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../frontend/google/chrome-plugin-develop/">
+        chrome.plugin開發
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23_4" id="__nav_7_23_4_label" tabindex="0">
+          Jquery
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_23_4">
+<span class="md-nav__icon md-icon"></span>
+          Jquery
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../frontend/jquery/jquery-validation-file-upload/">
+        jquery驗證與檔案上傳
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23_5" id="__nav_7_23_5_label" tabindex="0">
+          Js plugin
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_23_5">
+<span class="md-nav__icon md-icon"></span>
+          Js plugin
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../frontend/js-plugin/js-plugin/">
+        好用的js插件
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23_6" id="__nav_7_23_6_label" tabindex="0">
+          Nodejs
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_23_6">
+<span class="md-nav__icon md-icon"></span>
+          Nodejs
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../frontend/nodejs/nodeApp/">
+        nodeApp
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_23_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_23_7" id="__nav_7_23_7_label" tabindex="0">
+          Vue
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_23_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_23_7">
+<span class="md-nav__icon md-icon"></span>
+          Vue
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../frontend/vue/vue-module/">
+        開發Vue使用brower的module
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_24" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_24" id="__nav_7_24_label" tabindex="0">
+          Gradle
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_24_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_24">
+<span class="md-nav__icon md-icon"></span>
+          Gradle
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../gradle/gradle-build/">
+        gradle-build
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../gradle/gradle/">
+        gradle
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_25" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_25" id="__nav_7_25_label" tabindex="0">
+          Home data
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_25_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_25">
+<span class="md-nav__icon md-icon"></span>
+          Home data
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../home-data/tplink-C2100/">
+        tplink-C2100
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26" id="__nav_7_26_label" tabindex="0">
+          Java
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_26">
+<span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_1" id="__nav_7_26_1_label" tabindex="0">
+          3 party
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_1">
+<span class="md-nav__icon md-icon"></span>
+          3 party
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/3-party/easyExcel/">
+        easyExcel阿里
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/3-party/java-log4j2/">
+        java-log4j2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/3-party/java-maven01/">
+        java-maven01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_2" id="__nav_7_26_2_label" tabindex="0">
+          Application server
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_2">
+<span class="md-nav__icon md-icon"></span>
+          Application server
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_2_1" id="__nav_7_26_2_1_label" tabindex="0">
+          Weblogic
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_2_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_7_26_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Weblogic
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/application-server/weblogic/weblogic-12c-install/">
+        weblogic-12c-install
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/application-server/weblogic/weblogic-ejb/">
+        weblogic-ejb
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/application-server/weblogic/weblogic-intellij/">
+        weblogic.intellij
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/application-server/weblogic/weblogic-jdbc/">
+        weblogic-jdbc
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/application-server/weblogic/weblogic-spring-jpa/">
+        weblogic-spring-jpa
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_3" id="__nav_7_26_3_label" tabindex="0">
+          Black technology
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_3">
+<span class="md-nav__icon md-icon"></span>
+          Black technology
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/black-technology/AbstractProcessor/">
+        AbstractProcessor
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/black-technology/ServiceLoader/">
+        ServiceLoader
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/black-technology/javaagent/">
+        javaagent
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_4" id="__nav_7_26_4_label" tabindex="0">
+          Java base
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_4">
+<span class="md-nav__icon md-icon"></span>
+          Java base
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/java-base/Generics/">
+        泛型方法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/java-base/java-Runtime-Number/">
+        簡介
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/java-base/java-util/">
+        java-輔助類
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_5" id="__nav_7_26_5_label" tabindex="0">
+          Java io
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_5">
+<span class="md-nav__icon md-icon"></span>
+          Java io
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/java-io/bio-nio-aio/">
+        bio-nio-aio
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/java-io/java-socket/">
+        java-socket
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_6" id="__nav_7_26_6_label" tabindex="0">
+          Java security
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_6_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_6">
+<span class="md-nav__icon md-icon"></span>
+          Java security
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/java-security/java-security/">
+        java-security
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_7" id="__nav_7_26_7_label" tabindex="0">
+          Java8
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_7_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_7">
+<span class="md-nav__icon md-icon"></span>
+          Java8
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/java8/java8-Spliterator/">
+        java8-Spliterator
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/java8/java8-collect/">
+        java8-collect
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/java8/java8-lambda/">
+        java8-FunctionalInterface（Lambda）
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/java8/java8-lambda01/">
+        java8-函數式編程01
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/java8/java8-stream/">
+        java8-stream
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/java8/java8/">
+        java8
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_8" id="__nav_7_26_8_label" tabindex="0">
+          Spring
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_26_8">
+<span class="md-nav__icon md-icon"></span>
+          Spring
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/spring/DispatcherServlet/">
+        DispatcherServlet
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/spring/ServletContainerInitializer/">
+        ServletContainerInitializer
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/spring/multipleApplicationContext/">
+        multipleApplicationContext
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/spring/spring-note/">
+        spring-note
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/spring/springfox-swagger2/">
+        springfox.swagger2
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_8_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_8_6" id="__nav_7_26_8_6_label" tabindex="0">
+          Springboot
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_8_6_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_7_26_8_6">
+<span class="md-nav__icon md-icon"></span>
+          Springboot
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/spring/springboot/spring-data-jpa/">
+        spring-data-jpa
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/spring/springboot/springboot-elasticsearch/">
+        springboot-elasticsearch
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_26_8_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_26_8_7" id="__nav_7_26_8_7_label" tabindex="0">
+          Thymeleaf
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_26_8_7_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_7_26_8_7">
+<span class="md-nav__icon md-icon"></span>
+          Thymeleaf
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../java/spring/thymeleaf/spring-thymeleaf-01/">
+        spring-thymeleaf-01
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_27" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_27" id="__nav_7_27_label" tabindex="0">
+          Kafka
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_27_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_27">
+<span class="md-nav__icon md-icon"></span>
+          Kafka
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../kafka/kafka/">
+        kafka
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_28" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_28" id="__nav_7_28_label" tabindex="0">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_28_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_28">
+<span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../linux/centos7-command/">
+        centos7-command
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_29" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_29" id="__nav_7_29_label" tabindex="0">
+          Operation maintenance
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_29_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_29">
+<span class="md-nav__icon md-icon"></span>
+          Operation maintenance
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_29_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_29_1" id="__nav_7_29_1_label" tabindex="0">
+          Zabbix
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_29_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_29_1">
+<span class="md-nav__icon md-icon"></span>
+          Zabbix
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../operation-maintenance/zabbix/zabbix-agentd/">
+        zabbix3.4 GCP
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../operation-maintenance/zabbix/zabbix-intro/">
+        zabbix
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../operation-maintenance/zabbix/zabbix-key/">
+        zabbix自訂key使用powershell
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_30" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_30" id="__nav_7_30_label" tabindex="0">
+          Principle
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_30_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_30">
+<span class="md-nav__icon md-icon"></span>
+          Principle
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../principle/SOA-ESB-MicroService/">
+        SOA.ESB.MicroService
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../principle/aggregate-payment-system/">
+        聚合支付系统
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../principle/b2b-order/">
+        b2b-order
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../principle/bloomfilter/">
+        bloomfilter
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../principle/cache/">
+        cache
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../principle/restful-rule/">
+        restful-rule
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../principle/spike/">
+        秒殺
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../principle/transation/">
+        事務
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_7_31" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_31" id="__nav_7_31_label" tabindex="0">
+          Spring
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_7_31_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_31">
+<span class="md-nav__icon md-icon"></span>
+          Spring
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../000-MOC-spring/">
+        000-MOC-spring
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SpringBoot-Actuator/">
+        SpringBoot-Actuator
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spring-sagan/">
+        📚sagan
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spring-spel/">
+        Spring-SpEL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spring/">
+        📚spring
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../springboot-data-redis/">
+        springboot-data-redis
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../springboot/">
+        Spring Boot Reference Documentation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E5%B0%9A%E7%9F%BD%E8%B0%B7-SpringBoot2%E6%A0%B8%E5%BF%83%E6%8A%80%E8%A1%93/">
+        尚矽谷 -SpringBoot2 核心技術
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../%E9%96%8B%E7%99%BC%E4%B8%80%E5%80%8Bspringboot%E6%B5%81%E7%A8%8B/">
+        開發一個 springboot 流程 (Developing with Spring Boot)
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_7_31_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_31_10" id="__nav_7_31_10_label" tabindex="0">
+          Images
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_7_31_10_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_31_10">
+<span class="md-nav__icon md-icon"></span>
+          Images
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          The-First-20-Hours
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        The-First-20-Hours
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+    4 原則
+  </a>
+<nav aria-label="4 原則" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    技能習得總結為三大步驟
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    金字塔組合
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#20">
+    這套 20 小時的學習方法 要怎樣做？
+  </a>
+<nav aria-label="這套 20 小時的學習方法 要怎樣做？" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-">
+    第 1 步－設立目標，做好準備
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-">
+    第 2 步－掃清障礙，騰出時間
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-">
+    第 3 步－拆解目標，及時反省
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-">
+    第 4 步－反覆練習，創建流程
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    原則：
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10">
+    10 方法
+  </a>
+<nav aria-label="10 方法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    收集信息
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    克服困難
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    關聯類比
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    逆向思維
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    諮詢交流
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    排除幹擾
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    間隔重復
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    創建定式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    預期測試
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    尊重生理
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    最後
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    reference
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32" id="__nav_7_32_label" tabindex="0">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_32">
+<span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/000-MOC-tools/">
+        000-MOC-tools
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/VMware-Workstation-Pro-REST-API-service/">
+        VMware-Workstation-Pro-REST-API
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/browerHotReload/">
+        browerHotReload
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/extract-the-eclipse-plugin/">
+        把eclipse的plugin抽取出來
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/front-end-performance-monitoring/">
+        前端性能监控
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/frontend-test-tools/">
+        簡介
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/github/">
+        github
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/quickly-learn-a-new-technology/">
+        快速學習一門新技術
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_9" id="__nav_7_32_9_label" tabindex="0">
+          Bilibili download
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_9_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_9">
+<span class="md-nav__icon md-icon"></span>
+          Bilibili download
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/bilibili-download/bilibili-download/">
+        bilibili-download
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_10" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_10" id="__nav_7_32_10_label" tabindex="0">
+          Chrome
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_10_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_10">
+<span class="md-nav__icon md-icon"></span>
+          Chrome
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/chrome/000-MOC-chrome/">
+        000-MOC-chrome-plugin
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/chrome/OhMyMock/">
+        OhMyMock
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/chrome/Roam-Highlighter/">
+        Roam-Highlighter
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/chrome/Tab-Copy/">
+        Chrome-擷取網頁標題
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_11" id="__nav_7_32_11_label" tabindex="0">
+          Free resource
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_11_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_11">
+<span class="md-nav__icon md-icon"></span>
+          Free resource
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/free-resource/free-resource/">
+        免費設定網站資源
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_12" id="__nav_7_32_12_label" tabindex="0">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_12_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_12">
+<span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/git/git-command/">
+        git-command
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/git/git-patch-cherry-pick/">
+        git-patch-cherry-pick
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/git/git-rebase/">
+        git-rebase
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/git/git-upstream/">
+        git-upstream
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/git/github-sshkey/">
+        github-sshkey
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_13" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_13" id="__nav_7_32_13_label" tabindex="0">
+          Mobile
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_13_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_13">
+<span class="md-nav__icon md-icon"></span>
+          Mobile
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/mobile/Fiddler-Classic/">
+        抓包工具（Fiddler Classic）
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/mobile/Genymotion/">
+        Genymotion(android模擬器)
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_14" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_14" id="__nav_7_32_14_label" tabindex="0">
+          Nginx notepad color
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_14_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_14">
+<span class="md-nav__icon md-icon"></span>
+          Nginx notepad color
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/nginx-notepad-color/nginx-notepad-color/">
+        nginx-notepad-彩色
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_15" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_15" id="__nav_7_32_15_label" tabindex="0">
+          Obsidian
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_15_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_15">
+<span class="md-nav__icon md-icon"></span>
+          Obsidian
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/obsidian/000-MOC-obsidian/">
+        obsidian-知識網地圖
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/obsidian/Johnny-OB-037/">
+        Johnny-OB-037
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/obsidian/Obsidian-admonition/">
+        obsidian-美化提示方塊
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/obsidian/obsidian-buttons-create/">
+        Obsidian 建立按鈕
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/obsidian/obsidian-data-classification/">
+        obsidian-data-classification
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/obsidian/obsidian-plugin/">
+        obsidian-外掛
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_16" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_16" id="__nav_7_32_16_label" tabindex="0">
+          Security
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_16_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_16">
+<span class="md-nav__icon md-icon"></span>
+          Security
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/security/000-MOC-security/">
+        密碼學-MOC
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/security/CA/">
+        自建CA搭建HTTPS及域名配置
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/security/Strict-Transport-Security/">
+        HTTP強制安全傳輸技術(Strict-Transport-Security)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/security/certificate/">
+        證書（Certificate）
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/security/java-security-JCA-JCE/">
+        JCA-JCE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/security/openssl/">
+        Openssl 命令
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/security/security-file-extension-name/">
+        密碼學-檔案擴展名
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_17" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_17" id="__nav_7_32_17_label" tabindex="0">
+          Vscode
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_17_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_17">
+<span class="md-nav__icon md-icon"></span>
+          Vscode
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/vscode/RestClient-Postman/">
+        RestClient-Postman
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/vscode/vmware/">
+        vmware
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/vscode/vscode-mouse-font-size/">
+        vscode-滑鼠滾輪變更字體大小
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_32_18" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_32_18" id="__nav_7_32_18_label" tabindex="0">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_32_18_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_32_18">
+<span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/windows/000-MOC-windows/">
+        000-MOC-wondows
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/windows/THE-PACKAGE-MANAGER-FOR-WINDOWS/">
+        THE PACKAGE MANAGER FOR WINDOWS
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/windows/install-multiple-Ubuntu-WSL2/">
+        install-multiple-Ubuntu-WSL2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/windows/install-wslg/">
+        install-wslg
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/windows/win-cmd/">
+        win-cmd
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/windows/windows-connand/">
+        windows-命令
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/windows/windows-netcat/">
+        windows-netcat
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tools/windows/wsl-command/">
+        wsl
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+    4 原則
+  </a>
+<nav aria-label="4 原則" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    技能習得總結為三大步驟
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    金字塔組合
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#20">
+    這套 20 小時的學習方法 要怎樣做？
+  </a>
+<nav aria-label="這套 20 小時的學習方法 要怎樣做？" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-">
+    第 1 步－設立目標，做好準備
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-">
+    第 2 步－掃清障礙，騰出時間
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-">
+    第 3 步－拆解目標，及時反省
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-">
+    第 4 步－反覆練習，創建流程
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    原則：
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10">
+    10 方法
+  </a>
+<nav aria-label="10 方法" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    收集信息
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    克服困難
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    關聯類比
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    逆向思維
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    諮詢交流
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    排除幹擾
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    間隔重復
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    創建定式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    預期測試
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    尊重生理
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    最後
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+    reference
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="the-first-20-hours">The-First-20-Hours<a class="headerlink" href="#the-first-20-hours" title="Permanent link">¶</a></h1>
+<p><strong>黃金 20 小時學習法</strong></p>
+<h2 id="4">4 原則<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
+<ul>
+<li>將技能拆解為步驟與任務: 此訣竅的目的在於：當我們 <strong>把技能拆解成細項後，更好思考哪一個小技術有助於這項技能的學習</strong>，進而縮短學習時間。</li>
+<li>學習到能自行修正的程度 : 此訣竅的重點是 <strong>當我們停止從外界學習後，是否有能力可以自我練習、精進和修正</strong>，那才是真正的內化</li>
+<li>移除份心的障礙物 : 將電視、手機等實質障礙，或是別人給予的壓力先拋到一邊吧。</li>
+<li>至少練習 20 小時 : 練習最關鍵的子技能，學習剛開始總會覺得自己笨手笨腳，但，堅持 20 小時後，將能學有小成。</li>
+</ul>
+<hr/>
+<h3 id="_1">技能習得總結為三大步驟<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<ul>
+<li>早期認知（技能學習）：了解你即將學習的技能是什麼內容，探索研究，想想整個過程，把技能細分為幾個可以控制的步驟</li>
+<li>中期聯想訓練（技能習得） ：在習得的過程中，注意環境的反饋，根據反饋調整自己的方法，</li>
+<li>後期自主訓練（技能訓練） ：也就是到了後期你不用怎麼有意識地註意方法和步驟就可以很自如地開展技能訓練。</li>
+</ul>
+<p><strong>技能習得的 3 個環節：學習，解碼，鞏固新技能</strong></p>
+<hr/>
+<h3 id="_2">金字塔組合<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<ul>
+<li>技能學習：在實踐之前的學習和準備工作，了解你要實踐的內容，需要動手動口做的事情以及打算怎麼去做的方法與計劃。</li>
+<li>技能習得：實踐以及學會一項新動作的過程。</li>
+<li>技能訓練：技能習得之後反復刻意練習，以達到提高技能的目的</li>
+</ul>
+<p>三者的關係：通過 <strong>技能學習</strong> 來準備 <strong>技能習得</strong>，習得後續進行必要的 <strong>技能提升訓練</strong></p>
+<hr/>
+<h2 id="20">這套 20 小時的學習方法 <strong>要怎樣做</strong>？<a class="headerlink" href="#20" title="Permanent link">¶</a></h2>
+<h3 id="1-">第 1 步－設立目標，做好準備<a class="headerlink" href="#1-" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>在確定目標的時候，
+你需要問自己一個問題：
+「如果隻能選一個，我最想學的技能是甚麼？」
+這時千萬不要貪心，
+因為想一次過學最多東西的人，
+最後往往甚麼也沒學好。
+而選好技能後，便要設立合理的預期，
+即是用 20 小時把這個技能學會，而非學精，
+不要想著一學就要成為高手或大師，
+先達到最低要求更為重要。
+另外，你還要做充足的準備，
+包括預備好訓練工具和做好資料搜集。
+例如作者在學習瑜伽時，
+買了瑜伽墊、瑜伽袋、毛巾等等，
+當做好了準備，便會對訓練充滿信心。</p>
+</blockquote>
+<h3 id="2-">第 2 步－掃清障礙，騰出時間<a class="headerlink" href="#2-" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>在正式練習前，
+要盡可能地排除一切障礙，
+例如電腦、電視、手機等等都要關掉，
+讓自己處於一個安靜的空間，
+這樣才不會被突如其來的電話或訊息幹擾，
+也不會忍不住去看電視或玩手機。
+另外，確保自己做足準備，
+這樣才不會在訓練前才找不到工具、
+或遇到其他因準備不足而引發的障礙。
+然後，就是要抽出時間來學新技能，
+可以把 20 份鐘作為一節，每天做幾節，
+總之每天至少花 60 至 90 份鐘來學習。
+切記一旦開始了就不要中途放棄，
+確保自己在這段日子要有 20 小時的訓練。</p>
+</blockquote>
+<h3 id="3-">第 3 步－拆解目標，及時反省<a class="headerlink" href="#3-" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>準備好一切後，
+便能進行訓練了。
+先把要學的技能進行步驟份解，
+例如攝影，第 1 步是學構圖、
+之後是份辨色彩、利用光線、角度等等。
+步驟份得愈仔細，愈能找到最重要的那幾步。
+學好核心步驟，剩下的便會容易很多。
+在訓練過程中，還要做好及時反省，
+盡量準確地了解自己的訓練表現，
+例如練習時拿手機錄影、
+自己看回時找出改善的地方；
+也可以請教有經驗的老師，
+讓他們幫你糾正錯誤，
+這樣就能事半功倍了！</p>
+</blockquote>
+<h3 id="4-">第 4 步－反覆練習，創建流程<a class="headerlink" href="#4-" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>學習一段時間之後，
+之前的內容很易被忘掉，
+所以要定期複習學到的知識，
+讓它們能長時間儲存在大腦中。
+到了訓練的後半部份，
+我們就需要創建自己的固定流程，
+就像籃球比賽中的罰球，
+很多籃球員會先把雙手在褲上擦擦，
+然後放鬆雙肩，接住裁判的球，
+拍 3 下，停 3 秒再投籃，
+這就是一些籃球員的固定流程。
+你也要把你的技能訓練流程化，
+空閒時在心中演練一下，
+你的進步會更驚人。</p>
+</blockquote>
+<h2 id="_3">原則：<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>法國文學家暨思想家伏爾泰 (Voltaire) 說：「任何問題都禁不起持續思考的攻擊。」在練習前先「學習」，不但能節省時間，還能事半功倍，所以，書中告訴我們「有效學習的十大重點」，份別是：</p>
+<ul>
+<li>選擇一項喜歡的技能：越喜歡，習得速度越快。</li>
+<li>一次隻學一種技能：貪多務得隻會帶來反效果。</li>
+<li>決定學習成效目標：最好看似超出自己能力範圍，但不致於不可能辦到。</li>
+<li>將學習主題拆解成幾項子技能：越能充份拆解細項，就能判斷何者最重要，進步也較省力。</li>
+<li>取得不可或缺工具：確認資源、裝備和環境，以節省寶貴時間。</li>
+<li>消除阻撓練習障礙：包含練習前的準備工作 (如運動前的熱身)、沒取得隨時可用的資源、環境中的份心事物、情緒障礙。</li>
+<li>抽出專心練習時間：網路上有人說：「時間就像乳溝一樣，擠一擠就有了。」最好每天抽出 90 份鐘的練習時間，效益較佳。</li>
+<li>建立快速回饋迴圈：在最短時間內，精準地知道自己表現如何，如教練或良師益友。</li>
+<li>短時間計時密集練習：完成越多遍的持續練習，就越快習得技能。</li>
+<li>練習重點是求快求多：與其追求完美，不如將力氣花在盡可能多多練習、快快練習上，同時維持「還可以」的表現。</li>
+</ul>
+<hr/>
+<h2 id="10">10 方法<a class="headerlink" href="#10" title="Permanent link">¶</a></h2>
+<p>如果在實踐前你不懂得如何在該項技能上做一點功課，那麼不管你意誌有多堅韌看，都會導致時間和精力的浪費。技能學習能讓技能實踐更有效果，<strong>通過學習你將會更加理解為什麼要花更多的時間在關鍵技能的訓練上</strong>。我們總結了十個方法。</p>
+<h3 id="_4">收集信息<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>在實踐之前查閱一下和這項技能相關的信息是十份必要的，比如花上二十份鐘的時間上網，去圖書館，去書店找一找相關的參考書和資料。你應該想方設法的找到關於這項技能的，</p>
+<p><strong>至少三本參考書，教學錄像，教學課本或者是其他的學習資料</strong>。</p>
+<p>註意，你不需要花數小時去記住所有的內容，查閱的目的是為了 <strong>盡可能快地了解重要的基礎技能</strong>，<strong>關鍵步驟以及必要的學習工具</strong>。</p>
+<p>提前花時間快速全麵地搜集信息，有助於後期技能實踐的整個流程的順暢。提前知道的信息越多，準備的就越充份。</p>
+<p>這個環節的閱讀，我們更推薦「泛讀」來快速抓住關鍵信息。</p>
+<p><strong>如果某一個概念，或者是某一項學習工具，反復不同的被不同的反復的被不同的參考書提及，那麼請你一定要留意，並且在實踐前做好相應的準備。</strong>比如說，如果你想烤出美味的羊角麵包。出門買了幾本烘焙和麵包製作的參考書，打算跟著做。目前麵包的製作工藝和流程已經很成熟，經歷了許多大師們的反復實踐。在你閱讀參考書時，如果你發現好幾本書都不止一次地介紹了同一個製作工藝和流程，那麼請你留意這個有價值的信息。你可以立即按照書上說的，在自家廚房裡小試一把，效果一定不會差，這樣做的好處是可以省去很多沒石頭過河的麻煩。</p>
+<h3 id="_5">克服困難<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<p>在早期的研究中參考資料裡會有很多東西讓人睏惑不解，有的是概念，有的是方法。通常情況下你很清楚他們的重要性，可是你始終無法理解他們的意思，你也無法理解為什麼要這麼說也無法理解為什麼要這麼做。</p>
+<p>別緊張！</p>
+<p><strong>首先你要知道自己的難受都很正常。</strong></p>
+<p><strong>然後，你需要知道，在這個地方，「不願意剋服睏難」是影響技能習得快慢的最重要的原因之一。</strong>愚蠢的感覺確實不好受，但請你隨時提醒自己隨著技能實踐的不斷深入，你會慢慢的解決這些疑惑並最終的理解這項技能。有睏難很正常，關鍵在於你能否將是解決睏難。</p>
+<p>我覺得這一點特別關鍵。「感覺愚蠢或者難受而停止」就是很多時候我們即便心裡想要去做一件事情卻在實際的嘗試中或者嘗試前感受到內心會萬般的抗拒，並最終我們沒能往前走的關鍵原因。我們的難處，不僅僅是有睏難，其實睏難就在那兒，是客觀的事實。我們去做，就能剋服它或者稍微前進一點點。但更多的是，我們就在一個睏難麵前，在自己可怕的情緒麵前，停了下來。因為我們覺得很難。因為我們內心在抗拒自己感覺很糟糕很愚蠢很傻的這個心理情緒。</p>
+<p>而這其實是一個正常的過程，在我們任何的習得和成長的過程中都一定會不可避免的有這種環節的出現。它好似很可怕但而且這種過程實際上並不會停留很久。解決完這個睏惑，這種可怕的感覺就會自然地消失直到你遇到下一個需要挑戰的地方。是的，下一個挑戰時，它又會再次出現，無限循環，以各種麵孔各種形式。</p>
+<p>所以，每一次在今後的生活和工作中，每一次當這種感覺出現的時候我們都要記得去提醒自己，「<strong>是的，我在麵臨睏難，這種感覺很正常，但它不會停留很久，我應該集中註意力解決問題。等我解決完這個問題之後，我能夠得到進步，它也會得到緩解，而且在下一次，至少在同一個問題中，我不會再遭遇同樣可怕的情緒。「</strong></p>
+<h3 id="_6">關聯類比<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<p><strong>隨著研究的開始你會很自然的註意到一些模式，也就是不斷出現的理論和方法，我們把這些模式成為」心智模式「。</strong>他們很重要，<strong>心智模式是學習中最基本的單位，它是指理解和認知存在於這個世界上的事物或者聯繫的方法與習慣。</strong>一旦找準了心智模式我們就可以更容易的預測下一步要發生什麼。心智模式可以幫助我們更加輕鬆的與人份享自己的感受和經歷，也可以幫助我們用來理解一些平時我們覺得很難理解的專業術語。</p>
+<p>舉個例子，作者說他最近在幫父親創建一個網站。他一邊工作一邊試著給父親講他是怎麼建網站的。而他剛剛開口解釋就遇到了難題，他一直在使用服務器這個專業的詞匯，但是父親卻完全不明白他在說什麼。（這種情況也經常發生在我們生活中，當我們和其他人聊天的時候，他們在霹靂啪啦說一堆專業術語我們根本不知道他在表達什麼。所以，無論是我們作為講述專業知識的人還是我們作為專業知識的聽眾，我們都需要註意到對」專業術語「的未完全解釋會造成信息順暢交流的重大阻礙。）</p>
+<p>假設作者的父親知道服務器相當於一個特別的計算機，他可以把網頁傳送到發出請求信號的另一方，那麼他會更明白作者想要表達的意思。而在這裡」服務器「就是一個心智模式，如果你熟悉這個術語就能夠理解發佈網站是怎麼一回事。同時你會註意到」服務器「與你了解的某種方式的功能有類似。你留意到，網絡服務器就像一個圖書管理員。當你去圖書館藉書時，圖書管理員會在成百上千的書架上幫你找到你想要的那一本，一旦找到了他會給你拿過來。如果沒有這本書，她會告訴你我這裡沒有你要的書。網絡服務器和圖書管理員的工作方式是一樣的。當你發出瀏覽網頁的請求時，服務器靠著記憶幫你搜索網頁，如果找到了他就傳送給你，如果沒找到他就給你一個回復」該網頁無法找到「。你看，如果我們把服務器看作計算機信息管理員就能夠更容易的理解它的工作原理。 這就是通過類比和比喻去理解事物的概念 。在早期研究階段，<strong>你找到的心智模式越多就越容易在技能訓練中獲益。</strong></p>
+<h3 id="_7">逆向思維<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p>在學習新的技能千千萬別去幻想你會覺得多麼完美，設想一下最壞的結局：要是學不會這麼怎麼辦要是徹底失敗了怎麼辦？要讓自己做類似的思考。這種解決問題的方法叫做逆向思維方式，這個方法能夠讓我們學到幾乎所有技能的要旨。如果你多研究一下這塊地解決最壞的結局你就能夠快速找到原本不太容易被註意到的學習要點。</p>
+<p>我們拿皮劃艇做例子。假設，你此刻正在寬廣的河麵上平滑皮劃艇，在急流中有勁，但是你周圍有很多礁石。萬一遇到這樣的情況，你該怎麼辦？</p>
+<p>這裡我們可以試試設想處處碰壁的情況。比如</p>
+<p>1）獨木獨木舟翻了個底朝天，沒法重新讓它浮起來，</p>
+<p>2）獨木舟進水，正在下沉或者被淹沒，受到嚴重損壞，</p>
+<p>3）船槳掉了獨木舟失控，</p>
+<p>4）你的頭撞到石頭上，</p>
+<p>5）整個人卷到河裡並且卷入漩渦無法脫身</p>
+<p>要是我在洶涌的激流中遇到這種情況一定一命嗚呼了，這就是最悲慘的結局。這樣的結局雖然令人沮喪，但是如果我們提前考慮到這些不利的因素，就可能化險為夷。而在思考這些問題的同時，我們也在學習著劃皮劃艇的要點，也開始懂得需要為這些危險的情況提前做一些預防的準備，防範這些情況的發生。</p>
+<p>1） 如果船上翻了，一定要在劃槳的時候保持左右平衡，保持船正麵向上人才不會掉到水裡，</p>
+<p>2）如果人掉進水裡，一定不要把船身拉沉</p>
+<p>3）一定要抓牢船槳 才不會讓 船槳掉進洶涌的河裡</p>
+<p>4）遇到大礁石必須採取必要的安全防範措施</p>
+<p>5）提前巡查河麵情況，完全避開危險河段。此外為了安全起見我還得提前準備好救生衣頭盔等安全裝備。</p>
+<p>這樣一來我已經完全清楚學習劃皮劃艇的要點也懂得該如何保護自己。預先設想最壞的結局，一來保證安全二來也玩的盡興，這就是逆向思維的好處。</p>
+<h3 id="_8">諮詢交流<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<p>如果我們提前對新技能有了一定的了解，我們就可以對自己的計劃和時間設置有更合理的期待。對於一個初學者來講，怎麼樣的表現才是真正的合理的往往很難被準確評估。我們通常會低估完成這項技能的難度和和復雜度，因而給自己設定了過高或者不太實際的目標導致一旦進入實踐就受挫而停止進程。</p>
+<p>因此在投入時間和精力學習新技能之前，如果有條件盡量和有經驗的人聊一聊。這樣我們可以提前預知技能訓練的每個階段會遇到的情況，消除對於技能學習的不解和疑慮，使得我們在進行技能習得的過程中少一些灰心喪氣，多一些興趣堅持下去。</p>
+<p>這裡，我可以拿自己的跑馬拉鬆的經歷當做例子。自己第一次跑馬拉鬆之前，雖然通過半年多的繫統準備和提前的了解知道了一些馬拉鬆比賽中的註意事項，比如盡量保持勻速跑不要隨意加速，喝水時需要小口喝水，註意補充能量等等。但碰巧自己在比賽前一晚有機會和一位跑了多次的馬拉鬆高手一起吃了頓飯，他很友善地和我們份享了超級多實用的經歷，才能讓自己對第二天的比賽有了更充足的準備和對一些一定會出現的睏難點有了提前的預知從而能更好地堅持下來。</p>
+<h3 id="_9">排除幹擾<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<p>幹擾是影響快速習得的最大因素，一旦產生了幹擾我們就無法集中精力學習技能，習得的速度也會隨之下降甚至停止，因此在習得和訓練之前我們要盡可能的預見可能存在的幹擾因素，試著減少或者消除它們。比如說網絡電視手機的幹擾，家人同事朋友寵物的幹擾等等。我們再單獨練習技能是不希望被打擾，幹擾因素越少技能習得就越會有效果。</p>
+<h3 id="_10">間隔重復<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<p>多數的技能習得的對於記憶力有一定的要求。如果想好好運用一下曾經學過的知識，你必須得在很短的時間內回憶起相關的內容。事實上，學的越久我們越是不容易經常的復習鞏固，因此新學的知識需要定期的鞏固，才能夠長期儲存在我們的腦海中。這個重復是一個很好的記憶方法，可以幫我們定期繫統的回顧所獲取的知識和信息。</p>
+<p>對那些記起來有難度的信息我們更加需要經常的復習，對那些記起來相對簡單的我們可不必經常的復習。<strong>你需要學會建立起自己的記憶模塊。一旦創建好自己的記憶模塊後，你每天隻需要花幾份鐘就能完成復習任務，這個繫統細化復習過程追蹤記得很近，用最短的時間學習新概念新方法。如果你始終堅持復習有難度的部份，你將會非常快的記住必要的信息。</strong></p>
+<h3 id="_11">創建定式<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<p>我們可以為任何一個新技能的習得創建一個學習的定式，也就是後期技能習得中每一次練習時你會採取的固定的練習模式。在每一次開始一項新技能習得之前，你都可以按照這個定式的步驟進行相應的學習，準備和訓練。<strong>建立一套簡潔的定式能讓我們比較輕鬆的了解其中的關鍵環節，羅列清單方便我們自主學習的要點，將技能習得的流程更加繫統化使得我們可以把精力投入在關鍵的環節上。創建定式是保證每次訓練都有一定的固定模式。</strong></p>
+<p>讓我們想想，籃球比賽中運動員遇到罰球是不是有一套固定的模式呢？我們可以看到他們接下來的動作，雙手在肩膀上擦一擦，雙肩放鬆，下蹲，停頓三秒投籃。這就是他們發球定式。由此可見，創建定式和羅列清單可以幫助我們預見後續的流程，從而進行類似的演練，目的明確且有效地指導我們的行動。</p>
+<h3 id="_12">預期測試<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<p>預期測試是指根據已知的經驗，在嘗試實踐前期假設接下來會發生的變化或者會產生的結果。如果你養成了預期測試 的習慣，那麼你習得技能會變得更加高效。科學的講，預期測試 結果會隨著下麵四個因素的變化而變化:</p>
+<p>1) 觀察你最近在關註什麼？</p>
+<p>2) 經歷你對這個領域了解多少，</p>
+<p>3) 假設怎麼樣做才會更進一步,</p>
+<p>4) 下一步有什麼新的嘗試，</p>
+<p>我建議用一個筆記本或者是其他工具記錄你在訓練中作出的假設，如果你不斷的思考這些假設並且形成新的想法，那麼你的實驗成果會變得更加豐碩。</p>
+<h3 id="_13">尊重生理<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
+<p>我們的大腦和身體都處在各自的身體生理繫統中，他們都有生理需求，比如食物, 水, 鍛煉, 休息，睡眠。我們不能把自己逼得太緊張，因為在大腦和身體沒有得到足夠休息和能量儲備的情況下是無法高效運轉的。最佳的學習周期是九十份鐘左右。在這個周期內人的精力都集中大腦和身體都需要一個自然的休息，因此我們要瞄準時機鍛煉，休息，吃點小零食或者做別的事情。我們可以進行計時練習。提前預定 60-90 份鐘的練習時間和休息提醒，這樣你就不會忘記什麼時候該休息同樣你也能更好地集中精神練習。</p>
+<p><strong>當今教育和資格認定的方式幾乎與技能習得無關</strong> </p>
+<p>技能習得需要長時期持續、專註地練習，同時也需要你創造性地、靈活地、自由地樹立屬於你自己的目標。</p>
+<p>令人遺憾的是，如今大部份教育和資格認定僅僅考查學生是否學會「服從」，而不考查學生是否學到有用的「技能」，僅僅通過一群脫離學生的委員會成員製定一套主觀的「考查標準」，以此考查他們最在乎的學生應具備的某些素質。</p>
+<p>「創造、靈活、自由」是快速習得技能的關鍵因素，但這幾點卻不在教育和資格認定的標準之列。如果標準定得太過靈活，那就沒有標準了，難道不是嗎？</p>
+<p>然而，嚴苛的教育和資格認定大大阻礙了技能習得。「機會成本」是主要問題：假如資格認證的要求很高，高得足以影響你的技能訓練，那麼，我認為「資格認證」這個過程實際上是弊大於利的。</p>
+<p>如果你想擅長某項技能，而這項技能特別強調現實生活中的實踐能力，那麼你必須好好實踐。光靠讀書是遠遠不夠的。  </p>
+<hr/>
+<h3 id="_14">最後<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
+<p>我們並不是每一次練習學習技能時都必須要用到的十個方法。但這些方法好似一個錦囊，一旦開始學習，我們就可以打開錦囊，進行對照看看哪些方法可以為我們所用。學習足夠的理論知識之後我們才可以開始實踐。雖然目前我們已經了解到快速習得的基本理論知識，但是如何付諸實踐遠遠比你知道道理更重要。</p>
+<p>在技能習得的訓練之前，你最好可以進行充份的學習和準備，這樣能讓你的習得更有效率更集中的產生效果。但你一定要記清楚，所有的效果都產生在你的實踐行動基礎之前，所以沒有任何理論知識會比你的實踐行動更重要。</p>
+<p>想要變得更強，就必須要學會讓不適變得舒適。</p>
+<p>**這前 20 小時內的努力，時間和精力花的越多，無用功做的越少，技能習得就會越快。</p>
+<p>你可以把這十個方法作為一個備忘錄，當你學習新技能時，瀏覽一下你們的相關內容，</p>
+<p>事實上，它們不過是為學好技能準備的一套普通方法而已。**</p>
+<hr/>
+<h2 id="reference">reference<a class="headerlink" href="#reference" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="https://boobo.pixnet.net/blog/post/108908746">學得快才會想學！</a></li>
+<li><a href="https://www.youtube.com/watch?v=j-RZ_KFFMo8">5份鐘速讀</a></li>
+<li><a href="https://www.hk01.com/%E9%96%8B%E7%BD%90/193772/%E5%BF%AB%E9%80%9F%E5%AD%B8%E7%BF%92%E6%B3%95-4%E5%80%8B%E6%AD%A5%E9%A9%9F%E7%94%A820%E5%B0%8F%E6%99%82%E5%AD%B8%E6%9C%83%E4%BB%BB%E4%BD%95%E6%8A%80%E8%83%BD">快速學習法-4個步驟</a></li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
+<script src="../../../../hidden-folder/mkdocs-javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>

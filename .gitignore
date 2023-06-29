@@ -27,6 +27,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+**/**.iml
 **/.gradle/
 **/build/
 **/target/

@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Multi-Agent 系统 - 5种协调模式与3层架构",
+      "path": "001-TODO/Multi-Agent 系统 - 5种协调模式与3层架构.md"
+    },
+    {
+      "basename": "Skill Factory - Hermes Agent 元技能自动生成器",
+      "path": "001-TODO/Skill Factory - Hermes Agent 元技能自动生成器.md"
+    },
+    {
+      "basename": "Steve Jobs - 2005 Stanford Commencement Address",
+      "path": "001-TODO/Steve Jobs - 2005 Stanford Commencement Address.md"
+    },
+    {
       "basename": "index",
       "path": "index.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "pack",
       "path": "400-devops/03-Containerization/pack.md"
-    },
-    {
-      "basename": "okteto",
-      "path": "400-devops/01-Concepts-of-Software-Development/okteto.md"
-    },
-    {
-      "basename": "docker-run-command",
-      "path": "400-devops/docker-run-command.md"
-    },
-    {
-      "basename": "smtp",
-      "path": "400-devops/smtp.md"
     }
   ],
   "omittedPaths": [],

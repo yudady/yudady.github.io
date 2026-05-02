@@ -209,4 +209,4 @@ M4 Pro Metal: 33 TFlops (矩阵乘法甚至赢了 5060 Ti)
 - [Alex Ziskind 频道](https://www.youtube.com/@AZisk)
 
 ## 相关笔记
-- [[Rapid-MLX - Apple Silicon 最快本地 AI 推理引擎]]
+- [[../../001-TODO/Rapid-MLX - Apple Silicon 最快本地 AI 推理引擎]]

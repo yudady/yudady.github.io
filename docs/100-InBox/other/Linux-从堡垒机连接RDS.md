@@ -16,10 +16,7 @@ description: "我有一個無法公開存取的 Amazon Relational Database Servi
 tags: ["堡垒机", Amazon RDS, clippings, Linux]
 category: "技术"
 summary: "使用堡垒机从Linux机器连接私有Amazon RDS实例"
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 我有一個無法公開存取的 Amazon Relational Database Service (Amazon RDS) 資料庫執行個體。我想從我的 Linux/macOS 機器連接至它。如何使用堡壘主機連接至我的 RDS 資料庫執行個體?

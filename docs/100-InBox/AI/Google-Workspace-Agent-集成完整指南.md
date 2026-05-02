@@ -14,10 +14,7 @@ description: |
 level: intermediate
 stars: 5
 merged_from: [Google-Workspace-CLI-Agent-First-设计完整指南.md, Google-Workspace-MCP-Server-整合指南.md]
-tags:
-  - status/active
-  - area/capture
-  - type/doc
+
 ---
 
 # Google Workspace Agent 集成完整指南

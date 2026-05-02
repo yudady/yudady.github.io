@@ -11,10 +11,7 @@ published: 2024-11-13
 created: 2026-02-12 15:36
 description: "EasyVideoTrans是开源的AI视频翻译工具，能将英文视频转换成中文视频。用户可以通过简单的操作流程，实现视频的上传、音频提取、字幕翻译和配音。支持多种翻译引擎，如谷歌和Deepl，确保翻译的准确性。"
 tags: ["clippings"]
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 

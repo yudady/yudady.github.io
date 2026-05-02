@@ -12,10 +12,7 @@ level: intermediate
 stars: 5
 category: "技术"
 summary: "MiniMax M2.5本地AI模型详细指南"
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 # MiniMax M2.5 本地 AI 模型完整指南

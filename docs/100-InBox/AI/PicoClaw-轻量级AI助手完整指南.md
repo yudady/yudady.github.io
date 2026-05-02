@@ -12,10 +12,7 @@ level: beginner
 stars: 5
 category: "技术"
 summary: "PicoClaw轻量级AI助手的安装与使用指南"
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 # PicoClaw 轻量级 AI 助手完整指南

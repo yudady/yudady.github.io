@@ -12,10 +12,7 @@ description: |
   涵盖核心功能、整合方案、实际应用案例和最佳实践。
 level: intermediate
 stars: 4
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 # Claude Code + NotebookLM 联动完整指南

@@ -81,7 +81,32 @@ model:
   default: "default"
   base_url: "http://localhost:8000/v1"
   context_length: 32768
+  
 ```
+
+
+只需一個指令，即可在您的 Mac 上運行 Qwen3.6：
+
+pip install -U rapid-mlx
+rapid-mlx serve qwen3.6-27b    # dense 27B, 14.9GB, 36.5 tok/s
+rapid-mlx serve qwen3.6-35b    # MoE 35B-A3B, 19GB, 92 tok/s
+
+### New Aliases
+
+| 別名  | Model | RAM | 速度  |
+| --- | --- | --- | --- |
+| `qwen3.6-27b` | mlx-community/Qwen3.6-27B-4bit | 14.9 GB | 36.5 tok/s |
+| `qwen3.6-27b-8bit` | unsloth/Qwen3.6-27B-MLX-8bit | 32.3 GB | 18.9 tok/s |
+| `qwen3.6-35b-6bit` | mlx-community/Qwen3.6-35B-A3B-6bit | 約 28 GB | ~72 tok/s |
+
+### Highlights
+
+- Qwen3.6-35B：比 Qwen3.5-35B 快 12%（每秒 92 個詞元，而 Qwen3.5-35B 為每秒 82 個詞元）
+- Qwen3.6-27B：密集型混合模型（64 層，DeltaNet + 注意力機制），擁有 262K 的上下文處理能力，適用於視覺任務。
+- 自動偵測的解析器： `qwen3_coder_xml` — 就是 `rapid-mlx serve qwen3.6-27b` ，解析器已自動配置完成
+- 編碼：在測試套件中的完成度為 100%
+- 壓力測試：8/8 準格
+
 
 ## 选型参考（按 Mac 内存）
 
@@ -160,3 +185,93 @@ ReDrafter (Apple RNN draft) → 1.4-1.5x decode  (Not started)
 - [Apple MLX + M5 GPU Research](https://machinelearning.apple.com/research/exploring-llms-mlx-m5)
 
 ## 相关笔记
+
+### oMLX vs Rapid-MLX 功能说明与比较
+
+两者都是 Apple Silicon (M1-M4) 上的本地 LLM 推理服务器，基于 Apple MLX 框架，提供 OpenAI 兼容 API。但定位和架构差异很大。
+
+oMLX (jundot/omlx)
+
+定位: 全功能本地 LLM 管理平台，强调多模型管理和持久化缓存。
+
+核心卖点:
+- macOS 原生菜单栏 App (PyObjC，非 Electron)，从菜单栏启停/监控服务
+- 双层 KV Cache (Hot RAM + Cold SSD): 热缓存满时自动卸载到 SSD (safetensors 格式)，下次匹配 prefix 直接恢复，重启后仍可用
+- 多模型同时服务: LLM / VLM / Embedding / Reranker 同一个端口，LRU 淘汰、手动加载卸载、模型 Pin、per-model TTL
+- Web Admin Dashboard: 模型管理、聊天、benchmark、HuggingFace 下载器、集成配置 (OpenClaw/OpenCode/Codex)
+- Process Memory Enforcer: 总内存上限控制 (默认 RAM - 8GB)，防 OOM
+- Claude Code 优化: context scaling + SSE keep-alive
+- 支持 OpenAI + Anthropic API 兼容
+- MCP 支持
+
+模型类型: LLM, VLM, OCR, Embedding, Reranker
+
+安装: Homebrew / DMG / pip
+
+
+
+Rapid-MLX (raullenchai/Rapid-MLX)
+
+定位: 极致性能推理引擎，强调速度和 tool calling 可靠性。
+
+核心卖点:
+- Raw 速度: 号称比 Ollama 快 1.3x~4.2x，cached TTFT 最低 0.08s
+- 17 种 tool call parser: 覆盖 Qwen/GLM/DeepSeek/Llama/Gemma/Mistral/Phi/MiniMax/Kimi/GPT-OSS 等，带自动修复 (量化模型输出损坏的 tool call 自动转 回结构化)
+- Prompt Cache: 标准 KV trim + DeltaNet state snapshot (Qwen3.5 混合 RNN 架构也能缓存)
+- Reasoning 分离: chain-of-thought 输出单独 reasoning_content 字段，与 content 流式分离
+- Cloud Routing: 本地慢时自动转发到云端 LLM (GPT-5, Claude 等)
+- Tool logits bias: jump-forward decoding 加速 tool call
+- Audio: STT/TTS via mlx-audio
+- TurboQuant V-cache: V cache 压缩，dense 模型省 86%
+- MHI (Model-Harness Index): 标准化评估模型+agent 组合的兼容性
+
+单模型服务 (CLI rapid-mlx serve <model>)
+
+安装: Homebrew / pip / curl 一键脚本
+
+
+
+核心对比
+
+| 维度 | oMLX | Rapid-MLX |
+|------|------|-----------|
+| 核心理念 | 多模型管理平台 | 极致单模型性能 |
+| 多模型并发 | 多模型同时加载，LRU/TTL 管理 | 单模型 (一个 serve 命令) |
+| KV Cache | RAM + SSD 双层持久化 | RAM prefix cache + DeltaNet snapshot |
+| SSD Cache | 有 (safetensors, 重启持久) | 无 |
+| Tool Calling | 依赖 mlx-lm 内置 parser (约 9 种格式) | 17 种 parser + 自动修复 + logits bias |
+| Tool Call 恢复 | 无 | 自动将文本格式转回结构化 |
+| Cloud Routing | 无 | 有 (本地慢 → 转云端) |
+| Audio (STT/TTS) | 无 | 有 |
+| Vision | 有 | 有 |
+| Embedding / Reranker | 有 | 有 (embedding) |
+| Admin UI | 完整 Dashboard (监控/聊天/下载/集成) | 无 (纯 CLI) |
+| macOS 菜单栏 App | 有 (原生 PyObjC) | 无 |
+| Benchmark 工具 | 内置 (admin panel 一键) | 内置 (CLI + 详细对比数据) |
+| Eval 套件 | 内置 (MMLU/MATH 等) | MHI + 多维度 eval |
+| API 兼容 | OpenAI + Anthropic | OpenAI + Anthropic |
+| MCP 支持 | 有 | 有 |
+| 安装体验 | DMG/ brew / pip | brew / pip / curl |
+| 开发者 | junkim.dot@gmail.com (韩国) | raullenchai |
+| 起源 | 基于 vllm-mlx v0.1.0 深度演进 | 独立项目 |
+
+
+
+选型建议
+
+选 oMLX 的场景:
+- 需要同时跑多个模型 (LLM + embedding + reranker + VLM)
+- 经常切换模型、不想重复加载
+- 想要 GUI 管理 (Dashboard + 菜单栏)
+- 重启后希望 KV cache 仍然可用 (SSD 持久化)
+- 内存有限，需要自动淘汰和内存上限控制
+
+选 Rapid-MLX 的场景:
+- 追求极致推理速度
+- 大量使用 tool calling 的 agent 场景 (Claude Code / Cursor)
+- 用的是 Qwen3.5 等 DeltaNet 混合架构，需要 prompt cache
+- 需要 reasoning 输出分离
+- 想要本地/云端混合路由
+- 需要 STT/TTS
+
+两者可以共存 -- oMLX 跑 8000 端口管理日常多模型，Rapid-MLX 按需起特定端口跑高性能推理。

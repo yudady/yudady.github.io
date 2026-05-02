@@ -12,10 +12,7 @@ level: beginner
 stars: 4
 category: "技术"
 summary: "Claw系列AI助手各版本性能对比与选择建议"
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 # 小龙虾(OpenClaw)系列 AI 助手版本选择指南

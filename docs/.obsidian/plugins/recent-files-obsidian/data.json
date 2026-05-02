@@ -1,204 +1,200 @@
 {
   "recentFiles": [
     {
+      "basename": "GitNexus - 零服务器代码知识图谱引擎",
+      "path": "001-TODO/GitNexus - 零服务器代码知识图谱引擎.md"
+    },
+    {
+      "basename": "Cloudflare Workers 自架短網址 - 10 分鐘完工教學",
+      "path": "001-TODO/Cloudflare Workers 自架短網址 - 10 分鐘完工教學.md"
+    },
+    {
+      "basename": "Agent Skills - 结构化AI编码工作流框架",
+      "path": "001-TODO/Agent Skills - 结构化AI编码工作流框架.md"
+    },
+    {
+      "basename": "第一性原理 - Naval和Elon Musk的底层思考武器",
+      "path": "001-TODO/第一性原理 - Naval和Elon Musk的底层思考武器.md"
+    },
+    {
+      "basename": "anomalycoopencode The open source coding agent.",
+      "path": "100-InBox/AI/anomalycoopencode The open source coding agent..md"
+    },
+    {
+      "basename": "Graphify - AI编程助手知识图谱技能",
+      "path": "001-TODO/Graphify - AI编程助手知识图谱技能.md"
+    },
+    {
+      "basename": "Caveman Compression - LLM 语义压缩方法",
+      "path": "100-InBox/AI/Caveman Compression - LLM 语义压缩方法.md"
+    },
+    {
+      "basename": "claude",
+      "path": "100-InBox/claude.md"
+    },
+    {
+      "basename": "AntiGravity-GravityClaw-本地优先AI助手",
+      "path": "100-InBox/AntiGravity-GravityClaw-本地优先AI助手.md"
+    },
+    {
+      "basename": "Andrej Karpathy Skills - AI Coding Agent 行为框架",
+      "path": "100-InBox/AI/Andrej Karpathy Skills - AI Coding Agent 行为框架.md"
+    },
+    {
+      "basename": "AI-策略分工布局",
+      "path": "100-InBox/AI/AI-策略分工布局.md"
+    },
+    {
+      "basename": "零代码AI应用构建神器 - Flowise",
+      "path": "100-InBox/AI/零代码AI应用构建神器 - Flowise.md"
+    },
+    {
+      "basename": "提示词公式",
+      "path": "100-InBox/AI/提示词公式.md"
+    },
+    {
+      "basename": "自动化视频制作-Workflow",
+      "path": "100-InBox/AI/自动化视频制作-Workflow.md"
+    },
+    {
+      "basename": "用免费 AI 构建完整 SaaS 应用 — QN 3.6 Plus + OpenCode 实战",
+      "path": "100-InBox/AI/用免费 AI 构建完整 SaaS 应用 — QN 3.6 Plus + OpenCode 实战.md"
+    },
+    {
+      "basename": "小龙虾-OpenClaw版本选择指南",
+      "path": "001-TODO/小龙虾-OpenClaw版本选择指南.md"
+    },
+    {
+      "basename": "2026-W14 Trending GitHub Open Source Projects",
+      "path": "100-InBox/AI/2026-W14 Trending GitHub Open Source Projects.md"
+    },
+    {
+      "basename": "24小时重启系统-彻底摆脱失控感",
+      "path": "001-TODO/24小时重启系统-彻底摆脱失控感.md"
+    },
+    {
+      "basename": "Claude Code 5种Agent模式 - 从顺序流到自主工作流",
+      "path": "100-InBox/AI/Claude Code 5种Agent模式 - 从顺序流到自主工作流.md"
+    },
+    {
+      "basename": "Claude Code 使用洞察",
+      "path": "100-InBox/AI/Claude Code 使用洞察.md"
+    },
+    {
+      "basename": "Claude Code 斜線指令指南：不再重複輸入提示詞，一鍵搞定常用任務",
+      "path": "100-InBox/AI/Claude Code 斜線指令指南：不再重複輸入提示詞，一鍵搞定常用任務.md"
+    },
+    {
+      "basename": "Claude Code 進階配置與代理人自動化指南",
+      "path": "100-InBox/AI/Claude Code 進階配置與代理人自動化指南.md"
+    },
+    {
+      "basename": "Claude Commands 開發流程：從零到專家的完整指南",
+      "path": "100-InBox/AI/Claude Commands 開發流程：從零到專家的完整指南.md"
+    },
+    {
+      "basename": "Claude_Code_Blueprint",
+      "path": "100-InBox/AI/Claude_Code_Blueprint.pdf"
+    },
+    {
+      "basename": "Claude-Code-持久化记忆系统",
+      "path": "100-InBox/AI/Claude-Code-持久化记忆系统.md"
+    },
+    {
+      "basename": "Claude-Code-AI营销团队",
+      "path": "100-InBox/AI/Claude-Code-AI营销团队.md"
+    },
+    {
+      "basename": "Claude-Code-NotebookLM联动完整指南",
+      "path": "100-InBox/AI/Claude-Code-NotebookLM联动完整指南.md"
+    },
+    {
+      "basename": "Claude-Code-Skills-未来",
+      "path": "100-InBox/AI/Claude-Code-Skills-未来.md"
+    },
+    {
+      "basename": "Cline",
+      "path": "100-InBox/AI/Cline.md"
+    },
+    {
+      "basename": "EasyVideoTrans - 开源的AI视频翻译工具，快速将英文视频转中文视频  AI工具集",
+      "path": "100-InBox/AI/EasyVideoTrans - 开源的AI视频翻译工具，快速将英文视频转中文视频  AI工具集.md"
+    },
+    {
+      "basename": "GBrain - AI Agent 个人知识库与混合检索引擎",
+      "path": "100-InBox/AI/GBrain - AI Agent 个人知识库与混合检索引擎.md"
+    },
+    {
+      "basename": "GitHub Trending Weekly #29 - 35个开源项目速报",
+      "path": "100-InBox/AI/GitHub Trending Weekly #29 - 35个开源项目速报.md"
+    },
+    {
+      "basename": "Google 浏览器 AI Agent：本地离线浏览器助手",
+      "path": "100-InBox/AI/Google 浏览器 AI Agent：本地离线浏览器助手.md"
+    },
+    {
+      "basename": "Google Gemini 四大免费更新 - AI 全栈生态布局",
+      "path": "100-InBox/AI/Google Gemini 四大免费更新 - AI 全栈生态布局.md"
+    },
+    {
+      "basename": "Google NotebookLM 并入 Gemini - 项目级 AI 记忆功能",
+      "path": "100-InBox/AI/Google NotebookLM 并入 Gemini - 项目级 AI 记忆功能.md"
+    },
+    {
+      "basename": "Google-Workspace-Agent-集成完整指南",
+      "path": "100-InBox/AI/Google-Workspace-Agent-集成完整指南.md"
+    },
+    {
+      "basename": "Google-Workspace-CLI完整教學指南",
+      "path": "100-InBox/AI/Google-Workspace-CLI完整教學指南.md"
+    },
+    {
+      "basename": "Goose - 开源通用 AI Agent",
+      "path": "100-InBox/AI/Goose - 开源通用 AI Agent.md"
+    },
+    {
       "basename": "Multi-Agent 系统 - 5种协调模式与3层架构",
       "path": "001-TODO/Multi-Agent 系统 - 5种协调模式与3层架构.md"
     },
     {
-      "basename": "Skill Factory - Hermes Agent 元技能自动生成器",
-      "path": "001-TODO/Skill Factory - Hermes Agent 元技能自动生成器.md"
+      "basename": "Hermes Workspace - AI Agent Web 前端工作台",
+      "path": "100-InBox/Hermes/Hermes Workspace - AI Agent Web 前端工作台.md"
     },
     {
-      "basename": "Steve Jobs - 2005 Stanford Commencement Address",
-      "path": "001-TODO/Steve Jobs - 2005 Stanford Commencement Address.md"
+      "basename": "Hermes HUD Web UI - Agent 意识监控仪表盘",
+      "path": "100-InBox/Hermes/Hermes HUD Web UI - Agent 意识监控仪表盘.md"
     },
     {
-      "basename": "index",
-      "path": "index.md"
+      "basename": "Hermes Software-Development Skills",
+      "path": "100-InBox/Hermes/Hermes Software-Development Skills.md"
     },
     {
-      "basename": "rabbitmq",
-      "path": "600-developer/rabbitmq.md"
+      "basename": "Hermes-Xiaomi-MiMo-V2-Pro-Free-AI-Agents",
+      "path": "100-InBox/Hermes/Hermes-Xiaomi-MiMo-V2-Pro-Free-AI-Agents.md"
     },
     {
-      "basename": "28490作日誌寫入機制",
-      "path": "001-TODO/28490作日誌寫入機制.md"
+      "basename": "Linux-从堡垒机连接RDS",
+      "path": "100-InBox/other/Linux-从堡垒机连接RDS.md"
     },
     {
-      "basename": "test",
-      "path": "001-TODO/test.md"
+      "basename": "LLM Knowledge Base - 为Claude Code构建自进化记忆系统",
+      "path": "100-InBox/AI/LLM Knowledge Base - 为Claude Code构建自进化记忆系统.md"
     },
     {
-      "basename": "01-todo",
-      "path": "001-TODO/01-todo.md"
+      "basename": "LLM Wiki + Hermes Agent - 持续积累的AI知识库",
+      "path": "100-InBox/AI/LLM Wiki + Hermes Agent - 持续积累的AI知识库.md"
     },
     {
-      "basename": "3.0拉注單流程",
-      "path": "001-TODO/drawio/3.0拉注單流程.drawio"
+      "basename": "LLM-Wiki-集成方案",
+      "path": "100-InBox/AI/LLM-Wiki-集成方案.md"
     },
     {
-      "basename": "index-202302271939",
-      "path": "001-TODO/drawio/index-202302271939.jpg"
+      "basename": "MiniMax M2.5-本地AI模型指南",
+      "path": "100-InBox/AI/MiniMax M2.5-本地AI模型指南.md"
     },
     {
-      "basename": "index-202302271939",
-      "path": "001-TODO/drawio/index-202302271939.drawio"
-    },
-    {
-      "basename": "devops",
-      "path": "001-TODO/devops.md"
-    },
-    {
-      "basename": "csv導出架構設計-basic",
-      "path": "001-TODO/drawio/csv導出架構設計-basic.drawio"
-    },
-    {
-      "basename": "csv導出架構設計",
-      "path": "001-TODO/drawio/csv導出架構設計.drawio"
-    },
-    {
-      "basename": "code-getway",
-      "path": "001-TODO/code-getway.md"
-    },
-    {
-      "basename": "code copy",
-      "path": "001-TODO/code copy.md"
-    },
-    {
-      "basename": "code",
-      "path": "001-TODO/code.md"
-    },
-    {
-      "basename": "報表下載",
-      "path": "001-TODO/報表下載.md"
-    },
-    {
-      "basename": "3.0服務整體架構",
-      "path": "001-TODO/drawio/3.0服務整體架構.drawio"
-    },
-    {
-      "basename": "spring-spel",
-      "path": "600-developer/spring/spring-spel.md"
-    },
-    {
-      "basename": "spring-sagan",
-      "path": "600-developer/spring/spring-sagan.md"
-    },
-    {
-      "basename": "join-open-source-project",
-      "path": "100-InBox/join-open-source-project.md"
-    },
-    {
-      "basename": "test-templater",
-      "path": "100-InBox/test-templater.md"
-    },
-    {
-      "basename": "Microservices with Node JS and React",
-      "path": "100-InBox/Microservices with Node JS and React.md"
-    },
-    {
-      "basename": "docker-windows",
-      "path": "600-developer/docker/docker-windows.md"
-    },
-    {
-      "basename": "docker-run-command",
-      "path": "600-developer/docker-run-command.md"
-    },
-    {
-      "basename": "mongodb",
-      "path": "600-developer/mongodb.md"
-    },
-    {
-      "basename": "mysql",
-      "path": "600-developer/mysql.md"
-    },
-    {
-      "basename": "install-wslg",
-      "path": "vuepress-blog/blogs/tools/windows/install-wslg.md"
-    },
-    {
-      "basename": "000-MOC-windows",
-      "path": "vuepress-blog/blogs/tools/windows/000-MOC-windows.md"
-    },
-    {
-      "basename": "github",
-      "path": "vuepress-blog/blogs/tools/github.md"
-    },
-    {
-      "basename": "intellij",
-      "path": "600-developer/intellij.md"
-    },
-    {
-      "basename": "JMM",
-      "path": "600-developer/JMM.md"
-    },
-    {
-      "basename": "mysql-index",
-      "path": "vuepress-blog/blogs/database/mysql/mysql-index.md"
-    },
-    {
-      "basename": "Elasticsearch",
-      "path": "600-面試/Elasticsearch.md"
-    },
-    {
-      "basename": "kafka",
-      "path": "600-面試/kafka.drawio"
-    },
-    {
-      "basename": "kafka",
-      "path": "600-面試/kafka.md"
-    },
-    {
-      "basename": "rabbitmq",
-      "path": "600-面試/rabbitmq.md"
-    },
-    {
-      "basename": "redis",
-      "path": "600-面試/redis.md"
-    },
-    {
-      "basename": "springboot-data-redis",
-      "path": "500-spring/springboot-data-redis.md"
-    },
-    {
-      "basename": "SpringBoot-Actuator",
-      "path": "600-面試/SpringBoot-Actuator.md"
-    },
-    {
-      "basename": "k8s",
-      "path": "600-面試/k8s.md"
-    },
-    {
-      "basename": "Mysql",
-      "path": "600-面試/Mysql.md"
-    },
-    {
-      "basename": "JVM",
-      "path": "600-面試/JVM.md"
-    },
-    {
-      "basename": "JUC",
-      "path": "600-面試/JUC.md"
-    },
-    {
-      "basename": "JMM",
-      "path": "600-面試/JMM.md"
-    },
-    {
-      "basename": "23种设计模式",
-      "path": "600-面試/23种设计模式.md"
-    },
-    {
-      "basename": "spring",
-      "path": "500-spring/spring.md"
-    },
-    {
-      "basename": "skaffold",
-      "path": "400-devops/01-Concepts-of-Software-Development/skaffold.md"
-    },
-    {
-      "basename": "pack",
-      "path": "400-devops/03-Containerization/pack.md"
+      "basename": "mlx-engine",
+      "path": "100-InBox/AI/mlx-engine.md"
     }
   ],
   "omittedPaths": [],

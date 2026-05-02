@@ -12,10 +12,7 @@ level: null
 stars: null
 category: "技术"
 summary: "自动化视频制作流程及其实现计划"
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 # 自动化视频制作 Workflow - 实现计划

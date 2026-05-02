@@ -11,10 +11,7 @@ description: |
   可用單一命令操作 20+ Google 服務，支援 MCP Server 整合 Claude Desktop。
 level: beginner
 stars: 5
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 # Google Workspace CLI (GWS) 完整教學指南

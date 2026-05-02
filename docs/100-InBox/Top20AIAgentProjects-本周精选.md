@@ -13,10 +13,7 @@ source: https://www.youtube.com/watch?v=t2qbbBDuv8Q
 author: Manu AGI Tutorials
 category: "技术"
 summary: "本周精选20个AI代理项目，涵盖自主性、本地执行和工作流自动化"
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 # Top 20 AI Agent Projects 本周精选

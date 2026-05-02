@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f624938043c96862",
+        "id": "b229d2271c4ebbbf",
         "type": "tabs",
         "children": [
           {
-            "id": "5fc0ebbb059489f2",
+            "id": "86dc428712667c13",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/Multi-Agent 系统 - 5种协调模式与3层架构.md",
+                "file": "001-TODO/GitNexus - 零服务器代码知识图谱引擎.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Multi-Agent 系统 - 5种协调模式与3层架构"
+              "title": "GitNexus - 零服务器代码知识图谱引擎"
             }
           }
         ]
@@ -76,20 +76,6 @@
             }
           },
           {
-            "id": "6537a3e867a6ff55",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "大綱"
-            }
-          },
-          {
             "id": "20d4ef1aec721f83",
             "type": "leaf",
             "state": {
@@ -125,12 +111,28 @@
               "icon": "clock",
               "title": "Recent Files"
             }
+          },
+          {
+            "id": "6537a3e867a6ff55",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "001-TODO/GitNexus - 零服务器代码知识图谱引擎.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "GitNexus - 零服务器代码知识图谱引擎 的大綱"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 397.5
+    "width": 368.5
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -288,34 +290,47 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "5fc0ebbb059489f2",
+  "active": "86dc428712667c13",
   "lastOpenFiles": [
-    "001-TODO/Skill Factory - Hermes Agent 元技能自动生成器.md",
-    "001-TODO/Steve Jobs - 2005 Stanford Commencement Address.md",
-    "index.md",
+    "001-TODO/Cloudflare Workers 自架短網址 - 10 分鐘完工教學.md",
+    "001-TODO/Agent Skills - 结构化AI编码工作流框架.md",
     "001-TODO/第一性原理 - Naval和Elon Musk的底层思考武器.md",
-    "001-TODO/test.md",
+    "001-TODO/网络配置-CloudDNS与Cloudflare.md",
+    "001-TODO/网络配置-CloudDNS与Cloudflare 1.md",
+    "100-InBox/AI/anomalycoopencode The open source coding agent..md",
+    "001-TODO/Graphify - AI编程助手知识图谱技能.md",
+    "100-InBox/AI/Caveman Compression - LLM 语义压缩方法.md",
+    "100-InBox/claude.md",
+    "100-InBox/AntiGravity-GravityClaw-本地优先AI助手.md",
+    "100-InBox/AI/Andrej Karpathy Skills - AI Coding Agent 行为框架.md",
+    "100-InBox/AI/AI-策略分工布局.md",
+    "100-InBox/AI/零代码AI应用构建神器 - Flowise.md",
+    "100-InBox/AI/提示词公式.md",
+    "100-InBox/AI/自动化视频制作-Workflow.md",
+    "100-InBox/AI/用免费 AI 构建完整 SaaS 应用 — QN 3.6 Plus + OpenCode 实战.md",
+    "001-TODO/小龙虾-OpenClaw版本选择指南.md",
+    "100-InBox/AI/2026-W14 Trending GitHub Open Source Projects.md",
+    "001-TODO/24小时重启系统-彻底摆脱失控感.md",
+    "001-TODO/28490作日誌寫入機制.md",
+    "100-InBox/AI/Claude Code 5种Agent模式 - 从顺序流到自主工作流.md",
+    "100-InBox/AI/images",
+    "100-InBox/AI/Claude Code 使用洞察.md",
+    "100-InBox/AI/Claude Code 斜線指令指南：不再重複輸入提示詞，一鍵搞定常用任務.md",
+    "100-InBox/AI/Claude Code 進階配置與代理人自動化指南.md",
+    "100-InBox/AI/Claude Commands 開發流程：從零到專家的完整指南.md",
+    "100-InBox/AI/Claude_Code_Blueprint.pdf",
+    "100-InBox/AI/Claude-Code-持久化记忆系统.md",
+    "100-InBox/AI/NotebookLM_Export_2026-03-29T13-21-54.pdf",
+    "100-InBox/other",
+    "100-InBox/AI",
+    "100-InBox/Hermes",
     "001-TODO/test-202302271955.png",
-    "001-TODO/01-todo.md",
-    "001-TODO/1.md",
     "001-TODO/drawio/3.0拉注單流程.drawio",
     "001-TODO/drawio/index-202302271939.jpg",
     "001-TODO/drawio",
     "001-TODO/drawio/index-202302271939.drawio",
-    "001-TODO/devops.md",
     "001-TODO/drawio/csv導出架構設計-basic.drawio",
-    "001-TODO/drawio/csv導出架構設計.drawio",
-    "001-TODO/code-getway.md",
-    "001-TODO/code copy.md",
-    "001-TODO/code.md",
-    "001-TODO/報表下載.md",
-    "001-TODO/28490作日誌寫入機制.md",
-    "001-TODO/drawio/3.0服務整體架構.drawio",
-    "001-TODO/test.sql",
-    "001-TODO/drawio/plt.drawio",
     "001-TODO/drawio/index-202302271939.png",
-    "600-developer/spring/spring-sagan.md",
-    "600-developer/spring/spring-spel.md",
     "001-TODO/spring-spel-202302271631.png",
     "001-TODO/spring-spel-202302271521.png",
     "001-TODO/spring-spel-202302271515.png",

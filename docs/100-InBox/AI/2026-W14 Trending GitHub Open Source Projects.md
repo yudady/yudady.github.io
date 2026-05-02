@@ -313,5 +313,5 @@ JavaScript 库，通过代码生成和谐的色彩系统和调色板。
 ## 相关笔记
 
 - [[Claude Code - Anthropic CLI 编码代理]]
-- [[Hermes Agent - 自改进AI代理框架]]
+- [[../Hermes/Hermes Agent - 自改进AI代理框架]]
 - [[GGUF 与 LLM 量化]]

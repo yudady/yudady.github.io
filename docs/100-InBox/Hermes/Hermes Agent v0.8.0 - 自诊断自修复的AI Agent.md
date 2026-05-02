@@ -136,5 +136,5 @@ Hermes 提供了 OpenClaw 用户的专属迁移工具。关键观察点：Hermes
 - [Hermes Agent GitHub](https://github.com/nouseResearch/hermes)
 
 ## 相关笔记
-- [[LLM Wiki + Hermes Agent - 持续积累的AI知识库]]
+- [[../AI/LLM Wiki + Hermes Agent - 持续积累的AI知识库]]
 - [[../../200-Distill/200-AI-Tools/Hermes Agent - 自改进AI代理框架]]

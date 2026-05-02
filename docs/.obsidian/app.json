@@ -18,5 +18,6 @@
   "spellcheckLanguages": null,
   "useMarkdownLinks": false,
   "newLinkFormat": "relative",
-  "defaultViewMode": "source"
+  "defaultViewMode": "source",
+  "showInlineTitle": true
 }

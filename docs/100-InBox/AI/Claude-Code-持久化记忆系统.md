@@ -12,10 +12,7 @@ level: intermediate
 stars: 5
 category: "技术"
 summary: "Claude-Mem 持久化记忆系统完整指南"
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 # Claude-Mem：Claude Code 持久化记忆系统完整指南

@@ -1,16 +1,3 @@
----
-title: Agent Skills — 结构化 AI 编码工作流框架
-aliases: [Addy-Skills, Agent Skills by Addy Osmani]
-tags: [ai-agent, status/active, area/distill, type/doc, topic-ai-workflow]
-source: ["https://www.youtube.com/watch?v=zrbGCYGQr18", "https://github.com/addyosmani/agent-skills"]
-author: Addy Osmani (讲解: AICodeKing)
-created: 2026-04-22 09:12
-updated: 2026-04-22 09:12
-description: |
-  Addy Osmani 的 Agent Skills 仓库：将资深工程师的工作流打包为可复用的 AI 编码代理技能，覆盖从需求定义到上线的完整生命周期。
-level: intermediate
-stars: 4
----
 
 # Agent Skills — 结构化 AI 编码工作流框架
 

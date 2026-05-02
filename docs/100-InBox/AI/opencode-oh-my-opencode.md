@@ -8,10 +8,7 @@ stars:
 title: Oh My OpenCode
 created: 2026-01-26 08:18
 tags: [agent, ai, automation, development, llm, opencode]
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 ## 相关笔记

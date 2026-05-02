@@ -11,10 +11,7 @@ published: 2023-06-12
 created: 2026-02-12 15:36
 description: "#flowise #openai #gpt #langchain #llm 本期视频我们来了解一款零代码AI应用与LLM工作流构建神器，Flowise。https://flowiseai.com/https://github.com/FlowiseAI/Flowise*AI播放列表*https://bit.ly/3HcDxuW"
 tags: ["clippings", flowise, gpt, langchain, llm, openai]
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 

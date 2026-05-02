@@ -10,10 +10,7 @@ updated: 2026-03-03 10:00
 description:
 level:
 stars:
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 # vscode Cline

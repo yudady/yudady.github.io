@@ -28,10 +28,7 @@ level: intermediate
 stars: 5
 category: "技术"
 summary: "探讨AI代理的未来，介绍Skills的概念及其优势"
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 # Claude Code Skills：AI 代理的未來
 

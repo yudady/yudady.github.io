@@ -10,10 +10,7 @@ updated: 2026-03-08 00:13
 description:
 level:
 stars:
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 # nanobot 源码深度分析报告

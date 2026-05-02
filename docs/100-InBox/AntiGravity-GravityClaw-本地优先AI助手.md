@@ -12,10 +12,7 @@ level: null
 stars: null
 category: "技术"
 summary: "介绍基于AntiGravity构建的GravityClaw，一个本地优先的AI私人助手。"
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 # AntiGravity just became UNSTOPPABLE (GravityClaw)

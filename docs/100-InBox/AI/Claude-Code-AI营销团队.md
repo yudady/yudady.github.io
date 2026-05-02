@@ -12,10 +12,7 @@ level: intermediate
 stars: 5
 category: "技术"
 summary: "使用Claude Code构建AI营销团队的完整指南"
-tags:
-  - status/active
-  - area/distill
-  - type/doc
+
 ---
 
 # 用 Claude Code 构建 AI 营销团队完整指南

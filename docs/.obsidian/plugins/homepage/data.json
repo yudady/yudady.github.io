@@ -1,12 +1,16 @@
 {
-  "version": 2,
-  "defaultNote": "index",
-  "useMoment": false,
-  "momentFormat": "YYYY-MM-DD",
-  "workspace": "Home",
-  "workspaceEnabled": true,
-  "hasRibbonIcon": true,
-  "openMode": "Replace all open notes",
-  "view": "Default view",
-  "refreshDataview": false
+  "version": 4,
+  "homepages": {
+    "Main Homepage": {
+      "version": 2,
+      "hasRibbonIcon": true,
+      "openMode": "Replace all open notes",
+      "view": "Default view",
+      "refreshDataview": false,
+      "value": "Home",
+      "kind": "Workspace",
+      "commands": []
+    }
+  },
+  "separateMobile": false
 }

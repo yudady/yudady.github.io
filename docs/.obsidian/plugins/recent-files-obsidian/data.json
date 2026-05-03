@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "index",
+      "path": "index.md"
+    },
+    {
+      "basename": "Rapid-MLX - Apple Silicon 最快本地 AI 推理引擎",
+      "path": "001-TODO/Rapid-MLX - Apple Silicon 最快本地 AI 推理引擎.md"
+    },
+    {
+      "basename": "OpenAI Codex 更新总览 v0.122-v0.128",
+      "path": "001-TODO/OpenAI Codex 更新总览 v0.122-v0.128.md"
+    },
+    {
       "basename": "GitNexus - 零服务器代码知识图谱引擎",
       "path": "001-TODO/GitNexus - 零服务器代码知识图谱引擎.md"
     },
@@ -187,14 +199,6 @@
     {
       "basename": "LLM-Wiki-集成方案",
       "path": "100-InBox/AI/LLM-Wiki-集成方案.md"
-    },
-    {
-      "basename": "MiniMax M2.5-本地AI模型指南",
-      "path": "100-InBox/AI/MiniMax M2.5-本地AI模型指南.md"
-    },
-    {
-      "basename": "mlx-engine",
-      "path": "100-InBox/AI/mlx-engine.md"
     }
   ],
   "omittedPaths": [],

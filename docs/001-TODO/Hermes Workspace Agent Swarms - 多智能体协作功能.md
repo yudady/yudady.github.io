@@ -182,4 +182,4 @@ Orchestrator    = 任务分解 + 自动路由
 - [Hermes Agent 文档](https://hermes-agent.nousresearch.com/docs)
 
 ## 相关笔记
-- [[Rapid-MLX - Apple Silicon 最快本地 AI 推理引擎]]
+- [[../100-InBox/AI/Rapid-MLX - Apple Silicon 最快本地 AI 推理引擎]]

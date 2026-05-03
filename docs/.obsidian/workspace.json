@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b229d2271c4ebbbf",
+        "id": "584f91b5c72a2d40",
         "type": "tabs",
         "children": [
           {
-            "id": "86dc428712667c13",
+            "id": "b240978845ea5ec0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/GitNexus - 零服务器代码知识图谱引擎.md",
+                "file": "001-TODO/GitNexus - AI 代码知识图谱引擎.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "GitNexus - 零服务器代码知识图谱引擎"
+              "title": "GitNexus - AI 代码知识图谱引擎"
             }
           }
         ]
@@ -91,8 +91,8 @@
             "state": {
               "type": "recent-files",
               "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
+              "icon": "lucide-ghost",
+              "title": "recent-files"
             }
           }
         ]
@@ -108,8 +108,8 @@
             "state": {
               "type": "recent-files",
               "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
+              "icon": "lucide-ghost",
+              "title": "recent-files"
             }
           },
           {
@@ -118,13 +118,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/GitNexus - 零服务器代码知识图谱引擎.md",
+                "file": "001-TODO/GitNexus - AI 代码知识图谱引擎.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "GitNexus - 零服务器代码知识图谱引擎 的大綱"
+              "title": "GitNexus - AI 代码知识图谱引擎 的大綱"
             }
           }
         ],
@@ -132,7 +132,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 368.5
+    "width": 301.5
   },
   "right": {
     "id": "17640f5fc7202c27",
@@ -166,16 +166,6 @@
               "state": {},
               "icon": "lucide-ghost",
               "title": "advanced-tables-toolbar"
-            }
-          },
-          {
-            "id": "e4217513315cfc38",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "calendar"
             }
           },
           {
@@ -282,23 +272,30 @@
       "switcher:開啟快速切換": false,
       "graph:查看關聯圖": false,
       "command-palette:開啟命令面板": false,
-      "markdown-importer:開啟 Markdown 格式轉換器": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian42-brat:BRAT": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "obsidian-hypothesis-plugin:Sync your hypothesis highlights": false,
-      "homepage:Open homepage": false
+      "markdown-importer:開啟 Markdown 格式轉換器": false
     }
   },
-  "active": "86dc428712667c13",
+  "active": "b240978845ea5ec0",
   "lastOpenFiles": [
+    "001-TODO/Multi-Agent 系统 - 5种协调模式与3层架构.md",
+    "001-TODO/OpenAI Codex 更新总览 v0.122-v0.128.md",
+    "100-InBox/AI/Qwen 3.6 27B — 面向 Coding Agent 的开源模型.md",
+    "100-InBox/AI/Rapid-MLX - Apple Silicon 最快本地 AI 推理引擎.md",
+    "001-TODO/Llama.cpp + TurboQuant 本地 LLM 部署指南.md",
+    "001-TODO/Graphify - AI编程助手知识图谱技能.md",
+    "001-TODO/GitNexus - AI 代码知识图谱引擎.md",
+    "001-TODO/GitNexus - 零服务器代码知识图谱引擎.md",
+    "001-TODO/Hermes 生态三个 UI 客户端深度对比分析报告.md",
+    "001-TODO/Hermes Workspace Agent Swarms - 多智能体协作功能.md",
+    "100-InBox/AI/Multica - 开源AI代理人管理平台.md",
+    "index.md",
+    "001-TODO/Gemma 4 Browser Assistant - 本地浏览器 AI Agent.md",
     "001-TODO/Cloudflare Workers 自架短網址 - 10 分鐘完工教學.md",
     "001-TODO/Agent Skills - 结构化AI编码工作流框架.md",
     "001-TODO/第一性原理 - Naval和Elon Musk的底层思考武器.md",
     "001-TODO/网络配置-CloudDNS与Cloudflare.md",
     "001-TODO/网络配置-CloudDNS与Cloudflare 1.md",
     "100-InBox/AI/anomalycoopencode The open source coding agent..md",
-    "001-TODO/Graphify - AI编程助手知识图谱技能.md",
     "100-InBox/AI/Caveman Compression - LLM 语义压缩方法.md",
     "100-InBox/claude.md",
     "100-InBox/AntiGravity-GravityClaw-本地优先AI助手.md",
@@ -306,20 +303,8 @@
     "100-InBox/AI/AI-策略分工布局.md",
     "100-InBox/AI/零代码AI应用构建神器 - Flowise.md",
     "100-InBox/AI/提示词公式.md",
-    "100-InBox/AI/自动化视频制作-Workflow.md",
-    "100-InBox/AI/用免费 AI 构建完整 SaaS 应用 — QN 3.6 Plus + OpenCode 实战.md",
-    "001-TODO/小龙虾-OpenClaw版本选择指南.md",
-    "100-InBox/AI/2026-W14 Trending GitHub Open Source Projects.md",
-    "001-TODO/24小时重启系统-彻底摆脱失控感.md",
-    "001-TODO/28490作日誌寫入機制.md",
-    "100-InBox/AI/Claude Code 5种Agent模式 - 从顺序流到自主工作流.md",
     "100-InBox/AI/images",
-    "100-InBox/AI/Claude Code 使用洞察.md",
-    "100-InBox/AI/Claude Code 斜線指令指南：不再重複輸入提示詞，一鍵搞定常用任務.md",
-    "100-InBox/AI/Claude Code 進階配置與代理人自動化指南.md",
-    "100-InBox/AI/Claude Commands 開發流程：從零到專家的完整指南.md",
     "100-InBox/AI/Claude_Code_Blueprint.pdf",
-    "100-InBox/AI/Claude-Code-持久化记忆系统.md",
     "100-InBox/AI/NotebookLM_Export_2026-03-29T13-21-54.pdf",
     "100-InBox/other",
     "100-InBox/AI",

@@ -1,12 +1,5 @@
 {
   "ruleConfigs": {
-    "Escape YAML Special Characters": {
-      "Escapes colons with a space after them (: ), single quotes ('), and double quotes (\") in YAML.": true,
-      "Try to Escape Single Line Arrays": true
-    },
-    "Format Tags in YAML": {
-      "Remove Hashtags from tags in the YAML frontmatter, as they make the tags there invalid.": true
-    },
     "Format Yaml Array": {
       "Allows for the formatting of regular yaml arrays as either multi-line or single-line and `tags` and `aliases` are allowed to have some Obsidian specific yaml formats. Note that single string to single-line goes from a single string entry to a single-line array if more than 1 entry is present. The same is true for single string to multi-line except it becomes a multi-line array.": true,
       "Format yaml aliases section": true,
@@ -16,221 +9,304 @@
       "Force key values to be single-line arrays": "",
       "Force key values to be multi-line arrays": ""
     },
-    "Insert YAML attributes": {
-      "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": true,
-      "Text to insert": "title:\ntags: []\naliases: []\ncreated_date:\nupdated_date:"
-    },
     "Move Tags to Yaml": {
       "Move all tags to Yaml frontmatter of the document.": true,
       "Tags to ignore": "",
       "Body tag operation": "Nothing"
     },
-    "Remove YAML Keys": {
-      "Removes the YAML keys specified": false,
-      "YAML Keys to Remove": ""
-    },
-    "YAML Key Sort": {
-      "Sorts the YAML keys based on the order and priority specified. Note: may remove blank lines as well.": true,
-      "YAML Key Priority Sort Order": "",
-      "Priority Keys at Start of YAML": true,
-      "YAML Sort Order for Other Keys": "None"
-    },
-    "YAML Timestamp": {
-      "Keep track of the date the file was last edited in the YAML front matter. Gets dates from file metadata.": true,
-      "Date Created": true,
-      "Date Created Key": "created_date",
-      "Date Modified": true,
-      "Date Modified Key": "updated_date",
-      "Format": "YYYY-MM-DD HH:mm"
-    },
-    "YAML Title": {
-      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename if there is no H1.": true,
-      "Title Key": "title",
-      "Inserts the title of the file into the YAML frontmatter. Gets the title from the first H1 or filename.": true
-    },
-    "YAML Title Alias": {
-      "Inserts the title of the file into the YAML frontmatter's aliases section. Gets the title from the first H1 or filename.": true,
-      "Preserve existing aliases section style": true,
-      "Keep alias that matches the filename": true,
-      "Use the YAML key `linter-yaml-title-alias` to help with filename and heading changes": false
-    },
-    "Capitalize Headings": {
-      "Headings should be formatted with capitalization": false,
-      "Style": "Title Case",
-      "Ignore Cased Words": true,
-      "Ignore Words": "macOS, iOS, iPhone, iPad, JavaScript, TypeScript, AppleScript",
-      "Lowercase Words": "via, a, an, the, and, or, but, for, nor, so, yet, at, by, in, of, on, to, up, as, is, if, it, for, to, with, without, into, onto, per"
-    },
-    "File Name Heading": {
-      "Inserts the file name as a H1 heading if no H1 heading exists.": true
-    },
-    "Header Increment": {
-      "Heading levels should only increment by one level at a time": false
-    },
-    "Footnote after Punctuation": {
-      "Ensures that footnote references are placed after punctuation, not before.": false
-    },
-    "Move Footnotes to the bottom": {
-      "Move all footnotes to the bottom of the document.": false
-    },
-    "Re-Index Footnotes": {
-      "Re-indexes footnote keys and footnote, based on the order of occurrence (NOTE: This rule deliberately does *not* preserve the relation between key and footnote, to be able to re-index duplicate keys.)": false,
-      "Re-indexes footnote keys and footnote, based on the order of occurence (NOTE: This rule deliberately does *not* preserve the relation between key and footnote, to be able to re-index duplicate keys.)": false
-    },
-    "Convert Bullet List Markers": {
-      "Converts common bullet list marker symbols to markdown list markers.": false
-    },
-    "Emphasis Style": {
-      "Makes sure the emphasis style is consistent.": false,
-      "Style": "consistent"
-    },
-    "No Bare URLs": {
-      "Encloses bare URLs with angle brackets except when enclosed in back ticks, square braces, or single or double quotes.": false
-    },
-    "Ordered List Style": {
-      "Makes sure that ordered lists follow the style specified. Note that 2 spaces or 1 tab is considered to be an indentation level.": false,
-      "Number Style": "ascending",
-      "Ordered List Indicator End Style": "."
-    },
-    "Proper Ellipsis": {
-      "Replaces three consecutive dots with an ellipsis.": false
-    },
-    "Remove Consecutive List Markers": {
-      "Removes consecutive list markers. Useful when copy-pasting list items.": false
-    },
-    "Remove Empty List Markers": {
-      "Removes empty list markers, i.e. list items without content.": false
-    },
-    "Remove Hyphenated Line Breaks": {
-      "Removes hyphenated line breaks. Useful when pasting text from textbooks.": false
-    },
-    "Remove Multiple Spaces": {
-      "Removes two or more consecutive spaces. Ignores spaces at the beginning and ending of the line. ": false
-    },
-    "Strong Style": {
-      "Makes sure the strong style is consistent.": false,
-      "Style": "consistent"
-    },
     "Two Spaces Between Lines with Content": {
       "Makes sure that two spaces are added to the ends of lines with content continued on the next line for paragraphs, blockquotes, and list items": false
-    },
-    "Unordered List Style": {
-      "Makes sure that unordered lists follow the style specified.": false,
-      "List item style": "consistent"
-    },
-    "Compact YAML": {
-      "Removes leading and trailing blank lines in the YAML front matter.": true,
-      "Inner New Lines": true
-    },
-    "Consecutive blank lines": {
-      "There should be at most one consecutive blank line.": false
-    },
-    "Convert Spaces to Tabs": {
-      "Converts leading spaces to tabs.": false,
-      "Tabsize": "4"
-    },
-    "Empty Line Around Blockquotes": {
-      "Ensures that there is an empty line around blockquotes unless they start or end a document. **Note that an empty line is either one less level of nesting for blockquotes or a newline character.**": true
-    },
-    "Empty Line Around Code Fences": {
-      "Ensures that there is an empty line around code fences unless they start or end a document.": true
-    },
-    "Empty Line Around Tables": {
-      "Ensures that there is an empty line around github flavored tables unless they start or end a document.": true
-    },
-    "Heading blank lines": {
-      "All headings have a blank line both before and after (except where the heading is at the beginning or end of the document).": true,
-      "Bottom": true,
-      "Empty Line Between Yaml and Header": true
-    },
-    "Line Break at Document End": {
-      "Ensures that there is exactly one line break at the end of a document.": true
-    },
-    "Paragraph blank lines": {
-      "All paragraphs should have exactly one blank line both before and after.": false
-    },
-    "Remove Empty Lines Between List Markers and Checklists": {
-      "There should not be any empty lines between list markers and checklists.": false
-    },
-    "Remove link spacing": {
-      "Removes spacing around link text.": true
     },
     "Remove Space around Fullwidth Characters": {
       "Ensures that fullwidth characters are not followed by whitespace (either single spaces or a tab). Note that this may causes issues with markdown format in some cases.": false
     },
-    "Space after list markers": {
-      "There should be a single space after list markers and checkboxes.": true
+    "escape-yaml-special-characters": {
+      "enabled": true,
+      "try-to-escape-single-line-arrays": true
     },
-    "Trailing spaces": {
-      "Removes extra spaces after every line.": false,
-      "Two Space Linebreak": false
+    "force-yaml-escape": {
+      "enabled": false,
+      "force-yaml-escape-keys": ""
     },
-    "Space between Chinese Japanese or Korean and English or numbers": {
-      "Ensures that Chinese, Japanese, or Korean and English or numbers are separated by a single space. Follows these [guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)": true
+    "format-tags-in-yaml": {
+      "enabled": true
     },
-    "Force YAML Escape": {
-      "Escapes the values for the specified YAML keys.": false,
-      "Force YAML Escape on Keys": ""
+    "insert-yaml-attributes": {
+      "enabled": true,
+      "text-to-insert": "title:\ntags: []\naliases: []\ncreated_date:\nupdated_date:"
     },
-    "Headings Start Line": {
-      "Headings that do not start a line will have their preceding whitespace removed to make sure they get recognized as headers.": false
+    "remove-yaml-keys": {
+      "enabled": false,
+      "yaml-keys-to-remove": ""
     },
-    "Remove Trailing Punctuation in Heading": {
-      "Removes the specified punctuation from the end of headings making sure to ignore the semicolon at the end of [HTML entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references).": false,
-      "Trailing Punctuation": ".,;:!。，；：！"
+    "yaml-key-sort": {
+      "enabled": false,
+      "yaml-key-priority-sort-order": "",
+      "priority-keys-at-start-of-yaml": true,
+      "yaml-sort-order-for-other-keys": "None"
     },
-    "Auto-correct Common Misspellings": {
-      "Uses a dictionary of common misspellings to automatically convert them to their proper spellings. See [auto-correct map](https://github.com/platers/obsidian-linter/tree/master/src/utils/auto-correct-misspellings.ts) for the full list of auto-corrected words.": false,
-      "Ignore Words": ""
+    "yaml-timestamp": {
+      "enabled": true,
+      "date-created": true,
+      "date-created-key": "created_date",
+      "date-created-source-of-truth": "file system",
+      "date-modified": true,
+      "date-modified-key": "updated_date",
+      "date-modified-source-of-truth": "file system",
+      "format": "YYYY-MM-DD HH:mm",
+      "convert-to-utc": false,
+      "update-on-file-contents-updated": "never"
     },
-    "Empty Line Around Math Blocks": {
-      "Ensures that there is an empty line around math blocks using `Number of Dollar Signs to Indicate a Math Block` to determine how many dollar signs indicates a math block for single-line math.": true
+    "yaml-title": {
+      "enabled": false,
+      "title-key": "title",
+      "mode": "first-h1-or-filename-if-h1-missing"
     },
-    "Move Math Block Indicators to Their Own Line": {
-      "Move all starting and ending math block indicators to their own lines using `Number of Dollar Signs to Indicate a Math Block` to determine how many dollar signs indicates a math block for single-line math.": false
+    "yaml-title-alias": {
+      "enabled": false,
+      "preserve-existing-alias-section-style": true,
+      "keep-alias-that-matches-the-filename": true,
+      "use-yaml-key-to-keep-track-of-old-filename-or-heading": true,
+      "alias-helper-key": "linter-yaml-title-alias"
     },
-    "Remove Space around Characters": {
-      "Ensures that certain characters are not surrounded by whitespace (either single spaces or a tab). Note that this may causes issues with markdown format in some cases.": true,
-      "Include Fullwidth Forms": true,
-      "Include CJK Symbols and Punctuation": true,
-      "Include Dashes": true,
-      "Other symbols": ""
+    "capitalize-headings": {
+      "enabled": false,
+      "style": "Title Case",
+      "ignore-case-words": true,
+      "ignore-words": "macOS, iOS, iPhone, iPad, JavaScript, TypeScript, AppleScript",
+      "lowercase-words": "via, a, an, the, and, or, but, for, nor, so, yet, at, by, in, of, on, to, up, as, is, if, it, for, to, with, without, into, onto, per"
     },
-    "Add Blockquote Indentation on Paste": {
-      "Adds blockquotes to all but the first line, when the cursor is in a blockquote/callout line during pasting": false
+    "file-name-heading": {
+      "enabled": true
     },
-    "Prevent Double Checklist Indicator on Paste": {
-      "Removes starting checklist indicator from the text to paste if the line the cursor is on in the file has a checklist indicator": false
+    "header-increment": {
+      "enabled": false,
+      "start-at-h2": false
     },
-    "Prevent Double List Item Indicator on Paste": {
-      "Removes starting list indicator from the text to paste if the line the cursor is on in the file has a list indicator": false
+    "headings-start-line": {
+      "enabled": false
     },
-    "Proper Ellipsis on Paste": {
-      "Replaces three consecutive dots with an ellipsis even if they have a space between them in the text to paste": false
+    "remove-trailing-punctuation-in-heading": {
+      "enabled": false,
+      "punctuation-to-remove": ".,;:!。，；：！"
     },
-    "Remove Hyphens on Paste": {
-      "Removes hyphens from the text to paste": false
+    "footnote-after-punctuation": {
+      "enabled": false
     },
-    "Remove Leading or Trailing Whitespace on Paste": {
-      "Removes any leading non-tab whitespace and all trailing whitespace for the text to paste": true
+    "move-footnotes-to-the-bottom": {
+      "enabled": false,
+      "include-blank-line-between-footnotes": false
     },
-    "Remove Leftover Footnotes from Quote on Paste": {
-      "Removes any leftover footnote references for the text to paste": false
+    "re-index-footnotes": {
+      "enabled": false
     },
-    "Remove Multiple Blank Lines on Paste": {
-      "Condenses multiple blank lines down into one blank line for the text to paste": false
+    "auto-correct-common-misspellings": {
+      "enabled": false,
+      "ignore-words": "",
+      "skip-words-with-multiple-capitals": false,
+      "extra-auto-correct-files": []
+    },
+    "convert-bullet-list-markers": {
+      "enabled": false
+    },
+    "emphasis-style": {
+      "enabled": false,
+      "style": "consistent"
+    },
+    "no-bare-urls": {
+      "enabled": false,
+      "no-bare-uris": false
+    },
+    "ordered-list-style": {
+      "enabled": false,
+      "number-style": "ascending",
+      "list-end-style": "."
+    },
+    "proper-ellipsis": {
+      "enabled": false
+    },
+    "remove-consecutive-list-markers": {
+      "enabled": false
+    },
+    "remove-empty-list-markers": {
+      "enabled": false
+    },
+    "remove-hyphenated-line-breaks": {
+      "enabled": false
+    },
+    "remove-multiple-spaces": {
+      "enabled": false
+    },
+    "strong-style": {
+      "enabled": false,
+      "style": "consistent"
+    },
+    "unordered-list-style": {
+      "enabled": false,
+      "list-style": "consistent"
+    },
+    "compact-yaml": {
+      "enabled": true,
+      "inner-new-lines": true
+    },
+    "consecutive-blank-lines": {
+      "enabled": false
+    },
+    "convert-spaces-to-tabs": {
+      "enabled": false,
+      "tabsize": "4"
+    },
+    "empty-line-around-blockquotes": {
+      "enabled": false
+    },
+    "empty-line-around-code-fences": {
+      "enabled": true
+    },
+    "empty-line-around-math-blocks": {
+      "enabled": false
+    },
+    "empty-line-around-tables": {
+      "enabled": true
+    },
+    "heading-blank-lines": {
+      "enabled": false,
+      "bottom": true,
+      "empty-line-after-yaml": true
+    },
+    "line-break-at-document-end": {
+      "enabled": false
+    },
+    "move-math-block-indicators-to-their-own-line": {
+      "enabled": false
+    },
+    "paragraph-blank-lines": {
+      "enabled": false
+    },
+    "remove-empty-lines-between-list-markers-and-checklists": {
+      "enabled": false
+    },
+    "remove-link-spacing": {
+      "enabled": true
+    },
+    "remove-space-around-characters": {
+      "enabled": false,
+      "include-fullwidth-forms": true,
+      "include-cjk-symbols-and-punctuation": true,
+      "include-dashes": true,
+      "other-symbols": ""
+    },
+    "space-after-list-markers": {
+      "enabled": true
+    },
+    "space-between-chinese-japanese-or-korean-and-english-or-numbers": {
+      "enabled": false,
+      "english-symbols-punctuation-before": "-+;:'\"°%$)]",
+      "english-symbols-punctuation-after": "-+'\"([¥$"
+    },
+    "trailing-spaces": {
+      "enabled": false,
+      "two-space-line-break": false
+    },
+    "add-blockquote-indentation-on-paste": {
+      "enabled": false
+    },
+    "prevent-double-checklist-indicator-on-paste": {
+      "enabled": false
+    },
+    "prevent-double-list-item-indicator-on-paste": {
+      "enabled": false
+    },
+    "proper-ellipsis-on-paste": {
+      "enabled": false
+    },
+    "remove-hyphens-on-paste": {
+      "enabled": false
+    },
+    "remove-leading-or-trailing-whitespace-on-paste": {
+      "enabled": true
+    },
+    "remove-leftover-footnotes-from-quote-on-paste": {
+      "enabled": false
+    },
+    "remove-multiple-blank-lines-on-paste": {
+      "enabled": false
+    },
+    "add-blank-line-after-yaml": {
+      "enabled": false
+    },
+    "dedupe-yaml-array-values": {
+      "enabled": false,
+      "dedupe-alias-key": true,
+      "dedupe-tag-key": true,
+      "dedupe-array-keys": true,
+      "ignore-keys": ""
+    },
+    "format-yaml-array": {
+      "enabled": false,
+      "alias-key": true,
+      "tag-key": true,
+      "default-array-style": "single-line",
+      "default-array-keys": true,
+      "force-single-line-array-style": "",
+      "force-multi-line-array-style": ""
+    },
+    "move-tags-to-yaml": {
+      "enabled": false,
+      "how-to-handle-existing-tags": "Nothing",
+      "tags-to-ignore": ""
+    },
+    "sort-yaml-array-values": {
+      "enabled": false,
+      "sort-alias-key": true,
+      "sort-tag-key": true,
+      "sort-array-keys": true,
+      "ignore-keys": "",
+      "sort-order": "Ascending Alphabetical"
+    },
+    "blockquote-style": {
+      "enabled": false,
+      "style": "space"
+    },
+    "default-language-for-code-fences": {
+      "enabled": false,
+      "default-language": ""
+    },
+    "quote-style": {
+      "enabled": false,
+      "single-quote-enabled": true,
+      "single-quote-style": "''",
+      "double-quote-enabled": true,
+      "double-quote-style": "\"\""
+    },
+    "two-spaces-between-lines-with-content": {
+      "enabled": false,
+      "line-break-indicator": "  "
+    },
+    "empty-line-around-horizontal-rules": {
+      "enabled": false
+    },
+    "remove-space-before-or-after-characters": {
+      "enabled": false,
+      "characters-to-remove-space-before": ",!?;:).’”]",
+      "characters-to-remove-space-after": "¿¡‘“(["
     }
   },
   "lintOnSave": true,
   "recordLintOnSaveLogs": false,
   "displayChanged": false,
+  "suppressMessageWhenNoChange": false,
+  "lintOnFileChange": false,
+  "displayLintOnFileChangeNotice": false,
+  "settingsConvertedToConfigKeyValues": true,
+  "additionalFileExtensions": [],
   "foldersToIgnore": [
     "002-Capture",
     "templates",
     "hidden-folder"
   ],
+  "filesToIgnore": [],
   "linterLocale": "system-default",
-  "logLevel": 4,
+  "logLevel": "ERROR",
   "lintCommands": [],
   "customRegexes": [],
   "commonStyles": {

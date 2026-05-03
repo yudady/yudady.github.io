@@ -91,13 +91,20 @@ pip install -U rapid-mlx
 rapid-mlx serve qwen3.6-27b    # dense 27B, 14.9GB, 36.5 tok/s
 rapid-mlx serve qwen3.6-35b    # MoE 35B-A3B, 19GB, 92 tok/s
 
+
+```
+curl http://localhost:8000/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{"model":"default","messages":[{"role":"user","content":"Say hello"}]}'
+```
+
 ### New Aliases
 
-| 別名  | Model | RAM | 速度  |
-| --- | --- | --- | --- |
-| `qwen3.6-27b` | mlx-community/Qwen3.6-27B-4bit | 14.9 GB | 36.5 tok/s |
-| `qwen3.6-27b-8bit` | unsloth/Qwen3.6-27B-MLX-8bit | 32.3 GB | 18.9 tok/s |
-| `qwen3.6-35b-6bit` | mlx-community/Qwen3.6-35B-A3B-6bit | 約 28 GB | ~72 tok/s |
+| 別名                 | Model                              | RAM     | 速度         |
+| ------------------ | ---------------------------------- | ------- | ---------- |
+| `qwen3.6-27b`      | mlx-community/Qwen3.6-27B-4bit     | 14.9 GB | 36.5 tok/s |
+| `qwen3.6-27b-8bit` | unsloth/Qwen3.6-27B-MLX-8bit       | 32.3 GB | 18.9 tok/s |
+| `qwen3.6-35b-6bit` | mlx-community/Qwen3.6-35B-A3B-6bit | 約 28 GB | ~72 tok/s  |
 
 ### Highlights
 

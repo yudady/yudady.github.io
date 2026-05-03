@@ -147,6 +147,7 @@ gitnexus analyze
 
 # 完整索引（含语义向量 + 模块 Skills）
 gitnexus analyze --embeddings --skills
+npx gitnexus analyze --embeddings --skills
 ```
 
 ### MCP 配置（各编辑器）

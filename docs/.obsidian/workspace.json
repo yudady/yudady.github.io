@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/GitNexus - AI 代码知识图谱引擎.md",
+                "file": "001-TODO/小龙虾-OpenClaw版本选择指南.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "GitNexus - AI 代码知识图谱引擎"
+              "title": "小龙虾-OpenClaw版本选择指南"
             }
           }
         ]
@@ -118,13 +118,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/GitNexus - AI 代码知识图谱引擎.md",
+                "file": "001-TODO/小龙虾-OpenClaw版本选择指南.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "GitNexus - AI 代码知识图谱引擎 的大綱"
+              "title": "小龙虾-OpenClaw版本选择指南 的大綱"
             }
           }
         ],
@@ -277,20 +277,23 @@
   },
   "active": "b240978845ea5ec0",
   "lastOpenFiles": [
+    "001-TODO/六款免费Mac软件推荐 - 蓝诺LANNO.md",
+    "001-TODO/小龙虾-OpenClaw版本选择指南.md",
+    "100-InBox/AI/Anthropic 三大付费工具的开源替代方案.md",
+    "100-InBox/AI/Cloudflare Workers 自架短網址 - 10 分鐘完工教學.md",
+    "001-TODO/Gemma 4 Browser Assistant - 本地浏览器 AI Agent.md",
+    "001-TODO/Graphify - AI编程助手知识图谱技能.md",
+    "100-InBox/Hermes/Hermes 生态三个 UI 客户端深度对比分析报告.md",
+    "100-InBox/AI/Llama.cpp + TurboQuant 本地 LLM 部署指南.md",
     "001-TODO/Multi-Agent 系统 - 5种协调模式与3层架构.md",
     "001-TODO/OpenAI Codex 更新总览 v0.122-v0.128.md",
+    "001-TODO/GitNexus - AI 代码知识图谱引擎.md",
     "100-InBox/AI/Qwen 3.6 27B — 面向 Coding Agent 的开源模型.md",
     "100-InBox/AI/Rapid-MLX - Apple Silicon 最快本地 AI 推理引擎.md",
-    "001-TODO/Llama.cpp + TurboQuant 本地 LLM 部署指南.md",
-    "001-TODO/Graphify - AI编程助手知识图谱技能.md",
-    "001-TODO/GitNexus - AI 代码知识图谱引擎.md",
     "001-TODO/GitNexus - 零服务器代码知识图谱引擎.md",
-    "001-TODO/Hermes 生态三个 UI 客户端深度对比分析报告.md",
     "001-TODO/Hermes Workspace Agent Swarms - 多智能体协作功能.md",
     "100-InBox/AI/Multica - 开源AI代理人管理平台.md",
     "index.md",
-    "001-TODO/Gemma 4 Browser Assistant - 本地浏览器 AI Agent.md",
-    "001-TODO/Cloudflare Workers 自架短網址 - 10 分鐘完工教學.md",
     "001-TODO/Agent Skills - 结构化AI编码工作流框架.md",
     "001-TODO/第一性原理 - Naval和Elon Musk的底层思考武器.md",
     "001-TODO/网络配置-CloudDNS与Cloudflare.md",
@@ -300,9 +303,6 @@
     "100-InBox/claude.md",
     "100-InBox/AntiGravity-GravityClaw-本地优先AI助手.md",
     "100-InBox/AI/Andrej Karpathy Skills - AI Coding Agent 行为框架.md",
-    "100-InBox/AI/AI-策略分工布局.md",
-    "100-InBox/AI/零代码AI应用构建神器 - Flowise.md",
-    "100-InBox/AI/提示词公式.md",
     "100-InBox/AI/images",
     "100-InBox/AI/Claude_Code_Blueprint.pdf",
     "100-InBox/AI/NotebookLM_Export_2026-03-29T13-21-54.pdf",

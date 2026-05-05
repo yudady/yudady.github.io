@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/Codex goal 底层逻辑 - Ralph Loop 与长时间自主编码.md",
+                "file": "100-InBox/AI/小龙虾-OpenClaw版本选择指南.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Codex goal 底层逻辑 - Ralph Loop 与长时间自主编码"
+              "title": "小龙虾-OpenClaw版本选择指南"
             }
           }
         ]
@@ -118,13 +118,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/Codex goal 底层逻辑 - Ralph Loop 与长时间自主编码.md",
+                "file": "100-InBox/AI/小龙虾-OpenClaw版本选择指南.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Codex goal 底层逻辑 - Ralph Loop 与长时间自主编码 的大綱"
+              "title": "小龙虾-OpenClaw版本选择指南 的大綱"
             }
           }
         ],
@@ -275,10 +275,12 @@
       "markdown-importer:開啟 Markdown 格式轉換器": false
     }
   },
-  "active": "b240978845ea5ec0",
+  "active": "b1ae197fff4bfdd1",
   "lastOpenFiles": [
-    "001-TODO/OpenAI Codex 更新总览 v0.122-v0.128.md",
+    "001-TODO/Stanford AI 系統課程精華 - Beyond LLM 技術地圖.md",
+    "001-TODO/Transformers.js Gemma 4 Browser Assistant - 浏览器内本地 AI Agent.md",
     "001-TODO/Codex goal 底层逻辑 - Ralph Loop 与长时间自主编码.md",
+    "001-TODO/OpenAI Codex 更新总览 v0.122-v0.128.md",
     "001-TODO/Multi-Agent 系统 - 5种协调模式与3层架构.md",
     "001-TODO/Hermes Workspace Agent Swarms - 多智能体协作功能.md",
     "001-TODO/Hermes Agent v0.11-v0.12 - Kanban 多智能体工作流.md",
@@ -287,7 +289,7 @@
     "100-InBox/AI/GitNexus - 零服务器代码知识图谱引擎.md",
     "100-InBox/AI/Gemma 4 Browser Assistant - 本地浏览器 AI Agent.md",
     "001-TODO/Agent Skills - 结构化AI编码工作流框架.md",
-    "001-TODO/小龙虾-OpenClaw版本选择指南.md",
+    "100-InBox/AI/小龙虾-OpenClaw版本选择指南.md",
     "001-TODO/六款免费Mac软件推荐 - 蓝诺LANNO.md",
     "100-InBox/AI/Anthropic 三大付费工具的开源替代方案.md",
     "100-InBox/AI/Cloudflare Workers 自架短網址 - 10 分鐘完工教學.md",
@@ -301,8 +303,6 @@
     "001-TODO/网络配置-CloudDNS与Cloudflare.md",
     "001-TODO/网络配置-CloudDNS与Cloudflare 1.md",
     "100-InBox/AI/anomalycoopencode The open source coding agent..md",
-    "100-InBox/AI/Caveman Compression - LLM 语义压缩方法.md",
-    "100-InBox/claude.md",
     "100-InBox/AI/images",
     "100-InBox/AI/Claude_Code_Blueprint.pdf",
     "100-InBox/AI/NotebookLM_Export_2026-03-29T13-21-54.pdf",

@@ -221,15 +221,15 @@ Nico 构建了一个叫 **WebMCP** 的工具调用层，将浏览器工具规范
 
 ### 可用工具
 
-| 工具名 | 功能 | 说明 |
-|--------|------|------|
-| `get_open_tabs` | 列出所有打开的标签页 | 返回标题和 URL |
-| `go_to_tab` | 切换到指定标签页 | 支持语义匹配 |
-| `open_url` | 打开新 URL | 前台/后台可选 |
-| `close_tab` | 关闭标签页 | — |
-| `find_history` | 语义搜索浏览历史 | 基于 IndexedDB 向量库 |
-| `ask_website` | 读取并总结页面内容 | RAG：提取 → 嵌入 → 检索 → 生成 |
-| `highlight_website_element` | 高亮页面元素 | 滚动到目标段落并高亮 |
+| 工具名                         | 功能         | 说明                    |
+| --------------------------- | ---------- | --------------------- |
+| `get_open_tabs`             | 列出所有打开的标签页 | 返回标题和 URL             |
+| `go_to_tab`                 | 切换到指定标签页   | 支持语义匹配                |
+| `open_url`                  | 打开新 URL    | 前台/后台可选               |
+| `close_tab`                 | 关闭标签页      | —                     |
+| `find_history`              | 语义搜索浏览历史   | 基于 IndexedDB 向量库      |
+| `ask_website`               | 读取并总结页面内容  | RAG：提取 → 嵌入 → 检索 → 生成 |
+| `highlight_website_element` | 高亮页面元素     | 滚动到目标段落并高亮            |
 
 ### Gemma 4 的 Tool Calling 格式
 

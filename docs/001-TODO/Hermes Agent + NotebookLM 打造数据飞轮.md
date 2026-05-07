@@ -317,6 +317,6 @@ rookiepy 从 Chrome 读取最新 cookies
 
 ## 相关笔记
 
-- [[notebooklm-py - NotebookLM Python API 与 Agent Skill]]
+- [[../100-InBox/Hermes/notebooklm-py - NotebookLM Python API 与 Agent Skill]]
 - [[Gemini 整合 NotebookLM + 多模态文件输出]]
 - [[OpenClaw - ChatGPT Plus OAuth 免 API 费用使用]]

@@ -126,9 +126,33 @@
               "icon": "lucide-file",
               "title": "Hermes Agent v0.13.0 - The Tenacity Release"
             }
+          },
+          {
+            "id": "d500ca272aa736de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "001-TODO/oMLX vs Ollama - SSD KV缓存与Apple Silicon推理对比.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "oMLX vs Ollama - SSD KV缓存与Apple Silicon推理对比"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -215,13 +239,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/Hermes Agent v0.13.0 - The Tenacity Release.md",
+                "file": "001-TODO/oMLX vs Ollama - SSD KV缓存与Apple Silicon推理对比.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Hermes Agent v0.13.0 - The Tenacity Release 的大綱"
+              "title": "oMLX vs Ollama - SSD KV缓存与Apple Silicon推理对比 的大綱"
             }
           }
         ],
@@ -372,12 +396,13 @@
       "markdown-importer:開啟 Markdown 格式轉換器": false
     }
   },
-  "active": "93b6abf1ad162f03",
+  "active": "d500ca272aa736de",
   "lastOpenFiles": [
+    "001-TODO/Hermes Agent v0.13.0 - The Tenacity Release.md",
+    "001-TODO/oMLX vs Ollama - SSD KV缓存与Apple Silicon推理对比.md",
     "001-TODO/Hermes Agent v0.11-v0.12 - Kanban 多智能体工作流.md",
     "001-TODO/Hermes Workspace Agent Swarms - 多智能体协作功能.md",
     "001-TODO/DeepSeek V4 杠杆机会与 Token Efficiency 实践.md",
-    "001-TODO/Hermes Agent v0.13.0 - The Tenacity Release.md",
     "001-TODO/Google DESIGN.md - AI 设计规范文件.md",
     "100-InBox/Hermes/notebooklm-py - NotebookLM Python API 与 Agent Skill.md",
     "001-TODO/GBrain Query Skill - YC 总裁的 AI Agent 知识系统拆解.md",
@@ -399,7 +424,6 @@
     "100-InBox/AI/小龙虾-OpenClaw版本选择指南.md",
     "001-TODO/Multi-Agent 系统 - 5种协调模式与3层架构.md",
     "100-InBox/AI/Graphify - AI编程助手知识图谱技能.md",
-    "100-InBox/AI/GitNexus - AI 代码知识图谱引擎.md",
     "100-InBox/AI/images",
     "100-InBox/AI/Claude_Code_Blueprint.pdf",
     "100-InBox/AI/NotebookLM_Export_2026-03-29T13-21-54.pdf",

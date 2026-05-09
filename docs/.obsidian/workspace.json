@@ -398,6 +398,7 @@
   },
   "active": "d500ca272aa736de",
   "lastOpenFiles": [
+    "001-TODO/Ollama MLX 后端 - Mac本地模型速度翻倍指南.md",
     "001-TODO/Hermes Agent v0.13.0 - The Tenacity Release.md",
     "001-TODO/oMLX vs Ollama - SSD KV缓存与Apple Silicon推理对比.md",
     "001-TODO/Hermes Agent v0.11-v0.12 - Kanban 多智能体工作流.md",
@@ -423,7 +424,6 @@
     "001-TODO/OpenAI Codex 更新总览 v0.122-v0.128.md",
     "100-InBox/AI/小龙虾-OpenClaw版本选择指南.md",
     "001-TODO/Multi-Agent 系统 - 5种协调模式与3层架构.md",
-    "100-InBox/AI/Graphify - AI编程助手知识图谱技能.md",
     "100-InBox/AI/images",
     "100-InBox/AI/Claude_Code_Blueprint.pdf",
     "100-InBox/AI/NotebookLM_Export_2026-03-29T13-21-54.pdf",

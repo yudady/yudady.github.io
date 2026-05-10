@@ -361,5 +361,5 @@ notebooklm-py
 
 ## 相关笔记
 
-- [[Gemini 整合 NotebookLM + 多模态文件输出]]
+- [[../AI/Gemini 整合 NotebookLM + 多模态文件输出]]
 - [[Andrew Wilkinson 六层 AI 架构]]

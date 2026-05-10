@@ -281,5 +281,5 @@ NotebookLM 中的写作风格设定会自动影响输出，保持人设一致性
 - [腾讯云：NotebookLM + Gemini 外挂模式](https://cloud.tencent.com/developer/article/2631918)
 
 ## 相关笔记
-- [[NotebookLM - Gemini CLI 批量生成简报提示词工作流]]
+- [[../100-InBox/AI/NotebookLM - Gemini CLI 批量生成简报提示词工作流]]
 - [[NotebookLM]]

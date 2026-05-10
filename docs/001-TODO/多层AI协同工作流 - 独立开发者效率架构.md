@@ -307,5 +307,5 @@ OpenClaw 自动执行:
 
 ## 相关笔记
 
-- [[Ollama MLX 后端 - Mac本地模型速度翻倍指南]]
-- [[oMLX vs Ollama - SSD KV缓存与Apple Silicon推理对比]]
+- [[../100-InBox/AI/Ollama MLX 后端 - Mac本地模型速度翻倍指南]]
+- [[../100-InBox/AI/oMLX vs Ollama - SSD KV缓存与Apple Silicon推理对比]]

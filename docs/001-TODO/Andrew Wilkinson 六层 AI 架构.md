@@ -380,5 +380,5 @@ Wilkinson 在 Tiny 已经放慢收购软件公司的速度，因为编程不再�
 
 ## 相关笔记
 
-- [[OpenClaw - ChatGPT Plus OAuth 免 API 费用使用]]
+- [[../100-InBox/AI/OpenClaw - ChatGPT Plus OAuth 免 API 费用使用]]
 - [[AI Agent]]

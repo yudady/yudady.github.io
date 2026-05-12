@@ -133,7 +133,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/Harness Engineering - 把 Agent 每次失敗變成永久規則.md",
+                "file": "001-TODO/2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -148,7 +148,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Harness Engineering - 把 Agent 每次失敗變成永久規則"
+              "title": "2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战"
             }
           }
         ],
@@ -239,13 +239,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/Harness Engineering - 把 Agent 每次失敗變成永久規則.md",
+                "file": "001-TODO/2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Harness Engineering - 把 Agent 每次失敗變成永久規則 的大綱"
+              "title": "2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战 的大綱"
             }
           }
         ],
@@ -398,12 +398,13 @@
   },
   "active": "d500ca272aa736de",
   "lastOpenFiles": [
+    "001-TODO/Harness Engineering - 把 Agent 每次失敗變成永久規則.md",
+    "001-TODO/2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战.md",
     "001-TODO/Anthropic Managed Agents - 解耦大脑与双手的 Agent 操作系统.md",
     "001-TODO/Andrew Wilkinson 六层 AI 架构.md",
     "001-TODO/Gemini + NotebookLM 数字分身工作流.md",
     "001-TODO/Google DESIGN.md - AI 设计规范文件.md",
     "001-TODO/Hermes Agent v0.12-v0.13 十大自主工作流.md",
-    "001-TODO/Harness Engineering - 把 Agent 每次失敗變成永久規則.md",
     "001-TODO/Agent Skills - 结构化AI编码工作流框架.md",
     "100-InBox/AI/Codex goal 底层逻辑 - Ralph Loop 与长时间自主编码.md",
     "100-InBox/AI/DeepSeek V4 杠杆机会与 Token Efficiency 实践.md",
@@ -423,7 +424,6 @@
     "100-InBox/AI/oMLX vs Ollama - SSD KV缓存与Apple Silicon推理对比.md",
     "001-TODO/Garry Tan 个人AI作业系统 - Fat Skills架构.md",
     "001-TODO/多层AI协同工作流 - 独立开发者效率架构.md",
-    "100-InBox/Hermes/notebooklm-py - NotebookLM Python API 与 Agent Skill.md",
     "100-InBox/AI/images",
     "100-InBox/AI/Claude_Code_Blueprint.pdf",
     "100-InBox/AI/NotebookLM_Export_2026-03-29T13-21-54.pdf",

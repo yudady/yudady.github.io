@@ -109,7 +109,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/Hermes Agent v0.13.0 - The Tenacity Release.md",
+                "file": "100-InBox/AI/Hermes Agent v0.13.0 - The Tenacity Release.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -133,7 +133,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/Hermes Workspace Agent Swarms - 多智能体协作功能.md",
+                "file": "100-InBox/AI/Hermes + Obsidian + LLMWiki - AI 知识库自动化工作流.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -148,7 +148,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Hermes Workspace Agent Swarms - 多智能体协作功能"
+              "title": "Hermes + Obsidian + LLMWiki - AI 知识库自动化工作流"
             }
           }
         ],
@@ -239,13 +239,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/Hermes Workspace Agent Swarms - 多智能体协作功能.md",
+                "file": "100-InBox/AI/Hermes + Obsidian + LLMWiki - AI 知识库自动化工作流.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Hermes Workspace Agent Swarms - 多智能体协作功能 的大綱"
+              "title": "Hermes + Obsidian + LLMWiki - AI 知识库自动化工作流 的大綱"
             }
           }
         ],
@@ -396,34 +396,34 @@
       "markdown-importer:開啟 Markdown 格式轉換器": false
     }
   },
-  "active": "d500ca272aa736de",
+  "active": "b1ae197fff4bfdd1",
   "lastOpenFiles": [
-    "001-TODO/Hermes Agent v0.11-v0.12 - Kanban 多智能体工作流.md",
-    "001-TODO/Hermes Agent v0.13.0 - The Tenacity Release.md",
+    "100-InBox/AI/HTML 的不合理有效性 — Claude Code 文档范式转移.md",
+    "001-TODO/Hermes Agent Computer Use 深度解析 — CUA Driver 与 SOM 架构.md",
+    "001-TODO/Hermes Workspace Agent Swarms - 多智能体协作功能.md",
+    "001-TODO/AI 多工具工作流 — 五类任务分工地图.md",
+    "100-InBox/AI/Hermes Agent v0.11-v0.12 - Kanban 多智能体工作流.md",
+    "100-InBox/AI/Hermes Agent v0.13.0 - The Tenacity Release.md",
     "001-TODO/Multi-Agent 系统 - 5种协调模式与3层架构.md",
-    "001-TODO/Hermes Agent 0.13 Tenacity 可靠性驱动的重量级更新.md",
+    "100-InBox/AI/Hermes Agent 0.13 Tenacity 可靠性驱动的重量级更新.md",
     "100-InBox/AI/Claude Mythos 16小时自主工作评估危机与虚实辨析.md",
     "001-TODO/2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战.md",
-    "001-TODO/Harness Engineering - 把 Agent 每次失敗變成永久規則.md",
+    "100-InBox/AI/Harness Engineering - 把 Agent 每次失敗變成永久規則.md",
     "001-TODO/Anthropic Managed Agents - 解耦大脑与双手的 Agent 操作系统.md",
     "001-TODO/Andrew Wilkinson 六层 AI 架构.md",
     "001-TODO/Gemini + NotebookLM 数字分身工作流.md",
     "001-TODO/Google DESIGN.md - AI 设计规范文件.md",
-    "001-TODO/Hermes Agent v0.12-v0.13 十大自主工作流.md",
+    "100-InBox/AI/Hermes Agent v0.12-v0.13 十大自主工作流.md",
     "001-TODO/Agent Skills - 结构化AI编码工作流框架.md",
     "100-InBox/AI/Codex goal 底层逻辑 - Ralph Loop 与长时间自主编码.md",
     "100-InBox/AI/DeepSeek V4 杠杆机会与 Token Efficiency 实践.md",
     "001-TODO/GBrain Query Skill - YC 总裁的 AI Agent 知识系统拆解.md",
     "100-InBox/AI/Gemini 整合 NotebookLM + 多模态文件输出.md",
     "100-InBox/AI/Hermes Agent + NotebookLM 打造数据飞轮.md",
-    "001-TODO/Hermes Agent 从零搭建个人AI助手教程.md",
-    "001-TODO/Hermes Workspace Agent Swarms - 多智能体协作功能.md",
+    "100-InBox/AI/Hermes Agent 从零搭建个人AI助手教程.md",
     "100-InBox/AI/NotebookLM - Gemini CLI 批量生成简报提示词工作流.md",
     "100-InBox/AI/OpenAI Codex 更新总览 v0.122-v0.128.md",
     "100-InBox/AI/OpenClaw - ChatGPT Plus OAuth 免 API 费用使用.md",
-    "100-InBox/AI/OpenClaw Heartbeat机制 - AI Agent从被动到主动运转.md",
-    "100-InBox/AI/Ollama MLX 后端 - Mac本地模型速度翻倍指南.md",
-    "100-InBox/AI/oMLX vs Ollama - SSD KV缓存与Apple Silicon推理对比.md",
     "100-InBox/AI/images",
     "100-InBox/AI/Claude_Code_Blueprint.pdf",
     "100-InBox/AI/NotebookLM_Export_2026-03-29T13-21-54.pdf",

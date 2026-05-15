@@ -1,6 +1,6 @@
 ---
-title: Hermes Agent Workspace - Multi-Agent Team Setup
-aliases: [Hermes Workspace, Hermes Agent Swarm]
+title: Hermes Agent Workspace - 多 Agent 团队搭建实战
+aliases: [Hermes Workspace, Hermes Agent Swarm, Hermes 多智能体]
 tags:
   - hermes-agent
   - multi-agent
@@ -10,405 +10,405 @@ tags:
   - type/tutorial
 source:
   - "https://www.youtube.com/watch?v=fUem4KS572c"
-author: YouTube Creator (French AI content channel)
+author: YouTube 创作者（法语 AI 内容频道）
 created: 2025-05-15
 updated: 2025-05-15
-description: Step-by-step guide to building an AI agent team using Hermes Agent Workspace - operators, task pipelines, scheduling, and swarm mode.
+description: 使用 Hermes Agent Workspace 搭建 AI 多 Agent 团队的完整流程 — 从 VPS 部署、创建专业子 Agent、管理任务流水线、定时调度到自主蜂群模式。
 level: intermediate
 stars: 3
 ---
 
-# Hermes Agent Workspace - Multi-Agent Team Setup
+# Hermes Agent Workspace - 多 Agent 团队搭建实战
 
-> Hermes Agent Workspace is the native Web UI for Hermes Agent (by Nous Research). It provides a visual interface for chat, terminal, memory management, skill editing, and — critically — **multi-agent orchestration**. This note covers the full workflow: deploying on VPS, creating specialized sub-agents (operators), managing task pipelines, scheduling cron jobs, and launching autonomous swarm missions.
-
----
-
-## Table of Contents
-
-- [Architecture Overview](#architecture-overview)
-- [Deployment on VPS](#deployment-on-vps)
-- [Step-by-Step Setup](#step-by-step-setup)
-  - [1. Main Agent Configuration](#1-main-agent-configuration)
-  - [2. Creating Operators](#2-creating-operators)
-  - [3. Task Management Pipeline](#3-task-management-pipeline)
-  - [4. Task Scheduling (Cron)](#4-task-scheduling-cron)
-  - [5. Swarm / Mission Mode](#5-swarm--mission-mode)
-  - [6. Warm Agents (Autopilot)](#6-warm-agents-autopilot)
-- [The 4-Agent YouTube Team Example](#the-4-agent-youtube-team-example)
-- [Security Considerations](#security-considerations)
-- [Comparison: Three Orchestration Modes](#comparison-three-orchestration-modes)
-- [Key Takeaways](#key-takeaways)
-- [References](#references)
+> Hermes Agent Workspace 是 Hermes Agent（Nous Research 出品）的原生 Web UI。它提供了统一的可视化界面来与 Agent 聊天、管理记忆、编辑 Skill、调试执行过程，以及最关键的 — **多 Agent 编排**。本笔记覆盖完整工作流：VPS 部署、创建专业子 Agent（Operators）、管理任务流水线、定时调度、以及启动自主蜂群任务。
 
 ---
 
-## Architecture Overview
+## 目录
 
-Hermes Workspace organizes AI agents in a hierarchy:
+- [架构概览](#架构概览)
+- [VPS 部署](#vps-部署)
+- [分步搭建流程](#分步搭建流程)
+  - [1. 主 Agent 配置](#1-主-agent-配置)
+  - [2. 创建 Operators](#2-创建-operators)
+  - [3. 任务管理流水线](#3-任务管理流水线)
+  - [4. 定时调度（Cron）](#4-定时调度cron)
+  - [5. 蜂群/任务模式](#5-蜂群任务模式)
+  - [6. 热代理（Autopilot）](#6-热代理autopilot)
+- [实战案例：4 Agent YouTube 团队](#实战案例4-agent-youtube-团队)
+- [安全注意事项](#安全注意事项)
+- [三种编排模式对比](#三种编排模式对比)
+- [核心要点](#核心要点)
+- [参考资料](#参考资料)
+
+---
+
+## 架构概览
+
+Hermes Workspace 采用层级式 Agent 架构：
 
 ```
 +------------------------------------------+
-|          MAIN AGENT (Orchestrator)        |
-|  - Receives user instructions            |
-|  - Coordinates sub-agents                |
-|  - Manages task lifecycle                |
+|          主 Agent（编排者）                |
+|  - 接收用户指令                            |
+|  - 协调子 Agent                            |
+|  - 管理任务生命周期                         |
 +------------------------------------------+
          |              |              |
     +---------+    +---------+    +---------+
     |Operator A|    |Operator B|    |Operator C|
     |(Scout)   |    |(Forge)   |    |(Pulse)   |
-    |Research  |    |Scripting |    |SEO/Optim.|
+    |研究分析  |    |脚本撰写  |    |SEO 优化   |
     +---------+    +---------+    +---------+
 ```
 
-**Three orchestration modes:**
+**三种编排模式：**
 
-| Mode | How it works | Best for |
-|------|-------------|----------|
-| **Operators** | You manually create sub-agents and assign tasks | Controlled, step-by-step workflows |
-| **Swarm/Mission** | Main agent auto-discovers agents, breaks down mission, assigns work | Complex end-to-end missions |
-| **Warm Agents** | Autonomous agents on autopilot, no conversation needed | Recurring background tasks |
-
----
-
-## Deployment on VPS
-
-### Why VPS (Not Local Machine)
-
-> ⚠️ **Security first**: AI agents have filesystem access. Prompt injection could leak passwords, photos, files. Always isolate on a VPS with no personal data.
-
-```
-+------------------+     +------------------+
-|   Local Machine  |     |   VPS (Hostinger)|
-|   - Personal data|     |   - Hermes only  |
-|   - Passwords    |     |   - No personal  |
-|   - Photos       |     |     files        |
-+------------------+     +------------------+
-```
-
-### Recommended Specs
-
-| Component | Minimum | Recommended |
-|-----------|---------|-------------|
-| CPU | 2 cores | 2+ cores (KVM) |
-| RAM | 4 GB | **8 GB** |
-| Storage | 20 GB SSD | 40 GB+ SSD |
-| Provider | Any VPS | Hostinger (1-click deploy) |
-
-### Deployment Steps
-
-1. **Choose Hostinger KVM2 plan** (2 CPU, 8 GB RAM)
-2. **Select server location** (closest to your audience)
-3. **Set admin password** — save securely
-4. **Provide LLM API key** — Anthropic, OpenAI, OpenRouter, Mistral, etc.
-5. **One-click deploy** via Hostinger's Docker marketplace
-
-> 💡 Hostinger offers a 30-day trial. Use coupon `GO MSI` for 10% off (new customers only).
+| 模式 | 工作方式 | 适用场景 |
+|------|---------|---------|
+| **Operators** | 手动创建子 Agent 并分配任务 | 需要精细控制的逐步工作流 |
+| **Swarm/Mission** | 主 Agent 自动发现 Agent、拆解任务、分配工作 | 复杂的端到端任务 |
+| **Warm Agents** | 自主运行的后台 Agent，无需对话 | 定期执行的后台任务 |
 
 ---
 
-## Step-by-Step Setup
+## VPS 部署
 
-### 1. Main Agent Configuration
+### 为什么用 VPS（而非本地机器）
 
-The main agent is your orchestrator. Define its role with a structured prompt:
-
-```
-You are the Lead Agent Manager and head of my [DOMAIN] team.
-
-MY PROFILE:
-- [Your profession]
-- [Your tools/platforms]
-- [Your goals]
-
-YOUR MISSION:
-1. Confirm connection and operational status
-2. Propose N specialized sub-agents with:
-   - Agent name
-   - Specific role
-   - Main mission
-3. Create an action plan with priority tasks
-4. Respond in a structured and direct manner
-```
-
-**Key principle**: The main agent should understand your business context, not just be a generic assistant. Give it your real profile and goals.
-
-### 2. Creating Operators
-
-Operators are specialized sub-agents. Each gets:
-
-| Field | Description | Example |
-|-------|-------------|---------|
-| Name | Identifier (emoji allowed) | 🔍 Scout |
-| Model | LLM to use | Anthropic Claude |
-| Description | What it specializes in | "Competitive intelligence on AI topics" |
-| Mission Prompt | Detailed instructions | See below |
-
-**Mission prompt template:**
+> ⚠️ **安全第一**：AI Agent 拥有文件系统访问权限。Prompt 注入可能导致密码、照片、文件泄露。务必在不含个人数据的 VPS 上隔离运行。
 
 ```
-ROLE: [Specific role description]
-
-TOPICS TO MONITOR:
-- [Topic 1]
-- [Topic 2]
-- [Topic 3]
-
-OBJECTIVE:
-- [What it should achieve]
-
-DELIVERABLE:
-- [Expected output format]
-- [Where to save results]
-
-CONSTRAINTS:
-- [Language, tone, format requirements]
++------------------+     +------------------+
+|   本地机器        |     |   VPS (Hostinger)|
+|   - 个人数据      |     |   - 仅运行 Hermes |
+|   - 密码          |     |   - 无个人文件     |
+|   - 照片          |     |                    |
++------------------+     +------------------+
 ```
 
-> ✅ **Best practice**: Ask the main agent to generate optimized prompts for each sub-agent. It knows the system best and can tailor prompts to Workspace's capabilities.
+### 推荐配置
 
-### 3. Task Management Pipeline
+| 组件 | 最低要求 | 推荐配置 |
+|------|---------|---------|
+| CPU | 2 核 | 2+ 核（KVM） |
+| 内存 | 4 GB | **8 GB** |
+| 存储 | 20 GB SSD | 40 GB+ SSD |
+| 服务商 | 任意 VPS | Hostinger（一键部署） |
 
-Tasks flow through a Kanban-style pipeline:
+### 部署步骤
+
+1. **选择 Hostinger KVM2 套餐**（2 CPU、8 GB RAM）
+2. **选择服务器位置**（靠近目标受众）
+3. **设置管理员密码** — 安全保存
+4. **提供 LLM API Key** — Anthropic、OpenAI、OpenRouter、Mistral 等
+5. **一键部署** — 通过 Hostinger 的 Docker 应用市场
+
+> 💡 Hostinger 提供 30 天试用期。新用户可用优惠券 `GO MSI` 享 10% 折扣。
+
+---
+
+## 分步搭建流程
+
+### 1. 主 Agent 配置
+
+主 Agent 是你的编排者，用结构化 Prompt 定义其角色：
 
 ```
-  DRAFT    →    READY    →    IN PROGRESS    →    REVIEW    →    DONE
-   (plan)       (queued)      (executing)       (checking)     (complete)
-     |                                                              |
-     |          +---- BLOCKED (needs attention) ----+              |
-     +----------→                                   ←-------------+
+你是我的 [领域] 团队的首席 Agent 管理者。
+
+我的背景：
+- [你的职业]
+- [你使用的工具/平台]
+- [你的目标]
+
+你的任务：
+1. 确认连接状态和可用性
+2. 提议 N 个专业子 Agent，包含：
+   - Agent 名称
+   - 具体职责
+   - 主要任务
+3. 创建优先级行动计划
+4. 以结构化、直接的方式回应
 ```
 
-**Creating a task:**
+**核心原则**：主 Agent 需要理解你的业务背景，而非做通用助手。给它真实的个人资料和目标。
 
-| Field | Purpose | Best Practice |
-|-------|---------|---------------|
-| Title | Short description | Action-oriented: "Analyze top 5 trending AI topics" |
-| Description | Detailed instructions | Include objective, context, expected deliverable |
-| Priority | Urgency level | Highest for time-sensitive tasks |
-| Assignee | Which operator | Match to agent specialty |
-| Tags | Categorization | e.g., `youtube`, `seo`, `research` |
+### 2. 创建 Operators
 
-**Workflow:**
-1. Create tasks in **Draft** column
-2. Move to **Ready** when ready for execution
-3. Agent picks up and moves to **In Progress**
-4. Results go to **Review** for quality check
-5. Approved → **Done**
+Operators 是专业化的子 Agent，每个需要配置：
 
-> ⚠️ **Pitfall**: Don't just chat with the main agent for everything. As sessions get long, the agent loses focus. Use specialized operators for specific tasks — they develop deep expertise in their domain.
+| 字段 | 说明 | 示例 |
+|------|------|------|
+| 名称 | 标识符（可用 emoji） | 🔍 Scout |
+| 模型 | 使用的 LLM | Anthropic Claude |
+| 描述 | 专业领域 | "AI 领域的竞品情报分析" |
+| 任务 Prompt | 详细指令 | 见下方模板 |
 
-### 4. Task Scheduling (Cron)
+**任务 Prompt 模板：**
 
-Automate recurring tasks with scheduled execution:
+```
+角色：[具体角色描述]
+
+监控主题：
+- [主题 1]
+- [主题 2]
+- [主题 3]
+
+目标：
+- [应该达成什么]
+
+交付物：
+- [期望的输出格式]
+- [结果保存位置]
+
+约束：
+- [语言、语气、格式要求]
+```
+
+> ✅ **最佳实践**：让主 Agent 为每个子 Agent 生成优化后的 Prompt。它最了解系统能力，能针对 Workspace 特性定制指令。
+
+### 3. 任务管理流水线
+
+任务通过看板式流水线流转：
+
+```
+  草稿    →    就绪    →    进行中    →    审核    →    完成
+  (Draft)      (Ready)     (In Progress)   (Review)     (Done)
+     |                                                      |
+     |          +---- 阻塞（需要关注）----+                   |
+     +----------→                       ←-------------------+
+```
+
+**创建任务时各字段说明：**
+
+| 字段 | 用途 | 最佳实践 |
+|------|------|---------|
+| 标题 | 简短描述 | 动作导向：「分析 top 5 AI 热门选题」 |
+| 描述 | 详细指令 | 包含目标、背景、期望交付物 |
+| 优先级 | 紧急程度 | 时间敏感任务设为最高 |
+| 负责人 | 分配给哪个 Operator | 匹配 Agent 专业领域 |
+| 标签 | 分类标记 | 如 `youtube`、`seo`、`research` |
+
+**工作流程：**
+1. 在**草稿**栏创建任务
+2. 准备好后移至**就绪**
+3. Agent 认领后进入**进行中**
+4. 结果进入**审核**
+5. 通过后标记**完成**
+
+> ⚠️ **避坑**：不要什么事都跟主 Agent 聊。随着会话变长，Agent 会失去焦点。应将具体任务分配给专业 Operator — 它们会在自己的领域内积累深厚专业知识。
+
+### 4. 定时调度（Cron）
+
+用定时执行自动化周期性任务：
 
 ```
 +---------------------------+
-|   SCHEDULED TASKS          |
+|   定时任务                  |
 |                            |
-|  [9:00 AM Daily]           |
-|  → Scout: Research topics  |
-|  → Forge: Write script     |
-|  → Pulse: Optimize SEO     |
+|  [每天 9:00 AM]            |
+|  → Scout：研究热门选题      |
+|  → Forge：撰写脚本          |
+|  → Pulse：优化 SEO          |
 |                            |
-|  [After video published]   |
-|  → Bridge: Engage community|
+|  [视频发布后]               |
+|  → Bridge：社区互动         |
 +---------------------------+
 ```
 
-**Setup process:**
-1. Define the recurring schedule (e.g., every day at 9:00 AM)
-2. Specify which agents participate
-3. Set the task sequence
-4. Hermes handles the rest automatically
+**设置流程：**
+1. 定义执行周期（如每天上午 9:00）
+2. 指定参与的 Agent
+3. 设定任务顺序
+4. Hermes 自动执行剩余部分
 
-> 💡 **Use case**: A YouTube creator can have agents research topics, write scripts, and optimize SEO every morning — ready for review when they wake up.
+> 💡 **实际用例**：YouTube 创作者可以让 Agent 每天早上研究选题、写脚本、优化 SEO — 起床后直接审阅即可。
 
-### 5. Swarm / Mission Mode
+### 5. 蜂群/任务模式
 
-Swarm mode lets the main agent autonomously manage the entire workflow:
-
-```
-TRADITIONAL (Operators):
-  You → assign task to Agent A → review → assign to Agent B → review → ...
-
-SWARM (Mission):
-  You → define mission → Main Agent auto-manages:
-    → Breaks down mission into sub-tasks
-    → Assigns to appropriate agents
-    → Monitors progress
-    → Handles dependencies
-    → Synthesizes final result
-```
-
-**How to launch:**
-1. Go to **Missions** section
-2. Select **Auto** mode (system finds agents automatically)
-3. Define the end-to-end mission
-4. Launch — Hermes handles orchestration
-
-**Mission prompt example:**
-```
-Create a complete YouTube video production pipeline:
-1. Scout: Research top 5 trending AI topics, score them, pick the best
-2. Forge: Write a full video script based on the chosen topic
-3. Pulse: Generate optimized title, description, tags, thumbnail ideas
-4. Bridge: Create community engagement strategy for the video
-
-Return all deliverables in organized files.
-```
-
-> ⚠️ **Activation required**: Swarm agents must be activated first via terminal. Without activation, tasks show as "blocked" because agents lack execution permissions in the Docker container.
-
-### 6. Warm Agents (Autopilot)
-
-Warm agents are autonomous agents that execute without conversation:
+蜂群模式让主 Agent 自主管理整个工作流：
 
 ```
-WARM AGENT vs OPERATOR:
+传统模式（Operators）：
+  你 → 分配任务给 Agent A → 审核 → 分配给 Agent B → 审核 → ...
 
-Operator:  You chat → it responds → you guide → it executes
-Warm Agent: System triggers → it auto-executes → returns result
+蜂群模式（Mission）：
+  你 → 定义任务 → 主 Agent 自动管理：
+    → 拆解为子任务
+    → 分配给合适的 Agent
+    → 监控进度
+    → 处理依赖关系
+    → 整合最终结果
 ```
 
-**Setting up a warm agent:**
+**启动方式：**
+1. 进入 **Missions** 模块
+2. 选择 **Auto** 模式（系统自动匹配 Agent）
+3. 定义端到端任务
+4. 启动 — Hermes 处理编排
 
-| Field | Description |
-|-------|-------------|
-| ID | Unique identifier |
-| Name | Display name |
-| Model | LLM to use |
-| Specialty | Short description of expertise |
-| Mission | Full prompt with instructions |
-| File Access | Write permissions for output files |
+**任务 Prompt 示例：**
+```
+创建完整的 YouTube 视频制作流水线：
+1. Scout：研究 top 5 AI 热门选题，打分，选出最佳
+2. Forge：基于选定选题撰写完整视频脚本
+3. Pulse：生成优化的标题、描述、标签、缩略图方案
+4. Bridge：制定视频的社区互动策略
 
-**Common warm agent types:**
+所有交付物以整理好的文件返回。
+```
+
+> ⚠️ **需要激活**：蜂群 Agent 必须先通过终端激活。未激活时任务显示为「阻塞」，因为 Agent 在 Docker 容器中缺乏执行权限。
+
+### 6. 热代理（Autopilot）
+
+热代理是无需对话、自主执行的 Agent：
+
+```
+热代理 vs Operator 的区别：
+
+Operator：  你聊天 → 它回应 → 你引导 → 它执行
+热代理：    系统触发 → 它自动执行 → 返回结果
+```
+
+**配置热代理：**
+
+| 字段 | 说明 |
+|------|------|
+| ID | 唯一标识符 |
+| 名称 | 显示名称 |
+| 模型 | 使用的 LLM |
+| 专业领域 | 简短描述 |
+| 任务 | 完整的指令 Prompt |
+| 文件权限 | 输出文件的写入权限 |
+
+**常见热代理类型：**
 
 ```
 +-------------------+     +-------------------+     +-------------------+
-|    RESEARCHER     |     |     WRITER        |     |    REVIEWER       |
+|    研究员          |     |     作者           |     |    审核员          |
 |                   |     |                   |     |                   |
-| - Tech monitoring |     | - Script writing  |     | - Quality check   |
-| - Trend analysis  |     | - Content creation|     | - Consistency     |
-| - Source collection|    | - Documentation   |     | - Accuracy review |
+| - 技术监测         |     | - 脚本撰写         |     | - 质量检查         |
+| - 趋势分析         |     | - 内容创作         |     | - 一致性审核       |
+| - 来源收集         |     | - 文档编写         |     | - 准确性审查       |
 +-------------------+     +-------------------+     +-------------------+
 ```
 
-**File permission fix** (common issue):
+**文件权限修复**（常见问题）：
 ```bash
-# Docker containers run as root by default
-# Change ownership to workspace user for file write access
+# Docker 容器默认以 root 运行
+# 需要将目录所有者改为 workspace 用户以获得写入权限
 chown -R workspace:workspace /path/to/output/directory
 ```
 
 ---
 
-## The 4-Agent YouTube Team Example
+## 实战案例：4 Agent YouTube 团队
 
-The video demonstrates a complete YouTube content production team:
+视频演示了一个完整的 YouTube 内容生产团队：
 
-| Agent | Role | Tasks |
-|-------|------|-------|
-| 🔍 **Scout** | Content Intelligence | Monitor trends, analyze top 20 channels, score topics (0-100), deliver top 5 |
-| 🔨 **Forge** | Script Architect | Transform topics into structured video scripts, section-by-section breakdown |
-| 📊 **Pulse** | Growth Strategy | SEO optimization, title/description/tags, thumbnail A/B variations |
-| 🌉 **Bridge** | Community Manager | Comment engagement, collaboration requests, performance analysis |
+| Agent | 角色 | 职责 |
+|-------|------|------|
+| 🔍 **Scout（侦察兵）** | 内容情报 | 监控趋势、分析 top 20 频道、选题评分（0-100）、输出 top 5 |
+| 🔨 **Forge（锻造师）** | 脚本架构 | 将选题转化为结构化视频脚本、逐段拆解 |
+| 📊 **Pulse（脉搏）** | 增长策略 | SEO 优化、标题/描述/标签、缩略图 A/B 方案 |
+| 🌉 **Bridge（桥梁）** | 社区管理 | 评论互动、协作请求处理、数据分析 |
 
-**Pipeline flow:**
+**流水线流程：**
 
 ```
-Scout (Research)     Forge (Create)      Pulse (Optimize)     Bridge (Engage)
-     |                    |                     |                    |
-[Topic Discovery] → [Script Writing] → [SEO Optimization] → [Community]
-     |                    |                     |                    |
- Top 5 Topics         Full Script         Title/Tags/Desc      Engagement
- with Scores          Section by Section  3 Variations         Strategy
+Scout（研究）      Forge（创作）      Pulse（优化）      Bridge（互动）
+     |                  |                   |                   |
+[选题发现]  →  [脚本撰写]  →  [SEO 优化]  →  [社区运营]
+     |                  |                   |                   |
+ Top 5 选题           完整脚本           标题/标签/描述      互动策略
+ 含评分              逐段拆解           3 组备选方案        效果追踪
 ```
 
-**Scout output example:**
+**Scout 输出示例：**
 
-| Topic | Score | Test Angle | Real Angle |
-|-------|-------|-----------|------------|
-| AI Video Creation A-Z | 92 | Can AI fully automate YouTube? | Tools + workflow for AI video |
-| Claude vs GPT Comparison | 88 | Which is better? | Task-specific comparison |
-| AI Agents for Business | 85 | What can they do? | Real ROI case studies |
+| 选题 | 评分 | 测试角度 | 实际角度 |
+|------|------|---------|---------|
+| AI 视频全流程自动化 | 92 | AI 能完全替代 YouTube 创作吗？ | 工具 + 实战工作流 |
+| Claude vs GPT 对比 | 88 | 哪个更好？ | 分任务类型对比 |
+| AI Agent 商业应用 | 85 | 它们能做什么？ | 真实 ROI 案例研究 |
 
 ---
 
-## Security Considerations
+## 安全注意事项
 
-| Risk | Mitigation |
-|------|-----------|
-| Prompt injection leaking data | Deploy on VPS with no personal files |
-| API key exposure | Use environment variables, never hardcode |
-| Unrestricted agent access | Limit filesystem permissions per agent |
-| Internet exposure | Use auth, HTTPS, restrict network bindings |
-| Docker container escape | Keep Docker updated, use non-root user |
+| 风险 | 缓解措施 |
+|------|---------|
+| Prompt 注入泄露数据 | 部署在不含个人文件的 VPS 上 |
+| API Key 暴露 | 使用环境变量，绝不硬编码 |
+| Agent 权限过大 | 限制每个 Agent 的文件系统权限 |
+| 互联网暴露 | 启用认证、HTTPS、限制网络绑定 |
+| Docker 容器逃逸 | 保持 Docker 更新、使用非 root 用户 |
 
-**Security checklist:**
+**安全清单：**
 
 ```
-✅ VPS has NO personal data (photos, passwords, documents)
-✅ API keys stored as environment variables
-✅ Workspace behind authentication (not public)
-✅ HTTPS enabled for remote access
-✅ Regular dependency updates
-✅ Agent file permissions are minimal
-✅ Firewall restricts unnecessary ports
+✅ VPS 上无个人数据（照片、密码、文档）
+✅ API Key 以环境变量存储
+✅ Workspace 启用了认证（非公开访问）
+✅ 远程访问已启用 HTTPS
+✅ 定期更新依赖
+✅ Agent 文件权限已最小化
+✅ 防火墙限制了不必要的端口
 ```
 
 ---
 
-## Comparison: Three Orchestration Modes
+## 三种编排模式对比
 
 ```
-                    CONTROL                 AUTONOMY               COMPLEXITY
-                    ~~~~~~~                 ~~~~~~~~~               ~~~~~~~~~~
+                    控制度                   自主性                 复杂度
+                    ~~~~~~                   ~~~~~~                 ~~~~~~
 
 Operators:     ████████████░░░░░░     ████░░░░░░░░░░░░░░     ████░░░░░░░░░░░░░░
-               You assign everything   Agents wait for you    Easy to understand
+               你全部分配               Agent 等待指令          容易理解
 
 Swarm:         ██████░░░░░░░░░░░░     ████████████░░░░░░     ██████████░░░░░░░░
-               You define mission      Agents self-manage    Setup + activation
+               你定义任务               Agent 自我管理          需要+激活
 
 Warm Agents:   ██░░░░░░░░░░░░░░░░     ██████████████████     ██████████████████
-               Set once, forget       Fully autonomous      File perms + Docker
+               设定一次即可             完全自主运行            文件权限+Docker
 ```
 
-| Decision Factor | Choose Operators | Choose Swarm | Choose Warm Agents |
-|----------------|-----------------|--------------|-------------------|
-| Need fine control | ✅ | ❌ | ❌ |
-| End-to-end mission | ❌ | ✅ | ❌ |
-| Recurring background | ❌ | ❌ | ✅ |
-| Multi-step pipeline | Manual | Auto | Auto |
-| Human in the loop | Always | Start/end | Never |
-| Setup complexity | Low | Medium | High |
+| 选择因素 | 选 Operators | 选 Swarm | 选 Warm Agents |
+|---------|-------------|---------|---------------|
+| 需要精细控制 | ✅ | ❌ | ❌ |
+| 端到端任务 | ❌ | ✅ | ❌ |
+| 周期性后台任务 | ❌ | ❌ | ✅ |
+| 多步骤流水线 | 手动 | 自动 | 自动 |
+| 需要人工审核 | 始终 | 起点/终点 | 从不 |
+| 搭建复杂度 | 低 | 中 | 高 |
 
 ---
 
-## Key Takeaways
+## 核心要点
 
-1. **Specialization over versatility** — Create multiple expert agents rather than one generalist. Agents are "free" to create.
-2. **VPS isolation is non-negotiable** — Never run AI agents with filesystem access on your personal machine.
-3. **Use the right orchestration mode** — Operators for control, Swarm for complex missions, Warm Agents for recurring tasks.
-4. **Structured prompts matter** — Define clear roles, objectives, deliverables, and constraints for each agent.
-5. **Task pipeline prevents chaos** — Draft → Ready → In Progress → Review → Done keeps work organized.
-6. **Scheduling enables passive productivity** — Set up cron jobs so agents work while you sleep.
-7. **File permissions are a common gotcha** — Docker containers need explicit write permissions (`chown`).
+1. **专业化胜过全能化** — 创建多个专家 Agent，而非一个通用 Agent。Agent 创建是「免费」的
+2. **VPS 隔离不可妥协** — 永远不要在有个人文件的机器上运行有文件系统访问权限的 AI Agent
+3. **选对编排模式** — Operators 适合精细控制、Swarm 适合复杂任务、Warm Agents 适合定期任务
+4. **结构化 Prompt 是关键** — 为每个 Agent 明确定义角色、目标、交付物和约束
+5. **任务流水线防止混乱** — 草稿 → 就绪 → 进行中 → 审核 → 完成，保持工作有序
+6. **定时调度实现被动生产力** — 设置 Cron 任务，让 Agent 在你睡觉时工作
+7. **文件权限是常见坑** — Docker 容器需要显式的写入权限（`chown`）
 
 ---
 
-## References
+## 参考资料
 
 - [I Created My AI Agent Team with Hermes Workspace (YouTube)](https://www.youtube.com/watch?v=fUem4KS572c)
-- [Hermes Agent Workspace V2 Complete Guide](https://aisuccesslabjuliangoldie.com/blog/hermes-agent-workspace/)
-- [Hermes Agent Swarm Feature Guide](https://juliangoldie.com/hermes-agent-swarm/)
+- [Hermes Agent Workspace V2 完整指南](https://aisuccesslabjuliangoldie.com/blog/hermes-agent-workspace/)
+- [Hermes Agent Swarm 功能指南](https://juliangoldie.com/hermes-agent-swarm/)
 - [Hermes Agent GitHub (NousResearch)](https://github.com/nousresearch/hermes-agent)
-- [Hostinger Hermes Workspace One-Click Deploy](https://www.hostinger.com/vps/docker/hermes-workspace)
+- [Hostinger Hermes Workspace 一键部署](https://www.hostinger.com/vps/docker/hermes-workspace)
 
-## Related Notes
+## 相关笔记
 
 - [[Hermes Agent]]
-- [[Multi-Agent Systems]]
-- [[AI Agent Security]]
+- [[多智能体系统]]
+- [[AI Agent 安全]]

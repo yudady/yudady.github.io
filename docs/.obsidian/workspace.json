@@ -8,84 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b240978845ea5ec0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "001-TODO/Qwen3.6-27B-MacBook-M4-本地部署指南.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Qwen3.6-27B-MacBook-M4-本地部署指南"
-            }
-          },
-          {
-            "id": "c462b739f3ebe1f6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "001-TODO/Gemini 整合 NotebookLM + 多模态文件输出.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Gemini 整合 NotebookLM + 多模态文件输出"
-            }
-          },
-          {
-            "id": "b053c07f46010da8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "001-TODO/Hermes Agent + NotebookLM 打造数据飞轮.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Hermes Agent + NotebookLM 打造数据飞轮"
-            }
-          },
-          {
             "id": "273b0c607814095a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/GBrain Query Skill - YC 总裁的 AI Agent 知识系统拆解.md",
+                "file": "001-TODO/2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,59 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "GBrain Query Skill - YC 总裁的 AI Agent 知识系统拆解"
-            }
-          },
-          {
-            "id": "93b6abf1ad162f03",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "100-InBox/AI/Hermes Agent v0.13.0 - The Tenacity Release.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Hermes Agent v0.13.0 - The Tenacity Release"
-            }
-          },
-          {
-            "id": "d500ca272aa736de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "001-TODO/Matt Pocock 的 Skills — AI 时代的软件工程方法论.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Matt Pocock 的 Skills — AI 时代的软件工程方法论"
+              "title": "2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -239,13 +118,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/Matt Pocock 的 Skills — AI 时代的软件工程方法论.md",
+                "file": "001-TODO/2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Matt Pocock 的 Skills — AI 时代的软件工程方法论 的大綱"
+              "title": "2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战 的大綱"
             }
           }
         ],
@@ -398,9 +277,16 @@
   },
   "active": "b1ae197fff4bfdd1",
   "lastOpenFiles": [
+    "001-TODO/research/subagent-artifacts-verify.html",
+    "001-TODO/research",
+    "001-TODO/24小时重启系统-彻底摆脱失控感.md",
+    "001-TODO/GBrain Query Skill - YC 总裁的 AI Agent 知识系统拆解.md",
+    "001-TODO/Stanford-BeyondLM-AI工程师五层技术框架.md",
+    "001-TODO/Hermes Agent Workspace - Multi-Agent Team Setup.md",
+    "001-TODO/Matt Pocock 的 Skills — AI 时代的软件工程方法论.md",
+    "001-TODO/AI-Native 公司的五步实战手册.md",
     "001-TODO/Multi-Agent 系统 - 5种协调模式与3层架构.md",
     "100-InBox/AI/Hermes + Obsidian + LLMWiki - AI 知识库自动化工作流.md",
-    "001-TODO/Matt Pocock 的 Skills — AI 时代的软件工程方法论.md",
     "001-TODO/Hermes Agent + CUA Driver — 开源后台桌面控制.md",
     "100-InBox/AI/HTML 的不合理有效性 — Claude Code 文档范式转移.md",
     "001-TODO/Hermes Agent Computer Use 深度解析 — CUA Driver 与 SOM 架构.md",
@@ -418,12 +304,6 @@
     "001-TODO/Google DESIGN.md - AI 设计规范文件.md",
     "100-InBox/AI/Hermes Agent v0.12-v0.13 十大自主工作流.md",
     "001-TODO/Agent Skills - 结构化AI编码工作流框架.md",
-    "100-InBox/AI/Codex goal 底层逻辑 - Ralph Loop 与长时间自主编码.md",
-    "100-InBox/AI/DeepSeek V4 杠杆机会与 Token Efficiency 实践.md",
-    "001-TODO/GBrain Query Skill - YC 总裁的 AI Agent 知识系统拆解.md",
-    "100-InBox/AI/Gemini 整合 NotebookLM + 多模态文件输出.md",
-    "100-InBox/AI/Hermes Agent + NotebookLM 打造数据飞轮.md",
-    "100-InBox/AI/Hermes Agent 从零搭建个人AI助手教程.md",
     "100-InBox/AI/images",
     "100-InBox/AI/Claude_Code_Blueprint.pdf",
     "100-InBox/AI/NotebookLM_Export_2026-03-29T13-21-54.pdf",
@@ -435,7 +315,6 @@
     "001-TODO/drawio/index-202302271939.jpg",
     "001-TODO/drawio",
     "001-TODO/drawio/index-202302271939.drawio",
-    "001-TODO/drawio/csv導出架構設計-basic.drawio",
     "001-TODO/drawio/index-202302271939.png",
     "001-TODO/spring-spel-202302271631.png",
     "001-TODO/spring-spel-202302271521.png",

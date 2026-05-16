@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战.md",
+                "file": "100-InBox/AI/Hermes Agent + NotebookLM 打造数据飞轮.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战"
+              "title": "Hermes Agent + NotebookLM 打造数据飞轮"
             }
           }
         ]
@@ -118,13 +118,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战.md",
+                "file": "100-InBox/AI/Hermes Agent + NotebookLM 打造数据飞轮.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战 的大綱"
+              "title": "Hermes Agent + NotebookLM 打造数据飞轮 的大綱"
             }
           }
         ],
@@ -275,8 +275,13 @@
       "markdown-importer:開啟 Markdown 格式轉換器": false
     }
   },
-  "active": "b1ae197fff4bfdd1",
+  "active": "273b0c607814095a",
   "lastOpenFiles": [
+    "100-InBox/AI/Gemini 整合 NotebookLM + 多模态文件输出.md",
+    "100-InBox/AI/Hermes Agent + NotebookLM 打造数据飞轮.md",
+    "001-TODO/2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战.md",
+    "001-TODO/Gemini 3.5 Flash Pro - Google IO 2026 泄漏前瞻.md",
+    "001-TODO/Hermes Agent vs OpenClaw - AI 智能体工作流进化论.md",
     "001-TODO/Matt Pocock Skills - 一文件夹Markdown拿下68K Stars.md",
     "001-TODO/Andrej Karpathy Skills - 四条规则驯服AI编程助手.md",
     "001-TODO/Codex AI 代理人 - 从实践到自动化指南.md",
@@ -300,11 +305,6 @@
     "100-InBox/AI/Hermes Agent v0.13.0 - The Tenacity Release.md",
     "100-InBox/AI/Hermes Agent 0.13 Tenacity 可靠性驱动的重量级更新.md",
     "100-InBox/AI/Claude Mythos 16小时自主工作评估危机与虚实辨析.md",
-    "001-TODO/2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战.md",
-    "100-InBox/AI/Harness Engineering - 把 Agent 每次失敗變成永久規則.md",
-    "001-TODO/Anthropic Managed Agents - 解耦大脑与双手的 Agent 操作系统.md",
-    "001-TODO/Andrew Wilkinson 六层 AI 架构.md",
-    "001-TODO/Gemini + NotebookLM 数字分身工作流.md",
     "100-InBox/AI/images",
     "100-InBox/AI/Claude_Code_Blueprint.pdf",
     "100-InBox/AI/NotebookLM_Export_2026-03-29T13-21-54.pdf",

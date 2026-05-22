@@ -280,5 +280,5 @@ NotebookLM 最适合的场景，三个条件同时满足时最强：
 
 ## 相关笔记
 
-- [[Andrew Wilkinson 六层 AI 架构]]
+- [[../AI-WORKFLOW/Andrew Wilkinson 六层 AI 架构]]
 - [[OpenClaw - ChatGPT Plus OAuth 免 API 费用使用]]

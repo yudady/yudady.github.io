@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "100-InBox/AI/Hermes Agent + NotebookLM 打造数据飞轮.md",
+                "file": "001-TODO/Agent 三层交付 - 让 AI 输出不再塞满聊天框.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Hermes Agent + NotebookLM 打造数据飞轮"
+              "title": "Agent 三层交付 - 让 AI 输出不再塞满聊天框"
             }
           }
         ]
@@ -43,7 +43,7 @@
       {
         "id": "4dcc60248d2e3363",
         "type": "tabs",
-        "dimension": 71.73423423423422,
+        "dimension": 81.22065727699531,
         "children": [
           {
             "id": "b1ae197fff4bfdd1",
@@ -64,7 +64,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "rabb",
+                "query": "goa",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -100,7 +100,7 @@
       {
         "id": "cec773d3c6690924",
         "type": "tabs",
-        "dimension": 28.265765765765774,
+        "dimension": 18.779342723004696,
         "children": [
           {
             "id": "12ac5dc4eb5f8d4d",
@@ -118,13 +118,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "100-InBox/AI/Hermes Agent + NotebookLM 打造数据飞轮.md",
+                "file": "001-TODO/Agent 三层交付 - 让 AI 输出不再塞满聊天框.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Hermes Agent + NotebookLM 打造数据飞轮 的大綱"
+              "title": "Agent 三层交付 - 让 AI 输出不再塞满聊天框 的大綱"
             }
           }
         ],
@@ -277,34 +277,36 @@
   },
   "active": "273b0c607814095a",
   "lastOpenFiles": [
-    "100-InBox/AI/Gemini 整合 NotebookLM + 多模态文件输出.md",
-    "100-InBox/AI/Hermes Agent + NotebookLM 打造数据飞轮.md",
-    "001-TODO/2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战.md",
-    "001-TODO/Gemini 3.5 Flash Pro - Google IO 2026 泄漏前瞻.md",
-    "001-TODO/Hermes Agent vs OpenClaw - AI 智能体工作流进化论.md",
-    "001-TODO/Matt Pocock Skills - 一文件夹Markdown拿下68K Stars.md",
-    "001-TODO/Andrej Karpathy Skills - 四条规则驯服AI编程助手.md",
-    "001-TODO/Codex AI 代理人 - 从实践到自动化指南.md",
+    "001-TODO/FinceptTerminal - 开源金融终端代码审计.md",
+    "001-TODO/第一性原理 - Naval和Elon Musk的底层思考武器.md",
+    "100-InBox/AI/Hermes Agent Cron 功能实战 - 打造贴身自动化助理.md",
     "001-TODO/StraTA - 战略轨迹抽象解决AI Agent健忘症.md",
+    "001-TODO/Agent 三层交付 - 让 AI 输出不再塞满聊天框.md",
+    "100-InBox/AI-WORKFLOW/go Goal 功能完全指南.md",
+    "100-InBox/AI/2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战.md",
+    "100-InBox/AI-WORKFLOW/多层AI协同工作流 - 独立开发者效率架构.md",
+    "100-InBox/AI/每周热门开源 GitHub 项目速览 257.md",
+    "100-InBox/AI-WORKFLOW/Agent Skills - 结构化AI编码工作流框架.md",
+    "100-InBox/AI-WORKFLOW/AI 多工具工作流 — 五类任务分工地图.md",
+    "100-InBox/AI/AI-Native 公司的五步实战手册.md",
+    "100-InBox/AI-WORKFLOW/Andrej Karpathy Skills - 四条规则驯服AI编程助手.md",
+    "100-InBox/AI-WORKFLOW/Andrew Wilkinson 六层 AI 架构.md",
+    "100-InBox/AI/Anthropic 创始人手册 - 构建AI原生创业公司.md",
+    "100-InBox/AI-WORKFLOW/Anthropic Managed Agents - 解耦大脑与双手的 Agent 操作系统.md",
+    "100-InBox/AI/Apple Reinforced Agent - Tool Call 执行前拦截错误.md",
+    "100-InBox/AI-WORKFLOW/Claude Code 大项目最佳实践 - 生态配置详解.md",
+    "100-InBox/AI-WORKFLOW/Claude Code vs Codex Goal 目标功能对比.md",
+    "100-InBox/AI-WORKFLOW/PrintingPress - AI Agent 原生 CLI 生成器.md",
+    "100-InBox/AI-WORKFLOW/Stanford-BeyondLM-AI工程师五层技术框架.md",
+    "100-InBox/AI-WORKFLOW/CLAUDE.md 不是设定档 是会过期的 Cache.md",
+    "100-InBox/AI-WORKFLOW/Codex AI 代理人 - 从实践到自动化指南.md",
+    "100-InBox/AI-WORKFLOW/Garry Tan 个人AI作业系统 - Fat Skills架构.md",
+    "100-InBox/AI-WORKFLOW/Garry Tan Tokenmaxxing 与 GStack 工作流.md",
+    "100-InBox/AI-WORKFLOW/GBrain Query Skill - YC 总裁的 AI Agent 知识系统拆解.md",
+    "100-InBox/AI-WORKFLOW",
+    "001-TODO/Hermes Agent ",
     "001-TODO/research/subagent-artifacts-verify.html",
     "001-TODO/research",
-    "001-TODO/24小时重启系统-彻底摆脱失控感.md",
-    "001-TODO/GBrain Query Skill - YC 总裁的 AI Agent 知识系统拆解.md",
-    "001-TODO/Stanford-BeyondLM-AI工程师五层技术框架.md",
-    "001-TODO/Hermes Agent Workspace - Multi-Agent Team Setup.md",
-    "001-TODO/Matt Pocock 的 Skills — AI 时代的软件工程方法论.md",
-    "001-TODO/AI-Native 公司的五步实战手册.md",
-    "001-TODO/Multi-Agent 系统 - 5种协调模式与3层架构.md",
-    "100-InBox/AI/Hermes + Obsidian + LLMWiki - AI 知识库自动化工作流.md",
-    "001-TODO/Hermes Agent + CUA Driver — 开源后台桌面控制.md",
-    "100-InBox/AI/HTML 的不合理有效性 — Claude Code 文档范式转移.md",
-    "001-TODO/Hermes Agent Computer Use 深度解析 — CUA Driver 与 SOM 架构.md",
-    "001-TODO/Hermes Workspace Agent Swarms - 多智能体协作功能.md",
-    "001-TODO/AI 多工具工作流 — 五类任务分工地图.md",
-    "100-InBox/AI/Hermes Agent v0.11-v0.12 - Kanban 多智能体工作流.md",
-    "100-InBox/AI/Hermes Agent v0.13.0 - The Tenacity Release.md",
-    "100-InBox/AI/Hermes Agent 0.13 Tenacity 可靠性驱动的重量级更新.md",
-    "100-InBox/AI/Claude Mythos 16小时自主工作评估危机与虚实辨析.md",
     "100-InBox/AI/images",
     "100-InBox/AI/Claude_Code_Blueprint.pdf",
     "100-InBox/AI/NotebookLM_Export_2026-03-29T13-21-54.pdf",
@@ -312,9 +314,7 @@
     "100-InBox/AI",
     "100-InBox/Hermes",
     "001-TODO/test-202302271955.png",
-    "001-TODO/drawio/3.0拉注單流程.drawio",
     "001-TODO/drawio/index-202302271939.jpg",
-    "001-TODO/drawio",
     "001-TODO/drawio/index-202302271939.png",
     "001-TODO/spring-spel-202302271631.png",
     "001-TODO/spring-spel-202302271521.png",

@@ -328,5 +328,5 @@ Brian Roemmele 的 ZHC 实验中有 100+ 个 Agent 并行运行，使用 JouleWo
 
 ## 相关笔记
 
-- [[AI 原生公司 - Garry Tan Diana Hu Stanford CS153]]
+- [[../AI/AI 原生公司 - Garry Tan Diana Hu Stanford CS153]]
 - [[9arm-skills - Claude Code 工程纪律技能包]]

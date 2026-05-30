@@ -13,7 +13,7 @@ tags:
 source:
   - "https://www.youtube.com/watch?v=VjwBI1nWsM8"
   - "https://github.com/thananon/9arm-skills"
-author: Thananon（GitHub: thananon）
+author: "Thananon（GitHub: thananon）"
 created: 2026-05-23
 updated: 2026-05-23
 description: 一套为 Claude Code 设计的工程纪律技能包，用「更好的约束」而非「更多能力」来解决 AI Agent 的典型失败模式

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/Agent 三层交付 - 让 AI 输出不再塞满聊天框.md",
+                "file": "100-InBox/AI-WORKFLOW/AI-goal功能與Evaluation-Rubric.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Agent 三层交付 - 让 AI 输出不再塞满聊天框"
+              "title": "AI-goal功能與Evaluation-Rubric"
+            }
+          },
+          {
+            "id": "80785f432efeefd2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "001-TODO/StraTA - 战略轨迹抽象解决AI Agent健忘症.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "StraTA - 战略轨迹抽象解决AI Agent健忘症"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -118,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/Agent 三层交付 - 让 AI 输出不再塞满聊天框.md",
+                "file": "001-TODO/StraTA - 战略轨迹抽象解决AI Agent健忘症.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Agent 三层交付 - 让 AI 输出不再塞满聊天框 的大綱"
+              "title": "StraTA - 战略轨迹抽象解决AI Agent健忘症 的大綱"
             }
           }
         ],
@@ -275,34 +300,34 @@
       "markdown-importer:開啟 Markdown 格式轉換器": false
     }
   },
-  "active": "273b0c607814095a",
+  "active": "80785f432efeefd2",
   "lastOpenFiles": [
-    "001-TODO/FinceptTerminal - 开源金融终端代码审计.md",
-    "001-TODO/第一性原理 - Naval和Elon Musk的底层思考武器.md",
-    "100-InBox/AI/Hermes Agent Cron 功能实战 - 打造贴身自动化助理.md",
+    "001-TODO/Codex桌面APP零基础实战教程-15种玩法.md",
+    "100-InBox/AI-WORKFLOW/頂級決策者八大思維-孫武老子孔子.md",
+    "001-TODO/SkillOpt - 微软文本空间Agent技能优化框架.md",
+    "001-TODO/Hermes Agent v0.15 Velocity Release.md",
+    "001-TODO/Agentic AI自主开发14小时-全面解析.md",
+    "001-TODO/AI规划工具反问你-9个盲点.md",
+    "001-TODO/Anthropic 倫敦 Keynote - Claude 開始 prompt Claude.md",
+    "001-TODO/Claude Code Workflow 脚本化多 Agent 编排.md",
+    "001-TODO/Grok 4.3 我被工具化了 - 现代 AI Agent 架构的残酷真相.md",
+    "001-TODO/Hermes Agent 架构解析.md",
+    "001-TODO/MoneyPrinterTurbo — AI 一鍵生成高清短影音.md",
+    "100-InBox/AI/Meta SIRA - BM25 重構 AI 檢索.md",
+    "100-InBox/AI-WORKFLOW/AI-goal功能與Evaluation-Rubric.md",
+    "001-TODO/Hermes Agent 记忆系统全解析.md",
+    "001-TODO/24小时重启系统-彻底摆脱失控感.md",
+    "001-TODO/9arm-skills - Claude Code 工程纪律技能包.md",
     "001-TODO/StraTA - 战略轨迹抽象解决AI Agent健忘症.md",
-    "001-TODO/Agent 三层交付 - 让 AI 输出不再塞满聊天框.md",
-    "100-InBox/AI-WORKFLOW/go Goal 功能完全指南.md",
-    "100-InBox/AI/2026 AI Coding Agent 全景 - Hermes Agent 加 OpenHands 实战.md",
-    "100-InBox/AI-WORKFLOW/多层AI协同工作流 - 独立开发者效率架构.md",
-    "100-InBox/AI/每周热门开源 GitHub 项目速览 257.md",
-    "100-InBox/AI-WORKFLOW/Agent Skills - 结构化AI编码工作流框架.md",
-    "100-InBox/AI-WORKFLOW/AI 多工具工作流 — 五类任务分工地图.md",
-    "100-InBox/AI/AI-Native 公司的五步实战手册.md",
-    "100-InBox/AI-WORKFLOW/Andrej Karpathy Skills - 四条规则驯服AI编程助手.md",
-    "100-InBox/AI-WORKFLOW/Andrew Wilkinson 六层 AI 架构.md",
-    "100-InBox/AI/Anthropic 创始人手册 - 构建AI原生创业公司.md",
-    "100-InBox/AI-WORKFLOW/Anthropic Managed Agents - 解耦大脑与双手的 Agent 操作系统.md",
-    "100-InBox/AI/Apple Reinforced Agent - Tool Call 执行前拦截错误.md",
-    "100-InBox/AI-WORKFLOW/Claude Code 大项目最佳实践 - 生态配置详解.md",
-    "100-InBox/AI-WORKFLOW/Claude Code vs Codex Goal 目标功能对比.md",
-    "100-InBox/AI-WORKFLOW/PrintingPress - AI Agent 原生 CLI 生成器.md",
-    "100-InBox/AI-WORKFLOW/Stanford-BeyondLM-AI工程师五层技术框架.md",
-    "100-InBox/AI-WORKFLOW/CLAUDE.md 不是设定档 是会过期的 Cache.md",
-    "100-InBox/AI-WORKFLOW/Codex AI 代理人 - 从实践到自动化指南.md",
-    "100-InBox/AI-WORKFLOW/Garry Tan 个人AI作业系统 - Fat Skills架构.md",
-    "100-InBox/AI-WORKFLOW/Garry Tan Tokenmaxxing 与 GStack 工作流.md",
-    "100-InBox/AI-WORKFLOW/GBrain Query Skill - YC 总裁的 AI Agent 知识系统拆解.md",
+    "100-InBox/AI-WORKFLOW/Harness Engineering 五件套：普通人也能用的 AI 工作系统.md",
+    "100-InBox/AI-WORKFLOW/2026 開發者藍圖 - 自主代理時代的編碼革命.md",
+    "100-InBox/AI-WORKFLOW/上下文熵增与 Claude Code 架构拆解.md",
+    "100-InBox/AI/用代码写视频 - AI HTML 视频生成方案全览.md",
+    "100-InBox/other/第一性原理 - Naval和Elon Musk的底层思考武器.md",
+    "100-InBox/AI/Agent 三层交付 - 让 AI 输出不再塞满聊天框.md",
+    "100-InBox/AI-WORKFLOW/AI 记忆治理：让 Agent 学会忘.md",
+    "100-InBox/AI/AI 原生公司 - Garry Tan Diana Hu Stanford CS153.md",
+    "100-InBox/AI/Gemini Flash 速度暴涨引发编程 Agent 争议.md",
     "100-InBox/AI-WORKFLOW",
     "001-TODO/Hermes Agent ",
     "001-TODO/research/subagent-artifacts-verify.html",

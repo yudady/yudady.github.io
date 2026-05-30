@@ -404,5 +404,5 @@ hermes model
 
 - [[Hermes Agent + CUA Driver — 开源后台桌面操控]]
 - [[Hermes Agent Computer Use 深度解析 — CUA Driver 与 SOM 架构]]
-- [[FinceptTerminal - 开源金融终端代码审计]]
+- [[../100-InBox/AI/FinceptTerminal - 开源金融终端代码审计]]
 - [[多智能体系统 - 5 种协作模式与 3 层架构]]

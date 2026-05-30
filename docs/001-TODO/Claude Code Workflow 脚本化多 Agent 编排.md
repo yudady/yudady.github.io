@@ -408,7 +408,7 @@ Deep Research Workflow
 
 ## 相关笔记
 
-- [[2026 開發者藍圖 - 自主代理時代的編碼革命]]
+- [[../100-InBox/AI-WORKFLOW/2026 開發者藍圖 - 自主代理時代的編碼革命]]
 - [[Claude Code]]
 - [[MCP]]
 - [[AI Agent]]

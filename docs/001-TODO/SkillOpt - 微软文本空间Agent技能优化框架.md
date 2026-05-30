@@ -12,7 +12,7 @@ source:
   - "https://arxiv.org/abs/2605.23904"
   - "https://github.com/microsoft/SkillOpt"
   - "https://microsoft.github.io/SkillOpt/"
-author: 微软研究院 (Yifan Yang et al.), 视频作者: 為什麼叫QQ
+author: "微软研究院 (Yifan Yang et al.), 视频作者: 為什麼叫QQ"
 created: 2026-05-29
 updated: 2026-05-29
 description: |

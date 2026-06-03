@@ -274,4 +274,4 @@ BM25 得分 = Σ IDF(qi) × (f(qi,D) × (k1 + 1)) / (f(qi,D) + k1 × (1 - b + b 
 
 ## 相關筆記
 
-- [[Anthropic 倫敦 Keynote - Claude 開始 prompt Claude]]
+- [[../AI-WORKFLOW/Anthropic 倫敦 Keynote - Claude 開始 prompt Claude]]

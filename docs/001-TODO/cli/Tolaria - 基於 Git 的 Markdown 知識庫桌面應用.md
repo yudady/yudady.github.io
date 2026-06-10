@@ -318,4 +318,4 @@ pnpm install
 ## 相关笔记
 
 - [[Scrapling - AI 自適應網頁爬蟲框架]]
-- [[PaddleOCR - 百度開源 OCR 工具包與文件 AI 引擎]]
+- [[cli/PaddleOCR - 百度開源 OCR 工具包與文件 AI 引擎]]

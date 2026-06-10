@@ -373,7 +373,7 @@ Pi 在依賴安全方面做了大量工作：
 
 ## 相关笔记
 
-- [[Scrapling - AI 自適應網頁爬蟲框架]]
-- [[PaddleOCR - 百度開源 OCR 工具包與文件 AI 引擎]]
-- [[Tolaria - 基於 Git 的 Markdown 知識庫桌面應用]]
-- [[Understand-Anything - 程式碼知識圖譜互動探索工具]]
+- [[cli/Scrapling - AI 自適應網頁爬蟲框架]]
+- [[cli/PaddleOCR - 百度開源 OCR 工具包與文件 AI 引擎]]
+- [[cli/Tolaria - 基於 Git 的 Markdown 知識庫桌面應用]]
+- [[cli/Understand-Anything - 程式碼知識圖譜互動探索工具]]

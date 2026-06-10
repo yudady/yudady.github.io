@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/SkillOpt - 微软文本空间Agent技能优化框架.md",
+                "file": "001-TODO/cli/CLI 復興浪潮 - CLI Anything 與 OpenCLI 深度解析.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +52,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "SkillOpt - 微软文本空间Agent技能优化框架"
+              "title": "CLI 復興浪潮 - CLI Anything 與 OpenCLI 深度解析"
+            }
+          },
+          {
+            "id": "f8d03f11b438ba74",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "001-TODO/cli/CLI-Anything 實戰 - Claude Code 運行任意軟體（比 MCP 便宜 30 倍）.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "CLI-Anything 實戰 - Claude Code 運行任意軟體（比 MCP 便宜 30 倍）"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -143,13 +167,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/SkillOpt - 微软文本空间Agent技能优化框架.md",
+                "file": "001-TODO/cli/CLI-Anything 實戰 - Claude Code 運行任意軟體（比 MCP 便宜 30 倍）.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "SkillOpt - 微软文本空间Agent技能优化框架 的大綱"
+              "title": "CLI-Anything 實戰 - Claude Code 運行任意軟體（比 MCP 便宜 30 倍） 的大綱"
             }
           }
         ],
@@ -300,34 +324,34 @@
       "markdown-importer:開啟 Markdown 格式轉換器": false
     }
   },
-  "active": "80785f432efeefd2",
+  "active": "f8d03f11b438ba74",
   "lastOpenFiles": [
-    "001-TODO/AI Agent 正在重演智能手机革命.md",
-    "100-InBox/AI-WORKFLOW/StraTA - 战略轨迹抽象解决AI Agent健忘症.md",
+    "001-TODO/cli/PaddleOCR - 百度開源 OCR 工具包與文件 AI 引擎.md",
+    "001-TODO/cli/Tolaria - 基於 Git 的 Markdown 知識庫桌面應用.md",
+    "001-TODO/cli/Understand-Anything - 程式碼知識圖譜互動探索工具.md",
     "001-TODO/Omni-SimpleMem 自主研究发现的终身多模态记忆.md",
     "001-TODO/Hermes Agent Multi-Agent Kanban Board 工作流.md",
+    "001-TODO/cli/多模型混合 Coding Agent 工作流 - Claude 规划 Gemini 设计 UI.md",
+    "001-TODO/cli/為 AI 重寫 CLI - 從 Agent 角度拆解命令列工具設計的未來.md",
+    "001-TODO/AI 自己造 AI — 递归自我改进与失控边缘.md",
+    "001-TODO/cli/OpenClaw - 開源 AI Agent Gateway 與 ACP 協議深度解析.md",
+    "001-TODO/Pi Agent Harness - 多層次 AI Agent 工具套件.md",
+    "001-TODO/cli/Scrapling - AI 自適應網頁爬蟲框架.md",
+    "001-TODO/cli/SkillOpt - 微软文本空间Agent技能优化框架.md",
+    "001-TODO/cli/MCP 之死 - 命令列才是 AI 工具整合的正確路徑.md",
+    "001-TODO/cli/CLI 復興浪潮 - CLI Anything 與 OpenCLI 深度解析.md",
+    "001-TODO/cli",
+    "001-TODO/2026-06-07-claude-code-dynamic-workflows.md",
+    "001-TODO/cli/CLI-Anything 實戰 - Claude Code 運行任意軟體（比 MCP 便宜 30 倍）.md",
+    "001-TODO/Agent-Arena-榜单分析.md",
+    "001-TODO/AI-Plan-Mode-四步工作流.md",
+    "001-TODO/AI Agent 正在重演智能手机革命.md",
+    "100-InBox/AI-WORKFLOW/StraTA - 战略轨迹抽象解决AI Agent健忘症.md",
     "001-TODO/Claude Code Dynamic Workflows 何时使用.md",
     "100-InBox/Hermes/Hermes Agent v0.15 Velocity Release.md",
     "100-InBox/AI/RTK - Rust Token Killer AI 编程省钱利器.md",
     "100-InBox/AI/Grok 4.3 我被工具化了 - 现代 AI Agent 架构的残酷真相.md",
     "001-TODO/Codex桌面APP零基础实战教程-15种玩法.md",
-    "100-InBox/AI-WORKFLOW/Claude Code Workflow 脚本化多 Agent 编排.md",
-    "100-InBox/AI/9arm-skills - Claude Code 工程纪律技能包.md",
-    "100-InBox/other/24小时重启系统-彻底摆脱失控感.md",
-    "100-InBox/AI/公司大腦真正缺的是檢索層.md",
-    "100-InBox/AI-WORKFLOW/Agentic AI自主开发14小时-全面解析.md",
-    "100-InBox/AI-WORKFLOW/AI规划工具反问你-9个盲点.md",
-    "100-InBox/AI-WORKFLOW/Anthropic 倫敦 Keynote - Claude 開始 prompt Claude.md",
-    "100-InBox/AI/FreeLLMAPI - 开源免费LLM代理.md",
-    "100-InBox/AI/GitHub一周热点116期.md",
-    "100-InBox/Hermes/Hermes Agent 记忆系统全解析.md",
-    "100-InBox/Hermes/Hermes Agent 架构解析.md",
-    "100-InBox/AI/MoneyPrinterTurbo — AI 一鍵生成高清短影音.md",
-    "100-InBox/other/SpaceX IPO 深度分析 - 史上最大IPO.md",
-    "100-InBox/AI/Theo-AI编程工作流-對話比程式碼重要.md",
-    "100-InBox/AI/VoxCPM-免分词TTS语音合成.md",
-    "100-InBox/AI/Task Decomposition - 从Human SOP到Agentic Workflow.md",
-    "100-InBox/AI-WORKFLOW/頂級決策者八大思維-孫武老子孔子.md",
     "100-InBox/AI-WORKFLOW",
     "001-TODO/Hermes Agent ",
     "001-TODO/research/subagent-artifacts-verify.html",
@@ -337,7 +361,6 @@
     "100-InBox/AI/NotebookLM_Export_2026-03-29T13-21-54.pdf",
     "100-InBox/other",
     "100-InBox/AI",
-    "100-InBox/Hermes",
     "001-TODO/test-202302271955.png",
     "001-TODO/drawio/index-202302271939.jpg",
     "001-TODO/drawio/index-202302271939.png",

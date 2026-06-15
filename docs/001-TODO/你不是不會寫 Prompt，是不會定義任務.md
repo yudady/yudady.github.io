@@ -198,4 +198,4 @@ Gary Chen 提供的三支辅助 Prompt（完整内容在 Patreon）：
 
 ## 相关笔记
 
-- [[Claude Fable 5 & Mythos 5 - Anthropic 最强模型公开发布]]
+- [[../100-InBox/AI/Claude Fable 5 & Mythos 5 - Anthropic 最强模型公开发布]]

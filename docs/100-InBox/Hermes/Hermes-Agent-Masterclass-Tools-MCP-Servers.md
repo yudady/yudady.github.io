@@ -1,5 +1,5 @@
 ---
-title: Hermes Agent Masterclass — Module 6: Tools & MCP Servers
+title: "Hermes Agent Masterclass — Module 6: Tools & MCP Servers"
 aliases:
   - Hermes Agent 工具系统
   - Hermes MCP 配置
@@ -11,10 +11,10 @@ tags:
   - status/active
 source:
   - "https://youtu.be/U140gP-1bEI"
-author: Tonbi's AI Garage
+author: "Tonbi's AI Garage"
 created: 2026-06-13
 updated: 2026-06-13
-description: Hermes Agent 工具系统全解——70+ 工具、Tool Sets 分层控制、MCP 服务器接入与暴露、自定义工具开发
+description: "Hermes Agent 工具系统全解——70+ 工具、Tool Sets 分层控制、MCP 服务器接入与暴露、自定义工具开发"
 level: intermediate
 stars: 5
 ---

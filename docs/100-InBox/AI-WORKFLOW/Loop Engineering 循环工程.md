@@ -283,4 +283,4 @@ Over-baking 模式:
 
 ## 相关笔记
 
-- [[Gemma 4 MTP 多Token预测加速]]
+- [[../AI/Gemma 4 MTP 多Token预测加速]]

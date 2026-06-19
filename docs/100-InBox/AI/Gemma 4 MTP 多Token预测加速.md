@@ -255,4 +255,4 @@ Gemma 4 提供 5 种参数规模，全部支持 MTP：
 
 ## 相关笔记
 
-- [[Loop Engineering 循环工程]]
+- [[../AI-WORKFLOW/Loop Engineering 循环工程]]

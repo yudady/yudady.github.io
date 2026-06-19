@@ -17,7 +17,7 @@ source:
   - "https://jedi.be/blog/2026/context-development-lifecycle/"
   - "https://www.bodenfuller.com/writing/cdlc"
   - "https://www.youtube.com/watch?v=bSG9wUYaHWU"
-author: Patrick Debois (Tessl), 视频解读: wow.insight
+author: "Patrick Debois (Tessl), 视频解读: wow.insight"
 created: 2026-06-13
 updated: 2026-06-13
 description: DevOps 之父提出 CDLC 框架——AI 时代上下文即新代码，软件工程正在经历从 SDLC 到 CDLC 的范式转移

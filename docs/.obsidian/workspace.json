@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/Gemma 4 MTP 多Token预测加速.md",
+                "file": "001-TODO/14行業AI應用痛點訪談.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Gemma 4 MTP 多Token预测加速"
+              "title": "14行業AI應用痛點訪談"
             }
           }
         ]
@@ -64,7 +64,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "goa",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -118,13 +118,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/Gemma 4 MTP 多Token预测加速.md",
+                "file": "001-TODO/14行業AI應用痛點訪談.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Gemma 4 MTP 多Token预测加速 的大綱"
+              "title": "14行業AI應用痛點訪談 的大綱"
             }
           }
         ],
@@ -250,11 +250,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "001-TODO/14行業AI應用痛點訪談.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "對外連結"
+              "title": "14行業AI應用痛點訪談 的對外連結"
             }
           }
         ],
@@ -277,32 +278,32 @@
   },
   "active": "273b0c607814095a",
   "lastOpenFiles": [
-    "001-TODO/Loop Engineering 全攻略 - 从 Prompt 到 Agent Loop.md",
-    "001-TODO/Sandcastle - AI Agent 并行沙箱软件工厂.md",
-    "001-TODO/Claude Code 14 大超级能力.md",
-    "001-TODO/Loop Engineering 循环工程.md",
-    "001-TODO/Hermes 多智能体内网通信 - Redis 异步消息总线实战.md",
-    "001-TODO/Gemma 4 MTP 多Token预测加速.md",
-    "001-TODO/Hermes-Agent-Masterclass-Tools-MCP-Servers.md",
-    "001-TODO/DevOps教父Patrick-Debois-CDLC-上下文即新代码.md",
-    "001-TODO/Hermes 远程网关与多智能体管理.md",
-    "001-TODO/2026-06-07-claude-code-dynamic-workflows.md",
-    "001-TODO/2026-06-08-agent-loop-what-are-loops.md",
-    "001-TODO/2026-06-08-matt-van-horn-agentic-engineering-hacks.md",
-    "100-InBox/AI/2026-06-09-google-skills-agent-npm.md",
-    "001-TODO/AI 自己造 AI — 递归自我改进与失控边缘.md",
-    "001-TODO/AI Agent 正在重演智能手机革命.md",
-    "001-TODO/AI-Plan-Mode-四步工作流.md",
-    "001-TODO/Anthropic Claude Code 一年反直觉心得.md",
-    "001-TODO/Claude Code Dynamic Workflows 何时使用.md",
-    "100-InBox/AI/Claude Fable 5 & Mythos 5 - Anthropic 最强模型公开发布.md",
-    "100-InBox/AI/Codex桌面APP零基础实战教程-15种玩法.md",
-    "100-InBox/AI/Cursor 2026 春季开发者习惯报告.md",
-    "100-InBox/AI/DS-4 DwarfStar 本地推理引擎.md",
-    "001-TODO/Hermes Agent Multi-Agent Kanban Board 工作流.md",
-    "100-InBox/AI-WORKFLOW/Hermes Kanban 多 Agent LLM Wiki 维护工作流.md",
-    "001-TODO/Omni-SimpleMem 自主研究发现的终身多模态记忆.md",
-    "100-InBox/AI/Pi Agent Harness - 多層次 AI Agent 工具套件.md",
+    "100-InBox/AI-WORKFLOW/2026-06-07-claude-code-dynamic-workflows.md",
+    "100-InBox/AI-WORKFLOW/2026-06-08-agent-loop-what-are-loops.md",
+    "100-InBox/AI-WORKFLOW/2026-06-08-matt-van-horn-agentic-engineering-hacks.md",
+    "100-InBox/AI-WORKFLOW/你不是不會寫 Prompt，是不會定義任務.md",
+    "100-InBox/AI-WORKFLOW/循环工程 Loop Engineering.md",
+    "100-InBox/AI/Agent-Arena-榜单分析.md",
+    "100-InBox/AI-WORKFLOW/AI 自己造 AI — 递归自我改进与失控边缘.md",
+    "100-InBox/AI-WORKFLOW/AI 时代的代码审查 Agentic Code Review.md",
+    "100-InBox/AI-WORKFLOW/AI Agent 正在重演智能手机革命.md",
+    "100-InBox/AI-WORKFLOW/AI-Plan-Mode-四步工作流.md",
+    "100-InBox/AI-WORKFLOW/Anthropic Claude Code 一年反直觉心得.md",
+    "100-InBox/AI-WORKFLOW/Claude Code 14 大超级能力.md",
+    "100-InBox/AI-WORKFLOW/Claude Code Dynamic Workflows 何时使用.md",
+    "100-InBox/AI-WORKFLOW/DevOps教父Patrick-Debois-CDLC-上下文即新代码.md",
+    "100-InBox/Hermes/Hermes 多智能体内网通信 - Redis 异步消息总线实战.md",
+    "100-InBox/Hermes/Hermes 远程网关与多智能体管理.md",
+    "100-InBox/Hermes/Hermes Agent Multi-Agent Kanban Board 工作流.md",
+    "100-InBox/Hermes/Hermes Kanban 并行 Agent 工作流 - 竞品研究.md",
+    "100-InBox/Hermes/Hermes-Agent-Masterclass-Tools-MCP-Servers.md",
+    "100-InBox/AI-WORKFLOW/Loop Engineering 全攻略 - 从 Prompt 到 Agent Loop.md",
+    "100-InBox/AI-WORKFLOW/Loop Engineering 循环工程.md",
+    "100-InBox/AI-WORKFLOW/Omni-SimpleMem 自主研究发现的终身多模态记忆.md",
+    "100-InBox/AI-WORKFLOW/OpenAI好特質會傳染-AI對齊的正向泛化.md",
+    "100-InBox/AI/OpenCode-NVIDIA-免费AI编码模型.md",
+    "100-InBox/AI-WORKFLOW/Sandcastle - AI Agent 并行沙箱软件工厂.md",
+    "100-InBox/AI-WORKFLOW/Skill vs MCP - 为何有了Skill还需要MCP.md",
     "001-TODO/cli",
     "100-InBox/AI-WORKFLOW",
     "001-TODO/Hermes Agent ",

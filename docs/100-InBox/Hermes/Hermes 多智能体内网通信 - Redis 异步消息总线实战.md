@@ -265,5 +265,5 @@ systemctl --user enable async_bus_worker_99.service
 
 ## 相关笔记
 
-- [[../100-InBox/AI/Claude Fable 5 & Mythos 5 - Anthropic 最强模型公开发布]]
+- [[../AI/Claude Fable 5 & Mythos 5 - Anthropic 最强模型公开发布]]
 - [[Hermes Agent 配置指南]]

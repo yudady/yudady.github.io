@@ -226,6 +226,6 @@ GLM 5.1（智谱 AI）在 Agent Arena 中排第 8，是国产/开源模型的最
 
 ## 相关笔记
 
-- [[AI-Plan-Mode-四步工作流]]
+- [[../AI-WORKFLOW/AI-Plan-Mode-四步工作流]]
 - [[GLM-5-1-技术分析]]
 - [[LLM-选型指南]]

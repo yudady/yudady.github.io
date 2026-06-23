@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/14行業AI應用痛點訪談.md",
+                "file": "001-TODO/skills/Ponytail - AI极简编程提示词架构.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "14行業AI應用痛點訪談"
+              "title": "Ponytail - AI极简编程提示词架构"
             }
           }
         ]
@@ -118,13 +118,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/14行業AI應用痛點訪談.md",
+                "file": "001-TODO/skills/Ponytail - AI极简编程提示词架构.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "14行業AI應用痛點訪談 的大綱"
+              "title": "Ponytail - AI极简编程提示词架构 的大綱"
             }
           }
         ],
@@ -276,8 +276,15 @@
       "markdown-importer:開啟 Markdown 格式轉換器": false
     }
   },
-  "active": "273b0c607814095a",
+  "active": "b1ae197fff4bfdd1",
   "lastOpenFiles": [
+    "001-TODO/matt-pocock-skills.md",
+    "001-TODO/skills",
+    "001-TODO/AI Agent 四大核心Skill架构.md",
+    "001-TODO/baoyu-skills.md",
+    "001-TODO/四大核心Skill架构与配置指南.md",
+    "001-TODO/14行業AI應用痛點訪談.md",
+    "001-TODO/skills/Ponytail - AI极简编程提示词架构.md",
     "100-InBox/AI-WORKFLOW/2026-06-07-claude-code-dynamic-workflows.md",
     "100-InBox/AI-WORKFLOW/2026-06-08-agent-loop-what-are-loops.md",
     "100-InBox/AI-WORKFLOW/2026-06-08-matt-van-horn-agentic-engineering-hacks.md",
@@ -298,12 +305,6 @@
     "100-InBox/Hermes/Hermes Kanban 并行 Agent 工作流 - 竞品研究.md",
     "100-InBox/Hermes/Hermes-Agent-Masterclass-Tools-MCP-Servers.md",
     "100-InBox/AI-WORKFLOW/Loop Engineering 全攻略 - 从 Prompt 到 Agent Loop.md",
-    "100-InBox/AI-WORKFLOW/Loop Engineering 循环工程.md",
-    "100-InBox/AI-WORKFLOW/Omni-SimpleMem 自主研究发现的终身多模态记忆.md",
-    "100-InBox/AI-WORKFLOW/OpenAI好特質會傳染-AI對齊的正向泛化.md",
-    "100-InBox/AI/OpenCode-NVIDIA-免费AI编码模型.md",
-    "100-InBox/AI-WORKFLOW/Sandcastle - AI Agent 并行沙箱软件工厂.md",
-    "100-InBox/AI-WORKFLOW/Skill vs MCP - 为何有了Skill还需要MCP.md",
     "001-TODO/cli",
     "100-InBox/AI-WORKFLOW",
     "001-TODO/Hermes Agent ",
@@ -313,7 +314,6 @@
     "100-InBox/AI/Claude_Code_Blueprint.pdf",
     "100-InBox/AI/NotebookLM_Export_2026-03-29T13-21-54.pdf",
     "100-InBox/other",
-    "100-InBox/AI",
     "001-TODO/test-202302271955.png",
     "001-TODO/drawio/index-202302271939.jpg",
     "001-TODO/drawio/index-202302271939.png",

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/skills/Ponytail - AI极简编程提示词架构.md",
+                "file": "001-TODO/skills/AI Agent 四大核心Skill架构.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Ponytail - AI极简编程提示词架构"
+              "title": "AI Agent 四大核心Skill架构"
+            }
+          },
+          {
+            "id": "e8da724ee273b7e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "001-TODO/多模型编排 — Fugu 与 Fusion.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "多模型编排 — Fugu 与 Fusion"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -118,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/skills/Ponytail - AI极简编程提示词架构.md",
+                "file": "001-TODO/多模型编排 — Fugu 与 Fusion.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Ponytail - AI极简编程提示词架构 的大綱"
+              "title": "多模型编排 — Fugu 与 Fusion 的大綱"
             }
           }
         ],
@@ -276,15 +301,18 @@
       "markdown-importer:開啟 Markdown 格式轉換器": false
     }
   },
-  "active": "b1ae197fff4bfdd1",
+  "active": "e8da724ee273b7e4",
   "lastOpenFiles": [
-    "001-TODO/matt-pocock-skills.md",
+    "001-TODO/Fable 5 泄露与AI Agent架构演进.md",
+    "001-TODO/热门 AI Agent 项目速览 2026-W26.md",
+    "001-TODO/多模型编排 — Fugu 与 Fusion.md",
+    "001-TODO/skills/AI Agent 四大核心Skill架构.md",
+    "001-TODO/skills/matt-pocock-skills.md",
+    "001-TODO/skills/baoyu-skills.md",
+    "001-TODO/skills/Ponytail - AI极简编程提示词架构.md",
     "001-TODO/skills",
-    "001-TODO/AI Agent 四大核心Skill架构.md",
-    "001-TODO/baoyu-skills.md",
     "001-TODO/四大核心Skill架构与配置指南.md",
     "001-TODO/14行業AI應用痛點訪談.md",
-    "001-TODO/skills/Ponytail - AI极简编程提示词架构.md",
     "100-InBox/AI-WORKFLOW/2026-06-07-claude-code-dynamic-workflows.md",
     "100-InBox/AI-WORKFLOW/2026-06-08-agent-loop-what-are-loops.md",
     "100-InBox/AI-WORKFLOW/2026-06-08-matt-van-horn-agentic-engineering-hacks.md",
@@ -302,9 +330,6 @@
     "100-InBox/Hermes/Hermes 多智能体内网通信 - Redis 异步消息总线实战.md",
     "100-InBox/Hermes/Hermes 远程网关与多智能体管理.md",
     "100-InBox/Hermes/Hermes Agent Multi-Agent Kanban Board 工作流.md",
-    "100-InBox/Hermes/Hermes Kanban 并行 Agent 工作流 - 竞品研究.md",
-    "100-InBox/Hermes/Hermes-Agent-Masterclass-Tools-MCP-Servers.md",
-    "100-InBox/AI-WORKFLOW/Loop Engineering 全攻略 - 从 Prompt 到 Agent Loop.md",
     "001-TODO/cli",
     "100-InBox/AI-WORKFLOW",
     "001-TODO/Hermes Agent ",

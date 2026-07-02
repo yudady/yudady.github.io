@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/多模型编排 — Fugu 与 Fusion.md",
+                "file": "001-TODO/Omnigent - AI 编码智能体的 Meta-Harness.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "多模型编排 — Fugu 与 Fusion"
+              "title": "Omnigent - AI 编码智能体的 Meta-Harness"
             }
           }
         ],
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/多模型编排 — Fugu 与 Fusion.md",
+                "file": "001-TODO/Omnigent - AI 编码智能体的 Meta-Harness.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "多模型编排 — Fugu 与 Fusion 的大綱"
+              "title": "Omnigent - AI 编码智能体的 Meta-Harness 的大綱"
             }
           }
         ],
@@ -303,9 +303,15 @@
   },
   "active": "e8da724ee273b7e4",
   "lastOpenFiles": [
+    "001-TODO/Harness 时代 — AI 编程的底盤戰爭.md",
+    "001-TODO/Omnigent - AI 编码智能体的 Meta-Harness.md",
+    "001-TODO/Hermes-Master-Agent-改造筆記.md",
+    "001-TODO/跨代理审计工作流 — Cross-Agent Adversarial Review.md",
+    "001-TODO/Cross-Model Review 互審機制.md",
+    "001-TODO/多模型编排 — Fugu 与 Fusion.md",
+    "001-TODO/企业级AI-Agent四步架构.md",
     "001-TODO/Fable 5 泄露与AI Agent架构演进.md",
     "001-TODO/热门 AI Agent 项目速览 2026-W26.md",
-    "001-TODO/多模型编排 — Fugu 与 Fusion.md",
     "001-TODO/skills/AI Agent 四大核心Skill架构.md",
     "001-TODO/skills/matt-pocock-skills.md",
     "001-TODO/skills/baoyu-skills.md",
@@ -324,12 +330,6 @@
     "100-InBox/AI-WORKFLOW/AI Agent 正在重演智能手机革命.md",
     "100-InBox/AI-WORKFLOW/AI-Plan-Mode-四步工作流.md",
     "100-InBox/AI-WORKFLOW/Anthropic Claude Code 一年反直觉心得.md",
-    "100-InBox/AI-WORKFLOW/Claude Code 14 大超级能力.md",
-    "100-InBox/AI-WORKFLOW/Claude Code Dynamic Workflows 何时使用.md",
-    "100-InBox/AI-WORKFLOW/DevOps教父Patrick-Debois-CDLC-上下文即新代码.md",
-    "100-InBox/Hermes/Hermes 多智能体内网通信 - Redis 异步消息总线实战.md",
-    "100-InBox/Hermes/Hermes 远程网关与多智能体管理.md",
-    "100-InBox/Hermes/Hermes Agent Multi-Agent Kanban Board 工作流.md",
     "001-TODO/cli",
     "100-InBox/AI-WORKFLOW",
     "001-TODO/Hermes Agent ",

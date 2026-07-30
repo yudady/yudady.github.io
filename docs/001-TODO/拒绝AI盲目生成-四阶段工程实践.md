@@ -1,447 +1,391 @@
 ---
 title: 拒绝 AI 盲目生成：一套四阶段工程实践
-aliases: [Why Software Factories Fail, HumanLayer 四阶段, Dex Horthy 软件工厂]
+aliases: [AI盲目生成四阶段工程实践, HumanLayer RPI 四阶段, Dex Horthy 软件工厂]
 tags:
   - ai-coding
-  - software-factory
+  - ai-agent
+  - software-engineering
   - code-review
-  - humanlayer
+  - context-engineering
   - status/active
   - type/doc
 source:
   - "https://www.youtube.com/watch?v=YYgrTVzNrZI"
-  - "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md"
-  - "https://www.humanlayer.dev/blog/advanced-context-engineering"
-  - "https://www.faros.ai/blog/ai-software-engineering"
-author: 为什么叫QQ（视频）；Dex Horthy / HumanLayer（原始来源）
-created: 2026-07-30
-updated: 2026-07-30
-description: 基于 Dex Horthy「Why Software Factories Fail」深度文章，结合 Faros AI 遥测数据，剖析 AI 编码代理导致代码质量下降的系统性原因，给出四阶段工程实践框架
+author: Why QQ（频道） / Dex Horthy（HumanLayer，原始内容来源）
+created: 2026-07-31
+updated: 2026-07-31
+description: 基于 Dex Horthy / HumanLayer 的工程实践，剖析 AI 编码代理高采用率带来的隐性成本，并提出从"盲目生成"到"可控交付"的四阶段工程流程
 level: intermediate
 stars: 4
-note: 视频无字幕（频道"为什么叫QQ"系统性无字幕），基于用户提供的 Content Insights + Dex Horthy 原始文章（wsff.md）+ Faros AI 报告综合整理
+note: 无字幕，Tier 2。基于视频描述 + 用户提供的 Content Insights + Faros AI / HumanLayer / Signadot 原始资料交叉验证整理。
 ---
 
 # 拒绝 AI 盲目生成：一套四阶段工程实践
 
-> SWE-bench 分数飙升 ≠ 工程效益提升。高 AI 采用率带来的不是效率飞跃，而是更大的 PR、更长的审查、更多的事故。Dex Horthy 从 HumanLayer 团队的亲身失败出发，提出四阶段工程实践框架，把代码审查放回环路。
+> 为什么团队高频使用 AI 编码代理后，代码审查时间反而拉长、线上 Bug 不降反增？问题不在 Prompt 或 Token，而在交付系统（Delivery System）本身的结构性缺陷。Dex Horthy（HumanLayer）提出的四阶段工程流程，从"盲目生成"转向"可控交付"。
 
 ---
 
 ## 目录
 
-1. [AI 导入的工程困境](#1-ai-导入的工程困境)
-2. [软件工厂为什么会失败](#2-软件工厂为什么会失败)
-3. [四阶段工程实践框架](#3-四阶段工程实践框架)
-4. [关键反思与行动建议](#4-关键反思与行动建议)
+1. [核心矛盾：Benchmark 飙升 vs 工程效能下降](#核心矛盾benchmark-飙升-vs-工程效能下降)
+2. [Faros AI 遥测数据：高 AI 采用率的隐性代价](#faros-ai-遥测数据高-ai-采用率的隐性代价)
+3. [根因诊断：交付系统的结构性问题](#根因诊断交付系统的结构性问题)
+4. [四阶段工程实践（RPI 框架）](#四阶段工程实践rpi-框架)
+5. [验证瓶颈：生成快了，验证没有](#验证瓶颈生成快了验证没有)
+6. [关键反思与行动建议](#关键反思与行动建议)
+7. [参考资料](#参考资料)
 
 ---
 
-## 1. AI 导入的工程困境
+## 核心矛盾：Benchmark 飙升 vs 工程效能下降
 
-### 1.1 Benchmark 迷信：分数涨了，代码没变好
+SWE-bench 等评测基准分数持续创新高，管理者容易得出"程式码生产成本骤降，可以放手给 AI Agent"的结论。但真实工程数据显示完全相反的趋势。
 
-业界普遍用 SWE-bench 等 benchmark 分数来判断 AI 编码能力。管理者看到分数飙升，就以为"代码生产成本骤降"，把任务全权交给 AI Agent。
+**Benchmark 的局限**：
+- SWE-bench 测试的是功能正确性（Functional Correctness）——代码能否跑通特定测试用例
+- 它不测试长期可维护性（Maintainability）——代码是否易于理解、修改、扩展
+- 跑分高的模型在真实棕地（Brownfield）代码库中可能表现更差
 
-**问题在于**：SWE-bench 的评分机制只看两件事——
+**认知误区对照表**：
 
-| 评分维度 | 含义 | 能检测到 |
-|----------|------|----------|
-| FAIL_TO_PASS | 修好了被要求的 bug | 功能正确性 |
-| PASS_TO_PASS | 没搞坏其他东西 | 回归安全性 |
-| （缺失） | 代码可维护性 | **完全没有** |
+| 管理者常见假设 | 实际遥测数据 |
+|---|---|
+| AI 让代码生产更快 | PR 产出确实增加 210%，但审查时间暴涨 |
+| 跑分越高 = AI 越能干 | 跑分只测功能正确性，不测可维护性 |
+| 问题是 Prompt 不够好 | 问题在交付系统结构，不在提示词 |
+| 多给 Token 就能解决 | Token 数量不等于上下文质量 |
 
-SWE-bench 的每个 task 约 15 分钟工作量，来自 Redis、jq、Django 等开源项目。评分方式是"一次性 binary reward"：测试通过 = 1，否则 = 0。
+---
 
-```
-benchmark 评分流程：
-  bug report + 代码库（修复前的 commit）
-        ↓
-  agent 写 patch
-        ↓
-  丢弃 agent 对测试文件的修改（防止作弊）
-        ↓
-  叠加 benchmark 自己的 test patch
-        ↓
-  跑全部测试 → 通过 = 1 / 失败 = 0
-```
+## Faros AI 遥测数据：高 AI 采用率的隐性代价
 
-**关键缺陷**：how the model got to a correct answer doesn't matter。模型可以在正确的答案中夹带 try-catch 包裹一切、lazy type cast 破坏类型系统等"代码腐化"操作，只要测试通过就拿满分。
+Faros AI 基于 AI Engineering Report 2026（"Acceleration Whiplash"数据集），覆盖数千个工程团队，对比低 AI 采用率 vs 高 AI 采用率团队的关键指标变化。
 
-> "there is no penalty for eroding codebase maintainability"
-> —— Dex Horthy
-
-### 1.2 Faros AI 遥测数据：高采用率的警讯
-
-Faros AI 基于约 10,000 名开发者、1,255 个团队的遥测数据（2025 年报告）：
+### 核心数据（高 AI 采用率 vs 低 AI 采用率）
 
 | 指标 | 变化幅度 | 含义 |
-|------|----------|------|
-| PR 数量 | +98% per developer | 产出了更多 PR |
-| 任务完成 | +21% | 个人吞吐量上升 |
-| PR 审查时间 | +91% | **审查成为瓶颈** |
-| PR 平均体积 | +154% | PR 越来越大 |
-| 每开发者 bug 数 | +9% | 质量下降 |
-| 公司层面 DORA 指标 | **无显著相关性** | 个人收益未传导到组织 |
+|---|---|---|
+| PR 完成任务数 | +210% | 产出确实更多了 |
+| PR 平均大小（行数） | +51.3% | 每个 PR 更大 |
+| 每个 PR 修改文件数 | +59.7% | 涉及范围更广 |
+| 每 PR Bug 数 | +54% | 缺陷密度上升 |
+| 首次审查等待时间（中位数） | +156.6% | 排队更久 |
+| 平均审查耗时 | +199.6% | 审查更慢 |
+| **中位数审查耗时** | **+441.5%** | **审查队列已经崩溃** |
+| 跳过审查直接合并的 PR | +31.3% | 守门人正在失效 |
+| 任务进行中平均时间 | +225.2% | 每个阶段都变慢 |
 
-Dex Horthy 在 wsff.md 中引用的 Faros 数据更触目惊心（可能为更新版本）：
+> 视频中引用的数据（PR 变更 1.8x、审查时间 2.3x、缺陷密度 1.9x、生产事故 2.1x）与 Faros AI 公开数据趋势一致，视频可能是基于更早的数据版本或不同的统计口径。两者方向完全吻合：**AI 高采用率 → PR 更大、审查更久、缺陷更多、事故更频**。
 
-```
-代码质量（合并前）：
-  +25% 更多审查评论
-  +22.7% 更长的评论
-  +31.3% 的 PR 完全跳过审查
+### 其他交叉验证数据
 
-生产质量：
-  +242.7% 每 PR 事故数
-  +57.9% 月度事故数
-  +54% 每开发者 bug 数
-```
+| 数据来源 | 关键发现 |
+|---|---|
+| METR 随机对照试验 | 使用 AI 工具的开发者完成任务**慢 19%**，但仍**相信** AI 让他们更快 |
+| JetBrains ICSE 2026 行为研究 | AI 用户每月撤销/删除操作约 100 次 vs 非 AI 用户 7 次（14x 差距），且半数用户**没察觉**自己的行为变化 |
+| CodeRabbit 470 PR 分析 | AI 生成代码的问题数量是人工代码的 **1.7x**，逻辑/正确性错误高 75%，算法错误高 2x |
+| Stanford 10 万开发者研究 | AI 工具产出的"额外代码"大部分是在**重做上周产出的劣质代码**（slop rework） |
 
-**核心悖论**：开发者觉得自己更快了，但公司层面看不到业务收益——这就是 "AI productivity paradox"。
-
-### 1.3 为什么 benchmark 提升没能转化为工程质量
+### AI 代码为什么更难审查？
 
 ```
-┌─────────────────────────────────────────────┐
-│  Benchmark 测的是「功能正确性」               │
-│  RL 训练优化的也是「测试通过率」              │
-│  ↓                                           │
-│  模型被训练成「让测试通过」                   │
-│  而非「写出可维护的代码」                     │
-│  ↓                                           │
-│  可维护性的成本函数以「周/月/年」计           │
-│  无法在 RL 的快速反馈循环中 reward            │
-└─────────────────────────────────────────────┘
+人工劣质代码                 AI 劣质代码
+┌──────────────┐           ┌──────────────┐
+│ 命名混乱      │           │ 命名规范      │
+│ 风格不一致    │  ← 表面信号 │ 风格统一      │ ← 表面"完美"
+│ 明显捷径      │  全部存在   │ 结构整洁      │
+└──────────────┘           └──────────────┘
+       │                           │
+       ▼                           ▼
+  审查者快速发现             审查者必须"重构意图"
+  "这人不理解问题"           "这段代码到底要解决什么问题？"
+       │                           │
+       ▼                           ▼
+  快速 reject                高强度认知工作
+                            （Product Archaeology）
 ```
 
-Dex 的判断：这不是 skill issue（用户能力问题），而是 **model-training issue**（模型训练的结构性缺陷）。再多的 harness engineering / prompt engineering / token 堆叠，都无法弥补训练阶段对可维护性的忽视。
+> "AI agents do not pause when requirements are vague. They do not challenge undefined behavior. They fill the gap and compile the guess."
+> —— Jake Redmond
+
+资深工程师变成了"产品考古学家"——从生成的代码、稀薄的规格、不完整的 Jira 工单中**逆向重构意图**。
 
 ---
 
-## 2. 软件工厂为什么会失败
+## 根因诊断：交付系统的结构性问题
 
-### 2.1 软件工厂的演进
+视频的核心论点：**这不是 Prompt 问题，也不是 Token 问题，而是交付系统（Delivery System）的结构性问题。**
 
-```
-2022 传统软件工厂：
-  人决定做什么 → Tracker(Jira/Linear) → 人写代码 → PR审查 → 发布 → 监控 → 反馈
-  （build 和 review 都需要数小时到数天）
-
-       ↓ 引入 AI Agent
-
-Agent 软件工厂：
-  build 从「小时/天」缩短到「分钟/小时」
-  review 仍然是「小时/天」→ 审查成为瓶颈
-
-       ↓ 加速审查
-
-Agent 审查 + Agent 回归测试：
-  review 变快了，但仍是瓶颈
-  继续加 loops：事故自动修复、用户反馈自动入场
-
-       ↓ 追求极致效率
-
-Lights-off 软件工厂（关灯工厂）：
-  "没有人读代码，没有人写代码"
-  把 human review 那一步直接删掉
-  投资全部转移到：测试、沙盒、自动审查、监控、灰度
-```
-
-StrongDM 实现了 lights-off factory，Ramp/Stripe/WorkOS/Brex 等公司也声称用 Agent 工厂产出 75% 的代码。OpenAI 的内部软件工厂叫 Symphony。
-
-### 2.2 HumanLayer 的亲历教训
-
-Dex Horthy 在 2025 年 7 月带着 HumanLayer 团队全面关灯（full lights-off）：
+### AI 的杠杆特质
 
 ```
-时间线：
-  2025.07  全面 lights-off，background agents 跑所有中小任务
-       ↓
-  遇到 agent 无法解决的棘手问题
-  团队已经 3 个月没读过自己的代码库
-       ↓
-  第一次：硬啃两周 claude spaghetti，说服自己"速度值得"
-       ↓
-  第三次（11月）：决定从零重写
-  联合创始人花了两整周在 VS Code（不是 Cursor）里手动重写
+                    ┌─────────────────────────┐
+                    │   你的交付系统            │
+                    │  (测试/审查/隔离/规范)    │
+                    └────────┬────────┬───────┘
+                             │        │
+               ┌─────────────▼──┐  ┌──▼──────────────┐
+               │  系统强健时     │  │  系统薄弱时      │
+               │  AI 放大优点    │  │  AI 放大缺陷     │
+               │  → 高质量高产出 │  │  → 大量劣质产出  │
+               └────────────────┘  └─────────────────┘
 ```
 
-**结论**：models degrade codebase quality over time。模型无法在没有大量人工干预的情况下维护和提升代码库质量。
+AI 是能力放大器（Leverage）。**如果你的交付系统本身有缺陷——缺乏测试、审查流程不完善、模块隔离差——AI 会把这些缺陷的后果成倍放大。**
 
-### 2.3 为什么 token-maxxing 无效
+### 根因拆解
 
-| 常见建议 | 实际效果 |
-|----------|----------|
-| "给更多 token" | 提高下限（catch dumb stuff），不提高上限 |
-| "写更好的 prompt" | 无法弥补模型训练的结构性缺陷 |
-| "加 adversarial review bot" | 同上，raise the floor, not the ceiling |
-| "配置更多 linter" | 只能拦截已知的、模式化的问题 |
+| 常见归因 | 实际根因 |
+|---|---|
+| "Prompt 写得不够好" | AI 缺乏足够的上下文（Context Engineering 缺失） |
+| "Token 给得不够多" | Token 数量 ≠ 上下文质量；更多 Token 可能引入更多噪声 |
+| "模型不够聪明" | 同一模型加上下文 vs 不加上下文，效果差距远大于换更强的模型 |
+| "审查者不够快" | 审查瓶颈是**生成端**失控的后果，不是审查端的问题 |
 
-**AI 是杠杆（lever），不是解决方案**。它会放大交付系统的一切——优点和缺陷都会被放大。如果交付系统本身缺乏隔离、测试、审查机制，AI 快速产出的大量变更会直接冲垮审查能量。
+Faros AI 的对照实验直接证明了"上下文 > 模型"：
 
-### 2.4 可维护性没有 fast oracle
+|  | Claude Sonnet 3.7（旧模型） | Claude Opus 4.6（新模型） |
+|---|---|---|
+| 无上下文 | -0.70 | +0.08 |
+| 有仓库上下文 | -0.34 | +0.29 |
 
-```
-测试反馈：     秒级      → RL 可以跑百万次循环优化
-功能正确性：   分钟级    → benchmark 可以批量验证
-代码腐化成本： 周/月/年级 → 无法 backpropagate 到当初的决策
-```
-
-"一个糟糕的架构决策 → 随机的 slop 代码 → 数周或数月后的 bug/事故，而这条路无法从事故反推回当初导致它的决策。"
-
-Dex 的推论链：
-
-```
-如果模型能可靠区分好坏代码
-  → 它一开始就该写出好的版本
-    → 但可维护性没有 fast oracle
-      → RL 无法在训练中 reward 它
-        → 模型在可维护性上停滞不前
-```
-
-这也是为什么 Dex 不信任任何基于现有 benchmark 的分数提升——它们不测可维护性。
+**旧模型 + 上下文（-0.34）的得分接近新模型无上下文（+0.08）**。上下文工程的效果可以弥补一代模型的能力差距。
 
 ---
 
-## 3. 四阶段工程实践框架
+## 四阶段工程实践（RPI 框架）
 
-> "Turning the lights back on" —— 把代码审查放回环路
+Dex Horthy / HumanLayer 的核心方法论：**Research → Plan → Implement（RPI）**，配合频繁有意图的压缩（Frequent Intentional Compaction），将人工精力集中在最高杠杆的点。
 
-核心理念：接受"目前模型在可维护性上不行"这个约束，用工程流程在约束内优化，追求 2-3x 提速（而非 10-100x 但烧掉代码库）。
-
-### 3.1 总览
+### 四阶段流程图
 
 ```
-产品需求 → 系统架构 → 程序设计 → 垂直切片
-(Product)  (System)   (Program)   (Vertical)
-  ↓          ↓          ↓           ↓
- 做什么    服务怎么    代码长     切片式
- 和为什么   交互       什么样     交付验证
+┌─────────────────────────────────────────────────────────────┐
+│                    四阶段工程实践                             │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  阶段 1: 需求与设计隔离         阶段 2: 可控生成与边界约束     │
+│  ┌──────────────────┐         ┌──────────────────┐          │
+│  │ 产品需求规格      │         │ 限制 PR 范围      │          │
+│  │ 架构约束          │ ──────► │ 控制变更粒度      │          │
+│  │ 在 AI 生成前确定  │         │ 避免一次性大爆炸   │          │
+│  └──────────────────┘         └────────┬─────────┘          │
+│                                        │                    │
+│                                        ▼                    │
+│  阶段 4: 人机协同优化           阶段 3: 自动化验证防护          │
+│  ┌──────────────────┐         ┌──────────────────┐          │
+│  │ 审查重心转向      │ ◄────── │ 比传统更严格的    │          │
+│  │ 架构/逻辑/意图    │         │ 自动测试+静态检查  │          │
+│  │ 而非修修补补      │         │ 拦截显见缺陷       │          │
+│  └──────────────────┘         └──────────────────┘          │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-**80/20 分配原则**（Dex 的估算）：
-
-| 任务比例 | 处理方式 |
-|----------|----------|
-| ~40% | 直接 oneshot 给 agent，加 1-2 轮轻反馈 |
-| 中等任务 | Product + System 合并到一个 plan 文档 |
-| 大任务 | 走完整四阶段（重构类可跳过 Product） |
-
-### 3.2 阶段一：产品需求（Product Requirements）
-
-**目标**：把两句话或一段语音备忘录变成半结构化的产品文档。
-
-核心要素：
-- **要解决的问题**：用用户的语言描述真实痛点
-- **成功的样子**：发布后能读到什么信号来判断"值得做"——用户结果（"XYZ 工作流耗时更短"）、错误率、延迟，或最朴素的"关于 X 的客服工单消失了"
+HumanLayer 的 RPI 对应实践：
 
 ```
-✅ 好的成功指标：
-   - "用户能在 3 分钟内完成 onboarding"
-   - "支付失败的客服工单减少 50%"
-
-❌ 坏的成功指标：
-   - "代码覆盖率提升到 90%"（技术细节，不是产品结果）
-   - "重构后的架构更清晰"（谁在乎？用户看不到）
-```
-
-**关键技巧**：不描述界面，直接做粗略 HTML mockup。"一张粗略的 HTML mockup 能解决三段文字都说不清的争论。"
-
-**何时跳过**：copy 微调、一次性脚本、有明显 repro 的 bug——直接丢给 agent。
-
-### 3.3 阶段二：系统架构（System Architecture）
-
-**目标**：对齐服务、端点、schema、队列、存储如何交互，不深入程序设计细节。
-
-核心产出：
-
-```
-# 交互序列（sequence diagram 风格）
-UI → API: PUT /resources/:slug
-API → ResourceService: create(input)
-ResourceService → Store: insert resource
-ResourceService → UI: 201 resource
-
-# 契约 / 端点形状
-PUT /api/resources/:slug
-  request:  { destination: string }
-  response: { resource: Resource }
-
-# 数据模型
-CREATE TABLE resource (
-  slug         TEXT PRIMARY KEY,
-  destination  TEXT NOT NULL,
-  created_at   TIMESTAMPTZ NOT NULL DEFAULT now()
-);
-```
-
-**Pitfall**：Mermaid 图有时会给人"已经对齐了"的错觉。架构阶段的杠杆很高，能预先挡掉很多 model tics，但仅靠架构不足以产出高质量代码——还需要阶段三。
-
-### 3.4 阶段三：程序设计（Program Design）
-
-这是 Dex 认为 "criminally underemphasized"（被严重低估）的环节。
-
-大多数人的假设：架构对了 → 模型就能 cook。Dex 的实际经验：你会不喜欢你拿回来的东西。
-
-**程序设计要确定的**（在任何人/agent 写实现之前）：
-
-```
-1. 调用栈树（Call-stack trees）—— 控制流变更
-   entrypoint
-     runCommand
-+      handleCreateResource
-+        ResourceClient.create(input)
-+          POST /resources
-+        renderResult
--    legacyCreateFlow
-
-2. 文件树 diff（File-tree diffs）—— 代码布局
-   src
-   └── resource
-+      ├── resource-client.ts      # NEW - wraps API contract
-+      ├── resource-client.test.ts # NEW - covers mapping
-~      └── resource-route.ts       # MODIFIED - wires create action
-
-3. 类型与方法签名（Types & method signatures）
-   interface Item {
-     id: ItemId
-     parentId: ItemId | null
-   }
-   resolveTarget(items: Item[], cursor: Cursor) -> ItemId | null
-```
-
-这些产出不需要太久（模型起草，你跟它争论），但每一个都是在代码审查阶段（改主意最贵的时候）才会做的决策，提前到这儿做了。
-
-> "30 minutes of planning saves hours of review."
-
-### 3.5 阶段四：垂直切片（Vertical Slices）
-
-**模型偏爱「水平切片」**（horizontal / stack-order）：
-
-```
-模型的默认计划（水平切片）：
-  1. 数据库 Migration
-  2. Service Layer
-  3. API
-  4. Frontend
-  → 全部写完才能"碰到"整个功能，中间无法验证
-```
-
-**Dex 偏爱「垂直切片」**（vertical / tracer bullets）：
-
-```
-Dex 的方式（垂直切片）：
-  1. 建 API 契约 + mock 数据，用 curl 测试
-  2. 建 frontend 消费 mock 数据，在浏览器里迭代打磨
-  3. 把 API 接到 services 层（services 先返回 mock）
-  4. 加数据库 migration，接通 services 和 DB
-  5. 加业务逻辑
-  6. 加错误处理
-  → 每一步都能"碰到"功能，每一步都在验证
-```
-
-**为什么垂直切片更好**：
-- 每 100-200 行就能检查 + 重新引导，比读完 2000+ 行再发现问题便宜得多
-- 前端时代的经验：很少有人写 500+ 行代码中间完全不验证
-
-Dex 通常一次给模型 1-3 个切片，边做边审。"及早重新引导（internals 或功能）比穿越 2000+ 行不知道哪里坏了的代码便宜得多。"
-
-### 3.6 四阶段决策树
-
-```
-任务来了
+RESEARCH（研究）
+  │  理解代码库、相关文件、信息流、问题潜在原因
+  │  输出：结构化研究文档
   │
-  ├─ copy 微调 / 一次性脚本 / 明确 repro 的 bug？
-  │    └─ YES → 直接 oneshot 给 agent
+  ▼
+PLAN（规划）  ← 最高杠杆的人工审查点
+  │  精确列出修改步骤、涉及文件、测试/验证方案
+  │  输出：分阶段的实施计划
   │
-  ├─ 中等复杂度？
-  │    └─ Product + System 合并到一个 plan → 直接实现
-  │
-  └─ 大任务 / 复杂功能 / 棕地重构？
-       └─ 走完整四阶段
-            Product → System → Program Design → Vertical Slices
+  ▼
+IMPLEMENT（实施）
+  │  逐阶段执行计划，每阶段验证后压缩状态回计划文件
+  │  输出：经过验证的 PR
 ```
+
+### 为什么把人工精力放在 Research 和 Plan？
+
+```
+错误传播的杠杆效应：
+
+  1 行错误的研究 ──► 可能导致 ──► 数千行错误代码
+       │
+       ▼
+  1 行错误的计划 ──► 可能导致 ──► 数百行错误代码
+       │
+       ▼
+  1 行错误的代码 ──► 就是 ──► 1 行错误代码
+
+  ──────────────────────────────────────
+  人工审查的杠杆：Research > Plan > Code
+```
+
+> "A bad line of code is... a bad line of code. But a bad line of plan could lead to hundreds of bad lines of code. And a bad line of research could land you with thousands of bad lines of code."
+> —— Dex Horthy
+
+### 各阶段的关键实践
+
+**阶段 1 — Research（研究）**
+
+```
+✅ 让 AI 探索代码库，理解信息流和依赖关系
+✅ 输出结构化研究文档（非聊天记录）
+✅ 人工审查研究发现，错误则重来（不用凑合）
+❌ 跳过研究直接让 AI 写代码
+```
+
+**阶段 2 — Plan（规划，最高杠杆）**
+
+```
+✅ 基于研究结果制定精确的分阶段实施计划
+✅ 列明每步要改的文件、改法、测试方案
+✅ 人工审查计划——这是防止大规模错误的最有效拦截点
+✅ 可以并行生成多个计划方案，人工选择最优
+❌ 一句话描述需求后让 AI 自由发挥
+```
+
+**阶段 3 — Implement（实施）**
+
+```
+✅ 逐阶段执行计划，每阶段完成后验证
+✅ 频繁压缩（Intentional Compaction）：把当前状态
+   写回计划文件，保持上下文窗口在 40-60% 利用率
+✅ 用 subagent 隔离搜索/查找类操作，不污染主上下文
+❌ 一次性生成整个功能
+❌ 让上下文窗口填满后再处理
+```
+
+**阶段 4 — 人机协同审查**
+
+```
+✅ 审查重心：架构设计、逻辑正确性、意图匹配
+✅ 依赖自动化测试和静态检查拦截语法/风格问题
+✅ Code Review 的核心目的是团队心智对齐
+   （Mental Alignment），不是逐行找 Bug
+❌ 花大量时间审查 AI 生成代码的语法细节
+❌ 替 AI 清理盲目生成后的垃圾代码
+```
+
+### 上下文窗口管理的黄金法则
+
+```
+上下文窗口是影响输出质量的唯一杠杆
+（在不换模型的前提下）
+
+优化优先级：
+  1. 正确性（Correctness）    — 信息必须准确
+  2. 完整性（Completeness）   — 不能缺关键信息
+  3. 大小（Size）             — 去除噪声
+  4. 轨迹（Trajectory）       — 保持正确方向
+
+最坏情况（按严重程度排序）：
+  1. 错误信息  >>  2. 缺失信息  >>  3. 过多噪声
+
+经验法则：上下文利用率保持在 40%-60%
+         （越复杂的问题越要留余量）
+```
+
+### 实际效果（HumanLayer 案例）
+
+| 维度 | 结果 |
+|---|---|
+| 棕地代码库 | 300k LOC Rust 项目（BAML）成功修改 |
+| 复杂问题 | 7 小时内交付 35k LOC（两个功能，预计各需资深工程师 3-5 天） |
+| 代码质量 | PR 通过维护者审查，无 slop |
+| 团队对齐 | 通过 specs/plans/research 保持全员心智同步 |
+| 不是万能 | 7 小时也搞不定 parquet-java 去除 Hadoop 依赖（需要领域专家） |
 
 ---
 
-## 4. 关键反思与行动建议
+## 验证瓶颈：生成快了，验证没有
 
-### 4.1 相关性 ≠ 因果关系
-
-Faros 数据是 correlation signal，不是 smoking gun。Dex 明确说"the whole point of this post is to be wary of slop data"。
-
-但方向上感觉是对的（directionally valid），与社区广泛反馈一致：
-- Matt Pocock："codebases are falling apart faster than they ever have before"
-- Mario 在 AI Engineer Europe 演讲中恳求大家放慢："毫无理由因 coding-agent 失误而宕机的公司，正在因 coding-agent 失误而宕机"
-- FT 报道 Amazon 因 coding-agent 失误导致宕机
-
-### 4.2 行动建议
-
-| 建议 | 具体做法 |
-|------|----------|
-| 控制变更粒度 | 规范 AI 生成代码的 PR 规模；一次给 agent 1-3 个 vertical slice |
-| 升级审查与测试防线 | 在链入 Agent 前，先补齐 CI/CD 自动化测试 + 架构隔离 |
-| 把规划前置 | Product + System + Program Design 文档化，再做实现 |
-| 优化人机分工 | human-in-the-loop 重心放在需求定义、架构设计、边界验证 |
-| 读该读的代码 | 不要追求"完全不读代码"；读 research 和 plan 比读代码杠杆更高 |
-
-### 4.3 重新理解杠杆层级
-
-来自 Dex 早期文章「Advanced Context Engineering」的框架——人的精力应该投在杠杆最高的环节：
+Signadot 的分析补充了另一个视角：**问题的本质是生成与验证之间的吞吐量不对称。**
 
 ```
-杠杆从高到低：
+生成速度                          验证速度
+█████████████████████████████     ██
+（AI 让这里快了 10x）              （这里完全没变）
 
-  Research（研究）     ── 一行错误的研究 → 数千行错误代码
-      ↑
-  Plan（计划）         ── 一行错误的计划 → 数百行错误代码
-      ↑
-  Code（代码）         ── 一行错误的代码 → 一行错误代码
+结果：PR 堆积 → 审查疲劳 → 跳过审查 → 缺陷上线
+
+开源界已经先崩了：
+  - Jazzband（Python 生态）：因 AI 垃圾 PR 关停
+  - Godot 引擎维护者：称处理 AI slop 令人精疲力竭
+  - curl 作者：关闭 Bug Bounty（被 AI 低质量提交淹没）
 ```
 
-"一个糟糕的 plan 能导致数百行糟糕的代码。一个糟糕的 research，对代码库工作方式的误解，能让你得到数千行糟糕的代码。"
+**关键洞察**：用 AI 审查 AI 生成的代码（AI-reviews-AI）治标不治本。Faros 数据显示 25% 的 PR 已经由 AI 审查，但人工审查负担**不降反升**——因为 AI 审查者只能抓模式问题，无法验证意图。
 
-**结论**：把人的注意力集中在 research 和 plan 的审查上，比逐行审查代码更高效。
-
-### 4.4 前沿 benchmark 的进展
-
-Dex 提到几个方向正确的努力（但强调仍不足以放心下注）：
-
-| 项目 | 特点 |
-|------|------|
-| SWE-Marathon (Abundant AI) | ~400 小时的大任务，compound reward 而非单 binary bit |
-| DeepSWE (Datacurve) | 从未真实建过的 OSS 大任务（解决训练集污染） |
-| Frontier Code (Cognition) | 多 PR 任务 + mutation testing + judge model 检查代码质量规则 |
-
-Frontier Code 最值得关注：它用 judge model 检查 diff 的代码质量规则，并 penalize 写出"在 pre-patch 代码上不会失败的测试"（mutation testing 思路）。
-
-但 Dex 的警告：if a model could reliably tell good code from bad, it might have written the good version to begin with.
+真正的解决方案是**将验证左移到开发循环内部**（Shift-Left Validation），让每个 PR 自带"它能工作"的证据，而非"相信它能工作"的承诺。
 
 ---
 
-## 核心观点提炼
+## 关键反思与行动建议
 
-1. **Benchmark 骗人** —— SWE-bench 只测功能正确性，不测可维护性；RL 训练优化的是"让测试通过"，不是"写出好代码"
-2. **AI 是放大器** —— 它放大交付系统的一切，包括结构缺陷；没有隔离/测试/审查的交付系统会被 AI 冲垮
-3. **Lights-off 是幻想** —— HumanLayer 亲历：全面关灯 5 个月后从零重写
-4. **可维护性没有 fast oracle** —— 这是模型训练层面的结构性问题，无法靠 prompt/token/harness 解决
-5. **把灯打开** —— 接受约束，用四阶段流程在约束内做到 2-3x 安全提速，而非 10-100x 烧掉代码库
-6. **规划 > 审查** —— 在 research 和 plan 阶段投入人力，比逐行审查 AI 代码杠杆更高
+### 相关性 ≠ 因果关系
+
+"高 AI 采用率团队 PR 更大、Bug 更多"——这不意味着 AI 本身制造了更多 Bug。更准确的解读：
+
+```
+AI 放大了既有交付系统的特征：
+
+  系统本身完善 + AI = 放大完善  → 受益
+  系统本身有缺陷 + AI = 放大缺陷 → 受损
+
+  所以：先修交付系统，再大规模引入 AI
+  而非：引入 AI 后再修问题
+```
+
+### 行动清单
+
+**立即可做**：
+
+| 行动 | 说明 |
+|---|---|
+| 控制 PR 粒度 | 规范 AI 生成代码的 PR 规模，避免一次性生成过大变更 |
+| 建立 AGENTS.md | 在目录级别写入架构约束、测试规范、领域知识 |
+| 升级 CI/CD | 在链入 AI Agent 前补齐自动化测试和静态检查 |
+| 标记 AI 生成代码 | 单独追踪 AI 生成代码的缺陷率，让问题可见 |
+
+**中期改造**：
+
+| 行动 | 说明 |
+|---|---|
+| 引入 RPI 流程 | Research → Plan → Implement，配合 Intentional Compaction |
+| 验证左移 | 每个开发循环内置沙盒验证，PR 自带运行证据 |
+| 上下文工程 | 给 AI 提供 repo 历史、架构模式、规格意图（Context > Model） |
+| Harness 工程 | 构建 AI Agent 的防护网：验证循环、护栏、可观测性 |
+
+**人机分工重定义**：
+
+```
+人类精力应该集中在：              AI 负责执行：
+┌─────────────────────┐        ┌─────────────────────┐
+│ 需求定义与意图澄清   │        │ 代码生成             │
+│ 架构设计             │ ──────►│ 测试编写             │
+│ Research 文档审查    │        │ 文档搜索与整理        │
+│ Plan 计划审查 ←高杠杆│        │ 重构建议             │
+│ 边界条件与意图验证    │        │ 重复性修改           │
+└─────────────────────┘        └─────────────────────┘
+```
+
+### 最终判断
+
+> AI 提升的是"生成速率"（Generation Rate），但决定软件品质和交付效率的，依然是团队的"系统化防御与验证能力"（Systematic Defense & Validation）。
+
+这不是否定 AI 编码——而是更理性地使用它。把代码审查放回环路（Human-in-the-Loop），找回工程师的控制感。
 
 ---
 
 ## 参考资料
 
-- [视频：拒绝 AI 盲目生成：一套四阶段工程实践（为什么叫QQ）](https://www.youtube.com/watch?v=YYgrTVzNrZI)
-- [Why Software Factories Fail — Dex Horthy（核心原始来源）](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md)
-- [Advanced Context Engineering for Coding Agents — Dex Horthy](https://www.humanlayer.dev/blog/advanced-context-engineering)
-- [The AI Productivity Paradox Report — Faros AI](https://www.faros.ai/blog/ai-software-engineering)
-- [Context Engineering with Dex Horthy — Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/context-engineering-with-dex-horthy)
-- [Harness Engineering is not Enough（Dex 演讲，AI Engineer World's Fair 2026）](https://www.youtube.com/watch?v=Ib5GBkD555M)
+- [拒绝 AI 盲目生成：一套四阶段工程实践（YouTube 视频）](https://www.youtube.com/watch?v=YYgrTVzNrZI) — Why QQ 频道
+- [The Hidden Cost of AI Code Quality: Why Senior Engineers Are Paying the Price](https://www.faros.ai/blog/ai-code-quality-senior-engineer-review-burden) — Faros AI，AI Engineering Report 2026 数据
+- [Getting AI to Work in Complex Codebases（ace-fca.md）](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md) — Dex Horthy / HumanLayer，RPI 框架原文
+- [AI Coding Agents and the Code Validation Bottleneck](https://www.signadot.com/blog/ai-generated-code-crisis/) — Signadot，验证瓶颈分析
+- [State of AI Coding: Context, Trust, and Subagents](https://www.turingpost.com/p/aisoftwarestack) — Turing Post，HumanLayer 4 Moves 概述
 
 ## 相关笔记
 
-- [[AI编码工具对比]]
-- [[SWE-bench局限性分析]]
-- [[12-Factor-Agents]]
+- [[AI 编码代理]]
+- [[Context Engineering]]
+- [[Code Review 最佳实践]]
+- [[12 Factor Agents]]

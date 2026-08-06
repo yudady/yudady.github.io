@@ -19,5 +19,11 @@
   "useMarkdownLinks": false,
   "newLinkFormat": "relative",
   "defaultViewMode": "source",
-  "showInlineTitle": true
+  "showInlineTitle": true,
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

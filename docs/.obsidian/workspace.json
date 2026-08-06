@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/Cross-Model Review 互審機制.md",
+                "file": "001-TODO/Ego-Lite-AI-Agent-浏览器自动化.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,11 +76,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Cross-Model Review 互審機制"
+              "title": "Ego-Lite-AI-Agent-浏览器自动化"
+            }
+          },
+          {
+            "id": "f250b8ec9005e143",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "001-TODO/DeepSeek-V4-Flash-0731-本地部署全解析.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "DeepSeek-V4-Flash-0731-本地部署全解析"
+            }
+          },
+          {
+            "id": "bfbc17c81723ccb1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "001-TODO/旅游/雲森瀑布一日遊攻略.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "雲森瀑布一日遊攻略"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -167,13 +215,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/Cross-Model Review 互審機制.md",
+                "file": "001-TODO/旅游/雲森瀑布一日遊攻略.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Cross-Model Review 互審機制 的大綱"
+              "title": "雲森瀑布一日遊攻略 的大綱"
             }
           }
         ],
@@ -299,12 +347,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "001-TODO/14行業AI應用痛點訪談.md",
+                "file": "001-TODO/旅游/雲森瀑布一日遊攻略.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "14行業AI應用痛點訪談 的對外連結"
+              "title": "雲森瀑布一日遊攻略 的對外連結"
             }
           }
         ],
@@ -325,36 +373,37 @@
       "markdown-importer:開啟 Markdown 格式轉換器": false
     }
   },
-  "active": "cdb0c69940075653",
+  "active": "bfbc17c81723ccb1",
   "lastOpenFiles": [
-    "001-TODO/notebooklm-py - 把NotebookLM搬进命令行.md",
-    "100-InBox/AI-WORKFLOW/Karpathy AutoResearch 与双层循环.md",
-    "001-TODO/AI 编程规划框架 — Grilling Brainstorming Explore.md",
-    "001-TODO/Matt Pocock Skills v1.1 - AI 辅助编程 SDLC 工作流.md",
-    "001-TODO/OpenSpec - 轻量级AI编程框架深度拆解.md",
-    "001-TODO/U出金/加密貨幣出金與報稅攻略.md",
+    "001-TODO/AI代码审查之争 - Uncle Bob vs Vibe Sled.md",
+    "001-TODO/Agent自动合并代码的评估体系 — 六道门.md",
+    "001-TODO/DeepSeek-V4-Flash-0731-本地部署全解析.md",
+    "001-TODO/旅游/雲森瀑布一日遊攻略.md",
+    "001-TODO/旅游/新北坪林-金瓜寮魚蕨步道.md",
+    "001-TODO/Mac-Mini-M4-本地开源AI模型指南.md",
+    "001-TODO/Gemma 4 12B Coder 本地模型开发实测.md",
+    "001-TODO/LM Studio Bionic — 本地開源模型的 AI 代理工作站.md",
+    "001-TODO/Best Local AI Models by VRAM 2026.md",
+    "001-TODO/Agent 三层解耦架构 — Harness Loop Graph 工程实践.md",
+    "001-TODO/本地 AI 模型 - GPU 显存分级选型指南.md",
+    "001-TODO/llama-cpp-MoE-6GB-GPU-调优指南.md",
+    "001-TODO/Ego-Lite-AI-Agent-浏览器自动化.md",
+    "001-TODO/拒绝AI盲目生成-四阶段工程实践.md",
+    "001-TODO/OpenCode Desktop 入门指南 - 20 分钟掌握 80% 核心功能.md",
+    "001-TODO/Oh-My-Pi 终端编程代理深度拆解.md",
+    "001-TODO/Agentic Engineering 范式转移 - 从 Vibe Coding 到系统化 AI 开发.md",
+    "001-TODO/Graphify 知识图谱挑战 AI Coding 极限.md",
+    "001-TODO/Agent 技能设计 — 从技能地狱逃生的工程指南.md",
+    "001-TODO/旅游",
+    "001-TODO/codebase-memory-mcp.md",
+    "001-TODO/OpenHuman - Local-First 个人 AI 工作台.md",
+    "001-TODO/Kimi K3 vs DeepSeek - 跑分陷阱与真实成本实测.md",
+    "001-TODO/Hermes Agent 百大自动化技能精选拆解.md",
+    "001-TODO/OfficeCLI - AI Agent 专用的 Office 自动化 CLI.md",
+    "001-TODO/notebooklm-py - 用开源 CLI 把 NotebookLM 变成 Claude Code 的零 Token 大脑.md",
+    "001-TODO/Claude Code Loop 工程设计 - 四种模式与边界控制.md",
     "001-TODO/U出金",
-    "001-TODO/2026-07-03-hermes-agent-moa-architecture.md",
-    "001-TODO/Harness 时代 — AI 编程的底盤戰爭.md",
-    "001-TODO/GLM-5.2-GPT-5.5-分層AI編程工作流.md",
-    "001-TODO/Ornith-1.0-本地端AI編碼模型實測筆記.md",
-    "001-TODO/Omnigent - AI 编码智能体的 Meta-Harness.md",
-    "001-TODO/mattpocock-skills-tutorial-notes.md",
-    "001-TODO/Hermes-Master-Agent-改造筆記.md",
-    "001-TODO/跨代理审计工作流 — Cross-Agent Adversarial Review.md",
-    "001-TODO/Cross-Model Review 互審機制.md",
-    "001-TODO/多模型编排 — Fugu 与 Fusion.md",
-    "001-TODO/企业级AI-Agent四步架构.md",
-    "001-TODO/Fable 5 泄露与AI Agent架构演进.md",
-    "001-TODO/热门 AI Agent 项目速览 2026-W26.md",
-    "001-TODO/skills/AI Agent 四大核心Skill架构.md",
-    "001-TODO/skills/matt-pocock-skills.md",
-    "001-TODO/skills/baoyu-skills.md",
-    "001-TODO/skills/Ponytail - AI极简编程提示词架构.md",
     "001-TODO/skills",
-    "001-TODO/四大核心Skill架构与配置指南.md",
-    "001-TODO/14行業AI應用痛點訪談.md",
-    "100-InBox/AI-WORKFLOW/2026-06-07-claude-code-dynamic-workflows.md",
     "001-TODO/cli",
     "100-InBox/AI-WORKFLOW",
     "001-TODO/Hermes Agent ",
@@ -362,7 +411,6 @@
     "001-TODO/research",
     "100-InBox/AI/images",
     "100-InBox/AI/Claude_Code_Blueprint.pdf",
-    "100-InBox/AI/NotebookLM_Export_2026-03-29T13-21-54.pdf",
     "001-TODO/test-202302271955.png",
     "001-TODO/drawio/index-202302271939.jpg",
     "001-TODO/drawio/index-202302271939.png",

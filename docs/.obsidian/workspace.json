@@ -109,7 +109,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/DeepSeek-V4-Flash-0731-本地部署全解析.md",
+                "file": "001-TODO/Cross-Model Review 互審機制.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DeepSeek-V4-Flash-0731-本地部署全解析"
+              "title": "Cross-Model Review 互審機制"
             }
           }
         ],
@@ -215,13 +215,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/DeepSeek-V4-Flash-0731-本地部署全解析.md",
+                "file": "001-TODO/Cross-Model Review 互審機制.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "DeepSeek-V4-Flash-0731-本地部署全解析 的大綱"
+              "title": "Cross-Model Review 互審機制 的大綱"
             }
           }
         ],
@@ -347,12 +347,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "001-TODO/DeepSeek-V4-Flash-0731-本地部署全解析.md",
+                "file": "001-TODO/Cross-Model Review 互審機制.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "DeepSeek-V4-Flash-0731-本地部署全解析 的對外連結"
+              "title": "Cross-Model Review 互審機制 的對外連結"
             }
           }
         ],
@@ -375,33 +375,33 @@
   },
   "active": "bfbc17c81723ccb1",
   "lastOpenFiles": [
+    "001-TODO/本周热门开发工具项目汇总 - AI Agent 与基础设施.md",
+    "001-TODO/OpenCode Desktop 入门指南 - 20 分钟掌握 80% 核心功能.md",
+    "001-TODO/OpenSpec - 轻量级AI编程框架深度拆解.md",
+    "001-TODO/Orca - 开源 AI Agent 编排开发环境.md",
+    "001-TODO/Prime Agent — 自我改进的开源 RLM 编码代理.md",
     "001-TODO/TurboFieldfare - 8GB Mac 跑通 26B 大模型的端侧 AI 革命.md",
+    "001-TODO/Prime Agent VS Hermes - AI Agent 学习哲学对比.md",
+    "001-TODO/Hermes Agent - learn 与 goal 八大超能力.md",
+    "001-TODO/Hermes Agent v0.20 Herald Release 更新解析.md",
+    "001-TODO/Muse Glimmer 30B - Meta本地AI Agent战略分析.md",
+    "001-TODO/Self-Harness 自我演进框架.md",
+    "001-TODO/Hermes-Agent-v0.20-Herald-Release-更新详解.md",
+    "001-TODO/WSL2-AI-Agent-开发完全攻略.md",
+    "001-TODO/DeepSeek-V4-Flash-0731-本地部署全解析.md",
+    "001-TODO/I-HAVE-ADHD - 让 AI 回复不再废话的 Claude Code 技能.md",
+    "001-TODO/Matt Pocock - Prototype 替代 Spec 驱动开发.md",
+    "001-TODO/簡化程式碼控制流.md",
     "001-TODO/旅游/雲森瀑布一日遊攻略.md",
     "001-TODO/AI代码审查之争 - Uncle Bob vs Vibe Sled.md",
     "001-TODO/Agent自动合并代码的评估体系 — 六道门.md",
-    "001-TODO/DeepSeek-V4-Flash-0731-本地部署全解析.md",
     "001-TODO/旅游/新北坪林-金瓜寮魚蕨步道.md",
     "001-TODO/Mac-Mini-M4-本地开源AI模型指南.md",
     "001-TODO/Gemma 4 12B Coder 本地模型开发实测.md",
     "001-TODO/LM Studio Bionic — 本地開源模型的 AI 代理工作站.md",
     "001-TODO/Best Local AI Models by VRAM 2026.md",
     "001-TODO/Agent 三层解耦架构 — Harness Loop Graph 工程实践.md",
-    "001-TODO/本地 AI 模型 - GPU 显存分级选型指南.md",
-    "001-TODO/llama-cpp-MoE-6GB-GPU-调优指南.md",
-    "001-TODO/Ego-Lite-AI-Agent-浏览器自动化.md",
-    "001-TODO/拒绝AI盲目生成-四阶段工程实践.md",
-    "001-TODO/OpenCode Desktop 入门指南 - 20 分钟掌握 80% 核心功能.md",
-    "001-TODO/Oh-My-Pi 终端编程代理深度拆解.md",
-    "001-TODO/Agentic Engineering 范式转移 - 从 Vibe Coding 到系统化 AI 开发.md",
-    "001-TODO/Graphify 知识图谱挑战 AI Coding 极限.md",
-    "001-TODO/Agent 技能设计 — 从技能地狱逃生的工程指南.md",
     "001-TODO/旅游",
-    "001-TODO/codebase-memory-mcp.md",
-    "001-TODO/OpenHuman - Local-First 个人 AI 工作台.md",
-    "001-TODO/Kimi K3 vs DeepSeek - 跑分陷阱与真实成本实测.md",
-    "001-TODO/Hermes Agent 百大自动化技能精选拆解.md",
-    "001-TODO/OfficeCLI - AI Agent 专用的 Office 自动化 CLI.md",
-    "001-TODO/notebooklm-py - 用开源 CLI 把 NotebookLM 变成 Claude Code 的零 Token 大脑.md",
     "001-TODO/U出金",
     "001-TODO/skills",
     "001-TODO/cli",

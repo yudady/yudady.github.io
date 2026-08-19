@@ -8,108 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "273b0c607814095a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "001-TODO/skills/AI Agent 四大核心Skill架构.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "AI Agent 四大核心Skill架构"
-            }
-          },
-          {
-            "id": "e8da724ee273b7e4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "100-InBox/AI-WORKFLOW/Karpathy AutoResearch 与双层循环.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Karpathy AutoResearch 与双层循环"
-            }
-          },
-          {
-            "id": "cdb0c69940075653",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "001-TODO/Ego-Lite-AI-Agent-浏览器自动化.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Ego-Lite-AI-Agent-浏览器自动化"
-            }
-          },
-          {
-            "id": "f250b8ec9005e143",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "001-TODO/DeepSeek-V4-Flash-0731-本地部署全解析.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "DeepSeek-V4-Flash-0731-本地部署全解析"
-            }
-          },
-          {
             "id": "bfbc17c81723ccb1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/Cross-Model Review 互審機制.md",
+                "file": "001-TODO/本周热门开发工具项目汇总 - AI Agent 与基础设施.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -124,11 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Cross-Model Review 互審機制"
+              "title": "本周热门开发工具项目汇总 - AI Agent 与基础设施"
+            }
+          },
+          {
+            "id": "b3ea53b49b11a392",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "001-TODO/LangGraph 企业级 AI Agent 状态管理.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "LangGraph 企业级 AI Agent 状态管理"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -161,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "清理",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -192,7 +120,8 @@
               "title": "recent-files"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "cec773d3c6690924",
@@ -215,13 +144,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/Cross-Model Review 互審機制.md",
+                "file": "001-TODO/LangGraph 企业级 AI Agent 状态管理.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Cross-Model Review 互審機制 的大綱"
+              "title": "LangGraph 企业级 AI Agent 状态管理 的大綱"
             }
           }
         ],
@@ -347,12 +276,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "001-TODO/Cross-Model Review 互審機制.md",
+                "file": "001-TODO/GitHub一周热点127 - Agent 基础设施与可审计知识图谱.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Cross-Model Review 互審機制 的對外連結"
+              "title": "GitHub一周热点127 - Agent 基础设施与可审计知识图谱 的對外連結"
             }
           }
         ],
@@ -373,9 +302,15 @@
       "markdown-importer:開啟 Markdown 格式轉換器": false
     }
   },
-  "active": "bfbc17c81723ccb1",
+  "active": "b3ea53b49b11a392",
   "lastOpenFiles": [
+    "001-TODO/GitHub一周热点127 - Agent 基础设施与可审计知识图谱.md",
+    "001-TODO/LangGraph 企业级 AI Agent 状态管理.md",
+    "001-TODO/Unsloth Desktop vs Ollama LM Studio Open WebUI 深度对比.md",
     "001-TODO/本周热门开发工具项目汇总 - AI Agent 与基础设施.md",
+    "001-TODO/2026-07-03-hermes-agent-moa-architecture.md",
+    "001-TODO/GLM-5.2-GPT-5.5-分層AI編程工作流.md",
+    "001-TODO/Cross-Model Review 互審機制.md",
     "001-TODO/OpenCode Desktop 入门指南 - 20 分钟掌握 80% 核心功能.md",
     "001-TODO/OpenSpec - 轻量级AI编程框架深度拆解.md",
     "001-TODO/Orca - 开源 AI Agent 编排开发环境.md",
@@ -395,12 +330,6 @@
     "001-TODO/旅游/雲森瀑布一日遊攻略.md",
     "001-TODO/AI代码审查之争 - Uncle Bob vs Vibe Sled.md",
     "001-TODO/Agent自动合并代码的评估体系 — 六道门.md",
-    "001-TODO/旅游/新北坪林-金瓜寮魚蕨步道.md",
-    "001-TODO/Mac-Mini-M4-本地开源AI模型指南.md",
-    "001-TODO/Gemma 4 12B Coder 本地模型开发实测.md",
-    "001-TODO/LM Studio Bionic — 本地開源模型的 AI 代理工作站.md",
-    "001-TODO/Best Local AI Models by VRAM 2026.md",
-    "001-TODO/Agent 三层解耦架构 — Harness Loop Graph 工程实践.md",
     "001-TODO/旅游",
     "001-TODO/U出金",
     "001-TODO/skills",

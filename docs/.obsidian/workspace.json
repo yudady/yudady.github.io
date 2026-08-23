@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/Qwen3.8 27B 本地推理实测 — Ollama MLX 后端 4x 加速解析.md",
+                "file": "001-TODO/Wayfinder 漸進式規劃與 Frontier 邊界思維.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Qwen3.8 27B 本地推理实测 — Ollama MLX 后端 4x 加速解析"
+              "title": "Wayfinder 漸進式規劃與 Frontier 邊界思維"
             }
           }
         ],
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/Qwen3.8 27B 本地推理实测 — Ollama MLX 后端 4x 加速解析.md",
+                "file": "001-TODO/Wayfinder 漸進式規劃與 Frontier 邊界思維.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Qwen3.8 27B 本地推理实测 — Ollama MLX 后端 4x 加速解析 的大綱"
+              "title": "Wayfinder 漸進式規劃與 Frontier 邊界思維 的大綱"
             }
           }
         ],
@@ -303,8 +303,11 @@
   },
   "active": "b3ea53b49b11a392",
   "lastOpenFiles": [
-    "001-TODO/Ornith-1.5 35B MoE Mac 本地实测.md",
+    "001-TODO/背包级AI工作站 - RTX PRO 4000 SFF 极限组装与 M3 Ultra 对决.md",
+    "001-TODO/Wayfinder 漸進式規劃與 Frontier 邊界思維.md",
     "001-TODO/Qwen3.8 27B 本地推理实测 — Ollama MLX 后端 4x 加速解析.md",
+    "100-InBox/claude.md",
+    "001-TODO/Ornith-1.5 35B MoE Mac 本地实测.md",
     "001-TODO/Prime Agent VS Hermes - AI Agent 学习哲学对比.md",
     "001-TODO/OpenHuman - Local-First 个人 AI 工作台.md",
     "001-TODO/Omnigent - AI 编码智能体的 Meta-Harness.md",
@@ -326,9 +329,6 @@
     "001-TODO/2026-07-03-hermes-agent-moa-architecture.md",
     "100-InBox/Hermes/Hermes Agent Computer Use 深度解析 — CUA Driver 与 SOM 架构.md",
     "100-InBox/AI-WORKFLOW/上下文熵增与 Claude Code 架构拆解.md",
-    "001-TODO/LangGraph 企业级 AI Agent 状态管理.md",
-    "001-TODO/GitHub一周热点127 - Agent 基础设施与可审计知识图谱.md",
-    "001-TODO/Unsloth Desktop vs Ollama LM Studio Open WebUI 深度对比.md",
     "001-TODO/旅游",
     "001-TODO/U出金",
     "001-TODO/skills",

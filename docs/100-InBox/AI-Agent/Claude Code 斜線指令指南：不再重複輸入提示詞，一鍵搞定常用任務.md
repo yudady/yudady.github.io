@@ -51,7 +51,7 @@ Data-Analytics
 
 這些快捷鍵甚至不用你自己設計，Anthropic 官方幫你寫好一堆好用的斜線指令了！你可以在 [官方文件](https://code.claude.com/docs/en/slash-commands) 看到完整列表，或者更好用的方式，是在 Claude Code 內輸入 `/help` 指令，工作到一半想查詢的時候隨時都有小抄能看到自己有什麼好用快捷鍵可以用，不需要死記硬背。
 
-![[images/70898cca38e7893c4465d7d315a66e93_MD5.png]]
+![[70898cca38e7893c4465d7d315a66e93_MD5.png]]
 
 Claude Code 內查找斜線指令（製圖：好豪）
 

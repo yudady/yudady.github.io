@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/本周热门开发工具项目汇总 - AI Agent 与基础设施.md",
+                "file": "001-TODO/Pi Agent 上手指南.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "本周热门开发工具项目汇总 - AI Agent 与基础设施"
-            }
-          },
-          {
-            "id": "b3ea53b49b11a392",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "001-TODO/Wayfinder 漸進式規劃與 Frontier 邊界思維.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Wayfinder 漸進式規劃與 Frontier 邊界思維"
+              "title": "Pi Agent 上手指南"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -143,13 +118,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/Wayfinder 漸進式規劃與 Frontier 邊界思維.md",
+                "file": "001-TODO/Pi Agent 上手指南.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Wayfinder 漸進式規劃與 Frontier 邊界思維 的大綱"
+              "title": "Pi Agent 上手指南 的大綱"
             }
           }
         ],
@@ -301,44 +276,46 @@
       "markdown-importer:開啟 Markdown 格式轉換器": false
     }
   },
-  "active": "b3ea53b49b11a392",
+  "active": "bfbc17c81723ccb1",
   "lastOpenFiles": [
-    "001-TODO/背包级AI工作站 - RTX PRO 4000 SFF 极限组装与 M3 Ultra 对决.md",
     "001-TODO/Wayfinder 漸進式規劃與 Frontier 邊界思維.md",
-    "001-TODO/Qwen3.8 27B 本地推理实测 — Ollama MLX 后端 4x 加速解析.md",
-    "100-InBox/claude.md",
-    "001-TODO/Ornith-1.5 35B MoE Mac 本地实测.md",
-    "001-TODO/Prime Agent VS Hermes - AI Agent 学习哲学对比.md",
-    "001-TODO/OpenHuman - Local-First 个人 AI 工作台.md",
-    "001-TODO/Omnigent - AI 编码智能体的 Meta-Harness.md",
-    "001-TODO/Matt Pocock Skills - AI Coding 完整工作流.md",
-    "001-TODO/I-HAVE-ADHD - 让 AI 回复不再废话的 Claude Code 技能.md",
-    "001-TODO/Hermes-Master-Agent-改造筆記.md",
-    "001-TODO/Hermes Agent v0.20 Herald Release 更新解析.md",
-    "001-TODO/Hermes-Agent-v0.20-Herald-Release-更新详解.md",
-    "001-TODO/Hermes Agent 百大自动化技能精选拆解.md",
-    "001-TODO/Hermes Agent - learn 与 goal 八大超能力.md",
-    "001-TODO/Cross-Model Review 互審機制.md",
-    "001-TODO/Claude Code Loop 工程设计 - 四种模式与边界控制.md",
-    "001-TODO/AI代码审查之争 - Uncle Bob vs Vibe Sled.md",
-    "001-TODO/AI 编程规划框架 — Grilling Brainstorming Explore.md",
-    "001-TODO/Agentic Engineering 范式转移 - 从 Vibe Coding 到系统化 AI 开发.md",
-    "001-TODO/Agent自动合并代码的评估体系 — 六道门.md",
-    "001-TODO/Agent 技能设计 — 从技能地狱逃生的工程指南.md",
-    "001-TODO/企业级AI-Agent四步架构.md",
-    "001-TODO/2026-07-03-hermes-agent-moa-architecture.md",
-    "100-InBox/Hermes/Hermes Agent Computer Use 深度解析 — CUA Driver 与 SOM 架构.md",
-    "100-InBox/AI-WORKFLOW/上下文熵增与 Claude Code 架构拆解.md",
-    "001-TODO/旅游",
-    "001-TODO/U出金",
-    "001-TODO/skills",
-    "001-TODO/cli",
-    "100-InBox/AI-WORKFLOW",
-    "001-TODO/Hermes Agent ",
-    "001-TODO/research/subagent-artifacts-verify.html",
-    "001-TODO/research",
-    "100-InBox/AI/images",
-    "100-InBox/AI/Claude_Code_Blueprint.pdf",
+    "001-TODO/Pi Agent 上手指南.md",
+    "100-InBox/misc/簡化程式碼控制流.md",
+    "100-InBox/misc/雲森瀑布一日遊攻略.md",
+    "100-InBox/misc/新北坪林-金瓜寮魚蕨步道.md",
+    "100-InBox/misc/youtube-thumb-viIASQJHmSY 1.jpg",
+    "100-InBox/misc/加密貨幣出金與報稅攻略.md",
+    "100-InBox/AI-Tools/热门 AI Agent 项目速览 2026-W26.md",
+    "100-InBox/AI-Tools/本周热门开发工具项目汇总 - AI Agent 与基础设施.md",
+    "100-InBox/AI-Tools/codebase-memory-mcp.md",
+    "100-InBox/AI-Tools/Understand-Anything - 程式碼知識圖譜互動探索工具.md",
+    "100-InBox/AI-Tools/Tolaria - 基於 Git 的 Markdown 知識庫桌面應用.md",
+    "100-InBox/AI-Tools/SkillOpt - 微软文本空间Agent技能优化框架.md",
+    "100-InBox/AI-Tools/Scrapling - AI 自適應網頁爬蟲框架.md",
+    "100-InBox/AI-Tools/PaddleOCR - 百度開源 OCR 工具包與文件 AI 引擎.md",
+    "100-InBox/AI-Tools/OpenClaw - 開源 AI Agent Gateway 與 ACP 協議深度解析.md",
+    "100-InBox/AI-Tools/CLI-Anything 實戰 - Claude Code 運行任意軟體（比 MCP 便宜 30 倍）.md",
+    "100-InBox/AI-Tools/CLI 復興浪潮 - CLI Anything 與 OpenCLI 深度解析.md",
+    "100-InBox/AI-Tools/WSL2-AI-Agent-开发完全攻略.md",
+    "100-InBox/AI-Tools/Prime Agent — 自我改进的开源 RLM 编码代理.md",
+    "100-InBox/AI-Tools/Orca - 开源 AI Agent 编排开发环境.md",
+    "100-InBox/AI-Tools/OpenSpec - 轻量级AI编程框架深度拆解.md",
+    "100-InBox/AI-Tools/OpenHuman - Local-First 个人 AI 工作台.md",
+    "100-InBox/AI-Tools/OpenCode Desktop 入门指南 - 20 分钟掌握 80% 核心功能.md",
+    "100-InBox/AI-Tools/Omnigent - AI 编码智能体的 Meta-Harness.md",
+    "100-InBox/AI-Tools/Oh-My-Pi 终端编程代理深度拆解.md",
+    "100-InBox/AI-Tools/OfficeCLI - AI Agent 专用的 Office 自动化 CLI.md",
+    "100-InBox/AI-Agent/Claude_Code_Blueprint.pdf",
+    "100-InBox/misc/Claude_Code_Blueprint.pdf",
+    "100-InBox/AI-Agent/70898cca38e7893c4465d7d315a66e93_MD5.png",
+    "100-InBox/AI-Agent/Claude Code 使用洞察.html",
+    "100-InBox/NotebookLM/NotebookLM_Export_2026-03-29T13-21-54.pdf",
+    "100-InBox/misc",
+    "100-InBox/NotebookLM",
+    "100-InBox/Local-LLM",
+    "100-InBox/AI-Tools",
+    "100-InBox/AI-Models",
+    "100-InBox/AI-Agent",
     "001-TODO/test-202302271955.png",
     "001-TODO/drawio/index-202302271939.jpg",
     "001-TODO/drawio/index-202302271939.png",
@@ -347,7 +324,6 @@
     "001-TODO/spring-spel-202302271515.png",
     "001-TODO/spring-spel-202302271432.png",
     "001-TODO/spring-spel-202302271414.png",
-    "001-TODO/spring-spel-202302271401.png",
     "001-TODO/未命名.canvas"
   ]
 }

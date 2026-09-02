@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/Pi Agent 上手指南.md",
+                "file": "001-TODO/提示词负债大扫除 - CLAUDE.md 维护哲学.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Pi Agent 上手指南"
+              "title": "提示词负债大扫除 - CLAUDE.md 维护哲学"
             }
           }
         ]
@@ -52,7 +52,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "檔案瀏覽器"
@@ -118,13 +120,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/Pi Agent 上手指南.md",
+                "file": "001-TODO/提示词负债大扫除 - CLAUDE.md 维护哲学.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Pi Agent 上手指南 的大綱"
+              "title": "大綱"
             }
           }
         ],
@@ -278,6 +280,13 @@
   },
   "active": "bfbc17c81723ccb1",
   "lastOpenFiles": [
+    "001-TODO/Mac mini Homebridge 智慧家庭中樞.md",
+    "001-TODO/Mac mini 輕 NAS 家庭伺服器.md",
+    "001-TODO/闲置 MacBook Air 变身 NAS 与机顶盒.md",
+    "001-TODO/旧平板变身低功耗Linux家庭服务器.md",
+    "001-TODO/家用區網裝置盤查-IP與MAC身分對應.md",
+    "001-TODO/i-have-adhd - ADHD 友好输出 Skill.md",
+    "001-TODO/RustDesk 開源遠端控制指南.md",
     "001-TODO/Wayfinder 漸進式規劃與 Frontier 邊界思維.md",
     "001-TODO/Pi Agent 上手指南.md",
     "100-InBox/misc/簡化程式碼控制流.md",
@@ -298,13 +307,6 @@
     "100-InBox/AI-Tools/CLI 復興浪潮 - CLI Anything 與 OpenCLI 深度解析.md",
     "100-InBox/AI-Tools/WSL2-AI-Agent-开发完全攻略.md",
     "100-InBox/AI-Tools/Prime Agent — 自我改进的开源 RLM 编码代理.md",
-    "100-InBox/AI-Tools/Orca - 开源 AI Agent 编排开发环境.md",
-    "100-InBox/AI-Tools/OpenSpec - 轻量级AI编程框架深度拆解.md",
-    "100-InBox/AI-Tools/OpenHuman - Local-First 个人 AI 工作台.md",
-    "100-InBox/AI-Tools/OpenCode Desktop 入门指南 - 20 分钟掌握 80% 核心功能.md",
-    "100-InBox/AI-Tools/Omnigent - AI 编码智能体的 Meta-Harness.md",
-    "100-InBox/AI-Tools/Oh-My-Pi 终端编程代理深度拆解.md",
-    "100-InBox/AI-Tools/OfficeCLI - AI Agent 专用的 Office 自动化 CLI.md",
     "100-InBox/AI-Agent/Claude_Code_Blueprint.pdf",
     "100-InBox/misc/Claude_Code_Blueprint.pdf",
     "100-InBox/AI-Agent/70898cca38e7893c4465d7d315a66e93_MD5.png",

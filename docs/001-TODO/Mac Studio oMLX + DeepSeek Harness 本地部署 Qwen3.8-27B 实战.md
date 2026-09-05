@@ -277,15 +277,15 @@ oMLX 側的內存治理（GitHub README 確認）：
 
 ## 9. 橫向對比：oMLX vs 其他推理方案
 
-| 維度 | oMLX | Ollama | llama.cpp (llama-server) | LM Studio |
-|------|------|--------|--------------------------|-----------|
-| Mac 優化深度 | 原生 MLX + Metal，統一內存零拷貝 | 通用抽象層 | 通用 GGUF，跨平台最廣 | 圖形界面友好 |
-| MTP 推測解碼 | -mtp 權重自動激活 | 不支持 | 支持（需手動配 drafter） | 視版本 |
-| KV 緩存 | 分層（RAM 熱 + SSD 冷，跨重啟） | 常規 | 分頁 | 常規 |
-| 27B 實測速度（同機） | 51+ t/s | ~22 t/s | 40~64 t/s（知乎 Windows 實測 64.1） | ~30 t/s 級 |
-| 多模型並存 | EnginePool + LRU + TTL + Pin | 手動切換 | 手動 | 手動 |
-| Agent 工具鏈適配 | 官方一鍵集成 OpenClaw/OpenCode/Codex/Hermes Agent/Copilot/Pi | 需手配 | OpenAI 兼容直連 | OpenAI 兼容 |
-| 平台 | 僅 Apple Silicon | 全平台 | 全平台 | Mac/Win |
+| 維度           | oMLX                                                   | Ollama  | llama.cpp (llama-server)      | LM Studio |
+| ------------ | ------------------------------------------------------ | ------- | ----------------------------- | --------- |
+| Mac 優化深度     | 原生 MLX + Metal，統一內存零拷貝                                 | 通用抽象層   | 通用 GGUF，跨平台最廣                 | 圖形界面友好    |
+| MTP 推測解碼     | -mtp 權重自動激活                                            | 不支持     | 支持（需手動配 drafter）              | 視版本       |
+| KV 緩存        | 分層（RAM 熱 + SSD 冷，跨重啟）                                  | 常規      | 分頁                            | 常規        |
+| 27B 實測速度（同機） | 51+ t/s                                                | ~22 t/s | 40~64 t/s（知乎 Windows 實測 64.1） | ~30 t/s 級 |
+| 多模型並存        | EnginePool + LRU + TTL + Pin                           | 手動切換    | 手動                            | 手動        |
+| Agent 工具鏈適配  | 官方一鍵集成 OpenClaw/OpenCode/Codex/Hermes Agent/Copilot/Pi | 需手配     | OpenAI 兼容直連                   | OpenAI 兼容 |
+| 平台           | 僅 Apple Silicon                                        | 全平台     | 全平台                           | Mac/Win   |
 
 選型建議：Mac 上追求性能選 oMLX；跨平台/Windows 選 llama.cpp；小白圖形界面選 LM Studio；生態兼容性兜底選 Ollama。
 

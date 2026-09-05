@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/提示词负债大扫除 - CLAUDE.md 维护哲学.md",
+                "file": "001-TODO/Windows 11 24H2 LTSC 安裝啟用指南.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "提示词负债大扫除 - CLAUDE.md 维护哲学"
+              "title": "Windows 11 24H2 LTSC 安裝啟用指南"
             }
           }
         ]
@@ -120,7 +120,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/提示词负债大扫除 - CLAUDE.md 维护哲学.md",
+                "file": "001-TODO/Windows 11 24H2 LTSC 安裝啟用指南.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -280,6 +280,13 @@
   },
   "active": "bfbc17c81723ccb1",
   "lastOpenFiles": [
+    "001-TODO/Windows 10 LTSC 長期服務版安裝啟用指南.md",
+    "001-TODO/Windows 11 24H2 LTSC 安裝啟用指南.md",
+    "001-TODO/Qwen3.8-Flash-Next vs GLM-5.3-Flash 64GB Mac 溢出实测.md",
+    "001-TODO/Mac Studio oMLX + DeepSeek Harness 本地部署 Qwen3.8-27B 实战.md",
+    "001-TODO/Qwen3.8-27B 模型评测与 SGLang 高速推理部署.md",
+    "001-TODO/Windows Server 2025 低配電腦輕量系統安裝啟用指南.md",
+    "001-TODO/Windows 11 Ubuntu 22.04 雙系統安裝指南.md",
     "001-TODO/Mac mini Homebridge 智慧家庭中樞.md",
     "001-TODO/Mac mini 輕 NAS 家庭伺服器.md",
     "001-TODO/闲置 MacBook Air 变身 NAS 与机顶盒.md",
@@ -300,13 +307,6 @@
     "100-InBox/AI-Tools/Understand-Anything - 程式碼知識圖譜互動探索工具.md",
     "100-InBox/AI-Tools/Tolaria - 基於 Git 的 Markdown 知識庫桌面應用.md",
     "100-InBox/AI-Tools/SkillOpt - 微软文本空间Agent技能优化框架.md",
-    "100-InBox/AI-Tools/Scrapling - AI 自適應網頁爬蟲框架.md",
-    "100-InBox/AI-Tools/PaddleOCR - 百度開源 OCR 工具包與文件 AI 引擎.md",
-    "100-InBox/AI-Tools/OpenClaw - 開源 AI Agent Gateway 與 ACP 協議深度解析.md",
-    "100-InBox/AI-Tools/CLI-Anything 實戰 - Claude Code 運行任意軟體（比 MCP 便宜 30 倍）.md",
-    "100-InBox/AI-Tools/CLI 復興浪潮 - CLI Anything 與 OpenCLI 深度解析.md",
-    "100-InBox/AI-Tools/WSL2-AI-Agent-开发完全攻略.md",
-    "100-InBox/AI-Tools/Prime Agent — 自我改进的开源 RLM 编码代理.md",
     "100-InBox/AI-Agent/Claude_Code_Blueprint.pdf",
     "100-InBox/misc/Claude_Code_Blueprint.pdf",
     "100-InBox/AI-Agent/70898cca38e7893c4465d7d315a66e93_MD5.png",

@@ -1,21 +1,20 @@
 ---
 title: GitHub 周报速览 - VoiceStudio、Heretic、caveman 与本周 20 个 trending 开源项目
-aliases: [ManuAGI #290, GitHub Trending 2026-09 第 1 周]
+aliases: ["ManuAGI #290", "GitHub Trending 2026-09 第 1 周"]
 tags:
-  - github-trending
-  - opensource
-  - ai-tools
-  - status/active
-  - type/doc
-source:
-  - "https://www.youtube.com/watch?v=95H6_V7iiOQ"
-author: ManuAGI - AutoGPT Tutorials
+  - "github-trending"
+  - "opensource"
+  - "ai-tools"
+  - "status/active"
+  - "type/doc"
+source: "https://www.youtube.com/watch?v=95H6_V7iiOQ"
+author: "ManuAGI - AutoGPT Tutorials"
 created: 2026-09-07
 updated: 2026-09-07
-description: 20 个本周 trending 开源项目速览：caveman 103k 星 token 压缩、Heretic 自动去审查、VoiceStudio 本地 ElevenLabs 替代、miles 企业 RL 框架等，全部经 GitHub 实地验证
+description: "20 个本周 trending 开源项目速览：caveman 103k 星 token 压缩、Heretic 自动去审查、VoiceStudio 本地 ElevenLabs 替代、miles 企业 RL 框架等，全部经 GitHub 实地验证"
 level: beginner
 stars: 3
-note: 英文自动字幕含音译错误（SGLang→"Eskel Lang"、Qwen→"Quinn"、dotenvx→"Dond Dox"）；项目 #19 口播与描述链接错位；star 数为 2026-09-07 GitHub 验证值
+note: "英文自动字幕含音译错误（SGLang→「Eskel Lang」、Qwen→「Quinn」、dotenvx→「Dond Dox」）；项目 #19 口播与描述链接错位；star 数为 2026-09-07 GitHub 验证值"
 ---
 
 # GitHub 周报速览 - VoiceStudio、Heretic、caveman 与本周 20 个 trending 开源项目

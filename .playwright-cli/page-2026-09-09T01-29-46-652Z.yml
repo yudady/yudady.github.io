@@ -1,0 +1,46 @@
+- generic [active] [ref=e1]:
+  - generic "YouTube 影片播放器" [ref=e5]:
+    - button "播放" [ref=e9] [cursor=pointer]:
+      - img
+    - generic [ref=e10]:
+      - generic [ref=e11] [cursor=pointer]:
+        - slider "搜尋滑桿" [ref=e12]
+        - generic:
+          - generic:
+            - generic:
+              - slider "點選或捲動面板來使用精準跳轉功能。"
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - button "暫停 (k)" [ref=e23] [cursor=pointer]:
+            - img
+          - generic [ref=e24]:
+            - button "靜音 (m)" [ref=e26] [cursor=pointer]:
+              - img
+            - slider "音量"
+          - button "0 分鐘 0 秒，共 27 分鐘 39 秒" [ref=e30] [cursor=pointer]: 0:00 / 27:39
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - button "未提供字幕/隱藏式輔助字幕" [ref=e33] [cursor=pointer]:
+              - generic [ref=e34]:
+                - img
+            - button "設定" [ref=e35] [cursor=pointer]:
+              - img
+          - generic [ref=e36]:
+            - button "劇院模式 (t)" [ref=e37] [cursor=pointer]:
+              - img
+            - button "全螢幕 (f)" [ref=e38] [cursor=pointer]:
+              - img
+  - banner [ref=e62]:
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - button "導覽" [ref=e67] [cursor=pointer]
+        - generic [ref=e69]:
+          - link:
+            - /url: /
+            - generic:
+              - generic:
+                - img
+      - search [ref=e71]:
+        - generic [ref=e73]:
+          - combobox [expanded] [ref=e76]
+          - button "Search" [ref=e77] [cursor=pointer]

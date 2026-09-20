@@ -273,7 +273,7 @@ Orca 自动扫描本机 `~/.ssh/config`，把已有主机（实测：Up 主的 D
 |---------------------------|----------|----------|
 | 仓库在 `github.com/stably/orca` | ❌ 实为 **`github.com/stablyai/orca`**（org 名 `stablyai`） | 视频描述 timestamps 区链接 + GitHub 实抓 |
 | 官网 `orca.dev` | ❌ 实为 **`onorca.dev`** | 视频描述链接 + README `Download Orca → onorca.dev/download` |
-| 现用工具「Herdr」 | ❌ 实为 **Herder**（transcript 全文多处） | webReader transcript |
+| 现用工具「Herdr」 | ✅ 官方拼写即 **Herdr**（`github.com/herdrdev/herdr`，Rust 终端 agent 复用器）。初版勘误误判为「Herder」，2026-09-20 经 GitHub 核实纠正，详见 [[Orca ADE - 多 Agent 工作台入门导览]] | GitHub `herdrdev/herdr` |
 | 对比过的终端工具「T3」 | ⚠️ 未找到权威仓库归属，保留口播原名不判 | web_search 无唯一命中 |
 | 开源、MIT、YC-backed | ✅ | GitHub LICENSE + README + 官网「Backed by Y Combinator」 |
 | 支持 27 个 Agent | ✅ | 官网 FAQ 对比表「27 supported agents」 |

@@ -253,6 +253,7 @@ Herdr：pane 边界                     Orca：worktree 边界
 
 ## 相关笔记
 
+- [[Herdr vs Orca 深度对比 - 极简运行时 vs 全功能 ADE]]——Panda Making Money 26 分钟深评版，含 AGPL→Apache 2.0 许可证变更时间线考据
 - [[Herdr 上手指南 - Agent 时代的终端工作区运行时]]
 - [[Orca ADE - 开源多 Agent 开发环境实测]]
 - [[Orca ADE - 多 Agent 工作台入门导览]]

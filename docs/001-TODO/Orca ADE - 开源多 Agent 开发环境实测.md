@@ -14,7 +14,7 @@ source:
   - "https://www.onorca.dev/"
 author: Tonbi's AI Garage
 created: 2026-09-20
-updated: 2026-09-20
+updated: 2026-09-21
 description: |
   Orca（github.com/stablyai/orca）开源 Agent 开发环境（ADE）首测笔记：Git Worktree 隔离、跨模型并行评测、Design Mode 视觉反馈闭环、SSH 远端工作流与会话持久性。
 level: intermediate
@@ -282,6 +282,8 @@ Orca 自动扫描本机 `~/.ssh/config`，把已有主机（实测：Up 主的 D
 | `C` 复制 / `S` 截图快捷键 | ✅（transcript 实测口播） | webReader transcript |
 | SSH 主机自动发现 | ✅ | README「SSH Worktrees … auto-reconnect」+ transcript |
 | 会话持久化 | ✅ | transcript 实测重启恢复 |
+| Insights：评论区反馈 8GB RAM 下吃资源 [21:19] | ⚠️ **字幕无此声称，且口播相反** | 2026-09-21 复核全片字幕：21:19 原话「no performance issues, slowdowns or anything like that」（Up 主实测机器流畅）；「8GB RAM / 评论区反馈」全片未出现，疑为 Gemini Insights 从站外评论区摘要混入。RAM 建议可作常识参考，但不可引为本视频实测结论 |
+| 支持 27 个 Agent | ✅（官网 FAQ 口径） | 官网 FAQ「27 supported agents」；2026-09-21 复核 README 具名列表已 29 个——项目日更，以官方页为准 |
 
 > 纠错最高权威 = 视频描述 timestamps 区的官方链接（`stablyai/orca`、`onorca.dev`），Insights 错名与 transcript 同源，冲突时以描述链接为准。
 
@@ -303,7 +305,7 @@ Up 主结论：第一印象非常正面（流畅无卡顿、有点像 Codex app�
 
 ### 行动建议
 
-- ✅ **评估硬件配置**：多 Worktree + 多终端 + 内建 Chromium 同开，RAM 充足再上
+- ✅ **评估硬件配置**：多 Worktree + 多终端 + 内建 Chromium 同开对 RAM 有基本要求——但注意 Up 主实测**无任何卡顿**（21:19），「8GB 吃资源」系 Insights 混入的评论区传言（见[[#验证与勘误记录|勘误表]]），按自己机器实测为准
 - ✅ **循序导入**：先用于高差异场景——多模型平行比对（Model Shootout）与前端 UI 视觉化调整，再评估全面迁移
 - ✅ **装完先翻 settings**：Agent Dashboard（实验性）默认不开，需手动加
 - ❌ 不要因为「大家都在推荐」就立刻弃用现役工具——Up 主的保守切换策略对重度工作流用户反而是对的
@@ -321,6 +323,8 @@ Up 主结论：第一印象非常正面（流畅无卡顿、有点像 Codex app�
 
 ## 相关笔记
 
+- [[Orca ADE 创始人访谈 - 一个人管400个AI任务]]
+- [[Herdr vs Orca 深度对比 - 极简运行时 vs 全功能 ADE]]
 - [[Claude Code Hooks - 确定性自动化防线]]
 - [[GitHub 开源周选 20 项目 - ManuAGI #293]]
 

@@ -331,6 +331,7 @@ llama.cpp                        NInfer
 
 ## 相关笔记
 
+- [[Mac-mini-M6-Qwen3.8-27B-本地推理实测笔记]] — 同一模型在 Apple Silicon 端侧（M6 mini 32GB、Splash/OMLX 引擎、8.9→52.6 tok/s）的镜像篇
 - [[Qwen3.8-27B 模型评测与 SGLang 高速推理部署]]
 - [[DeepSeek-V4-Flash-0731-本地部署全解析]]
 - [[Qwen3.6-27B-MacBook-M4-本地部署指南]]

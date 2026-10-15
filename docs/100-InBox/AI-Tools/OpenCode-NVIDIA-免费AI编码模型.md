@@ -365,3 +365,4 @@ NVIDIA NIM 上的模型更新更前沿（如 Nemotron 3 Ultra、MiniMax M3 刚�
 
 - [[OpenCode]] — OpenCode CLI 任务委派
 - [[free-coding-models]] — 免费编码模型追踪
+- [[OpenCode 2.0 - 常驻服务架构与多模型后台协作]] — OpenCode 2.0 架构升级：常驻服务、background subagents、Code Mode

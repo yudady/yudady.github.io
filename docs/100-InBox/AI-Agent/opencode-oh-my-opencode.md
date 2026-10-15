@@ -21,6 +21,7 @@ tags: [agent, ai, automation, development, llm, opencode]
 - [[004-ai-tools/nanobot/NANOBOT_SOURCE_ANALYSIS|Nanobot 源码分析]]
 - [[study-notes/AI编程GSD工作流完全指南|GSD 工作流]]
 - [[MOC-AI编程工具|AI 编程工具 MOC]]
+- [[OpenCode 2.0 - 常驻服务架构与多模型后台协作]] - OpenCode 2.0 官方架构升级（常驻服务 + 80+ 内部插件）
 cssclass: apple-style
 source: https://github.com/code-yeongyu/oh-my-opencode
 author: code-yeongyu

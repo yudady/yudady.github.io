@@ -354,5 +354,6 @@ HTML → 一条马路（空间、宽、可交互）
 
 ## 相关笔记
 
+- [[Karpathy LLM 四层输出阶梯]] — 四层体系的上位框架，本文（第 3 层 HTML）是其中一级；含 Thariq 说法与 Karpathy 10 月推文的时间线对照
 - [[AGENTS.MD 规范]]（待创建）
 - [[Claude Code Skills 实践]]（待创建）

@@ -231,5 +231,6 @@ Step 3：加 HTML 输出
 
 ## 相关笔记
 
+- [[Karpathy LLM 四层输出阶梯]] — 认知降维视角的四层阶梯（受控语言→图→HTML→视频），与本文的三层交付架构互补：本文按「下游是谁」分层，Karpathy 按「认知摩擦」分层
 - [[Claude Code 大项目最佳实践 - 生态配置详解]]
 - [[Higsfield Agent 基础设施全解 - MCP CLI Skills Soul ID]]

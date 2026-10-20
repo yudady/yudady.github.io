@@ -240,6 +240,7 @@ retro 发现的处理分流:
 
 ## 相关笔记
 
+- [[Matt Pocock 修复 PR 瓶颈演讲 - 三层刹车审查体系]]（同仓库方法论侧：AI Engineer Paris 演讲导读，讲清 retro / pr / code-review 这些 skill 背后的三层刹车设计动机）
 - [[Claude Code Hooks - 确定性自动化防线]]（retro 的「机械性违规落 linter/hook/CI」与 Hooks 思路同源）
 - [[open-code-review - 阿里混合架构 AI Code Review]]（同为 AI 代码审查工程化实践）
 

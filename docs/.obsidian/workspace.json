@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "001-TODO/Tailscale 全面玩法 - 异地组网、自建 DERP 与 Headscale 实战手册.md",
+                "file": "001-TODO/Strata-Qwen3.8-Flash-Next-8G显存本地部署学习笔记.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Tailscale 全面玩法 - 异地组网、自建 DERP 与 Headscale 实战手册"
+              "title": "Strata-Qwen3.8-Flash-Next-8G显存本地部署学习笔记"
             }
           }
         ]
@@ -120,7 +120,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "001-TODO/Tailscale 全面玩法 - 异地组网、自建 DERP 与 Headscale 实战手册.md",
+                "file": "001-TODO/Strata-Qwen3.8-Flash-Next-8G显存本地部署学习笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -280,6 +280,20 @@
   },
   "active": "bfbc17c81723ccb1",
   "lastOpenFiles": [
+    "001-TODO/OpenCode 2.0 - 常驻服务架构与多模型后台协作.md",
+    "001-TODO/Karpathy LLM 四层输出阶梯.md",
+    "001-TODO/Mattpocock-Skills 1.3 - pr、implement-spec、retro 三大新技能.md",
+    "001-TODO/SemiAnalysis AI 订阅实测 - Claude 订阅价值是 OpenAI 的 5 倍.md",
+    "001-TODO/REA 逆向工程实测 - 软件护城河正在消失.md",
+    "001-TODO/Herdr vs Orca 深度对比 - 极简运行时 vs 全功能 ADE.md",
+    "001-TODO/Jev 极速决策模型实测笔记.md",
+    "001-TODO/Orca ADE 创始人访谈 - 一个人管400个AI任务.md",
+    "001-TODO/Orca ADE 创始人访谈 - 梁津晶谈一人管400个AI任务.md",
+    "001-TODO/Herdr vs Orca - AI Agent 编排器选型对比.md",
+    "001-TODO/Orca ADE - 多 Agent 工作台入门导览.md",
+    "001-TODO/Orca ADE - 开源多 Agent 开发环境实测.md",
+    "001-TODO/Jev 决策模型入门教程.md",
+    "001-TODO/open-code-review - 阿里混合架构 AI Code Review.md",
     "001-TODO/Tailscale + RustDesk 零成本远程桌面 - 架构解析与实操 SOP.md",
     "001-TODO/Tailscale 全面玩法 - 异地组网、自建 DERP 与 Headscale 实战手册.md",
     "001-TODO/Herdr 上手指南 - Agent 时代的终端工作区运行时.md",
@@ -292,20 +306,6 @@
     "001-TODO/HN热帖-AI时代程序员的意义危机.md",
     "001-TODO/GitHub 周报速览 - VoiceStudio、Heretic、caveman 与 20 个开源项目.md",
     "001-TODO/i-have-adhd - ADHD 友好输出 Skill.md",
-    "001-TODO/Windows 10 LTSC 長期服務版安裝啟用指南.md",
-    "001-TODO/Windows 11 24H2 LTSC 安裝啟用指南.md",
-    "001-TODO/Qwen3.8-Flash-Next vs GLM-5.3-Flash 64GB Mac 溢出实测.md",
-    "001-TODO/Mac Studio oMLX + DeepSeek Harness 本地部署 Qwen3.8-27B 实战.md",
-    "001-TODO/Qwen3.8-27B 模型评测与 SGLang 高速推理部署.md",
-    "001-TODO/Windows Server 2025 低配電腦輕量系統安裝啟用指南.md",
-    "001-TODO/Windows 11 Ubuntu 22.04 雙系統安裝指南.md",
-    "001-TODO/Mac mini Homebridge 智慧家庭中樞.md",
-    "001-TODO/Mac mini 輕 NAS 家庭伺服器.md",
-    "001-TODO/闲置 MacBook Air 变身 NAS 与机顶盒.md",
-    "001-TODO/旧平板变身低功耗Linux家庭服务器.md",
-    "001-TODO/家用區網裝置盤查-IP與MAC身分對應.md",
-    "001-TODO/RustDesk 開源遠端控制指南.md",
-    "001-TODO/Wayfinder 漸進式規劃與 Frontier 邊界思維.md",
     "100-InBox/misc/youtube-thumb-viIASQJHmSY 1.jpg",
     "100-InBox/AI-Agent/Claude_Code_Blueprint.pdf",
     "100-InBox/misc/Claude_Code_Blueprint.pdf",

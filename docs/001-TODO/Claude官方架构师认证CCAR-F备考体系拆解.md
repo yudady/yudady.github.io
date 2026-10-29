@@ -22,7 +22,7 @@ level: intermediate
 stars: 3
 note: JR Academy 为付费备考课程机构（jiangren.com.au），视频含自家产品推广——16 节课 / 480 题 / 双模拟考均非 Anthropic 官方资源。视频口播为英文（webReader 转录提取），官方事实部分已逐条对照 Exam Guide v1.0（2026-07 生效）核验。
 ---
-
+ude
 # Claude 官方架构师认证 CCAR-F 备考体系拆解 — 考试结构、五域权重与解题方法论
 
 > JR Academy（澳洲 JiangRen 培训机构）用 6 分钟讲清 Claude Certified Architect – Foundations（CCAR-F）的考试结构、五大领域权重、官方 30 项能力要求，并给出它的备考课程体系与 14 天冲刺计划。视频本身的增量价值在**解题方法论**（硬约束 vs 概率引导）——这一条恰好与官方 Exam Guide 的 Task 1.4/1.5 互相印证。本文对视频全部关键声称做了官方一手核验。
@@ -241,6 +241,7 @@ Day 14    │ 封盘：只看错题集 + 考场清单，不开新资料
 
 ## 相关笔记
 
+- [[Claude官方四认证选型与应试机制答疑会拆解]] —— 同频道答疑会（2026-10-14，105 分钟）：四认证选型决策树、报名/监考/重考机制全景与 Partner Network / Frontier Academy 生态
 - [[Claude认证架构师CCA-F考试攻略]] —— 904/1000 通过者一手长文：五周路径、高频踩坑、报名流程细节（与本篇互补：经验视角 vs 本篇 blueprint 逐域拆解）
 - [[claude-certified-architect - CCA-F 认证备考资料库]] —— 社区开源备考资源：13 章中文指南、HTML 模拟考场、Anki 卡组
 - [[Claude认证CCA中文二手资料核查与考试参数速查]] —— 考试硬参数速查与中文二手资料逐条勘误

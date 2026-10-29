@@ -48,7 +48,7 @@ note: 原文为 LinkedIn 长文，作者文末推广自建 647 题付费题库�
 > - **权重**：域1 Agentic 架构 27% ＞ 域2 Claude Code 20% = 域3 提示工程 20% ＞ 域4 MCP 18% ＞ 域5 上下文管理 15%
 > - **门槛**：官方建议 6+ 个月 Claude API / Agent SDK / Claude Code / MCP 实战；没搭过真实系统很快露馅
 > - **备考**：通过者普遍 2-4 周专注准备；路径 = 官方 Exam Guide PDF 打底 → Skilljar 免费课 → 每周都有 build
-> - **时效警告**：文章口径 $99 / ProctorFree；2026-09-30 前后已变 $125 / Pearson VUE，且仅限 Claude Partner Network 成员报考
+> - **时效警告**：文章口径 $99 / ProctorFree；2026-06-30 起涨至 $125、监考换 Pearson VUE，且仅限 Claude Partner Network 成员报考
 
 ---
 
@@ -290,7 +290,7 @@ W1 基础            W2 API+MCP           W3 Agent+Code         W4 冲刺
 ④ 报名前先 build：多代理工作流（含工具使用）+ 结构化输出 + 错误处理
         ↓
 ⑤ 报名（Skilljar access-request 页面）
-        ⚠️ 文章口径 $99（前 5000 名合作伙伴员工免费）→ 现价 $125/次
+        ⚠️ 文章口径 $99（前 5000 名合作伙伴员工免费）→ 2026-06-30 起现价 $125/次
         ↓
 ⑥ 官方模考：先故意挂 → 复盘每个错答案 → 复考目标 900+
         ↓
@@ -320,7 +320,7 @@ W1 基础            W2 API+MCP           W3 Agent+Code         W4 冲刺
 | 60 题 / 120 分钟 / 720 及格 / 6 场景抽 4 / 监考闭卷 | ✅ 题型补充为单选 + 多选 | 同上 |
 | 五域权重信息图 | ✅ 27/20/20/18/15，与官方 Exam Guide v1.0 及多名通过者一致 | theaiarchitects / farasat.me |
 | 「超过一半的考试集中在两个领域」 | ❌ 数字口径有误：任两域最高 47%（27+20），前三域合计 67% | 权重图 + 官方 blueprint 推算 |
-| 考试费 $99，首批 5000 名合作伙伴员工免费 | ⚠️ 已过时：2026-09 前后涨至 **$125**，免费窗口结束，仅限 Partner Network 成员（须合作企业邮箱） | fru.dev（2026-09-25 查证 $125）/ preporato（确认 $99→$125） |
+| 考试费 $99，首批 5000 名合作伙伴员工免费 | ⚠️ 已过时：**2026-06-30 起涨至 $125**（2026-10-29 二次核验修正涨价日期，原记「9 月前后」），免费窗口结束，仅限 Partner Network 成员（须合作企业邮箱） | Poorna Reddy LinkedIn（明确涨价日 2026-06-30）/ fru.dev（2026-09-25 查证 $125）/ preporato（确认 $99→$125） |
 | 监考方 ProctorFree | ⚠️ 已变更：现为 Pearson OnVUE 在线监考或 Pearson 考试中心 | preporato / fru.dev |
 | 考试编码 CCA-F | ⚠️ 现更名 **CCAR-F**（与 CCAR-P 同系列命名） | preporato（2026-10 核实） |
 | 成绩 36 小时（作者个案）/ 5-7 个工作日（文中步骤） | ❓ 各来源口径不一（另有 2 个工作日说法），以 Pearson 现行流程为准 | claudecodetutorials 等 |
@@ -352,6 +352,7 @@ W1 基础            W2 API+MCP           W3 Agent+Code         W4 冲刺
 
 ## 相关笔记
 
+- [[Claude认证CCA中文二手资料核查与考试参数速查]] —— 中文二手资料逐条核查：考试硬参数勘误（60 题/720 分/12 个月/$125）与四认证体系全貌
 - [[Claude Code Hooks - 确定性自动化防线]] —— 域2 考点：hooks 拦截与校验代理动作的实战配置
 - [[新版MCP-Server开发指南-5分钟从零接入Claude]] —— 域4 考点：MCP server 接入实操
 

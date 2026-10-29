@@ -360,6 +360,7 @@ W1 基础            W2 API+MCP           W3 Agent+Code         W4 冲刺
 - [[Claude官方架构师认证CCAR-F备考体系拆解]] —— 官方 blueprint 逐域拆解：30 项 Task Statement 分布、六大官方场景、硬约束 vs 概率引导解题法（2026-10-29 官方 PDF 核验）
 - [[Claude Code Hooks - 确定性自动化防线]] —— 官方编号 Domain 1 Task 1.5 考点：hooks 拦截与校验代理动作的实战配置
 - [[新版MCP-Server开发指南-5分钟从零接入Claude]] —— 官方编号 Domain 2 考点：MCP server 接入实操
+- [[Claude认证CCAR-F报名落地页核查]] —— JR Academy 落地页核查：负面考纲清单与备考时长基线（与本篇 2-4 周通过者口径互参）
 
 ---
 *文档生成时间：2026-10-29*

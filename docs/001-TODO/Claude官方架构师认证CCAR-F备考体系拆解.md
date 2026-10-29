@@ -245,6 +245,7 @@ Day 14    │ 封盘：只看错题集 + 考场清单，不开新资料
 - [[Claude认证架构师CCA-F考试攻略]] —— 904/1000 通过者一手长文：五周路径、高频踩坑、报名流程细节（与本篇互补：经验视角 vs 本篇 blueprint 逐域拆解）
 - [[claude-certified-architect - CCA-F 认证备考资料库]] —— 社区开源备考资源：13 章中文指南、HTML 模拟考场、Anki 卡组
 - [[Claude认证CCA中文二手资料核查与考试参数速查]] —— 考试硬参数速查与中文二手资料逐条勘误
+- [[Claude认证CCAR-F报名落地页核查]] —— 同频道产品落地页核查：负面考纲清单、重考冷却期、JR 产品数字矛盾（题库 1465 vs 725）
 - [[Claude Code Hooks - 确定性自动化防线]] —— Domain 1 Task 1.5 考点：hooks 拦截的实战配置
 - [[新版MCP-Server开发指南-5分钟从零接入Claude]] —— Domain 2 考点：MCP server 接入实操
 

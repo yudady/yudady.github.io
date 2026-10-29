@@ -157,7 +157,7 @@ Anthropic Partner Academy 选定证书 → 注册并付费
 
 ### 语言
 
-视频称「仅英文与日文」。日文可选有多源佐证（日文备考评测文章专门讨论「日本語受験の注意点」），但「仅两种」没有官方语言清单一手确认，标 ⚠️。实操建议：即便日文可选，CCAR-P 这类长题干情境题的日文翻译质量无第三方验证，英文备考仍是主流路径。
+视频称「仅英文与日文」。**2026-10-29 修正：官方 Skilljar FAQ 原文确认考试与备考内容提供英语与日语**（"The exam and prep content are available in English and Japanese"），初核时的 ⚠️ 存疑解除。实操建议：即便日文可选，CCAR-P 这类长题干情境题的日文翻译质量无第三方验证，英文备考仍是主流路径。
 
 ---
 
@@ -212,7 +212,7 @@ Anthropic Partner Academy 选定证书 → 注册并付费
 | 满分 1000，720 及格 | ✅ 四张统一（scaled 100–1000） | Skilljar FAQ |
 | Pearson VUE 居家在线监考：锁定浏览器 + 全角度环境扫描 | ⚠️ 属 OnVUE 标准流程，但漏了还有 Pearson 考试中心选项 | Pearson VUE 官方页 / Skilljar FAQ |
 | 题目 AI 动态生成，几乎无固定原题 | ❓ 「AI 生成」无官方出处；官方口径为多 exam forms + scaled scoring；官方练习题库已退役 | Skilljar FAQ |
-| 考试仅提供英文与日文 | ⚠️ 日文可选有多源佐证；「仅两种」无官方清单确认 | 日文备考评测多源 |
+| 考试仅提供英文与日文 | ✅（2026-10-29 修正：官方 Skilljar FAQ 原文确认「The exam and prep content are available in English and Japanese」，含英→日改约流程——初核时误标 ⚠️） | Skilljar FAQ / [[Claude认证CCAR-F报名落地页核查]] |
 | FDE = Frontier Deployment Engineer，全球 10,000 名 | ⚠️ 正名 **Forward Deployed Engineer**；10,000 名计划真实（Claude Frontier Academy，$100M，2026-10-02，nomination only） | anthropic.com/news/claude-frontier-academy |
 | 持有人数少、市场红利期 | ⚠️ 2026-07 已 36,000 consultants / 1,300+ 组织；稀缺口径时效性强 | farasat.me（2026-09-30 口径） |
 | 证书代码口播 CCARF / CCARP / CCAOF | ⚠️ 官方写法带连字符：CCAO-F / CCDV-F / CCAR-F / CCAR-P | Pearson VUE 官方页 |
@@ -255,6 +255,7 @@ Anthropic Partner Academy 选定证书 → 注册并付费
 - [[Claude认证架构师CCA-F考试攻略]] —— 904/1000 通过者一手考经：五周路径、高频踩坑（CCAR-F 单认证的深度经验视角）
 - [[Claude官方架构师认证CCAR-F备考体系拆解]] —— 同频道上一场视频（2026-07）：官方 blueprint 五域权重、30 项 Task Statement 逐域拆解
 - [[Claude认证CCA中文二手资料核查与考试参数速查]] —— 四认证硬参数权威速查（价格 / 题量 / 及格线 / 有效期）与中文二手资料勘误
+- [[Claude认证CCAR-F报名落地页核查]] —— JR Academy 产品落地页核查：负面考纲清单、重考冷却期完整数字、报名准入精确口径（本篇语言勘误的修正来源）
 - [[claude-certified-architect - CCA-F 认证备考资料库]] —— 社区开源备考资源：13 章中文指南、HTML 模拟考场、Anki 卡组
 
 ---

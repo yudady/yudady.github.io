@@ -714,3 +714,4 @@ Claude-Mem 是一款**成熟度高、社区活跃**的 Claude Code 记忆插件�
 - [[03-knowledge/技术/编程/Claude-Code-MCP完整指南|MCP 指南]]
 - [[study-notes/AI编程GSD工作流完全指南|GSD 工作流]]
 - [[03-knowledge/技术/编程/Claude-Code-完整指南-v2|完整指南]]
+- [[Claude Code 核心觀念新手指南|Claude Code 核心觀念新手指南（Gary Chen 全觀念地圖）]]

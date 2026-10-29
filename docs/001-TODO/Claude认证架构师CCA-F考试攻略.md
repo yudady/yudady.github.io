@@ -84,6 +84,8 @@ note: 原文为 LinkedIn 长文，作者文末推广自建 647 题付费题库�
 ## 二、五大领域与权重
 
 > 权重数据已与官方 Exam Guide v1.0 及多名独立通过者核对一致（27/20/20/18/15）。
+>
+> ⚠️ **编号对照（2026-10-29 补注）**：本表 `#` 列为**按权重降序**的自编号，与官方 blueprint 的 Domain 编号**不同**——官方 D1 Agentic（27%）/ **D2 Tool Design & MCP（18%）/ D3 Claude Code（20%)/ D4 Prompt（20%）** / D5 Context（15%）。看官方成绩单 domain 诊断或刷官方模考时按官方编号对位，来源见 [[Claude官方架构师认证CCAR-F备考体系拆解]] 第三节。
 
 | # | 领域 | 覆盖子话题 | 权重 |
 |---|------|-----------|------|
@@ -323,6 +325,7 @@ W1 基础            W2 API+MCP           W3 Agent+Code         W4 冲刺
 | 考试费 $99，首批 5000 名合作伙伴员工免费 | ⚠️ 已过时：**2026-06-30 起涨至 $125**（2026-10-29 二次核验修正涨价日期，原记「9 月前后」），免费窗口结束，仅限 Partner Network 成员（须合作企业邮箱） | Poorna Reddy LinkedIn（明确涨价日 2026-06-30）/ fru.dev（2026-09-25 查证 $125）/ preporato（确认 $99→$125） |
 | 监考方 ProctorFree | ⚠️ 已变更：现为 Pearson OnVUE 在线监考或 Pearson 考试中心 | preporato / fru.dev |
 | 考试编码 CCA-F | ⚠️ 现更名 **CCAR-F**（与 CCAR-P 同系列命名） | preporato（2026-10 核实） |
+| 五域编号 | ➕ 补注：官方 blueprint 编号为 D2=Tool&MCP、D3=Claude Code、D4=Prompt（本文「域N」为权重降序自编号，勿与官方编号混用） | 官方 Exam Guide v1.0 §4（2026-10-29 核验） |
 | 成绩 36 小时（作者个案）/ 5-7 个工作日（文中步骤） | ❓ 各来源口径不一（另有 2 个工作日说法），以 Pearson 现行流程为准 | claudecodetutorials 等 |
 | 后续将推 Sales / Developer / 高级架构师认证（2026 内） | ✅ 已落地：Associate $99 / Developer $125 / Architect-F $125 / Architect-P $175 | farasat.me |
 | （文章未提及） | ➕ 有效期 12 个月 + 免费续期评估；英日双语；徽章经 Credly 发放 | fru.dev / preporato |
@@ -353,8 +356,9 @@ W1 基础            W2 API+MCP           W3 Agent+Code         W4 冲刺
 ## 相关笔记
 
 - [[Claude认证CCA中文二手资料核查与考试参数速查]] —— 中文二手资料逐条核查：考试硬参数勘误（60 题/720 分/12 个月/$125）与四认证体系全貌
-- [[Claude Code Hooks - 确定性自动化防线]] —— 域2 考点：hooks 拦截与校验代理动作的实战配置
-- [[新版MCP-Server开发指南-5分钟从零接入Claude]] —— 域4 考点：MCP server 接入实操
+- [[Claude官方架构师认证CCAR-F备考体系拆解]] —— 官方 blueprint 逐域拆解：30 项 Task Statement 分布、六大官方场景、硬约束 vs 概率引导解题法（2026-10-29 官方 PDF 核验）
+- [[Claude Code Hooks - 确定性自动化防线]] —— 官方编号 Domain 1 Task 1.5 考点：hooks 拦截与校验代理动作的实战配置
+- [[新版MCP-Server开发指南-5分钟从零接入Claude]] —— 官方编号 Domain 2 考点：MCP server 接入实操
 
 ---
 *文档生成时间：2026-10-29*

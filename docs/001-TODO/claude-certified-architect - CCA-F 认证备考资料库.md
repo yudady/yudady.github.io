@@ -264,6 +264,7 @@ fields = ['Scenario', 'Situation', 'Question',
 
 - [[Claude认证架构师CCA-F考试攻略]] —— 一手考经（904/1000）：五域备考路径与高频踩坑点
 - [[Claude认证CCA中文二手资料核查与考试参数速查]] —— 考试硬参数权威速查与中文二手资料勘误（$99→$125 涨价日期 2026-06-30 的二次核验出处）
+- [[Claude官方架构师认证CCAR-F备考体系拆解]] —— 官方 blueprint 逐域拆解：30 项 Task Statement 分布、官方 Domain 编号对照（D2=Tool&MCP）、解题方法论与 14 天冲刺
 
 ---
 

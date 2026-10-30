@@ -211,6 +211,7 @@ note: 被核查的 smzdm 文章页面自标「内容由AI生成」，原始来�
 - [[claude-certified-architect - CCA-F 认证备考资料库]] —— 开源备考仓库：16 语言学习指南 + 60 题模拟考 + Anki 卡组
 - [[Claude认证CCAR-F报名落地页核查]] —— JR Academy 落地页核查：报名准入精确口径、考试语言漏报日语勘误、重考冷却期数字
 - [[Claude开发者认证CCDV-F备考拆解]] —— Developer 认证备考拆解：七模组 vs 官方八域 blueprint 对照；上表 CCDV-F 题量 53 即由该篇依官方 Exam Guide v1.0 核验补齐（2026-10-30）
+- [[Claude助理认证CCAO-F备考拆解]] —— Associate 认证备考拆解：八领域 vs 官方七域对照；上表 CCAO-F 行（$99/60 题）已获官方 Exam Guide v1.0 逐项复核确认（2026-10-30）
 
 ---
 

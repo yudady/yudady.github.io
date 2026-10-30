@@ -240,6 +240,7 @@ return fallback(prompt)                              # graceful degradation
 
 ## 相关笔记
 
+- [[Claude助理认证CCAO-F备考拆解]] —— 姊妹篇：同频道 3 天前发布的 Associate 版（八领域 vs 官方七域对照）；本篇勘误表所指「keywords 复制来源」即该视频
 - [[Claude官方架构师认证CCAR-F备考体系拆解]] —— 姊妹篇：同类型「频道备考拆解 × 官方 blueprint 核验」，对象是架构师认证 CCAR-F（五域/30 Task Statement），与本篇互为 Developer/Architect 视角对照
 - [[Claude官方四认证选型与应试机制答疑会拆解]] —— 四认证选型决策树、报名/监考/重考机制全景
 - [[Claude认证CCA中文二手资料核查与考试参数速查]] —— 考试硬参数速查表（本篇已补 CCDV-F 题量 53）与二手资料勘误方法论

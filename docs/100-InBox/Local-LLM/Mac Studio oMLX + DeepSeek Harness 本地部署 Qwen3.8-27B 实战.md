@@ -323,3 +323,4 @@ oMLX 側的內存治理（GitHub README 確認）：
 - [[本地 LLM 硬件选购指南 - M5 Ultra vs RTX 5090 vs DGX Spark]] — 硬件層的帶寬/容量選購邏輯（本方案的物理基礎）
 - [[Llama.cpp + TurboQuant 本地 LLM 部署指南]] — 跨平台路線（對應第 10 節 Windows 分支）
 - [[Pi Agent 上手指南]] — dsh 之外的 Agent 客戶端選項（oMLX 官方集成列表含 Pi）
+- [[Mac Studio 256G M5 Ultra 全能 AI 工作站实测]] — 同為 Mac Studio + Qwen3.8 系（256GB M5 Ultra、MLX 直跑 + Flash Next 180B 8-bit + 全鏈路多模態）；該篇對 oMLX 評價與本篇選型觀點相反，兩說並列

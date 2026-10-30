@@ -325,6 +325,7 @@ t=0        prompt 提交
 - [[NInfer-Qwen3.8-27B-单卡4090-256K上下文-1.5倍速实战笔记]] — 同一模型在 NVIDIA 单卡侧（RTX 4090、256K 上下文、100-130 tok/s）的镜像篇：两篇合看即 Qwen3.8-27B 在两类硬件 + 两代推理引擎的完整加速路线图（本篇补 Apple Silicon 端侧视角）
 - [[Qwen3.6-27B-MacBook-M4-本地部署指南]] — M4 时代 Mac 本地部署基线，可与本篇 M6 实测对照看代际提升
 - [[Qwen3.8-27B 模型评测与 SGLang 高速推理部署]] — 模型本体评测与服务器侧部署
+- [[Mac Studio 256G M5 Ultra 全能 AI 工作站实测]] — 同模型的 256GB Ultra 级路线：Flash Next 180B 8-bit MTP 176 t/s + 全链路多模态 + Hermes Agent 自动出片，与本篇 mini 档位对照
 
 ---
 

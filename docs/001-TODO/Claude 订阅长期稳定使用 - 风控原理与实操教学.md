@@ -17,7 +17,7 @@ level: intermediate
 stars: 4
 note: 无字幕（创作者手动禁用 + 本次 Tier 0 亦遭 IP blocked），基于用户提供的 Content Insights 骨架 + 多源交叉验证撰写；官方文字版已停更（tech-shrimp/me 仓库 2026 年无归档）
 ---
-
+ㄧ
 # Claude 订阅长期稳定使用 - 风控原理与实操教学
 
 > 技术爬爬虾 TechShrimp 2026-10-20 发布的实操教学（8:19，YouTube 播放 6.7 万 / bilibili 镜像 9.7 万）。核心主张：Claude 封号的根因不是「国籍」或「对话内容」，而是底层三件事——IP 关联连坐、指纹特征泄漏、支付通道风控。视频给出从网络层到使用习惯的五维防护体系。

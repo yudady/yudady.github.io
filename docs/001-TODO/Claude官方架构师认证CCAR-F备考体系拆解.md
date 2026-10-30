@@ -248,6 +248,7 @@ Day 14    │ 封盘：只看错题集 + 考场清单，不开新资料
 - [[Claude认证CCAR-F报名落地页核查]] —— 同频道产品落地页核查：负面考纲清单、重考冷却期、JR 产品数字矛盾（题库 1465 vs 725）
 - [[Claude Code Hooks - 确定性自动化防线]] —— Domain 1 Task 1.5 考点：hooks 拦截的实战配置
 - [[新版MCP-Server开发指南-5分钟从零接入Claude]] —— Domain 2 考点：MCP server 接入实操
+- [[Claude开发者认证CCDV-F备考拆解]] —— Developer 认证对应篇：七模组框架 × 官方八域 blueprint 核验（与 CCAR-F 拆解同类型、互补认证）
 
 ---
 *文档生成时间：2026-10-29*

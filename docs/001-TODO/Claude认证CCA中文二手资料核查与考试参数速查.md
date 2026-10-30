@@ -104,7 +104,7 @@ note: 被核查的 smzdm 文章页面自标「内容由AI生成」，原始来�
 | 认证 | 编码 | 面向 | 费用 | 题量 |
 |------|------|------|------|------|
 | Claude Certified Associate | CCAO-F | 非技术角色（运营/PM） | $99 | 60 |
-| Claude Certified Developer | CCDV-F | 开发者（API/SDK/MCP 集成） | $125 | — |
+| Claude Certified Developer | CCDV-F | 开发者（API/SDK/MCP 集成） | $125 | 53 |
 | Claude Certified Architect – Foundations | CCAR-F | 架构师/高级开发（多代理设计） | $125 | 60 |
 | Claude Certified Architect – Professional | CCAR-P | 技术主管/企业架构师 | $175 | 63 |
 
@@ -210,6 +210,7 @@ note: 被核查的 smzdm 文章页面自标「内容由AI生成」，原始来�
 - [[Claude认证架构师CCA-F考试攻略]] —— 一手考经视角：五域备考路径、高频踩坑点、四周计划（同主题，角度互补）
 - [[claude-certified-architect - CCA-F 认证备考资料库]] —— 开源备考仓库：16 语言学习指南 + 60 题模拟考 + Anki 卡组
 - [[Claude认证CCAR-F报名落地页核查]] —— JR Academy 落地页核查：报名准入精确口径、考试语言漏报日语勘误、重考冷却期数字
+- [[Claude开发者认证CCDV-F备考拆解]] —— Developer 认证备考拆解：七模组 vs 官方八域 blueprint 对照；上表 CCDV-F 题量 53 即由该篇依官方 Exam Guide v1.0 核验补齐（2026-10-30）
 
 ---
 
